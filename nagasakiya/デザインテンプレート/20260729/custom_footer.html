@@ -1,0 +1,111 @@
+<footer class="footer">
+  <div class="footContact">
+    <div class="pageSecTtlBox">
+      <div class="sub">
+        <p>Contact</p>
+      </div>
+      <div class="pageSecTtl">
+        <h2>お問い合わせ</h2>
+      </div>
+    </div>
+    <div class="secContainer">
+      <div class="secPanel">
+        <div class="leftBox">
+          <dl>
+            <dt>電話でお問い合わせ</dt>
+            <dd>
+              <div class="telBox">
+                <a class="futura" href="tel:0120044132">0120-04-4132</a>
+                <p>【受付時間】１０：００～１９：００</p>
+              </div>
+            </dd>
+          </dl>
+        </div>
+        <div class="rightBox">
+          <dl>
+            <dt>WEBからのお問い合わせ</dt>
+            <dd>
+              <div class="mailBox">
+                <a href=""><span class="futura">MAILFORM</span></a>
+              </div>
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footPanel">
+    <div class="pagetop linkBtn" data-target="main">
+      <a href="#"
+        ><img
+          src="https://gigaplus.makeshop.jp/2068nagasaki/image/common/pagetop.png"
+          alt=""
+      /></a>
+    </div>
+    <div class="secWrap01">
+      <div class="secBox">
+        <div class="leftBox">
+          <div class="logo">
+            <img
+              src="https://gigaplus.makeshop.jp/2068nagasaki/image/common/footer_logo.png"
+              alt=""
+            />
+          </div>
+          <div class="txt">
+            <p>【本社】<br />〒496-0803 愛知県津島市今市場町２丁目31</p>
+            <a href="tel:0567257060">TEL:0567-25-7060</a>
+          </div>
+        </div>
+        <div class="rightBox">
+          <div class="footBox">
+            <div class="footNav">
+              <ul>
+                <li>
+                  <a href="/view/page/shopping-guide">ショッピングガイド</a>
+                </li>
+                <li><a href="">お支払い方法について</a></li>
+                <li><a href="">配送方法・送料について</a></li>
+              </ul>
+              <ul>
+                <li><a href="<{$url.policy}>">プライバシーポリシー</a></li>
+                <li>
+                  <a href="<{$url.contract}>">特定商取引法に基づく表記</a>
+                </li>
+                <li><a href="">お問い合わせ</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footBox">
+            <div class="footNav">
+              <ul>
+                <{if $member.is_logged_in}>
+                <li class="account logout">
+                  <a href="<{$url.logout}>">ログアウト</a>
+                </li>
+                <{else}> <{if $shop.is_member_entry_enabled}>
+                <li class="account membership">
+                  <a href="<{$url.member_entry}>">新規会員登録</a>
+                </li>
+                <{/if}>
+                <li class="account login">
+                  <a href="<{$url.login}>">ログイン</a>
+                </li>
+                <{/if}>
+              </ul>
+            </div>
+            <div class="bnrOhp">
+              <a href="#" target="_blank" rel="noopener"
+                ><img
+                  src="https://gigaplus.makeshop.jp/2068nagasaki/image/common/footer_bnr_ohp.png"
+                  alt=""
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copy">
+        <p>&copy;2025 学校制服 長崎屋.</p>
+      </div>
+    </div>
+  </div>
+</footer>

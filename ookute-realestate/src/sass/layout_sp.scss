@@ -1,0 +1,333 @@
+@charset "UTF-8";
+@import "./mixin";
+@import "./mod";
+/* CSS Document */
+
+/*===================================================
+	画面用CSS（PC/SMP）
+===================================================*/
+
+/*////////////////////////////////////////////////////////////
+	propertyList
+///////////////////////////////////////////////////////////*/
+.propertyListMain {
+  &.next .title_box::before {
+    background: url("../image/company/hd_bg.jpg") no-repeat center;
+    background-size: cover;
+  }
+  .propertyList_container {
+    padding: 0 0 50px;
+  }
+  .contents_box {
+    max-width: 800px;
+    padding: 40px 20px 80px;
+  }
+  .topTitle {
+    margin: 0 0 30px;
+    h3 {
+      padding: 30px 0 0;
+      font-size: 20px;
+      background: url("../image/property/top_title_icon.png") center top
+        no-repeat;
+      background-size: 30px auto;
+    }
+  }
+  .listPanel {
+    max-width: 700px;
+    font-size: 15px;
+    ul {
+      li {
+        + li {
+          margin: 30px 0 0;
+        }
+      }
+      .photoBox {
+        .label {
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          p {
+            padding: 5px 10px;
+          }
+        }
+      }
+      .captionBox {
+        padding: 10px 15px;
+        background: #eaeaea;
+        dl {
+          dd {
+            em {
+              font-size: 22px;
+              line-height: 1;
+            }
+          }
+        }
+      }
+      .infoBox {
+        padding: 15px 15px;
+        .boxHorizontal {
+          gap: 10px;
+        }
+        .description {
+          margin: 15px 0 0;
+          span {
+            font-size: 13px;
+          }
+        }
+        .boxVertical {
+          margin: 15px 0 0;
+        }
+      }
+    }
+  }
+  .list__pagination {
+    margin: 40px 0 0;
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	property
+///////////////////////////////////////////////////////////*/
+.propertyDetailMain {
+  &.next .title_box::before {
+    background: url("../image/company/hd_bg.jpg") no-repeat center;
+    background-size: cover;
+  }
+  .topTitle {
+    margin: 0 0 30px;
+    h3 {
+      padding: 30px 0 0;
+      font-size: 20px;
+      background: url("../image/property/top_title_icon.png") center top
+        no-repeat;
+      background-size: 30px auto;
+    }
+  }
+  .detailTopPanel {
+    .detailTopBox {
+      display: block;
+      padding: 5px 20px 10px;
+      .ttl01 {
+        margin: 0 0 5px;
+        p {
+          font-size: 14px;
+        }
+      }
+      .ttl02 {
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .caseSliderPanel {
+    margin: 0 0 40px;
+    .caseSlider {
+      .slick-slide {
+        margin: 0;
+        padding: 15px;
+        img {
+          height: 60vw;
+        }
+      }
+      .slick-current {
+        // border: 6px solid transparent;
+        // transform: translateY(0);
+      }
+      // .is-active-next {
+      //   transform: translateY(0);
+      // }
+      .slick-dots {
+        bottom: -30px;
+      }
+    }
+    &--pc {
+      display: none;
+    }
+    &--sp {
+      display: block;
+    }
+  }
+  .detailMainContainer {
+    display: flex;
+    flex-direction: column;
+    p {
+      font-size: 14px;
+    }
+    .floorInfoPanel {
+      order: 1;
+    }
+    .storeInfoPanel {
+      order: 2;
+    }
+    .caseSliderPanel {
+      order: 3;
+      margin: 40px 0;
+    }
+    .pickupPanel {
+      order: 4;
+    }
+    .detailPanelTop {
+      order: 5;
+    }
+  }
+  .pickupPanel {
+    margin: 0 0 30px;
+  }
+  .detailPanelTop {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 5px;
+    margin: 0 0 50px;
+    dl {
+      width: calc((100% / 2) - 5px);
+      dt {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        padding: 8px 5px;
+        font-size: 11px;
+      }
+      dd {
+        padding: 10px 10px;
+        font-size: 11px;
+        p {
+          font-size: 11px;
+        }
+      }
+    }
+    .remarks {
+      width: 100%;
+    }
+  }
+  .floorInfoPanel {
+    margin: 0 0 50px;
+    .pTtl {
+      margin: 0 0 30px;
+      font-size: 18px;
+    }
+    .floorInfoList {
+      .floorInfo {
+        .floorBox01 {
+          flex-wrap: wrap;
+          align-items: baseline;
+          gap: 0;
+          margin: 0 0 10px;
+          .floorTtl01 {
+            width: 100%;
+            p {
+              display: inline-block;
+              min-width: 120px;
+              padding: 2px 10px;
+              font-size: 14px;
+              font-weight: 500;
+              text-align: center;
+              background: #eaeaea;
+            }
+          }
+          .floorStatus {
+            p {
+              display: inline-block;
+              min-width: 80px;
+              padding: 2px 10px;
+              font-size: 14px;
+              font-weight: 500;
+              color: #ffffff;
+              text-align: center;
+            }
+            .black {
+              background: #050000;
+            }
+            .brown {
+              background: #a1580f;
+            }
+          }
+        }
+        .floorBox02 {
+          margin: 0 0 20px;
+          ul {
+            gap: 5px;
+            li {
+              a {
+                display: inline-block;
+                padding: 2px 15px;
+                font-size: 14px;
+                font-weight: 500;
+                color: #050000;
+                border: 1px solid #050000;
+              }
+            }
+          }
+        }
+        .floorBox03 {
+          .detailBtn {
+            display: block;
+            width: 130px;
+            border: 0;
+            padding: 4px 10px;
+            font-family: inherit;
+            font-weight: 500;
+            font-size: 14px;
+            color: #ffffff;
+            text-align: center;
+            background: #616161;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  .storeInfoPanel {
+    .titleBox {
+      display: block;
+      padding: 5px 20px 10px;
+      .ttl01 {
+        margin: 0 0 2px;
+        p {
+          font-size: 14px;
+        }
+      }
+      .ttl02 {
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+    .storeSlider {
+      width: calc(100% - 50px);
+    }
+    .storeDetail {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0 5px;
+      margin: 0 0 50px;
+      dl {
+        width: calc((100% / 2) - 5px);
+        dt {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 80px;
+          padding: 8px 5px;
+          font-size: 11px;
+        }
+        dd {
+          padding: 10px 10px;
+          font-size: 11px;
+          p {
+            font-size: 11px;
+          }
+        }
+      }
+      .remarks {
+        width: 100%;
+      }
+    }
+  }
+  .mapBox {
+    padding: 0 0 70%;
+  }
+}

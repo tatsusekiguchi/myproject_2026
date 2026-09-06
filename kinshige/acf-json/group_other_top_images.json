@@ -1,0 +1,124 @@
+{
+  "key": "group_65f8b3c5d4e2f",
+  "title": "その他ページ - トップ画像設定",
+  "fields": [
+    {
+      "key": "field_65f8b3c5d4e30",
+      "label": "photoList01 画像",
+      "name": "other_photo_list01",
+      "aria-label": "",
+      "type": "repeater",
+      "instructions": "photoList01用の画像を追加できます。最大3枚まで登録可能です。",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "layout": "block",
+      "pagination": 0,
+      "min": 0,
+      "max": 3,
+      "collapsed": "",
+      "button_label": "画像を追加",
+      "rows_per_page": 20,
+      "sub_fields": [
+        {
+          "key": "field_65f8b3c5d4e31",
+          "label": "画像",
+          "name": "image",
+          "aria-label": "",
+          "type": "image",
+          "instructions": "",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "return_format": "array",
+          "library": "all",
+          "min_width": "",
+          "min_height": "",
+          "min_size": "",
+          "max_width": "",
+          "max_height": "",
+          "max_size": "",
+          "mime_types": "",
+          "preview_size": "medium",
+          "parent_repeater": "field_65f8b3c5d4e30"
+        }
+      ]
+    },
+    {
+      "key": "field_65f8b3c5d4e32",
+      "label": "photoList02 画像",
+      "name": "other_photo_list02",
+      "aria-label": "",
+      "type": "repeater",
+      "instructions": "photoList02用の画像を追加できます。最大6枚まで登録可能です。",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "layout": "block",
+      "pagination": 0,
+      "min": 0,
+      "max": 6,
+      "collapsed": "",
+      "button_label": "画像を追加",
+      "rows_per_page": 20,
+      "sub_fields": [
+        {
+          "key": "field_65f8b3c5d4e33",
+          "label": "画像",
+          "name": "image",
+          "aria-label": "",
+          "type": "image",
+          "instructions": "",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "return_format": "array",
+          "library": "all",
+          "min_width": "",
+          "min_height": "",
+          "min_size": "",
+          "max_width": "",
+          "max_height": "",
+          "max_size": "",
+          "mime_types": "",
+          "preview_size": "medium",
+          "parent_repeater": "field_65f8b3c5d4e32"
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page_template",
+        "operator": "==",
+        "value": "other/index.php"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "show_in_rest": 0
+}

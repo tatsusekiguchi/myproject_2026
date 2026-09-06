@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<!-- css-->
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/slick.css">
+	<link rel="stylesheet" href="../css/slick-theme.css">
+	<link rel="stylesheet" href="../css/animate.css">
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/layout.css">
+	<link rel="stylesheet" media="screen and (max-width: 1179px)" type="text/css" href="../css/common_sp.css">
+	<link rel="stylesheet" media="screen and (max-width: 1179px)" type="text/css" href="../css/layout_sp.css">
+	<link rel="stylesheet" href="../css/attach.css">
+	<!-- js-->
+	<script src="../js/jquery-1.11.3.min.js"></script>
+	<script src="../js/slick.min.js"></script>
+	<script src="../js/infiniteslide.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/scrollAnimation.js"></script>
+	<script>
+		(function(d) {
+			var config = {
+					kitId: 'juu1rsh',
+					scriptTimeout: 3000,
+					async: true
+				},
+				h = d.documentElement,
+				t = setTimeout(function() {
+					h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+				}, config.scriptTimeout),
+				tk = d.createElement("script"),
+				f = false,
+				s = d.getElementsByTagName("script")[0],
+				a;
+			h.className += " wf-loading";
+			tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+			tk.async = true;
+			tk.onload = tk.onreadystatechange = function() {
+				a = this.readyState;
+				if (f || a && a != "complete" && a != "loaded") return;
+				f = true;
+				clearTimeout(t);
+				try {
+					Typekit.load(config)
+				} catch (e) {}
+			};
+			s.parentNode.insertBefore(tk, s)
+		})(document);
+	</script>
+	<!-- title-->
+	<title></title>
+</head>
+
+<body class="page">
+	<!-- ▽header▽-->
+	<header class="header white">
+		<div class="headWrap">
+			<div class="leftBox">
+				<div class="logoBox">
+					<div class="logo logo01"><a href=""><img src="../image/common/header_logo_black.png" alt=""></a></div>
+					<div class="logo logo02"><a href=""><img src="../image/common/header_logo_white.png" alt=""></a></div>
+				</div>
+				<div class="headTtl">
+					<p>岐阜・各務原の<br class="spBreak">髪質改善ヘアエステサロン</p>
+				</div>
+			</div>
+			<div class="rightBox">
+				<nav class="navBox">
+					<div class="navList">
+						<ul>
+							<li><a href="#section__about">About</a></li>
+							<li><a href="#section__message">Message</a></li>
+							<li><a href="#section__features">Features</a></li>
+							<li><a href="#section__voices">Staff Voices</a></li>
+							<li><a href="#section__culture">Culture</a></li>
+							<li><a href="#section__guideline">Guideline</a></li>
+							<li><a href="#section__flow">Flow</a></li>
+							<li><a href="#section__profile">Salon Profile</a></li>
+						</ul>
+					</div>
+				</nav>
+				<div class="btnJoin"><a href="">
+						<div class="box">
+							<div class="ttl">
+								<p>JOIN US</p>
+							</div>
+							<div class="arrow">
+								<p>→</p>
+							</div>
+						</div>
+					</a></div>
+			</div>
+		</div>
+	</header>
+	<!-- △header△-->
+	<!-- ▽メイン▽-->
+	<!-- △メイン△-->
+	<!-- ▽footer▽-->
+	<footer class="footer">
+		<div class="footPhoto"><img class="switch" src="../image/common/footer_photo_pc.png" alt=""></div>
+		<div class="footContainer">
+			<div class="footPanel">
+				<div class="logoBox">
+					<div class="logo"><img src="../image/common/footer_logo.png" alt=""></div>
+					<p>岐阜・各務原の髪質改善ヘアエステサロン</p>
+				</div>
+				<div class="footNav">
+					<ul>
+						<li><a href="">About</a></li>
+						<li><a href="">Message</a></li>
+						<li><a href="">Features</a></li>
+						<li><a href="">Staff Voices</a></li>
+						<li><a href="">Culture</a></li>
+						<li><a href="">Guideline</a></li>
+						<li><a href="">Flow</a></li>
+						<li><a href="">Salon Profile</a></li>
+					</ul>
+				</div>
+				<div class="footItem">
+					<div class="footFollow">
+						<p>FOLLOW US ｜</p>
+						<ul>
+							<li><a href="#" target="_blank" rel="noopener"><img src="../image/common/icon_insta_black.png" alt=""></a></li>
+							<li><a href="#" target="_blank" rel="noopener"><img src="../image/common/icon_line_black.png" alt=""></a></li>
+						</ul>
+					</div>
+					<div class="footJoin"><a href=""><em>JOIN US</em><span>→</span></a></div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- △footer△-->
+</body>
+
+</html>

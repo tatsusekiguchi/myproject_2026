@@ -1,0 +1,294 @@
+// ▽メイン▽
+.propertySearchMain.main
+    .pageTitlePanel
+        .pageTitle
+            .img.propertySearch
+                img(src="https://sit-9627786.sibloo.com/system_panel/uploads/images/propertysearch_title.png", alt="")
+            h1 物件を探す
+    .propertySection
+        .secWrap01
+            .searchPanel
+                form.webgene-search-form(method="get" action="testproperty")
+                    .webgene-search-form-block(rel="物件種別")
+                        .search-title-wrapper
+                            p.search-title 物件種別
+                        .search-area-wrapper
+                            .search-subtitle-wrapper
+                            .search-contents-wrapper
+                                label
+                                    input.property_type_cd(type="checkbox" name="s0l0[]" value="4")
+                                    |  売買
+                                label
+                                    input.property_type_cd(type="checkbox" name="s0l0[]" value="3")
+                                    |  賃貸
+                    .webgene-search-form-block(rel="賃料（検索用）")
+                        .search-title-wrapper
+                            p.search-title 賃料（検索用）
+                        .search-area-wrapper
+                            .search-subtitle-wrapper
+                            .search-contents-wrapper
+                                label
+                                    input.property_status_cd(type="checkbox" name="s1l0[]" value="5")
+                                    |  7万～9万円
+                                label
+                                    input.property_status_cd(type="checkbox" name="s1l0[]" value="4")
+                                    |  ～5万円
+                                label
+                                    input.property_status_cd(type="checkbox" name="s1l0[]" value="3")
+                                    |  5万円～7万円
+                    .webgene-search-form-block(rel="間取り（検索用）")
+                        .search-title-wrapper
+                            p.search-title 間取り（検索用）
+                        .search-area-wrapper
+                            .search-subtitle-wrapper
+                            .search-contents-wrapper
+                                label
+                                    input.property_plan_cd(type="checkbox" name="s2l0[]" value="4")
+                                    |  ファミリー向け（2LDK以上）
+                                label
+                                    input.property_plan_cd(type="checkbox" name="s2l0[]" value="3")
+                                    |  1〜2人向け（1LDK / 2K / 2D）
+                                label
+                                    input.property_plan_cd(type="checkbox" name="s2l0[]" value="2")
+                                    |  一人暮らし向け（1R / 1K / 1DK）
+                    .webgene-search-form-block(rel="エリア")
+                        .search-title-wrapper
+                            p.search-title エリア
+                        .search-area-wrapper
+                            .search-subtitle-wrapper
+                            .search-contents-wrapper
+                                label
+                                    input.property_direction_cd(type="checkbox" name="s3l0[]" value="5")
+                                    |  さいたま市大宮区
+                                label
+                                    input.property_direction_cd(type="checkbox" name="s3l0[]" value="4")
+                                    |  さいたま市北区
+                                label
+                                    input.property_direction_cd(type="checkbox" name="s3l0[]" value="3")
+                                    |  さいたま市西区
+                    .btnSubmit
+                        input.search-submit(type="submit" value="物件を検索する")
+                    input(type="hidden" name="wgsearch" value="property")
+            .resultPanel
+                section.webgene-blog
+                    .webgene-header
+                        h2 物件一覧
+                    .webgene-item
+                        .itemBox
+                            .photoBox
+                                <div class="slickSlide">
+                                    <div class="slider thumb-item">
+                                        <div class="li">
+                                            <div><img class="webgene-item-main-image" src="https://sit-9627786.sibloo.com/system_panel/uploads/images/propertysearch_sample.png"></div>
+                                        </div>
+                                        <div class="li">
+                                            <div><img class="webgene-item-main-image" src="https://sit-9627786.sibloo.com/system_panel/uploads/images/propertysearch_sample.png"></div>
+                                        </div>
+                                        <div class="li">
+                                            <div><img class="webgene-item-main-image" src="https://sit-9627786.sibloo.com/system_panel/uploads/images/propertysearch_sample.png"></div>
+                                        </div>
+                                        <div class="li">
+                                            <div><img class="webgene-item-main-image" src="https://sit-9627786.sibloo.com/system_panel/uploads/images/propertysearch_sample.png"></div>
+                                        </div>
+                                        <div class="li">
+                                            <div><img class="webgene-item-main-image" src="https://sit-9627786.sibloo.com/system_panel/uploads/images/propertysearch_sample.png"></div>
+                                        </div>
+                                        <div class="li">
+                                            <div><img class="webgene-item-main-image" src="https://sit-9627786.sibloo.com/system_panel/uploads/images/propertysearch_sample.png"></div>
+                                        </div>
+                                        <div class="li">
+                                            <div><img class="webgene-item-main-image" src="https://sit-9627786.sibloo.com/system_panel/uploads/images/propertysearch_sample.png"></div>
+                                        </div>
+                                        <div class="li">
+                                            <div><img class="webgene-item-main-image" src="https://sit-9627786.sibloo.com/system_panel/uploads/images/propertysearch_sample.png"></div>
+                                        </div>
+                                        <div class="li">
+                                            <div><img class="webgene-item-main-image" src="https://sit-9627786.sibloo.com/system_panel/uploads/images/propertysearch_sample.png"></div>
+                                        </div>
+                                        <div class="li">
+                                            <div><img class="webgene-item-main-image" src="https://sit-9627786.sibloo.com/system_panel/uploads/images/propertysearch_sample.png"></div>
+                                        </div>
+                                    </div>
+                                    <div class="slideNav">
+                                        <div class="slider thumb-item-nav">
+                                            <div class="li">
+                                                <div><img class="webgene-item-main-image" src="https://sit-9627786.sibloo.com/system_panel/uploads/images/propertysearch_sample.png"></div>
+                                            </div>
+                                            <div class="li">
+                                                <div><img class="webgene-item-main-image" src="https://sit-9627786.sibloo.com/system_panel/uploads/images/propertysearch_sample.png"></div>
+                                            </div>
+                                            <div class="li">
+                                                <div><img class="webgene-item-main-image" src="https://sit-9627786.sibloo.com/system_panel/uploads/images/propertysearch_sample.png"></div>
+                                            </div>
+                                            <div class="li">
+                                                <div><img class="webgene-item-main-image" src="https://sit-9627786.sibloo.com/system_panel/uploads/images/propertysearch_sample.png"></div>
+                                            </div>
+                                            <div class="li">
+                                                <div><img class="webgene-item-main-image" src="https://sit-9627786.sibloo.com/system_panel/uploads/images/propertysearch_sample.png"></div>
+                                            </div>
+                                            <div class="li">
+                                                <div><img class="webgene-item-main-image" src="https://sit-9627786.sibloo.com/system_panel/uploads/images/propertysearch_sample.png"></div>
+                                            </div>
+                                            <div class="li">
+                                                <div><img class="webgene-item-main-image" src="https://sit-9627786.sibloo.com/system_panel/uploads/images/propertysearch_sample.png"></div>
+                                            </div>
+                                            <div class="li">
+                                                <div><img class="webgene-item-main-image" src="https://sit-9627786.sibloo.com/system_panel/uploads/images/propertysearch_sample.png"></div>
+                                            </div>
+                                            <div class="li">
+                                                <div><img class="webgene-item-main-image" src="https://sit-9627786.sibloo.com/system_panel/uploads/images/propertysearch_sample.png"></div>
+                                            </div>
+                                            <div class="li">
+                                                <div><img class="webgene-item-main-image" src="https://sit-9627786.sibloo.com/system_panel/uploads/images/propertysearch_sample.png"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            .txtBox
+                                .cate
+                                    p 賃貸
+                                .title
+                                    p グリーンヒルズ １０２ 1K
+                                .price
+                                    em 4.8
+                                    span 万円
+                                    span.commonExpenses
+                                        |  （共益費
+                                        span ２,000
+                                        | 円）
+                                .iconList
+                                    ul
+                                        li.initial
+                                            | 敷金
+                                            span 1ヶ月
+                                            |  /
+                                            | 礼金
+                                            span なし
+                                        li.floor 1K / 20.00㎡ / 1991年3月
+                                        li.address 埼玉県さいたま市中央区鈴谷２丁目
+                                        li.access ＪＲ埼京線 / 南与野駅 徒歩2分
+                                .cateList
+                                    .list
+                                        .check-item バストイレ別
+                                        .check-item 南向き
+                                .comment
+                                    p 1K/20.00㎡ /1991年3月<br>ＪＲ埼京線 / 南与野駅 徒歩2分
+                    .webgene-item
+                        .itemBox
+                            .photoBox
+                                <div class="slickSlide">
+                                    <div class="slider thumb-item">
+                                        <div class="li">
+                                            <div><img class="webgene-item-main-image" src="https://sit-9627786.sibloo.com/system_panel/uploads/images/propertysearch_sample.png"></div>
+                                        </div>
+                                        <div class="li">
+                                            <div><img class="webgene-item-main-image" src="https://sit-9627786.sibloo.com/system_panel/uploads/images/propertysearch_sample.png"></div>
+                                        </div>
+                                        <div class="li">
+                                            <div><img class="webgene-item-main-image" src="https://sit-9627786.sibloo.com/system_panel/uploads/images/propertysearch_sample.png"></div>
+                                        </div>
+                                        <div class="li">
+                                            <div><img class="webgene-item-main-image" src="https://sit-9627786.sibloo.com/system_panel/uploads/images/propertysearch_sample.png"></div>
+                                        </div>
+                                        <div class="li">
+                                            <div><img class="webgene-item-main-image" src="https://sit-9627786.sibloo.com/system_panel/uploads/images/propertysearch_sample.png"></div>
+                                        </div>
+                                        <div class="li">
+                                            <div><img class="webgene-item-main-image" src="https://sit-9627786.sibloo.com/system_panel/uploads/images/propertysearch_sample.png"></div>
+                                        </div>
+                                        <div class="li">
+                                            <div><img class="webgene-item-main-image" src="https://sit-9627786.sibloo.com/system_panel/uploads/images/propertysearch_sample.png"></div>
+                                        </div>
+                                        <div class="li">
+                                            <div><img class="webgene-item-main-image" src="https://sit-9627786.sibloo.com/system_panel/uploads/images/propertysearch_sample.png"></div>
+                                        </div>
+                                        <div class="li">
+                                            <div><img class="webgene-item-main-image" src="https://sit-9627786.sibloo.com/system_panel/uploads/images/propertysearch_sample.png"></div>
+                                        </div>
+                                        <div class="li">
+                                            <div><img class="webgene-item-main-image" src="https://sit-9627786.sibloo.com/system_panel/uploads/images/propertysearch_sample.png"></div>
+                                        </div>
+                                    </div>
+                                    <div class="slideNav">
+                                        <div class="slider thumb-item-nav">
+                                            <div class="li">
+                                                <div><img class="webgene-item-main-image" src="https://sit-9627786.sibloo.com/system_panel/uploads/images/propertysearch_sample.png"></div>
+                                            </div>
+                                            <div class="li">
+                                                <div><img class="webgene-item-main-image" src="https://sit-9627786.sibloo.com/system_panel/uploads/images/propertysearch_sample.png"></div>
+                                            </div>
+                                            <div class="li">
+                                                <div><img class="webgene-item-main-image" src="https://sit-9627786.sibloo.com/system_panel/uploads/images/propertysearch_sample.png"></div>
+                                            </div>
+                                            <div class="li">
+                                                <div><img class="webgene-item-main-image" src="https://sit-9627786.sibloo.com/system_panel/uploads/images/propertysearch_sample.png"></div>
+                                            </div>
+                                            <div class="li">
+                                                <div><img class="webgene-item-main-image" src="https://sit-9627786.sibloo.com/system_panel/uploads/images/propertysearch_sample.png"></div>
+                                            </div>
+                                            <div class="li">
+                                                <div><img class="webgene-item-main-image" src="https://sit-9627786.sibloo.com/system_panel/uploads/images/propertysearch_sample.png"></div>
+                                            </div>
+                                            <div class="li">
+                                                <div><img class="webgene-item-main-image" src="https://sit-9627786.sibloo.com/system_panel/uploads/images/propertysearch_sample.png"></div>
+                                            </div>
+                                            <div class="li">
+                                                <div><img class="webgene-item-main-image" src="https://sit-9627786.sibloo.com/system_panel/uploads/images/propertysearch_sample.png"></div>
+                                            </div>
+                                            <div class="li">
+                                                <div><img class="webgene-item-main-image" src="https://sit-9627786.sibloo.com/system_panel/uploads/images/propertysearch_sample.png"></div>
+                                            </div>
+                                            <div class="li">
+                                                <div><img class="webgene-item-main-image" src="https://sit-9627786.sibloo.com/system_panel/uploads/images/propertysearch_sample.png"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            .txtBox
+                                .cate
+                                    p 売買
+                                .title
+                                    p 高崎市 根小屋町 (山名駅) 住宅用地
+                                .price
+                                    em 1,300
+                                    span 万円
+                                .iconList
+                                    ul
+                                        //- li.initial
+                                        //-     | 管理費：
+                                        //-     span 6,900円 / 月
+                                        //-     | 、修繕積立金：
+                                        //-     span 14,970 円 / 月
+                                        li.initial
+                                            | 管理費：
+                                            span 6,900円 / 月
+                                            | 、修繕積立金：
+                                            span 14,970 円 / 月
+                                        li.address
+                                            span 群馬県高崎市根小屋町
+                                        li.access 上信電鉄 / 山名駅 徒歩10分
+                                        li.land
+                                            span 公簿 782.00㎡
+                                        li.land
+                                            span 畑
+                                        li.land
+                                            span
+                                .cateList
+                                    .list
+                                        .check-item バストイレ別
+                                        .check-item 南向き
+                                .comment
+                                    p 1K/20.00㎡ /1991年3月<br>ＪＲ埼京線 / 南与野駅 徒歩2分
+                    .webgene-pagination
+                        ul
+                            li.prev
+                                a(href="/bloglist?wg%5Bwgc-1586149173114_page%5D=2") 前へ
+                            li.number
+                                a(href="/bloglist?wg%5Bwgc-1586149173114_page%5D=1") 1
+                            li.number
+                                a(href="/bloglist?wg%5Bwgc-1586149173114_page%5D=2") 2
+                            li.number.selected
+                                a(href="/bloglist?wg%5Bwgc-1586149173114_page%5D=3") 3
+                            li.next
+                                a(href="/bloglist?wg%5Bwgc-1586149173114_page%5D=2") 次へ
+// △メイン△

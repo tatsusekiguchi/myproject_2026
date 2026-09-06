@@ -1,0 +1,453 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap");
+/* CSS Document */
+/*===================================================
+	共通CSS（PC/SMP）
+===================================================*/
+/*////////////////////////////////////////////////////////////
+	共通設定
+///////////////////////////////////////////////////////////*/
+/* --------------------------------------------------
+	base
+-------------------------------------------------- */
+* {
+  box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+  line-height: 1.5;
+  color: #282828;
+  font-size: 16px;
+  background: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.5;
+}
+
+.txt {
+  line-height: 2;
+}
+
+/*リンク */
+a {
+  color: #282828;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* 画像幅 */
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* clearfix */
+.clearfix::after {
+  content: ".";
+  display: block;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.spBreak {
+  display: none;
+}
+
+@media (min-width: 1025px) {
+  a {
+    transition: 0.6s;
+  }
+
+  a:hover {
+    opacity: 0.6;
+  }
+}
+.fax a {
+  pointer-events: none;
+}
+
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+.header .headLogo {
+  position: fixed;
+  top: 30px;
+  left: 8%;
+  width: 160px;
+  z-index: 999;
+}
+.header .headLogo a {
+  display: block;
+}
+.header .hamburger {
+  cursor: pointer;
+  display: block;
+  position: fixed;
+  top: 30px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  z-index: 10000;
+  border-radius: 50%;
+  border: 1px solid #a48773;
+  background: #ffffff;
+}
+.header .hamburger .span {
+  background: #a48773;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 1px;
+  transition: 0.4s;
+}
+.header .hamburger .span:nth-of-type(1) {
+  transform: translate(-50%, -8px);
+}
+.header .hamburger .span:nth-of-type(2) {
+  transform: translate(-50%, -50%);
+}
+.header .hamburger .span:nth-of-type(3) {
+  transform: translate(-50%, 7px);
+}
+.header .hamburger.is-open .span {
+  background: #2f4453;
+}
+.header .hamburger.is-open .span:nth-of-type(1) {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.header .hamburger.is-open .span:nth-of-type(2) {
+  opacity: 0;
+}
+.header .hamburger.is-open .span:nth-of-type(3) {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* --------------------------------------------------
+	nav
+-------------------------------------------------- */
+.navBox {
+  overflow: auto;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 150px 60px;
+  z-index: 999;
+  background: #f8f6f0;
+  transition: 0.6s;
+}
+.navBox .navContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.navBox .navContainer .leftPanel .navLogo {
+  width: 220px;
+  margin: 0 0 30px;
+}
+.navBox .navContainer .leftPanel .txt {
+  font-size: 14px;
+}
+.navBox .navContainer .leftPanel .txt a {
+  display: inline-block;
+}
+@media (min-width: 1025px) {
+  .navBox .navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navBox .navContainer .leftPanel {
+    width: 300px;
+  }
+  .navBox .navContainer .rightPanel {
+    width: calc(100% - 360px);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .navBox .navContainer .rightPanel .navList01 {
+    display: contents;
+  }
+  .navBox .navContainer .rightPanel .navList01 > .ul {
+    grid-row: 1;
+    padding: 0 16px;
+  }
+  .navBox .navContainer .rightPanel .navList01 > .ul:first-child {
+    grid-column: 1;
+  }
+  .navBox .navContainer .rightPanel .navList01 > .ul:last-child {
+    grid-column: 2;
+  }
+  .navBox .navContainer .rightPanel .navList .li + .li {
+    margin-top: 25px;
+  }
+  .navBox .navContainer .rightPanel .navList a {
+    display: block;
+  }
+  .navBox .navContainer .rightPanel .navList .em {
+    font-size: 24px;
+    line-height: 1.4;
+    letter-spacing: 0.03em;
+  }
+  .navBox .navContainer .rightPanel .navList .span {
+    margin-top: 1px;
+    color: #94bea0;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .navBox .navContainer .rightPanel .subList {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: end;
+    padding: 0 16px 3px;
+  }
+  .navBox .navContainer .rightPanel .subList > .ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .navBox .navContainer .rightPanel .subList a {
+    display: block;
+    font-size: 16px;
+    white-space: nowrap;
+  }
+  .navBox .navContainer .rightPanel .navList02 {
+    grid-column: 1/-1;
+    margin-top: 40px;
+    padding: 18px 16px 0;
+    border-top: 1px solid #555;
+  }
+}
+
+/* --------------------------------------------------
+	main
+-------------------------------------------------- */
+.main {
+  overflow: hidden;
+}
+
+.pageKvContainer {
+  position: relative;
+  padding: 0 90px 20px;
+}
+.pageKvContainer .pageKvPanel {
+  position: relative;
+}
+.pageKvContainer .pageKvPanel:before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  bottom: -20px;
+  width: calc(100% - 40px);
+  height: 70px;
+  background: url("https://sit-321391.sibloo.com/system_panel/uploads/images/page_kv_bg.png") no-repeat;
+  background-size: cover;
+}
+.pageKvContainer .pageKvPanel .pageKv {
+  position: relative;
+  height: 270px;
+}
+.pageKvContainer .pageKvPanel .pageKv img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0 0 10px 10px;
+}
+.pageKvContainer .pageKvPanel .kvTitleBox {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 50px;
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 60px;
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.pageSecTtlBox {
+  margin: 0 0 60px;
+  text-align: center;
+}
+.pageSecTtlBox .sub {
+  margin: 0 0 5px;
+  font-size: 18px;
+  color: #51835c;
+}
+.pageSecTtlBox .pageSecTtl {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.secWrap {
+  max-width: 1640px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.secWrap01 {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.secWrap02 {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.mapBox {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding: 0 0 45%;
+}
+.mapBox iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* --------------------------------------------------
+	footer
+-------------------------------------------------- */
+.footer {
+  padding: 100px 100px 40px;
+  text-align: center;
+  background: #ecf0e6;
+}
+.footer .secWrap {
+  position: relative;
+}
+.footer .logo {
+  max-width: 220px;
+  margin: 0 auto 30px;
+}
+.footer .txt {
+  margin: 0 0 60px;
+}
+.footer .copy {
+  font-size: 14px;
+}
+.footer .pagetop {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35px;
+  cursor: pointer;
+}
+
+/*   モーダルウインドウ
+-------------------------------------------------- */
+.modalBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.modalContent {
+  width: 100%;
+  max-width: 700px;
+  min-width: 250px;
+}
+.modalContent > div {
+  overflow: auto;
+  height: 100%;
+}
+.modalContent .mdlBody {
+  min-height: 400px;
+  padding: 60px 30px;
+  color: #ffffff;
+  border-radius: 10px;
+  border: 10px solid #5e8a68;
+  background: url(https://sit-321391.sibloo.com/system_panel/uploads/images/recruit_modal_bg.png) no-repeat;
+  background-size: cover;
+}
+.modalContent .mdlBody .modalTtl {
+  position: relative;
+  margin: 0 0 30px;
+  padding: 0 0 15px;
+  font-size: 30px;
+  text-align: center;
+}
+.modalContent .mdlBody .modalTtl:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 120px;
+  height: 1px;
+  margin: 0 auto;
+  background: #ffffff;
+}
+.modalContent .mdlBody .secBox .photo {
+  position: relative;
+  width: 180px;
+  height: 180px;
+}
+.modalContent .mdlBody .secBox .photo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.modalContent .mdlBody .txtBox .txt {
+  max-width: 550px;
+  margin: 0 auto;
+}
+@media (min-width: 1025px) {
+  .modalContent .mdlBody .secBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .modalContent .mdlBody .secBox .txt {
+    width: calc(100% - 220px);
+  }
+}
+.modalContent .mdlClose {
+  padding: 15px 5px 0;
+  text-align: right;
+}
+.modalContent .mdlClose .mdlCloseBtn {
+  display: inline-block;
+  width: 25px;
+  cursor: pointer;
+}

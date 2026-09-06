@@ -1,0 +1,632 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+	画面用CSS（PC/SMP）
+===================================================*/
+/*////////////////////////////////////////////////////////////
+	TOP
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .topMain .topKv {
+    align-items: flex-end;
+    min-height: 350px;
+    padding: 0 0 50px;
+    background-position: 62% center;
+  }
+  .topMain .topKv h1 {
+    font-size: 22px;
+  }
+  .topMain .topKv .txt {
+    font-size: 13px;
+  }
+  .topMain .topKv .txt br {
+    display: none;
+  }
+  .topMain .sec01,
+.topMain .sec02,
+.topMain .sec03,
+.topMain .sec04,
+.topMain .sec05 {
+    padding: 62px 0;
+  }
+  .topMain .secTtlBox {
+    margin-bottom: 34px;
+  }
+  .topMain .secTtlBox .secTtl {
+    font-size: 20px;
+  }
+  .topMain .sec01 .troubleList .ul {
+    grid-template-columns: 1fr;
+    gap: 9px;
+  }
+  .topMain .sec01 .troubleList .ul .li {
+    min-height: 72px;
+    font-size: 13px;
+  }
+  .topMain .sec01 .lead {
+    margin-top: 38px;
+  }
+  .topMain .sec01 .lead .ttl p {
+    font-size: 15px;
+  }
+  .topMain .sec01 .supportPanel {
+    position: relative;
+    max-width: 660px;
+    margin: 0 auto;
+    padding: 5px;
+    background: #e4efee;
+  }
+  .topMain .sec01 .supportPanel::before {
+    content: "";
+    position: absolute;
+    left: -6px;
+    bottom: -6px;
+    width: 100px;
+    height: 60px;
+    background: url(https://jiken-soudan.com/system_panel/uploads/images/top_sec01_support_flower.png) no-repeat;
+    background-size: 100% auto;
+  }
+  .topMain .sec01 .supportPanel .inner {
+    display: block;
+    max-width: 100%;
+    padding: 30px 10px;
+    border: 1px solid #9bd4d3;
+  }
+  .topMain .sec01 .supportPanel .txt {
+    font-size: 14px;
+    text-align: center;
+  }
+  .topMain .sec01 .supportPanel .circle {
+    width: 100px;
+    margin: 20px auto 0;
+  }
+  .topMain .sec01 .note {
+    margin: 40px 0;
+  }
+  .topMain .sec02 .secContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .topMain .sec02 .leftBox {
+    order: 2;
+  }
+  .topMain .sec02 .leftBox .ttlBox p {
+    font-size: 20px;
+  }
+  .topMain .sec02 .rightBox {
+    order: 1;
+    width: 78%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .topMain .sec02 .tagList .ul {
+    gap: 6px;
+  }
+  .topMain .sec02 .tagList .li {
+    width: 78px;
+    height: 78px;
+    font-size: 12px;
+  }
+  .topMain .sec03 .blogPanel .webgene-blog .webgene-item + .webgene-item {
+    margin: 15px 0 0;
+  }
+  .topMain .sec03 .blogPanel .webgene-blog .webgene-item a {
+    padding: 20px 50px 20px 20px;
+    background: url(https://jiken-soudan.com/system_panel/uploads/images/blog_list_arrow.png) right 15px center no-repeat #f5f5f5;
+    background-size: 25px auto;
+  }
+  .topMain .sec04 .guideList .ul .li {
+    padding: 20px;
+  }
+  .topMain .sec04 .guideList .ul .li.list01:before {
+    right: -100px;
+    bottom: 20px;
+    width: 265px;
+    height: 159px;
+  }
+  .topMain .sec04 .guideList .ul .li.list02:before {
+    right: -20px;
+    bottom: 20px;
+    width: 156px;
+    height: 175px;
+  }
+  .topMain .sec04 .guideList .ul .li + .li {
+    margin: 30px 0 0;
+  }
+  .topMain .sec04 .guideList .ul .ttl {
+    margin: 0 0 15px;
+    font-size: 20px;
+  }
+  .topMain .sec04 .guideList .ul .more {
+    margin: 25px 0 0;
+  }
+  .topMain .sec05 .secContainer {
+    display: block;
+  }
+  .topMain .sec05 .secContainer > * {
+    width: 100%;
+  }
+}
+/*////////////////////////////////////////////////////////////
+	about
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .aboutMain .aboutSection {
+    padding: 65px 0 72px;
+  }
+  .aboutMain .sec01 .messageTop,
+.aboutMain .sec01 .messageBottom {
+    gap: 35px;
+  }
+  .aboutMain .sec01 .messageTop .messageBox h3 {
+    font-size: 20px;
+  }
+  .aboutMain .sec02 .profileContainer {
+    gap: 45px;
+  }
+  .aboutMain .sec02 .profilePhoto {
+    width: 280px;
+  }
+  .aboutMain .sec02 .career .dl {
+    font-size: 13px;
+  }
+  .aboutMain .sec02 .career .dl .dt {
+    width: 90px;
+  }
+  .aboutMain .sec03 .philosophyContainer {
+    gap: 45px;
+  }
+  .aboutMain .sec03 .symbol {
+    width: 220px;
+  }
+  .aboutMain .sec03 .symbol img {
+    width: 175px;
+  }
+  .aboutMain .sec04 .officeContainer {
+    gap: 40px;
+  }
+}
+@media (max-width: 680px) {
+  .aboutMain .aboutSection {
+    padding: 55px 0 62px;
+  }
+  .aboutMain .sec01 .messageTop,
+.aboutMain .sec01 .messageBottom {
+    display: flex;
+    flex-direction: column;
+  }
+  .aboutMain .sec01 .messageTop .photo {
+    width: 100%;
+  }
+  .aboutMain .sec01 .messageTop .messageBox h3 {
+    font-size: 19px;
+  }
+  .aboutMain .sec01 .messageBottom {
+    margin: 42px 0 0;
+  }
+  .aboutMain .sec01 .messageBottom .chart {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .aboutMain .sec02 .profileContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .aboutMain .sec02 .profilePhoto {
+    order: -1;
+    width: 72%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .aboutMain .sec02 .career .dl {
+    padding-left: 34px;
+    line-height: 1.7;
+  }
+  .aboutMain .sec02 .career .dl .dt {
+    width: 78px;
+  }
+  .aboutMain .sec03 .philosophyContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .aboutMain .sec03 .philosophyText h3 {
+    font-size: 20px;
+  }
+  .aboutMain .sec04 .officeContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .aboutMain .sec04 .officePhoto {
+    order: -1;
+    width: 78%;
+    margin: 0 auto;
+  }
+  .aboutMain .sec04 .infoTable .dl .dt {
+    width: 80px;
+  }
+  .aboutMain .sec04 .infoTable .dt,
+.aboutMain .sec04 .infoTable .dd {
+    padding: 10px 7px;
+  }
+}
+/*////////////////////////////////////////////////////////////
+	service
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .serviceMain .serviceSection {
+    padding: 60px 0;
+  }
+  .serviceMain .sec01 .serviceIntro {
+    gap: 35px;
+  }
+  .serviceMain .sec01 .serviceIntro .introText h3 {
+    font-size: 21px;
+  }
+  .serviceMain .sec01 .serviceProcess {
+    margin-top: 55px;
+  }
+  .serviceMain .sec01 .serviceProcess > h3 {
+    font-size: 20px;
+  }
+  .serviceMain .sec02 .casePanel .li .dt {
+    padding: 24px;
+  }
+  .serviceMain .sec02 .casePanel .li .dt h3 {
+    font-size: 19px;
+  }
+  .serviceMain .sec02 .casePanel .li .dt .mark {
+    top: 24px;
+    right: 24px;
+  }
+  .serviceMain .sec02 .casePanel .li .txt {
+    margin: 0 24px;
+    padding-bottom: 24px;
+  }
+  .serviceMain .sec03 .strengthList .li {
+    padding: 28px;
+  }
+  .serviceMain .sec03 .strengthList .li h3 {
+    font-size: 20px;
+  }
+  .serviceMain .sec04 .flowList .li .flowTtl {
+    width: 240px;
+  }
+  .serviceMain .sec04 .flowList .li .flowTtl h3 {
+    font-size: 19px;
+  }
+  .serviceMain .sec05 .priceTable .dl .dt h3 {
+    font-size: 16px;
+  }
+  .serviceMain .secBnr {
+    padding: 55px 0 65px;
+  }
+}
+@media (max-width: 680px) {
+  .serviceMain .serviceSection {
+    padding: 55px 0;
+  }
+  .serviceMain .sec01 .serviceIntro {
+    flex-direction: column;
+  }
+  .serviceMain .sec01 .serviceIntro .photo {
+    width: 100%;
+  }
+  .serviceMain .sec02 .casePanel .ul {
+    flex-direction: column;
+  }
+  .serviceMain .sec02 .casePanel .li {
+    width: 100%;
+    min-height: 0;
+  }
+  .serviceMain .sec02 .casePanel .li .dl .dt {
+    padding: 20px;
+  }
+  .serviceMain .sec02 .casePanel .li .dl .dt h3 {
+    padding: 0 30px 0 0;
+    font-size: 16px;
+  }
+  .serviceMain .sec02 .casePanel .li .dl .dt .mark {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .serviceMain .sec02 .casePanel .li .dl .txt {
+    margin: 0 20px;
+    padding: 0 0 25px;
+  }
+  .serviceMain .sec03 .strengthList .ul {
+    flex-direction: column;
+  }
+  .serviceMain .sec03 .strengthList .li {
+    width: 100%;
+    min-height: 0;
+  }
+  .serviceMain .sec03 .strengthList .li .number {
+    left: 10px;
+    bottom: 10px;
+    font-size: 70px;
+  }
+  .serviceMain .sec03 .strengthList .li .ttl p {
+    font-size: 20px;
+  }
+  .serviceMain .sec04 .flowList .li {
+    flex-wrap: wrap;
+    padding: 15px 15px;
+  }
+  .serviceMain .sec04 .flowList .li .step {
+    width: 58px;
+  }
+  .serviceMain .sec04 .flowList .li .flowTtl {
+    width: calc(100% - 58px);
+    padding-right: 0;
+  }
+  .serviceMain .sec04 .flowList .li > .txt {
+    width: 100%;
+    flex: auto;
+    margin: 10px 0 0 15px;
+  }
+  .serviceMain .sec04 .flowList .li > .txt .investigationList .ul {
+    gap: 6px;
+  }
+  .serviceMain .sec04 .flowList .li > .txt .investigationList .liItem {
+    padding: 2px 10px;
+  }
+  .serviceMain .sec05 .priceTable .dl {
+    flex-direction: column;
+  }
+  .serviceMain .sec05 .priceTable .dl .dt {
+    width: 100%;
+  }
+  .serviceMain .secBnr {
+    padding: 45px 0 55px;
+  }
+  .serviceMain .secBnr .supportPanel {
+    position: relative;
+    max-width: 660px;
+    margin: 0 auto;
+    padding: 5px;
+    background: #e4efee;
+  }
+  .serviceMain .secBnr .supportPanel::before {
+    content: "";
+    position: absolute;
+    left: -6px;
+    bottom: -6px;
+    width: 100px;
+    height: 60px;
+    background: url(https://jiken-soudan.com/system_panel/uploads/images/top_sec01_support_flower.png) no-repeat;
+    background-size: 100% auto;
+  }
+  .serviceMain .secBnr .supportPanel .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px 30px;
+    border: 1px solid #9bd4d3;
+  }
+  .serviceMain .secBnr .supportPanel .txt {
+    max-width: 100%;
+    width: calc(100% - 90px);
+    margin: 0;
+    font-size: 14px;
+  }
+  .serviceMain .secBnr .supportPanel .photo {
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    width: 100px;
+  }
+}
+/*////////////////////////////////////////////////////////////
+	case
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .caseMain .blogSection {
+    padding: 60px 0;
+  }
+  .caseMain .postContainer .catePanel {
+    margin: 0 0 30px;
+  }
+  .caseMain .postContainer .blogPanel--list .webgene-blog .webgene-item + .webgene-item {
+    margin: 15px 0 0;
+  }
+  .caseMain .postContainer .blogPanel--list .webgene-blog .webgene-item a {
+    padding: 20px 50px 20px 20px;
+    background: url(https://jiken-soudan.com/system_panel/uploads/images/blog_list_arrow.png) right 15px center no-repeat #f5f5f5;
+    background-size: 25px auto;
+  }
+  .caseMain .postContainer .blogPanel--list .webgene-pagination {
+    margin: 60px auto 0;
+  }
+  .caseMain .postContainer .blogPanel--detail .webgene-blog .ttlBox {
+    font-size: 20px;
+  }
+  .caseMain .postContainer .blogPanel--detail .webgene-blog .slickSlide {
+    margin: 0 0 40px;
+  }
+  .caseMain .postContainer .blogPanel--detail .webgene-blog .slickSlide .slider .li > div {
+    padding: 0 0 70%;
+  }
+  .caseMain .postContainer .blogPanel--detail .webgene-blog .thumb-item.slider .li > div {
+    overflow: hidden;
+    position: relative;
+    padding: 0 0 100%;
+  }
+  .caseMain .postContainer .blogPanel--detail .webgene-blog .thumb-item.slider .li img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .caseMain .postContainer .blogPanel--detail .webgene-blog .slick-prev {
+    left: -20px;
+  }
+  .caseMain .postContainer .blogPanel--detail .webgene-blog .slick-next {
+    right: -20px;
+  }
+  .caseMain .postContainer .blogPanel--detail .webgene-blog .postBox h2,
+.caseMain .postContainer .blogPanel--detail .webgene-blog .postBox h3,
+.caseMain .postContainer .blogPanel--detail .webgene-blog .postBox h4,
+.caseMain .postContainer .blogPanel--detail .webgene-blog .postBox h5 {
+    font-size: 18px;
+  }
+  .caseMain .btnMore {
+    margin: 40px auto 0;
+  }
+}
+/*////////////////////////////////////////////////////////////
+	form
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .formMain .contactForm .form .checkList .ul {
+    padding: 0;
+  }
+  .formMain .contactForm .formBox + .formBox {
+    margin-top: 40px;
+  }
+  .formMain .contactForm .formBox > .dl::before {
+    display: none;
+  }
+  .formMain .contactForm .formBox > .dl.top {
+    display: none;
+  }
+  .formMain .contactForm .formBox > .dl > .dt {
+    display: block;
+    margin: 0;
+  }
+  .formMain .contactForm .formBox > .dl > .dt .span {
+    width: auto;
+    min-width: 0;
+    margin-right: 10px;
+    padding: 0;
+    font-size: 16px;
+    text-align: left;
+  }
+  .formMain .contactForm .formBox > .dl > .dt .span br {
+    display: none;
+  }
+  .formMain .contactForm .formBox > .dl > .dt .em {
+    font-size: 12px;
+    vertical-align: middle;
+  }
+  .formMain .contactForm .formBox > .dl > .dt .aside {
+    margin-top: 5px;
+  }
+  .formMain .contactForm .formBox > .dl > .dt .aside p {
+    font-size: 12px;
+  }
+  .formMain .contactForm .formBox > .dl > .dt .aside p br {
+    display: none;
+  }
+  .formMain .contactForm .formBox > .dl > .dd {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-bottom: none;
+  }
+  .formMain .contactForm .formBox .radioBox {
+    padding: 0;
+  }
+  .formMain .contactForm .formBox .radioList01 .list {
+    display: block;
+    margin: 0;
+  }
+  .formMain .contactForm .formBox .radioList01 .list + .list {
+    margin: 20px 0 0;
+  }
+  .formMain .contactForm .formBox .checkList01 .ul .li {
+    display: block;
+  }
+  .formMain .contactForm .formBox .checkList01 .ul .li + .li {
+    margin: 10px 0 0;
+  }
+  .formMain .contactForm .formBox .checkList01 .checkItem {
+    display: inline-block;
+    padding: 0 5px 0 0;
+  }
+  .formMain .contactForm .formBox .checkList01 .checkItem + input {
+    display: inline-block;
+    width: 150px;
+  }
+  .formMain .contactForm .formBox .addressBox .dl,
+.formMain .contactForm .formBox .dateBox .dl {
+    display: block;
+  }
+  .formMain .contactForm .formBox .addressBox .dl .dt,
+.formMain .contactForm .formBox .dateBox .dl .dt {
+    display: block;
+    width: 100%;
+  }
+  .formMain .contactForm .formBox .addressBox .dl .dd,
+.formMain .contactForm .formBox .dateBox .dl .dd {
+    display: block;
+  }
+  .formMain .contactForm .formBox .datePanel {
+    display: block;
+    font-size: 14px;
+  }
+  .formMain .contactForm .formBox .datePanel + .datePanel {
+    margin: 20px 0 0;
+  }
+  .formMain .contactForm .formBox .datePanel > * {
+    padding: 0 0 5px;
+  }
+  .formMain .contactForm .formBox .datePanel input {
+    width: 60px;
+  }
+  .formMain .contactForm .formBox .datePanel .selectBox {
+    width: 60px;
+  }
+  .formMain .contactForm .formBox .datePanel .dateTtl {
+    margin: 0 10px 0 0;
+  }
+  .formMain .contactForm .formBox .datePanel .dateTxt {
+    margin: 0 5px;
+  }
+  .formMain .contactForm .formBox .dateBox input[type=text] {
+    width: 70px;
+  }
+  .formMain .contactForm .formBox .dateBox .radioList {
+    display: block;
+    margin: 10px 0 0;
+  }
+  .formMain .contactForm .formBox .selectBox {
+    width: 180px;
+  }
+  .formMain .contactForm .formBox .privacy .agreeBox {
+    height: 250px;
+    padding: 20px 10px;
+  }
+  .formMain .contactForm .fileUploadBox {
+    display: block;
+  }
+  .formMain .contactForm .fileUploadBox .fileBox {
+    display: block;
+    width: 100%;
+  }
+  .formMain .contactForm .fileUploadBox .place {
+    margin: 0 0 5px;
+  }
+  .formMain .contactForm .fileUploadBox .fileArea {
+    display: block;
+    width: 100%;
+  }
+  .formMain .contactForm .fileUploadBox .fileArea .inputFile {
+    width: 200px;
+  }
+  .formMain .contactForm .fileUploadBox .fileArea > p,
+.formMain .contactForm .fileUploadBox .fileArea .fileTxt {
+    width: 100%;
+    margin: 10px 0 0;
+  }
+  .formMain .contactForm .fileUploadTitleBox {
+    margin: 40px 0 20px;
+  }
+  .formMain .contactForm .fileUploadTitleBox .fileUploadTitle p {
+    padding: 0 15px 0 0;
+    font-size: 20px;
+  }
+}

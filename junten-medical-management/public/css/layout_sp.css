@@ -1,0 +1,167 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+	画面用CSS（PC/SMP）
+===================================================*/
+/*////////////////////////////////////////////////////////////
+	TOP
+///////////////////////////////////////////////////////////*/
+#top .topKvContainer {
+  margin: 0 0 60px;
+}
+#top .topKvContainer .topKvPanel {
+  display: flex;
+  flex-direction: column;
+}
+#top .topKvContainer .topKv {
+  width: 100%;
+}
+#top .topKvContainer .kvTitleBox {
+  position: absolute;
+  top: 20%;
+  left: auto;
+  order: 1;
+  width: auto;
+  margin: 0 20px;
+  text-align: left;
+}
+#top .topKvContainer .kvTitle h1 {
+  font-size: 20px;
+  line-height: 1.75;
+}
+#top .topKvContainer .sub {
+  margin-top: 10px;
+}
+#top .topKvContainer .sub p {
+  font-size: clamp(12px, 3vw, 15px);
+  line-height: 2.4;
+}
+#top .sec01 {
+  padding: 60px 0 120px;
+}
+#top .sec02 {
+  padding: 60px 0 0;
+}
+#top .sec02 .secContainer {
+  margin-top: 30px;
+}
+#top .sec02 .secContainer .secPanel {
+  padding: 50px 0;
+}
+#top .sec02 .secContainer .secPanel + .secPanel {
+  padding-top: 20px;
+}
+#top .sec02 .secContainer .ttlBox {
+  margin-bottom: 30px;
+}
+#top .sec02 .secContainer .ttlBox .ttl h3 {
+  font-size: 20px;
+}
+#top .sec02 .secContainer .ttlBox .sub {
+  margin-top: 5px;
+  font-size: 13px;
+}
+#top .sec02 .secContainer .secBox {
+  display: block;
+}
+#top .sec02 .secContainer .photo,
+#top .sec02 .secContainer .txtBox {
+  width: 100%;
+}
+#top .sec02 .secContainer .txtBox {
+  margin-top: 25px;
+}
+#top .sec02 .secContainer .txtBox h4 {
+  margin-bottom: 18px;
+  font-size: 19px;
+  line-height: 1.65;
+}
+#top .sec02 .secContainer .txtBox .txt {
+  font-size: 13px;
+  line-height: 2;
+}
+#top .sec02 .secContainer .txtBox .txt br {
+  display: none;
+}
+#top .sec02 .secContainer .txtBox .more {
+  margin-top: 20px;
+}
+#top .sec02 .secContainer .txtBox .more a {
+  min-height: 40px;
+  font-size: 12px;
+}
+#top .sec02 .secContainer .txtBox ul li {
+  padding: 14px 10px;
+}
+#top .sec03 {
+  padding: 60px 0;
+}
+#top .sec03 .btnClinic {
+  max-width: 280px;
+}
+#top .sec03 .btnClinic a img {
+  width: 90%;
+  max-width: 180px;
+}
+#top .sec04 {
+  padding: 60px 0;
+}
+#top .sec04 .secContainer {
+  display: block;
+  margin-top: 45px;
+}
+#top .sec04 .secContainer .txtPanel,
+#top .sec04 .secContainer .mapPanel {
+  width: 100%;
+}
+#top .sec04 .secContainer .infoBox dt {
+  width: 65px;
+  padding: 15px 10px;
+}
+#top .sec04 .secContainer .infoBox dd {
+  padding: 15px 10px;
+  line-height: 1.7;
+}
+#top .sec04 .secContainer .mapPanel {
+  margin-top: 30px;
+}
+#top .sec04 .secContainer .mapBox {
+  padding-bottom: 66%;
+}
+
+/*////////////////////////////////////////////////////////////
+	contact
+///////////////////////////////////////////////////////////*/
+#contact .contactSection {
+  padding: 40px 0 80px;
+}
+#contact .contactSection .contactForm .formRow {
+  display: block;
+}
+#contact .contactSection .contactForm .formLabel {
+  justify-content: flex-start;
+  width: 100%;
+  padding: 14px 10px 8px;
+  font-size: 15px;
+}
+#contact .contactSection .contactForm .formLabel .required {
+  margin-left: 12px;
+  font-size: 12px;
+}
+#contact .contactSection .contactForm .formInput {
+  padding: 0 0 10px;
+}
+#contact .contactSection .contactForm .formRowTextarea .formLabel {
+  padding-top: 14px;
+}
+#contact .contactSection .contactForm .formSubmit {
+  padding-top: 25px;
+}
+#contact .contactSection .contactForm .formSubmit button {
+  min-width: 180px;
+  min-height: 45px;
+}
+#contact .contactSection .contactComplete .completePanel {
+  padding: 40px 20px 30px;
+  font-size: 18px;
+}

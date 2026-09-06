@@ -1,0 +1,397 @@
+@charset "UTF-8";
+@import "./mixin";
+@import "./mod";
+/* CSS Document */
+
+/*===================================================
+	共通CSS（SMP）
+===================================================*/
+
+/* --------------------------------------------------
+	base
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  body {
+    min-width: 0;
+    font-size: $SPfontSize;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  /*改行*/
+  .pcBreak {
+    display: none;
+  }
+  .spBreak {
+    display: block;
+  }
+  /*spのみ表示*/
+  .pcHidden {
+    display: block;
+  }
+  .spHidden {
+    display: none;
+  }
+  #sideBtn {
+    display: none;
+  }
+  .topicPath {
+    display: none;
+  }
+}
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: #f2f2f2;
+    .headTop {
+      height: 45px;
+      padding: 0 20px;
+      color: #ffffff;
+      background: #202121;
+      a {
+        color: #ffffff;
+      }
+      .logoBox {
+        .logo {
+          position: relative;
+          top: -4px;
+          left: -22px;
+          width: 220px;
+          a {
+            display: block;
+            color: #ffffff;
+          }
+        }
+        .headTtl {
+          display: none;
+        }
+      }
+      .headItem {
+        display: none;
+      }
+    }
+    .hamburger {
+      cursor: pointer;
+      display: block;
+      position: fixed;
+      top: 4px;
+      right: 10px;
+      width: 50px;
+      height: 40px;
+      z-index: 10000;
+      .span {
+        background: #ffffff;
+        position: absolute;
+        left: 50%;
+        width: 30px;
+        height: 1px;
+        transform: translateX(-50%);
+        transition: 0.4s;
+
+        &:nth-of-type(1) {
+          top: 10px;
+        }
+
+        &:nth-of-type(2) {
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        &:nth-of-type(3) {
+          bottom: 10px;
+        }
+      }
+
+      &.is-open {
+        .span {
+          background: #ffffff;
+        }
+        .span:nth-of-type(1) {
+          transform: translate(-50%, 9px) rotate(-45deg);
+        }
+
+        .span:nth-of-type(2) {
+          opacity: 0;
+        }
+
+        .span:nth-of-type(3) {
+          transform: translate(-50%, -9px) rotate(45deg);
+        }
+      }
+    }
+  }
+  .sideNav {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+    .ul {
+      display: flex;
+      .li {
+        width: 50%;
+        a {
+          display: block;
+          font-size: 16px;
+          color: #ffffff;
+          > div {
+            padding: 10px;
+            text-align: center;
+          }
+          p {
+            display: inline-block;
+          }
+        }
+      }
+      .case {
+        a {
+          background: #e50011;
+          p {
+            padding: 0 0 0 25px;
+            background: url(https://sit-4011322.sibloo.com/system_panel/uploads/images/side_icon_case.png)
+              left center no-repeat;
+            background-size: 18px auto;
+          }
+        }
+      }
+      .instagram {
+        a {
+          background: #9f9fa0;
+          p {
+            padding: 0 0 0 25px;
+            background: url(https://sit-4011322.sibloo.com/system_panel/uploads/images/side_icon_instagram.png)
+              left center no-repeat;
+            background-size: 18px auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* --------------------------------------------------
+	nav
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .navBox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    padding: 50px 0 60px;
+    color: #ffffff;
+    z-index: 999;
+    background: #000000;
+    transition: 0.6s;
+    a {
+      color: #ffffff;
+    }
+    .navList {
+      border-top: 1px solid #34363d;
+      border-bottom: 1px solid #34363d;
+      .ul {
+        .li {
+          padding: 10px 20px;
+          + .li {
+            border-top: 1px solid #34363d;
+          }
+          a {
+            display: block;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+    .navItem {
+      margin: 20px 0 0;
+      .telBox {
+        text-align: center;
+        a {
+          display: inline-block;
+        }
+        .telNum {
+          padding: 0 0 0 20px;
+          font-size: 18px;
+          background: url(https://sit-4011322.sibloo.com/system_panel/uploads/images/header_tel.png)
+            left center no-repeat;
+          background-size: 15px auto;
+        }
+        .telTime {
+          font-size: 12px;
+        }
+      }
+      .mailBox {
+        width: 170px;
+        margin: 10px auto 0;
+        a {
+          display: block;
+          padding: 5px 15px;
+          font-size: 12px;
+          text-align: center;
+          border: 1px solid #ffffff;
+          p {
+            padding: 0 0 0 18px;
+            background: url(https://sit-4011322.sibloo.com/system_panel/uploads/images/header_mail.png)
+              left center no-repeat;
+            background-size: 12px auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* --------------------------------------------------
+	main
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .main {
+    margin: 45px 0 0;
+  }
+  .pageTitleContainer {
+    margin: 0 0 60px;
+    padding: 30px 20px 50px;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -25px;
+      width: 100%;
+      height: 50px;
+      background: url(https://sit-4011322.sibloo.com/system_panel/uploads/images/page_title_bg.png)
+        no-repeat;
+      background-size: cover;
+    }
+    .pageTitleBox {
+      p {
+        font-size: 30px;
+      }
+    }
+  }
+  .pageSecTtlBox {
+    .sub {
+      p {
+        font-size: 24px;
+      }
+    }
+    .pageSecTtl {
+      font-size: 12px;
+    }
+  }
+  .mapBox {
+    padding: 0 0 70%;
+  }
+}
+
+/* --------------------------------------------------
+	footer
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .footer {
+    .footContact {
+      padding: 40px 0;
+      &::before {
+        content: "";
+        position: absolute;
+        top: -60px;
+        left: 20px;
+        width: 300px;
+        height: 325px;
+      }
+      .ttlBox01 {
+        max-width: 280px;
+        margin: 0 auto 30px;
+        font-size: 18px;
+      }
+      .ttlBox02 {
+        margin: 0 0 20px;
+        h2 {
+          font-size: 24px;
+        }
+      }
+      .topTxt {
+        margin: 0 0 20px;
+      }
+      .contactPanel {
+        padding: 20px;
+        .stepBox {
+          position: relative;
+          max-width: 240px;
+          margin: 0 auto 20px;
+          &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 4px;
+            height: 100%;
+            margin: 0 auto;
+            z-index: 0;
+            background: #e50011;
+          }
+          .step {
+            position: relative;
+            max-width: 240px;
+            + .step {
+              margin: 30px 0 0;
+            }
+          }
+        }
+        .contactItem {
+          display: block;
+          .telBox {
+            margin: 0 0 20px;
+          }
+          .mailBox {
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+    .footPanel {
+      padding: 40px 0 80px;
+      .logo {
+        max-width: 300px;
+        margin: 0 auto 30px;
+      }
+      .footNavBox {
+        display: none;
+      }
+      .footBottom {
+        padding: 20px 0 0;
+        border-top: 1px solid #232323;
+        .snsPanel {
+          .dl {
+            margin: 0 auto;
+            .dt {
+            }
+            .dd {
+              display: flex;
+              gap: 10px;
+              .sns {
+                width: 20px;
+                a {
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+      }
+      .copy {
+        margin: 40px 0 0;
+        text-align: center;
+      }
+    }
+  }
+}

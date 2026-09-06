@@ -1,0 +1,1131 @@
+@charset "UTF-8";
+@import "./mixin";
+@import "./mod";
+/* CSS Document */
+
+/*===================================================
+	画面用CSS（PC/SMP）
+===================================================*/
+
+/*////////////////////////////////////////////////////////////
+	TOP
+///////////////////////////////////////////////////////////*/
+#top {
+  .topKvContainer {
+    .topKv {
+      height: 400px;
+    }
+    .kvTitleBox {
+      position: absolute;
+      right: 20px;
+      bottom: 40px;
+      text-align: right;
+      .kvTitle01 {
+        font-size: 34px;
+      }
+      .kvTitle02 {
+        font-size: 16px;
+      }
+    }
+  }
+  .postSection {
+    padding: 60px 0;
+    .secContainer {
+      .section {
+        + .section {
+          margin: 40px 0 0;
+        }
+        .leftBox {
+          margin: 0 0 20px;
+        }
+        .rightBox {
+          .postPanel {
+            padding: 15px 0;
+            border-top: 1px solid #767676;
+            ul {
+              height: 200px;
+              li {
+                + li {
+                  margin: 15px 0 0;
+                }
+                a {
+                  display: block;
+                }
+                span {
+                  width: auto;
+                }
+                p {
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .sec01 {
+    padding: 60px 0;
+    &::before {
+      width: 200px;
+      height: 200px;
+    }
+    &:after {
+      width: 200px;
+      height: 200px;
+    }
+    .secContainer01 {
+      margin: 0 0 60px;
+      .secBox {
+        .txtBox {
+          padding: 25px 0;
+          .secTtl {
+            margin: 0 0 20px;
+            h2 {
+              font-size: 24px;
+            }
+            p {
+              font-size: 16px;
+            }
+          }
+          .txt {
+            line-height: 2.5;
+            p + p {
+              margin: 20px 0 0;
+            }
+          }
+        }
+      }
+    }
+    .secContainer02 {
+      h3 {
+        margin: 0 0 20px;
+        font-size: 20px;
+      }
+      .topTxt {
+        margin: 0 0 40px;
+      }
+      .listPanel {
+        max-width: 600px;
+        padding: 20px;
+        .listBox {
+          ul {
+            li {
+              + li {
+                margin: 30px 0 0;
+              }
+              dl {
+                padding: 20px;
+                dt {
+                  min-height: 0;
+                  margin: 0 0 10px;
+                  font-size: 18px;
+                }
+                dd {
+                  .txt {
+                    br {
+                      display: none;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .sec02 {
+    .section {
+      padding: 50px 0;
+      .secPanel {
+        padding: 30px 20px;
+        .secBox {
+          max-width: 1000px;
+          margin: 0 auto;
+          h2 {
+            max-width: 400px;
+            margin: 0 auto 20px;
+            padding: 0 0 10px;
+            font-size: 24px;
+          }
+          .btnMore {
+            margin: 40px 0 0;
+          }
+        }
+      }
+    }
+  }
+  .sec03 {
+    padding: 50px 0;
+    .secTtl {
+      margin: 0 0 40px;
+      h2 {
+        font-size: 24px;
+      }
+    }
+    .listBox {
+      max-width: 600px;
+      margin: 0 auto;
+      ul {
+        li {
+          + li {
+            margin: 30px 0 0;
+          }
+        }
+      }
+    }
+    .btnMore {
+      margin: 40px 0 0;
+    }
+  }
+  .instagramSection {
+    padding: 60px 0;
+    .section {
+      + .section {
+        margin: 60px 0 0;
+      }
+    }
+  }
+  .secAbout {
+    padding: 40px 0 60px;
+    .listBox {
+      max-width: 600px;
+      margin: 0 auto;
+      ul {
+        li {
+          + li {
+            margin: 30px 0 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	reason
+///////////////////////////////////////////////////////////*/
+#reason {
+  .topSection {
+    padding: 60px 0;
+    .secTtl {
+      margin: 0 0 20px;
+      font-size: 24px;
+    }
+  }
+  .sec01 {
+    .seContainer01 {
+      margin: 0 0 60px;
+      .secPanel {
+        + .secPanel {
+          margin: 50px 0 0;
+        }
+        .pHead {
+          padding: 10px 20px 10px 80px;
+          .point {
+            top: -10px;
+            left: 10px;
+            width: 55px;
+            height: 55px;
+            span {
+              font-size: 11px;
+              line-height: 1.2;
+            }
+            em {
+              font-size: 20px;
+            }
+          }
+          .ttl {
+            font-size: 18px;
+          }
+        }
+        .pBody {
+          padding: 20px;
+          .secBox {
+            .txtBox {
+              padding: 15px 0 0;
+            }
+          }
+        }
+      }
+    }
+    .seContainer02 {
+      padding: 0 0 60px;
+      &::before {
+        height: calc(100% - 100px);
+      }
+      .secPanel {
+        margin: 0 0 30px;
+        .pTtl {
+          max-width: 330px;
+          margin: 0 0 20px;
+          padding: 5px 20px;
+          font-size: 16px;
+        }
+        .listBox {
+          ul {
+            li {
+              + li {
+                margin: 30px 0 0;
+              }
+            }
+          }
+        }
+      }
+      .arrow {
+        width: 60px;
+        margin: 0 auto 30px;
+      }
+      .message {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	service
+///////////////////////////////////////////////////////////*/
+.serviceMain {
+  .topSection {
+    margin: 40px 0 0;
+    padding: 60px 0;
+    .secBox {
+      .txtBox {
+        padding: 20px 0 0;
+        h2 {
+          margin: 0 0 15px;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+  .secService {
+    padding: 120px 0;
+    .listBox {
+      ul {
+        li {
+          + li {
+            margin: 40px 0 0;
+          }
+          .photoBox {
+            .ttl {
+              p {
+                font-size: 16px;
+              }
+            }
+          }
+          .txt {
+            margin: 10px 0 0;
+          }
+        }
+      }
+    }
+  }
+  .secReason {
+    padding: 60px 0;
+    .listPanel {
+      max-width: 600px;
+      padding: 20px;
+      .listBox {
+        ul {
+          li {
+            + li {
+              margin: 30px 0 0;
+            }
+            dl {
+              padding: 20px;
+              dt {
+                min-height: 0;
+                margin: 0 0 10px;
+                font-size: 18px;
+              }
+              dd {
+                .txt {
+                  br {
+                    display: none;
+                  }
+                }
+              }
+            }
+            .num {
+              position: absolute;
+              top: 5px;
+              left: 20px;
+              font-size: 60px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .secCase {
+    padding: 60px 0;
+    .section {
+      + .section {
+        margin: 50px 0 0;
+      }
+      .secTtl {
+        margin: 0 0 30px;
+        padding: 0 0 5px;
+        font-size: 20px;
+        h3 {
+          padding: 0 0 0 15px;
+        }
+      }
+      .txtBox {
+        dl {
+          dt {
+            font-size: 18px;
+          }
+          dd {
+          }
+        }
+      }
+      .secBox {
+        + .secBox {
+          margin: 50px 0 0;
+        }
+        .photoBox {
+          .ttl {
+            position: absolute;
+            top: 20px;
+            left: -10px;
+            width: 100%;
+            p {
+              min-width: 120px;
+              padding: 5px 20px;
+              font-size: 16px;
+            }
+          }
+        }
+        .txtBox {
+          padding: 20px 0 0;
+        }
+      }
+    }
+    .message {
+      margin: 50px 0 0;
+      font-size: 20px;
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	corp
+///////////////////////////////////////////////////////////*/
+#corp {
+}
+
+/*////////////////////////////////////////////////////////////
+	school
+///////////////////////////////////////////////////////////*/
+#school {
+}
+
+/*////////////////////////////////////////////////////////////
+	personal
+///////////////////////////////////////////////////////////*/
+#personal {
+  .topSection {
+    margin: 20px 0 0;
+    .secPanel {
+      padding: 50px 20px;
+    }
+    .secBox {
+      .secTtl {
+        max-width: 650px;
+        margin: 0 auto 30px;
+        padding: 2px;
+        border: 4px solid #bab438;
+        .inner {
+          padding: 15px;
+          border: 2px solid #bab438;
+        }
+        h2 {
+          font-size: 18px;
+        }
+      }
+      .txt {
+      }
+    }
+    .photoBox01 {
+      display: flex;
+      justify-content: space-between;
+      .photo01 {
+        position: relative;
+        top: -40px;
+        width: 25%;
+      }
+      .photo02 {
+        width: 25%;
+      }
+      .photo03 {
+        width: 30%;
+      }
+    }
+    .photoBox02 {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 0 0;
+      .photo04 {
+        width: 30%;
+      }
+      .photo05 {
+        width: 25%;
+      }
+      .photo06 {
+        width: 25%;
+      }
+    }
+  }
+  .sec01 {
+    padding: 60px 0;
+    .secBox {
+      + .secBox {
+        margin: 50px 0 0;
+      }
+      .txtBox {
+        padding: 20px 0 0;
+        h3 {
+          font-size: 20px;
+        }
+        .txt {
+        }
+      }
+    }
+  }
+  .sec02 {
+    padding: 60px 0;
+    .listBox {
+      ul {
+        li {
+          + li {
+            margin: 30px 0 0;
+          }
+          .txt {
+            margin: 10px 0 0;
+          }
+        }
+      }
+      .asiaTravelSlider {
+        margin: 0;
+        padding: 0 45px;
+        li {
+          padding: 0;
+          + li {
+            margin: 0;
+          }
+        }
+        .slick-arrow {
+          width: 30px;
+          height: 30px;
+        }
+        .slick-prev {
+          left: 0;
+        }
+        .slick-next {
+          right: 0;
+        }
+      }
+    }
+  }
+  .sec03 {
+    padding: 60px 0;
+    .listBox {
+      max-width: 600px;
+      margin: 0 auto;
+      ul {
+        li {
+          + li {
+            margin: 30px 0 0;
+          }
+        }
+      }
+    }
+    .btnMore {
+      margin: 40px 0 0;
+    }
+  }
+  .sec04 {
+    padding: 60px 0;
+    .secBox {
+      + .secBox {
+        margin: 50px 0 0;
+      }
+      .txtBox {
+        padding: 20px 0 0;
+        h3 {
+          font-size: 20px;
+        }
+        .txt {
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	agency
+///////////////////////////////////////////////////////////*/
+#agency {
+  .topSection {
+    margin: 40px 0 0;
+    padding: 60px 0;
+    .secBox {
+      .txtBox {
+        padding: 20px 0 0;
+        h2 {
+          margin: 0 0 15px;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+  .sec01 {
+    padding: 60px 0;
+    .secContainer {
+      .tabList {
+        margin: 0 0 30px;
+        ul {
+          flex-wrap: wrap;
+          gap: 12px;
+          li {
+            flex: 0 0 calc((100% - 12px) / 2);
+            a {
+              min-height: 36px;
+              font-size: 13px;
+            }
+          }
+        }
+      }
+      .tabContent {
+        .secBoxPanel {
+          .secBox {
+            border-top: 1px solid #767676;
+            dl {
+              display: block;
+              padding: 10px 0;
+              dt {
+                padding: 0 0 5px;
+              }
+              dd {
+                width: 145px;
+                flex-shrink: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	flow
+///////////////////////////////////////////////////////////*/
+#flow {
+  .sec01 {
+    padding: 60px 0;
+    .linkList {
+      max-width: 330px;
+      margin: 0 auto 50px;
+      ul {
+        li {
+          + li {
+            margin: 10px 0 0;
+          }
+        }
+      }
+    }
+    .section {
+      + .section {
+        margin: 60px 0 0;
+      }
+      .secTtl {
+        margin: 0 0 20px;
+        padding: 0 0 5px;
+        font-size: 20px;
+        h3 {
+          padding: 0 0 0 15px;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 10px;
+            height: 4px;
+            margin: auto 0;
+            background: #d61807;
+          }
+        }
+      }
+    }
+    .flowBox {
+      padding: 15px;
+      + .flowBox {
+        margin: 15px 0 0;
+      }
+      dl {
+        dt {
+          padding: 0 0 5px;
+          border-bottom: 1px solid #000000;
+          span {
+            margin: 0 5px 0 0;
+            font-size: 18px;
+          }
+          em {
+            font-size: 18px;
+          }
+        }
+        dd {
+          padding: 10px 0 0;
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	faq
+///////////////////////////////////////////////////////////*/
+#faq {
+  .sec01 {
+    padding: 60px 0;
+    .linkList {
+      max-width: 330px;
+      margin: 0 auto 50px;
+      ul {
+        li {
+          + li {
+            margin: 10px 0 0;
+          }
+        }
+      }
+    }
+    .section {
+      + .section {
+        margin: 60px 0 0;
+      }
+      .secTtl {
+        margin: 0 0 20px;
+        padding: 0 0 5px;
+        font-size: 20px;
+        h3 {
+          padding: 0 0 0 15px;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 10px;
+            height: 4px;
+            margin: auto 0;
+            background: #d61807;
+          }
+        }
+      }
+    }
+    .faqBox {
+      > dl {
+        > dt {
+          padding: 10px 30px 10px 20px;
+          background: url("../image/common/accord_plus.png") right 15px center
+            no-repeat #e7780b;
+          background-size: 12px auto;
+          &.active {
+            background: url("../image/common/accord_minus.png") right 15px
+              center no-repeat #e7780b;
+            background-size: 12px auto;
+          }
+          span {
+            margin: 0 10px 0 0;
+            font-size: 18px;
+          }
+          em {
+            font-size: 16px;
+          }
+        }
+        > dd {
+          padding: 15px 20px;
+        }
+      }
+    }
+    .itemList {
+      margin: 15px 0 0;
+      .itemBox {
+        + .itemBox {
+          margin: 10px 0 0;
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	company
+///////////////////////////////////////////////////////////*/
+#company {
+  .sec01 {
+    padding: 60px 0;
+    .secBox {
+      .photoBox {
+        .nameBox {
+          .name {
+            display: inline-block;
+            width: 150px;
+          }
+        }
+      }
+      .txtBox {
+        padding: 20px 0 0;
+        .txt {
+          line-height: 2.5;
+          p + p {
+            margin: 20px 0 0;
+          }
+        }
+      }
+    }
+  }
+  .sec02 {
+    padding: 30px 0;
+    .topBox {
+      dl {
+        dt {
+          margin: 0 0 10px;
+          font-size: 20px;
+        }
+        dd {
+        }
+      }
+    }
+    .slidePanel {
+      .slideBox {
+        ul {
+          li {
+            width: calc(100% / 2);
+            margin: 0 2px;
+          }
+        }
+      }
+    }
+  }
+  .sec03 {
+    padding: 30px 0 0;
+    .infoBox {
+      padding: 0 0 40px;
+      dl {
+        dt {
+          padding: 10px 0;
+        }
+        dd {
+          padding: 10px 0;
+        }
+        &:first-child {
+          dt {
+            border-top: 1px solid #d61807;
+          }
+          dd {
+            border-top: none;
+          }
+        }
+      }
+    }
+  }
+  .sec04 {
+    padding: 60px 0;
+    .historyContainer {
+      .historyBox {
+        padding: 0 0 30px;
+        &::before {
+          content: "";
+          position: absolute;
+          left: 85px;
+          top: 7px;
+          width: 1px;
+          height: 100%;
+          background: #dac9c8;
+        }
+        .yearBox {
+          width: 70px;
+          .year01 {
+            font-size: 16px;
+          }
+          .year02 {
+            font-size: 13px;
+          }
+        }
+        .txtBox {
+          width: calc(100% - 90px);
+          padding: 0 0 0 10px;
+          &::before {
+            content: "";
+            position: absolute;
+            left: -10px;
+            top: 8px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #000000;
+          }
+          dl {
+            dt {
+              margin: 0 0 3px;
+              font-size: 16px;
+            }
+            dd {
+              line-height: 2;
+            }
+          }
+        }
+      }
+    }
+    aside {
+      padding: 20px 0;
+      font-size: 16px;
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	contact
+///////////////////////////////////////////////////////////*/
+#contact {
+  .topSection {
+    padding: 60px 0;
+    .secTtl {
+      margin: 0 0 15px;
+      padding: 0 0 5px;
+      font-size: 20px;
+    }
+    .txt {
+      margin: 0 0 15px;
+    }
+    .faqBox {
+      padding: 30px 20px;
+    }
+  }
+  .sec01 {
+    padding: 40px 0;
+  }
+  .sec02 {
+    padding: 40px 0 80px;
+    .secBox {
+      .itemBox {
+        padding: 15px 20px;
+        + .itemBox {
+          margin: 20px 0 0;
+        }
+        dl {
+          dt {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	form
+///////////////////////////////////////////////////////////*/
+.contactContainer {
+  .formBox {
+    dl {
+      padding: 10px 0;
+      + dl {
+        margin: 10px 0 0;
+      }
+      dt {
+        justify-content: flex-start;
+        margin: 0 0 10px;
+        em {
+          margin: 0 0 0 10px;
+        }
+      }
+    }
+    .addressBox {
+      .postalBox {
+        .inputBox {
+          width: 100px;
+        }
+      }
+      .innerBox {
+        margin: 10px 0 0;
+      }
+    }
+    .privacy {
+      margin: 30px 0 50px;
+      .agreeBox {
+        height: 300px;
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	blog
+///////////////////////////////////////////////////////////*/
+#blog {
+  .blogContainer {
+    padding: 60px 0;
+  }
+  .catePanel {
+    margin: 0 0 50px;
+    ul {
+      flex-wrap: wrap;
+      gap: 12px;
+      li {
+        flex: 0 0 calc((100% - 12px) / 2);
+        a {
+          min-height: 36px;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  .listPanel {
+    .listBox {
+      max-width: 600px;
+      margin: 0 auto;
+      ul {
+        li {
+          + li {
+            margin: 30px 0 0;
+          }
+        }
+      }
+    }
+  }
+  .list__pagination {
+    margin: 40px 0 0;
+  }
+  .tourDetailContainer {
+    .titlePanel {
+      display: block;
+      margin: 0 0 25px;
+      padding: 5px 0;
+      .cate {
+        margin: 0 0 5px;
+        p {
+          display: inline-block;
+          padding: 0 10px;
+          font-size: 14px;
+          background: #d61807;
+        }
+      }
+      .title {
+        padding: 0 20px;
+        font-size: 16px;
+      }
+    }
+    .secTtl {
+      font-size: 18px;
+    }
+    .subSection {
+      margin: 0 0 50px;
+      .listBox {
+        margin: 0 0 40px;
+        ul {
+          li {
+            + li {
+              margin: 30px 0 0;
+            }
+            .photo {
+              padding: 0 0 66%;
+            }
+            p {
+              margin: 5px 0 0;
+            }
+          }
+        }
+      }
+    }
+    .scheduleSection {
+      margin: 0 0 50px;
+      .scheduleTable {
+        .headBox {
+          display: none;
+        }
+        .cntBody {
+          .scheduleBox {
+            line-height: 2;
+            border: 1px solid #000000;
+            + .scheduleBox {
+              margin: 20px 0 0;
+            }
+            .box {
+              + .box {
+                border-top: 1px solid #000000;
+              }
+              dl {
+                dt {
+                  padding: 10px;
+                  color: #ffffff;
+                  text-align: center;
+                  border-bottom: 1px solid #000000;
+                  background: #e7780b;
+                }
+              }
+            }
+            .date {
+              dl {
+                dd {
+                  padding: 10px 20px;
+                  text-align: center;
+                }
+              }
+            }
+            .schedule {
+              dl {
+                dd {
+                  padding: 10px 20px;
+                }
+              }
+            }
+            .meal {
+              dl {
+                dd {
+                  ul {
+                    li {
+                      padding: 10px 20px;
+                      + li {
+                        border-top: 1px solid #000000;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .itemSection {
+      .priceBox {
+        padding: 15px;
+        em {
+          font-size: 18px;
+        }
+        span {
+          font-size: 14px;
+        }
+        + p {
+          margin: 3px 0 0;
+        }
+      }
+      .pdfBox {
+        a {
+          padding: 15px;
+          span {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}

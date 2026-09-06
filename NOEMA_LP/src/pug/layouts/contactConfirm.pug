@@ -1,0 +1,57 @@
+// ▽メイン▽
+main#contactConfirm.pageMain.formPage
+    .pageMainContainer
+        .pageTitleContainer
+            .pageTtlBox
+                .sub
+                    p CONFIRM
+                .secTtl
+                    h1 内容確認
+        #section__contact
+            .formConfirm
+                <form id="confirmForm" method="post" action="" enctype="multipart/form-data">
+                    <dl class="radioForm">
+                    <dt><span>お問い合わせ項目</span><em>必須</em></dt>
+                    <dd>
+                    <div class="radioArea">会社について
+                    <input type="hidden" name="radio_kind" value="会社について">
+
+                    <input type="hidden" name="__children[radio_kind][]" value="{&quot;\u65b0\u5352\u63a1\u7528&quot;:&quot;\u65b0\u5352\u63a1\u7528&quot;,&quot;\u4e2d\u9014\u63a1\u7528&quot;:&quot;\u4e2d\u9014\u63a1\u7528&quot;}">
+                    </div>
+                    </dd>
+                    </dl>
+                    <dl>
+                        <dt><span>お名前</span><em>必須</em></dt>
+                        <dd>
+                        <div class="inputBox">山田花子
+                        <input type="hidden" name="name" value="山田花子">
+                        </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><span>フリガナ*</span></dt>
+                        <dd>
+                        <div class="inputBox">ヤマダハナコ
+                        <input type="hidden" name="furigana" value="ヤマダハナコ">
+                        </div>
+                        </dd>
+                    </dl>
+                    <dl class="msg">
+                        <dt><span>お問合せ内容</span></dt>
+                        <dd>
+                        <div class="inputBox">ここにお問い合わせ内容ここにお問い合わせ
+                        <input type="hidden" name="msg" value="ここにお問い合わせ内容ここにお問い合わせ">
+                        </div>
+                        </dd>
+                    </dl>
+                    <div class="checkItem agreeCheck">
+                        <label><br>
+                            <input type="checkbox"><span>個人情報の取り扱いについて同意する</span><br>
+                        </label>
+                    </div>
+                    <div class="submitButton">
+                    <input type="submit" name="mwform_submitButton" value="送信">
+                    <button type="submit" name="submitBack" value="" class="btnBack">修正</button>
+                    </div>
+                    <input type="hidden" id="mw_wp_form_token" name="mw_wp_form_token" value="0bac259e45"><input type="hidden" name="_wp_http_referer" value="/wacca_recruit_confirm/"><input type="hidden" name="mw-wp-form-form-id" value="137"><input type="hidden" name="mw-wp-form-form-verify-token" value="b7cf7293657980f99b05759f94933746597e7545"></form>
+// △メイン△

@@ -1,0 +1,243 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+	共通CSS（SMP）
+===================================================*/
+/* --------------------------------------------------
+	base
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  body {
+    min-width: 0;
+    font-size: 16px;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  /*改行*/
+  .pcBreak {
+    display: none;
+  }
+
+  .spBreak {
+    display: block;
+  }
+
+  /*spのみ表示*/
+  .pcHidden {
+    display: block;
+  }
+
+  .spHidden {
+    display: none;
+  }
+
+  #sideBtn {
+    display: none;
+  }
+
+  .topicPath {
+    display: none;
+  }
+}
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .header {
+    padding: 10px 20px;
+    background: #ffffff;
+  }
+  .header .logo {
+    width: 50px;
+  }
+  .header .headNav {
+    display: none;
+  }
+  .header .hamburger {
+    top: 10px;
+    right: 20px;
+  }
+}
+/* --------------------------------------------------
+	nav
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .navBox {
+    overflow: auto;
+    padding: 60px 20px;
+  }
+  .navBox .navPanel01 {
+    flex-direction: column-reverse;
+    margin: 0 0 40px;
+  }
+  .navBox .navPanel01 .leftBox {
+    width: 100%;
+    margin: 30px 0 0;
+    text-align: center;
+  }
+  .navBox .navPanel01 .leftBox .logoNav {
+    max-width: 100px;
+    margin: 0 auto 30px;
+  }
+  .navBox .navPanel01 .leftBox .info {
+    display: inline-block;
+    font-size: 12px;
+    text-align: left;
+  }
+  .navBox .navPanel01 .leftBox .info .txt + .txt {
+    margin: 20px 0 0;
+  }
+  .navBox .navPanel01 .rightBox {
+    width: 100%;
+    text-align: center;
+  }
+  .navBox .navPanel01 .rightBox .navList {
+    display: inline-block;
+    min-width: 260px;
+    text-align: left;
+  }
+  .navBox .navPanel01 .rightBox .navList .ul + .ul {
+    margin: 15px 0 0;
+  }
+  .navBox .navPanel01 .rightBox .navList .ul .li + .li {
+    margin: 15px 0 0;
+  }
+  .navBox .navPanel01 .rightBox .navList .ul .li a {
+    font-size: 14px;
+  }
+  .navBox .navPanel01 .rightBox .navList .ul .li .em {
+    font-size: 24px;
+  }
+  .navBox .navPanel01 .rightBox .navItem {
+    padding: 30px 0 10px;
+  }
+  .navBox .navPanel01 .rightBox .navItem .ul {
+    display: flex;
+    justify-content: center;
+    gap: 0 20px;
+  }
+  .navBox .navPanel01 .rightBox .navItem .ul .li a {
+    display: inline-block;
+    font-size: 16px;
+    color: #ffffff;
+  }
+  .navBox .navPanel01 .rightBox .shopBox {
+    margin: 30px 0 0;
+  }
+  .navBox .navPanel01 .rightBox .shopBox .dl .dt {
+    margin: 0 0 2px;
+  }
+  .navBox .navPanel01 .rightBox .shopBox .dl .dd {
+    font-size: 24px;
+  }
+}
+/* --------------------------------------------------
+	main
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .main {
+    margin: 70px 0 0;
+  }
+
+  .pageTitlePanel {
+    padding: 40px 20px 20px;
+  }
+  .pageTitlePanel .pageTitle {
+    width: 100%;
+  }
+  .pageTitlePanel .pageTitle h1 {
+    font-size: 28px;
+  }
+  .pageTitlePanel .pageTitle p {
+    font-size: 14px;
+  }
+
+  .pageKvPanel {
+    width: 100%;
+    padding: 0 0 0 20px;
+  }
+
+  .pageSecTtlBox {
+    margin: 0 0 40px;
+  }
+  .pageSecTtlBox .sub {
+    font-size: 14px;
+  }
+  .pageSecTtlBox .pageSecTtl {
+    font-size: 20px;
+  }
+
+  .mapBox {
+    padding: 0 0 70%;
+  }
+}
+/* --------------------------------------------------
+	footer
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .footer .footContact {
+    padding: 60px 0;
+  }
+  .footer .footContact .secTtlBox {
+    margin: 0 0 30px;
+  }
+  .footer .footContact .secTtlBox .secTtl {
+    font-size: 24px;
+  }
+  .footer .footContact .itemPanel .itemBox {
+    padding: 15px;
+  }
+  .footer .footContact .itemPanel .itemBox + .itemBox {
+    margin: 20px 0 0;
+  }
+  .footer .footContact .itemPanel .itemBox .ttl {
+    margin: 0 0 10px;
+    font-size: 20px;
+  }
+  .footer .footContact .itemPanel .itemBox .telBox a {
+    font-size: 24px;
+  }
+  .footer .footContact .itemPanel .itemBox .btnMail a {
+    max-width: 240px;
+  }
+  .footer .footPanel {
+    padding: 40px 0 20px;
+  }
+  .footer .footPanel .pagetop {
+    right: 20px;
+  }
+  .footer .footPanel .logoBox {
+    text-align: center;
+  }
+  .footer .footPanel .logoBox .logo {
+    width: 120px;
+    margin: 0 auto 20px;
+  }
+  .footer .footPanel .copy {
+    padding: 30px 0 0;
+    text-align: center;
+  }
+}
+/* --------------------------------------------------
+	opening
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .opening .logo {
+    width: 200px;
+  }
+  .opening .message {
+    font-size: 26px;
+  }
+  .opening .final {
+    font-size: 30px;
+  }
+  .opening .skip {
+    position: absolute;
+    bottom: 20%;
+    right: 20px;
+    font-size: 20px;
+  }
+}

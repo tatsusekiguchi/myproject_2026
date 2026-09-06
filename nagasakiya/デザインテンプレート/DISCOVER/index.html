@@ -1,0 +1,305 @@
+<link href="https://img.shop-pro.jp/tmpl_js/86/slick.css" rel="stylesheet" type="text/css">
+<link href="https://img.shop-pro.jp/tmpl_js/86/slick-theme.css" rel="stylesheet" type="text/css">
+
+<!-- スライダー -->
+<div class="u-container">
+  <{if $slideshow_html}>
+  <div class="slider">
+    <{$slideshow_html}>
+  </div>
+  <script type="text/javascript">
+    //<![CDATA[
+    $(window).load(function () {
+      $('#slider').bxSlider({
+        auto: true,
+        pause: 5000,
+        speed: 500,
+        controls: false,
+        captions: true,
+        pager: true,
+        responsive: true,
+        useCSS: false,
+        mode: 'fade'
+      });
+    });
+    //]]>
+  </script>
+  <{/if}>
+</div>
+<!-- //スライダー -->
+<!-- インフォメーション機能 -->
+<{if $news != ""}>
+<div class="p-line-informaiton u-container">
+  <h2 class="p-line-informaiton__ttl">
+    NEWS
+  </h2>
+  <ul>
+    <{section name=num loop=$news}>
+    <li>
+      <{$news[num].date}>&#160;
+      <{if $news[num].link_url != ""}>
+      <a href="<{$news[num].link_url}>"><{$news[num].message}></a>
+      <{else}>
+      <{$news[num].message}>
+      <{/if}>
+    </li>
+    <{/section}>
+  </ul>
+</div>
+<{/if}>
+<!-- //インフォメーション機能 -->
+<{if $recommend_num != 0}>
+<div class="p-recommend u-container u-contents">
+  <h2 class="c-ttl-main">
+    RECOMMENDED
+    <span class="c-ttl-main__ja">おすすめ</span>
+  </h2>
+  <ul class="c-item-list">
+    <{section name=num loop=$recommend}>
+    <li class="c-item-list__item<{if $smarty.section.num.iteration > 8}> is-hidden<{/if}>">
+      <div class="c-item-list__img u-img-scale">
+        <a href="<{$recommend[num].link_url}>">
+          <{if $recommend[num].img_url != ""}>
+          <img src="<{$recommend[num].img_url}>" alt="<{$recommend[num].name|escape:'html'}>" />
+          <{else}>
+          <img src="https://img.shop-pro.jp/tmpl_img/86/no-image.jpg" alt="<{$recommend[num].name|escape:'html'}>" />
+          <{/if}>
+        </a>
+      </div>
+      <div class="c-item-list__txt">
+        <div class="c-item-list__ttl">
+          <a href="<{$recommend[num].link_url}>">
+            <{$recommend[num].name}>
+          </a>
+        </div>
+        <{if !$recommend[num].soldout_flg}>
+        <div class="c-item-list__price<{if $members_login_flg && $recommend[num].discount_flg}> is-discount<{/if}>">
+          <{* 販売価格（ログイン時は会員価格） *}>
+          <{$recommend[num].price}>
+          <{* 割引率（ログイン時、通常販売価格と会員価格が異なる場合のみ） *}>
+          <{if $members_login_flg && $recommend[num].discount_flg}><{$recommend[num].discount_rate}>OFF<{/if}>
+        </div>
+        <{* 通常販売価格（ログイン時、通常販売価格と会員価格が異なる場合のみ） *}>
+        <{if $members_login_flg && $recommend[num].discount_flg}>
+        <div class="c-item-list__price is-strikethrough">
+          <{$recommend[num].regular_price}>
+        </div>
+        <{/if}>
+        <{else}>
+        <{* 売り切れの表記 *}>
+        <div class="c-item-list__price is-soldout">
+          SOLD OUT
+        </div>
+        <{/if}>
+        <{* 簡易説明文 *}>
+        <{if $recommend[num].s_expl != ""}>
+        <div class="c-item-list__expl">
+          <{$recommend[num].s_expl}>
+        </div>
+        <{/if}>
+      </div>
+    </li>
+    <{/section}>
+  </ul>
+  <{if $recommend_num > 8 }>
+  <div class="c-more">
+    <button type="button" class="js-display-button c-btn is-more">
+      MORE
+    </button>
+  </div>
+  <{/if}>
+</div><!-- /.p-recommend -->
+<{/if}>
+<{if $new_item_num != 0}>
+<div class="p-new-item u-container u-contents">
+  <h2 class="c-ttl-main">
+    NEW ARRIVAL
+    <span class="c-ttl-main__ja">新着</span>
+  </h2>
+  <ul class="c-item-list">
+    <{section name=num loop=$new_item}>
+    <li class="c-item-list__item<{if $smarty.section.num.iteration > 8}> is-hidden<{/if}>">
+      <div class="c-item-list__img u-img-scale">
+        <a href="<{$new_item[num].link_url}>">
+          <{if $new_item[num].img_url != ""}>
+          <img src="<{$new_item[num].img_url}>" alt="<{$new_item[num].name|escape:'html'}>" />
+          <{else}>
+          <img src="https://img.shop-pro.jp/tmpl_img/86/no-image.jpg" alt="<{$new_item[num].name|escape:'html'}>" />
+          <{/if}>
+        </a>
+      </div>
+      <div class="c-item-list__txt">
+        <div class="c-item-list__ttl">
+          <a href="<{$new_item[num].link_url}>">
+            <{$new_item[num].name}>
+          </a>
+        </div>
+        <{if !$new_item[num].soldout_flg}>
+        <div class="c-item-list__price<{if $members_login_flg && $new_item[num].discount_flg}> is-discount<{/if}>">
+          <{* 販売価格（ログイン時は会員価格） *}>
+          <{$new_item[num].price}>
+          <{* 割引率（ログイン時、通常販売価格と会員価格が異なる場合のみ） *}>
+          <{if $members_login_flg && $new_item[num].discount_flg}><{$new_item[num].discount_rate}>OFF<{/if}>
+        </div>
+        <{* 通常販売価格（ログイン時、通常販売価格と会員価格が異なる場合のみ） *}>
+        <{if $members_login_flg && $new_item[num].discount_flg}>
+        <div class="c-item-list__price is-strikethrough">
+          <{$new_item[num].regular_price}>
+        </div>
+        <{/if}>
+        <{else}>
+        <{* 売り切れの表記 *}>
+        <div class="c-item-list__price is-soldout">
+          SOLD OUT
+        </div>
+        <{/if}>
+        <{* 簡易説明文 *}>
+        <{if $new_item[num].s_expl != ""}>
+        <div class="c-item-list__expl">
+          <{$new_item[num].s_expl}>
+        </div>
+        <{/if}>
+      </div>
+    </li>
+    <{/section}>
+  </ul>
+  <{if $new_item_num > 8 }>
+  <div class="c-more">
+    <button type="button" class="js-display-button c-btn is-more">
+      MORE
+    </button>
+  </div>
+  <{/if}>
+</div><!-- /.p-new-item -->
+<{/if}>
+<{if $seller_num != 0}>
+<div class="p-ranking u-container u-contents">
+  <h2 class="c-ttl-main">
+    RANKING
+    <span class="c-ttl-main__ja">ランキング</span>
+  </h2>
+  <div class="p-ranking-list js-ranking-slider">
+    <{section name=num loop=$seller}>
+    <div class="p-ranking-list__item<{if $smarty.section.num.iteration > 6}> is-hidden<{/if}>">
+      <div class="p-ranking-list__img u-img-scale">
+        <a href="<{$seller[num].link_url}>">
+          <{if $seller[num].img_url != ""}>
+          <img src="<{$seller[num].img_url}>" alt="<{$seller[num].name|escape:'html'}>" />
+          <{else}>
+          <img src="https://img.shop-pro.jp/tmpl_img/86/no-image.jpg" alt="<{$seller[num].name|escape:'html'}>" />
+          <{/if}>
+        </a>
+      </div>
+      <div class="p-ranking-list__txt">
+        <div class="p-ranking-list__num<{if $smarty.section.num.iteration < 4}> is-<{$smarty.section.num.iteration}><{/if}>">
+          <{$smarty.section.num.iteration}>
+        </div>
+        <div class="p-ranking-list__ttl">
+          <a href="<{$seller[num].link_url}>"><{$seller[num].name}></a>
+        </div>
+        <{if !$seller[num].soldout_flg}>
+        <div class="p-ranking-list__price<{if $members_login_flg && $seller[num].discount_flg}> is-discount<{/if}>">
+          <{* 販売価格（ログイン時は会員価格） *}>
+          <{$seller[num].price}>
+          <{* 割引率（ログイン時、通常販売価格と会員価格が異なる場合のみ） *}>
+          <{if $members_login_flg && $seller[num].discount_flg}><{$seller[num].discount_rate}>OFF<{/if}>
+        </div>
+        <{* 通常販売価格（ログイン時、通常販売価格と会員価格が異なる場合のみ） *}>
+        <{if $members_login_flg && $seller[num].discount_flg}>
+        <div class="p-ranking-list__price">
+          <{$seller[num].regular_price}>
+        </div>
+        <{/if}>
+        <{else}>
+        <{* 売り切れの表記 *}>
+        <div class="p-ranking-list__price is-soldout">
+          SOLD OUT
+        </div>
+        <{/if}>
+      </div>
+    </div>
+    <{/section}>
+  </div><!-- /.p-ranking-list -->
+</div><!-- /.p-ranking -->
+<{/if}>
+<{if $info != ""}>
+<div class="p-information u-container u-contents">
+  <h2 class="c-ttl-main">
+    INFORMATION
+    <span class="c-ttl-main__ja">お知らせ</span>
+  </h2>
+  <div class="p-information__body">
+    <{$info}>
+  </div>
+</div><!-- /.p-information -->
+<{/if}>
+<{if $free_space != ""}>
+<div class="p-free u-container u-contents">
+  <h2 class="c-ttl-main">
+    FREE
+    <span class="c-ttl-main__ja">フリースペース</span>
+  </h2>
+  <div class="p-free__body">
+    <{$free_space}>
+  </div>
+</div><!-- /.p-free -->
+<{/if}>
+<!-- TOPページ下部バナーを表示する場合はこちらのコメントアウトを外してください。
+<div class="p-bnr u-contents">
+  <{* ▽▽TOPページ下部バナー差し替え箇所▽▽ *}>
+  <{* <a class="u-img-scale" href="リンク先URL"><img src="画像URL" alt="説明文" />となります。それぞれ任意に差し替えてご利用下さい。 *}>
+  <{* 不要の場合には<ul>----</ul>を<!-- <ul>----</ul> -->のようにコメントアウトしていただければ表示されません。 *}>
+  <ul class="p-bnr-list">
+    <li class="p-bnr-list__item">
+      <a class="u-img-scale" href="https://discoversample3.shop-pro.jp/?mode=grp&gid=2533104">
+        <img src="https://img.shop-pro.jp/tmpl_img/86/bnr-sample.png" alt="" />
+      </a>
+    </li>
+    <li class="p-bnr-list__item">
+      <a class="u-img-scale" href="https://discoversample3.shop-pro.jp/?mode=grp&gid=2533105">
+        <img src="https://img.shop-pro.jp/tmpl_img/86/bnr-sample.png" alt="" />
+      </a>
+    </li>
+    <li class="p-bnr-list__item">
+      <a class="u-img-scale" href="https://discoversample3.shop-pro.jp/?mode=grp&gid=2533106">
+        <img src="https://img.shop-pro.jp/tmpl_img/86/bnr-sample.png" alt="" />
+      </a>
+    </li>
+  </ul>
+  <{* △△TOPページ下部バナー差し替え箇所△△ *}>
+</div><!-- /.p-bnr -->
+TOPページ下部バナーを表示する場合はこちらのコメントアウトを外してください。 -->
+<script src="https://img.shop-pro.jp/tmpl_js/86/common.js"></script>
+<script src="https://img.shop-pro.jp/tmpl_js/86/slick.min.js"></script>
+<script type="text/javascript">
+$(document).on("ready", function() {
+  $(".js-ranking-slider").slick({
+    autoplay: false,
+    autoplaySpeed: 3000,
+    arrows: true,
+    dots: false,
+    infinite: true,
+    slidesToShow: 5,
+    slidesToScroll: 5,
+    responsive: [{
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      }
+    }],
+  });
+});
+</script>
+
+<script type="text/javascript">
+  // もっと見るをクリックしたら、そのリスト内全ての商品を表示する
+  (function () {
+    $('.js-display-button').on('click', function () {
+      var $clickedButtonUnit = $(this).parent();
+      var $productList = $clickedButtonUnit.prev().children('.is-hidden');
+      $productList.removeClass('is-hidden');
+      $clickedButtonUnit.remove();
+    });
+  }());
+</script>

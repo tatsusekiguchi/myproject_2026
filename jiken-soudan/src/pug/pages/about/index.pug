@@ -1,0 +1,15 @@
+- title = '事件相談古村事務所について'
+- description = '事件相談古村事務所のメッセージ、代表プロフィール、大切にしている考え、事務所情報をご案内します。'
+- keywords = '事件相談,古村事務所,プロフィール,事務所案内'
+- root_path = '../'
+- page_name = 'about'
+doctype html
+//- サイトの設定の読み込み
+include /site.pug
+html(lang='ja')
+    head
+        include /common/head.pug
+    body.page
+        include /common/header.pug
+        include ../../layouts/about.pug
+        include /common/footer.pug

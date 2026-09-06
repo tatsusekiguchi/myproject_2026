@@ -1,0 +1,235 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+	共通CSS（SMP）
+===================================================*/
+/* --------------------------------------------------
+	base
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  body {
+    min-width: 0;
+    font-size: 14px;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  /*改行*/
+  .pcBreak {
+    display: none;
+  }
+
+  .spBreak {
+    display: block;
+  }
+
+  /*spのみ表示*/
+  .pcHidden {
+    display: block;
+  }
+
+  .spHidden {
+    display: none;
+  }
+
+  #sideBtn {
+    display: none;
+  }
+
+  .topicPath {
+    display: none;
+  }
+}
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .header .headContainer {
+    width: 100%;
+    padding: 15px 20px;
+  }
+  .header .headWrap {
+    display: block;
+  }
+  .header .logo {
+    width: 165px;
+    max-width: 165px;
+  }
+  .header .hamburger {
+    cursor: pointer;
+    display: block;
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    width: 50px;
+    height: 40px;
+    z-index: 10000;
+  }
+  .header .hamburger .span {
+    background: #000000;
+    position: absolute;
+    left: 50%;
+    width: 30px;
+    height: 1px;
+    transform: translateX(-50%);
+    transition: 0.4s;
+  }
+  .header .hamburger .span:nth-of-type(1) {
+    top: 10px;
+  }
+  .header .hamburger .span:nth-of-type(2) {
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .header .hamburger .span:nth-of-type(3) {
+    bottom: 10px;
+  }
+  .header .hamburger.is-open .span:nth-of-type(1) {
+    transform: translate(-50%, 9px) rotate(-45deg);
+  }
+  .header .hamburger.is-open .span:nth-of-type(2) {
+    opacity: 0;
+  }
+  .header .hamburger.is-open .span:nth-of-type(3) {
+    transform: translate(-50%, -9px) rotate(45deg);
+  }
+}
+/* --------------------------------------------------
+	nav
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .navBox {
+    overflow: auto;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px 0 60px;
+    z-index: 999;
+    background: rgba(255, 255, 255, 0.8);
+    opacity: 0;
+    transition: 0.6s;
+  }
+  .navBox.active {
+    top: 58px;
+    z-index: 1000;
+    opacity: 1;
+  }
+  .navBox .navList {
+    margin: 0 0 20px;
+    border-bottom: 1px solid #cccccc;
+  }
+  .navBox .navList .ul {
+    font-size: 15px;
+  }
+  .navBox .navList .ul .li {
+    text-align: left;
+  }
+  .navBox .navList .ul .li + .li {
+    border-top: 1px solid #cccccc;
+  }
+  .navBox .navList .ul a {
+    display: block;
+  }
+  .navBox .navList .ul a {
+    padding: 10px 20px;
+  }
+  .navBox .navList .ul a.spHidden {
+    display: none;
+  }
+  .navBox .navItem .ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
+  }
+  .navBox .navItem .ul .li {
+    width: 140px;
+    margin: 0 auto;
+  }
+  .navBox .navItem .ul .li a {
+    display: block;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 20px;
+  }
+  .navBox .navItem .ul .li.recruit a {
+    background: #00b0d6;
+  }
+  .navBox .navItem .ul .li.contact a {
+    background: #00aa74;
+  }
+}
+/* --------------------------------------------------
+	main
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .pageKvContainer {
+    padding: 100px 0 20px;
+  }
+  .pageKvContainer .pageKvTitle {
+    font-size: 30px;
+  }
+
+  .mapBox {
+    padding: 0 0 70%;
+  }
+}
+/* --------------------------------------------------
+	footer
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .footer .footContact {
+    padding: 50px 0;
+  }
+  .footer .footContact .secTtlBox {
+    margin: 0 0 20px;
+  }
+  .footer .footContact .secTtlBox .sub {
+    width: 100px;
+    margin: 0 auto 10px;
+  }
+  .footer .footContact .secTtlBox .secTtl {
+    font-size: 24px;
+  }
+  .footer .footContact .itemPanel {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .footer .footContact .itemPanel .telBox {
+    margin: 0 0 20px;
+  }
+  .footer .footContact .itemPanel .telBox a {
+    padding: 0 0 0 30px;
+    font-size: 30px;
+    background: url(https://sit-9545227.sibloo.com/system_panel/uploads/images/footer_tel.png) left center no-repeat;
+    background-size: 15px auto;
+  }
+  .footer .footContact .itemPanel .mailBox {
+    max-width: 240px;
+    margin: 0 auto;
+  }
+  .footer .footContact .pagetop {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    width: 35px;
+  }
+  .footer .footPanel {
+    padding: 40px 0 20px;
+  }
+  .footer .footPanel .logo {
+    max-width: 200px;
+    margin: 0 0 15px;
+  }
+}

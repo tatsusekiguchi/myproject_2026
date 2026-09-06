@@ -1,0 +1,308 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+	画面用CSS（PC/SMP）
+===================================================*/
+/*////////////////////////////////////////////////////////////
+	TOP
+///////////////////////////////////////////////////////////*/
+#top .topKvContainer {
+  height: 350px;
+}
+#top .topKvContainer .kvTitlePanel {
+  width: 90%;
+  padding: 20px;
+}
+#top .topKvContainer .kvTitlePanel h1 {
+  font-size: 24px;
+}
+#top .topKvContainer .kvTitlePanel p {
+  margin: 10px 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+#top .sec01 {
+  padding: 50px 0;
+}
+#top .sec01 .topMessage {
+  margin: 0 0 30px;
+  font-size: 22px;
+}
+#top .sec01 .secContainer::before {
+  content: "";
+  width: 100%;
+}
+#top .sec01 .secPanel {
+  padding: 30px 20px;
+}
+#top .sec01 .secPanel .ttl {
+  margin: 0 0 25px;
+}
+#top .sec01 .secPanel .listBox {
+  max-width: 400px;
+}
+#top .sec01 .secPanel .listBox ul li + li {
+  margin: 15px 0 0;
+}
+#top .sec02 {
+  padding: 60px 0;
+}
+#top .sec02 .listBox {
+  max-width: 400px;
+}
+#top .sec02 .listBox ul li + li {
+  margin: 20px 0 0;
+}
+
+/*////////////////////////////////////////////////////////////
+	itemList
+///////////////////////////////////////////////////////////*/
+#itemList .itemListPageMain {
+  padding: 50px 0 80px;
+}
+#itemList .itemListPageMain .secContainer h2 {
+  margin: 0 0 20px;
+  padding: 0 0 5px 15px;
+  font-size: 18px;
+  border-left: 5px solid #1874b7;
+  border-bottom: 2px solid #000000;
+}
+#itemList .itemListPageMain .secContainer .catePanel {
+  margin: 0 0 30px;
+}
+#itemList .itemListPageMain .secContainer .catePanel .side-category-list {
+  padding: 0 15px;
+}
+#itemList .itemListPageMain .secContainer .catePanel .side-category-list > li {
+  margin: 0 0 30px;
+}
+#itemList .itemListPageMain .listTable table thead {
+  display: none;
+}
+#itemList .itemListPageMain .listTable table tbody tr {
+  display: block;
+  border: 1px solid #000000;
+}
+#itemList .itemListPageMain .listTable table tbody tr + tr {
+  margin: 30px 0 0;
+}
+#itemList .itemListPageMain .listTable table tbody td {
+  display: block;
+}
+#itemList .itemListPageMain .listTable table tbody dl dt {
+  padding: 10px;
+  font-weight: bold;
+  color: #2d4c8f;
+  background: #bcdff2;
+}
+#itemList .itemListPageMain .listTable table tbody dl dd {
+  padding: 10px;
+}
+#itemList .itemListPageMain .bnrShoppingGuide {
+  max-width: 600px;
+  margin: 60px auto 0;
+}
+
+/*////////////////////////////////////////////////////////////
+	guide
+///////////////////////////////////////////////////////////*/
+#guide .sectionTitle {
+  margin: 0 0 20px;
+  padding: 0 0 5px 15px;
+  font-size: 18px;
+  border-left: 5px solid #1874b7;
+  border-bottom: 2px solid #000000;
+}
+#guide .sectionSubTitle {
+  margin: 0 0 20px;
+  padding: 0 0 0 20px;
+  font-size: 16px;
+  background: url("../image/common/guide_ttl_circle.png") left center no-repeat;
+  background-size: 15px auto;
+}
+#guide .topSection {
+  padding: 0 0 50px;
+}
+#guide .topSection .topTxt {
+  margin: 0 0 30px;
+}
+#guide .topSection .stepPanel {
+  margin: 0 0 40px;
+}
+#guide .topSection .stepPanel .stepBox + .stepBox {
+  margin: 15px 0 0;
+}
+#guide .topSection .stepPanel .stepBox dl dt {
+  margin: 0 0 5px;
+}
+#guide .topSection .stepPanel .stepBox dl dd {
+  font-size: 16px;
+}
+#guide .topSection .advicePanel {
+  padding: 30px 20px;
+}
+#guide .topSection .advicePanel dl {
+  margin: 0 0 20px;
+}
+#guide .topSection .advicePanel dl dt {
+  margin: 0 0 15px;
+  font-size: 16px;
+}
+#guide .topSection .advicePanel .uniformBox {
+  max-width: 280px;
+}
+#guide .topSection .advicePanel .uniformBox .uniform01 {
+  width: 43%;
+}
+#guide .topSection .advicePanel .uniformBox .uniform02 {
+  width: 48%;
+}
+#guide .detailSection {
+  padding: 0 0 60px;
+}
+#guide .detailSection .topTitleLabel {
+  padding: 15px 20px;
+}
+#guide .detailSection .topTitleLabel .title {
+  max-width: 320px;
+}
+#guide .detailSection .topTitleLabel .title h2 {
+  padding: 0 15px;
+  font-size: 18px;
+}
+#guide .detailSection .section {
+  padding: 40px 0 60px;
+}
+#guide .detailSection .section .typeList {
+  margin: 20px 0 40px;
+}
+#guide .detailSection .section .typeList ol {
+  gap: 10px;
+}
+#guide .detailSection .section .typeList ol li {
+  flex: 0 0 auto;
+  min-width: 140px;
+  max-width: 140px;
+  padding: 10px 5px;
+}
+#guide .detailSection .section .secPanel {
+  padding: 20px;
+}
+#guide .detailSection .section .secPanel .topBox {
+  margin: 0 0 40px;
+}
+#guide .detailSection .section .secPanel .topBox .txt {
+  margin: 0 0 30px;
+}
+#guide .detailSection .section .secPanel .topBox ul {
+  max-width: 400px;
+  margin: 0 auto;
+}
+#guide .detailSection .section .secPanel .topBox ul li + li {
+  margin: 10px 0 0;
+}
+#guide .detailSection .section .secPanel .secBox + .secBox {
+  margin: 40px 0 0;
+}
+#guide .detailSection .section .secPanel .secBox .photoBox .photo {
+  margin: 0 0 20px;
+}
+#guide .aboutSection {
+  padding: 0 0 100px;
+}
+#guide .aboutSection .section + .section {
+  margin: 50px 0 0;
+}
+#guide .aboutSection .section h2 {
+  margin: 0 0 20px;
+  padding: 0 0 5px 15px;
+  font-size: 18px;
+  border-left: 5px solid #1874b7;
+  border-bottom: 2px solid #000000;
+}
+#guide .aboutSection .section .txtBox {
+  padding: 0 20px;
+}
+#guide .aboutSection .section .txtBox .txt + .txt {
+  margin: 20px 0 0;
+}
+
+/*////////////////////////////////////////////////////////////
+	faq
+///////////////////////////////////////////////////////////*/
+#faq .topSection {
+  padding: 0 0 40px;
+}
+#faq .topSection .linkList {
+  max-width: 400px;
+  margin: 0 auto;
+}
+#faq .topSection .linkList ul li + li {
+  margin: 10px 0 0;
+}
+#faq .faqSection {
+  padding: 0 0 100px;
+}
+#faq .faqSection .section + .section {
+  margin: 50px 0 0;
+}
+#faq .faqSection .section h2 {
+  margin: 0 0 20px;
+  padding: 0 0 5px 15px;
+  font-size: 18px;
+  border-left: 5px solid #1874b7;
+  border-bottom: 2px solid #000000;
+}
+#faq .faqSection .secBox .ttlHead {
+  padding: 10px 20px 10px 10px;
+  background: url("../image/common/accord_plus.png") right 10px center no-repeat #1874b7;
+  background-size: 15px auto;
+}
+#faq .faqSection .secBox .ttlHead.active {
+  background: url("../image/common/accord_minus.png") right 10px center no-repeat #1874b7;
+  background-size: 15px auto;
+}
+#faq .faqSection .secBox .ttlHead .icon {
+  width: 30px;
+  font-size: 20px;
+}
+#faq .faqSection .secBox .cntBody {
+  padding: 15px 20px;
+}
+#faq .faqSection .secBox .cntBody .txt + .txt {
+  margin: 15px 0 0;
+}
+#faq .faqSection .secBox + .secBox {
+  margin: 25px 0 0;
+}
+
+/*////////////////////////////////////////////////////////////
+	policy
+///////////////////////////////////////////////////////////*/
+.policyContents .category-title .guide-title {
+  font-size: 22px;
+}
+.policyContents .category-title .guide-title span {
+  font-size: 14px;
+}
+.policyContents .policy-box {
+  padding: 20px;
+}
+.policyContents .policy-box pre {
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/*////////////////////////////////////////////////////////////
+	contract
+///////////////////////////////////////////////////////////*/
+.contractContents .category-title .guide-title {
+  font-size: 22px;
+}
+.contractContents .contract-section dt {
+  font-size: 15px;
+}
+.contractContents .contract-section dd {
+  font-size: 14px;
+  line-height: 1.8;
+}

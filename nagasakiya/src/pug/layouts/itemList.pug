@@ -1,0 +1,297 @@
+// ▽メイン▽
+main#itemList.main
+    .itemListPageMain
+        .secWrap01
+            .secContainer
+                .catePanel
+                    h2 カテゴリー
+                    ul.side-category-list
+                        li.side-category-item(data-category-code="all_items" style="display: none;")
+                            a(href="/view/category/all_items") すべての商品
+                        li.side-category-item(data-category-code="ichinomiya-h")
+                            p.accordion.active 一宮高校
+                            ul.side-category-child-item
+                                li.other-item
+                                    a.child-item(href="/view/category/ichinomiya-h-all") 全ての商品
+                                li.mens
+                                    a.child-item(href="/view/category/ichinomiya-h-m") メンズ
+                                li.ladies
+                                    a.child-item(href="/view/category/ichinomiya-h-l") レディース
+                        li.side-category-item(data-category-code="wakamiya-h" style="display: none;")
+                            p.accordion.active 若宮商業高校
+                            ul.side-category-child-item
+                                li.other-item
+                                    a.child-item(href="/view/category/wakamiya-h-all") 全ての商品
+                                li.mens
+                                    a.child-item(href="/view/category/wakamiya-h-m") メンズ
+                                li.ladies
+                                    a.child-item(href="/view/category/wakamiya-h-l") レディース
+                        li.side-category-item(data-category-code="shoin-h" style="display: none;")
+                            p.accordion.active 松蔭高校
+                            ul.side-category-child-item
+                                li.other-item
+                                    a.child-item(href="/view/category/shoin-h-all") 全ての商品
+                                li.mens
+                                    a.child-item(href="/view/category/shoin-h-m") メンズ
+                                li.ladies
+                                    a.child-item(href="/view/category/shoin-h-l") レディース
+                        li.side-category-item(data-category-code="aisai-h" style="display: none;")
+                            p.accordion.active 愛西工科高校
+                            ul.side-category-child-item
+                                li.other-item
+                                    a.child-item(href="/view/category/aisai-h-all") 全ての商品
+                                li.mens
+                                    a.child-item(href="/view/category/aisai-h-m") メンズ
+                                li.ladies
+                                    a.child-item(href="/view/category/aisai-h-l") レディース
+                        li.side-category-item(data-category-code="ichinomiyanishi-h" style="display: none;")
+                            p.accordion.active 一宮西高校
+                            ul.side-category-child-item
+                                li.other-item
+                                    a.child-item(href="/view/category/ichinomiyanishi-h-all") 全ての商品
+                                li.mens
+                                    a.child-item(href="/view/category/ichinomiyanishi-h-m") メンズ
+                                li.ladies
+                                    a.child-item(href="/view/category/ichinomiyanishi-h-l") レディース
+                        li.side-category-item(data-category-code="kikuzato-h" style="display: none;")
+                            p.accordion.active 菊里高校
+                            ul.side-category-child-item
+                                li.other-item
+                                    a.child-item(href="/view/category/kikuzato-h-all") 全ての商品
+                                li.mens
+                                    a.child-item(href="/view/category/kikuzato-h-m") メンズ
+                                li.ladies
+                                    a.child-item(href="/view/category/kikuzato-h-l") レディース
+                        li.side-category-item(data-category-code="gojo-h" style="display: none;")
+                            p.accordion.active 五条高校
+                            ul.side-category-child-item
+                                li.other-item
+                                    a.child-item(href="/view/category/gojo-h-all") 全ての商品
+                                li.mens
+                                    a.child-item(href="/view/category/gojo-h-m") メンズ
+                                li.ladies
+                                    a.child-item(href="/view/category/gojo-h-l") レディース
+                        li.side-category-item(data-category-code="koyo-h" style="display: none;")
+                            p.accordion.active 向陽高校
+                            ul.side-category-child-item
+                                li.other-item
+                                    a.child-item(href="/view/category/koyo-h-all") 全ての商品
+                                li.mens
+                                    a.child-item(href="/view/category/koyo-h-m") メンズ
+                                li.ladies
+                                    a.child-item(href="/view/category/koyo-h-l") レディース
+                        li.side-category-item(data-category-code="saya-h" style="display: none;")
+                            p.accordion.active 佐屋高校
+                            ul.side-category-child-item
+                                li.other-item
+                                    a.child-item(href="/view/category/saya-h-all") 全ての商品
+                                li.mens
+                                    a.child-item(href="/view/category/saya-h-m") メンズ
+                                li.ladies
+                                    a.child-item(href="/view/category/saya-h-l") レディース
+                        li.side-category-item(data-category-code="showa-h" style="display: none;")
+                            p.accordion.active 昭和高校
+                            ul.side-category-child-item
+                                li.other-item
+                                    a.child-item(href="/view/category/showa-h-all") 全ての商品
+                                li.mens
+                                    a.child-item(href="/view/category/showa-h-m") メンズ
+                                li.ladies
+                                    a.child-item(href="/view/category/showa-h-l") レディース
+                        li.side-category-item(data-category-code="zuiryo-h" style="display: none;")
+                            p.accordion.active 瑞陵高校
+                            ul.side-category-child-item
+                                li.other-item
+                                    a.child-item(href="/view/category/zuiryo-h-all") 全ての商品
+                                li.mens
+                                    a.child-item(href="/view/category/zuiryo-h-m") メンズ
+                                li.ladies
+                                    a.child-item(href="/view/category/zuiryo-h-l") レディース
+                        li.side-category-item(data-category-code="seirinkan-h" style="display: none;")
+                            p.accordion.active 清林館高校
+                            ul.side-category-child-item
+                                li.other-item
+                                    a.child-item(href="/view/category/seirinkan-h-all") 全ての商品
+                                li.mens
+                                    a.child-item(href="/view/category/seirinkan-h-m") メンズ
+                                li.ladies
+                                    a.child-item(href="/view/category/seirinkan-h-l") レディース
+                        li.side-category-item(data-category-code="nakamura-h" style="display: none;")
+                            p.accordion.active 中村高校
+                            ul.side-category-child-item
+                                li.other-item
+                                    a.child-item(href="/view/category/nakamura-h-all") 全ての商品
+                                li.mens
+                                    a.child-item(href="/view/category/nakamura-h-m") メンズ
+                                li.ladies
+                                    a.child-item(href="/view/category/nakamura-h-l") レディース
+                        li.side-category-item(data-category-code="tsushima-h" style="display: none;")
+                            p.accordion.active 津島高校
+                            ul.side-category-child-item
+                                li.other-item
+                                    a.child-item(href="/view/category/tsushima-h-all") 全ての商品
+                                li.mens
+                                    a.child-item(href="/view/category/tsushima-h-m") メンズ
+                                li.ladies
+                                    a.child-item(href="/view/category/tsushima-h-l") レディース
+                        li.side-category-item(data-category-code="tsushimahigashi-h" style="display: none;")
+                            p.accordion.active 津島東高校
+                            ul.side-category-child-item
+                                li.other-item
+                                    a.child-item(href="/view/category/tsushimahigashi-h-all") 全ての商品
+                                li.mens
+                                    a.child-item(href="/view/category/tsushimahigashi-h-m") メンズ
+                                li.ladies
+                                    a.child-item(href="/view/category/tsushimahigashi-h-l") レディース
+                        li.side-category-item(data-category-code="tsushimahokusho-h" style="display: none;")
+                            p.accordion.active 津島北翔高校
+                            ul.side-category-child-item
+                                li.other-item
+                                    a.child-item(href="/view/category/tsushimahokusho-h-all") 全ての商品
+                                li.mens
+                                    a.child-item(href="/view/category/tsushimahokusho-h-m") メンズ
+                                li.ladies
+                                    a.child-item(href="/view/category/tsushimahokusho-h-l") レディース
+                        li.side-category-item(data-category-code="tempaku-h" style="display: none;")
+                            p.accordion.active 天白高校
+                            ul.side-category-child-item
+                                li.other-item
+                                    a.child-item(href="/view/category/tempaku-h-all") 全ての商品
+                                li.mens
+                                    a.child-item(href="/view/category/tempaku-h-m") メンズ
+                                li.ladies
+                                    a.child-item(href="/view/category/tempaku-h-l") レディース
+                        li.side-category-item(data-category-code="miwa-h" style="display: none;")
+                            p.accordion.active 美和高校
+                            ul.side-category-child-item
+                                li.other-item
+                                    a.child-item(href="/view/category/miwa-h-all") 全ての商品
+                                li.mens
+                                    a.child-item(href="/view/category/miwa-h-m") メンズ
+                                li.ladies
+                                    a.child-item(href="/view/category/miwa-h-l") レディース
+                        li.side-category-item(data-category-code="nagoyanishi-h" style="display: none;")
+                            p.accordion.active 名古屋西高校
+                            ul.side-category-child-item
+                                li.other-item
+                                    a.child-item(href="/view/category/nagoyanishi-h-all") 全ての商品
+                                li.mens
+                                    a.child-item(href="/view/category/nagoyanishi-h-m") メンズ
+                                li.ladies
+                                    a.child-item(href="/view/category/nagoyanishi-h-l") レディース
+                        li.side-category-item(data-category-code="meiwa-h" style="display: none;")
+                            p.accordion.active 明和高校
+                            ul.side-category-child-item
+                                li.other-item
+                                    a.child-item(href="/view/category/meiwa-h-all") 全ての商品
+                                li.mens
+                                    a.child-item(href="/view/category/meiwa-h-m") メンズ
+                                li.ladies
+                                    a.child-item(href="/view/category/meiwa-h-l") レディース
+                        li.side-category-item(data-category-code="saori-sh" style="display: none;")
+                            p.accordion.active 佐織特別支援学校
+                            ul.side-category-child-item
+                                li.other-item
+                                    a.child-item(href="/view/category/saori-sh-all") 全ての商品
+                                li.mens
+                                    a.child-item(href="/view/category/saori-sh-m") メンズ
+                                li.ladies
+                                    a.child-item(href="/view/category/saori-sh-l") レディース
+                        li.side-category-item(data-category-code="wakamiya-sh" style="display: none;")
+                            p.accordion.active 若宮高等特別支援学校
+                            ul.side-category-child-item
+                                li.other-item
+                                    a.child-item(href="/view/category/wakamiya-sh-all") 全ての商品
+                                li.mens
+                                    a.child-item(href="/view/category/wakamiya-sh-m") メンズ
+                                li.ladies
+                                    a.child-item(href="/view/category/wakamiya-sh-l") レディース
+                        li.side-category-item(data-category-code="other")
+                            p.accordion.active その他の商品
+                            ul.side-category-child-item
+                                li.other-item
+                                    a.child-item(href="/view/category/other-bag") 通学バッグ
+                                li.other-item
+                                    a.child-item(href="/view/category/other-nit") ニット・セーター
+                                li.other-item
+                                    a.child-item(href="/view/category/other-sox") ソックス
+                                li.other-item
+                                    a.child-item(href="/view/category/other-shut") シャツ
+                                li.other-item
+                                    a.child-item(href="/view/category/other-coat") コート
+                                li.other-item
+                                    a.child-item(href="/view/category/other-mizugi") スクール水着
+                                li.other-item
+                                    a.child-item(href="/view/category/other-item") その他
+                .itemPanel
+                    h2 一宮高校
+                    .listTable
+                        table
+                            thead
+                                tr
+                                    th 商品名
+                                    th 価格
+                                    th サイズ
+                                    th 数量
+                            tbody
+                                tr
+                                    td
+                                        dl
+                                            dt 商品名
+                                            dd
+                                                p 必須品：ジャケット/A
+                                    td
+                                        dl
+                                            dt 価格
+                                            dd
+                                                p 26,900円（税込29,590円）
+                                    td
+                                        dl
+                                            dt サイズ
+                                            dd
+                                                select
+                                                    option(value="") S
+                                                    option(value="") M
+                                                    option(value="") L
+                                    td
+                                        dl
+                                            dt 数量
+                                            dd
+                                                input(type="number", min="0", value="0")
+                                tr
+                                    td
+                                        dl
+                                            dt 商品名
+                                            dd
+                                                p 必須品：ジャケット/B
+                                    td
+                                        dl
+                                            dt 価格
+                                            dd
+                                                p 26,900円（税込29,590円）
+                                    td
+                                        dl
+                                            dt サイズ
+                                            dd
+                                                select
+                                                    option(value="") S
+                                                    option(value="") M
+                                                    option(value="") L
+                                    td
+                                        dl
+                                            dt 数量
+                                            dd
+                                                input(type="number", min="0", value="0")
+                    .cautionTxt
+                        .txt
+                            p 当店では、商品のご使用目的・方法・結果等について一切の責任を負いません。<br>ご購入後のご使用は、お客様の自己判断・自己責任にてお願いいたします。<br>注意事項が入ります。注意事項が入ります。注意事項が入ります。注意事項が入ります。注意事項が入ります。注意事項が入ります。注意事項が入ります。注意事項が入ります。注意事項が入ります。注意事項が入ります。注意事項が入ります。
+                    .checkItem.agreeCheck
+                        label
+                            input(type="checkbox")
+                            span 同意する
+                    button(type="submit")#submitBtn
+                        span 購入する
+                    .bnrShoppingGuide
+                        a(href="")
+                            img(src=(root_path || '') + "image/common/bnr_shopping_guide.png", alt="")
+// △メイン△

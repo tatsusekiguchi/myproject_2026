@@ -1,0 +1,137 @@
+{
+  "key": "group_65f8e6f8g7h5c",
+  "title": "その他ページ - おもたせリスト",
+  "fields": [
+    {
+      "key": "field_65f8e6f8g7h5d",
+      "label": "おもたせ商品",
+      "name": "other_omotase_list",
+      "aria-label": "",
+      "type": "repeater",
+      "instructions": "おもたせの商品を追加できます。",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "layout": "block",
+      "pagination": 0,
+      "min": 0,
+      "max": 0,
+      "collapsed": "",
+      "button_label": "商品を追加",
+      "rows_per_page": 20,
+      "sub_fields": [
+        {
+          "key": "field_65f8e6f8g7h5e",
+          "label": "画像",
+          "name": "image",
+          "aria-label": "",
+          "type": "image",
+          "instructions": "",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "return_format": "array",
+          "library": "all",
+          "min_width": "",
+          "min_height": "",
+          "min_size": "",
+          "max_width": "",
+          "max_height": "",
+          "max_size": "",
+          "mime_types": "",
+          "preview_size": "medium",
+          "parent_repeater": "field_65f8e6f8g7h5d"
+        },
+        {
+          "key": "field_65f8e6f8g7h5f",
+          "label": "商品名",
+          "name": "product_name",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "商品名を入力してください（例：玉子巻き）",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": "",
+          "parent_repeater": "field_65f8e6f8g7h5d"
+        },
+        {
+          "key": "field_65f8e6f8g7h60",
+          "label": "金額",
+          "name": "price",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "金額を入力してください（例：１,５００）",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": "",
+          "parent_repeater": "field_65f8e6f8g7h5d"
+        },
+        {
+          "key": "field_65f8e6f8g7h61",
+          "label": "補足文",
+          "name": "description",
+          "aria-label": "",
+          "type": "textarea",
+          "instructions": "商品の説明を入力してください",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 4,
+          "new_lines": "br",
+          "parent_repeater": "field_65f8e6f8g7h5d"
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page_template",
+        "operator": "==",
+        "value": "other/index.php"
+      }
+    ]
+  ],
+  "menu_order": 3,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "show_in_rest": 0
+}

@@ -1,0 +1,233 @@
+[
+  {
+    "key": "group_learn_ta101",
+    "title": "TA101",
+    "fields": [
+      {
+        "key": "field_ta101_schedule",
+        "label": "開催スケジュール",
+        "name": "ta101_schedule",
+        "aria-label": "",
+        "type": "repeater",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "layout": "block",
+        "pagination": 0,
+        "min": 0,
+        "max": 0,
+        "collapsed": "field_ta101_date",
+        "button_label": "開催日を追加",
+        "rows_per_page": 20,
+        "sub_fields": [
+          {
+            "key": "field_ta101_date",
+            "label": "開催日",
+            "name": "ta101_date",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "例：第１回　2026年 7月11日（土）、12日（日）",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 2,
+            "new_lines": "br",
+            "parent_repeater": "field_ta101_schedule"
+          },
+          {
+            "key": "field_ta101_instructor",
+            "label": "講師",
+            "name": "ta101_instructor",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0,
+            "parent_repeater": "field_ta101_schedule"
+          },
+          {
+            "key": "field_ta101_venue",
+            "label": "会場",
+            "name": "ta101_venue",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0,
+            "parent_repeater": "field_ta101_schedule"
+          },
+          {
+            "key": "field_ta101_capacity",
+            "label": "定員",
+            "name": "ta101_capacity",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "parent_repeater": "field_ta101_schedule"
+          },
+          {
+            "key": "field_ta101_apply_url",
+            "label": "申し込みURL",
+            "name": "ta101_apply_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "外部ページへのリンク",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "parent_repeater": "field_ta101_schedule"
+          }
+        ]
+      },
+      {
+        "key": "field_ta101_fee_general",
+        "label": "参加費（一般）",
+        "name": "ta101_fee_general",
+        "aria-label": "",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": "",
+        "maxlength": ""
+      },
+      {
+        "key": "field_ta101_fee_member",
+        "label": "参加費（会員）",
+        "name": "ta101_fee_member",
+        "aria-label": "",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": "",
+        "maxlength": ""
+      },
+      {
+        "key": "field_ta101_fee_student",
+        "label": "参加費（学生）",
+        "name": "ta101_fee_student",
+        "aria-label": "",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": "",
+        "maxlength": ""
+      },
+      {
+        "key": "field_ta101_notes",
+        "label": "留意事項",
+        "name": "ta101_notes",
+        "aria-label": "",
+        "type": "wysiwyg",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "tabs": "all",
+        "toolbar": "full",
+        "media_upload": 0,
+        "delay": 0
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "page_template",
+          "operator": "==",
+          "value": "learn/index.php"
+        }
+      ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": ""
+  }
+]

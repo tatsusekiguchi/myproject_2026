@@ -1,0 +1,60 @@
+// ▽header▽
+header.header
+	.logo
+		a(href="")
+			img(src=(root_path || '') + "image/common/header_logo_white.png", alt="").logoWhite
+			img(src=(root_path || '') + "image/common/header_logo_black.png", alt="").logoBlack
+	.headItemBox
+		.headItem
+			ul
+				li
+					a(href="") お問い合わせ
+				li
+					a(href="") 応募する
+	.hamburgerBox
+		.hamburger
+			span.top
+			p MENU
+			span.bottom
+	.navBox
+		.navPanel
+			.navList
+				ul
+					li
+						a(href="#") TOP
+					li
+						a(href="#section__concept") CONCEPT
+					li
+						a(href="#section__news") WHAT’S NEW
+					li
+						a(href="#section__features") FEATURES
+					li.line
+						a(href="#section__require") WHO WE’RE LOOKING FOR
+					li
+						a(href="#section__requirements") REQUIREMENTS
+					li
+						a(href="#section__info") SALON LIST
+			.navMessage
+				p We shine a light on each individual’s unique<br>sensibility and become a driving force that leads<br>them toward their next self.
+			.snsBox
+				ul
+					li
+						a(href="https://www.instagram.com/noema.hair/", target="_blank", rel="noopener")
+							img(src=(root_path || '') + "image/common/icon_instagram.png", alt="")
+					li
+						a(href="#", target="_blank", rel="noopener")
+							img(src=(root_path || '') + "image/common/icon_line.png", alt="")
+					li
+						a(href="#", target="_blank", rel="noopener")
+							img(src=(root_path || '') + "image/common/icon_twitter.png", alt="")
+				.navLogo
+					img(src=(root_path || '') + "image/common/nav_logo.png", alt="")
+			.photo
+				img(src=(root_path || '') + "image/common/nav_photo.png", alt="")
+	.fixedSpBottomNav
+		ul
+			li
+				a(href="") お問い合わせ
+			li
+				a(href="") 応募する
+// △header△

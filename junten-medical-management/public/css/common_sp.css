@@ -1,0 +1,115 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+	共通CSS（SMP）
+===================================================*/
+/* --------------------------------------------------
+	base
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  body {
+    min-width: 0;
+    font-size: 14px;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  /*改行*/
+  .pcBreak {
+    display: none;
+  }
+
+  .spBreak {
+    display: block;
+  }
+
+  /*spのみ表示*/
+  .pcHidden {
+    display: block;
+  }
+
+  .spHidden {
+    display: none;
+  }
+
+  #sideBtn {
+    display: none;
+  }
+
+  .topicPath {
+    display: none;
+  }
+}
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+.header .logo {
+  max-width: 180px;
+}
+
+/* --------------------------------------------------
+	main
+-------------------------------------------------- */
+.pageTitlePanel {
+  padding: 40px 0;
+}
+
+.pageSecTtlBox {
+  margin: 0 0 40px;
+}
+.pageSecTtlBox .sub {
+  font-size: 13px;
+}
+.pageSecTtlBox .pageSecTtl {
+  font-size: 24px;
+}
+
+.mapBox {
+  padding: 0 0 70%;
+}
+
+/* --------------------------------------------------
+	footer
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .footer .footContact {
+    padding: 60px 0;
+  }
+  .footer .footContact .pageSecTtlBox {
+    margin-bottom: 30px;
+  }
+  .footer .footContact .btnContact {
+    max-width: 500px;
+    padding: 35px 0;
+  }
+  .footer .footContact .btnContact a {
+    min-width: 230px;
+    min-height: 52px;
+    font-size: 16px;
+  }
+  .footer .footContact .btnContact a::before {
+    margin-right: 12px;
+  }
+  .footer .footPanel {
+    padding: 55px 0;
+  }
+  .footer .footPanel .logo {
+    width: 190px;
+  }
+  .footer .footPanel .footNav {
+    margin-top: 45px;
+  }
+  .footer .footPanel .footNav ul {
+    flex-wrap: wrap;
+    gap: 20px 30px;
+  }
+  .footer .footBottom {
+    padding: 40px 0 35px;
+  }
+  .footer .footBottom .copy {
+    margin-top: 30px;
+    font-size: 11px;
+  }
+}

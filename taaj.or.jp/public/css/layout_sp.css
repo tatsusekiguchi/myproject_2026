@@ -1,0 +1,1054 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+	画面用CSS（PC/SMP）
+===================================================*/
+/*////////////////////////////////////////////////////////////
+	TOP
+///////////////////////////////////////////////////////////*/
+#top .kvContainer {
+  padding: 0 0 50px 20px;
+}
+#top .kvContainer:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 90%;
+  height: 90%;
+  z-index: -1;
+  background: #7fb841;
+}
+#top .kvContainer .kvPanel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+#top .kvContainer .kvPanel .kvCnt {
+  width: calc(100% - 20px);
+}
+#top .kvContainer .kvPanel .kvCnt .topKv {
+  height: 300px;
+}
+#top .kvContainer .kvPanel .titleBox {
+  position: absolute;
+  left: 0;
+  bottom: -25px;
+  width: 100%;
+  max-width: 280px;
+  padding: 20px;
+}
+#top .kvContainer .kvPanel .titleBox h1,
+#top .kvContainer .kvPanel .titleBox p {
+  font-size: 20px;
+}
+#top .sec01 {
+  padding: 60px 0;
+}
+#top .sec01 .newsContainer {
+  margin: 0 0 40px;
+  padding: 40px 20px;
+}
+#top .sec01 .newsContainer .secBox .leftBox {
+  margin: 0 0 40px;
+}
+#top .sec01 .newsContainer .secBox .leftBox .secTtl {
+  margin: 0 0 30px;
+}
+#top .sec01 .newsContainer .secBox .leftBox .secTtl h2 {
+  font-size: 24px;
+}
+#top .sec01 .newsContainer .secBox .leftBox .secTtl p {
+  font-size: 14px;
+}
+#top .sec01 .newsContainer .secBox .rightBox .newsList ul li + li {
+  margin: 20px 0 0;
+}
+#top .sec01 .newsContainer .secBox .rightBox .newsList ul li .infoBox {
+  margin: 0 0 10px;
+}
+#top .sec01 .secPanel .logoBox {
+  margin: 0 0 20px;
+}
+#top .sec01 .secPanel .logoBox .logo {
+  max-width: 220px;
+  margin: 0 auto;
+}
+#top .sec01 .secPanel .txtBox .btnMore {
+  margin: 25px auto 0;
+}
+#top .instaSection {
+  padding: 60px 0;
+}
+#top .instaSection .secTtl {
+  margin: 0 0 30px;
+}
+#top .instaSection .secTtl h2 {
+  font-size: 24px;
+}
+#top .instaSection .secTtl p {
+  font-size: 14px;
+}
+
+/*////////////////////////////////////////////////////////////
+	about
+///////////////////////////////////////////////////////////*/
+#about .mainContainer {
+  padding: 40px 0 80px;
+}
+#about .pageLinkList {
+  margin: 0 0 60px;
+}
+#about .pageLinkList ul {
+  max-width: 200px;
+  margin: 0 auto;
+}
+#about .pageLinkList ul li + li {
+  margin: 15px 0 0;
+}
+#about .section + .section {
+  margin: 40px 0 0;
+}
+#about .secContainer {
+  padding: 30px 20px;
+}
+#about .sec01 .secBox .photoBox {
+  max-width: 280px;
+  margin: 0 auto 30px;
+}
+#about .sec01 .secBox .photoBox .name {
+  margin: 10px 0 0;
+}
+#about .sec02 .txt + .txt {
+  margin: 20px 0 0;
+}
+#about .sec02 .secBox {
+  margin: 20px 0;
+}
+#about .sec02 .secBox .photoBox {
+  max-width: 280px;
+  margin: 0 auto 30px;
+}
+#about .sec02 .secBox .photoBox .name {
+  margin: 10px 0 0;
+}
+#about .subSection + .subSection {
+  margin: 60px 0 0;
+}
+#about .subSection .subSecTtl {
+  margin: 0 0 20px;
+}
+#about .subSection .subSecTtl h3 {
+  font-size: 18px;
+}
+#about .subSection .txtBox .txt + .txt {
+  margin: 20px 0 0;
+}
+#about .subSection .logoPanel .logo {
+  width: 200px;
+  margin: 20px auto 0;
+}
+#about .subSection .historyList ul li {
+  padding: 0 0 25px;
+}
+#about .subSection .historyList ul li::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #7fb841;
+}
+#about .subSection .historyList ul li:not(:last-child):after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  width: 1px;
+  height: 100%;
+  background: #7fb841;
+}
+#about .subSection .historyList ul li dl {
+  padding: 0 0 0 30px;
+}
+#about .subSection .historyList ul li dl dt {
+  margin: 0 0 5px;
+}
+#about .subSection .historyList ul li dl dd {
+  padding: 0 0 0 3px;
+}
+#about .subSection .infoBox dl {
+  padding: 10px 0;
+}
+#about .subSection .infoBox dl dt {
+  margin: 0 0 2px;
+}
+#about .subSection .btnTarget {
+  max-width: 280px;
+}
+
+/*////////////////////////////////////////////////////////////
+	conference
+///////////////////////////////////////////////////////////*/
+#conference .topContainer {
+  padding: 50px 0;
+}
+#conference .topContainer .pageLinkList ul {
+  max-width: 200px;
+  margin: 0 auto;
+}
+#conference .topContainer .pageLinkList ul li + li {
+  margin: 15px 0 0;
+}
+#conference .slidePanel .slideBox ul li {
+  width: 50%;
+}
+#conference .mainContainer {
+  padding: 0 0 100px;
+}
+#conference .nextConferenceHeadLine {
+  padding: 50px 0;
+}
+#conference .nextConferenceHeadLine .secBox {
+  max-width: 640px;
+  margin: 0 auto;
+}
+#conference .nextConferenceHeadLine .secBox .rightBox ol {
+  max-width: 330px;
+  margin: 0 auto;
+}
+#conference .subSection + .subSection {
+  margin: 60px 0 0;
+}
+#conference .subSection .subSecTtl {
+  margin: 0 0 30px;
+}
+#conference .subSection .subSecTtl h3 {
+  font-size: 18px;
+}
+#conference .infoBox {
+  padding: 20px;
+}
+#conference .infoBox dl + dl {
+  margin: 15px 0 0;
+}
+#conference .infoBox dl dt {
+  margin: 0 0 5px;
+}
+#conference .greetingPanel .pdfBox {
+  max-width: 260px;
+  margin: 0 auto;
+}
+#conference .greetingPanel .txtBox {
+  padding: 20px 0 0;
+}
+#conference .greetingPanel .txtBox .name {
+  margin: 40px 0 0;
+}
+#conference .programContainer .programPanel + .programPanel {
+  margin: 50px 0 0;
+}
+#conference .programTable table {
+  width: 100%;
+}
+#conference .programTable table thead {
+  display: none;
+}
+#conference .programTable table tbody tr {
+  display: block;
+  width: 100%;
+  border: 1px solid #21535c;
+}
+#conference .programTable table tbody tr + tr {
+  margin: 20px 0 0;
+}
+#conference .programTable table tbody tr td {
+  display: block;
+  width: 100%;
+}
+#conference .programTable table tbody tr td dl dt {
+  padding: 10px;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  background: #7fb841;
+}
+#conference .programTable table tbody tr td dl dd {
+  padding: 10px 20px;
+  text-align: center;
+  line-height: 2;
+}
+#conference .programTable table tbody tr .program dl dd {
+  text-align: left;
+}
+#conference .accessBox {
+  padding: 20px;
+}
+#conference .innerSection + .innerSection {
+  margin: 35px 0 0;
+}
+#conference .innerSection .innerSecTtl {
+  border-left: 2px solid #7fb841;
+}
+#conference .feeTable table {
+  width: 100%;
+}
+#conference .feeTable table thead {
+  display: none;
+}
+#conference .feeTable table tbody tr {
+  display: block;
+  width: 100%;
+  border: 1px solid #21535c;
+}
+#conference .feeTable table tbody tr + tr {
+  margin: 20px 0 0;
+}
+#conference .feeTable table tbody tr td {
+  display: block;
+  width: 100%;
+}
+#conference .feeTable table tbody tr td dl dt {
+  padding: 10px;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  background: #7fb841;
+}
+#conference .feeTable table tbody tr td dl dd {
+  padding: 10px 20px;
+  text-align: center;
+  line-height: 2;
+}
+#conference .feeTable table tbody tr .date dl dd {
+  text-align: left;
+}
+#conference .cautionBox {
+  padding: 20px;
+}
+#conference .cancelTable table {
+  width: 100%;
+}
+#conference .cancelTable table thead {
+  display: none;
+}
+#conference .cancelTable table tbody tr {
+  display: block;
+  width: 100%;
+  border: 1px solid #21535c;
+}
+#conference .cancelTable table tbody tr + tr {
+  margin: 20px 0 0;
+}
+#conference .cancelTable table tbody tr td {
+  display: block;
+  width: 100%;
+}
+#conference .cancelTable table tbody tr td dl dt {
+  padding: 10px;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  background: #7fb841;
+}
+#conference .cancelTable table tbody tr td dl dd {
+  padding: 10px 20px;
+  line-height: 2;
+}
+#conference .pastTable table {
+  width: 100%;
+}
+#conference .pastTable table thead {
+  display: none;
+}
+#conference .pastTable table tbody tr {
+  display: block;
+  width: 100%;
+  border: 1px solid #21535c;
+}
+#conference .pastTable table tbody tr + tr {
+  margin: 20px 0 0;
+}
+#conference .pastTable table tbody tr td {
+  display: block;
+  width: 100%;
+}
+#conference .pastTable table tbody tr td dl dt {
+  padding: 10px;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  background: #7fb841;
+}
+#conference .pastTable table tbody tr td dl dd {
+  padding: 10px 20px;
+  line-height: 2;
+}
+
+/*////////////////////////////////////////////////////////////
+	learn
+///////////////////////////////////////////////////////////*/
+#learn .mainContainer {
+  padding: 0 0 100px;
+}
+#learn .topHeadLine {
+  padding: 50px 0;
+}
+#learn .topHeadLine .secBox {
+  max-width: 640px;
+  margin: 0 auto;
+}
+#learn .topHeadLine .secBox .rightBox ol {
+  max-width: 330px;
+  margin: 0 auto;
+}
+#learn .subSection + .subSection {
+  margin: 60px 0 0;
+}
+#learn .subSection .subSecTtl {
+  margin: 0 0 30px;
+}
+#learn .subSection .subSecTtl h3 {
+  font-size: 18px;
+}
+#learn .feeContainer {
+  margin: 40px 0 0;
+}
+#learn .innerSectionContainer {
+  padding: 40px 0 0;
+}
+#learn .innerSectionContainer .innerSection + .innerSection {
+  margin: 50px 0 0;
+}
+#learn .innerSectionContainer .innerSection .innerSecTtl {
+  font-size: 16px;
+}
+#learn .themeContainer .themePanel {
+  padding: 30px 20px;
+}
+#learn .themeContainer .themePanel + .themePanel {
+  margin: 60px 0 0;
+}
+#learn .themeContainer .themePanel dl + dl {
+  margin: 50px 0 0;
+}
+#learn .themeContainer .themePanel dl dt {
+  margin: 0 0 20px;
+}
+#learn .themeContainer .themePanel dl dt span {
+  font-size: 18px;
+}
+#learn .themeContainer .themePanel .introBox {
+  padding: 15px;
+}
+#learn .themeContainer .themePanel .introBox .introTtl {
+  margin: 0 0 10px;
+}
+#learn .themeContainer .themePanel .bottomBox {
+  margin: 60px 0 0;
+}
+#learn .voicePanel {
+  padding: 20px;
+}
+#learn .voicePanel + .voicePanel {
+  margin: 15px 0 0;
+}
+#learn .voicePanel dl dt {
+  margin: 0 0 10px;
+}
+#learn .voicePanel dl dd .comment {
+  font-size: 14px;
+}
+
+/*////////////////////////////////////////////////////////////
+	certification
+///////////////////////////////////////////////////////////*/
+#certification .topContainer {
+  padding: 50px 0;
+}
+#certification .topContainer .pageLinkList ul {
+  max-width: 200px;
+  margin: 0 auto;
+}
+#certification .topContainer .pageLinkList ul li + li {
+  margin: 15px 0 0;
+}
+#certification .sec01 {
+  padding: 60px 0;
+}
+#certification .sec01 .secBox {
+  margin: 40px 0;
+  border: 2px solid #7fb841;
+}
+#certification .sec01 .secBox .ttl {
+  top: -10px;
+  left: 20px;
+}
+#certification .sec01 .secBox .ttl h3 {
+  font-size: 16px;
+}
+#certification .sec02 {
+  padding: 60px 0;
+}
+#certification .sec02 .topTxt {
+  margin: 0 0 30px;
+  text-align: center;
+}
+#certification .sec02 .secContainer {
+  padding: 30px 20px;
+}
+#certification .sec02 .subSection + .subSection {
+  margin: 60px 0 0;
+}
+#certification .sec02 .subSection .subSecTtl {
+  margin: 0 0 20px;
+}
+#certification .sec02 .subSection .subSecTtl h3 {
+  font-size: 18px;
+}
+#certification .sec02 .subSection .txtBox {
+  margin: 20px 0 0;
+  padding: 20px;
+}
+#certification .sec03 {
+  padding: 60px 0;
+}
+#certification .sec03 .secPanel + .secPanel {
+  margin: 30px 0 0;
+}
+#certification .sec03 .secPanel .pTtl {
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+#certification .sec03 .secPanel .pBody {
+  padding: 15px;
+}
+#certification .sec03 .secPanel .pBody dl dt {
+  padding: 0 25px 0 0;
+  font-size: 16px;
+}
+#certification .sec03 .secPanel .pBody dl dd {
+  padding: 15px 0 0;
+}
+
+/*////////////////////////////////////////////////////////////
+	join
+///////////////////////////////////////////////////////////*/
+#join .sec01 {
+  padding: 40px 0;
+}
+#join .sec01 .topTxt {
+  margin: 0 0 20px;
+}
+#join .sec01 .listPanel {
+  margin: 0 0 20px;
+  padding: 20px;
+}
+#join .sec01 .txtBox {
+  margin: 0 0 20px;
+  text-align: center;
+}
+#join .sec01 .txtBox p + p {
+  margin: 30px 0 0;
+}
+#join .sec01 .btnMore + p {
+  margin: 10px 0 0;
+}
+#join .sec02 {
+  padding: 40px 0 80px;
+}
+#join .sec02 .linkListPanel .linkListBox ul li + li {
+  margin: 20px 0 0;
+}
+#join .sec02 .linkListPanel .linkListBox ul li a {
+  padding: 20px;
+}
+#join .sec02 .linkListPanel .linkListBox ul li dl dt {
+  margin: 0 0 20px;
+  padding: 0 0 10px;
+  font-size: 20px;
+}
+#join .sec02 .linkListPanel .linkListBox ul li dl dt:after {
+  width: 20%;
+  height: 1px;
+}
+#join .sec02 .linkListPanel .linkListBox ul li dl dd p {
+  min-width: 180px;
+  padding: 7px 20px;
+}
+
+/*////////////////////////////////////////////////////////////
+	apply
+///////////////////////////////////////////////////////////*/
+#apply .sec01 {
+  padding: 40px 0;
+}
+#apply .sec01 .priceTable table th,
+#apply .sec01 .priceTable table td {
+  font-size: 12px;
+  padding: 5px;
+}
+#apply .sec02 {
+  padding: 40px 0;
+}
+#apply .sec02 .listPanel .listBox ul li {
+  padding: 20px;
+}
+#apply .sec02 .listPanel .listBox ul li + li {
+  margin: 20px 0 0;
+}
+#apply .sec02 .listPanel .listBox ul li dl dt {
+  margin: 0 0 20px;
+  padding: 0 0 10px;
+  font-size: 20px;
+}
+#apply .sec02 .listPanel .listBox ul li dl dt:after {
+  width: 20%;
+  height: 1px;
+}
+#apply .sec02 .listPanel .listBox ul li dl dd .txt {
+  font-size: 13px;
+}
+#apply .sec02 .listPanel .listBox ul li dl dd .arrow {
+  width: 17px;
+  margin: 10px auto 0;
+}
+#apply .sec03 {
+  padding: 40px 0 80px;
+}
+
+/*////////////////////////////////////////////////////////////
+	annual
+///////////////////////////////////////////////////////////*/
+#annual .topSection {
+  padding: 40px 0;
+}
+#annual .sec01 {
+  padding: 40px 0;
+}
+#annual .sec01 .feeTable table th,
+#annual .sec01 .feeTable table td {
+  font-size: 13px;
+  padding: 10px;
+}
+#annual .sec01 .feeTable table th {
+  width: 150px;
+}
+#annual .sec01 .feeTable table th span {
+  max-width: 120px;
+}
+#annual .sec02 {
+  padding: 40px 0 80px;
+}
+#annual .sec02 .subSection + .subSection {
+  margin: 60px 0 0;
+}
+#annual .sec02 .subSection .subSecTtl {
+  margin: 0 0 20px;
+}
+#annual .sec02 .subSection .subSecTtl h3 {
+  font-size: 18px;
+}
+#annual .sec02 .subSection .txtBox {
+  display: block;
+  max-width: 860px;
+}
+#annual .sec02 .subSection .txtBox .btnMore {
+  max-width: 260px;
+  margin: 15px 0 0;
+}
+#annual .sec02 .subSection .banKInfoPanel {
+  margin: 40px 0 0;
+}
+#annual .sec02 .subSection .banKInfoPanel > p {
+  margin: 0 0 15px;
+  font-weight: bold;
+}
+#annual .sec02 .subSection .banKInfoPanel .infoListBox .bankInfo {
+  padding: 20px;
+}
+#annual .sec02 .subSection .banKInfoPanel .infoListBox .bankInfo + .bankInfo {
+  margin: 20px 0 0;
+}
+#annual .sec02 .subSection .banKInfoPanel .infoListBox .bankInfo .inner {
+  max-width: 350px;
+  margin: 0 auto;
+}
+#annual .sec02 .subSection .banKInfoPanel .infoListBox .bankInfo dl + dl {
+  margin: 15px 0 0;
+}
+#annual .sec02 .subSection .banKInfoPanel .infoListBox .bankInfo dl dt {
+  width: 90px;
+}
+#annual .sec02 .subSection .banKInfoPanel .infoListBox .bankInfo dl dd {
+  width: calc(100% - 100px);
+}
+
+/*////////////////////////////////////////////////////////////
+	newsletter
+///////////////////////////////////////////////////////////*/
+#newsletter .sec01 {
+  padding: 40px 0 80px;
+}
+#newsletter .formBox form > p {
+  display: block;
+}
+#newsletter .formBox form > p label {
+  width: 100%;
+  margin: 0 0 5px;
+}
+#newsletter .formBox form > p input {
+  width: 100%;
+}
+#newsletter .formBox form input[type=submit] {
+  width: 100%;
+  min-width: auto;
+  padding: 12px 20px;
+  font-size: 14px;
+}
+#newsletter .formBox form input[type=submit][name=unsubscribe] {
+  margin-left: 0;
+}
+
+/*////////////////////////////////////////////////////////////
+	instructor
+///////////////////////////////////////////////////////////*/
+#instructor .topSection {
+  padding: 40px 0;
+}
+#instructor .topSection .secPanel {
+  padding: 20px;
+}
+#instructor .topSection .secPanel + .secPanel {
+  margin: 25px 0 0;
+}
+#instructor .topSection .secPanel .pTtl {
+  font-size: 18px;
+}
+#instructor .topSection .secPanel .licenseTable dl dt {
+  padding: 20px;
+}
+#instructor .topSection .secPanel .licenseTable dl dd {
+  padding: 20px;
+}
+#instructor .topSection .secPanel .txtBox {
+  padding: 12px 10px;
+}
+#instructor .sec01 {
+  padding: 40px 0 80px;
+}
+#instructor .sec01 .instructorTable table {
+  width: 100%;
+}
+#instructor .sec01 .instructorTable table thead {
+  display: none;
+}
+#instructor .sec01 .instructorTable table tbody tr {
+  display: block;
+  width: 100%;
+  border: 1px solid #21535c;
+}
+#instructor .sec01 .instructorTable table tbody tr + tr {
+  margin: 20px 0 0;
+}
+#instructor .sec01 .instructorTable table tbody tr td {
+  display: block;
+  width: 100%;
+}
+#instructor .sec01 .instructorTable table tbody tr td dl dt {
+  padding: 10px;
+  color: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+  background: #7fb841;
+}
+#instructor .sec01 .instructorTable table tbody tr td dl dd {
+  padding: 10px;
+  text-align: center;
+  line-height: 2;
+}
+#instructor .sec01 .instructorTable table tbody tr .introduction dl dd,
+#instructor .sec01 .instructorTable table tbody tr .url dl dd {
+  text-align: left;
+}
+
+/*////////////////////////////////////////////////////////////
+	contact
+///////////////////////////////////////////////////////////*/
+#contact .sec01 {
+  padding: 40px 0;
+}
+#contact .sec02 {
+  padding: 40px 0 80px;
+}
+#contact .sec02 .telPanel {
+  padding: 20px;
+}
+#contact .sec02 .telPanel .tel a em {
+  font-size: 28px;
+}
+
+/*////////////////////////////////////////////////////////////
+	news
+///////////////////////////////////////////////////////////*/
+#news .newsSection {
+  padding: 60px 0 120px;
+}
+#news .newsSection .newsContainer .catePanel {
+  margin: 0 0 20px;
+  padding: 20px;
+}
+#news .newsSection .newsContainer .catePanel dl + dl {
+  margin: 20px 0 0;
+}
+#news .newsSection .newsContainer .catePanel dl dt {
+  margin: 0 0 15px;
+  padding: 0 0 5px;
+  font-size: 18px;
+}
+#news .newsSection .newsContainer .catePanel dl dd ul {
+  padding: 0;
+}
+#news .newsSection .newsContainer .catePanel dl dd ul li + li {
+  margin: 10px 0 0;
+}
+#news .newsSection .newsContainer .newsPanel {
+  padding: 20px;
+}
+#news .newsSection .newsContainer .newsPanel .newsList ul li + li {
+  margin: 20px 0 0;
+}
+#news .newsSection .newsContainer .newsPanel .newsList ul li .infoBox {
+  margin: 0 0 10px;
+}
+#news .newsSection .newsContainer .newsPanel .newsDetail .title {
+  font-size: 18px;
+}
+#news .newsSection .newsContainer .newsPanel .newsDetail .infoBox {
+  margin: 0 0 20px;
+}
+#news .newsSection .newsContainer .newsPanel .newsDetail .postContents {
+  line-height: 2.5;
+}
+#news .newsSection .newsContainer .newsPanel .newsDetail .postContents img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+#news .newsSection .list__pagination {
+  margin: 40px 0 0;
+}
+#news .newsSection .prevNextPanel {
+  margin: 40px 0 0;
+  padding: 0 0 5px;
+}
+#news .newsSection .prevNextPanel > div a {
+  padding: 15px 25px;
+}
+#news .newsSection .prevNextPanel > div a span {
+  font-size: 13px;
+}
+#news .newsSection .prevNextPanel .prevBox a {
+  background: url("../image/news/icon_arrow_prev.png") left 10px center no-repeat;
+  background-size: 10px auto;
+}
+#news .newsSection .prevNextPanel .nextBox a {
+  background: url("../image/news/icon_arrow_next.png") right 10px center no-repeat;
+  background-size: 10px auto;
+}
+
+/*////////////////////////////////////////////////////////////
+	faq
+///////////////////////////////////////////////////////////*/
+#faq .topContainer {
+  padding: 50px 0;
+}
+#faq .topContainer .pageLinkList ul {
+  max-width: 200px;
+  margin: 0 auto;
+}
+#faq .topContainer .pageLinkList ul li + li {
+  margin: 15px 0 0;
+}
+#faq .sectionContainer {
+  padding: 0 0 80px;
+}
+#faq .section + .section {
+  margin: 40px 0 0;
+}
+#faq .section .subSecTtl {
+  margin: 0 0 20px;
+}
+#faq .section .subSecTtl h2 {
+  font-size: 18px;
+}
+#faq .section .faqContainer {
+  padding: 20px;
+}
+#faq .section .faqContainer dl dt {
+  padding: 0 30px 0 22px;
+  font-size: 16px;
+}
+#faq .section .faqContainer dl dd {
+  padding: 15px;
+}
+
+/*////////////////////////////////////////////////////////////
+	legal
+///////////////////////////////////////////////////////////*/
+#legal .mainContainer {
+  padding: 40px 0 80px;
+}
+#legal .infoPanel {
+  margin: 0 0 30px;
+  padding: 20px;
+}
+#legal .infoPanel .infoBox dl {
+  padding: 10px 10px;
+}
+#legal .infoPanel .infoBox dl dt {
+  margin: 0 0 5px;
+}
+#legal .taxPanel {
+  padding: 20px;
+}
+#legal .taxPanel h2 {
+  margin: 0 0 10px;
+  padding: 0 10px 10px;
+  font-size: 16px;
+}
+#legal .taxPanel .txt {
+  padding: 0 10px;
+}
+
+/*////////////////////////////////////////////////////////////
+	document
+///////////////////////////////////////////////////////////*/
+#document .topContainer {
+  padding: 50px 0;
+}
+#document .topContainer .pageLinkList ul {
+  max-width: 200px;
+  margin: 0 auto;
+}
+#document .topContainer .pageLinkList ul li + li {
+  margin: 15px 0 0;
+}
+#document .section + .section {
+  margin: 40px 0 0;
+}
+#document .section .subSecTtl {
+  margin: 0 0 20px;
+}
+#document .section .subSecTtl h3 {
+  font-size: 18px;
+}
+#document .section .bookListPanel01 {
+  margin: 0 0 60px;
+}
+#document .section .bookListPanel01 .listBox ul {
+  max-width: 330px;
+  margin: 0 auto;
+}
+#document .section .bookListPanel01 .listBox ul li + li {
+  margin: 40px 0 0;
+}
+#document .section .bookListPanel01 .listBox ul li .photo {
+  max-width: 180px;
+  margin: 0 auto 20px;
+}
+#document .section .bookListPanel01 .listBox ul li .txtBox dl dt {
+  font-size: 16px;
+}
+#document .section .bookListPanel01 .listBox ul li .txtBox dl dd {
+  line-height: 2;
+}
+#document .section .bookListPanel02 dl + dl {
+  margin: 40px 0 0;
+}
+#document .section .bookListPanel02 dl dt {
+  margin: 0 0 10px;
+  padding: 0 0 5px;
+  font-size: 16px;
+  border-bottom: 1px solid #414141;
+}
+#document .section .bookListPanel02 dl dd {
+  line-height: 2.5;
+}
+#document .section .description .txt + .txt {
+  margin: 30px 0 0;
+}
+#document .section .captionPanel {
+  max-width: 600px;
+  margin: 40px 0 0;
+  padding: 20px;
+}
+#document .section .captionPanel .captionBox .photo {
+  max-width: 330px;
+  margin: 0 auto 20px;
+}
+#document .section .captionPanel .captionBox .txtBox {
+  max-width: 330px;
+  margin: 0 auto;
+}
+#document .section .captionPanel .captionBox .txtBox dl dt {
+  margin: 0 0 15px;
+  font-size: 16px;
+}
+#document .sec01 {
+  padding: 50px 0;
+}
+#document .sec01 .topContainer .secPanel {
+  padding: 30px 20px;
+}
+#document .sec01 .topContainer .secPanel .secBox .photo {
+  max-width: 280px;
+  margin: 0 auto 20px;
+}
+#document .sec01 .topContainer .secPanel .secBox .txtBox .ttl {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+#document .sec02 {
+  padding: 50px 0;
+}
+#document .sec03 {
+  padding: 50px 0;
+}
+#document .sec03 .secContainer {
+  padding: 30px 20px;
+}
+#document .sec03 .groupTable dl dt {
+  padding: 15px;
+}
+#document .sec03 .groupTable dl dd {
+  padding: 15px;
+}
+
+/*////////////////////////////////////////////////////////////
+	form
+///////////////////////////////////////////////////////////*/
+.contactContainer {
+  padding: 30px 20px;
+}
+.contactContainer .formBox dl dt {
+  justify-content: flex-start;
+  margin: 0 0 5px;
+}
+.contactContainer .formBox dl dt em {
+  margin: 0 0 0 10px;
+}
+.contactContainer .formBox .addressBox .postalBox .inputBox {
+  width: 100px;
+}
+.contactContainer .formBox .addressBox .innerBox {
+  margin: 10px 0 0;
+}

@@ -1,0 +1,1010 @@
+@charset "UTF-8";
+@import "./mixin";
+@import "./mod";
+/* CSS Document */
+
+/*===================================================
+	画面用CSS（PC/SMP）
+===================================================*/
+
+/*////////////////////////////////////////////////////////////
+	TOP
+///////////////////////////////////////////////////////////*/
+#top {
+  margin: 0;
+  .topKvContainer {
+    height: 90vh;
+    background: url("../image/top/top_kv_01.png") center no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    .topKvLogoPanel {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      height: 300px;
+      padding: 20px;
+      z-index: 1;
+      background: url("../image/top/top_window_bg.png") bottom center no-repeat;
+      background-size: cover;
+      transition: 1.5s ease;
+      &.rollUp {
+        height: 200px;
+        .topKvLogo {
+          opacity: 1;
+        }
+      }
+      .topKvLogo {
+        opacity: 0;
+        width: 60px;
+        margin: 0 auto;
+        transition: 1s;
+      }
+    }
+    .topBnrPanel {
+      bottom: 220px;
+      width: 100%;
+      max-width: 440px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+  }
+  .topSection {
+    padding: 60px 0;
+    .secContainer {
+      .txtPanel {
+        .txtBox {
+          padding: 20px 20px;
+          .ttl {
+            margin: 0 0 20px;
+            font-size: 24px;
+          }
+          .txt {
+            margin: 0 0 20px;
+          }
+        }
+      }
+      .photoPanel {
+      }
+    }
+  }
+  .lunchboxSec {
+    padding: 60px 0;
+    .secPanel {
+      + .secPanel {
+        margin: 60px 0 0;
+      }
+      .photo {
+        &::before {
+          width: 40px;
+          height: 40px;
+        }
+        &::after {
+          width: 40px;
+          height: 40px;
+        }
+      }
+      .txtBox {
+        a {
+          padding: 25px 20px;
+          background: url("../image/top/lunchbox_box_bg_tri.png") left top
+            no-repeat #ffffff;
+          background-size: 35px auto;
+        }
+        .ttlHead {
+          display: flex;
+          align-items: center;
+          margin: 0 0 20px;
+          .ttl {
+            font-size: 22px;
+            span {
+              font-size: 14px;
+            }
+          }
+          .more {
+            width: 30px;
+            a {
+              display: block;
+            }
+          }
+        }
+        .cntBody {
+          .txt {
+            line-height: 2;
+          }
+        }
+      }
+    }
+  }
+  .linkSec {
+    padding: 60px 0;
+    .itemPanel {
+      + .itemPanel {
+        margin: 30px 0 0;
+      }
+      .itemBox {
+        .ttl {
+          position: absolute;
+          right: 0;
+          bottom: 20px;
+        }
+        .ttl01 {
+          width: 70%;
+        }
+        .ttl02 {
+          width: 60%;
+        }
+      }
+    }
+  }
+  .newsSec {
+    padding: 60px 0;
+    .secContainer {
+      .titleBox {
+        margin: 0 0 30px;
+        .ttl {
+          margin: 0 0 30px;
+          font-size: 20px;
+        }
+      }
+      .txtBox {
+        ul {
+          li {
+            + li {
+              margin: 30px 0 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	commitment
+///////////////////////////////////////////////////////////*/
+#commitment {
+  .topSection {
+    padding: 60px 0;
+    .secContainer {
+      .ttlBox {
+        .ttl {
+          font-size: 24px;
+        }
+      }
+      .txtBox {
+        padding: 20px 0 0;
+      }
+    }
+  }
+  .sec01 {
+    padding: 60px 0;
+    .secBox {
+      + .secBox {
+        margin: 60px 0 0;
+      }
+      .txtBox {
+        padding: 20px 0 0;
+        h3 {
+          margin: 0 0 15px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	sale
+///////////////////////////////////////////////////////////*/
+#sale {
+  .topSection {
+    padding: 60px 0;
+    .secContainer {
+      .txtBox {
+        margin: 0 0 20px;
+        h2 {
+          margin: 0 0 20px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .telSection {
+    padding: 40px 0;
+    .ttlBox {
+      margin: 0 0 20px;
+      .ttl01 {
+        font-size: 18px;
+      }
+      .ttl02 {
+        font-size: 12px;
+      }
+    }
+    .itemBox {
+      max-width: 440px;
+      margin: 0 auto;
+      dl {
+        max-width: 380px;
+        margin: 0 auto 10px;
+        dt {
+          margin: 0 0 10px;
+          font-size: 18px;
+        }
+        dd {
+          a {
+            padding: 8px 10px;
+            font-size: 24px;
+          }
+        }
+      }
+      aside {
+        max-width: 380px;
+        margin: 0 auto;
+        font-size: 13px;
+        text-align: left;
+      }
+    }
+  }
+  .sec01 {
+    padding: 60px 0;
+    .topTxt {
+      margin: 0 0 40px;
+    }
+    .secPanel {
+      margin: 0 0 40px;
+      .txtBox {
+        .ttlBox {
+          display: block;
+          margin: 0 0 20px;
+          padding: 20px 0 0;
+          .ttl {
+            em {
+              font-size: 22px;
+            }
+            span {
+              font-size: 16px;
+            }
+          }
+          .price {
+            text-align: right;
+            em {
+              font-size: 16px;
+            }
+            span {
+              font-size: 12px;
+            }
+          }
+        }
+        .txt {
+          p + p {
+            margin: 20px 0 0;
+          }
+        }
+      }
+    }
+    .message {
+      font-size: 18px;
+      background: url("../image/sale/sec01_message_bg.png") center no-repeat;
+      background-size: cover;
+    }
+    .listBox {
+      margin: 0 0 40px;
+      ul {
+        margin: -10px 0 0 -10px;
+        li {
+          width: calc((100% / 2) - 10px);
+          margin: 10px 0 0 10px;
+        }
+      }
+    }
+    .subBox {
+      .inner {
+        font-size: 16px;
+      }
+    }
+  }
+  .slidePanel {
+    padding: 0 0 60px;
+    .slideBox {
+      ul {
+        li {
+          width: calc(100% / 2);
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	lunchbox
+///////////////////////////////////////////////////////////*/
+.lunchboxMain {
+  .topSection {
+    padding: 60px 0;
+    .secContainer {
+      .txtBox {
+        margin: 0 0 20px;
+        h2 {
+          margin: 0 0 20px;
+          font-size: 20px;
+        }
+      }
+    }
+    .photoList02 {
+      padding: 20px 0 0;
+      ul {
+        li {
+          width: calc((100% / 2) - 5px);
+        }
+      }
+    }
+  }
+  .useSection {
+    padding: 60px 0;
+    .secTtl {
+      margin: 0 0 30px;
+      > * {
+        padding: 0 40px;
+        font-size: 20px;
+      }
+    }
+    .secBox {
+      dl {
+        + dl {
+          margin: 50px 0 0;
+        }
+        dt {
+          margin: 0 0 15px;
+          padding: 0 0 5px;
+          font-size: 18px;
+          border-bottom: 1px solid #231815;
+          br {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .telSection {
+    padding: 40px 0;
+    .itemBox {
+      max-width: 440px;
+      margin: 0 auto;
+      dl {
+        max-width: 380px;
+        margin: 0 auto 10px;
+        dt {
+          margin: 0 0 10px;
+          font-size: 18px;
+        }
+        dd {
+          a {
+            padding: 8px 10px;
+            font-size: 24px;
+          }
+        }
+      }
+      aside {
+        max-width: 380px;
+        margin: 0 auto;
+        font-size: 13px;
+        text-align: left;
+      }
+      .pdfBox {
+        max-width: 260px;
+        margin: 20px auto 0;
+        a {
+          display: block;
+          padding: 15px 20px;
+          p {
+            padding: 0 0 0 45px;
+            font-size: 13px;
+            background: url("../image/common/icon_pdf.png") left center
+              no-repeat;
+            background-size: 30px auto;
+          }
+        }
+      }
+    }
+    .limitBox {
+      max-width: 400px;
+      margin: 30px auto 0;
+      dl {
+        max-width: 380px;
+        dt {
+          span {
+            font-size: 11px;
+          }
+          em {
+            font-size: 18px;
+          }
+        }
+        dd {
+          line-height: 2;
+        }
+      }
+    }
+  }
+  .sideMenuSection {
+    + .sideMenuSection {
+      margin: 50px 0 0;
+    }
+    .secTtl {
+      margin: 0 0 30px;
+      > * {
+        padding: 0 40px;
+        font-size: 20px;
+      }
+    }
+    .menuList {
+      ul {
+        li {
+          padding: 10px 0;
+          + li {
+            margin: 5px 0 0;
+          }
+        }
+        dl {
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	packed
+///////////////////////////////////////////////////////////*/
+#packed {
+  .sec01 {
+    padding: 60px 0;
+    .topBox {
+      margin: 0 0 40px;
+      h3 {
+        margin: 0 0 20px;
+        font-size: 20px;
+      }
+    }
+    .listBox {
+      ul {
+        li {
+          + li {
+            margin: 30px 0 0;
+          }
+        }
+        dl {
+          margin: 15px 0 0;
+          dt {
+            margin: 0 0 15px;
+            em {
+              font-size: 20px;
+            }
+            span {
+              font-size: 16px;
+            }
+            small {
+              font-size: 13px;
+            }
+          }
+          dd {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  .sec02 {
+    padding: 60px 0;
+    .topTxt {
+      margin: 0 0 40px;
+    }
+    .secContainer {
+      margin: 0 0 40px;
+      .txtBox {
+        margin: 0 0 20px;
+        h3 {
+          margin: 0 0 20px;
+          font-size: 20px;
+        }
+      }
+    }
+    .listBox {
+      margin: 0 0 60px;
+      ul {
+        li {
+          + li {
+            margin: 30px 0 0;
+          }
+        }
+        dl {
+          margin: 15px 0 0;
+          dt {
+            margin: 0 0 15px;
+            em {
+              font-size: 20px;
+            }
+            span {
+              font-size: 16px;
+            }
+            small {
+              font-size: 13px;
+            }
+          }
+          dd {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	wariko
+///////////////////////////////////////////////////////////*/
+#wariko {
+  .sec01 {
+    padding: 60px 0;
+    .topBox {
+      margin: 0 0 40px;
+      h3 {
+        margin: 0 0 20px;
+        font-size: 20px;
+      }
+    }
+    .listBox01 {
+      ul {
+        li {
+          + li {
+            margin: 30px 0 0;
+          }
+        }
+        dl {
+          margin: 15px 0 0;
+          dt {
+            margin: 0 0 15px;
+            em {
+              font-size: 20px;
+            }
+            span {
+              font-size: 16px;
+            }
+            small {
+              font-size: 13px;
+            }
+          }
+          dd {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .listBox02 {
+      margin: 0 0 60px;
+      ul {
+        li {
+          + li {
+            margin: 30px 0 0;
+          }
+        }
+        dl {
+          margin: 15px 0 0;
+          dt {
+            margin: 0 0 15px;
+            em {
+              font-size: 20px;
+            }
+            span {
+              font-size: 16px;
+            }
+            small {
+              font-size: 13px;
+            }
+          }
+          dd {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	houji
+///////////////////////////////////////////////////////////*/
+#houji {
+  .sec01 {
+    padding: 60px 0;
+    .topBox {
+      margin: 0 0 40px;
+      h3 {
+        margin: 0 0 20px;
+        font-size: 20px;
+      }
+    }
+    .listBox01 {
+      ul {
+        li {
+          + li {
+            margin: 30px 0 0;
+          }
+        }
+        dl {
+          margin: 15px 0 0;
+          dt {
+            margin: 0 0 15px;
+            em {
+              font-size: 20px;
+            }
+            span {
+              font-size: 16px;
+            }
+            small {
+              font-size: 13px;
+            }
+          }
+          dd {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .listBox02 {
+      margin: 0 0 60px;
+      ul {
+        li {
+          + li {
+            margin: 30px 0 0;
+          }
+        }
+        dl {
+          margin: 15px 0 0;
+          dt {
+            margin: 0 0 15px;
+            em {
+              font-size: 20px;
+            }
+            span {
+              font-size: 16px;
+            }
+            small {
+              font-size: 13px;
+            }
+          }
+          dd {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+  other
+///////////////////////////////////////////////////////////*/
+#other {
+  .sec01,
+  .sec03 {
+    padding: 60px 0;
+    .secBoxList {
+      margin: 0 0 50px;
+      .secBox {
+        + .secBox {
+          margin: 50px 0 0;
+        }
+        .txtBox {
+          margin: 20px 0 0;
+          h3 {
+            margin: 0 0 15px;
+            font-size: 20px;
+          }
+          .ttlBox {
+            margin: 0 0 15px;
+            .reserveTtl {
+              width: 100px;
+              margin: 0 0 15px;
+            }
+            .ttl {
+              margin: 0 0 15px;
+              em {
+                font-size: 20px;
+              }
+            }
+            .price {
+              em {
+                font-size: 20px;
+              }
+            }
+          }
+          .txt {
+            font-size: 15px;
+            p + p {
+              margin: 20px 0 0;
+            }
+          }
+          .btnMore {
+            margin: 20px 0 0;
+          }
+        }
+      }
+    }
+    .listBox {
+      margin: 0 0 60px;
+      ul {
+        li {
+          + li {
+            margin: 30px 0 0;
+          }
+        }
+        dl {
+          margin: 15px 0 0;
+          dt {
+            margin: 0 0 15px;
+            em {
+              font-size: 20px;
+            }
+            span {
+              font-size: 16px;
+            }
+            small {
+              font-size: 13px;
+            }
+          }
+          dd {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  .sec02 {
+    padding: 60px 0;
+    .topBox {
+      margin: 0 0 40px;
+      h3 {
+        margin: 0 0 20px;
+        font-size: 20px;
+      }
+    }
+    .listBox {
+      ul {
+        li {
+          + li {
+            margin: 30px 0 0;
+          }
+        }
+        dl {
+          margin: 15px 0 0;
+          dt {
+            margin: 0 0 15px;
+            em {
+              font-size: 20px;
+            }
+            span {
+              font-size: 16px;
+            }
+            small {
+              font-size: 13px;
+            }
+          }
+          dd {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+  faq
+///////////////////////////////////////////////////////////*/
+#faq {
+  .topSection {
+    padding: 40px 0 60px;
+    .pagingBox {
+      max-width: 400px;
+      padding: 20px 20px;
+      ul {
+        max-width: 330px;
+        margin: 0 auto;
+        li {
+          + li {
+            margin: 10px 0 0;
+          }
+          a {
+            padding: 10px 0;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+  .section {
+    + .section {
+      margin: 60px 0 0;
+    }
+    .secTtl {
+      margin: 0 0 30px;
+      > * {
+        padding: 0 40px;
+        font-size: 20px;
+      }
+    }
+    .secBox {
+      padding: 30px 25px;
+      background: url("../image/faq/faq_tri.png") left top no-repeat #ffffff;
+      background-size: 50px auto;
+      dl {
+        dt {
+          padding: 0 30px 0 0;
+          font-size: 18px;
+          background: url("../image/faq/accord_plus.png") right center no-repeat;
+          background-size: 20px auto;
+          &.active {
+            background: url("../image/faq/accord_minus.png") right center
+              no-repeat;
+            background-size: 20px auto;
+          }
+        }
+        dd {
+          padding: 15px 0 0;
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+  about
+///////////////////////////////////////////////////////////*/
+#about {
+  .sec01 {
+    .secContainer01 {
+      padding: 50px 0;
+      .photoList {
+        .photo {
+          max-width: 400px;
+          margin: 0 auto;
+          + .photo {
+            margin: 30px auto 0;
+          }
+        }
+      }
+    }
+    .secContainer02 {
+      padding: 50px 0;
+      .listPanel {
+        .listPanelInner {
+          max-width: 600px;
+          margin: 0 auto;
+        }
+        .listBox {
+          dl {
+            dt {
+              margin: 0 0 15px;
+              padding: 0 0 0 10px;
+              font-size: 20px;
+            }
+            dd {
+              .ttl {
+                margin: 0 0 10px;
+                font-size: 20px;
+              }
+              p {
+                line-height: 2;
+              }
+            }
+          }
+        }
+      }
+      .listPanel01 {
+        margin: 0 0 20px;
+        padding: 0 0 20px;
+        .listBox {
+          + .listBox {
+            margin: 40px 0 0;
+          }
+        }
+      }
+      .listPanel02 {
+        .listBox {
+          + .listBox {
+            margin: 40px 0 0;
+          }
+        }
+      }
+    }
+  }
+  .sec02 {
+    padding: 60px 0;
+    .name {
+      margin: 30px 0 0;
+      em {
+        margin: 0 0 0 10px;
+        font-size: 22px;
+      }
+    }
+  }
+  .sec03 {
+    padding: 60px 0;
+    .infoBox {
+      margin: 0 0 60px;
+      dl {
+        line-height: 2;
+        + dl {
+          margin: 20px 0 0;
+        }
+        dt {
+          padding: 5px 10px;
+          text-align: left;
+        }
+        dd {
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+  news
+///////////////////////////////////////////////////////////*/
+#news {
+  .newsSection {
+    padding: 50px 0 80px;
+    .catePanel {
+      margin: 0 0 60px;
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 280px;
+        gap: 10px 10px;
+        li {
+          a {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            background: #988135;
+          }
+        }
+      }
+    }
+    .listPanel {
+      ul {
+        li {
+          + li {
+            margin: 40px 0 0;
+          }
+          .title {
+            min-height: 44px;
+            margin: 10px 0;
+            font-size: 15px;
+          }
+          .more {
+            padding: 5px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .list__pagination {
+      margin: 40px 0 0;
+    }
+    .detailPanel {
+      .title {
+        margin: 0 0 15px;
+        padding: 5px 0;
+        font-size: 18px;
+      }
+      .thumbnail {
+        margin: 0 0 15px;
+      }
+    }
+  }
+}

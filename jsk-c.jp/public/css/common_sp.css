@@ -1,0 +1,229 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+	共通CSS（SMP）
+===================================================*/
+/* --------------------------------------------------
+	base
+-------------------------------------------------- */
+body {
+  min-width: 0;
+  font-size: 15px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/*改行*/
+.pcBreak {
+  display: none;
+}
+
+.spBreak {
+  display: block;
+}
+
+/*spのみ表示*/
+.pcHidden {
+  display: block;
+}
+
+.spHidden {
+  display: none;
+}
+
+#sideBtn {
+  display: none;
+}
+
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+.header {
+  padding: 20px;
+}
+.header .logo {
+  width: 80px;
+}
+.header .hamburger {
+  cursor: pointer;
+  display: block;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 24px;
+  height: 18px;
+  z-index: 10000;
+}
+.header .hamburger span {
+  background: #231815;
+  position: absolute;
+  left: 50%;
+  width: 24px;
+  height: 2px;
+  transform: translateX(-50%);
+  transition: 0.4s;
+}
+.header .hamburger span:nth-of-type(1) {
+  top: 0;
+}
+.header .hamburger span:nth-of-type(2) {
+  top: 8px;
+}
+.header .hamburger span:nth-of-type(3) {
+  bottom: 0;
+}
+.header .hamburger.is-open span {
+  background: #231815;
+}
+.header .hamburger.is-open span:nth-of-type(1) {
+  transform: translate(-50%, 8px) rotate(-45deg);
+}
+.header .hamburger.is-open span:nth-of-type(2) {
+  opacity: 0;
+}
+.header .hamburger.is-open span:nth-of-type(3) {
+  transform: translate(-50%, -8px) rotate(45deg);
+}
+
+/* --------------------------------------------------
+	nav
+-------------------------------------------------- */
+.navBox {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 80px 20px 80px;
+  text-align: center;
+  z-index: 999;
+  background: #ffffff;
+  transition: 0.6s;
+  overflow: auto;
+}
+.navBox.active {
+  top: 0;
+}
+.navBox ul {
+  border-top: 1px solid #d9d9d9;
+}
+.navBox ul li {
+  border-bottom: 1px solid #d9d9d9;
+}
+.navBox ul li a {
+  display: block;
+  padding: 20px 0;
+}
+.navBox ul .contact {
+  width: 140px;
+  margin: 15px auto 0;
+}
+.navBox ul .contact a {
+  display: block;
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #000000;
+}
+
+/* --------------------------------------------------
+	main
+-------------------------------------------------- */
+.pageMain {
+  margin: 68px 0 0;
+}
+
+.pageTitlePanel {
+  padding: 30px 20px;
+}
+.pageTitlePanel h1 {
+  margin: 0 0 5px;
+  font-size: 24px;
+}
+.pageTitlePanel p {
+  font-size: 12px;
+}
+
+.mapBox {
+  padding: 0 0 70%;
+}
+
+/* --------------------------------------------------
+	footer
+-------------------------------------------------- */
+.footer .footContact .contactKv {
+  height: auto;
+  padding: 60px 20px;
+}
+.footer .footContact .contactPanel .contactBox {
+  padding: 40px 20px 60px;
+}
+.footer .footContact .contactPanel .contactBox .ttl01 {
+  font-size: 32px;
+}
+.footer .footContact .contactPanel .contactBox .ttl02 {
+  font-size: 15px;
+}
+.footer .footContact .contactPanel .contactBox .btnMail {
+  max-width: 520px;
+  margin: 30px 0 0;
+}
+.footer .footContact .contactPanel .contactBox .btnMail a {
+  font-size: 16px;
+  background: url("../image/common/more_arrow_right_white.png") right 20px center no-repeat #b4a152;
+  background-size: 25px auto;
+}
+.footer .footContact .contactPanel .contactBox .btnMail a span {
+  padding: 20px;
+  background: url("../image/common/contact_mail.png") left 20px center no-repeat;
+  background-size: 40px auto;
+}
+.footer .footContact .contactPanel .contactBox dl {
+  margin: 30px 0 0;
+}
+.footer .footPanel {
+  padding: 60px 0;
+}
+.footer .footPanel .footBox {
+  margin: 0 0 60px;
+}
+.footer .footPanel .footBox .leftBox {
+  margin: 0 0 40px;
+}
+.footer .footPanel .footBox .leftBox .logo {
+  width: 120px;
+}
+.footer .footPanel .footBox .rightBox ul {
+  display: block;
+  margin: 0 0 25px;
+}
+.footer .footPanel .footBox .rightBox ul li + li {
+  margin: 10px 0 0;
+}
+.footer .footPanel .footBox .rightBox ul li a {
+  position: relative;
+  display: block;
+  font-size: 15px;
+}
+.footer .footPanel .footBox .rightBox .sns {
+  text-align: left;
+}
+.footer .footPanel .txt {
+  font-size: 14px;
+}
+.footer .footPanel .txt p + p {
+  margin: 10px 0 0;
+}
+.footer .footBottom {
+  padding: 20px 0 5px;
+  font-size: 12px;
+  color: #ffffff;
+  background: #767676;
+}
+.footer .footBottom ul {
+  margin: 0 0 20px;
+}
+.footer .footBottom .copy {
+  text-align: center;
+}

@@ -1,0 +1,238 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+	共通CSS（SMP）
+===================================================*/
+/* --------------------------------------------------
+	base
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  body {
+    min-width: 0;
+    font-size: 15px;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  /*改行*/
+  .pcBreak {
+    display: none;
+  }
+
+  .spBreak {
+    display: block;
+  }
+
+  /*spのみ表示*/
+  .pcHidden {
+    display: block;
+  }
+
+  .spHidden {
+    display: none;
+  }
+
+  #sideBtn {
+    display: none;
+  }
+
+  .topicPath {
+    display: none;
+  }
+}
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background: #ffffff;
+  }
+  .header .headerWrap {
+    padding: 10px 20px;
+  }
+  .header .logoBox {
+    position: relative;
+  }
+  .header .logoBox .headTtl {
+    position: absolute;
+    top: 0;
+    left: 60px;
+    font-size: 10px;
+  }
+  .header .logoBox .logo {
+    width: 50px;
+  }
+  .header .logoBox .logo a {
+    display: block;
+  }
+  .header .hamburger {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 36px;
+    cursor: pointer;
+  }
+  .header .hamburger .span {
+    position: absolute;
+    left: 5px;
+    width: 28px;
+    height: 1px;
+    background: #403a3b;
+    transition: 0.4s;
+  }
+  .header .hamburger .span:nth-of-type(1) {
+    top: 8px;
+  }
+  .header .hamburger .span:nth-of-type(2) {
+    top: 17px;
+  }
+  .header .hamburger .span:nth-of-type(3) {
+    top: 26px;
+  }
+  .header .hamburger.is-open .span:nth-of-type(1) {
+    top: 17px;
+    transform: rotate(45deg);
+  }
+  .header .hamburger.is-open .span:nth-of-type(2) {
+    opacity: 0;
+  }
+  .header .hamburger.is-open .span:nth-of-type(3) {
+    top: 17px;
+    transform: rotate(-45deg);
+  }
+}
+/* --------------------------------------------------
+	nav
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .navBox {
+    overflow: auto;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: calc(100% - 66px);
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.96);
+    transition: 0.6s;
+  }
+  .navBox.active {
+    top: 66px;
+    opacity: 1;
+  }
+  .navBox .navList .ul .li {
+    padding: 0 0 0 20px;
+  }
+  .navBox .navList .ul .li + .li {
+    margin: 15px 0 0;
+  }
+  .navBox .navList .ul .li a {
+    display: inline-block;
+    font-weight: 400;
+  }
+  .navBox .navList .ul .li:nth-child(1) {
+    background: url(https://ichigoya-daynight.co.jp/system_panel/uploads/images/nav_icon_01.png) left center no-repeat;
+  }
+  .navBox .navList .ul .li:nth-child(2) {
+    background: url(https://ichigoya-daynight.co.jp/system_panel/uploads/images/nav_icon_02.png) left center no-repeat;
+  }
+  .navBox .navList .ul .li:nth-child(3) {
+    background: url(https://ichigoya-daynight.co.jp/system_panel/uploads/images/nav_icon_03.png) left center no-repeat;
+  }
+  .navBox .navList .ul .li:nth-child(4) {
+    background: url(https://ichigoya-daynight.co.jp/system_panel/uploads/images/nav_icon_04.png) left center no-repeat;
+  }
+}
+/* --------------------------------------------------
+	main
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .main {
+    margin: 88px 0 0;
+  }
+
+  .pageKvContainer {
+    height: 200px;
+    margin: 0;
+  }
+  .pageKvContainer .pageKvTitle::before {
+    width: 280px;
+    height: 150px;
+  }
+  .pageKvContainer .pageKvTitle p {
+    font-size: 12px;
+  }
+  .pageKvContainer .pageKvTitle h1 {
+    font-size: 24px;
+  }
+
+  .pageSecTtlBox {
+    margin: 0 0 45px;
+  }
+  .pageSecTtlBox .pageSecTtl {
+    font-size: 24px;
+  }
+  .pageSecTtlBox .pageSecTtl::before {
+    width: 40px;
+  }
+
+  .mapBox {
+    padding: 0 0 70%;
+  }
+}
+/* --------------------------------------------------
+	footer
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 80px 0 20px;
+  }
+  .footer .logo {
+    width: 70px;
+  }
+  .footer .animal {
+    top: 60px;
+    right: 20px;
+    width: 80px;
+  }
+  .footer .pagetop {
+    top: -20px;
+    right: 20px;
+    bottom: 0;
+    width: 45px;
+  }
+  .footer .txt {
+    margin: 30px 0 0;
+    font-size: 14px;
+  }
+  .footer .footNav {
+    margin: 35px 0 0;
+  }
+  .footer .footNav .ul {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: left;
+  }
+  .footer .footNav .ul .li {
+    width: auto;
+    margin: 15px 0 0;
+  }
+  .footer .footNav .ul .li:first-child {
+    margin-top: 0;
+  }
+  .footer .copy {
+    margin: 50px 0 0;
+    padding: 0 50px;
+    font-size: 12px;
+  }
+}

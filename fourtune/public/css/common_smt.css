@@ -1,0 +1,178 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*===================================================
+	共通CSS（SMP）
+===================================================*/
+
+/* --------------------------------------------------
+	base
+-------------------------------------------------- */
+body {
+  min-width: 0;
+  font-size: 12px;
+}
+
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+header {
+  position: static;
+  background:
+    url("../image/common/header_border.png") top repeat-x,
+    url("../image/common/header_border.png") bottom repeat-x;
+  background-size: 108px auto;
+}
+header .headTop {
+  position: relative;
+}
+header .headLeft > h1,
+header .headRight {
+  display: none;
+}
+header .headLeft {
+  float: none;
+  width: 185px;
+  margin: 0 auto;
+}
+header .headLeft > .logo {
+  width: 100%;
+}
+header .smtMenu {
+  display: block;
+}
+header .smtMenu .spTel {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  width: 45px;
+  height: 45px;
+}
+/* ナビ開閉ボタン */
+#slideBtn {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  width: 45px;
+  height: 45px;
+}
+#slideBtn a {
+  display: block;
+  width: 45px;
+  height: 45px;
+  text-indent: 9999px;
+  white-space: nowrap;
+  background: url(../image/common/btn_nav.png) no-repeat;
+  background-size: 45px auto;
+}
+/* --------------------------------------------------
+	nav
+-------------------------------------------------- */
+nav {
+  display: none;
+  position: absolute;
+  top: 86px;
+  right: 0;
+  width: 80%;
+  min-width: 0;
+  z-index: 999;
+  border: none;
+  background: #ffffff;
+}
+nav ul {
+  padding: 0;
+  text-align: left;
+}
+nav ul li,
+nav ul li:last-child {
+  display: block;
+  width: 100%;
+  background: none;
+}
+nav ul li + li {
+  margin-left: 0;
+  border-top: 1px solid #194375;
+}
+nav ul .smtItem {
+  display: block;
+}
+nav ul li a {
+  display: block;
+  font-size: 14px;
+  padding: 15px 0 15px 20px;
+}
+
+/* --------------------------------------------------
+	.cntnt
+-------------------------------------------------- */
+.ttlBorder {
+  padding-bottom: 20px;
+}
+.ttlBorder:after {
+  width: 144px;
+  height: 5px;
+  background-size: 144px auto;
+}
+/* --------------------------------------------------
+	pagetop
+-------------------------------------------------- */
+#pagetop {
+  display: none !important;
+}
+/* --------------------------------------------------
+	banner
+-------------------------------------------------- */
+.banner {
+  padding: 15px 10px;
+}
+.banner ul {
+  margin: -5px 0 0 -2%;
+}
+.banner li {
+  float: none;
+  display: inline-block;
+  width: 47%;
+  margin: 5px 0 0 2%;
+}
+/* --------------------------------------------------
+	footer
+-------------------------------------------------- */
+footer .footWrap {
+  display: block;
+  padding: 20px 10px;
+}
+footer .footWrap > div,
+footer .footWrap ul {
+  display: block;
+  width: 100%;
+}
+footer .footWrap > div {
+  margin: 0 auto 20px;
+}
+footer .footWrap dl {
+  width: 100%;
+}
+footer .footWrap dl dt {
+  width: 175px;
+  margin: 0 auto 20px;
+}
+footer .footWrap dl dt + dd {
+  width: 235px;
+  margin: 0 auto;
+}
+footer .footWrap dl dd + dd {
+  margin-top: 20px;
+  text-align: left;
+}
+footer .footWrap ul li {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+footer .footNav {
+  display: none;
+}
+footer .copy {
+  font-size: 12px;
+}

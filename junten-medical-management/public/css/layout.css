@@ -1,0 +1,367 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+	画面用CSS（PC/SMP）
+===================================================*/
+/*////////////////////////////////////////////////////////////
+	TOP
+///////////////////////////////////////////////////////////*/
+#top .topKvContainer {
+  width: 100%;
+  margin: 0 0 100px;
+}
+#top .topKvContainer .topKvPanel {
+  position: relative;
+  max-width: 1640px;
+  margin: 0 auto;
+}
+#top .topKvContainer .topKv {
+  width: 73%;
+  margin-left: auto;
+}
+#top .topKvContainer .topKv img {
+  display: block;
+}
+#top .topKvContainer .kvTitleBox {
+  position: absolute;
+  z-index: 1;
+  top: 40%;
+  left: clamp(20px, 2.1vw, 116px);
+  width: clamp(480px, 46.5vw, 760px);
+  text-align: right;
+  color: #283460;
+}
+#top .topKvContainer .kvTitle h1 {
+  display: inline;
+  padding: 0.2em 0.3em;
+  font-size: clamp(26px, 2.5vw, 40px);
+  font-weight: 700;
+  line-height: 1.5;
+  background-color: white;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+#top .topKvContainer .sub {
+  margin-top: 8px;
+}
+#top .topKvContainer .sub p {
+  display: inline;
+  padding: 0.5em 0.5em;
+  font-size: clamp(13px, 1.15vw, 20px);
+  line-height: 2.2;
+  background-color: white;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+#top .sec01 {
+  padding: 100px 0 200px;
+  background: url("../image/top/sec01_bg.png") no-repeat;
+  background-size: cover;
+}
+#top .sec01 .txt {
+  text-align: center;
+}
+#top .sec02 {
+  padding: 100px 0 0;
+}
+#top .sec02 .secContainer {
+  margin-top: 45px;
+  background: #fafafa;
+}
+#top .sec02 .secContainer .secPanel {
+  padding: 70px 0;
+}
+#top .sec02 .secContainer .secPanel + .secPanel {
+  padding-top: 35px;
+}
+#top .sec02 .secContainer .ttlBox {
+  margin-bottom: 45px;
+  text-align: center;
+}
+#top .sec02 .secContainer .ttlBox .ttl h3 {
+  font-size: 28px;
+  line-height: 1.55;
+}
+#top .sec02 .secContainer .ttlBox .sub {
+  margin-top: 8px;
+  color: #4266a0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+#top .sec02 .secContainer .secBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#top .sec02 .secContainer .photo {
+  overflow: hidden;
+  position: relative;
+  width: 45%;
+}
+#top .sec02 .secContainer .photo::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #455992;
+  transition: transform 1s cubic-bezier(0.77, 0, 0.18, 1);
+}
+#top .sec02 .secContainer .photo.is-show::before {
+  transform: translateX(101%);
+}
+#top .sec02 .secContainer .photo img {
+  display: block;
+}
+#top .sec02 .secContainer .txtBox {
+  width: 47%;
+}
+#top .sec02 .secContainer .txtBox h4 {
+  margin-bottom: 30px;
+  font-size: 26px;
+  line-height: 1.7;
+}
+#top .sec02 .secContainer .txtBox .txt {
+  font-size: 14px;
+  line-height: 2.5;
+}
+#top .sec02 .secContainer .txtBox .more {
+  margin-top: 25px;
+}
+#top .sec02 .secContainer .txtBox .more a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 6px 20px;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 1.5;
+  background: #4266a0;
+}
+#top .sec02 .secContainer .txtBox .more a::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  margin-left: 8px;
+  background: url("../image/common/icon_target_white.png") no-repeat center/contain;
+}
+#top .sec02 .secContainer .txtBox ul {
+  border-top: 1px solid #4b4b4b;
+}
+#top .sec02 .secContainer .txtBox ul li {
+  padding: 17px 15px;
+  border-bottom: 1px solid #4b4b4b;
+  line-height: 1.5;
+}
+#top .sec03 {
+  padding: 120px 0;
+}
+#top .sec03 .btnClinic {
+  max-width: 330px;
+  margin: 0 auto;
+}
+#top .sec03 .btnClinic a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #4b4b4b;
+}
+#top .sec03 .btnClinic a img {
+  display: inline-block;
+  width: 80%;
+  max-width: 220px;
+}
+#top .sec04 {
+  padding: 120px 0;
+  background: #f8f7f5;
+}
+#top .sec04 .secContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+#top .sec04 .secContainer .txtPanel {
+  width: 47%;
+}
+#top .sec04 .secContainer .infoBox dl {
+  display: flex;
+  gap: 2px;
+}
+#top .sec04 .secContainer .infoBox dt {
+  display: flex;
+  flex-shrink: 0;
+  width: 135px;
+  padding: 20px;
+  color: #455992;
+  border-bottom: 1px solid #455992;
+}
+#top .sec04 .secContainer .infoBox dd {
+  flex: 1;
+  padding: 20px;
+  line-height: 1.8;
+  border-bottom: 1px solid #4b4b4b;
+}
+#top .sec04 .secContainer .mapPanel {
+  width: 48%;
+}
+#top .sec04 .secContainer .mapBox {
+  padding-bottom: 40%;
+}
+
+/*////////////////////////////////////////////////////////////
+	contact
+///////////////////////////////////////////////////////////*/
+#contact .contactSection {
+  padding: 60px 0 120px;
+}
+#contact .contactSection .topTxt {
+  margin: 0 0 40px;
+  text-align: center;
+}
+#contact .contactSection .contactForm {
+  border-top: 1px solid #4b4b4b;
+}
+#contact .contactSection .contactForm .formErrorSummary {
+  margin: 0 0 20px;
+  padding: 12px 15px;
+  color: #e70000;
+  border: 1px solid #e70000;
+  background: #fff5f5;
+}
+#contact .contactSection .contactForm .formRow {
+  display: flex;
+  border-bottom: 1px solid #4b4b4b;
+}
+#contact .contactSection .contactForm .formLabel {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  width: 275px;
+  padding: 12px 18px;
+  font-size: 16px;
+}
+#contact .contactSection .contactForm .formLabel .required {
+  margin-left: 20px;
+  padding: 3px 7px;
+  color: #ffffff;
+  font-size: 13px;
+  background: #e70000;
+}
+#contact .contactSection .contactForm .formInput {
+  flex: 1;
+  padding: 5px 0 5px 5px;
+}
+#contact .contactSection .contactForm .formInput .errorText {
+  margin-top: 5px;
+  color: #e70000;
+  font-size: 13px;
+  line-height: 1.5;
+}
+#contact .contactSection .contactForm .formInput .is-error {
+  border-color: #e70000;
+  background: #fff5f5;
+}
+#contact .contactSection .contactForm .formRowTextarea .formLabel {
+  align-items: flex-start;
+  padding-top: 20px;
+  padding-right: 80px;
+}
+#contact .contactSection .contactForm .formSubmit {
+  padding-top: 30px;
+  text-align: center;
+}
+#contact .contactSection .contactForm .formSubmit button {
+  min-width: 180px;
+  padding: 10px 25px;
+  color: #ffffff;
+  font: inherit;
+  border: 0;
+  border-radius: 0;
+  background: #455992;
+  cursor: pointer;
+  transition: opacity 0.6s;
+}
+#contact .contactSection .contactForm .formSubmit button:hover {
+  opacity: 0.6;
+}
+#contact .contactSection .contactComplete {
+  display: flex;
+  visibility: hidden;
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+#contact .contactSection .contactComplete.is-show {
+  visibility: visible;
+  opacity: 1;
+}
+#contact .contactSection .contactComplete .completePanel {
+  width: 100%;
+  max-width: 420px;
+  padding: 50px 30px 35px;
+  text-align: center;
+  font-size: 20px;
+  background: #ffffff;
+}
+#contact .contactSection .contactComplete .completeClose {
+  min-width: 130px;
+  margin-top: 30px;
+  padding: 9px 20px;
+  color: #ffffff;
+  font: inherit;
+  font-size: 15px;
+  border: 0;
+  background: #455992;
+  cursor: pointer;
+}
+
+/*===================================================
+	フォーム
+===================================================*/
+.formBox {
+  /*テキストエリア*/
+}
+.formBox input[type=text],
+.formBox input[type=email],
+.formBox input[type=tel] {
+  width: 100%;
+  height: 50px;
+  padding: 0 20px;
+  font-size: 16px;
+  border-radius: 0;
+  border: 1px solid #4b4b4b;
+  background: #f8f7f5;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.formBox textarea {
+  width: 100%;
+  height: 200px;
+  padding: 20px;
+  font-size: 16px;
+  line-height: 1.3;
+  border-radius: 0;
+  border: 1px solid #4b4b4b;
+  background: #f8f7f5;
+  resize: none;
+}
+.formBox input[type=text]:focus,
+.formBox input[type=email]:focus,
+.formBox input[type=tel]:focus,
+.formBox textarea:focus {
+  outline: 0;
+}

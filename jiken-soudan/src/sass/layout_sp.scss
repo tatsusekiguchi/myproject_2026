@@ -1,0 +1,820 @@
+@charset "UTF-8";
+@import "./mixin";
+@import "./mod";
+/* CSS Document */
+
+/*===================================================
+	画面用CSS（PC/SMP）
+===================================================*/
+
+/*////////////////////////////////////////////////////////////
+	TOP
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .topMain {
+    .topKv {
+      align-items: flex-end;
+      min-height: 350px;
+      padding: 0 0 50px;
+      background-position: 62% center;
+
+      h1 {
+        font-size: 22px;
+      }
+
+      .txt {
+        font-size: 13px;
+
+        br {
+          display: none;
+        }
+      }
+    }
+    .sec01,
+    .sec02,
+    .sec03,
+    .sec04,
+    .sec05 {
+      padding: 62px 0;
+    }
+    .secTtlBox {
+      margin-bottom: 34px;
+      .secTtl {
+        font-size: 20px;
+      }
+    }
+    .sec01 {
+      .troubleList {
+        .ul {
+          grid-template-columns: 1fr;
+          gap: 9px;
+          .li {
+            min-height: 72px;
+            font-size: 13px;
+          }
+        }
+      }
+      .lead {
+        margin-top: 38px;
+        .ttl {
+          p {
+            font-size: 15px;
+          }
+        }
+      }
+      .supportPanel {
+        position: relative;
+        max-width: 660px;
+        margin: 0 auto;
+        padding: 5px;
+        background: #e4efee;
+        &::before {
+          content: "";
+          position: absolute;
+          left: -6px;
+          bottom: -6px;
+          width: 100px;
+          height: 60px;
+          background: url(https://jiken-soudan.com/system_panel/uploads/images/top_sec01_support_flower.png)
+            no-repeat;
+          background-size: 100% auto;
+        }
+        .inner {
+          display: block;
+          max-width: 100%;
+          padding: 30px 10px;
+          border: 1px solid #9bd4d3;
+        }
+        .txt {
+          font-size: 14px;
+          text-align: center;
+        }
+        .circle {
+          width: 100px;
+          margin: 20px auto 0;
+        }
+      }
+      .note {
+        margin: 40px 0;
+      }
+    }
+    .sec02 {
+      .secContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      .leftBox {
+        order: 2;
+        .ttlBox {
+          p {
+            font-size: 20px;
+          }
+        }
+      }
+
+      .rightBox {
+        order: 1;
+        width: 78%;
+        max-width: 300px;
+        margin: 0 auto;
+      }
+
+      .tagList {
+        .ul {
+          gap: 6px;
+        }
+
+        .li {
+          width: 78px;
+          height: 78px;
+          font-size: 12px;
+        }
+      }
+    }
+    .sec03 {
+      .blogPanel {
+        .webgene-blog {
+          .webgene-item {
+            + .webgene-item {
+              margin: 15px 0 0;
+            }
+            a {
+              padding: 20px 50px 20px 20px;
+              background: url(https://jiken-soudan.com/system_panel/uploads/images/blog_list_arrow.png)
+                right 15px center no-repeat #f5f5f5;
+              background-size: 25px auto;
+            }
+          }
+        }
+      }
+    }
+    .sec04 {
+      .guideList {
+        .ul {
+          .li {
+            padding: 20px;
+            &.list01 {
+              &:before {
+                right: -100px;
+                bottom: 20px;
+                width: 265px;
+                height: 159px;
+              }
+            }
+            &.list02 {
+              &:before {
+                right: -20px;
+                bottom: 20px;
+                width: 156px;
+                height: 175px;
+              }
+            }
+            + .li {
+              margin: 30px 0 0;
+            }
+          }
+          .ttl {
+            margin: 0 0 15px;
+            font-size: 20px;
+          }
+          .more {
+            margin: 25px 0 0;
+          }
+        }
+      }
+    }
+    .sec05 {
+      .secContainer {
+        display: block;
+        > * {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	about
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .aboutMain {
+    .aboutSection {
+      padding: 65px 0 72px;
+    }
+    .sec01 {
+      .messageTop,
+      .messageBottom {
+        gap: 35px;
+      }
+      .messageTop .messageBox h3 {
+        font-size: 20px;
+      }
+    }
+    .sec02 {
+      .profileContainer {
+        gap: 45px;
+      }
+      .profilePhoto {
+        width: 280px;
+      }
+      .career .dl {
+        font-size: 13px;
+        .dt {
+          width: 90px;
+        }
+      }
+    }
+    .sec03 {
+      .philosophyContainer {
+        gap: 45px;
+      }
+      .symbol {
+        width: 220px;
+      }
+      .symbol img {
+        width: 175px;
+      }
+    }
+    .sec04 {
+      .officeContainer {
+        gap: 40px;
+      }
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .aboutMain {
+    .aboutSection {
+      padding: 55px 0 62px;
+    }
+    .sec01 {
+      .messageTop,
+      .messageBottom {
+        display: flex;
+        flex-direction: column;
+      }
+      .messageTop {
+        .photo {
+          width: 100%;
+        }
+        .messageBox h3 {
+          font-size: 19px;
+        }
+      }
+      .messageBottom {
+        margin: 42px 0 0;
+        .chart {
+          width: 100%;
+          margin: 0 auto;
+        }
+      }
+    }
+    .sec02 {
+      .profileContainer {
+        display: flex;
+        flex-direction: column;
+      }
+      .profilePhoto {
+        order: -1;
+        width: 72%;
+        max-width: 300px;
+        margin: 0 auto;
+      }
+      .career .dl {
+        padding-left: 34px;
+        line-height: 1.7;
+        .dt {
+          width: 78px;
+        }
+      }
+    }
+    .sec03 {
+      .philosophyContainer {
+        display: flex;
+        flex-direction: column;
+      }
+      .philosophyText h3 {
+        font-size: 20px;
+      }
+    }
+    .sec04 {
+      .officeContainer {
+        display: flex;
+        flex-direction: column;
+      }
+      .officePhoto {
+        order: -1;
+        width: 78%;
+        margin: 0 auto;
+      }
+      .infoTable {
+        .dl {
+          .dt {
+            width: 80px;
+          }
+        }
+        .dt,
+        .dd {
+          padding: 10px 7px;
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	service
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .serviceMain {
+    .serviceSection {
+      padding: 60px 0;
+    }
+    .sec01 {
+      .serviceIntro {
+        gap: 35px;
+        .introText h3 {
+          font-size: 21px;
+        }
+      }
+      .serviceProcess {
+        margin-top: 55px;
+        > h3 {
+          font-size: 20px;
+        }
+      }
+    }
+    .sec02 {
+      .casePanel .li {
+        .dt {
+          padding: 24px;
+          h3 {
+            font-size: 19px;
+          }
+          .mark {
+            top: 24px;
+            right: 24px;
+          }
+        }
+        .txt {
+          margin: 0 24px;
+          padding-bottom: 24px;
+        }
+      }
+    }
+    .sec03 {
+      .strengthList .li {
+        padding: 28px;
+        h3 {
+          font-size: 20px;
+        }
+      }
+    }
+    .sec04 {
+      .flowList .li {
+        .flowTtl {
+          width: 240px;
+          h3 {
+            font-size: 19px;
+          }
+        }
+      }
+    }
+    .sec05 {
+      .priceTable .dl .dt h3 {
+        font-size: 16px;
+      }
+    }
+    .secBnr {
+      padding: 55px 0 65px;
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .serviceMain {
+    .serviceSection {
+      padding: 55px 0;
+    }
+    .sec01 {
+      .serviceIntro {
+        flex-direction: column;
+        .photo {
+          width: 100%;
+        }
+      }
+    }
+    .sec02 {
+      .casePanel {
+        .ul {
+          flex-direction: column;
+        }
+        .li {
+          width: 100%;
+          min-height: 0;
+          .dl {
+            .dt {
+              padding: 20px;
+              h3 {
+                padding: 0 30px 0 0;
+                font-size: 16px;
+              }
+              .mark {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+              }
+            }
+            .txt {
+              margin: 0 20px;
+              padding: 0 0 25px;
+            }
+          }
+        }
+      }
+    }
+    .sec03 {
+      .strengthList {
+        .ul {
+          flex-direction: column;
+        }
+        .li {
+          width: 100%;
+          min-height: 0;
+          .number {
+            left: 10px;
+            bottom: 10px;
+            font-size: 70px;
+          }
+          .ttl {
+            p {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+    .sec04 {
+      .flowList .li {
+        flex-wrap: wrap;
+        padding: 15px 15px;
+        .step {
+          width: 58px;
+        }
+        .flowTtl {
+          width: calc(100% - 58px);
+          padding-right: 0;
+        }
+        > .txt {
+          width: 100%;
+          flex: auto;
+          margin: 10px 0 0 15px;
+          .investigationList {
+            .ul {
+              gap: 6px;
+            }
+            .liItem {
+              padding: 2px 10px;
+            }
+          }
+        }
+      }
+    }
+    .sec05 {
+      .priceTable .dl {
+        flex-direction: column;
+        .dt {
+          width: 100%;
+        }
+      }
+    }
+    .secBnr {
+      padding: 45px 0 55px;
+      .supportPanel {
+        position: relative;
+        max-width: 660px;
+        margin: 0 auto;
+        padding: 5px;
+        background: #e4efee;
+        &::before {
+          content: "";
+          position: absolute;
+          left: -6px;
+          bottom: -6px;
+          width: 100px;
+          height: 60px;
+          background: url(https://jiken-soudan.com/system_panel/uploads/images/top_sec01_support_flower.png)
+            no-repeat;
+          background-size: 100% auto;
+        }
+        .inner {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 20px 20px 30px;
+          border: 1px solid #9bd4d3;
+        }
+        .txt {
+          max-width: 100%;
+          width: calc(100% - 90px);
+          margin: 0;
+          font-size: 14px;
+        }
+        .photo {
+          position: absolute;
+          right: 10px;
+          bottom: 0;
+          width: 100px;
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	case
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .caseMain {
+    .blogSection {
+      padding: 60px 0;
+    }
+    .postContainer {
+      .catePanel {
+        margin: 0 0 30px;
+      }
+      .blogPanel {
+        &--list {
+          .webgene-blog {
+            .webgene-item {
+              + .webgene-item {
+                margin: 15px 0 0;
+              }
+              a {
+                padding: 20px 50px 20px 20px;
+                background: url(https://jiken-soudan.com/system_panel/uploads/images/blog_list_arrow.png)
+                  right 15px center no-repeat #f5f5f5;
+                background-size: 25px auto;
+              }
+            }
+          }
+          .webgene-pagination {
+            margin: 60px auto 0;
+          }
+        }
+        &--detail {
+          .webgene-blog {
+            .ttlBox {
+              font-size: 20px;
+            }
+            .slickSlide {
+              margin: 0 0 40px;
+              .slider {
+                .li {
+                  > div {
+                    padding: 0 0 70%;
+                  }
+                }
+              }
+            }
+            .thumb-item {
+              &.slider {
+                .li {
+                  > div {
+                    overflow: hidden;
+                    position: relative;
+                    padding: 0 0 100%;
+                  }
+                  img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                  }
+                }
+              }
+            }
+            .slick-prev {
+              left: -20px;
+            }
+            .slick-next {
+              right: -20px;
+            }
+            .postBox {
+              h2,
+              h3,
+              h4,
+              h5 {
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .btnMore {
+      margin: 40px auto 0;
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	form
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .formMain {
+    .contactForm {
+      .form {
+        .checkList {
+          .ul {
+            padding: 0;
+          }
+        }
+      }
+      .formBox {
+        + .formBox {
+          margin-top: 40px;
+        }
+
+        > .dl {
+          &::before {
+            display: none;
+          }
+          &.top {
+            display: none;
+          }
+          > .dt {
+            display: block;
+            margin: 0;
+
+            .span {
+              width: auto;
+              min-width: 0;
+              margin-right: 10px;
+              padding: 0;
+              font-size: 16px;
+              text-align: left;
+
+              br {
+                display: none;
+              }
+            }
+
+            .em {
+              font-size: 12px;
+              vertical-align: middle;
+            }
+
+            .aside {
+              margin-top: 5px;
+
+              p {
+                font-size: 12px;
+
+                br {
+                  display: none;
+                }
+              }
+            }
+          }
+
+          > .dd {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border-bottom: none;
+          }
+        }
+        .radioBox {
+          padding: 0;
+        }
+        .radioList01 {
+          .list {
+            display: block;
+            margin: 0;
+            + .list {
+              margin: 20px 0 0;
+            }
+          }
+        }
+
+        .checkList01 {
+          .ul {
+            .li {
+              display: block;
+              + .li {
+                margin: 10px 0 0;
+              }
+            }
+          }
+          .checkItem {
+            display: inline-block;
+            padding: 0 5px 0 0;
+            + input {
+              display: inline-block;
+              width: 150px;
+            }
+          }
+        }
+
+        .addressBox,
+        .dateBox {
+          .dl {
+            display: block;
+
+            .dt {
+              display: block;
+              width: 100%;
+            }
+
+            .dd {
+              display: block;
+            }
+          }
+        }
+
+        .datePanel {
+          display: block;
+          font-size: 14px;
+          + .datePanel {
+            margin: 20px 0 0;
+          }
+          > * {
+            padding: 0 0 5px;
+          }
+          input {
+            width: 60px;
+          }
+          .selectBox {
+            width: 60px;
+          }
+          .dateTtl {
+            margin: 0 10px 0 0;
+          }
+          .dateTxt {
+            margin: 0 5px;
+          }
+        }
+
+        .dateBox {
+          input[type="text"] {
+            width: 70px;
+          }
+
+          .radioList {
+            display: block;
+            margin: 10px 0 0;
+          }
+        }
+
+        .selectBox {
+          width: 180px;
+        }
+
+        .privacy {
+          .agreeBox {
+            height: 250px;
+            padding: 20px 10px;
+          }
+        }
+      }
+      .fileUploadBox {
+        display: block;
+        .fileBox {
+          display: block;
+          width: 100%;
+        }
+        .place {
+          margin: 0 0 5px;
+        }
+        .fileArea {
+          display: block;
+          width: 100%;
+          .inputFile {
+            width: 200px;
+          }
+          > p,
+          .fileTxt {
+            width: 100%;
+            margin: 10px 0 0;
+          }
+        }
+      }
+      .fileUploadTitleBox {
+        margin: 40px 0 20px;
+        .fileUploadTitle {
+          p {
+            padding: 0 15px 0 0;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}

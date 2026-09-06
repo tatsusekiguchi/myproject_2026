@@ -1,0 +1,368 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+	共通CSS（SMP）
+===================================================*/
+/* --------------------------------------------------
+	base
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  body {
+    min-width: 0;
+    font-size: 14px;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  /*改行*/
+  .pcBreak {
+    display: none;
+  }
+
+  .spBreak {
+    display: block;
+  }
+
+  /*spのみ表示*/
+  .pcHidden {
+    display: block;
+  }
+
+  .spHidden {
+    display: none;
+  }
+
+  #sideBtn {
+    display: none;
+  }
+
+  .topicPath {
+    display: none;
+  }
+}
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: #f2f2f2;
+  }
+  .header .headTop {
+    height: 45px;
+    padding: 0 20px;
+    color: #ffffff;
+    background: #202121;
+  }
+  .header .headTop a {
+    color: #ffffff;
+  }
+  .header .headTop .logoBox .logo {
+    position: relative;
+    top: -4px;
+    left: -22px;
+    width: 220px;
+  }
+  .header .headTop .logoBox .logo a {
+    display: block;
+    color: #ffffff;
+  }
+  .header .headTop .logoBox .headTtl {
+    display: none;
+  }
+  .header .headTop .headItem {
+    display: none;
+  }
+  .header .hamburger {
+    cursor: pointer;
+    display: block;
+    position: fixed;
+    top: 4px;
+    right: 10px;
+    width: 50px;
+    height: 40px;
+    z-index: 10000;
+  }
+  .header .hamburger .span {
+    background: #ffffff;
+    position: absolute;
+    left: 50%;
+    width: 30px;
+    height: 1px;
+    transform: translateX(-50%);
+    transition: 0.4s;
+  }
+  .header .hamburger .span:nth-of-type(1) {
+    top: 10px;
+  }
+  .header .hamburger .span:nth-of-type(2) {
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .header .hamburger .span:nth-of-type(3) {
+    bottom: 10px;
+  }
+  .header .hamburger.is-open .span {
+    background: #ffffff;
+  }
+  .header .hamburger.is-open .span:nth-of-type(1) {
+    transform: translate(-50%, 9px) rotate(-45deg);
+  }
+  .header .hamburger.is-open .span:nth-of-type(2) {
+    opacity: 0;
+  }
+  .header .hamburger.is-open .span:nth-of-type(3) {
+    transform: translate(-50%, -9px) rotate(45deg);
+  }
+
+  .sideNav {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+  }
+  .sideNav .ul {
+    display: flex;
+  }
+  .sideNav .ul .li {
+    width: 50%;
+  }
+  .sideNav .ul .li a {
+    display: block;
+    font-size: 16px;
+    color: #ffffff;
+  }
+  .sideNav .ul .li a > div {
+    padding: 10px;
+    text-align: center;
+  }
+  .sideNav .ul .li a p {
+    display: inline-block;
+  }
+  .sideNav .ul .case a {
+    background: #e50011;
+  }
+  .sideNav .ul .case a p {
+    padding: 0 0 0 25px;
+    background: url(https://sit-4011322.sibloo.com/system_panel/uploads/images/side_icon_case.png) left center no-repeat;
+    background-size: 18px auto;
+  }
+  .sideNav .ul .instagram a {
+    background: #9f9fa0;
+  }
+  .sideNav .ul .instagram a p {
+    padding: 0 0 0 25px;
+    background: url(https://sit-4011322.sibloo.com/system_panel/uploads/images/side_icon_instagram.png) left center no-repeat;
+    background-size: 18px auto;
+  }
+}
+/* --------------------------------------------------
+	nav
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .navBox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    padding: 50px 0 60px;
+    color: #ffffff;
+    z-index: 999;
+    background: #000000;
+    transition: 0.6s;
+  }
+  .navBox a {
+    color: #ffffff;
+  }
+  .navBox .navList {
+    border-top: 1px solid #34363d;
+    border-bottom: 1px solid #34363d;
+  }
+  .navBox .navList .ul .li {
+    padding: 10px 20px;
+  }
+  .navBox .navList .ul .li + .li {
+    border-top: 1px solid #34363d;
+  }
+  .navBox .navList .ul .li a {
+    display: block;
+    color: #ffffff;
+  }
+  .navBox .navItem {
+    margin: 20px 0 0;
+  }
+  .navBox .navItem .telBox {
+    text-align: center;
+  }
+  .navBox .navItem .telBox a {
+    display: inline-block;
+  }
+  .navBox .navItem .telBox .telNum {
+    padding: 0 0 0 20px;
+    font-size: 18px;
+    background: url(https://sit-4011322.sibloo.com/system_panel/uploads/images/header_tel.png) left center no-repeat;
+    background-size: 15px auto;
+  }
+  .navBox .navItem .telBox .telTime {
+    font-size: 12px;
+  }
+  .navBox .navItem .mailBox {
+    width: 170px;
+    margin: 10px auto 0;
+  }
+  .navBox .navItem .mailBox a {
+    display: block;
+    padding: 5px 15px;
+    font-size: 12px;
+    text-align: center;
+    border: 1px solid #ffffff;
+  }
+  .navBox .navItem .mailBox a p {
+    padding: 0 0 0 18px;
+    background: url(https://sit-4011322.sibloo.com/system_panel/uploads/images/header_mail.png) left center no-repeat;
+    background-size: 12px auto;
+  }
+}
+/* --------------------------------------------------
+	main
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .main {
+    margin: 45px 0 0;
+  }
+
+  .pageTitleContainer {
+    margin: 0 0 60px;
+    padding: 30px 20px 50px;
+  }
+  .pageTitleContainer::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -25px;
+    width: 100%;
+    height: 50px;
+    background: url(https://sit-4011322.sibloo.com/system_panel/uploads/images/page_title_bg.png) no-repeat;
+    background-size: cover;
+  }
+  .pageTitleContainer .pageTitleBox p {
+    font-size: 30px;
+  }
+
+  .pageSecTtlBox .sub p {
+    font-size: 24px;
+  }
+  .pageSecTtlBox .pageSecTtl {
+    font-size: 12px;
+  }
+
+  .mapBox {
+    padding: 0 0 70%;
+  }
+}
+/* --------------------------------------------------
+	footer
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .footer .footContact {
+    padding: 40px 0;
+  }
+  .footer .footContact::before {
+    content: "";
+    position: absolute;
+    top: -60px;
+    left: 20px;
+    width: 300px;
+    height: 325px;
+  }
+  .footer .footContact .ttlBox01 {
+    max-width: 280px;
+    margin: 0 auto 30px;
+    font-size: 18px;
+  }
+  .footer .footContact .ttlBox02 {
+    margin: 0 0 20px;
+  }
+  .footer .footContact .ttlBox02 h2 {
+    font-size: 24px;
+  }
+  .footer .footContact .topTxt {
+    margin: 0 0 20px;
+  }
+  .footer .footContact .contactPanel {
+    padding: 20px;
+  }
+  .footer .footContact .contactPanel .stepBox {
+    position: relative;
+    max-width: 240px;
+    margin: 0 auto 20px;
+  }
+  .footer .footContact .contactPanel .stepBox:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 4px;
+    height: 100%;
+    margin: 0 auto;
+    z-index: 0;
+    background: #e50011;
+  }
+  .footer .footContact .contactPanel .stepBox .step {
+    position: relative;
+    max-width: 240px;
+  }
+  .footer .footContact .contactPanel .stepBox .step + .step {
+    margin: 30px 0 0;
+  }
+  .footer .footContact .contactPanel .contactItem {
+    display: block;
+  }
+  .footer .footContact .contactPanel .contactItem .telBox {
+    margin: 0 0 20px;
+  }
+  .footer .footContact .contactPanel .contactItem .mailBox {
+    margin: 0 auto;
+  }
+  .footer .footPanel {
+    padding: 40px 0 80px;
+  }
+  .footer .footPanel .logo {
+    max-width: 300px;
+    margin: 0 auto 30px;
+  }
+  .footer .footPanel .footNavBox {
+    display: none;
+  }
+  .footer .footPanel .footBottom {
+    padding: 20px 0 0;
+    border-top: 1px solid #232323;
+  }
+  .footer .footPanel .footBottom .snsPanel .dl {
+    margin: 0 auto;
+  }
+  .footer .footPanel .footBottom .snsPanel .dl .dd {
+    display: flex;
+    gap: 10px;
+  }
+  .footer .footPanel .footBottom .snsPanel .dl .dd .sns {
+    width: 20px;
+  }
+  .footer .footPanel .footBottom .snsPanel .dl .dd .sns a {
+    display: block;
+  }
+  .footer .footPanel .copy {
+    margin: 40px 0 0;
+    text-align: center;
+  }
+}

@@ -1,0 +1,188 @@
+// ▽メイン▽
+main.main#contact
+    .pageKvContainer
+        .pageKv
+            .kvTitle
+                h1 お問い合わせ
+    .topSection
+        .secWrap01
+            .secTtl
+                h2 お問い合わせの前に、よくあるご質問をご覧ください。
+            .txt
+                p お申込みやサービスについてなどよくあるご質問をご用意しています。<br>より簡単に早く問題解決となる場合もありますので、ぜひご活用ください。
+            .faqBox
+                .faqBtn
+                    a(href="")
+                        span よくあるご質問
+    .sec01
+        .secWrap01
+            .pageSecTtlBox
+                h2 メールでお問い合わせ
+                p MAIL
+            .topTxt.txt
+                p お問い合わせいただきました内容につきましては、２～３営業日を目安にメールまたはお電話にてご連絡いたします。<br>※本フォームは、旅行に関するお問い合わせ専用です。<br>お客様への対応品質維持のため、営業・ご提案に関するご連絡はお控えいただけますと幸いです。
+            .contactContainer
+                .formBox
+                    form
+                        dl
+                            dt
+                                span お問い合わせ種別
+                                em
+                                    span 必須
+                            dd
+                                .radioList
+                                    <span class="wpcf7-form-control wpcf7-radio">
+                                        <span class="wpcf7-list-item first">
+                                            <label>
+                                            <input type="radio" name="your-field-name" value="法人様からのご相談" />
+                                            <span class="wpcf7-list-item-label">法人様からのご相談</span>
+                                            </label>
+                                        </span>
+                                        <span class="wpcf7-list-item">
+                                            <label>
+                                            <input type="radio" name="your-field-name" value="学校・教育関係様からのご相談" />
+                                            <span class="wpcf7-list-item-label">学校・教育関係様からのご相談</span>
+                                            </label>
+                                        </span>
+                                        <span class="wpcf7-list-item">
+                                            <label>
+                                            <input type="radio" name="your-field-name" value="個人のお客様からのご相談" />
+                                            <span class="wpcf7-list-item-label">個人のお客様からのご相談</span>
+                                            </label>
+                                        </span>
+                                        <span class="wpcf7-list-item last">
+                                            <label>
+                                            <input type="radio" name="your-field-name" value="旅行会社様からのご相談" />
+                                            <span class="wpcf7-list-item-label">旅行会社様からのご相談</span>
+                                            </label>
+                                        </span>
+                                        <span class="wpcf7-list-item last">
+                                            <label>
+                                            <input type="radio" name="your-field-name" value="その他" />
+                                            <span class="wpcf7-list-item-label">その他</span>
+                                            </label>
+                                        </span>
+                                    </span>
+                        dl.noRequire
+                            dt
+                                span 法人名
+                            dd
+                                .inputBox
+                                    <span class="wpcf7-form-control-wrap" data-name=""><input type="text" name="" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required length-l text" aria-required="true" aria-invalid="false" placeholder="例）株式会社アクト・ユートラベル"></span>
+                        dl
+                            dt
+                                span お名前
+                                em
+                                    span 必須
+                            dd
+                                .inputBox
+                                    <span class="wpcf7-form-control-wrap" data-name=""><input type="text" name="" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required length-l text" aria-required="true" aria-invalid="false" placeholder="例）山田　太郎"></span>
+                        dl
+                            dt
+                                span 住所
+                                em
+                                    span 必須
+                            dd
+                                .inputBox
+                                    <span class="wpcf7-form-control-wrap" data-name=""><input type="text" name="" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required length-l text" aria-required="true" aria-invalid="false" placeholder="住所を入力してください"></span>
+                        dl
+                            dt
+                                span 電話番号
+                                em
+                                    span 必須
+                            dd
+                                .inputBox
+                                    <span class="wpcf7-form-control-wrap" data-name=""><input type="text" name="" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required length-l text" aria-required="true" aria-invalid="false" placeholder="例）0120-123-456"></span>
+                        dl
+                            dt
+                                span メールアドレス
+                                em
+                                    span 必須
+                            dd
+                                .inputBox
+                                    <span class="wpcf7-form-control-wrap" data-name=""><input type="text" name="" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required length-l text" aria-required="true" aria-invalid="false" placeholder="例）info@sample.com"></span>
+                        dl
+                            dt
+                                span メールアドレス確認用
+                                em
+                                    span 必須
+                            dd
+                                .inputBox
+                                    <span class="wpcf7-form-control-wrap" data-name=""><input type="text" name="" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required length-l text" aria-required="true" aria-invalid="false" placeholder="例）info@sample.com"></span>
+                        dl.noRequire
+                            dt
+                                span お問い合わせ内容
+                            dd
+                                .inputBox
+                                    <span class="wpcf7-form-control-wrap" data-name="content"><textarea name="content" cols="60" rows="7" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required length-l text" aria-required="true" aria-invalid="false" placeholder="例）お問い合わせ内容を入力してください"></textarea></span>
+                        .privacy
+                            .agreeBox
+                                .box
+                                    p 【株式会社アクト・ユートラベル】（以下「当方」といいます。）は、当方の提供するサービス（以下「本サービス」といいます。）における、ユーザーについての個人情報を含む利用者情報の取扱いについて、以下のとおりプライバシーポリシー（以下「本ポリシー」といいます。）を定めます。
+                                .box
+                                    p 1.収集する利用者情報及び収集方法<br>本ポリシーにおいて、「利用者情報」とは、ユーザーの識別に係る情報、通信サービス上の行動履歴、その他ユーザーまたはユーザーの端末に関連して生成または蓄積された情報であって、本ポリシーに基づき当方が収集するものを意味するものとします。 本サービスにおいて当方が収集する利用者情報は、その収集方法に応じて、以下のようなものとなります。<br>(1) ユーザーからご提供いただく情報 本サービスを利用するために、または本サービスの利用を通じてユーザーからご提供いただく情報は以下のとおりです。<br>・氏名、生年月日、性別、職業等プロフィールに関する情報<br>・メールアドレス、電話番号、住所等連絡先に関する情報<br>・入力フォームその他当方が定める方法を通じてユーザーが入力または送信する情報<br>(2) ユーザーが本サービスの利用において、他のサービスと連携を許可することにより、当該他のサービスからご提供いただく情報<br>ユーザーが、本サービスを利用するにあたり、ソーシャルネットワーキングサービス等の他のサービスとの連携を許可した場合には、その許可の際にご同意いただいた内容に基づき、以下の情報を当該外部サービスから収集します。<br>・当該外部サービスでユーザーが利用するID<br>・その他当該外部サービスのプライバシー設定によりユーザーが連携先に開示を認めた情報<br>(3) ユーザーが本サービスを利用するにあたって、当方が収集する情報<br>当方は、本サービスへのアクセス状況やそのご利用方法に関する情報を収集することがあります。これには以下の情報が含まれます。<br>・リファラ<br>・IPアドレス<br>・サーバーアクセスログに関する情報<br>・Cookie、ADID、IDFAその他の識別子<br>(4) ユーザーが本サービスを利用するにあたって、当方がユーザーの個別同意に基づいて収集する情報<br>当方は、ユーザーが3-1に定める方法により個別に同意した場合、当方は以下の情報を利用中の端末から収集します。・位置情報
+                                .box
+                                    p 2.利用目的<br>本サービスのサービス提供にかかわる利用者情報の具体的な利用目的は以下のとおりです。<br>(1) 本サービスに関する登録の受付、本人確認、ユーザー認証、ユーザー設定の記録、利用料金の決済計算等本サービスの提供、維持、保護及び改善のため<br>(2) ユーザーのトラフィック測定及び行動測定のため<br>(3) 広告の配信、表示及び効果測定のため<br>(4) 本サービスに関するご案内、お問い合わせ等への対応のため<br>(5) 本サービスに関する当方の規約、ポリシー等（以下「規約等」といいます。）に違反する行為に対する対応のため<br>(6) 本サービスに関する規約等の変更などを通知するため
+                                .box
+                                    p 3.通知・公表または同意取得の方法、利用中止要請の方法<br>3-1 以下の利用者情報については、その収集が行われる前にユーザーの同意を得るものとします。<br>・位置情報<br>3-2 ユーザーは、本サービスの所定の設定を行うことにより、利用者情報の全部または一部についてその収集又は利用の停止を求めることができ、この場合、当方は速やかに、当方の定めるところに従い、その利用を停止します。なお利用者情報の項目によっては、その収集または利用が本サービスの前提となるため、当方所定の方法により本サービスを退会した場合に限り、当方はその収集又は利用を停止します。
+                                .box
+                                    p 4.第三者提供<br>当方は、利用者情報のうち、個人情報については、あらかじめユーザーの同意を得ないで、第三者に提供しません。但し、次に掲げる必要があり第三者に提供する場合はこの限りではありません。<br>(1) 当方が利用目的の達成に必要な範囲内において個人情報の取扱いの全部または一部を委託する場合<br>(2) 合併その他の事由による事業の承継に伴って個人情報が提供される場合<br>(3) 第4項の定めに従って、提携先または情報収集モジュール提供者へ個人情報が提供される場合<br>(4) 国の機関もしくは地方公共団体またはその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合であって、ユーザーの同意を得ることによって当該事務の遂行に支障を及ぼすおそれがある場合<br>(5) その他、個人情報の保護に関する法律（以下「個人情報保護法」といいます。）その他の法令で認められる場合
+                                .box
+                                    p 5.安全管理措置<br>個人情報への不正アクセス、個人情報の漏えい、滅失、又はき損の予防及び是正のため、当方内において規程を整備し安全対策に努めます。以上の目的を達するため、当方は以下の措置を講じています。<br>①　個人情報・個人データの適正な取扱いのため、法令及びガイドライン所定が定める各対応を実施するに当たっての基本方針の策定<br>②　取得・利用・保存・提供・削除・廃棄等の各対応及び責任者と役割を定めた各種規定の策定<br>③　責任者の設置、個人データを取り扱う従業員及び取扱い個人データの範囲の明確化、法及び規程に違反している事実又は兆候を把握した場合の責任者への報告連絡体制の整備、取扱い状況に関する定期点検等の組織的安全管理措置<br>④　個人データについての秘密保持に関する事項を就業規則に記載し、個人データの取扱いに関する留意事項について定期研修を実施する等の人的安全管理措置<br>⑤　従業員の入退出管理、持ち込み機器の制限、個人データを取り扱う機器及び電子媒体・書類の盗難・紛失等を防止するための持ち出し制限・管理等の物理的安全管理措置<br>⑥　個人データを取り扱う情報システムに対する外部からの不正アクセス又は不正ソフトウェアから保護するシステムの導入等の技術的安全管理措置
+                                .box
+                                    p 6.個人情報の開示等<br>当方は、ユーザーご本人または代理人から、個人情報保護法の定めに基づき個人情報の利用目的の通知、開示、内容の訂正、追加又は削除、利用の停止、消去及び第三者への提供停止、第三者提供記録の開示（以下、「開示等」）を求められたときは、ユーザーご本人またはその代理人からのご請求であることを確認の上で、ユーザーまたはその代理人に対し、遅滞なく開示を行います（当該個人情報が存在しないときにはその旨を通知いたします。）。但し、個人情報保護法その他の法令により、当方が開示の義務を負わない場合は、この限りではありません。なお、個人情報の開示につきましては、手数料（1件あたり1,000円）を頂戴しておりますので、あらかじめ御了承ください。
+                                .box
+                                    p 7.お問い合わせ窓口<br>ご意見、ご質問、苦情のお申出その他利用者情報の取扱いに関するお問い合わせは、下記の窓口までお願いいたします。<br>住所：〒460-0003　愛知県名古屋市中区錦３丁目５番２８号　HP大津通ビル２階<br>株式会社アクト・ユートラベル<br>個人情報取扱責任者：大平玲緒奈
+                                    .tel
+                                        p
+                                            | 連絡先：
+                                            a(href="tel:0529514451") 052-951-4451
+                                .box
+                                    p 【2026年7月1日制定】<br>代表者名 大平玲緒奈
+                        .checkItem.agreeCheck
+                            label
+                                input(type="checkbox")
+                                span 個人情報の取り扱いについて同意する
+                        .submitBtn
+                            input(type="submit" value="送信する" class="wpcf7-form-control has-spinner wpcf7-submit")
+    .sec02
+        .secWrap01
+            .pageSecTtlBox
+                h2 電話でお問い合わせ
+                p TEL
+            .topTxt.txt
+                p
+                    em 受付時間 ９:３０～１８:００
+                p ※本問い合わせ先は、旅行に関するお問い合わせ専用です。<br>お客様への対応品質維持のため、営業・ご提案に関するご連絡はお控えいただけますと幸いです。
+            .secBox
+                .itemBox
+                    dl
+                        dt 個人・法人のお客様
+                        dd
+                            .telBox
+                                .tel01
+                                    a(href="tel:0529613369")
+                                        | 052-961-3369
+                                .tel02
+                                    p 受付時間 ９:３０～１８:００
+                .itemBox
+                    dl
+                        dt 学校・教育関連のお客様
+                        dd
+                            .telBox
+                                .tel01
+                                    a(href="tel:0529515510")
+                                        | 052-951-5510
+                                .tel02
+                                    p 受付時間 ９:３０～１８:００
+                .itemBox
+                    dl
+                        dt 旅行会社のお客様
+                        dd
+                            .telBox
+                                .tel01
+                                    a(href="tel:0529613360")
+                                        | 052-961-3360
+                                .tel02
+                                    p 受付時間 ９:３０～１８:００
+// △メイン△

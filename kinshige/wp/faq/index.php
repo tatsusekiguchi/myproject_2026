@@ -1,0 +1,114 @@
+<?php
+/*
+Template Name: よくあるご質問
+*/
+?>
+<?php get_header(); ?>
+	<main class="main" id="faq">
+		<div class="pageKvContainer">
+			<div class="pageKvPanel">
+				<div class="kvTtl">
+					<h1>よくあるご質問</h1>
+				</div>
+			</div>
+		</div>
+		<div class="topSection">
+			<div class="secWrap01">
+				<div class="txt">
+					<p>ご注文に関しまして、よく頂戴するご質問内容をまとめましたので、<br>ご一読いただけますと幸いです。<br>こちらに記載のないご質問に関してはお電話にてお気軽にお問い合わせください。</p>
+				</div>
+				<div class="pagingBox">
+					<ul>
+						<li><a href="#sec01">ご注文について</a></li>
+						<li><a href="#sec02">受け取りについて</a></li>
+						<li><a href="#sec03">その他</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="section" id="sec01">
+			<div class="secWrap01">
+				<div class="secTtl">
+					<h2>ご注文について</h2>
+				</div>
+				<div class="secBoxList">
+					<div class="secBox">
+						<dl class="accord">
+							<dt>事前注文はいつまでに連絡すればよいですか？</dt>
+							<dd>火曜日から土曜日まで、店頭にてご用意している日常のお弁当です。<br>昔ながらの仕込みを大切にしながら、毎日でも食べ飽きない味わいを心がけています。ご注文は前日までにお願いいたします。<br>なお、ご予約・人数・お飲み物など、多様な用途にお応えいたしますので、ご希望がございましたら、お気軽にお伝えください。<br>当日の御注文および数の変更は承ることが出来ません、変更は前日までにお願い致します。<br>近隣にお住まいの方やお勤めの方、現場で働く方まで、幅広いお客さまに親しまれています。</dd>
+						</dl>
+					</div>
+					<div class="secBox">
+						<dl class="accord">
+							<dt>注文方法について知りたいです。</dt>
+							<dd>ご注文は、お電話またはFAXにてお願い致します。<br>（お弁当のご注文の際には、FAX注文用紙をご利用ください。）<br>法事・慶事等の仕出しにつきましては、お電話の際にご用途やご希望などをお伺いいたします。<br>土・日・祝日のご希望は混み合う恐れがございますのでお早めのご注文をおすすめ致します。</dd>
+						</dl>
+					</div>
+					<div class="secBox">
+						<dl class="accord">
+							<dt>キャンセル料はかかりますか？</dt>
+							<dd>はい、当日のキャンセルは100%のキャンセル料がかかります。<br>前日までの数量変更は承りますので、前日までにご連絡をお願い致します。</dd>
+						</dl>
+					</div>
+					<div class="secBox">
+						<dl class="accord">
+							<dt>店頭販売は取り置きしてもらえますか？</dt>
+							<dd>はい、９時～１１時までにご連絡いただけましたらお取り置き致します。<br>しかしながら１０時～仕込みなどでお電話がつながりにくい場合がございますので、お早めにご連絡いただけますと幸いです。</dd>
+						</dl>
+					</div>
+					<div class="secBox">
+						<dl class="accord">
+							<dt>お弁当は何個から注文できますか？</dt>
+							<dd>
+								<p>店頭受け取りの場合はお弁当のご注文は１つから承っております。<br>配達をご希望のお客様は、配達の範囲や時間などの猶予を持たせていただく場合があるため、必ず事前にご相談ください。</p>
+								<p>配達料金は以下となります。<br>-----------------------<br>近繁店舗より<br>０～５km以内　無料<br>５～７.５km　５００円<br>７.５～１０ｋｍ　７５０円<br>１０km以上　１０００円<br>-----------------------</p>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section" id="sec02">
+			<div class="secWrap01">
+				<div class="secTtl">
+					<h2>受け取りについて</h2>
+				</div>
+				<div class="secBoxList">
+					<div class="secBox">
+						<dl class="accord">
+							<dt>何時から受け取りできますか？</dt>
+							<dd>午前11時以降のお渡しでお弁当を販売しております。<br>それ以前のお時間をご希望の場合についてはお問い合わせください。</dd>
+						</dl>
+					</div>
+					<div class="secBox">
+						<dl class="accord">
+							<dt>配達もお願いできますか？</dt>
+							<dd>近繁では、主に名駅～伏見～栄～丸の内エリアを中心とする名古屋市内のオフィス、貸会議室等への会議用弁当の配達を承ります。<br>法事・慶事・宴会用の仕出し・お弁当に関しても、名古屋市内各所へお届けをいたいます。</dd>
+						</dl>
+					</div>
+					<div class="secBox">
+						<dl class="accord">
+							<dt>名古屋市外の配達もお願いできますか？</dt>
+							<dd>時期や個数によって近隣市外への配達を承れることもございます。<br>詳しくは一度お問い合わせください。</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section" id="sec03">
+			<div class="secWrap01">
+				<div class="secTtl">
+					<h2>その他</h2>
+				</div>
+				<div class="secBoxList">
+					<div class="secBox">
+						<dl class="accord">
+							<dt>法事で弁当の注文をしたいのですが初めてでどうしたらいいか分かりません。</dt>
+							<dd>法事、慶事などお寺への配達手配から、数、価格感についてもお客様のご状況に応じて柔軟にアドバイス、提案させていただきます。<br>お弁当だけでなく、「安心」もお届けするのが近繁の強みです。</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+<?php get_footer(); ?>

@@ -1,0 +1,506 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap");
+/* CSS Document */
+/*===================================================
+	共通CSS（PC/SMP）
+===================================================*/
+/*////////////////////////////////////////////////////////////
+	共通設定
+///////////////////////////////////////////////////////////*/
+/* --------------------------------------------------
+	base
+-------------------------------------------------- */
+* {
+  box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+  line-height: 1.5;
+  color: #1d1d1d;
+  font-size: 15px;
+  background: #ffffff;
+  transition: 2s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.5;
+}
+
+.txt {
+  line-height: 2.5;
+}
+
+/*リンク */
+a {
+  color: #1d1d1d;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* 画像幅 */
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* clearfix */
+.clearfix::after {
+  content: ".";
+  display: block;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.spBreak {
+  display: none;
+}
+
+@media (min-width: 1025px) {
+  a {
+    transition: 0.6s;
+  }
+
+  a:hover {
+    opacity: 0.6;
+  }
+}
+.fax a {
+  pointer-events: none;
+}
+
+.mincho {
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+
+.futura {
+  font-family: Futura, "Century Gothic", "游ゴシック体", "YuGothic";
+}
+
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  padding: 20px 30px;
+  z-index: 999;
+  border-bottom: 2px solid #bcdff2;
+  background: #ffffff;
+}
+.header .headWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .logoBox {
+  width: 45%;
+  display: flex;
+  gap: 0 20px;
+}
+.header .logoBox .logo {
+  width: 150px;
+}
+.header .logoBox .logo a {
+  display: block;
+}
+.header .logoBox .headTtl {
+  font-size: 13px;
+  line-height: 1.3;
+}
+.header .navBox {
+  width: 54%;
+  font-size: 14px;
+}
+.header .navBox .navList > ul > li {
+  position: relative;
+}
+.header .navBox .navList > ul > li > a,
+.header .navBox .navList > ul > li > p {
+  display: inline-block;
+  padding: 5px 15px 5px 0;
+  font-weight: bold;
+  color: #1874b7;
+  cursor: pointer;
+  background: url("../image/common/nav_arrow_down.png") right center no-repeat;
+}
+.header .navBox .navList > ul > li .subList {
+  display: none;
+}
+@media (min-width: 1025px) {
+  .header .navBox .navList > ul > li .subList {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 400px;
+    margin: 0;
+    background: #ffffff;
+    border: 1px solid #1874b7;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    column-count: 2;
+    column-gap: 0;
+  }
+  .header .navBox .navList > ul > li .subList li {
+    break-inside: avoid;
+  }
+  .header .navBox .navList > ul > li .subList li + li {
+    margin: 5px 0 0;
+  }
+  .header .navBox .navList > ul > li .subList li a {
+    display: block;
+    padding: 7px 20px;
+    color: #333333;
+    transition: 0.3s;
+  }
+  .header .navBox .navList > ul > li .subList li a:hover {
+    color: #1874b7;
+    background: #f0f8ff;
+  }
+  .header .navBox .navList > ul > li:hover .subList {
+    display: block;
+  }
+}
+.header .navBox .navItem ul li a {
+  display: inline-block;
+  padding: 0 0 0 20px;
+}
+.header .navBox .navItem ul .search a {
+  background: url("../image/common/nav_search.png") left center no-repeat;
+}
+.header .navBox .navItem ul .mypage a {
+  background: url("../image/common/nav_mypage.png") left center no-repeat;
+}
+.header .navBox .navItem ul .cart {
+  position: relative;
+}
+.header .navBox .navItem ul .cart a {
+  padding: 0 10px 0 20px;
+  background: url("../image/common/nav_cart.png") left center no-repeat;
+}
+.header .navBox .navItem ul .cart span {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 18px;
+  color: #ffffff;
+  text-align: center;
+  background: #e74c3c;
+  border-radius: 9px;
+}
+.header .hamburger {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .header .logoBox {
+    width: 20%;
+  }
+  .header .logoBox .headTtl {
+    display: none;
+  }
+  .header .navBox {
+    width: 75%;
+  }
+}
+/* --------------------------------------------------
+	nav
+-------------------------------------------------- */
+.navBox {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 10px;
+  max-width: 700px;
+}
+.navBox .navList > ul {
+  display: flex;
+  gap: 0 20px;
+}
+.navBox .navList > ul > li > a,
+.navBox .navList > ul > li > p {
+  padding: 0 15px 0 0;
+  background: url("../image/common/nav_arrow_down.png") right center no-repeat;
+}
+.navBox .navItem ul {
+  display: flex;
+  gap: 0 15px;
+}
+
+/* --------------------------------------------------
+	main
+-------------------------------------------------- */
+.main {
+  overflow: hidden;
+  margin: 75px 0 0;
+}
+
+.pageTitleContainer {
+  padding: 60px 0 0;
+}
+
+.pageSecTtlBox {
+  position: relative;
+  margin: 0 0 60px;
+  padding: 0 0 20px;
+  color: #ef4779;
+  text-align: center;
+}
+.pageSecTtlBox:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 50px;
+  height: 1px;
+  margin: 0 auto;
+  background: #ef4779;
+}
+.pageSecTtlBox .sub {
+  font-family: Futura, "Century Gothic", "游ゴシック体", "YuGothic";
+  font-size: 26px;
+  font-weight: bold;
+}
+.pageSecTtlBox .pageSecTtl {
+  font-size: 22px;
+}
+
+.secWrap {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.secWrap01 {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.secWrap02 {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.mapBox {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding: 0 0 45%;
+}
+.mapBox iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* --------------------------------------------------
+	footer
+-------------------------------------------------- */
+.footer .footContact .secContainer {
+  position: relative;
+}
+.footer .footContact .secContainer .secPanel {
+  position: relative;
+  z-index: 1;
+}
+.footer .footContact .secContainer .secPanel > * {
+  padding: 50px 20px;
+}
+.footer .footContact .secContainer .secPanel dl {
+  text-align: center;
+}
+.footer .footContact .secContainer .secPanel dl dt {
+  margin: 0 0 16px;
+  font-size: 24px;
+}
+.footer .footContact .secContainer .secPanel dl dd {
+  padding: 15px 0;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+}
+.footer .footContact .secContainer .secPanel dl .telBox a {
+  display: inline-block;
+  font-size: 28px;
+}
+.footer .footContact .secContainer .secPanel dl .mailBox {
+  max-width: 260px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+.footer .footContact .secContainer .secPanel dl .mailBox a {
+  display: block;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #da498f;
+  border-radius: 30px;
+  background: #fcd6e3;
+}
+.footer .footContact .secContainer .secPanel dl .mailBox span {
+  display: inline-block;
+  padding: 0 0 0 20px;
+  background: url("../image/common/footer_mail.png") left center no-repeat;
+  background-size: 16px auto;
+}
+@media (min-width: 1025px) {
+  .footer .footContact .secContainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #8dc0eb;
+  }
+  .footer .footContact .secContainer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: #e0acbd;
+  }
+  .footer .footContact .secContainer .secPanel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .footer .footContact .secContainer .secPanel > * {
+    width: 45%;
+  }
+}
+.footer .footPanel {
+  position: relative;
+  padding: 60px 0 20px;
+}
+.footer .footPanel .pagetop {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 50px;
+  cursor: pointer;
+}
+.footer .footPanel .secBox .leftBox .logo {
+  width: 200px;
+  margin: 0 0 20px;
+}
+.footer .footPanel .secBox .leftBox .txt a {
+  display: inline-block;
+}
+.footer .footPanel .secBox .rightBox .footNav ul + ul {
+  margin: 25px 0 0;
+}
+.footer .footPanel .secBox .rightBox .footNav ul li + li {
+  margin: 10px 0 0;
+}
+.footer .footPanel .secBox .rightBox .footNav ul li a {
+  display: inline-block;
+  padding: 0 0 0 10px;
+  background: url("../image/common/footer_nav_arrow.png") left center no-repeat;
+}
+.footer .footPanel .secBox .rightBox .bnrOhp {
+  max-width: 250px;
+}
+.footer .footPanel .secBox .rightBox .bnrOhp a {
+  display: block;
+}
+@media (min-width: 1025px) {
+  .footer .footPanel .secBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer .footPanel .secBox > * {
+    width: 50%;
+  }
+  .footer .footPanel .secBox .rightBox {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer .footPanel .secBox .rightBox .footBox {
+    width: 45%;
+  }
+  .footer .footPanel .secBox .rightBox .bnrOhp {
+    margin: 20px 0 0;
+  }
+}
+.footer .footPanel .copy {
+  margin: 40px 0 0;
+  text-align: right;
+  font-size: 14px;
+}
+
+/* --------------------------------------------------
+	fadeAnimation
+-------------------------------------------------- */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  /* 背景カラー */
+  z-index: 9999;
+  /* 一番手前に */
+  pointer-events: none;
+  /* 他の要素にアクセス可能にするためにポインターイベントは無効に */
+  opacity: 0;
+  /* 初期値では非表示 */
+  -webkit-transition: opacity 0.8s ease;
+  /* アニメーション時間は 0.8秒 */
+  -ms-transition: opacity 0.8s ease;
+  -moz-transition: opacity 0.8s ease;
+  transition: opacity 0.8s ease;
+}
+
+/*body要素に.fadeoutセレクタがある場合には、レイヤーが表示されるようにopacityを１に設定します。*/
+body.fadeout::after {
+  opacity: 1;
+}
+
+/*お好みで、.fadeoutセレクタ以下の他の要素にもアニメーション用のCSSを定義します*/
+/*DEMOではページ遷移時にarticle要素のスケールもアニメーションさせています*/
+body.fadeout article {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}

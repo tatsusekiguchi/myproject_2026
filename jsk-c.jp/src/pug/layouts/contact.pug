@@ -1,0 +1,406 @@
+// ▽メイン▽
+main#contact.main.pageMain
+    .pageTitlePanel
+        h1 お問い合わせ
+        p Contact
+    .contactSection
+        .secWrap01
+            .topTxt.txt
+                p まだ何も決まっていなくても大丈夫です。<br>「何から考えればいいか分からない」段階からご相談いただけます。
+            .formBox
+                form
+                    dl.field-name
+                        dt
+                            span お名前
+                            em 必須
+                        dd
+                            .inputBox
+                                <span class="wpcf7-form-control-wrap" data-name=""><input type="text" name="" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required length-l text" aria-required="true" aria-invalid="false" placeholder="例）山田　太郎"></span>
+                    dl.multi.field-tel
+                        dt
+                            span 電話番号
+                            small 任意
+                        dd
+                            .inputBox
+                                <span class="wpcf7-form-control-wrap" data-name=""><input type="text" name="" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required length-l text" aria-required="true" aria-invalid="false" placeholder=""></span>
+                            aside
+                                p ※「メールでのご連絡をご希望の場合は未入力でも構いません」
+                    dl.multi.field-consultation
+                        dt
+                            span ご相談内容
+                            em 必須
+                        dd
+                            p ご相談の対象を教えてください（複数選択可）
+                            .checkList
+                                <span class="wpcf7-form-control-wrap" data-name="field-checkbox">
+                                    <span class="wpcf7-form-control wpcf7-checkbox">
+                                        <span class="wpcf7-list-item first">
+                                            <label>
+                                                <input type="checkbox" name="field-checkbox[]" value="ご自宅（戸建て）" />
+                                                <span class="wpcf7-list-item-label">ご自宅（戸建て）</span>
+                                            </label>
+                                        </span>
+                                        <span class="wpcf7-list-item">
+                                            <label>
+                                                <input type="checkbox" name="field-checkbox[]" value="ご自宅（マンション）" />
+                                                <span class="wpcf7-list-item-label">ご自宅（マンション）</span>
+                                            </label>
+                                        </span>
+                                        <span class="wpcf7-list-item">
+                                            <label>
+                                                <input type="checkbox" name="field-checkbox[]" value="ご実家" />
+                                                <span class="wpcf7-list-item-label">ご実家</span>
+                                            </label>
+                                        </span>
+                                        <span class="wpcf7-list-item">
+                                            <label>
+                                                <input type="checkbox" name="field-checkbox[]" value="相続した（予定の）不動産）" />
+                                                <span class="wpcf7-list-item-label">相続した（予定の）不動産）</span>
+                                            </label>
+                                        </span>
+                                        <span class="wpcf7-list-item">
+                                            <label>
+                                                <input type="checkbox" name="field-checkbox[]" value="賃貸に出している／出したい" />
+                                                <span class="wpcf7-list-item-label">賃貸に出している／出したい</span>
+                                            </label>
+                                        </span>
+                                        <span class="wpcf7-list-item last">
+                                            <label>
+                                                <input type="checkbox" name="field-checkbox[]" value="その他" />
+                                                <span class="wpcf7-list-item-label">その他</span>
+                                            </label>
+                                        </span>
+                                    </span>
+                                </span>
+                            .inputBox
+                                <span class="wpcf7-form-control-wrap" data-name="content"><textarea name="content" cols="60" rows="7" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required length-l text" aria-required="true" aria-invalid="false" placeholder=""></textarea></span>
+                    dl.multi.field-theme
+                        dt
+                            span ご相談のテーマ
+                            em 必須
+                        dd
+                            p いま考えていることに近いものを選んでください（複数選択可）
+                            .checkList
+                                <span class="wpcf7-form-control-wrap" data-name="field-checkbox">
+                                    <span class="wpcf7-form-control wpcf7-checkbox">
+                                        <span class="wpcf7-list-item first">
+                                            <label>
+                                                <input type="checkbox" name="field-checkbox[]" value="売却するか迷っている" />
+                                                <span class="wpcf7-list-item-label">売却するか迷っている</span>
+                                            </label>
+                                        </span>
+                                        <span class="wpcf7-list-item">
+                                            <label>
+                                                <input type="checkbox" name="field-checkbox[]" value="建て替えるか迷っている" />
+                                                <span class="wpcf7-list-item-label">建て替えるか迷っている</span>
+                                            </label>
+                                        </span>
+                                        <span class="wpcf7-list-item">
+                                            <label>
+                                                <input type="checkbox" name="field-checkbox[]" value="リフォームするか迷っている" />
+                                                <span class="wpcf7-list-item-label">リフォームするか迷っている</span>
+                                            </label>
+                                        </span>
+                                        <span class="wpcf7-list-item">
+                                            <label>
+                                                <input type="checkbox" name="field-checkbox[]" value="今は決めない方がよいか迷っている" />
+                                                <span class="wpcf7-list-item-label">今は決めない方がよいか迷っている</span>
+                                            </label>
+                                        </span>
+                                        <span class="wpcf7-list-item">
+                                            <label>
+                                                <input type="checkbox" name="field-checkbox[]" value="相続・名義・家族の話が絡んでいる" />
+                                                <span class="wpcf7-list-item-label">相続・名義・家族の話が絡んでいる</span>
+                                            </label>
+                                        </span>
+                                        <span class="wpcf7-list-item">
+                                            <label>
+                                                <input type="checkbox" name="field-checkbox[]" value="空き家／空室の活用を考えている" />
+                                                <span class="wpcf7-list-item-label">空き家／空室の活用を考えている</span>
+                                            </label>
+                                        </span>
+                                        <span class="wpcf7-list-item">
+                                            <label>
+                                                <input type="checkbox" name="field-checkbox[]" value="賃貸併用・収益化を検討している" />
+                                                <span class="wpcf7-list-item-label">賃貸併用・収益化を検討している</span>
+                                            </label>
+                                        </span>
+                                        <span class="wpcf7-list-item">
+                                            <label>
+                                                <input type="checkbox" name="field-checkbox[]" value="将来の住み替え（近居・同居含む）を考えている" />
+                                                <span class="wpcf7-list-item-label">将来の住み替え（近居・同居含む）を考えている</span>
+                                            </label>
+                                        </span>
+                                        <span class="wpcf7-list-item">
+                                            <label>
+                                                <input type="checkbox" name="field-checkbox[]" value="まずは現状把握（整理）をしたい" />
+                                                <span class="wpcf7-list-item-label">まずは現状把握（整理）をしたい</span>
+                                            </label>
+                                        </span>
+                                        <span class="wpcf7-list-item last">
+                                            <label>
+                                                <input type="checkbox" name="field-checkbox[]" value="その他" />
+                                                <span class="wpcf7-list-item-label">その他</span>
+                                            </label>
+                                        </span>
+                                    </span>
+                                </span>
+                            .inputBox
+                                <span class="wpcf7-form-control-wrap" data-name="content"><textarea name="content" cols="60" rows="7" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required length-l text" aria-required="true" aria-invalid="false" placeholder=""></textarea></span>
+                    dl.multi.field-status
+                        dt
+                            span 現在の状況
+                            em 必須
+                        dd
+                            p 現在の状況に近いものを選んでください（複数選択可）
+                            .checkList
+                                <span class="wpcf7-form-control-wrap" data-name="field-checkbox">
+                                    <span class="wpcf7-form-control wpcf7-checkbox">
+                                        <span class="wpcf7-list-item first">
+                                            <label>
+                                                <input type="checkbox" name="field-checkbox[]" value="まだ何も決まっていない（整理したい）" />
+                                                <span class="wpcf7-list-item-label">まだ何も決まっていない<br>（整理したい）</span>
+                                            </label>
+                                        </span>
+                                        <span class="wpcf7-list-item">
+                                            <label>
+                                                <input type="checkbox" name="field-checkbox[]" value="方向性はあるが、比較して決めたい" />
+                                                <span class="wpcf7-list-item-label">方向性はあるが、比較して決めたい</span>
+                                            </label>
+                                        </span>
+                                        <span class="wpcf7-list-item">
+                                            <label>
+                                                <input type="checkbox" name="field-checkbox[]" value="ある程度決まっているが、最終判断が不安" />
+                                                <span class="wpcf7-list-item-label">ある程度決まっているが、最終判断が不安</span>
+                                            </label>
+                                        </span>
+                                        <span class="wpcf7-list-item">
+                                            <label>
+                                                <input type="checkbox" name="field-checkbox[]" value="実施の段取りまで見据えて相談したい" />
+                                                <span class="wpcf7-list-item-label">実施の段取りまで見据えて相談したい</span>
+                                            </label>
+                                        </span>
+                                        <span class="wpcf7-list-item last">
+                                            <label>
+                                                <input type="checkbox" name="field-checkbox[]" value="その他" />
+                                                <span class="wpcf7-list-item-label">その他</span>
+                                            </label>
+                                        </span>
+                                    </span>
+                                </span>
+                            .inputBox
+                                <span class="wpcf7-form-control-wrap" data-name="content"><textarea name="content" cols="60" rows="7" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required length-l text" aria-required="true" aria-invalid="false" placeholder=""></textarea></span>
+                    dl.multi.field-method
+                        dt
+                            span ご希望の進め方を<br>教えてください
+                            em 必須
+                        dd
+                            .checkList
+                                <span class="wpcf7-form-control-wrap" data-name="field-checkbox">
+                                    <span class="wpcf7-form-control wpcf7-checkbox">
+                                        <span class="wpcf7-list-item first">
+                                            <label>
+                                                <input type="checkbox" name="field-checkbox[]" value="まずは話して整理したい（結論は急がない）" />
+                                                <span class="wpcf7-list-item-label">まずは話して整理したい<br>（結論は急がない）</span>
+                                            </label>
+                                        </span>
+                                        <span class="wpcf7-list-item">
+                                            <label>
+                                                <input type="checkbox" name="field-checkbox[]" value="可能性を広げたい（選択肢を比較したい）" />
+                                                <span class="wpcf7-list-item-label">可能性を広げたい<br>（選択肢を比較したい）</span>
+                                            </label>
+                                        </span>
+                                        <span class="wpcf7-list-item">
+                                            <label>
+                                                <input type="checkbox" name="field-checkbox[]" value="ある程度決まっているが、最終判断が不安" />
+                                                <span class="wpcf7-list-item-label">ある程度決まっているが、最終判断が不安</span>
+                                            </label>
+                                        </span>
+                                        <span class="wpcf7-list-item">
+                                            <label>
+                                                <input type="checkbox" name="field-checkbox[]" value="現実的な一歩に落とし込みたい（段取りを整えたい）" />
+                                                <span class="wpcf7-list-item-label">現実的な一歩に落とし込みたい<br>（段取りを整えたい）</span>
+                                            </label>
+                                        </span>
+                                        <span class="wpcf7-list-item last">
+                                            <label>
+                                                <input type="checkbox" name="field-checkbox[]" value="その他" />
+                                                <span class="wpcf7-list-item-label">その他</span>
+                                            </label>
+                                        </span>
+                                    </span>
+                                </span>
+                            .inputBox
+                                <span class="wpcf7-form-control-wrap" data-name="content"><textarea name="content" cols="60" rows="7" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required length-l text" aria-required="true" aria-invalid="false" placeholder=""></textarea></span>
+                    dl.multi.field-property
+                        dt
+                            span 住まいの基本情報
+                            em 必須
+                        dd
+                            .propertyList
+                                .propertyBox
+                                    .ttl
+                                        p 住所
+                                    .item
+                                        .inputBox
+                                            <span class="wpcf7-form-control-wrap" data-name=""><input type="text" name="" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required length-l text" aria-required="true" aria-invalid="false" placeholder=""></span>
+                                .propertyBox
+                                    .ttl
+                                        p 種別
+                                    .item
+                                        .radioList
+                                            <span class="wpcf7-form-control-wrap" data-name="radio-376">
+                                                <span class="wpcf7-form-control wpcf7-radio">
+                                                    <span class="wpcf7-list-item first">
+                                                        <label>
+                                                        <input type="radio" name="radio-376" value="戸建て" checked="checked" />
+                                                        <span class="wpcf7-list-item-label">戸建て</span>
+                                                        </label>
+                                                    </span>
+                                                    <span class="wpcf7-list-item last">
+                                                        <label>
+                                                        <input type="radio" name="radio-376" value="マンション" />
+                                                        <span class="wpcf7-list-item-label">マンション</span>
+                                                        </label>
+                                                    </span>
+                                                </span>
+                                            </span>
+                                .propertyBox
+                                    .ttl
+                                        p 築年数
+                                    .item.unitBox
+                                        .inputBox
+                                            <span class="wpcf7-form-control-wrap" data-name=""><input type="text" name="" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required length-l text" aria-required="true" aria-invalid="false" placeholder=""></span>
+                                        span.unit 年くらい
+                                .propertyBox
+                                    .ttl
+                                        p 延床面積
+                                    .item.unitBox
+                                        .inputBox
+                                            <span class="wpcf7-form-control-wrap" data-name=""><input type="text" name="" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required length-l text" aria-required="true" aria-invalid="false" placeholder=""></span>
+                                        span.unit ㎡
+                    dl.multi.field-concern
+                        dt
+                            span 気になっている点
+                            small 任意
+                        dd
+                            p 特に気になっていることはありますか？（複数選択可）
+                            .checkList
+                                <span class="wpcf7-form-control-wrap" data-name="field-checkbox">
+                                    <span class="wpcf7-form-control wpcf7-checkbox">
+                                        <span class="wpcf7-list-item first">
+                                            <label>
+                                                <input type="checkbox" name="field-checkbox[]" value="予算感が分からない" />
+                                                <span class="wpcf7-list-item-label">予算感が分からない</span>
+                                            </label>
+                                        </span>
+                                        <span class="wpcf7-list-item">
+                                            <label>
+                                                <input type="checkbox" name="field-checkbox[]" value="家族の意見がまとまらない" />
+                                                <span class="wpcf7-list-item-label">家族の意見がまとまらない</span>
+                                            </label>
+                                        </span>
+                                        <span class="wpcf7-list-item">
+                                            <label>
+                                                <input type="checkbox" name="field-checkbox[]" value="相続・名義の整理が必要" />
+                                                <span class="wpcf7-list-item-label">相続・名義の整理が必要</span>
+                                            </label>
+                                        </span>
+                                        <span class="wpcf7-list-item">
+                                            <label>
+                                                <input type="checkbox" name="field-checkbox[]" value="住みながら進められるか不安" />
+                                                <span class="wpcf7-list-item-label">住みながら進められるか不安</span>
+                                            </label>
+                                        </span>
+                                        <span class="wpcf7-list-item">
+                                            <label>
+                                                <input type="checkbox" name="field-checkbox[]" value="工事の規模が決められない" />
+                                                <span class="wpcf7-list-item-label">工事の規模が決められない</span>
+                                            </label>
+                                        </span>
+                                        <span class="wpcf7-list-item">
+                                            <label>
+                                                <input type="checkbox" name="field-checkbox[]" value="空き家／空室の活用を考えている" />
+                                                <span class="wpcf7-list-item-label">空き家／空室の活用を考えている</span>
+                                            </label>
+                                        </span>
+                                        <span class="wpcf7-list-item">
+                                            <label>
+                                                <input type="checkbox" name="field-checkbox[]" value="売却とリフォームで迷っている" />
+                                                <span class="wpcf7-list-item-label">売却とリフォームで迷っている</span>
+                                            </label>
+                                        </span>
+                                        <span class="wpcf7-list-item">
+                                            <label>
+                                                <input type="checkbox" name="field-checkbox[]" value="どこに相談すればいいか分からない" />
+                                                <span class="wpcf7-list-item-label">どこに相談すればいいか分からない</span>
+                                            </label>
+                                        </span>
+                                        <span class="wpcf7-list-item last">
+                                            <label>
+                                                <input type="checkbox" name="field-checkbox[]" value="その他" />
+                                                <span class="wpcf7-list-item-label">その他</span>
+                                            </label>
+                                        </span>
+                                    </span>
+                                </span>
+                            .inputBox
+                                <span class="wpcf7-form-control-wrap" data-name="content"><textarea name="content" cols="60" rows="7" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required length-l text" aria-required="true" aria-invalid="false" placeholder=""></textarea></span>
+                    dl.field-contact-method
+                        dt
+                            span ご希望の連絡方法
+                            em 必須
+                        dd
+                            .radioList
+                                <span class="wpcf7-form-control-wrap" data-name="radio-376">
+                                    <span class="wpcf7-form-control wpcf7-radio">
+                                        <span class="wpcf7-list-item first">
+                                            <label>
+                                            <input type="radio" name="radio-376" value="メール" checked="checked" />
+                                            <span class="wpcf7-list-item-label">メール</span>
+                                            </label>
+                                        </span>
+                                        <span class="wpcf7-list-item">
+                                            <label>
+                                            <input type="radio" name="radio-376" value="電話" />
+                                            <span class="wpcf7-list-item-label">電話</span>
+                                            </label>
+                                        </span>
+                                        <span class="wpcf7-list-item last">
+                                            <label>
+                                            <input type="radio" name="radio-376" value="どちらでも" />
+                                            <span class="wpcf7-list-item-label">どちらでも</span>
+                                            </label>
+                                        </span>
+                                    </span>
+                                </span>
+                    dl.field-email
+                        dt
+                            span メールアドレス
+                            em 必須
+                        dd
+                            .inputBox
+                                <span class="wpcf7-form-control-wrap" data-name=""><input type="text" name="" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required length-l text" aria-required="true" aria-invalid="false" placeholder=""></span>
+                    dl.multi.field-datetime
+                        dt
+                            span ご希望の連絡日時
+                            small 任意
+                        dd
+                            .inputBox
+                                <span class="wpcf7-form-control-wrap" data-name=""><input type="text" name="" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required length-l text" aria-required="true" aria-invalid="false" placeholder=""></span>
+                            aside
+                                p ※例：平日午前／平日夕方／土曜午前 など）
+                    .submitBtn
+                        span
+                            input(type="submit" value="この内容で相談する" class="wpcf7-form-control has-spinner wpcf7-submit")
+                    .bottomNote
+                        aside
+                            p ※ご相談内容に応じて、事前に進め方をご説明します。
+                            p ※無理に次のステップをおすすめすることはありません。
+    .topicPath
+        .secWrap01
+            ol
+                li
+                    a(href="") トップ
+                li お問い合わせ
+// △メイン△

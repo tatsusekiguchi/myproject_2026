@@ -1,0 +1,310 @@
+@charset "UTF-8";
+/* Scss Document */
+/* Sass Document */
+/* Sass Document */
+@import url("https://fonts.googleapis.com/css?family=Teko&display=swap");
+@font-face {
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-weight: 300;
+  src: url("../../fonts/SourceHanSansJP-Light.woff2") format("woff2"), url("../../fonts/SourceHanSansJP-Light.woff") format("woff");
+  font-display: swap; }
+@font-face {
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/SourceHanSansJP-Regular.woff2") format("woff2"), url("../../fonts/SourceHanSansJP-Regular.woff") format("woff");
+  font-display: swap; }
+@font-face {
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-weight: 500;
+  src: url("../../fonts/SourceHanSansJP-Medium.woff2") format("woff2"), url("../../fonts/SourceHanSansJP-Medium.woff") format("woff");
+  font-display: swap; }
+@font-face {
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-weight: 600;
+  src: url("../../fonts/SourceHanSansJP-Bold.woff2") format("woff2"), url("../../fonts/SourceHanSansJP-Bold.woff") format("woff");
+  font-display: swap; }
+html {
+  font-size: calc(100vw / 3.84); }
+
+* {
+  font-family: 'Noto Sans JP', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, serif; }
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans JP', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, serif;
+  font-size: .16rem;
+  font-weight: 300;
+  color: #181800;
+  overflow-x: hidden;
+  letter-spacing: 0;
+  font-display: swap; }
+
+.pc {
+  display: none; }
+
+.index .main_box {
+  width: 100%;
+  height: 100vh;
+  margin-bottom: .2rem;
+  padding: .5rem .2rem .2rem; }
+  .index .main_box .inner {
+    width: 100%;
+    height: 100%;
+    background: url("../image/index/main_bg_sp.jpg") no-repeat center;
+    background-size: cover;
+    position: relative; }
+    .index .main_box .inner::before {
+      content: " ";
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: #000;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 0.2; }
+    .index .main_box .inner h2 {
+      width: 100%;
+      padding: .35rem .25rem;
+      font-size: 0.32rem;
+      font-weight: 300;
+      letter-spacing: 0.1em;
+      line-height: 135%;
+      color: #fff;
+      position: relative;
+      z-index: 1;
+      text-align: left;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0; }
+      .index .main_box .inner h2 strong {
+        display: block;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.3em;
+        line-height: 220%;
+        position: absolute;
+        right: .15rem;
+        bottom: .35rem;
+		text-align: right;}
+.index .company_box {
+  padding: 0 0 .6rem;
+  background: #F4F4F4; }
+  .index .company_box::before {
+    content: " ";
+    width: 100%;
+    height: 2.47rem;
+    display: block;
+    margin-bottom: .4rem;
+    background: url("../image/index/index_company.jpg") no-repeat center;
+    background-size: cover; }
+  .index .company_box::after {
+    content: "";
+    height: 0;
+    display: block;
+    clear: both; }
+  .index .company_box .inner {
+    width: auto;
+    padding: 0 .3rem; }
+    .index .company_box .inner h3 {
+      margin: 0 0 0.25rem;
+      font-size: 0.23rem;
+      font-weight: 300;
+      letter-spacing: 0.35em;
+      line-height: 160%; }
+    .index .company_box .inner .text_box {
+      margin-bottom: .4rem; }
+      .index .company_box .inner .text_box p {
+        font-size: 0.14rem;
+        font-weight: 300;
+        letter-spacing: 0.1em;
+        line-height: 220%; }
+    .index .company_box .inner .btn {
+      width: 100%; }
+      .index .company_box .inner .btn a {
+        padding: .2rem 0;
+        display: block;
+        @incldue font(.1rem,400,0.1em,220%);
+        text-align: center;
+        color: #fff;
+        background: #f08300; }
+.index .service_box {
+  padding: 1rem 0 .2rem; }
+  .index .service_box .inner {
+    margin: 0 .2rem; }
+    .index .service_box .inner h3 {
+      margin-bottom: .3rem;
+      font-size: 0.13rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      line-height: 120%;
+      color: #f08300; }
+      .index .service_box .inner h3::after {
+        content: " " attr(data-title);
+        display: block;
+        /*margin-top: .2rem;*/
+        font-size: 0.4rem;
+        font-weight: 600;
+        letter-spacing: 0.15em;
+        line-height: 120%;
+        color: #000000; }
+    .index .service_box .inner .text_box {
+      margin-bottom: .35rem; }
+      .index .service_box .inner .text_box p {
+        font-size: 0.14rem;
+        font-weight: 300;
+        letter-spacing: 0.1em;
+        line-height: 220%; }
+    .index .service_box .inner .list_box::after {
+      content: "";
+      height: 0;
+      display: block;
+      clear: both; }
+    .index .service_box .inner .list_box section {
+      width: 100%;
+      margin-bottom: .4rem; }
+      .index .service_box .inner .list_box section a {
+        color: #000000; }
+      .index .service_box .inner .list_box section:last-child {
+        margin-right: 0; }
+      .index .service_box .inner .list_box section .image_box {
+        margin-bottom: .25rem; }
+      .index .service_box .inner .list_box section .text_box h4 {
+        margin-bottom: .25rem;
+        display: inline-block;
+        border-bottom: 2px solid #000000;
+        font-size: 0.14rem;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        line-height: 220%; }
+      .index .service_box .inner .list_box section .text_box .text p {
+        font-size: 0.14rem;
+        font-weight: 300;
+        letter-spacing: 0.1em;
+        line-height: 190%; }
+.index .news_box {
+  margin: 0 .2rem 1rem; }
+  .index .news_box h3 {
+    margin-bottom: .25rem;
+    font-size: 0.25rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    line-height: 120%;
+    color: #000000; }
+  .index .news_box ul {
+    width: auto; }
+    .index .news_box ul li {
+      margin-bottom: .25rem; }
+      .index .news_box ul li  {
+        display: block;
+        @incldue clear;
+        color: #000000; }
+        .index .news_box ul li  time {
+          width: auto;
+          display: block;
+          margin-bottom: .1rem;
+          font-size: 0.13rem;
+          font-weight: 300;
+          letter-spacing: 0.1em;
+          line-height: 170%; }
+        .index .news_box ul li  p {
+          width: auto;
+          font-size: 0.13rem;
+          font-weight: 300;
+          letter-spacing: 0.1em;
+          line-height: 170%; }
+.index .recruit_box {
+  margin: 0 0 .5rem;
+  position: relative; }
+  .index .recruit_box::before {
+    content: " ";
+    width: 100%;
+    height: 2.56rem;
+    display: block;
+    background: url("../image/index/index_property.jpg") no-repeat center;
+    background-size: cover;
+    position: relative;
+    z-index: 1; }
+  .index .recruit_box::after {
+    content: "";
+    height: 0;
+    display: block;
+    clear: both; }
+  .index .recruit_box .inner {
+    width: 100%;
+    padding: .4rem .3rem .5rem;
+    background: #F4F4F4; }
+    .index .recruit_box .inner h3 {
+      margin-bottom: .3rem;
+      font-size: 0.13rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      line-height: 120%;
+      color: #f08300;
+      position: relative;
+      z-index: 1; }
+      .index .recruit_box .inner h3::after {
+        content: " " attr(data-title);
+        display: block;
+        /*margin-top: .2rem;*/
+        font-size: 0.4rem;
+        font-weight: 600;
+        letter-spacing: 0.15em;
+        line-height: 120%;
+        color: #000000; }
+    .index .recruit_box .inner .text_box {
+      margin-bottom: .4rem;
+      position: relative;
+      z-index: 1; }
+      .index .recruit_box .inner .text_box p {
+        font-size: 0.14rem;
+        font-weight: 300;
+        letter-spacing: 0.1em;
+        line-height: 220%; }
+    .index .recruit_box .inner .btn {
+      width: 100%;
+      position: relative;
+      z-index: 1; }
+      .index .recruit_box .inner .btn a {
+        padding: .2rem 0;
+        display: block;
+        @incldue font(.13rem,400,0.1em,220%);
+        text-align: center;
+        color: #fff;
+        background: #f08300; }
+
+/*# sourceMappingURL=article-sp.css.map */
+
+.next.service .contents_box .list_box > section .text_box .btn a {
+    display: block;
+    margin-top: .2rem;
+    position: relative;
+    padding: .08rem 0;
+    width: 1.7rem;
+    font-size: .14rem;
+	font-weight: 400;
+    line-height: 142%;
+    color: #4fabca;
+    text-align: center;
+	border: 1px solid #4fabca;}
+
+.next.service .contents_box .list_box > section .text_box .btn a::before {
+    content: "";
+    width: .38rem;
+    position: absolute;
+    top: 50%;
+    right: -.38rem;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+	border-top: 2px solid #4fabca;}

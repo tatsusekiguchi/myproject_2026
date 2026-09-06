@@ -1,0 +1,278 @@
+[
+  {
+    "key": "group_learn_basic",
+    "title": "ベイシックコース",
+    "fields": [
+      {
+        "key": "field_basic_courses",
+        "label": "コース一覧",
+        "name": "basic_courses",
+        "aria-label": "",
+        "type": "repeater",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "layout": "block",
+        "pagination": 0,
+        "min": 0,
+        "max": 0,
+        "collapsed": "field_basic_course_title",
+        "button_label": "コースを追加",
+        "rows_per_page": 20,
+        "sub_fields": [
+          {
+            "key": "field_basic_course_title",
+            "label": "コースタイトル",
+            "name": "course_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "例：第１回　「スーパーヴィジョン基礎編」",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "parent_repeater": "field_basic_courses"
+          },
+          {
+            "key": "field_basic_course_intro",
+            "label": "コース紹介文",
+            "name": "course_intro",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": "br",
+            "parent_repeater": "field_basic_courses"
+          },
+          {
+            "key": "field_basic_course_date",
+            "label": "開催日",
+            "name": "course_date",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "例：第１回　2026年 7月11日（土）、12日（日）",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 2,
+            "new_lines": "br",
+            "parent_repeater": "field_basic_courses"
+          },
+          {
+            "key": "field_basic_course_instructor",
+            "label": "講師",
+            "name": "course_instructor",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0,
+            "parent_repeater": "field_basic_courses"
+          },
+          {
+            "key": "field_basic_course_venue",
+            "label": "会場",
+            "name": "course_venue",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0,
+            "parent_repeater": "field_basic_courses"
+          },
+          {
+            "key": "field_basic_course_capacity",
+            "label": "定員",
+            "name": "course_capacity",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "parent_repeater": "field_basic_courses"
+          },
+          {
+            "key": "field_basic_course_apply_url",
+            "label": "申し込みURL",
+            "name": "course_apply_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "外部ページへのリンク",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "parent_repeater": "field_basic_courses"
+          },
+          {
+            "key": "field_basic_course_fee_general",
+            "label": "参加費:一般",
+            "name": "course_fee_general",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "parent_repeater": "field_basic_courses"
+          },
+          {
+            "key": "field_basic_course_fee_member",
+            "label": "参加費:会員",
+            "name": "course_fee_member",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "parent_repeater": "field_basic_courses"
+          },
+          {
+            "key": "field_basic_course_fee_student",
+            "label": "参加費:学生",
+            "name": "course_fee_student",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "parent_repeater": "field_basic_courses"
+          }
+        ]
+      },
+      {
+        "key": "field_basic_notes",
+        "label": "留意事項",
+        "name": "basic_notes",
+        "aria-label": "",
+        "type": "wysiwyg",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "tabs": "all",
+        "toolbar": "full",
+        "media_upload": 0,
+        "delay": 0
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "page_template",
+          "operator": "==",
+          "value": "learn/index.php"
+        }
+      ]
+    ],
+    "menu_order": 2,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": ""
+  }
+]

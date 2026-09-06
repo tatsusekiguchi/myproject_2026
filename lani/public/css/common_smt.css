@@ -1,0 +1,299 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*===================================================
+	共通CSS（SMP）
+===================================================*/
+
+/* --------------------------------------------------
+	base
+-------------------------------------------------- */
+body {
+	min-width: 0;
+	font-size: 12px;
+}
+a:hover {
+	text-decoration: none;
+}
+.wrap {
+	height: auto;
+}
+/*改行*/
+.pcBreak {
+	display: none;
+}
+/*spのみ表示*/
+.pcHidden {
+	display: block;
+}
+.spHidden {
+	display: none;
+}
+#sideBtn {
+	display: none;
+}
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 60px;
+	z-index: 999;
+	background: #ffffff;
+	box-shadow:3px 3px 5px -3px rgba(0,0,0,0.4);
+}
+header .headWrap {
+	position: relative;
+	padding: 0 10px;
+}
+header .headWrap:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -20px;
+	width: 125px;
+	height: 40px;
+	margin: 0 auto;
+	background: url("../image/common/header_bg_sp_02.png") no-repeat;
+	background-size: 125px auto;
+}
+	header .headWrap .logo {
+		position: relative;
+		top: 10px;
+		width: 85px;
+		margin: 0 auto;
+	}
+header .headBox > p {
+	display: none;
+}
+#spMenuBtn {
+	position: absolute;
+	top: 10px;
+	left: 40px;
+	width: 37px;
+	cursor: pointer;
+}
+/* --------------------------------------------------
+	nav
+-------------------------------------------------- */
+#btnList li {
+	display: none;
+}
+#btnList .reserve {
+	position: absolute;
+	top: 0;
+	right: 10px;
+	display: block;
+	width: 100px;
+}
+#gNav {
+	width: 80%;
+	height: 100%;
+	position: fixed;
+	z-index: 5;
+	top: 0;
+	bottom: 0;
+	left: -80%;
+	background: #bc8c04;
+	padding: 25px;
+}
+#navClose {
+	width: 30px;
+	margin-bottom: 30px;
+}
+	#gNav ul {
+		max-width: 300px;
+	}
+		#gNav ul li {
+			display: inline-block;
+			width: 45%;
+			margin-bottom: 20px;
+		}
+			#gNav ul li a {
+				font-weight: bold;
+				color: #ffffff;
+			}
+	#gNav ul + p {
+		width: 100px;
+	}
+/* --------------------------------------------------
+	kv
+-------------------------------------------------- */
+.kv {
+	height: 330px;
+}
+	.kv .kvWrap {
+		position: relative;
+		height: 100%;
+		z-index: -1;
+	}
+	.kv .kvWrap h1 {
+		position: relative;
+		width: 210px;
+		margin: 0 auto;
+		line-height: 330px;
+		z-index: 2;
+	}
+
+.kv .kvBox {
+	position: absolute;
+	top: 0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+	.kv .kvBox > div {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+	}
+	.kv .kvBox .kv01 {
+		background: url("../image/top/sp/kv_01.png") center no-repeat;
+		background-size: cover;
+	}
+	.kv .kvBox .kv02 {
+		background: url("../image/top/sp/kv_02.png") center no-repeat;
+		background-size: cover;
+	}
+	.kv .kvBox .kv03 {
+		background: url("../image/top/sp/kv_03.png") center no-repeat;
+		background-size: cover;
+	}
+/* --------------------------------------------------
+	メイン
+-------------------------------------------------- */
+article {
+	margin-top: 60px;
+}
+.secTtl {
+	width: 70px;
+	height: 70px;
+	margin: 0 auto 20px;
+	font-size: 10px;
+}
+/* --------------------------------------------------
+    ページトップ
+-------------------------------------------------- */
+#pagetop {
+    right: 10px;
+    bottom: 50px;
+    width: 64px;
+    height: 64px;
+    background-size: 64px auto;
+}
+/* --------------------------------------------------
+	footer
+-------------------------------------------------- */
+footer {
+	padding-bottom: 50px;
+}
+footer .contact {
+	display: none;
+}
+
+footer .footBox {
+	padding: 30px 10px;
+}
+	footer .footBox .leftBox {
+		float: none;
+		width: 100%;
+		margin-bottom: 50px;
+	}
+		footer .footBox .leftBox dl dt {
+			display: none;
+		}
+		footer .footBox .leftBox dl dd {
+			display: block;
+			width: 250px;
+			margin: 0 auto;
+		}
+			footer .footBox .leftBox dl dd img {
+				display: block;
+				width: 120px;
+				margin: 0 auto 20px;
+			}
+			footer .footBox .leftBox dl dd .spTtl {
+				display: block;
+				margin: 0 auto 10px;
+				color: #898989;
+			}
+			footer .footBox .leftBox dl dd p {
+				display: block;
+			}
+	footer .footBox .rightBox {
+		float: none;
+		width: 100%;
+		max-width: 300px;
+		margin: 0 auto;
+	}
+		footer .footBox .rightBox dl {
+			padding: 30px 20px 20px;
+			font-size: 14px;
+		}
+			footer .footBox .rightBox dl dt {
+				position: absolute;
+				top: -20px;
+				left: 0;
+				right: 0;
+				width: 200px;
+				margin: 0 auto;
+				padding: 0 20px;
+			}
+				footer .footBox .rightBox dl dt span {
+					font-size: 19px;
+				}
+			footer .footBox .rightBox dl dd {
+				text-align: center;
+			}
+			
+footer .copy {
+	font-size: 10px;
+}
+
+footer .smtBtmLink {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	display: table;
+	width: 100%;
+	height: 50px;
+	border-top: 1px solid #ffffff;
+	background: #b39a4d;
+}
+	footer .smtBtmLink li {
+		display: table-cell;
+		width: 33%;
+		text-align: center;
+		vertical-align: middle;
+		background: rgba(255,255,255,0.3);
+	}
+	footer .smtBtmLink li + li {
+		border-left: 1px solid #ffffff;
+	}
+		footer .smtBtmLink li a {
+			display: block;
+		}
+			footer .smtBtmLink li img {
+				width: 36px;
+			}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,463 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap");
+@import "./mixin";
+@import "./mod";
+/* CSS Document */
+/*===================================================
+	共通CSS（PC/SMP）
+===================================================*/
+
+/*////////////////////////////////////////////////////////////
+	共通設定
+///////////////////////////////////////////////////////////*/
+
+/* --------------------------------------------------
+	base
+-------------------------------------------------- */
+* {
+  box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+}
+body {
+  position: relative;
+  overflow-x: hidden;
+  font-family:
+    "Zen Old Mincho", "游明朝", YuMincho, "ヒラギノ明朝 ProN W3",
+    "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+  //font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $mainColor;
+  font-size: $PCfontSize;
+  background: $bgBaseColor;
+  transition: 2s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: $lhBase;
+}
+
+.txt {
+  line-height: $lhTxt;
+}
+
+/*リンク */
+a {
+  color: $mainColor;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+
+/* 画像幅 */
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* clearfix */
+.clearfix::after {
+  content: ".";
+  display: block;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.spBreak {
+  display: none;
+}
+
+@media (min-width: 1025px) {
+  a {
+    transition: 0.6s;
+  }
+
+  a:hover {
+    opacity: 0.6;
+  }
+}
+
+.fax {
+  a {
+    pointer-events: none;
+  }
+}
+
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 60px;
+  font-weight: 700;
+  z-index: 999;
+  .logo {
+    a {
+      display: block;
+      font-size: clamp(18px, 1.5vw, 24px);
+      color: #ffffff;
+    }
+  }
+  &.fixed {
+    background: rgba(0, 0, 0, 0.6);
+  }
+}
+@media (min-width: 1025px) {
+  .header {
+    .headWrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .hamburger {
+      display: none;
+    }
+  }
+}
+
+/* --------------------------------------------------
+	nav
+-------------------------------------------------- */
+@media (min-width: 1025px) {
+  .navBox {
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+    .navList {
+      .ul {
+        .li {
+          display: inline-block;
+          min-width: 90px;
+          text-align: center;
+          line-height: 1.2;
+          + .li {
+            border-left: 1px solid #ffffff;
+          }
+          a {
+            display: inline-block;
+            padding: 0 10px;
+            font-size: 14px;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+    .navItem {
+      .contact {
+        width: 160px;
+        a {
+          position: relative;
+          display: block;
+          padding: 5px 10px;
+          font-size: 14px;
+          color: #ffffff;
+          text-align: center;
+          border-radius: 30px;
+          border: 1px solid #ffffff;
+          background: rgba(124, 77, 34, 0.25);
+          overflow: hidden;
+          z-index: 1;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #4caf50;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.6s ease;
+            z-index: -1;
+            border-radius: 30px;
+          }
+          &:hover {
+            opacity: 1;
+            &::before {
+              transform: scaleX(1);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* --------------------------------------------------
+	main
+-------------------------------------------------- */
+.main {
+  overflow: hidden;
+}
+.pageKvContainer {
+  .secWrap01 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 300px;
+    padding: 0 20px 30px;
+  }
+  .pageKvTitle {
+    color: #ffffff;
+    h1 {
+      font-size: 40px;
+    }
+    p {
+      font-weight: 700;
+    }
+  }
+}
+.pageSecTtlBox {
+  margin: 0 0 50px;
+  padding: 30px 0 0;
+  .pageSecTtl {
+    margin: 0 0 5px;
+    font-size: 34px;
+  }
+  .sub {
+    font-weight: 700;
+    color: #7c4d22;
+  }
+  &.center {
+    text-align: center;
+    background: url(https://iwasaki-reform.com/system_panel/uploads/images/page_sec_ttl_icon.png)
+      center top no-repeat;
+    background-size: 60px auto;
+  }
+  &.left {
+    background: url(https://iwasaki-reform.com/system_panel/uploads/images/page_sec_ttl_icon.png)
+      left top no-repeat;
+    background-size: 60px auto;
+  }
+}
+.secWrap {
+  max-width: 1640px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.secWrap01 {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.secWrap02 {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.mapBox {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding: 0 0 45%;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+.btnMore {
+  width: 200px;
+  a {
+    position: relative;
+    display: block;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 30px;
+    background: #7c4d22;
+    overflow: hidden;
+    z-index: 1;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #4caf50;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.6s ease;
+      z-index: -1;
+      border-radius: 30px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      width: 20px;
+      height: 20px;
+      background: url(https://iwasaki-reform.com/system_panel/uploads/images/btn_more_arrow.png)
+        center center no-repeat;
+      background-size: contain;
+      transform: translateY(-50%);
+    }
+    @media (min-width: 1025px) {
+      &:hover {
+        opacity: 1;
+        &::before {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+}
+/* --------------------------------------------------
+	footer
+-------------------------------------------------- */
+.footer {
+  .footContact {
+    padding: 60px 0;
+    background: #fbf4e9;
+    .secContainer {
+      .pageSecTtlBox.left {
+        padding: 20px 0 0;
+        background: none;
+      }
+      .itemPanel {
+        .itemBox {
+          padding: 20px;
+          border: 1px solid #eadac1;
+          + .itemBox {
+            margin: 10px 0 0;
+            background: #ffffff;
+          }
+          .dl {
+            text-align: center;
+            .dt {
+              font-size: 20px;
+            }
+            .dd {
+              .btnMore {
+                width: 240px;
+                margin: 0 auto;
+              }
+              .tel {
+                a {
+                  display: inline-block;
+                  font-size: 30px;
+                  line-height: 1.3;
+                }
+                > p {
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    @media (min-width: 1025px) {
+      .secContainer {
+        display: flex;
+        justify-content: space-between;
+        .pageSecTtlBox {
+          width: 220px;
+        }
+        .itemPanel {
+          width: calc(100% - 450px);
+          .itemBox {
+            .dl {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              .dt {
+                width: 48%;
+                padding: 10px 0;
+                border-right: 1px solid #21583d;
+              }
+              .dd {
+                width: 50%;
+                padding: 10px 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .footPanel {
+    padding: 60px 0 20px;
+    .secWrap01 {
+      position: relative;
+    }
+    .pagetop {
+      position: absolute;
+      top: -30px;
+      right: 0;
+      width: 50px;
+      cursor: pointer;
+    }
+    .logo {
+      margin: 0 0 20px;
+      font-size: 24px;
+    }
+    .txt {
+      line-height: 1.7;
+    }
+    .copy {
+      margin: 100px 0 0;
+    }
+  }
+}
+
+/* --------------------------------------------------
+	fadeAnimation
+-------------------------------------------------- */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff; /* 背景カラー */
+  z-index: 9999; /* 一番手前に */
+  pointer-events: none; /* 他の要素にアクセス可能にするためにポインターイベントは無効に */
+  opacity: 0; /* 初期値では非表示 */
+  -webkit-transition: opacity 0.8s ease; /* アニメーション時間は 0.8秒 */
+  -ms-transition: opacity 0.8s ease;
+  -moz-transition: opacity 0.8s ease;
+  transition: opacity 0.8s ease;
+}
+
+/*body要素に.fadeoutセレクタがある場合には、レイヤーが表示されるようにopacityを１に設定します。*/
+
+body.fadeout::after {
+  opacity: 1;
+}
+
+/*お好みで、.fadeoutセレクタ以下の他の要素にもアニメーション用のCSSを定義します*/
+/*DEMOではページ遷移時にarticle要素のスケールもアニメーションさせています*/
+
+body.fadeout article {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}

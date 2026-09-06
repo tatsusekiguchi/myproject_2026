@@ -1,0 +1,66 @@
+// ▽header▽
+header.header
+	.headWrap
+		.logo
+			a(href="")
+				img(src=(root_path || '') + "image/common/header_logo.png", alt="")
+			span ACTYOU TRAVEL
+		nav.navBox
+			.navList
+				ul
+					li
+						a(href="") 選ばれる理由
+					li
+						a(href="") ご利用の流れ
+					li
+						a(href="") よくあるご質問
+					li
+						a(href="") ブログ
+					li
+						a(href="") 会社概要
+			.navItemBox
+				.navItem01
+					ul
+						li
+							a(href="") 会社概要
+						li
+							a(href="") お知らせ
+						li
+							a(href="") 採用情報
+						li
+							a(href="") お問い合わせ
+				.navItem02
+					.telBox
+						.tel01
+							a(href="tel:0529514451")
+								span TEL：
+								em 052-951-4451
+						.tel02
+							a(href="tel:0529613360")
+								span 旅行代理店の方は ０５２-９６１-３３６０
+					.mailBox
+						a(href="")
+							span お問い合わせ
+			.langBox
+				dl.language.accord
+					dt.lang
+						p JA
+					dd.langList
+						ul
+							li
+								a(href="https://translate.google.com/translate?sl=ja&tl=en&u=" + baseurl, target="_blank", rel="noopener noreferrer")
+									div
+										p 英語
+							li
+								a(href="https://translate.google.com/translate?sl=ja&tl=zh-CN&u=" + baseurl, target="_blank", rel="noopener noreferrer")
+									div
+										p 中国語
+							li
+								a(href="https://translate.google.com/translate?sl=ja&tl=ko&u=" + baseurl, target="_blank", rel="noopener noreferrer")
+									div
+										p 韓国語
+	.hamburger
+		span
+		span
+		span
+// △header△

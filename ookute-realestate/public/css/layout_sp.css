@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+	画面用CSS（PC/SMP）
+===================================================*/
+/*////////////////////////////////////////////////////////////
+	propertylist
+///////////////////////////////////////////////////////////*/
+.propertylistMain .next.propertylistMain .title_box::before {
+  background: url("../image/company/hd_bg.jpg") no-repeat center;
+  background-size: cover;
+}

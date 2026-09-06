@@ -1,0 +1,208 @@
+{
+  "key": "group_reform_case_introduction",
+  "title": "リフォーム事例紹介",
+  "fields": [
+    {
+      "key": "field_reform_cases",
+      "label": "リフォーム事例",
+      "name": "reform_cases",
+      "type": "repeater",
+      "instructions": "リフォーム事例を追加・編集・削除できます。ドラッグアンドドロップで順番を変更できます。",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "field_case_title",
+      "min": 0,
+      "max": 0,
+      "layout": "table",
+      "button_label": "事例を追加",
+      "sub_fields": [
+        {
+          "key": "field_main_image",
+          "label": "メイン画像",
+          "name": "main_image",
+          "type": "image",
+          "instructions": "事例のメイン画像を選択してください",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "return_format": "array",
+          "preview_size": "medium",
+          "library": "all",
+          "min_width": "",
+          "min_height": "",
+          "min_size": "",
+          "max_width": "",
+          "max_height": "",
+          "max_size": "",
+          "mime_types": "jpg,jpeg,png,webp"
+        },
+        {
+          "key": "field_case_title",
+          "label": "施工名",
+          "name": "case_title",
+          "type": "text",
+          "instructions": "施工名を入力してください（30文字以内）",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "例：キッチンリフォーム",
+          "prepend": "",
+          "append": "",
+          "maxlength": 30
+        },
+        {
+          "key": "field_cost",
+          "label": "費用",
+          "name": "cost",
+          "type": "text",
+          "instructions": "費用を入力してください（30文字以内）",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "例：150万円～200万円",
+          "prepend": "",
+          "append": "",
+          "maxlength": 30
+        },
+        {
+          "key": "field_construction_period",
+          "label": "工期",
+          "name": "construction_period",
+          "type": "text",
+          "instructions": "工期を入力してください（30文字以内）",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "例：2週間",
+          "prepend": "",
+          "append": "",
+          "maxlength": 30
+        },
+        {
+          "key": "field_description",
+          "label": "説明文",
+          "name": "description",
+          "type": "textarea",
+          "instructions": "事例の詳細説明を入力してください",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "リフォームの内容や特徴について詳しく説明してください",
+          "maxlength": "",
+          "rows": 4,
+          "new_lines": "br"
+        },
+        {
+          "key": "field_supplement_images",
+          "label": "補足画像",
+          "name": "supplement_images",
+          "type": "repeater",
+          "instructions": "補足画像とキャプションを追加できます（最大3つまで）",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "collapsed": "field_supplement_caption",
+          "min": 0,
+          "max": 3,
+          "layout": "table",
+          "button_label": "画像を追加",
+          "sub_fields": [
+            {
+              "key": "field_supplement_image",
+              "label": "画像",
+              "name": "image",
+              "type": "image",
+              "instructions": "補足画像を選択してください",
+              "required": 1,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "return_format": "array",
+              "preview_size": "thumbnail",
+              "library": "all",
+              "min_width": "",
+              "min_height": "",
+              "min_size": "",
+              "max_width": "",
+              "max_height": "",
+              "max_size": "",
+              "mime_types": "jpg,jpeg,png,webp"
+            },
+            {
+              "key": "field_supplement_caption",
+              "label": "キャプション",
+              "name": "caption",
+              "type": "text",
+              "instructions": "画像のキャプションを入力してください（30文字以内）",
+              "required": 0,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "default_value": "",
+              "placeholder": "例：施工前の様子",
+              "prepend": "",
+              "append": "",
+              "maxlength": 30
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page_template",
+        "operator": "==",
+        "value": "page-earthquake-resistant.php"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "耐震リフォームページの事例紹介セクション用のフィールドグループです。"
+}

@@ -1,0 +1,1175 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*===================================================
+	画面用CSS（SP）
+===================================================*/
+
+/*////////////////////////////////////////////////////////////
+	TOP
+///////////////////////////////////////////////////////////*/
+/* --------------------------------------------------
+	kv
+-------------------------------------------------- */
+#top #kv {
+	height: 330px;
+}
+	#top #kv .kvWrap {
+		position: relative;
+		height: 100%;
+		z-index: -1;
+	}
+	#top #kv .kvWrap h1 {
+		position: relative;
+		width: 210px;
+		margin: 0 auto;
+		line-height: 330px;
+		z-index: 2;
+	}
+
+#top #kv .kvBox {
+	position: absolute;
+	top: 0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+	#top #kv .kvBox > div {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+	}
+	#top #kv .kvBox .kv01 {
+		background: url("../image/top/sp/kv_01.png") center no-repeat;
+		background-size: cover;
+	}
+	#top #kv .kvBox .kv02 {
+		background: url("../image/top/sp/kv_02.png") center no-repeat;
+		background-size: cover;
+	}
+	#top #kv .kvBox .kv03 {
+		background: url("../image/top/sp/kv_03.png") center no-repeat;
+		background-size: cover;
+	}
+
+/* --------------------------------------------------
+	concept
+-------------------------------------------------- */
+#top #concept {
+	padding: 30px 0 0;
+}
+#top #concept h2 + p {
+	margin-bottom: 30px;
+	font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+	font-size: 18px;
+	color: #b39a4d;
+	text-align: center;
+}
+#top #concept .btnMenu {
+	width: 190px;
+	margin: 30px auto 0;
+	text-align: center;
+	line-height: 60px;
+	background: url("../image/common/btn_bg_01.png") center no-repeat;
+	background-size: cover;
+}
+	#top #concept .btnMenu a {
+		display: block;
+		font-size: 14px;
+		color: #ffffff;
+	}
+#top #concept .category {
+	padding: 60px 0;
+	background: url("../image/top/sp/cate_bg.png") center no-repeat;
+	background-size: cover;
+}
+	#top #concept .category ol li + li {
+		margin-top: 20px;
+	}
+
+/* --------------------------------------------------
+	about
+-------------------------------------------------- */
+#top #about {
+	padding: 30px 0 90px;
+}
+#top #about h2 + p {
+	margin-bottom: 30px;
+	font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+	font-size: 18px;
+	color: #b39a4d;
+	text-align: center;
+}
+
+#top #about ul li + li {
+	margin-top: 40px;
+}
+#top #about ul li img {
+	margin-bottom: 20px;
+}
+#top #about ul li dl dt {
+	margin-bottom: 20px;
+	font-size: 20px;
+}
+#top #about ul li dl dt:after {
+	width: 100px;
+}
+
+/* --------------------------------------------------
+	system
+-------------------------------------------------- */
+#top #system {
+	padding: 60px 0;
+}
+#top #system:before {
+	background-size: 422px auto;
+}
+#top #system h2 {
+	top:-30px;
+}
+#top #system h2 + p {
+	margin-bottom: 40px;
+	font-size: 18px;
+}
+#top #system dl {
+	padding-left: 80px;
+}
+
+#top #system dl:nth-child(1) {
+	background: url("../image/top/system_icon_01.png") left 10px center no-repeat;
+	background-size: 50px auto;
+}
+#top #system dl:nth-child(2) {
+	background: url("../image/top/system_icon_02.png") left center no-repeat;
+	background-size: 70px auto;
+}
+#top #system dl:nth-child(3) {
+	background: url("../image/top/system_icon_03.png") left 10px center no-repeat;
+	background-size: 45px auto;
+}
+#top #system dl:nth-child(4) {
+	background: url("../image/top/system_icon_04.png") left 10px center no-repeat;
+	background-size: 57px auto;
+}
+#top #system dl + dl {
+	margin-top: 40px;
+}
+	#top #system dl dt {
+		padding-bottom: 0;
+		font-size: 19px;
+		background-size: 270px auto;
+	}
+
+/* --------------------------------------------------
+	handmade
+-------------------------------------------------- */
+#top #handmade {
+	padding: 60px 0;
+}
+#top #handmade h2 + div {
+	margin-bottom: 20px;
+overflow: hidden;
+}
+#top #handmade ul {
+/*	overflow: hidden;*/
+	margin: -10px 0 10px -1%;
+}
+	#top #handmade ul li {
+		float: left;
+		width: 49%;
+		margin: 10px 0 0 1%;
+	}
+#top #handmade h2 + div + p {
+	margin-bottom: 20px;
+}
+#top #handmade .btnMail {
+	width: 280px;
+	margin: 0 auto;
+}
+
+/* --------------------------------------------------
+	gallery
+-------------------------------------------------- */
+#top #gallery {
+	padding: 60px 0 30px;
+}
+#top #gallery h2 {
+	top:-30px;
+}
+#top #gallery h2 + p {
+	margin-bottom: 30px;
+	font-size: 18px;
+}
+#top #gallery ul {
+	margin-bottom: 30px;
+}
+	#top #gallery ul li + li {
+		margin-top: 10px;
+	}
+#top #gallery ul + p {
+	width: 190px;
+}
+
+/* --------------------------------------------------
+	blog
+-------------------------------------------------- */
+#top #blog {
+	padding: 30px 0;
+}
+#top #blog .ttlBox {
+	margin-bottom: 30px;
+}
+	#top #blog .ttlBox > p {
+		font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+		font-size: 18px;
+		color: #b39a4d;
+		text-align: center;
+	}
+#top #blog dl {
+	padding: 20px 0;
+}
+	#top #blog dl dt {
+		width: 100px;
+		padding-left: 20px;
+		background-size: 15px auto;
+	}
+
+/* --------------------------------------------------
+	sns
+-------------------------------------------------- */
+#top #sns {
+	padding: 0 0 30px;
+}
+#top #sns .snsList {
+	margin-bottom: 50px;
+}
+	#top #sns .snsList li {
+		width: 35px;
+	}
+	#top #sns .snsList li + li {
+		margin-left: 40px;
+	}
+#top #sns .insta dt {
+	margin-bottom: 20px;
+	font-size: 18px;
+}
+#top #sns .btnViewAll {
+	width: 190px;
+	margin: 30px auto 0;
+	line-height: 60px;
+}
+	#top #sns .btnViewAll a {
+		font-size: 14px;
+	}
+
+/* --------------------------------------------------
+	workshop
+-------------------------------------------------- */
+#top #workshop {
+	padding: 30px 0;
+}
+#top #workshop .ttlBox > p {
+	margin-bottom: 30px;
+	font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+	font-size: 18px;
+	color: #b39a4d;
+	text-align: center;
+}
+#top #workshop .box {
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+	#top #workshop .box .movie {
+		position: relative;
+		margin-bottom: 20px;
+		height: 240px;
+	}
+		#top #workshop .box .movie iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100% !important;
+			height: 100% !important;
+		}
+	#top #workshop .box .photo {
+		overflow: hidden;
+	}
+		#top #workshop .box .photo li {
+			float: left;
+			width: 49%;
+		}
+		#top #workshop .box .photo li + li {
+			float: right;
+		}
+
+
+/*////////////////////////////////////////////////////////////
+	サロンについて
+///////////////////////////////////////////////////////////*/
+
+/* --------------------------------------------------
+	concept
+-------------------------------------------------- */
+#salon #concept {
+	padding: 40px 0 0;
+}
+#salon #concept h2 {
+	margin: 0 auto 20px;
+}
+#salon #concept h2 + p {
+	margin-bottom: 30px;
+	font-size: 18px;
+}
+#salon #concept .cont {
+	padding: 0;
+	background: none;
+}
+	#salon #concept .cont img {
+		display: block;
+		margin-bottom: 20px;
+	}
+	#salon #concept .cont p {
+		padding: 0 10px;
+	}
+/* --------------------------------------------------
+	information
+-------------------------------------------------- */
+#salon #info {
+	padding: 50px 0;
+}
+#salon #info h2 {
+	top:-30px;
+	font-size: 8px;
+}
+#salon #info h2 + p {
+	margin-bottom: 30px;
+	font-size: 18px;
+}
+
+/* --------------------------------------------------
+	about us
+-------------------------------------------------- */
+#salon #aboutUs {
+	padding: 50px 0 0;
+}
+#salon #aboutUs h2 {
+	margin: 0 auto 20px;
+}
+#salon #aboutUs .contWrap {
+	padding: 0;
+}
+#salon #aboutUs table {
+	width: 100%;
+	margin-bottom: 10px;
+	font-size: 13px;
+}
+	#salon #aboutUs table th {
+		display: block;
+		padding: 10px 0;
+		text-align: center;
+		color: #ffffff;
+		background: #b49c4f;
+	}
+	#salon #aboutUs table td {
+		display: block;
+		padding: 10px 0;
+		text-align: center;
+		background: #fefaef;
+	}
+#salon #aboutUs .mapBox {
+	height: 240px;
+	margin-top: 20px;
+}
+
+/* --------------------------------------------------
+	accesss
+-------------------------------------------------- */
+#salon #access {
+	padding: 50px 0 30px;
+}
+#salon #access h2 {
+	margin: 0 auto 20px;
+}
+#salon #access .ttl {
+	margin-bottom: 30px;
+	font-size: 18px;
+}
+#salon #access ol {
+	margin-bottom: 60px;
+}
+#salon #access ol li + li {
+	margin-top: 20px;
+}
+	#salon #access ol li .imgBox {
+		width: 50%;
+	}
+	#salon #access ol li .txtBox {
+		padding: 10px 15px;
+	}
+		#salon #access ol li .txtBox dt {
+			margin-bottom: 10px;
+			font-size: 15px;
+		}
+		#salon #access ol li .txtBox dd {
+			font-size: 12px;
+		}
+		#salon #access ol li .txtBox dd p + p {
+			margin-top: 40px;
+		}
+#salon #access .parking dt {
+	margin-bottom: 10px;
+	font-size: 15px;
+}
+#salon #access .parking dd {
+	font-size: 12px;
+}
+#salon #access .parking dd img {
+	max-width: 225px;
+	margin-bottom: 10px;
+}
+
+/*////////////////////////////////////////////////////////////
+	サロンについて
+///////////////////////////////////////////////////////////*/
+
+/* --------------------------------------------------
+	about
+-------------------------------------------------- */
+#nail #about h2 {
+	margin: 50px auto 20px;
+}
+#nail #about h2 + p {
+	margin-bottom: 30px;
+	font-size: 18px;
+}
+/*こだわり*/
+#nail #rani {
+	padding: 20px 0 60px;
+}
+#nail #rani h3 {
+	width: 95px;
+}
+#nail #rani h4 {
+	margin: 0 auto 20px;
+}
+#nail #rani .one h4 {
+	width: 18px;
+}
+#nail #rani .two h4 {
+	width: 30px;
+}
+#nail #rani .three h4 {
+	width: 30px;
+}
+#nail #rani .four h4 {
+	width: 28px;
+}
+#nail #rani h4 + p {
+	margin-bottom: 20px;
+	font-size: 13px;
+}
+#nail #rani .one {
+	padding: 60px 0;
+	background: url("../image/nail/one_bg_sp.png") center no-repeat;
+	background-size: cover;
+}
+#nail #rani  .two {
+	padding: 30px 0;
+}
+#nail #rani .three {
+	padding: 60px 0;
+	background: url("../image/nail/three_bg_sp.png") center no-repeat;
+	background-size: cover;
+}
+
+#nail #rani .box > div {
+	margin-bottom: 20px;
+}
+#nail #rani .box > p {
+	text-align: left;
+}
+
+/* --------------------------------------------------
+	voice
+-------------------------------------------------- */
+#nail #voice {
+	padding: 60px 0 30px;
+}
+#nail #voice h2 {
+	top:-30px;
+}
+#nail #voice ul li + li {
+	margin-top: 30px;
+}
+#nail #voice dl dt {
+	margin-bottom: 20px;
+	font-size: 18px;
+}
+#nail #voice dl dt:after {
+	width: 100px;
+}
+#nail #voice .btn {
+	width: 270px;
+	margin: 30px auto 0;
+	line-height: 63px;
+}
+	#nail #voice .btn a {
+		font-size: 12px;
+	}
+
+/*////////////////////////////////////////////////////////////
+	KORUGI
+///////////////////////////////////////////////////////////*/
+#korugi #sec01 {
+	padding: 60px 0 30px;
+}
+#korugi #sec01 h2 {
+	margin: 0 auto 20px;
+}
+#korugi #sec01 section + section {
+	margin-top: 40px;
+}
+#korugi #sec01 h3 {
+	margin-bottom: 20px;
+	font-size: 18px
+}
+#korugi #sec01 .imgBox > img {
+	display: block;
+	margin-bottom: 20px;
+}
+#korugi .effect {
+	margin: 30px auto 50px;
+	padding: 10px;
+}
+	#korugi .effect dt {
+		margin: 0 0 10px 10px;
+		font-size: 18px;
+	}
+	#korugi .effect ul li {
+		width: 48%;
+		font-size: 12px;
+	}
+
+#korugi #check {
+	margin: 40px auto 20px;
+}
+
+#korugi #check > li {
+	padding: 10px 20px;
+}
+#korugi #check > li + li {
+	margin-top: 50px;
+}
+#korugi #check > li:before,
+#korugi #check > li + li:before {
+	top: -10px;
+	left: -10px;
+	width: 50px;
+	height: 50px;
+	background-size: 50px auto;
+}
+#korugi #check h3 {
+	margin-bottom: 10px;
+	padding-left: 40px;
+}
+#korugi #check .flow {
+	margin-bottom: 40px;
+}
+	#korugi #check .flow li + li {
+		margin-top: 30px;
+	}
+	#korugi #check .flow li > div dl + dl {
+		margin-top: 20px;
+	}
+	#korugi #check .flow li > div dl dt {
+		font-size: 13px;
+	}
+	#korugi #check .movie dt {
+		font-size: 18px;
+	}
+	#korugi #check .movie dd {
+		height: 200px;
+	}
+#korugi .caution {
+	padding: 15px;
+}
+	#korugi .caution dt {
+		font-size: 13px;
+	}
+	#korugi .caution dd {
+		font-size: 12px;
+	}
+#korugi .btn {
+	width: 270px;
+	margin: 30px auto;
+	line-height: 63px;
+}
+	#korugi .btn a {
+		font-size: 12px;
+	}
+
+/*////////////////////////////////////////////////////////////
+	メニュー
+///////////////////////////////////////////////////////////*/
+.menuSec h2 {
+	margin: 0 auto 20px;
+}
+.menuSec .menuNav {
+	margin-bottom: 25px;
+	border-bottom: 4px solid #b39a4d;
+}
+	.menuSec .menuNav li {
+		height: 50px;
+	}
+		.menuSec .menuNav li a {
+			font-size: 12px;
+		}
+.menuSec .menuWrap {
+	padding: 0;
+}
+
+/*特典*/
+.menuSec .special {
+	margin-bottom: 50px;
+}
+.menuSec .special h3 {
+	margin-bottom: 20px;
+	font-size: 18px;
+}
+.menuSec .special h3:before {
+	top: 15px;
+	left: -60px;
+	width: 45px;
+	height: 6px;
+	background-size: 45px auto;
+}
+.menuSec .special h3:after {
+	top: 15px;
+	right: -60px;
+	width: 45px;
+	height: 6px;
+	background-size: 45px auto;
+}
+.menuSec .special ul li {
+	
+}
+	.menuSec .special ul li dl {
+		padding: 7% 0 10%;
+		background: url("../image/menu/special_bg_sp.png") no-repeat;
+		background-size: 100% auto;
+	}
+		.menuSec .special ul li dl dt {
+			margin-bottom: 10px;
+			font-size: 15px;
+		}
+		.menuSec .special ul li dl dd {
+			font-size: 10px;
+		}
+/*////////////////////////////////////////////////////////////
+	ネイルメニュー
+///////////////////////////////////////////////////////////*/
+
+/*料金*/
+#nailSec .price h3 {
+	background-size: 540px auto;
+}
+	#nailSec .price h3 span {
+		margin-bottom: 30px;
+		padding: 0 0 10px 50px;
+		font-size: 10px;
+		background-size: 40px auto;
+	}
+#nailSec .price > dl > dt {
+	margin-bottom: 20px;
+	font-size: 18px;
+}
+#nailSec .price > dl > dt:after {
+	width: 100px;
+}
+
+#nailSec .price .tbl01 th {
+	width: 200px;
+	padding: 10px 0;
+}
+#nailSec .price .tbl01 td {
+	padding: 10px 0;
+}
+	#nailSec .price .tbl01 td .btnCheck {
+		width: 108px;
+		margin-left: 20px;
+	}
+
+#nailSec .price .mens {
+	margin-bottom: 20px;
+	padding: 10px;
+}
+	#nailSec .price .mens dt {
+		display: inline-block;
+		width: 130px;
+	}
+	#nailSec .price .mens dt + dd {
+		margin-bottom: 10px;
+	}
+
+#nailSec .price .itemList {
+	margin-bottom: 30px;
+}
+	#nailSec .price .itemList li {
+		padding: 15px 0;
+	}
+		#nailSec .price .itemList table th {
+			width: 130px;
+			padding: 10px 0;
+		}
+		#nailSec .price .itemList table td {
+			padding: 10px 0;
+		}
+			#nailSec .price .itemList table td .btnCheck {
+				width: 108px;
+				margin-left: 20px;
+			}
+
+#nailSec .price .option {
+	margin-bottom: 20px;
+	font-size: 12px;
+}
+	#nailSec .price .tbl02 th {
+		width: 200px;
+		padding: 10px 0;
+	}
+	#nailSec .price .tbl02 td {
+		padding: 10px 0;
+	}
+#nailSec .price .tbl02 + aside {
+	padding: 0 0 10px;
+}
+
+#nailSec .price .listBox {
+	margin-bottom: 30px;
+	padding: 30px 0;
+}
+	#nailSec .price .listBox li {
+		float: none;
+		width: 100%;
+	}
+	#nailSec .price .listBox li + li {
+		float: none;
+		margin-top: 40px;
+	}
+	#nailSec .price .listBox li .ttl {
+		max-width: 140px;
+		margin: 0 auto 20px;
+		font-size: 18px;
+	}
+	#nailSec .price .listBox dl {
+		margin: 0 auto 20px;
+	}
+	#nailSec .price .listBox dl dd + dd {
+		font-size: 10px;
+	}
+	#nailSec .price .listBox li p + p {
+		margin: 20px auto 0;
+	}
+#nailSec .price .listBox .btnCheck {
+	width: 108px;
+}
+
+#nailSec .price .footMenu {
+	margin-bottom: 50px;
+}
+#nailSec .price .footMenu table {
+	margin-bottom: 20px;
+}
+	#nailSec .price .footMenu table th {
+		width: 190px;
+		padding: 10px 0;
+	}
+	#nailSec .price .footMenu table td {
+		padding: 10px 0;
+	}
+#nailSec .price .footMenu dl {
+	max-width: 400px;
+	margin-bottom: 20px;
+}
+	#nailSec .price .footMenu dl dd + dd {
+		font-size: 10px;
+	}
+
+/*////////////////////////////////////////////////////////////
+	コルギメニュー
+///////////////////////////////////////////////////////////*/
+#korugiSec .ttl01 {
+	font-size: 18px;
+}
+#korugiSec .ttl01:after {
+	width: 100px;
+}
+
+#korugiSec .topBox {
+	margin-bottom: 30px;
+}
+#korugiSec .topBox dl dd div {
+	padding-bottom: 30px;
+}
+#korugiSec .topBox dl dd div > p {
+	padding-top: 20px;
+}
+#korugiSec .topBox table th {
+	width: 200px;
+	padding: 10px 0;
+}
+#korugiSec .topBox table td {
+	padding: 10px 0;
+}
+
+#korugiSec #ticket01 h3 {
+	margin-bottom: 30px;
+}
+#korugiSec #ticket01 div {
+	padding-bottom: 30px;
+}
+#korugiSec #ticket01 div + div,
+#korugiSec #ticket01 dl + dl {
+	margin-top: 30px;
+}
+
+#korugiSec .option {
+	margin: 30px 0;
+}
+#korugiSec .option dt {
+	margin-bottom: 20px;
+	font-size: 18px;
+}
+#korugiSec .option dt:before {
+	top: 15px;
+	left: -60px;
+	width: 45px;
+	height: 6px;
+	background-size: 45px auto;
+}
+#korugiSec .option dt:after {
+	top: 15px;
+	right: -60px;
+	width: 45px;
+	height: 6px;
+	background-size: 45px auto;
+}
+#korugiSec .option p {
+	max-width: 280px;
+}
+
+#korugiSec .first table th {
+	width: 280px;
+	padding: 10px 0;
+	font-size: 11px;
+}
+	#korugiSec .first table th span {
+		font-size: 10px;
+	}
+#korugiSec .first table td {
+	padding: 10px 0;
+}
+
+#korugiSec #ticket02 {
+	overflow: hidden;
+}
+#korugiSec #ticket02 h3:before {
+	background: none;
+}
+#korugiSec #ticket02 h3:after {
+	background: none;
+}
+#korugiSec #ticket02 div {
+	padding: 20px 10px;
+	font-size: 13px;
+}
+#korugiSec #ticket02 aside {
+	font-size: 11px;
+}
+
+
+/*////////////////////////////////////////////////////////////
+	酵素風呂 ホワイトニング
+///////////////////////////////////////////////////////////*/
+.itemBox  .ttl01 {
+	font-size: 18px;
+}
+.itemBox  .ttl01:after {
+	width: 100px;
+}
+.itemBox {
+	margin-bottom: 30px;
+	padding-bottom: 20px;
+}
+.itemBox dl dd div {
+	padding-bottom: 20px;
+}
+
+.itemBox table th {
+	width: 200px;
+	padding: 10px 0;
+}
+.itemBox table td {
+	padding: 10px 0;
+}
+
+/*////////////////////////////////////////////////////////////
+	酵素風呂
+///////////////////////////////////////////////////////////*/
+/* --------------------------------------------------
+	about
+-------------------------------------------------- */
+#enzyme #about {
+	padding: 30px 0 0;
+	margin-bottom: 50px;
+}
+#enzyme #about h2 {
+	margin: 0 auto 20px;
+}
+#enzyme #about h2 + p {
+	margin-bottom: 30px;
+	padding: 0 10px;
+	font-size: 18px;
+}
+#enzyme #about .imgBox {
+	margin-bottom: 30px;
+}
+#enzyme #about .imgBox > img {
+	display: block;
+	margin-bottom: 20px;
+}
+
+#enzyme #about .recommend {
+	margin: 0 auto 40px;
+	padding: 10px;
+}
+	#enzyme #about .recommend dt {
+		margin-bottom: 5px;
+		font-size: 18px;
+	}
+	#enzyme #about .recommend dt:after {
+		width: 200px;
+	}
+	#enzyme #about .recommend dd {
+		font-size: 12px;
+	}
+
+#enzyme #about h3 {
+	margin-bottom: 30px;
+	font-size: 18px;
+}
+#enzyme #about h3:after {
+	width: 100px;
+}
+
+#enzyme #about .secret {
+	padding: 30px 0;
+}
+#enzyme #about .secret .box + .box {
+	margin-top: 40px;
+}
+#enzyme #about .secret .box img {
+	display: block;
+	margin-bottom: 30px;
+}
+
+#enzyme #about .detox {
+	padding: 30px 0;
+}
+
+#enzyme #about .detox .box + .box {
+	margin-top: 40px;
+}
+#enzyme #about .detox .box dl {
+	margin-bottom: 10px;
+}
+
+/* --------------------------------------------------
+	voice
+-------------------------------------------------- */
+#enzyme #voice {
+	padding: 50px 0;
+}
+#enzyme #voice h2 {
+	top:-30px;
+}
+	#enzyme #voice dl + dl {
+		margin-top: 30px;
+	}
+		#enzyme #voice dl dt {
+			font-size: 18px;
+			text-align: center;
+		}
+		#enzyme #voice dl dt:after {
+			width: 150px;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+		}
+
+/* --------------------------------------------------
+	bottle
+-------------------------------------------------- */
+#enzyme #bottle  {
+	padding: 50px 0;
+}
+#enzyme #bottle .ttlBox {
+	margin-bottom: 30px;
+}
+	#enzyme #bottle .ttlBox > .secTtl {
+		margin: 0 auto 30px;
+	}
+	#enzyme #bottle .ttlBox > p {
+		font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+		font-size: 18px;
+		color: #b39a4d;
+		text-align: center;
+	}
+#enzyme #bottle .ttlBox + p {
+	margin: 0 auto 50px;
+}
+#enzyme #bottle .check dt {
+	margin-bottom: 30px;
+	font-size: 18px;
+}
+#enzyme #bottle .check dt:after {
+	width: 100px;
+}
+#enzyme #bottle .check dd {
+	height: 300px;
+}
+#enzyme #bottle .btn {
+	width: 270px;
+	margin: 30px auto 0;
+	line-height: 63px;
+}
+	#enzyme #bottle .btn a {
+		font-size: 12px;
+	}
+
+/*////////////////////////////////////////////////////////////
+	gallery
+///////////////////////////////////////////////////////////*/
+#galleryBox {
+	margin-top: 50px;
+	padding: 50px 0 30px;
+}
+#galleryBox h2 {
+	top:-30px;
+}
+#galleryBox h2 + p {
+	margin-bottom: 30px;
+	padding: 0 10px;
+	font-size: 18px;
+}
+#galleryBox ul {
+	margin: -2% 0 0 -2%;
+}
+	#galleryBox ul li {
+		width: 48%;
+		margin: 2% 0 0 2%;
+	}
+
+.galleryList {
+	padding: 63px 0 50px;
+}
+.phtoList {
+	margin: -2% 0 0 -2%;
+}
+	.phtoList li {
+		width: 48%;
+		margin: 2% 0 0 2%;
+	}
+
+/*////////////////////////////////////////////////////////////
+	CONTACT
+///////////////////////////////////////////////////////////*/
+#contact .telBox {
+	max-width: 270px;
+	margin: 25px auto 50px;
+}
+	#contact .telBox dt {
+		top: -10px;
+		left: 20%;
+		font-size: 14px;
+	}
+	#contact .telBox dd {
+		padding: 25px 10px 20px;
+	}
+		#contact .telBox dd .tel a {
+			font-size: 29px;
+		}
+		#contact .telBox dd .tel + p {
+			font-size: 10px;
+		}
+		#contact .telBox dd aside {
+			font-size: 10px;
+		}
+
+#contactBox {
+	margin-top: 50px;
+	padding: 50px 0 35px;
+}
+#contactBox h2 {
+	top:-30px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+#contactBox h2 + p {
+	margin-bottom: 30px;
+	padding: 0 10px;
+	font-size: 18px;
+}
+
+#contactBox table th {
+	display: block;
+	width: 100%;
+	padding: 0 0 10px;
+	font-size: 18px;
+	vertical-align: middle;
+}
+#contactBox table td {
+	display: block;
+	width: 100%;
+	padding: 0 0 20px;
+}
+
+/* 入力項目
+--------------------------------------*/
+/*テキストボックス・メール・電話*/
+#contactBox input[type="text"],
+#contactBox input[type="email"],
+#contactBox input[type="tel"] {
+    height: 40px;
+    font-size: 14px;
+}
+/*テキストエリア*/
+#contactBox textarea {
+    height: 220px;
+    font-size: 14px;
+}
+#contactBox input[type="submit"],
+#contactBox input[type="button"] {
+	width: 194px;
+	height: 63px;
+	margin:20px auto 0;
+	background: url("../image/contact/btn_submit_sp.png") no-repeat;
+	background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+

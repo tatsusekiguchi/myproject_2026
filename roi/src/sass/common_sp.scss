@@ -1,0 +1,141 @@
+@charset "UTF-8";
+@import "./mixin";
+@import "./mod";
+/* CSS Document */
+
+/*===================================================
+	共通CSS（SMP）
+===================================================*/
+
+/* --------------------------------------------------
+	base
+-------------------------------------------------- */
+body {
+  min-width: 0;
+  font-size: $SPfontSize;
+}
+a:hover {
+  text-decoration: none;
+}
+/*改行*/
+.pcBreak {
+  display: none;
+}
+.spBreak {
+  display: block;
+}
+/*spのみ表示*/
+.pcHidden {
+  display: block;
+}
+.spHidden {
+  display: none;
+}
+#sideBtn {
+  display: none;
+}
+.topicPath {
+  display: none;
+}
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+.header {
+  padding: 25px;
+  .headWrap {
+    display: block;
+  }
+  .btnJoin {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    a {
+      display: block;
+      padding: 10px 0;
+      border-radius: 0;
+      .box {
+        > * {
+          height: 35px;
+        }
+        .ttl {
+          font-size: 15px;
+        }
+        .arrow {
+          width: 140px;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+/* --------------------------------------------------
+	nav
+-------------------------------------------------- */
+.navBox {
+  display: none;
+}
+
+/* --------------------------------------------------
+	main
+-------------------------------------------------- */
+.main {
+}
+.mapBox {
+  padding: 0 0 70%;
+}
+
+/* --------------------------------------------------
+	footer
+-------------------------------------------------- */
+.footer {
+  .footContainer {
+    padding: 40px 25px 100px;
+  }
+  .footPanel {
+    position: relative;
+  }
+  .logoBox {
+    margin: 0 0 20px;
+  }
+  .footNav {
+    margin: 0;
+    ul {
+      li {
+        display: block;
+        + li {
+          margin: 5px 0 0;
+        }
+      }
+    }
+  }
+  .footItem {
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    display: block;
+    .footFollow {
+      gap: 0 10px;
+      margin: 0 0 5px;
+      p {
+        font-size: 10px;
+      }
+      ul {
+        li {
+          width: 15px;
+        }
+      }
+    }
+    .footJoin {
+      a {
+        justify-content: flex-end;
+        em {
+          font-size: 11px;
+        }
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

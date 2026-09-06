@@ -1,0 +1,572 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+	画面用CSS（PC/SMP）
+===================================================*/
+/*////////////////////////////////////////////////////////////
+	propertyList
+///////////////////////////////////////////////////////////*/
+.propertyListMain.next .title_box::before {
+  background: url("../image/company/hd_bg.jpg") no-repeat center;
+  background-size: cover;
+}
+.propertyListMain .propertyList_container {
+  padding: 0 0 80px;
+}
+.propertyListMain .contents_box {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 50px 20px 100px;
+  background: #f4f4f4;
+}
+.propertyListMain .topTitle {
+  margin: 0 0 40px;
+}
+.propertyListMain .topTitle h3 {
+  padding: 35px 0 0;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  background: url("../image/property/top_title_icon.png") center top no-repeat;
+  background-size: 40px auto;
+}
+.propertyListMain .listPanel {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 16px;
+}
+.propertyListMain .listPanel ul a {
+  display: block;
+  color: #181800;
+  background: #ffffff;
+  transition: 0.6s;
+}
+.propertyListMain .listPanel ul .photoBox {
+  position: relative;
+}
+.propertyListMain .listPanel ul .photoBox .photo {
+  position: relative;
+  height: 0;
+  padding: 0 0 66.66%;
+}
+.propertyListMain .listPanel ul .photoBox .photo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.6s;
+}
+.propertyListMain .listPanel ul .photoBox .label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.propertyListMain .listPanel ul .photoBox .label p {
+  display: inline-block;
+  padding: 5px 15px;
+  font-weight: 500;
+  color: #ffffff;
+  background: #d07d2b;
+}
+.propertyListMain .listPanel ul .photoBox .label p.black {
+  background: #050000;
+}
+.propertyListMain .listPanel ul .captionBox {
+  padding: 10px 20px;
+  background: #eaeaea;
+}
+.propertyListMain .listPanel ul .captionBox .ttl {
+  margin: 0 0 10px;
+  padding: 7px 10px;
+  background: #050000;
+  color: #ffffff;
+}
+.propertyListMain .listPanel ul .captionBox .ttl p {
+  font-weight: 400;
+  text-align: center;
+}
+.propertyListMain .listPanel ul .captionBox dl {
+  display: flex;
+  align-items: center;
+}
+.propertyListMain .listPanel ul .captionBox dl + dl {
+  margin: 5px 0 0;
+}
+.propertyListMain .listPanel ul .captionBox dl dd {
+  font-weight: 600;
+}
+.propertyListMain .listPanel ul .captionBox dl dd em {
+  font-style: normal;
+  font-size: 24px;
+}
+.propertyListMain .listPanel ul .infoBox {
+  padding: 15px 20px;
+}
+.propertyListMain .listPanel ul .infoBox .boxHorizontal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+.propertyListMain .listPanel ul .infoBox .boxHorizontal dl {
+  display: flex;
+  align-items: center;
+}
+.propertyListMain .listPanel ul .infoBox .boxHorizontal dl dt {
+  color: #d07d2b;
+}
+.propertyListMain .listPanel ul .infoBox .boxHorizontal dl dd {
+  font-weight: 600;
+}
+.propertyListMain .listPanel ul .infoBox .description {
+  margin: 15px 0 0;
+}
+.propertyListMain .listPanel ul .infoBox .description em {
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.7;
+}
+.propertyListMain .listPanel ul .infoBox .description span {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.7;
+}
+.propertyListMain .listPanel ul .infoBox .boxVertical {
+  margin: 15px 0 0;
+}
+.propertyListMain .listPanel ul .infoBox .boxVertical dl {
+  display: flex;
+  align-items: center;
+}
+.propertyListMain .listPanel ul .infoBox .boxVertical dl dt {
+  color: #77bd5a;
+}
+.propertyListMain .listPanel ul .infoBox .boxVertical dl dd {
+  font-weight: 600;
+}
+@media (min-width: 1101px) {
+  .propertyListMain .listPanel ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -40px 0 0 -30px;
+  }
+  .propertyListMain .listPanel ul li {
+    width: calc(33.3333333333% - 30px);
+    margin: 40px 0 0 30px;
+  }
+}
+.propertyListMain .list__pagination {
+  margin: 60px 0 0;
+}
+.propertyListMain .list__pagination .pagination {
+  display: flex;
+  justify-content: center;
+}
+.propertyListMain .list__pagination .pagination li {
+  margin: 0 10px;
+}
+.propertyListMain .list__pagination .pagination li a {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  font-weight: 500;
+  color: #ffffff;
+  border-radius: 50%;
+  border: 1px solid #f0ceac;
+  background: #f0ceac;
+}
+.propertyListMain .list__pagination .pagination li.current a {
+  background: #d07d2b;
+}
+.propertyListMain .list__pagination .pagination li.previous a {
+  border: none;
+  background: none;
+}
+.propertyListMain .list__pagination .pagination li.previous a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background: url("../image/property/pagination_prev.png") no-repeat;
+  background-size: 100%;
+}
+.propertyListMain .list__pagination .pagination li.next a {
+  border: none;
+  background: none;
+}
+.propertyListMain .list__pagination .pagination li.next a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background: url("../image/property/pagination_next.png") no-repeat;
+  background-size: 100%;
+}
+
+/*////////////////////////////////////////////////////////////
+	property
+///////////////////////////////////////////////////////////*/
+.propertyDetailMain.next .title_box::before {
+  background: url("../image/company/hd_bg.jpg") no-repeat center;
+  background-size: cover;
+}
+.propertyDetailMain .propertyDetail_container {
+  overflow: hidden;
+  padding: 0 0 80px;
+}
+.propertyDetailMain .topTitle {
+  margin: 0 0 40px;
+}
+.propertyDetailMain .topTitle h3 {
+  padding: 35px 0 0;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  background: url("../image/property/top_title_icon.png") center top no-repeat;
+  background-size: 40px auto;
+}
+.propertyDetailMain .detailTopPanel {
+  margin: 0 0 30px;
+  padding: 0 20px;
+}
+.propertyDetailMain .detailTopPanel .detailTopBox {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f4f4f4;
+}
+.propertyDetailMain .detailTopPanel .detailTopBox .ttl01 p {
+  display: inline-block;
+  padding: 4px 15px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  background: #d07d2b;
+}
+.propertyDetailMain .detailTopPanel .detailTopBox .ttl02 p {
+  font-size: 18px;
+  font-weight: 500;
+}
+.propertyDetailMain .caseSliderPanel {
+  position: relative;
+  margin: 0 0 50px;
+}
+.propertyDetailMain .caseSliderPanel .caseSlider .slick-list {
+  overflow: visible;
+}
+.propertyDetailMain .caseSliderPanel .caseSlider .slick-slide {
+  position: relative;
+  padding: 20px;
+  border: 6px solid transparent;
+  transition: all 0.2s linear;
+}
+.propertyDetailMain .caseSliderPanel .caseSlider .slick-slide img {
+  width: 100%;
+  height: 30vw;
+  object-fit: cover;
+  opacity: 0.3;
+  transform: scale(0.8);
+  transition: opacity 0.5s, transform 0.5s;
+}
+.propertyDetailMain .caseSliderPanel .caseSlider .slick-slide .txt {
+  padding: 10px 0 0;
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+.propertyDetailMain .caseSliderPanel .caseSlider .slick-current {
+  border: 6px solid #050000;
+}
+.propertyDetailMain .caseSliderPanel .caseSlider .slick-current .txt {
+  opacity: 1;
+}
+.propertyDetailMain .caseSliderPanel .caseSlider .slick-current img {
+  opacity: 1;
+  transform: scale(1);
+}
+.propertyDetailMain .caseSliderPanel .caseSlider .slick-dots {
+  bottom: -80px;
+}
+.propertyDetailMain .caseSliderPanel--sp {
+  display: none;
+}
+.propertyDetailMain .detailMainContainer {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.propertyDetailMain .detailMainContainer p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.propertyDetailMain .pickupPanel {
+  margin: 0 0 40px;
+}
+.propertyDetailMain .pickupPanel .ttl {
+  display: inline-block;
+  padding: 2px 15px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  background: #d07d2b;
+}
+.propertyDetailMain .pickupPanel .pickupBox {
+  padding: 10px 20px;
+  border: 1px solid #050000;
+  background: #f4f4f4;
+}
+.propertyDetailMain .pickupPanel .pickupBox p {
+  font-weight: 400;
+}
+.propertyDetailMain .detailPanelTop {
+  margin: 0 0 60px;
+}
+.propertyDetailMain .detailPanelTop dl {
+  display: flex;
+  padding: 10px 0;
+  border-bottom: 1px dashed #000000;
+}
+.propertyDetailMain .detailPanelTop dl dt {
+  width: 140px;
+  padding: 8px 10px;
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+  background: #d07d2b;
+}
+.propertyDetailMain .detailPanelTop dl dd {
+  flex: 1;
+  padding: 0 0 0 10px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.propertyDetailMain .detailPanelTop dl dd p {
+  font-weight: 400;
+}
+@media (min-width: 1101px) {
+  .propertyDetailMain .detailPanelTop {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 20px;
+  }
+  .propertyDetailMain .detailPanelTop dl {
+    width: calc(50% - 20px);
+  }
+  .propertyDetailMain .detailPanelTop dl:nth-child(-n+2) {
+    border-top: 1px dashed #000000;
+  }
+  .propertyDetailMain .detailPanelTop dl.remarks {
+    width: 100%;
+  }
+  .propertyDetailMain .detailPanelTop dl dt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .propertyDetailMain .detailPanelTop dl dd {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.propertyDetailMain .floorInfoPanel {
+  margin: 0 0 60px;
+}
+.propertyDetailMain .floorInfoPanel .pTtl {
+  margin: 0 0 40px;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+}
+.propertyDetailMain .floorInfoPanel .floorInfoList {
+  border-top: 1px dashed #000000;
+}
+.propertyDetailMain .floorInfoPanel .floorInfoList .floorInfo {
+  padding: 10px 0;
+  border-bottom: 1px dashed #000000;
+}
+.propertyDetailMain .floorInfoPanel .floorInfoList .floorInfo .floorBox01 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.propertyDetailMain .floorInfoPanel .floorInfoList .floorInfo .floorBox01 .floorTtl01 p {
+  display: inline-block;
+  min-width: 120px;
+  padding: 2px 10px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  background: #eaeaea;
+}
+.propertyDetailMain .floorInfoPanel .floorInfoList .floorInfo .floorBox01 .floorTtl02 p {
+  font-weight: 400;
+}
+.propertyDetailMain .floorInfoPanel .floorInfoList .floorInfo .floorBox01 .floorStatus p {
+  display: inline-block;
+  min-width: 80px;
+  padding: 2px 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  text-align: center;
+}
+.propertyDetailMain .floorInfoPanel .floorInfoList .floorInfo .floorBox01 .floorStatus .black {
+  background: #050000;
+}
+.propertyDetailMain .floorInfoPanel .floorInfoList .floorInfo .floorBox01 .floorStatus .brown {
+  background: #a1580f;
+}
+.propertyDetailMain .floorInfoPanel .floorInfoList .floorInfo .floorBox02 ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+.propertyDetailMain .floorInfoPanel .floorInfoList .floorInfo .floorBox02 ul li a {
+  display: inline-block;
+  padding: 2px 15px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #050000;
+  border: 1px solid #050000;
+}
+.propertyDetailMain .floorInfoPanel .floorInfoList .floorInfo .floorBox03 .detailBtn {
+  display: block;
+  width: 130px;
+  border: 0;
+  padding: 4px 10px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  color: #ffffff;
+  text-align: center;
+  background: #616161;
+  cursor: pointer;
+}
+@media (min-width: 1101px) {
+  .propertyDetailMain .floorInfoPanel .floorInfoList .floorInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .propertyDetailMain .floorInfoPanel .floorInfoList .floorInfo .floorBox01 {
+    width: 45%;
+  }
+  .propertyDetailMain .floorInfoPanel .floorInfoList .floorInfo .floorBox02 {
+    flex: 1;
+  }
+}
+.propertyDetailMain .storeInfoPanel .titleBox {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 0 0 50px;
+  padding: 20px;
+  background: #f4f4f4;
+}
+.propertyDetailMain .storeInfoPanel .titleBox .ttl01 p {
+  display: inline-block;
+  padding: 0 15px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  background: #d07d2b;
+}
+.propertyDetailMain .storeInfoPanel .titleBox .ttl01 p.black {
+  background: #050000;
+}
+.propertyDetailMain .storeInfoPanel .titleBox .ttl02 p {
+  font-size: 18px;
+  font-weight: 500;
+}
+.propertyDetailMain .storeInfoPanel .storeSlider {
+  max-width: 800px;
+  margin: 0 auto 50px;
+}
+.propertyDetailMain .storeInfoPanel .storeDetail {
+  margin: 0 0 60px;
+}
+.propertyDetailMain .storeInfoPanel .storeDetail dl {
+  display: flex;
+  padding: 10px 0;
+  border-bottom: 1px dashed #000000;
+}
+.propertyDetailMain .storeInfoPanel .storeDetail dl dt {
+  width: 140px;
+  padding: 8px 10px;
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+  background: #d07d2b;
+}
+.propertyDetailMain .storeInfoPanel .storeDetail dl dd {
+  flex: 1;
+  padding: 0 0 0 10px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.propertyDetailMain .storeInfoPanel .storeDetail dl dd p {
+  font-weight: 400;
+}
+@media (min-width: 1101px) {
+  .propertyDetailMain .storeInfoPanel .storeDetail {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 20px;
+  }
+  .propertyDetailMain .storeInfoPanel .storeDetail dl {
+    width: calc(50% - 20px);
+  }
+  .propertyDetailMain .storeInfoPanel .storeDetail dl:nth-child(-n+2) {
+    border-top: 1px dashed #000000;
+  }
+  .propertyDetailMain .storeInfoPanel .storeDetail dl.remarks {
+    width: 100%;
+  }
+  .propertyDetailMain .storeInfoPanel .storeDetail dl dt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .propertyDetailMain .storeInfoPanel .storeDetail dl dd {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.propertyDetailMain .mapBox {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding: 0 0 45%;
+}
+.propertyDetailMain .mapBox iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}

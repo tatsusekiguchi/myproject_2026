@@ -1,0 +1,111 @@
+/* Scss Document */
+/* Sass Document */
+footer .contact_box {
+  padding: .55rem .3rem;
+  background: url("../image/footer_bg_sp.jpg") no-repeat center;
+  background-size: cover; }
+  footer .contact_box .title {
+    width: 1.8rem;
+    margin: 0 auto .4rem;
+    font-size: 0.13rem;
+    font-weight: 4100;
+    letter-spacing: 0.1em;
+    line-height: 120%;
+    text-align: center;
+    color: #fff; }
+    footer .contact_box .title::before {
+      content: " " attr(data-title);
+      width: 1.4rem;
+      display: block;
+      padding: 0 0 .1rem;
+      margin: 0 auto .2rem;
+      border-bottom: 2px solid #fff;
+      font-size: 0.25rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      line-height: 120%; }
+  footer .contact_box .btn {
+    width: 100%;
+    margin: 0 auto; }
+    footer .contact_box .btn a {
+      display: block;
+      padding: .2rem 0;
+      border: 1px solid #fff;
+      font-size: 0.13rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      line-height: 220%;
+      text-align: center;
+      color: #fff; }
+footer .footer_box {
+  margin: .6rem .2rem .4rem; }
+  footer .footer_box::after {
+    content: "";
+    height: 0;
+    display: block;
+    clear: both; }
+  footer .footer_box dl {
+    width: 100%;
+    margin-right: 90px; }
+    footer .footer_box dl dt {
+      margin-bottom: 30px; }
+      footer .footer_box dl dt a {
+        display: block;
+        text-align: center;
+        color: #000000; }
+        footer .footer_box dl dt a span {
+          display: block;
+          text-align: center;
+          font-size: 0.12rem;
+          font-weight: 300 0.1em;
+          letter-spacing: 160%;
+          line-height: 160%;
+          color: #666666; }
+        footer .footer_box dl dt a img {
+          width: 2rem;
+          margin: 0 auto;
+          display: block;
+          margin-bottom: .1rem; }
+    footer .footer_box dl dd {
+      margin-bottom: .35rem;
+      font-size: 0.13rem;
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      line-height: 170%;
+      text-align: center; }
+      footer .footer_box dl dd a {
+        font-size: 0.12rem;
+        font-weight: 400;
+        letter-spacing: 0;
+        line-height: 120%;
+        color: #000000; }
+  footer .footer_box nav {
+    width: auto;
+    display: block; }
+    footer .footer_box nav::after {
+      content: "";
+      height: 0;
+      display: block;
+      clear: both; }
+    footer .footer_box nav ul:nth-child(1) {
+      display: none; }
+    footer .footer_box nav ul li {
+      margin-bottom: .25rem; }
+      footer .footer_box nav ul li a {
+        display: block;
+        font-size: 0.12rem;
+        font-weight: 400;
+        letter-spacing: 0;
+        line-height: 120%;
+        text-align: center;
+        color: #000000; }
+footer small {
+  display: block;
+  margin: 0 0 .15rem;
+  font-size: 0.12rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  line-height: 160%;
+  text-align: center; }
+
+/*# sourceMappingURL=footer-sp.css.map */

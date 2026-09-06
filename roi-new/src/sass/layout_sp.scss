@@ -1,0 +1,708 @@
+@charset "UTF-8";
+@import "./mixin";
+@import "./mod";
+/* CSS Document */
+
+/*===================================================
+	画面用CSS（PC/SMP）
+===================================================*/
+
+/*////////////////////////////////////////////////////////////
+	TOP
+///////////////////////////////////////////////////////////*/
+#top {
+  .topMvContainer {
+    .mvPanel {
+      height: calc(100svh - 80px);
+      .mvBox {
+        height: calc(100vh - 80px);
+        img {
+          height: calc(100vh - 80px);
+        }
+      }
+      &--sp {
+        display: block;
+      }
+      &--pc {
+        display: none;
+      }
+    }
+    .titlePanel01 {
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      padding: 35px 0;
+      transform: translate(-50%, -50%);
+      .titleBox {
+        .sub {
+          font-size: 12px;
+        }
+        .title {
+          letter-spacing: 0.05em;
+          span {
+            font-size: 28px;
+          }
+          em {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    .titlePanel02 {
+      position: absolute;
+      bottom: -13vw;
+      left: 0;
+      width: 100%;
+    }
+    .sideFollow {
+      display: none;
+    }
+  }
+  #section {
+    &__about {
+      padding: 60px 25px;
+      .secPanel {
+        width: 100%;
+        .txtBox {
+          margin: 0 0 30px;
+          .secTtl {
+            margin: 0 0 30px;
+            font-size: 28px;
+          }
+          .txt {
+            font-size: 14px;
+            p + p {
+              margin: 20px 0 0;
+            }
+          }
+        }
+        .photo {
+          position: relative;
+          height: 0;
+          padding: 0 0 60%;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: url("../image/top/about_img_bg_sp.png") no-repeat;
+            background-size: cover;
+          }
+        }
+      }
+    }
+    &__works {
+      padding: 60px 25px 25px;
+      .secContainer {
+        width: 100%;
+      }
+      .secTtl {
+        margin: 0 0 20px;
+        .sub {
+          font-size: 13px;
+        }
+        .ttl {
+          font-size: 28px;
+          span {
+            font-size: 34px;
+          }
+        }
+      }
+      .topBox {
+        margin: 0 0 25px;
+        h3 {
+          margin: 0 0 10px;
+          font-size: 16px;
+        }
+        .txt {
+          font-size: 14px;
+        }
+      }
+      .listBox {
+        padding: 0;
+        ul {
+          li {
+            padding: 25px;
+            + li {
+              margin: 25px 0 0;
+            }
+          }
+          .photo {
+            margin: 0 0 15px;
+          }
+          dl {
+            dt {
+              margin: 0 0 10px;
+              padding: 0 0 10px;
+              font-size: 16px;
+            }
+            dd {
+              font-size: 14px;
+              line-height: 1.7;
+            }
+          }
+        }
+      }
+    }
+    &__environment {
+      padding: 60px 25px;
+      .secContainer {
+        width: 100%;
+      }
+      .secTtl {
+        margin: 0 0 20px;
+        .sub {
+          font-size: 13px;
+        }
+        .ttl {
+          font-size: 28px;
+        }
+      }
+      .topBox {
+        margin: 0 0 25px;
+        h3 {
+          margin: 0 0 10px;
+          font-size: 16px;
+        }
+        .txt {
+          font-size: 14px;
+        }
+      }
+      .secPanel {
+        padding: 30px 25px;
+        + .secPanel {
+          margin: 25px 0 0;
+        }
+        .secBox {
+        }
+        .ttlBox {
+          text-align: center;
+          .num {
+            margin: 0 0 5px;
+            font-size: 32px;
+          }
+          .ttl {
+            font-size: 21px;
+          }
+        }
+        .imgBox {
+          margin: 0 0 20px;
+          .img {
+            margin: 0 auto;
+          }
+          .img01 {
+            width: 98px;
+          }
+          .img02 {
+            width: 180px;
+          }
+          .img03 {
+            width: 200px;
+          }
+          .img04 {
+            width: 100px;
+          }
+          .img05 {
+            width: 150px;
+          }
+          .img06 {
+            width: 170px;
+          }
+        }
+        dl {
+          dt {
+            margin: 0 0 10px;
+            font-size: 15px;
+            text-align: center;
+          }
+          dd {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    &__voices {
+      padding: 60px 25px;
+      .secContainer {
+        width: 100%;
+        .secTtl {
+          margin: 0 0 30px;
+          .sub {
+            font-size: 13px;
+          }
+          .ttl {
+            font-size: 28px;
+          }
+        }
+      }
+      .secPanelList {
+        .secPanel {
+          padding: 40px 0;
+          .secBox {
+            .photo {
+              padding: 0 0 66%;
+            }
+            .txtBox {
+              padding: 30px 0 0;
+              .nameBox {
+                .name02 {
+                  font-size: 14px;
+                }
+              }
+              .txt {
+                font-size: 14px;
+              }
+              .more {
+                width: 178px;
+                margin: 30px auto 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    &__message {
+      .secContainer {
+        padding: 60px 25px;
+        .secPanel {
+          max-width: 1300px;
+          margin: 0 auto;
+          .txtBox {
+            padding: 0 0 40px;
+            .secTtl {
+              margin: 0 0 40px;
+              .sub {
+                margin: 0 0 10px;
+                font-size: 14px;
+              }
+              .ttl {
+                font-size: 30px;
+              }
+            }
+            .txt {
+              font-size: 14px;
+              p {
+                + p {
+                  margin: 25px 0 0;
+                }
+              }
+              + .txt {
+                margin: 30px 0 0;
+              }
+            }
+          }
+          .photoBox {
+            display: block;
+            .photo01 {
+              right: 0;
+              width: 100%;
+              padding: 0 0 30px 40px;
+              margin: 0 0 30px;
+              &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 180px;
+                height: 200px;
+              }
+              .photo {
+                position: relative;
+              }
+            }
+            .photo02 {
+              width: 70%;
+              max-width: 400px;
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+      .massagePhoto {
+        height: 110px;
+      }
+    }
+    &__faq {
+      padding: 60px 25px;
+      .secContainer {
+        width: 100%;
+      }
+      .secTtl {
+        margin: 0 0 30px;
+        .sub {
+          font-size: 13px;
+        }
+        .ttl {
+          font-size: 28px;
+        }
+      }
+      .secBoxList {
+        width: 100%;
+      }
+      .secBox {
+        + .secBox {
+          margin: 15px 0 0;
+        }
+        dl {
+          font-size: 14px;
+          dt {
+            gap: 0 5px;
+            padding: 10px 40px 10px 15px;
+            background: url("../image/common/accord_plus.png") right 20px center
+              no-repeat #e6e6e6;
+            background-size: 12px auto;
+            span {
+              font-size: 18px;
+              line-height: 1;
+            }
+            &.active {
+              background: url("../image/common/accord_minus.png") right 20px
+                center no-repeat #e6e6e6;
+              background-size: 12px auto;
+            }
+          }
+          dd {
+            gap: 0 5px;
+            padding: 10px 15px;
+            span {
+              font-size: 18px;
+              line-height: 1.3;
+            }
+          }
+        }
+      }
+    }
+    &__guideline {
+      padding: 60px 25px;
+      .secContainer {
+        width: 100%;
+      }
+      .secTtl {
+        margin: 0 0 30px;
+        .sub {
+          font-size: 13px;
+        }
+        .ttl {
+          font-size: 28px;
+        }
+      }
+      .infoBox {
+        font-size: 12px;
+        dl {
+          padding: 13px 0;
+          font-size: 12px;
+          dt {
+            width: 70px;
+            margin: 0;
+            span {
+              display: none;
+            }
+          }
+          dd {
+            width: calc(100% - 70px);
+          }
+        }
+      }
+    }
+    &__flow {
+      padding: 60px 25px;
+      .secContainer {
+        width: 100%;
+        .secTtl {
+          margin: 0 0 30px;
+          .sub {
+            font-size: 13px;
+          }
+          .ttl {
+            font-size: 28px;
+          }
+        }
+        .flowList {
+          ol {
+            li {
+              padding: 15px 25px;
+              font-size: 13px;
+              + li {
+                margin: 20px 0 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    &__profile {
+      padding: 60px 0;
+      .secContainer {
+        width: 100%;
+        .secTtl {
+          margin: 0 0 30px;
+          padding: 0 25px;
+          text-align: left;
+          .sub {
+            font-size: 13px;
+          }
+          .ttl {
+            font-size: 28px;
+          }
+        }
+        .secBox {
+          margin: 0 0 30px;
+          .photo {
+            padding: 0 0 60%;
+          }
+          .txtBox {
+            padding: 40px 25px 0;
+            dl {
+              dt {
+                margin: 0 0 20px;
+                font-size: 18px;
+              }
+              dd {
+                .txt {
+                  font-size: 13px;
+                  + .txt {
+                    margin: 20px 0 0;
+                  }
+                }
+                .salonLink {
+                  margin: 15px 0 0;
+                  a {
+                    font-size: 15px;
+                    .icon {
+                      width: 24px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .mapPanel {
+          padding: 0 25px;
+        }
+      }
+    }
+    &__features {
+      padding: 60px 0 60px 25px;
+      .secContainer {
+        padding: 0;
+        .secTtl {
+          margin: 0 0 30px;
+          .sub {
+            font-size: 52px;
+          }
+        }
+        .topBox {
+          margin: 0 0 30px;
+          padding: 0 25px 0 0;
+          .ttl {
+            margin: 0 0 15px;
+            font-size: 20px;
+          }
+          .txt {
+            font-size: 12px;
+          }
+        }
+        .flowSliderList {
+          margin: 0 0 0 -10px;
+          .slick-list {
+            padding-right: 25px !important;
+          }
+          .flowSliderBox {
+            margin: 0 10px;
+            padding: 20px;
+            .secBox {
+              .txtBox {
+                margin: 10px 0 0;
+                dl {
+                  dt {
+                    margin: 0 0 10px;
+                    padding: 0 0 10px;
+                    font-size: 14px;
+                  }
+                  dd {
+                    font-size: 12px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .progressbar {
+          width: calc(100% - 25px);
+          margin: 40px 0 0;
+        }
+      }
+    }
+    &__culture {
+      padding: 60px 25px;
+      .secContainer {
+        width: 100%;
+        .secTtl {
+          margin: 0 0 40px;
+          .sub {
+            font-size: 52px;
+          }
+          .slick-dots {
+            bottom: -40px;
+          }
+        }
+      }
+      .cultureSlideContainer {
+        .cultureSlidePanel {
+          padding: 20px 0;
+          border-top: 1px solid #ffffff;
+          border-bottom: 1px solid #ffffff;
+        }
+        .cultureSlideBox {
+          .txtBox {
+            padding: 20px 0 0;
+            dl {
+              min-height: 100px;
+              dt {
+                font-size: 14px;
+              }
+              dd {
+                font-size: 12px;
+              }
+            }
+            .buttonBox {
+              display: flex;
+              justify-content: center;
+              gap: 0 10px;
+              margin: 40px 0 0;
+              > * {
+                width: 40px;
+              }
+            }
+          }
+        }
+      }
+    }
+    &__join {
+      padding: 40px 25px 70px;
+      .secContainer {
+        .secTtl {
+          margin: 0 0 5px;
+          .sub {
+            font-size: 40px;
+          }
+        }
+        .btnJoin {
+          width: 180px;
+          margin: 20px auto 0;
+          a {
+            .box {
+              .ttl {
+                font-size: 12px;
+              }
+              .arrow {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .sectionEntry {
+    padding: 0;
+    .entryPanel {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 25px;
+      height: 400px;
+      background: url("../image/top/entry_panel_bg_sp.png") center no-repeat;
+      background-size: cover;
+      h2 {
+        margin: 0 0 10px;
+        font-size: 40px;
+      }
+      .txt {
+        font-size: 12px;
+      }
+      .snsList {
+        display: flex;
+        flex-direction: column;
+        gap: 15px 0;
+      }
+    }
+  }
+  .bottomEntry {
+    padding: 60px 25px;
+    background: url("../image/top/entry_panel_bg_sp.png") center no-repeat;
+    background-size: cover;
+    .entryPanel {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 25px;
+      h2 {
+        margin: 0 0 10px;
+        font-size: 40px;
+      }
+      .txt {
+        font-size: 12px;
+      }
+      .snsList {
+        display: flex;
+        flex-direction: column;
+        gap: 15px 0;
+      }
+    }
+  }
+  .fixedPhotoContainer {
+    .fixedPhoto {
+      height: 110px;
+    }
+  }
+}
+
+/* --------------------------------------------------
+	modal
+-------------------------------------------------- */
+.itemModal {
+  max-height: calc(100vh - 140px);
+  padding: 50px 25px;
+}
+.modalBox {
+  max-height: 100%;
+  padding: 25px;
+}
+.modalBoxInner {
+  .leftCont {
+    .staffSlidePanel {
+      .slick-slider {
+        padding: 0 0 20px;
+      }
+      .slick-dots {
+        bottom: -20px;
+      }
+    }
+    .nameBox {
+      display: none;
+    }
+  }
+  .rightCnt {
+    padding: 30px 0 0;
+    .commentBox {
+      dl {
+        + dl {
+          padding: 30px 0 0;
+        }
+        dt {
+          font-size: 14px;
+        }
+        dd {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+.modalClose {
+  width: 40px;
+  margin: 15px auto 0;
+}
+.modalCloseArea {
+  display: none;
+}

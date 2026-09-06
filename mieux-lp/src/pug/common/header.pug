@@ -1,0 +1,72 @@
+// ▽header▽
+header.header
+    .logoBox
+        .logo.logoWhite
+            a(href=(root_path || ''))
+                img(src=(root_path || '') + "image/common/header_logo.png", alt="")
+        .logo.logoBlack
+            a(href=(root_path || ''))
+                img(src=(root_path || '') + "image/common/header_logo_black.png", alt="")
+        .headTtl
+            p 東海エリアを中心に14店舗展開中の肌質改善サロン
+    .navBox
+        .navContainer
+            .navLogo
+                a(href="")
+                    img(src=(root_path || '') + "image/common/nav_logo.png", alt="")
+            .navList
+                ul
+                    li
+                        a(href="#section__vision") mieuxのビジョン
+                    li
+                        a(href="#section__store") 展開エリア
+                    //- li
+                    //-     a(href="#section__investment") 初期投資に関して
+                    li
+                        a(href="#section__message") オーナーメッセージ
+                    li
+                        a(href="#section__faq") よくある質問
+                    li
+                        a(href="#section__step") 採用までの流れ
+                ul
+                    li
+                        a(href="#section__attraction") ４つの魅力
+                    li
+                        a(href="#section__recommend") こんな方におすすめ
+                    li
+                        a(href="#section__flow") 開業までの流れ
+                    li
+                        a(href="#section__interview") FCオーナーの声
+            .navItem
+                ul
+                    li
+                        .btnMore
+                            a(href=(root_path || '') + "entry")
+                                span 応募する
+                    li
+                        .btnMore
+                            a(href=(root_path || '') + "contact")
+                                span お問い合わせ
+                    li
+                        .btnMore.btnOfficial
+                            a(href="http://mieux-cosme.com", target="_blank", rel="noopener")
+                                span オフィシャルサイト
+            .navSns
+                .insta
+                    a(href="https://www.instagram.com/mieux___official/", target="_blank", rel="noopener")
+                        img(src=(root_path || '') + "image/common/nav_insta.png", alt="")
+    .hamburger
+        span
+        span
+        span
+    .fixedNavBox
+        ul
+            li
+                a(href=(root_path || '') + "entry")
+                    span
+                        span 応募する
+            li
+                a(href=(root_path || '') + "contact")
+                    span
+                        span お問い合わせ
+// △header△

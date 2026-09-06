@@ -1,0 +1,44 @@
+{
+  "key": "group_65f8f7g9h8i6d",
+  "title": "その他ページ - おせち表示設定",
+  "fields": [
+    {
+      "key": "field_65f8f7g9h8i6e",
+      "label": "おせちセクションを表示",
+      "name": "other_osechi_visible",
+      "aria-label": "",
+      "type": "true_false",
+      "instructions": "チェックを入れると、おせちセクションが表示されます。お正月の時期のみチェックを入れてください。",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "message": "",
+      "default_value": 0,
+      "ui": 1,
+      "ui_on_text": "表示",
+      "ui_off_text": "非表示"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page_template",
+        "operator": "==",
+        "value": "other/index.php"
+      }
+    ]
+  ],
+  "menu_order": 4,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "show_in_rest": 0
+}

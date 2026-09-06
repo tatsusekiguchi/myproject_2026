@@ -1,0 +1,198 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+	共通CSS（SMP）
+===================================================*/
+/* --------------------------------------------------
+	base
+-------------------------------------------------- */
+body {
+  min-width: 0;
+  font-size: 13px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/*改行*/
+.pcBreak {
+  display: none;
+}
+
+.spBreak {
+  display: block;
+}
+
+/*spのみ表示*/
+.pcHidden {
+  display: block;
+}
+
+.spHidden {
+  display: none;
+}
+
+#sideBtn {
+  display: none;
+}
+
+.topicPath {
+  display: none;
+}
+
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+.header {
+  height: 78px;
+  padding: 20px 25px;
+}
+.header .headWrap {
+  display: block;
+}
+.header .headWrap .leftBox {
+  left: 25px;
+}
+.header .headWrap .leftBox .logo {
+  width: 30px;
+}
+.header .headTtl {
+  margin: 0 0 0 20px;
+  font-size: 13px;
+}
+.header .btnEntry {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.header .btnEntry a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 10px;
+  height: 80px;
+  padding: 10px 50px 10px 25px;
+  border-radius: 0;
+  background: #3170af;
+}
+.header .btnEntry a p {
+  font-size: 13px;
+  color: #fafafa;
+}
+.header .btnEntry a .icon {
+  width: 28px;
+}
+.header .hamburger {
+  top: 20px;
+  right: 20px;
+}
+
+/* --------------------------------------------------
+	nav
+-------------------------------------------------- */
+.navBox .navContainer {
+  display: block;
+  padding: 100px 25px 60px;
+}
+.navBox .infoPanel {
+  width: 100%;
+}
+.navBox .infoPanel .inner {
+  width: 100%;
+  margin: 0 auto;
+}
+.navBox .infoPanel .navList ul li + li {
+  margin: 15px 0 0;
+}
+.navBox .infoPanel .navList ul li a {
+  font-size: 14px;
+}
+.navBox .infoPanel .snsBox {
+  margin: 30px 0 0;
+}
+.navBox .infoPanel .snsBox > p {
+  margin: 0 0 15px;
+  font-size: 11px;
+}
+.navBox .infoPanel .snsBox .snsList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px 0;
+}
+.navBox .photoPanel {
+  display: none;
+}
+
+/* --------------------------------------------------
+	main
+-------------------------------------------------- */
+.mapBox {
+  padding: 0 0 70%;
+}
+
+.lineBtn a {
+  padding: 21px 15px 21px 20px;
+}
+
+.instaBtn a {
+  padding: 21px 15px 21px 20px;
+}
+
+/* --------------------------------------------------
+	footer
+-------------------------------------------------- */
+.footer .footContainer {
+  padding: 40px 25px 100px;
+}
+.footer .footPanel {
+  position: relative;
+}
+.footer .logoBox {
+  position: relative;
+  display: block;
+  margin: 0 0 20px;
+}
+.footer .logoBox .logo {
+  width: 40px;
+}
+.footer .logoBox .footBox p {
+  position: absolute;
+  top: 10px;
+  left: 60px;
+}
+.footer .footNav {
+  margin: 30px 0 0;
+}
+.footer .footNav ul li {
+  display: block;
+}
+.footer .footNav ul li + li {
+  margin: 5px 0 0;
+}
+.footer .footItem {
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+  display: block;
+}
+.footer .footItem .footFollow {
+  gap: 0 10px;
+  margin: 0 0 5px;
+}
+.footer .footItem .footFollow p {
+  font-size: 10px;
+}
+.footer .footItem .footFollow ul li {
+  width: 15px;
+}
+.footer .footItem .footEntry a {
+  justify-content: flex-end;
+}
+.footer .footItem .footEntry a em {
+  font-size: 11px;
+}
+.footer .footItem .footEntry a span {
+  font-size: 12px;
+}

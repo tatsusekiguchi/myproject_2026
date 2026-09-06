@@ -1,0 +1,217 @@
+@charset "UTF-8";
+@import "./mixin";
+@import "./mod";
+/* CSS Document */
+
+/*===================================================
+	共通CSS（SMP）
+===================================================*/
+
+/* --------------------------------------------------
+	base
+-------------------------------------------------- */
+body {
+  min-width: 0;
+  font-size: $SPfontSize;
+}
+a:hover {
+  text-decoration: none;
+}
+/*改行*/
+.pcBreak {
+  display: none;
+}
+.spBreak {
+  display: block;
+}
+/*spのみ表示*/
+.pcHidden {
+  display: block;
+}
+.spHidden {
+  display: none;
+}
+#sideBtn {
+  display: none;
+}
+.topicPath {
+  display: none;
+}
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+.header {
+  height: 78px;
+  padding: 20px 25px;
+  .headWrap {
+    display: block;
+    .leftBox {
+      left: 25px;
+      .logo {
+        width: 30px;
+      }
+    }
+    .rightBox {
+    }
+  }
+  .headTtl {
+    margin: 0 0 0 20px;
+    font-size: 13px;
+  }
+  .btnEntry {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0 10px;
+      height: 80px;
+      padding: 10px 50px 10px 25px;
+      border-radius: 0;
+      background: #3170af;
+      p {
+        font-size: 13px;
+        color: #fafafa;
+      }
+      .icon {
+        width: 28px;
+      }
+    }
+  }
+  .hamburger {
+    top: 20px;
+    right: 20px;
+  }
+}
+/* --------------------------------------------------
+	nav
+-------------------------------------------------- */
+.navBox {
+  .navContainer {
+    display: block;
+    padding: 100px 25px 60px;
+  }
+  .infoPanel {
+    width: 100%;
+    .inner {
+      width: 100%;
+      margin: 0 auto;
+    }
+    .navList {
+      ul {
+        li {
+          + li {
+            margin: 15px 0 0;
+          }
+          a {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .snsBox {
+      margin: 30px 0 0;
+      > p {
+        margin: 0 0 15px;
+        font-size: 11px;
+      }
+      .snsList {
+        display: flex;
+        flex-direction: column;
+        gap: 15px 0;
+      }
+    }
+  }
+  .photoPanel {
+    display: none;
+  }
+}
+
+/* --------------------------------------------------
+	main
+-------------------------------------------------- */
+.main {
+}
+.mapBox {
+  padding: 0 0 70%;
+}
+.lineBtn {
+  a {
+    padding: 21px 15px 21px 20px;
+  }
+}
+.instaBtn {
+  a {
+    padding: 21px 15px 21px 20px;
+  }
+}
+
+/* --------------------------------------------------
+	footer
+-------------------------------------------------- */
+.footer {
+  .footContainer {
+    padding: 40px 25px 100px;
+  }
+  .footPanel {
+    position: relative;
+  }
+  .logoBox {
+    position: relative;
+    display: block;
+    margin: 0 0 20px;
+    .logo {
+      width: 40px;
+    }
+    .footBox {
+      p {
+        position: absolute;
+        top: 10px;
+        left: 60px;
+      }
+    }
+  }
+  .footNav {
+    margin: 30px 0 0;
+    ul {
+      li {
+        display: block;
+        + li {
+          margin: 5px 0 0;
+        }
+      }
+    }
+  }
+  .footItem {
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    display: block;
+    .footFollow {
+      gap: 0 10px;
+      margin: 0 0 5px;
+      p {
+        font-size: 10px;
+      }
+      ul {
+        li {
+          width: 15px;
+        }
+      }
+    }
+    .footEntry {
+      a {
+        justify-content: flex-end;
+        em {
+          font-size: 11px;
+        }
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

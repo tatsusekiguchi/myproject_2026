@@ -1,0 +1,301 @@
+// ▽メイン▽
+main.main#conference
+    .pageTitleContainer
+        .pageTitleBox
+            h1 年次大会
+            p ANNUAL CONFERENCE
+    .topContainer
+        .secWrap01
+            .pageLinkList.linkList
+                ul
+                    li(data-target="nextConferenceHeadLine")
+                        | 次回の大会
+                    li(data-target="pastConferenceSection")
+                        | 過去の大会
+    .slidePanel
+        .slideBox
+            ul
+                li
+                    img(src=(root_path || '') + "image/conference/top_slide_01.png", alt="")
+                li
+                    img(src=(root_path || '') + "image/conference/top_slide_02.png", alt="")
+                li
+                    img(src=(root_path || '') + "image/conference/top_slide_03.png", alt="")
+                li
+                    img(src=(root_path || '') + "image/conference/top_slide_04.png", alt="")
+                li
+                    img(src=(root_path || '') + "image/conference/top_slide_05.png", alt="")
+    .mainContainer
+        .secWrap01
+            .nextConferenceHeadLine
+                .secBox
+                    .leftBox
+                        .pageSecTtlBox
+                            .pageSecTtl
+                                h2 次回の大会
+                    .rightBox
+                        ol
+                            li.linkBtn(data-target="sec01")
+                                p １.次回大会概要　日時、テーマ、会場
+                            li.linkBtn(data-target="sec02")
+                                p ２.大会委員長挨拶
+                            li.linkBtn(data-target="sec03")
+                                p ３.プログラム
+                            li.linkBtn(data-target="sec04")
+                                p ４.場所アクセス
+                            li.linkBtn(data-target="sec05")
+                                p ５.申込み方法
+                            li.linkBtn(data-target="sec06")
+                                p ６.その他
+            .subSection.sec01
+                .subSecTtl
+                    h3 １.次回大会概要　日時、テーマ、会場
+                .infoBox
+                    .inner
+                        dl
+                            dt テーマ
+                            dd 第38回大会　テーマ「Eco Creative TA」
+                        dl
+                            dt 日時
+                            dd 2026年7月25日（土）、26日（日）
+                        dl
+                            dt 会場
+                            dd 大正大学 ※日本交流分析学会と同時開催
+            .subSection.sec02
+                .subSecTtl
+                    h3 ２.大会委員長挨拶
+                .greetingPanel
+                    .pdfBox
+                        .imgBox
+                            a(href="")
+                                img(src=(root_path || '') + "image/conference/conference_pdf.png", alt="")
+                        p ※クリックで　PDFが開きます。
+                    .txtBox
+                        .txt
+                            p 「Eco-Creative TA ＝交流分析」<br>　このテーマには、これまでのTAの歩みと日本における発展を振り返りつつ、各実践の場で育まれてきた多様なエッセンスを持ち寄り、今を生きる私たちの姿をTAの視点から見つめ直す機会としたいという願いが込められています。<br>TAは、時代や社会の変化に寄り添いながら、人の成長と関係性の営みを支える実践として発展してきました。<br>今回の大会では、その豊かな知恵と実践を分かち合い、新たな視点や可能性をともに創り出す場となることを目指します。<br>皆さまとともに、これからのTAの探求を大いに楽しみ、学び合いのひとときとなることを心より願っています。
+                        .name
+                            p 第38回実行委員長　関　真利子　成城大学学生相談室　PTSTA/P
+            .subSection.sec03
+                .subSecTtl
+                    h3 ３. プログラム
+                .programContainer
+                    .programPanel
+                        p.pTtl 7月25日（土）
+                        .programTable
+                            table
+                                thead
+                                    tr
+                                        th.time 時間
+                                        th.program プログラム
+                                        th.instructor 講師
+                                tbody
+                                    tr
+                                        td.time
+                                            dl
+                                                dt 時間
+                                                dd 9:30
+                                        td.program
+                                            dl
+                                                dt プログラム
+                                                dd 受付
+                                        td.instructor
+                                            dl
+                                                dt 講師
+                                                dd 講師名
+                                    tr
+                                        td.time
+                                            dl
+                                                dt 時間
+                                                dd 9:30
+                                        td.program
+                                            dl
+                                                dt プログラム
+                                                dd 交流分析：TA入門ミニ講座<br>古典から最新のＴＡ基礎理論を紹介します。
+                                        td.instructor
+                                            dl
+                                                dt 講師
+                                                dd 講師名
+                    .programPanel
+                        p.pTtl 7月26日（日）
+                        .programTable
+                            table
+                                thead
+                                    tr
+                                        th.time 時間
+                                        th.program プログラム
+                                        th.instructor 講師
+                                tbody
+                                    tr
+                                        td.time
+                                            dl
+                                                dt 時間
+                                                dd 9:30
+                                        td.program
+                                            dl
+                                                dt プログラム
+                                                dd 受付
+                                        td.instructor
+                                            dl
+                                                dt 講師
+                                                dd 講師名
+                                    tr
+                                        td.time
+                                            dl
+                                                dt 時間
+                                                dd 9:30
+                                        td.program
+                                            dl
+                                                dt プログラム
+                                                dd 交流分析：TA入門ミニ講座<br>古典から最新のＴＡ基礎理論を紹介します。
+                                        td.instructor
+                                            dl
+                                                dt 講師
+                                                dd 講師名
+            .subSection.sec04
+                .subSecTtl
+                    h3 ４.場所アクセス
+                .accessBox
+                    .inner
+                        .txt
+                            | 大正大学巣鴨キャンパス　5号館（東京都豊島区西巣鴨3-20-1）<br>大学ウェブサイト　https://www.tais.ac.jp/<br>アクセス　https://www.tais.ac.jp/utility/access_map/<br>キャンパスマップ　https://www.tais.ac.jp/life/campus_map/
+            .subSection.sec05
+                .subSecTtl
+                    h3 ５.参加費と申込み方法
+                .innerSection
+                    .innerSecTtl
+                        h4 参加費
+                    .feeTable
+                        table
+                            thead
+                                tr
+                                    th.date 申込日
+                                    th.member 会員
+                                    th.affiliate 連携団体会員
+                                    th.nonmember 非会員
+                                    th.student 学生
+                            tbody
+                                tr
+                                    td.date
+                                        dl
+                                            dt 申込日
+                                            dd 早割料金<br>4/1～6/25
+                                    td.member
+                                        dl
+                                            dt 会員
+                                            dd 7000円
+                                    td.affiliate
+                                        dl
+                                            dt 連携団体会員
+                                            dd 7000円
+                                    td.nonmember
+                                        dl
+                                            dt 非会員
+                                            dd 7000円
+                                    td.student
+                                        dl
+                                            dt 学生
+                                            dd 7000円
+                    aside
+                        p ※当日参加はできません。かならず事前にお申込みください。
+                        p ※以下の方は、日本交流分析学会第51回大会（https://jsta51.second.net）からのお申込みをお願いします（参加費が異なります）。<br>①一般演題発表の発表者（共同発表者含む）となる、または一般演題発表を聞く方、②各種専門資格に係るポイント付与を希望する方、③製本したプログラム冊子が欲しい方
+                .innerSection
+                    .innerSecTtl
+                        h4 申込方法
+                    .cntTxt
+                        p 申込締切：１０月１８日正午<br>会場参加で申し込まれた場合でも、当日オンライン参加に変更可能です。その場合、ワークショップはハイブリッドプログラムのみ参加可となりますのでご了承ください。<br>申込者の方全員に後日、ハイブリッドプログラム参加用のZoom情報をメールでお送りします。<br>下記の参加申し込みリンクよりお申込みください。<br>参加費の振り込みもオンラインで決済しております。決済完了をもって申し込み完了です。
+            .subSection.sec06
+                .subSecTtl
+                    h3 ６.その他
+                .innerSection
+                    .innerSecTtl
+                        h4 キャンセルポリシー
+                    .cancelTable
+                        table
+                            thead
+                                tr
+                                    th.policy 返金の基本方針
+                                    th.amount 返金額
+                            tbody
+                                tr
+                                    td.policy
+                                        dl
+                                            dt 返金の基本方針
+                                            dd ①受講者都合による欠席・遅刻・中断
+                                    td.amount
+                                        dl
+                                            dt 返金額
+                                            dd 返金なし
+                                tr
+                                    td.policy
+                                        dl
+                                            dt 返金の基本方針
+                                            dd ②TAAJ都合による、中止
+                                    td.amount
+                                        dl
+                                            dt 返金額
+                                            dd 全額返金
+                                tr
+                                    td.policy
+                                        dl
+                                            dt 返金の基本方針
+                                            dd ③TAAJ都合による、中止（中断が１時間以上の場合）
+                                    td.amount
+                                        dl
+                                            dt 返金額
+                                            dd ％にて返金　　※分母:全セミナー時間数、分子：遅刻時間で換算した分を返金
+                                tr
+                                    td.policy
+                                        dl
+                                            dt 返金の基本方針
+                                            dd ④天災による中止
+                                    td.amount
+                                        dl
+                                            dt 返金額
+                                            dd 返金なし　　但し、TAAJ判断による開催中止→返金
+                    .cautionBox
+                        .txt
+                            p ①の例・・・受講者都合による中止(例:参加者が当日体調不良で参加出来なくなったなど)の場合、申し込まれたセミナー(ワークショップ)料金は返金なしの基本方針となります。
+                            p ②の例・・・TAAJ都合による中止(例:講師が当日交通事故に遭い、来ることが不可能など)の場合、申し込まれたセミナー(ワークショップ)料金は返金の基本方針となります。
+                            p ③の例・・・TAAJ都合による中断(例:TAAJ設定のオンラインが故障によりどなたにも送信出来ていない）となり、１時間以上中断した場合、
+                            p （４万円１日開催の午後１０時から午後４時の５時間セミナー実施の際中1時間中断となった場合)5分の1の代金である８０００円を返金となります。
+                            p ④の例・・・天災による中止(例:大地震など)の場合、返金なしとなります。
+            .subSection.pastConferenceSection
+                .subSecTtl
+                    h3 過去の大会
+                .pastTable
+                    table
+                        thead
+                            tr
+                                th.no No
+                                th.date 日時
+                                th.theme 大会テーマ
+                                th.venue 会場
+                                th.keynote 基調講演
+                                th.speaker 講師(敬称略)
+                        tbody
+                            tr
+                                td.no
+                                    dl
+                                        dt No
+                                        dd 第37回
+                                td.date
+                                    dl
+                                        dt 日時
+                                        dd 2025/10/25・26
+                                td.theme
+                                    dl
+                                        dt 大会テーマ
+                                        dd 「安全を感じることと絆」
+                                td.venue
+                                    dl
+                                        dt 会場
+                                        dd 晴和ホール/オンライン
+                                td.keynote
+                                    dl
+                                        dt 基調講演
+                                        dd 「安全と絆」
+                                td.speaker
+                                    dl
+                                        dt 講師(敬称略)
+                                        dd 花丘ちぐさ
+// △メイン△

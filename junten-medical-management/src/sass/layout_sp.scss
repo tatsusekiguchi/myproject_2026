@@ -1,0 +1,191 @@
+@charset "UTF-8";
+@import "./mixin";
+@import "./mod";
+/* CSS Document */
+
+/*===================================================
+	画面用CSS（PC/SMP）
+===================================================*/
+
+/*////////////////////////////////////////////////////////////
+	TOP
+///////////////////////////////////////////////////////////*/
+#top {
+  .topKvContainer {
+    margin: 0 0 60px;
+    .topKvPanel {
+      display: flex;
+      flex-direction: column;
+    }
+    .topKv {
+      width: 100%;
+    }
+    .kvTitleBox {
+      position: absolute;
+      top: 20%;
+      left: auto;
+      order: 1;
+      width: auto;
+      margin: 0 20px;
+      text-align: left;
+    }
+    .kvTitle {
+      h1 {
+        font-size: 20px;
+        line-height: 1.75;
+      }
+    }
+    .sub {
+      margin-top: 10px;
+      p {
+        font-size: clamp(12px, 3vw, 15px);
+        line-height: 2.4;
+      }
+    }
+  }
+  .sec01 {
+    padding: 60px 0 120px;
+  }
+  .sec02 {
+    padding: 60px 0 0;
+    .secContainer {
+      margin-top: 30px;
+      .secPanel {
+        padding: 50px 0;
+        & + .secPanel {
+          padding-top: 20px;
+        }
+      }
+      .ttlBox {
+        margin-bottom: 30px;
+        .ttl {
+          h3 {
+            font-size: 20px;
+          }
+        }
+        .sub {
+          margin-top: 5px;
+          font-size: 13px;
+        }
+      }
+      .secBox {
+        display: block;
+      }
+      .photo,
+      .txtBox {
+        width: 100%;
+      }
+      .txtBox {
+        margin-top: 25px;
+        h4 {
+          margin-bottom: 18px;
+          font-size: 19px;
+          line-height: 1.65;
+        }
+        .txt {
+          font-size: 13px;
+          line-height: 2;
+          br {
+            display: none;
+          }
+        }
+        .more {
+          margin-top: 20px;
+          a {
+            min-height: 40px;
+            font-size: 12px;
+          }
+        }
+        ul {
+          li {
+            padding: 14px 10px;
+          }
+        }
+      }
+    }
+  }
+  .sec03 {
+    padding: 60px 0;
+    .btnClinic {
+      max-width: 280px;
+      a {
+        img {
+          width: 90%;
+          max-width: 180px;
+        }
+      }
+    }
+  }
+  .sec04 {
+    padding: 60px 0;
+    .secContainer {
+      display: block;
+      margin-top: 45px;
+      .txtPanel,
+      .mapPanel {
+        width: 100%;
+      }
+      .infoBox {
+        dt {
+          width: 65px;
+          padding: 15px 10px;
+        }
+        dd {
+          padding: 15px 10px;
+          line-height: 1.7;
+        }
+      }
+      .mapPanel {
+        margin-top: 30px;
+      }
+      .mapBox {
+        padding-bottom: 66%;
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	contact
+///////////////////////////////////////////////////////////*/
+#contact {
+  .contactSection {
+    padding: 40px 0 80px;
+    .contactForm {
+      .formRow {
+        display: block;
+      }
+      .formLabel {
+        justify-content: flex-start;
+        width: 100%;
+        padding: 14px 10px 8px;
+        font-size: 15px;
+        .required {
+          margin-left: 12px;
+          font-size: 12px;
+        }
+      }
+      .formInput {
+        padding: 0 0 10px;
+      }
+      .formRowTextarea {
+        .formLabel {
+          padding-top: 14px;
+        }
+      }
+      .formSubmit {
+        padding-top: 25px;
+        button {
+          min-width: 180px;
+          min-height: 45px;
+        }
+      }
+    }
+    .contactComplete {
+      .completePanel {
+        padding: 40px 20px 30px;
+        font-size: 18px;
+      }
+    }
+  }
+}

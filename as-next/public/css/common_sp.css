@@ -1,0 +1,124 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+	共通CSS（SMP）
+===================================================*/
+/* --------------------------------------------------
+	base
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  body {
+    min-width: 0;
+    font-size: 14px;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  /*改行*/
+  .pcBreak {
+    display: none;
+  }
+
+  .spBreak {
+    display: block;
+  }
+
+  /*spのみ表示*/
+  .pcHidden {
+    display: block;
+  }
+
+  .spHidden {
+    display: none;
+  }
+
+  #sideBtn {
+    display: none;
+  }
+
+  .topicPath {
+    display: none;
+  }
+}
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+/* --------------------------------------------------
+	nav
+-------------------------------------------------- */
+/* --------------------------------------------------
+	main
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .pageTitlePanel {
+    padding: 60px 20px 40px;
+  }
+  .pageTitlePanel .pageTitle .about {
+    width: 240px;
+  }
+  .pageTitlePanel .pageTitle .reform {
+    width: 240px;
+  }
+  .pageTitlePanel .pageTitle .service {
+    width: 240px;
+  }
+  .pageTitlePanel .pageTitle .contact {
+    width: 200px;
+  }
+  .pageTitlePanel .pageTitle .works {
+    width: 200px;
+  }
+  .pageTitlePanel .pageTitle .blog {
+    width: 220px;
+  }
+  .pageTitlePanel .pageTitle .propertySearch {
+    width: 200px;
+  }
+
+  .mapBox {
+    padding: 0 0 70%;
+  }
+}
+/* --------------------------------------------------
+	footer
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .footer .footContact {
+    padding: 60px 0;
+  }
+  .footer .footContact .secBox .ttlBox {
+    margin: 0 0 20px;
+  }
+  .footer .footContact .secBox .ttlBox .secTtl {
+    margin: 0 0 30px;
+    font-size: 20px;
+  }
+  .footer .footPanel {
+    padding: 50px 0 15px;
+  }
+  .footer .footPanel .footBox {
+    display: block;
+  }
+  .footer .footPanel .footBox .leftBox {
+    margin: 0 0 20px;
+  }
+  .footer .footPanel .footBox .leftBox .ttl {
+    margin: 0 0 30px;
+    font-size: 20px;
+  }
+  .footer .footPanel .footBox .rightBox .bnrBox {
+    gap: 0 15px;
+  }
+  .footer .footPanel .footBox .rightBox .bnrBox .bnr01 {
+    width: 100px;
+  }
+  .footer .footPanel .footBox .rightBox .bnrBox .bnr02 {
+    width: 140px;
+  }
+  .footer .footPanel .copy {
+    margin: 50px 0 0;
+    font-size: 12px;
+  }
+}

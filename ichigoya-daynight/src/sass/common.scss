@@ -1,0 +1,395 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=BIZ+UDGothic:wght@400;700&display=swap");
+@import "./mixin";
+@import "./mod";
+/* CSS Document */
+/*===================================================
+	共通CSS（PC/SMP）
+===================================================*/
+
+/*////////////////////////////////////////////////////////////
+	共通設定
+///////////////////////////////////////////////////////////*/
+
+/* --------------------------------------------------
+	base
+-------------------------------------------------- */
+* {
+  box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+}
+body {
+  position: relative;
+  overflow-x: hidden;
+  //font-family:"游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+  // font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+  font-family:
+    "BIZ UDGothic", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体",
+    "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ",
+    "Meiryo", "verdana", sans-serif;
+  font-weight: 700;
+  line-height: 1.5;
+  color: $mainColor;
+  font-size: $PCfontSize;
+  background: $bgBaseColor;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: $lhBase;
+}
+
+.txt {
+  line-height: $lhTxt;
+}
+
+/*リンク */
+a {
+  color: $mainColor;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+
+/* 画像幅 */
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* clearfix */
+.clearfix::after {
+  content: ".";
+  display: block;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.spBreak {
+  display: none;
+}
+
+@media (min-width: 1025px) {
+  a {
+    transition: 0.6s;
+  }
+
+  a:hover {
+    opacity: 0.6;
+  }
+}
+
+.fax {
+  a {
+    pointer-events: none;
+  }
+}
+
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+@media (min-width: 1025px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    .headerWrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1240px;
+      min-height: 82px;
+      margin: 0 auto;
+      padding: 10px 20px;
+    }
+    .logoBox {
+      .headTtl {
+        margin: 0 0 10px;
+      }
+      .logo {
+        width: 80px;
+        a {
+          display: block;
+        }
+      }
+    }
+    .hamburger {
+      display: none;
+    }
+    &.topHeader {
+      background: none;
+    }
+    &.topHeader.fixed,
+    &.pageHeader {
+      background: #ffffff;
+      .logoBox {
+        position: relative;
+        .headTtl {
+          position: absolute;
+          top: 5px;
+          left: 70px;
+          font-size: 14px;
+          white-space: nowrap;
+        }
+        .logo {
+          width: 55px;
+          a {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* --------------------------------------------------
+	nav
+-------------------------------------------------- */
+@media (min-width: 1025px) {
+  .navBox {
+    .navList {
+      .ul {
+        display: flex;
+        gap: 0 20px;
+        .li {
+          padding: 0 0 0 20px;
+          a {
+            display: inline-block;
+            font-weight: 400;
+          }
+          &:nth-child(1) {
+            background: url(https://ichigoya-daynight.co.jp/system_panel/uploads/images/nav_icon_01.png)
+              left center no-repeat;
+          }
+          &:nth-child(2) {
+            background: url(https://ichigoya-daynight.co.jp/system_panel/uploads/images/nav_icon_02.png)
+              left center no-repeat;
+          }
+          &:nth-child(3) {
+            background: url(https://ichigoya-daynight.co.jp/system_panel/uploads/images/nav_icon_03.png)
+              left center no-repeat;
+          }
+          &:nth-child(4) {
+            background: url(https://ichigoya-daynight.co.jp/system_panel/uploads/images/nav_icon_04.png)
+              left center no-repeat;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* --------------------------------------------------
+	main
+-------------------------------------------------- */
+.main {
+  overflow: hidden;
+}
+.pageKvContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  margin: 95px 0 0;
+  padding: 20px;
+  .pageKvTitle {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 500px;
+      height: 300px;
+      margin: auto;
+      background: url(https://ichigoya-daynight.co.jp/system_panel/uploads/images/page_kv_ttl_bg.png)
+        no-repeat;
+      background-size: 100% auto;
+    }
+    .ttlInner {
+      position: relative;
+    }
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      color: #46a350;
+    }
+    h1 {
+      font-size: 34px;
+    }
+  }
+}
+.pageSecTtlBox {
+  margin: 0 0 50px;
+  text-align: center;
+  .pageSecTtl {
+    position: relative;
+    padding: 0 0 15px;
+    font-size: 30px;
+    font-weight: 400;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 45px;
+      height: 1px;
+      margin: 0 auto;
+      background: #46a350;
+    }
+  }
+}
+.secWrap {
+  max-width: 1640px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.secWrap01 {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.secWrap02 {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.mapBox {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding: 0 0 45%;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+.btnMoreBlue {
+  max-width: 200px;
+  a {
+    display: block;
+    padding: 8px 10px;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 4px;
+    background: #3795dc;
+    p {
+      background: url(https://ichigoya-daynight.co.jp/system_panel/uploads/images/btn_more_arrow_white.png)
+        right 5px center no-repeat;
+    }
+  }
+}
+.btnMoreGreen {
+  max-width: 200px;
+  a {
+    display: block;
+    padding: 8px 10px;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 4px;
+    background: #7dbabb;
+    p {
+      background: url(https://ichigoya-daynight.co.jp/system_panel/uploads/images/btn_more_arrow_white.png)
+        right 5px center no-repeat;
+    }
+  }
+}
+
+/* --------------------------------------------------
+	footer
+-------------------------------------------------- */
+.footer {
+  padding: 120px 0 20px;
+  text-align: center;
+  background: url(https://ichigoya-daynight.co.jp/system_panel/uploads/images/footer_bg.png)
+    center top no-repeat;
+  background-size: cover;
+  .secWrap01 {
+    position: relative;
+  }
+  .logo {
+    width: 88px;
+    margin: 0 auto;
+  }
+  .animal {
+    position: absolute;
+    top: 20px;
+    right: 17%;
+    width: 100px;
+  }
+  .pagetop {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 50px;
+    cursor: pointer;
+  }
+  .txt {
+    margin: 45px 0 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 2;
+  }
+  .footNav {
+    margin: 45px 0 0;
+    .ul {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      .li {
+        padding: 0 0 0 25px;
+        background-position: left center;
+        background-repeat: no-repeat;
+        &:nth-child(1) {
+          background-image: url(https://ichigoya-daynight.co.jp/system_panel/uploads/images/nav_icon_01.png);
+        }
+        &:nth-child(2) {
+          background-image: url(https://ichigoya-daynight.co.jp/system_panel/uploads/images/nav_icon_02.png);
+        }
+        &:nth-child(3) {
+          background-image: url(https://ichigoya-daynight.co.jp/system_panel/uploads/images/nav_icon_03.png);
+        }
+        &:nth-child(4) {
+          background-image: url(https://ichigoya-daynight.co.jp/system_panel/uploads/images/nav_icon_04.png);
+        }
+        a {
+          display: block;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  .copy {
+    margin: 100px 0 0;
+    font-size: 14px;
+    font-weight: 400;
+  }
+}

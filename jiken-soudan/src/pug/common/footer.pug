@@ -1,0 +1,27 @@
+// ▽footer▽
+.footer
+    .footPanel
+        .secWrap01
+            .pagetop.linkBtn(data-target="main")
+                img(src="https://jiken-soudan.com/system_panel/uploads/images/pagetop.png", alt="")
+            .footContainer
+                .infoBox
+                    .logo
+                        a(href='/')
+                            div
+                                img(src='https://jiken-soudan.com/system_panel/uploads/images/footer_logo.png' alt='')
+                    .txtBox
+                        .txt
+                            p 東京都新宿区新宿1丁目7番10号<br>グランドメゾン新宿御苑501
+                        .txt
+                            p 探偵業法　東京都公安委員会　第30190276号<br>行政書士法　日本行政書士会連合会　第20080232号
+                .footNav
+                    .ul
+                        each item in [{url:'/', label:'トップ'}, {url:'caselist', label:'解決事例'}, {url:'service', label:'サービス紹介'}, {url:'about', label:'事務所案内'}, {url:'about?sec02', label:'プロフィール'}, {url:'/?topContact', label:'お問合せ'}]
+                            .li
+                                a(href=item.url)
+                                    div
+                                        p= item.label
+            .copy
+                p ©2026　事件相談古村事務所.
+// △footer△

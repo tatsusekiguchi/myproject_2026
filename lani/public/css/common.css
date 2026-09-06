@@ -1,0 +1,366 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*===================================================
+	共通CSS（PC/SMP）
+===================================================*/
+
+/*////////////////////////////////////////////////////////////
+	共通設定
+///////////////////////////////////////////////////////////*/
+
+/* --------------------------------------------------
+	base
+-------------------------------------------------- */
+* {
+  box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  position: relative;
+  overflow-x: hidden;
+  min-width: 1000px;
+  -webkit-text-size-adjust: 100%;
+  font-family:
+    "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",
+    sans-serif;
+  line-height: 2;
+  color: #3c3c3c;
+  font-size: 17px;
+  background-color: #ffffff;
+}
+
+/*リンク */
+a {
+  color: #3c3c3c;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+article a:hover {
+  text-decoration: none;
+}
+
+/* 画像幅 */
+img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+/* clearfix */
+.clearfix::after {
+  content: ".";
+  display: block;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  visibility: hidden;
+}
+.wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.pcHidden {
+  display: none;
+}
+/*追従ボタン*/
+#sideBtn {
+  position: relative;
+  right: 15px;
+  float: right;
+  width: 200px;
+  margin-top: 70px;
+  z-index: 999;
+}
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+@media (min-width: 769px) {
+  header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 10px;
+  }
+  header .headWrap {
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  header .headWrap .logo {
+    float: left;
+    width: 18%;
+    max-width: 200px;
+    margin-top: 10px;
+  }
+  header .headBox {
+    position: relative;
+    float: right;
+    width: 80%;
+  }
+  header .headBox > p {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    font-size: 14px;
+    color: #898989;
+  }
+  #spMenuBtn {
+    display: none;
+  }
+
+  header.fixed {
+    position: fixed;
+    padding: 0 10px 10px;
+    z-index: 9999;
+    background: #ffffff;
+    box-shadow: 3px 3px 5px -3px rgba(0, 0, 0, 0.4);
+  }
+  header.fixed .headWrap .logo {
+    max-width: 100px;
+  }
+  header.fixed .headBox {
+    width: 85%;
+  }
+  header.fixed .headBox > p {
+    display: none;
+  }
+  header.fixed #btnList {
+    margin-bottom: 10px;
+  }
+  header.fixed #btnList li {
+    width: 30px;
+  }
+  header.fixed #btnList .reserve {
+    width: 100px;
+  }
+}
+/* --------------------------------------------------
+	nav
+-------------------------------------------------- */
+@media (min-width: 769px) {
+  #btnList {
+    margin-bottom: 40px;
+    text-align: right;
+  }
+  #btnList li {
+    display: inline-block;
+    width: 35px;
+    margin-left: 20px;
+    vertical-align: bottom;
+  }
+  #btnList .reserve {
+    width: 199px;
+  }
+
+  #gNav ul {
+    font-size: 15px;
+  }
+  #gNav ul li {
+    display: inline-block;
+    margin-left: 1.5%;
+  }
+  #navClose {
+    display: none;
+  }
+  #gNav ul + p {
+    display: none;
+  }
+}
+
+/* --------------------------------------------------
+	メイン
+-------------------------------------------------- */
+@media (min-width: 769px) {
+  .page {
+    padding-top: 210px;
+  }
+}
+
+.contWrap {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.secTtl {
+  width: 139px;
+  height: 139px;
+  font-family: "Century Gothic";
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  background: url("../image/common/ttl_bg_01.png") center no-repeat;
+  background-size: cover;
+}
+.secTtl > span {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.secTtl > span span {
+  display: table-cell;
+  vertical-align: middle;
+  line-height: 1.3;
+}
+/* --------------------------------------------------
+	kv
+-------------------------------------------------- */
+@media (min-width: 769px) {
+  .kv {
+    display: none;
+  }
+}
+
+/* --------------------------------------------------
+    ページトップ
+-------------------------------------------------- */
+#pagetop {
+  overflow: hidden;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  width: 90px;
+  height: 90px;
+  cursor: pointer;
+  z-index: 999;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: url("../image/common/pagetop.png") no-repeat;
+  background-size: 90px auto;
+}
+/* --------------------------------------------------
+	footer
+-------------------------------------------------- */
+/* --------------------------------------------------
+	お問い合わせはこちら
+-------------------------------------------------- */
+footer .contact {
+  padding: 50px 10px;
+  text-align: center;
+  background: #b39a4d;
+}
+footer .contact dt {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 30px;
+  font-family:
+    "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN",
+    "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+  font-size: 28px;
+  color: #ffffff;
+}
+footer .contact dt:before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  left: -110px;
+  width: 90px;
+  height: 13px;
+  background: url("../image/common/contact_ttl_line.png") no-repeat;
+}
+footer .contact dt:after {
+  content: "";
+  position: absolute;
+  top: 22px;
+  right: -110px;
+  width: 90px;
+  height: 13px;
+  background: url("../image/common/contact_ttl_line.png") no-repeat;
+}
+footer .contact dd {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+footer .contact dd ul {
+  overflow: hidden;
+}
+footer .contact dd ul li {
+  float: left;
+  width: 47%;
+}
+footer .contact dd ul li + li {
+  float: right;
+  margin-top: 15px;
+}
+footer .footBox {
+  overflow: hidden;
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 50px 10px;
+}
+footer .footBox .leftBox {
+  float: left;
+  width: 48%;
+}
+footer .footBox .leftBox dl dt {
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: #898989;
+}
+footer .footBox .leftBox dl dd {
+  display: table;
+  width: 100%;
+}
+footer .footBox .leftBox dl dd .spTtl {
+  display: none;
+}
+footer .footBox .leftBox dl dd img {
+  display: table-cell;
+  width: 200px;
+  vertical-align: middle;
+}
+footer .footBox .leftBox dl dd p {
+  display: table-cell;
+  vertical-align: middle;
+}
+footer .footBox .rightBox {
+  float: right;
+  width: 48%;
+}
+footer .footBox .rightBox dl {
+  position: relative;
+  padding: 40px 30px 30px;
+  font-family:
+    "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN",
+    "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+  font-size: 28px;
+  color: #b39a4d;
+  border: 1px dotted #b39a4d;
+}
+footer .footBox .rightBox dl dt {
+  position: absolute;
+  top: -25px;
+  left: 30px;
+  width: 380px;
+  padding: 0 40px;
+  background: #ffffff;
+}
+footer .footBox .rightBox dl dt span {
+  font-family:
+    "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",
+    sans-serif;
+}
+footer .footBox .rightBox dl dd em {
+  text-decoration: underline;
+}
+footer .copy {
+  padding: 10px;
+  color: #ffffff;
+  text-align: center;
+  background: #b39a4d;
+}
+
+footer .smtBtmLink {
+  display: none;
+}

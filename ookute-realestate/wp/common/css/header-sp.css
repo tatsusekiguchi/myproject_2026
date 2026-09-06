@@ -1,0 +1,143 @@
+/* Sass Document */
+/* Sass Document */
+header {
+  background: #fff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999;
+  transition: background 0.5s ease; }
+  header::after {
+    content: "";
+    height: 0;
+    display: block;
+    clear: both; }
+  header h1 {
+    width: 1.8rem;
+    float: left;
+    margin: 0.155rem 0 0.155rem 0.2rem;
+    transition: margin 0.5s ease; }
+    header h1 a {
+      display: block;
+      transition: opacity 0.5s ease;
+      opacity: 1; }
+      header h1 a:hover {
+        opacity: 0.5; }
+    header h1 img {
+      width: 100%;
+      display: block;
+      transition: width 0.5s ease; }
+      header h1 img:hover {
+        opacity: 1; }
+  header .sp_btn {
+    width: .5rem;
+    height: .5rem;
+    position: absolute;
+    top: 0;
+    right: 0; }
+    header .sp_btn span {
+      width: .2rem;
+      height: .02rem;
+      display: block;
+      background:#f08300;
+      position: absolute;
+      right: .2rem;
+      transition: 0.5s ease;
+      transition-property: top,bottom,transform,width; }
+      header .sp_btn span:nth-child(1) {
+        top: .17rem; }
+      header .sp_btn span:nth-child(2) {
+        top: .24rem; }
+      header .sp_btn span:nth-child(3) {
+        bottom: .17rem; }
+    header .sp_btn.active span:nth-child(1) {
+      top: .24rem;
+      transform: rotate(225deg); }
+    header .sp_btn.active span:nth-child(2) {
+      width: 0; }
+    header .sp_btn.active span:nth-child(3) {
+      bottom: .24rem;
+      transform: rotate(-225deg); }
+  header nav {
+    width: auto;
+    padding-top: .3rem;
+    position: fixed;
+    top: .5rem;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease; }
+    header nav::after {
+      content: "";
+      height: 0;
+      display: block;
+      clear: both; }
+    header nav.on {
+      opacity: 1;
+      pointer-events: auto; }
+      header nav.on ul li {
+        opacity: 1;
+        transform: translate(0); }
+        header nav.on ul li:nth-child(1) {
+          transition-delay: 0.5s; }
+        header nav.on ul li:nth-child(2) {
+          transition-delay: 0.6s; }
+        header nav.on ul li:nth-child(3) {
+          transition-delay: 0.7s; }
+        header nav.on ul li:nth-child(4) {
+          transition-delay: 0.8s; }
+        header nav.on ul li:nth-child(5) {
+          transition-delay: 0.9s; }
+        header nav.on ul li:nth-child(6) {
+          transition-delay: 1s; }
+        header nav.on ul li:nth-child(7) {
+          transition-delay: 1.1s; }
+        header nav.on ul li:nth-child(8) {
+          transition-delay: 1.2s; }
+    header nav ul {
+      width: auto;
+      margin: 0 .2rem .4rem;
+      border-top: 1px solid #F4F4F4;
+      font-size: 0;
+      text-align: right; }
+      header nav ul li {
+        display: block;
+        border-bottom: 1px solid #F4F4F4;
+        transition: 0.5s ease;
+        transition-property: opacity transform;
+        opacity: 0;
+        transform: translate(-0.4rem); }
+        header nav ul li a {
+          padding: .2rem .1rem;
+          display: block;
+          font-size: 14px;
+          font-weight: 400;
+          letter-spacing: 0.1em;
+          line-height: 120%;
+          text-align: center;
+          color: #000000;
+          transition: 0.5s ease;
+          transition-property: color,padding; }
+
+
+    header nav .btn_box {
+      margin: 0 .2rem; }
+      header nav .btn_box p a {
+        padding: .2rem .1rem;
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        line-height: 120%;
+        color: #fff;
+        text-align: center;
+        background: #f08300;
+        transition: 0.5s ease;
+        transition-property: background,padding; }
+
+
+/*# sourceMappingURL=header-sp.css.map */

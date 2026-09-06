@@ -1,0 +1,131 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+	共通CSS（SMP）
+===================================================*/
+/* --------------------------------------------------
+	base
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  body {
+    min-width: 0;
+    font-size: 14px;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  /*改行*/
+  .pcBreak {
+    display: none;
+  }
+
+  .spBreak {
+    display: block;
+  }
+
+  /*spのみ表示*/
+  .pcHidden {
+    display: block;
+  }
+
+  .spHidden {
+    display: none;
+  }
+
+  #sideBtn {
+    display: none;
+  }
+
+  .topicPath {
+    display: none;
+  }
+}
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+/* --------------------------------------------------
+	nav
+-------------------------------------------------- */
+/* --------------------------------------------------
+	main
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .pageTitlePanel {
+    padding: 35px 20px;
+  }
+  .pageTitlePanel .pageTitle h1 {
+    font-size: 24px;
+  }
+  .pageTitlePanel .pageTitle p {
+    font-size: 16px;
+  }
+
+  .mapBox {
+    padding: 0 0 70%;
+  }
+}
+/* --------------------------------------------------
+	footer
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .footer .footerSlide .slideBox .ul .li {
+    margin: 0 5%;
+  }
+  .footer .footContact .secTtlBox {
+    margin: 0 0 40px;
+  }
+  .footer .footContact .secTtlBox:after {
+    width: 250px;
+    height: 12px;
+  }
+  .footer .footContact .secTtlBox .secTtl01 {
+    font-size: 18px;
+  }
+  .footer .footContact .secTtlBox .secTtl02 {
+    font-size: 22px;
+  }
+  .footer .footContact .topBox {
+    margin: 0 0 25px;
+  }
+  .footer .footContact .topBox .dl .dt {
+    margin: 0 0 15px;
+    font-size: 16px;
+  }
+  .footer .footContact .itemPanel {
+    max-width: 440px;
+  }
+  .footer .footContact .itemPanel .itemBox {
+    padding: 15px;
+  }
+  .footer .footContact .itemPanel .itemBox + .itemBox {
+    margin: 20px 0 0;
+  }
+  .footer .footContact .itemPanel .itemBox .ttl {
+    margin: 0 0 15px;
+    font-size: 20px;
+  }
+  .footer .footContact .itemPanel .itemBox .telBox a {
+    font-size: 30px;
+  }
+  .footer .footContact .iconImg {
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    width: 120px;
+  }
+  .footer .footPanel {
+    padding: 30px 0;
+  }
+  .footer .footPanel .logo {
+    max-width: 200px;
+    margin: 0 auto 30px;
+  }
+  .footer .footPanel .footNav {
+    display: none;
+  }
+  .footer .footPanel .copy {
+    margin: 40px 0 0;
+  }
+}

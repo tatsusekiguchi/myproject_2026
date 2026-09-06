@@ -1,0 +1,134 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+	共通CSS（SMP）
+===================================================*/
+/* --------------------------------------------------
+	base
+-------------------------------------------------- */
+body {
+  min-width: 0;
+  font-size: 14px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/*改行*/
+.pcBreak {
+  display: none;
+}
+
+.spBreak {
+  display: block;
+}
+
+/*spのみ表示*/
+.pcHidden {
+  display: block;
+}
+
+.spHidden {
+  display: none;
+}
+
+#sideBtn {
+  display: none;
+}
+
+.topicPath {
+  display: none;
+}
+
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+.header {
+  padding: 25px;
+}
+.header .headWrap {
+  display: block;
+}
+.header .btnJoin {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.header .btnJoin a {
+  display: block;
+  padding: 10px 0;
+  border-radius: 0;
+}
+.header .btnJoin a .box > * {
+  height: 35px;
+}
+.header .btnJoin a .box .ttl {
+  font-size: 15px;
+}
+.header .btnJoin a .box .arrow {
+  width: 140px;
+  font-size: 15px;
+}
+
+/* --------------------------------------------------
+	nav
+-------------------------------------------------- */
+.navBox {
+  display: none;
+}
+
+/* --------------------------------------------------
+	main
+-------------------------------------------------- */
+.mapBox {
+  padding: 0 0 70%;
+}
+
+/* --------------------------------------------------
+	footer
+-------------------------------------------------- */
+.footer .footContainer {
+  padding: 40px 25px 100px;
+}
+.footer .footPanel {
+  position: relative;
+}
+.footer .logoBox {
+  margin: 0 0 20px;
+}
+.footer .footNav {
+  margin: 0;
+}
+.footer .footNav ul li {
+  display: block;
+}
+.footer .footNav ul li + li {
+  margin: 5px 0 0;
+}
+.footer .footItem {
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+  display: block;
+}
+.footer .footItem .footFollow {
+  gap: 0 10px;
+  margin: 0 0 5px;
+}
+.footer .footItem .footFollow p {
+  font-size: 10px;
+}
+.footer .footItem .footFollow ul li {
+  width: 15px;
+}
+.footer .footItem .footJoin a {
+  justify-content: flex-end;
+}
+.footer .footItem .footJoin a em {
+  font-size: 11px;
+}
+.footer .footItem .footJoin a span {
+  font-size: 12px;
+}

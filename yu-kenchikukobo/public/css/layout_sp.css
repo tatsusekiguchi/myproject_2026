@@ -1,0 +1,953 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+	画面用CSS（PC/SMP）
+===================================================*/
+/*////////////////////////////////////////////////////////////
+	TOP
+///////////////////////////////////////////////////////////*/
+#top #topKv {
+  order: 2;
+  height: 350px;
+}
+#top #topKv + .txtBox {
+  display: none;
+}
+#top .kv {
+  display: flex;
+  flex-direction: column;
+}
+#top .kv .ttlBox {
+  order: 1;
+  padding: 20px;
+  z-index: 1;
+}
+#top .kv .ttlBox h1 {
+  margin: 0 0 15px;
+  font-size: 24px;
+}
+#top .kv .imgBox {
+  height: 350px;
+}
+#top .sec01 {
+  padding: 40px 0;
+}
+#top .sec01 .message {
+  padding: 0 20px;
+  font-size: 34px;
+}
+#top .sec01 .secPanel {
+  padding: 30px 0 60px;
+}
+#top .sec01 .secPanel .txt {
+  margin: 0 0 30px;
+}
+#top .sec01 .photoPanel {
+  padding: 0 20px;
+}
+#top .sec02 {
+  padding: 60px 0 100px;
+}
+#top .sec02 .secPanelList .secBox + .secBox {
+  margin: 60px 0 0;
+}
+#top .sec02 .secPanelList .secBox .serviceItem .photoBox {
+  position: relative;
+}
+#top .sec02 .secPanelList .secBox .serviceItem .photoBox .num {
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  width: 90px;
+}
+#top .sec02 .secPanelList .secBox .serviceItem .txtBox {
+  margin: -30px 0 0;
+}
+#top .sec02 .secPanelList .secBox .serviceItem .txtBox dl dt {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+#top .sec02 .secPanelList .secBox .serviceItem .txtBox .arrow {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 45px;
+}
+#top .sec03 {
+  padding: 80px 0;
+}
+#top .sec03 .secPanel .titleBox {
+  margin: 0 0 30px;
+}
+#top .sec03 .secPanel .listBox ul li + li {
+  margin: 40px 0 0;
+}
+#top .sec04 {
+  padding: 100px 0;
+}
+#top .sec04 .secContainer .txtBox {
+  padding: 20px;
+}
+#top .sec04 .secContainer .txtBox dl {
+  margin: 0 0 25px;
+}
+#top .sec04 .secContainer .txtBox dl dt {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+/*////////////////////////////////////////////////////////////
+	about
+///////////////////////////////////////////////////////////*/
+#about .sec01 {
+  padding: 100px 0;
+}
+#about .sec01 .txt p + p {
+  margin: 15px 0 0;
+}
+#about .sec01 .photoBox {
+  padding: 40px;
+}
+#about .sec01 .photoBox .photo {
+  position: relative;
+}
+#about .sec01 .photoBox .photo::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  bottom: -20px;
+  width: 90%;
+  height: 90%;
+  z-index: -1;
+  background: #eeebe8;
+}
+#about .sec02 {
+  padding: 60px 0;
+}
+#about .sec02 .secBox + .secBox {
+  margin: 35px 0 0;
+}
+#about .sec02 .secBox .ttlBox {
+  margin: 0 0 15px;
+}
+#about .sec02 .secBox .ttlBox .ttl {
+  font-size: 18px;
+}
+#about .sec03 {
+  padding: 80px 0;
+}
+#about .sec03 .infoBox {
+  margin: 0 0 40px;
+  padding: 10px 0 0;
+}
+#about .sec03 .infoBox dl {
+  padding: 10px;
+}
+#about .sec03 .infoBox dl dt {
+  margin: 0 0 5px;
+}
+#about .sec03 .photoList {
+  padding: 0 0 60px;
+}
+#about .sec03 .photoList ul {
+  max-width: 600px;
+}
+#about .sec03 .photoList ul li + li {
+  margin: 20px 0 0;
+}
+
+/*////////////////////////////////////////////////////////////
+	house
+///////////////////////////////////////////////////////////*/
+#house .sec01 {
+  padding: 100px 0;
+}
+#house .sec01 .topContainer {
+  margin: 0 0 80px;
+}
+#house .sec01 .topContainer .imgChart {
+  display: none;
+}
+#house .sec01 .topContainer .chartBox {
+  display: block;
+}
+#house .sec01 .topContainer .chartBox .chart {
+  max-width: 450px;
+  margin: 0 auto 40px;
+}
+#house .sec01 .topContainer .chartBox .photo {
+  max-width: 600px;
+  margin: 0 auto;
+}
+#house .sec01 .topContainer .txt {
+  margin: 30px 0;
+}
+#house .sec01 .secContainer01 {
+  margin: 0 0 80px;
+}
+#house .sec01 .secContainer01 .list {
+  max-width: 600px;
+  margin: 0 auto;
+}
+#house .sec01 .secContainer01 .list ul li {
+  padding: 15px;
+}
+#house .sec01 .secContainer01 .list ul li + li {
+  margin: 20px 0 0;
+}
+#house .sec01 .secContainer02 {
+  padding: 0 0 60px;
+}
+#house .sec01 .bottomContainer::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 85%;
+  height: 70%;
+  z-index: -1;
+  background: #eeebe8;
+}
+#house .sec01 .bottomContainer .photoPanel .photo {
+  max-width: 600px;
+  margin: 0 auto;
+}
+#house .sec01 .bottomContainer .btnMore {
+  margin: 60px auto 0;
+}
+
+/*////////////////////////////////////////////////////////////
+	service
+///////////////////////////////////////////////////////////*/
+#service .reformSection {
+  padding: 100px 0;
+}
+#service .reformSection .topTitlePanel {
+  margin: 0 0 50px;
+}
+#service .reformSection .secContainer + .secContainer {
+  margin: 200px 0 0;
+}
+#service .reformSection .secContainer .topPanel {
+  padding: 0 0 50px;
+}
+#service .reformSection .secContainer .topPanel .secBox .txtBox .ttlBox {
+  padding: 20px;
+}
+#service .reformSection .secContainer .topPanel .secBox .txtBox .ttlBox .num {
+  position: absolute;
+  top: -20px;
+  left: 15px;
+  width: 120px;
+}
+#service .reformSection .secContainer .topPanel .secBox .txtBox .ttlBox p {
+  font-size: 16px;
+}
+#service .reformSection .secContainer .topPanel .secBox .txtBox .ttlBox h3 {
+  font-size: 20px;
+}
+#service .reformSection .secContainer .topPanel .secBox .txtBox .txt .inner {
+  padding: 20px;
+}
+#service .reformSection .secContainer .recommendPanel {
+  padding: 0 0 50px;
+}
+#service .reformSection .secContainer .recommendPanel .list ul + ul {
+  margin: 15px 0 0;
+}
+#service .reformSection .secContainer .recommendPanel .list ul li {
+  padding: 0 0 0 30px;
+  font-size: 16px;
+  background: url("../image/service/list_check.png") left center no-repeat;
+  background-size: 20px auto;
+}
+#service .reformSection .secContainer .recommendPanel .list ul li + li {
+  margin: 15px 0 0;
+}
+@media (min-width: 1025px) {
+  #service .reformSection .secContainer .recommendPanel .list {
+    display: flex;
+    justify-content: space-between;
+  }
+  #service .reformSection .secContainer .recommendPanel .list ul {
+    width: 48%;
+  }
+}
+#service .reformSection .slidePanel .slideBox ul li {
+  width: 50%;
+  margin: 0 2px;
+}
+
+/*////////////////////////////////////////////////////////////
+    seismic (耐震制振)
+///////////////////////////////////////////////////////////*/
+#seismic .sec01 {
+  padding: 60px 0;
+}
+#seismic .sec01 .topTxt {
+  margin: 0 0 60px;
+}
+#seismic .sec01 .topTxt p + p {
+  margin: 15px 0 0;
+}
+#seismic .sec01 .subTtl {
+  font-size: 18px;
+}
+#seismic .sec01 .problemContainer {
+  padding: 60px 0;
+}
+#seismic .sec01 .problemContainer .arrow {
+  width: 50px;
+  margin: 40px auto;
+}
+#seismic .sec01 .problemContainer .list01 ul li + li {
+  margin: 20px auto 0;
+}
+#seismic .sec01 .problemContainer .list02 {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#seismic .sec01 .problemContainer .list02 ul li + li {
+  margin: 20px auto 0;
+}
+#seismic .sec01 .reformContainer {
+  padding: 60px 0;
+}
+#seismic .sec01 .reformContainer .subTxt {
+  margin: 0 0 30px;
+}
+#seismic .sec01 .reformContainer .list ul li + li {
+  margin: 20px 0 0;
+}
+#seismic .sec01 .reformContainer .list ul li a {
+  padding: 20px;
+  background: url("../image/seismic/reform_arrow.png") right 5px bottom 5px no-repeat #f7f7f7;
+  background-size: 20px auto;
+}
+#seismic .sec01 .reformContainer .list ul li .headTtl {
+  margin: 0 0 15px;
+  font-size: 18px;
+}
+#seismic .sec01 .reformContainer .list ul li dl dt {
+  position: relative;
+  margin: 0 0 30px;
+  padding: 0 0 15px;
+  font-size: 18px;
+}
+#seismic .sec01 .reformContainer .list ul li dl dt::before {
+  width: 60px;
+}
+#seismic .sec01 .reformContainer .list ul li dl dd em {
+  font-size: 16px;
+}
+#seismic .sec01 .reformContainer aside {
+  font-size: 13px;
+}
+#seismic .sec01 .meritContainer {
+  padding: 60px 0;
+}
+#seismic .sec01 .meritContainer .secBoxList {
+  padding: 30px 0 0;
+}
+#seismic .sec01 .meritContainer .secBox + .secBox {
+  margin: 40px 0 0;
+}
+#seismic .sec01 .meritContainer .secBox .ttlBox {
+  margin: 0 0 15px;
+}
+#seismic .sec01 .meritContainer .secBox .ttlBox .merit {
+  margin: 0 0 15px;
+}
+#seismic .sec01 .meritContainer .secBox .ttlBox .ttl {
+  font-size: 16px;
+}
+
+/*////////////////////////////////////////////////////////////
+    earthquake-resistant (耐震)
+///////////////////////////////////////////////////////////*/
+#earthquake-resistant .secTtl {
+  margin: 0 0 40px;
+  font-size: 18px;
+}
+#earthquake-resistant .topSection {
+  padding: 60px 0;
+}
+#earthquake-resistant .sec01 {
+  padding: 0 0 60px;
+}
+#earthquake-resistant .sec01 .list ul {
+  max-width: 400px;
+  margin: 0 auto;
+}
+#earthquake-resistant .sec01 .list ul li + li {
+  margin: 20px 0 0;
+}
+#earthquake-resistant .sec02 {
+  padding: 60px 0;
+}
+#earthquake-resistant .sec02 .listBox ul li + li {
+  margin: 30px 0 0;
+}
+#earthquake-resistant .sec02 .infoBox {
+  margin: 50px auto 0;
+  padding: 20px;
+}
+#earthquake-resistant .sec02 .infoBox .ttl {
+  margin: 0 0 30px;
+  font-size: 18px;
+}
+#earthquake-resistant .sec02 .infoBox .message {
+  margin: 0 0 30px;
+  padding: 15px;
+}
+#earthquake-resistant .sec02 .infoBox .txt p + p {
+  margin: 20px 0 0;
+}
+#earthquake-resistant .sec03 {
+  padding: 60px 0;
+}
+#earthquake-resistant .sec03 .secPanel + .secPanel {
+  margin: 60px 0 0;
+}
+#earthquake-resistant .sec03 .secPanel .secBox .txtBox {
+  padding: 20px 0 0;
+}
+#earthquake-resistant .sec03 .secPanel .secBox .txtBox .ttl {
+  font-size: 18px;
+}
+#earthquake-resistant .sec03 .secPanel .secBox .txtBox .info {
+  margin: 30px 0 0;
+}
+#earthquake-resistant .sec03 .secPanel .secBox .txtBox .info dl + dl {
+  margin: 10px 0 0;
+}
+#earthquake-resistant .sec03 .secPanel .secBox .txtBox .info dl dt {
+  font-size: 14px;
+}
+#earthquake-resistant .sec03 .secPanel .secBox .txtBox .info dl dd {
+  font-size: 14px;
+}
+#earthquake-resistant .sec03 .secPanel .secBox .txtBox .txt {
+  margin: 15px 0 0;
+}
+#earthquake-resistant .sec03 .secPanel .listBox {
+  margin: 40px 0 0;
+}
+#earthquake-resistant .sec03 .secPanel .listBox ul li + li {
+  margin: 30px 0 0;
+}
+
+/*////////////////////////////////////////////////////////////
+    vibration-control (制振)
+///////////////////////////////////////////////////////////*/
+#vibration-control .secTtl {
+  margin: 0 0 40px;
+  font-size: 18px;
+}
+#vibration-control .topSection {
+  padding: 60px 0;
+}
+#vibration-control .sec01 .list ul {
+  max-width: 400px;
+  margin: 0 auto;
+}
+#vibration-control .sec01 .list ul li + li {
+  margin: 20px 0 0;
+}
+#vibration-control .sec01 .secContainer01 {
+  margin: 60px 0;
+  padding: 60px 0;
+}
+#vibration-control .sec01 .secContainer01 .ttl {
+  margin: 0 0 30px;
+  font-size: 18px;
+}
+#vibration-control .sec01 .secContainer01 .txt {
+  margin: 0 0 40px;
+}
+#vibration-control .sec01 .secContainer01 .chart {
+  max-width: 600px;
+  margin: 0 auto;
+}
+#vibration-control .sec01 .secContainer02 {
+  padding: 20px 0;
+}
+#vibration-control .sec01 .secContainer02 .message {
+  font-size: 18px;
+}
+#vibration-control .sec01 .chartContainer {
+  padding: 60px 0;
+}
+#vibration-control .sec01 .chartContainer .topTtl {
+  font-size: 18px;
+}
+#vibration-control .sec01 .chartContainer .topTtl::before {
+  width: 50px;
+}
+#vibration-control .sec01 .secContainer03 {
+  margin: 0 0 40px;
+}
+#vibration-control .sec01 .secContainer03 .topTxt {
+  margin: 0 0 30px;
+}
+#vibration-control .sec01 .secContainer03 .secPanel {
+  padding: 30px 20px;
+}
+#vibration-control .sec01 .secContainer03 .secPanel .pTtl {
+  margin: 0 0 30px;
+  font-size: 18px;
+}
+#vibration-control .sec01 .secContainer03 .arrow {
+  width: 80px;
+  margin: 30px auto;
+}
+#vibration-control .sec01 .secContainer04 .secBox01 {
+  margin: 0 0 40px;
+}
+#vibration-control .sec01 .secContainer04 .secBox01 .txtBox {
+  padding: 20px 0 0;
+}
+#vibration-control .sec01 .secContainer04 .secBox02 .boxTtl {
+  margin: 0 0 30px;
+  font-size: 18px;
+}
+#vibration-control .sec01 .secContainer05 {
+  padding: 60px 0;
+}
+#vibration-control .sec01 .secContainer05 .ttl {
+  margin: 0 0 30px;
+  font-size: 18px;
+}
+#vibration-control .sec01 .secContainer05 .secBox .txtBox {
+  padding: 20px 0 0;
+}
+#vibration-control .sec01 .secContainer06 {
+  padding: 60px 0;
+}
+#vibration-control .sec01 .secContainer06 .ttl {
+  margin: 0 0 30px;
+  font-size: 18px;
+}
+#vibration-control .sec01 .secContainer06 .secPanel {
+  padding: 30px 20px;
+}
+#vibration-control .sec01 .secContainer06 .secPanel .secBox {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+#vibration-control .sec01 .secContainer06 .secPanel .secBox .ttlBox {
+  margin: 0 0 20px;
+}
+#vibration-control .sec01 .secContainer06 .secPanel .secBox .ttlBox .logo {
+  max-width: 180px;
+  margin: 0 auto 40px;
+}
+#vibration-control .sec01 .secContainer06 .secPanel .secBox .ttlBox .txt {
+  margin: 0 0 30px;
+}
+#vibration-control .sec01 .secContainer06 .secPanel .secBox .ttlBox .chart01 {
+  max-width: 280px;
+  margin: 0 auto;
+}
+#vibration-control .sec01 .secContainer06 .secPanel .secBox .txtBox .leftBox {
+  margin: 0 0 30px;
+}
+#vibration-control .sec01 .secContainer06 .secPanel .secBox .txtBox .leftBox .info {
+  display: inline-block;
+  margin: 0 0 20px;
+  text-align: left;
+}
+#vibration-control .sec01 .secContainer06 .secPanel .secBox .txtBox .leftBox .chart02 {
+  max-width: 280px;
+  margin: 0 auto;
+}
+#vibration-control .sec01 .secContainer06 .secPanel .secBox .txtBox .rightBox .chart03 {
+  max-width: 120px;
+  margin: 0 auto;
+}
+@media (min-width: 1025px) {
+  #vibration-control .sec01 .secContainer06 .secPanel .secBox {
+    display: flex;
+    justify-content: space-between;
+  }
+  #vibration-control .sec01 .secContainer06 .secPanel .secBox .ttlBox {
+    width: 45%;
+  }
+  #vibration-control .sec01 .secContainer06 .secPanel .secBox .txtBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 50%;
+  }
+  #vibration-control .sec01 .secContainer06 .secPanel .secBox .txtBox .leftBox {
+    width: 70%;
+  }
+  #vibration-control .sec01 .secContainer06 .secPanel .secBox .txtBox .rightBox {
+    width: 25%;
+  }
+}
+#vibration-control .sec02 {
+  padding: 60px 0;
+}
+#vibration-control .sec02 .secBox + .secBox {
+  margin: 40px 0 0;
+}
+#vibration-control .sec02 .secBox .ttlBox {
+  margin: 0 0 15px;
+}
+#vibration-control .sec02 .secBox .ttlBox .merit {
+  margin: 0 0 15px;
+}
+#vibration-control .sec02 .secBox .ttlBox .ttl {
+  font-size: 16px;
+}
+#vibration-control .sec03 {
+  padding: 60px 0;
+}
+#vibration-control .sec03 .secPanel + .secPanel {
+  margin: 60px 0 0;
+}
+#vibration-control .sec03 .secPanel .secBox .txtBox {
+  padding: 20px 0 0;
+}
+#vibration-control .sec03 .secPanel .secBox .txtBox .ttl {
+  font-size: 18px;
+}
+#vibration-control .sec03 .secPanel .secBox .txtBox .info {
+  margin: 30px 0 0;
+}
+#vibration-control .sec03 .secPanel .secBox .txtBox .info dl + dl {
+  margin: 10px 0 0;
+}
+#vibration-control .sec03 .secPanel .secBox .txtBox .info dl dt {
+  font-size: 14px;
+}
+#vibration-control .sec03 .secPanel .secBox .txtBox .info dl dd {
+  font-size: 14px;
+}
+#vibration-control .sec03 .secPanel .secBox .txtBox .txt {
+  margin: 15px 0 0;
+}
+#vibration-control .sec03 .secPanel .listBox {
+  margin: 40px 0 0;
+}
+#vibration-control .sec03 .secPanel .listBox ul li + li {
+  margin: 30px 0 0;
+}
+
+/*////////////////////////////////////////////////////////////
+   board
+///////////////////////////////////////////////////////////*/
+#board .topSection {
+  padding: 60px 0;
+}
+#board .topSection .secTtl {
+  margin: 0 0 40px;
+  font-size: 18px;
+}
+#board .topSection .secTtl em {
+  font-size: 24px;
+}
+#board .topSection .secBox {
+  margin: 0 0 40px;
+}
+#board .topSection .secBox .txtBox {
+  padding: 25px 0 0;
+}
+#board .topSection .secBox .txtBox .ttl {
+  margin: 0 0 30px;
+}
+#board .topSection .secBox .txtBox .ttl > * {
+  font-size: 18px;
+}
+#board .topSection .requestPanel {
+  padding: 3% 20px;
+}
+#board .topSection .requestPanel .ttl {
+  margin: 0 0 20px;
+}
+#board .topSection .requestPanel .ttl > * {
+  padding: 0 30px;
+  font-size: 20px;
+  background: url("../image/board/top_sec_slash_01.png") left center no-repeat, url("../image/board/top_sec_slash_02.png") right center no-repeat;
+  background-size: 20px auto, 20px auto;
+}
+#board .topSection .requestPanel .list ul li {
+  padding: 0 0 0 25px;
+  font-size: 14px;
+  font-weight: bold;
+  background: url("../image/board/top_sec_check.png") left center no-repeat;
+  background-size: 17px auto;
+}
+#board .topSection .requestPanel .list ul li + li {
+  margin: 10px 0 0;
+}
+#board .sectionTitle {
+  margin: 0 0 40px;
+}
+#board .sectionTitle > * {
+  padding: 0 20px 0 0;
+  font-size: 18px;
+}
+#board .sec01 {
+  padding: 0 0 60px;
+}
+#board .sec01 .listBox ul li + li {
+  margin: 30px 0 0;
+}
+#board .sec01 .listBox ul dl {
+  margin: 15px 0 0;
+}
+#board .sec01 .listBox ul dl dt {
+  font-size: 18px;
+}
+#board .sec02 {
+  padding: 0 0 60px;
+}
+#board .sec02 .listBox ul li + li {
+  margin: 30px 0 0;
+}
+#board .sec02 .listBox ul dl dt {
+  font-size: 18px;
+}
+#board .sec03 {
+  padding: 60px 0;
+}
+#board .sec03 .secBox + .secBox {
+  margin: 60px 0 0;
+}
+#board .sec03 .secBox .txtBox .ttl {
+  font-size: 18px;
+}
+#board .sec03 .secBox .txtBox .info {
+  margin: 30px 0 0;
+}
+#board .sec03 .secBox .txtBox .info dl dt {
+  font-size: 14px;
+}
+#board .sec03 .secBox .txtBox .info dl dd {
+  font-size: 14px;
+}
+#board .sec03 .secBox .txtBox .txt {
+  margin: 25px 0 0;
+}
+#board .sec03 .secBox .txtBox .txt p + p {
+  margin: 20px 0 0;
+}
+#board .sec04 {
+  padding: 60px 0;
+}
+#board .sec04 .secPanel .titleBox {
+  margin: 30px 0 0;
+}
+#board .sec04 .secPanel .titleBox .more {
+  margin: 0 auto;
+}
+#board .sec04 .secPanel .listBox ul li + li {
+  margin: 40px 0 0;
+}
+
+/*////////////////////////////////////////////////////////////
+   voice
+///////////////////////////////////////////////////////////*/
+#voice .sec01 {
+  padding: 60px 0;
+}
+#voice .sec01 .topTxt {
+  margin: 0 0 40px;
+}
+#voice .sec01 .section + .section {
+  margin: 60px 0 0;
+}
+#voice .sec01 .section .secBox .imgBox {
+  margin: 0 0 20px;
+}
+#voice .sec01 .section .secBox .imgBox .stamp {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  width: 100px;
+}
+#voice .sec01 .section .secBox .txtBox {
+  padding: 20px;
+}
+#voice .sec01 .section .secBox .txtBox::before {
+  left: -5px;
+  bottom: -5px;
+}
+#voice .sec01 .section .listBox {
+  margin: 40px 0 0;
+}
+#voice .sec01 .section .listBox ul li + li {
+  margin: 30px 0 0;
+}
+
+/*////////////////////////////////////////////////////////////
+   faq
+///////////////////////////////////////////////////////////*/
+#faq .sec01 {
+  padding: 60px 0;
+}
+#faq .sec01 .pagingList {
+  margin: 0 0 15px;
+}
+#faq .sec01 .pagingList ul li {
+  width: 220px;
+  margin: 0 auto;
+}
+#faq .sec01 .pagingList ul li + li {
+  margin: 20px auto 0;
+}
+#faq .sec01 .section {
+  padding: 60px 0;
+}
+#faq .sec01 .section .pageSecSubTtlBox .pageSecSubTtl {
+  padding: 0 20px;
+}
+#faq .sec01 .secPanel {
+  padding: 15px;
+}
+#faq .sec01 .secPanel + .secPanel {
+  margin: 15px 0 0;
+}
+#faq .sec01 .secPanel .pHead {
+  padding: 0 40px 0 10px;
+  background: url("../image/faq/accord_plus.png") right 10px center no-repeat;
+  background-size: 15px auto;
+}
+#faq .sec01 .secPanel .pHead.active {
+  background: url("../image/faq/accord_minus.png") right 10px center no-repeat;
+  background-size: 10px auto;
+}
+#faq .sec01 .secPanel .pHead h3 {
+  font-size: 18px;
+}
+#faq .sec01 .secPanel .pHead h3 em {
+  margin: 0 4px 0 0;
+}
+#faq .sec01 .secPanel .pBody {
+  padding: 10px 0 0;
+  font-size: 14px;
+}
+#faq .sec01 .secPanel .pBody .txtBox {
+  padding: 15px;
+}
+#faq .sec01 .secPanel .pBody .secBox {
+  padding: 15px;
+}
+#faq .sec01 .secPanel .pBody .secBox .photo {
+  margin: 0 0 20px;
+}
+
+/*////////////////////////////////////////////////////////////
+   contact
+///////////////////////////////////////////////////////////*/
+#contact .sec01 {
+  padding: 60px 0;
+}
+#contact .sec02 {
+  padding: 60px 0;
+}
+#contact .sec02 .telBox .tel a {
+  font-size: 30px;
+}
+#contact .contactContainer .formBox dl dt {
+  justify-content: flex-start;
+  margin: 0 0 5px;
+}
+#contact .contactContainer .formBox dl dt em {
+  margin: 0 0 0 10px;
+}
+#contact .contactContainer .formBox .addressBox .postalBox .inputBox {
+  width: 100px;
+}
+#contact .contactContainer .formBox .addressBox .innerBox {
+  display: block;
+  margin: 10px 0 0;
+}
+#contact .contactContainer .formBox .addressBox .innerBox > p {
+  margin: 0 0 5px;
+}
+#contact .contactContainer .formBox .addressBox .innerBox .inputBox {
+  width: 100%;
+}
+#contact .privacy {
+  margin: 30px 0 50px;
+}
+#contact .privacy .agreeBox {
+  height: 300px;
+}
+
+/* --------------------------------------------------
+	form
+-------------------------------------------------- */
+.formBox .upBox .inputFile {
+  width: 120px;
+}
+.formBox .upBox .inputFile .file-1 .wpcf7-not-valid-tip,
+.formBox .upBox .inputFile .file-2 .wpcf7-not-valid-tip,
+.formBox .upBox .inputFile .file-3 .wpcf7-not-valid-tip {
+  right: -180px;
+  width: 170px;
+  font-size: 12px;
+}
+.formBox .upBox .filename {
+  width: calc(100% - 190px);
+  margin-left: 10px;
+  padding: 0;
+}
+
+/*////////////////////////////////////////////////////////////
+   case
+///////////////////////////////////////////////////////////*/
+#case .blogSection {
+  padding: 60px 0;
+}
+#case .blogSection .blogContainer .leftPanel {
+  margin: 0 0 30px;
+}
+#case .blogSection .blogContainer .rightPanel .caseList ul li + li {
+  margin: 40px 0 0;
+}
+#case .blogSection .blogContainer .rightPanel .caseDetail {
+  padding: 0 0 40px;
+}
+#case .blogSection .blogContainer .rightPanel .caseDetail .titleBox {
+  display: block;
+}
+#case .blogSection .blogContainer .rightPanel .caseDetail .titleBox .title {
+  font-size: 20px;
+}
+#case .blogSection .blogContainer .rightPanel .caseDetail .titleBox .cate {
+  margin: 0 0 10px;
+}
+#case .blogSection .blogContainer .rightPanel .caseDetail .postContents {
+  padding: 25px 0 0;
+}
+#case .blogSection .list__pagination {
+  margin: 40px 0 0;
+}
+
+/*////////////////////////////////////////////////////////////
+   blog
+///////////////////////////////////////////////////////////*/
+#top .secBlog {
+  padding: 60px 0 0;
+}
+
+#case .blogSection .blogDetail {
+  padding: 0 0 40px;
+}
+#case .blogSection .blogDetail .titleBox {
+  display: block;
+}
+#case .blogSection .blogDetail .titleBox .title {
+  font-size: 20px;
+}
+#case .blogSection .blogDetail .titleBox .cate {
+  margin: 0 0 10px;
+}
+#case .blogSection .blogDetail .postContents {
+  padding: 25px 0 0;
+}

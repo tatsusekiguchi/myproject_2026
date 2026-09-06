@@ -1,0 +1,70 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+  margin: 0;
+  background: #1a1819;
+  overflow: hidden;
+  font-family: serif;
+}
+
+/* オープニング */
+#opening {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #1a1819;
+  z-index: 1000;
+}
+
+/* ロゴ */
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+/* メッセージ */
+.message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 64px;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 2s ease;
+  letter-spacing: 0.1em;
+}
+
+.final {
+  font-size: 72px;
+  font-weight: bold;
+}
+
+/* 本サイト */
+#main-site {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 100%;
+  left: 0;
+  transition: top 2.5s ease;
+}
+
+.main-visual {
+  height: 100vh;
+  background: url("main.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-visual h1 {
+  color: #fff;
+  font-size: 72px;
+}

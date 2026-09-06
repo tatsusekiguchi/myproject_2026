@@ -1,0 +1,934 @@
+@charset "UTF-8";
+@import "./mixin";
+@import "./mod";
+/* CSS Document */
+
+/*===================================================
+	画面用CSS（PC/SMP）
+===================================================*/
+
+/*////////////////////////////////////////////////////////////
+	TOP
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .topMain {
+    .topKvContainer {
+      .topKvPanel {
+        .kvTitleBox {
+          position: absolute;
+          top: 180px;
+          left: 20px;
+          bottom: auto;
+          .kvTitle {
+            h1 {
+              margin: 0 0 20px;
+              font-size: 22px;
+            }
+            p {
+              font-size: 13px;
+            }
+          }
+        }
+        .bnrRecruit {
+          position: absolute;
+          right: 20px;
+          bottom: 140px;
+          width: 200px;
+        }
+      }
+    }
+    .sec01 {
+      padding: 50px 0 100px;
+      .txt {
+        p + p {
+          margin: 30px 0 0;
+        }
+      }
+      .btnMore {
+        margin: 40px auto 0;
+      }
+      .photo01 {
+        position: absolute;
+        top: 10%;
+        left: 0;
+        width: 20%;
+      }
+      .photo02 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 20%;
+      }
+      .photo03 {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 30%;
+      }
+      .photo04 {
+        position: absolute;
+        right: 0;
+        bottom: 20px;
+        width: 20%;
+      }
+    }
+    .sec02 {
+      padding: 50px 0 100px;
+      .listPanel {
+        .webgene-blog {
+          .webgene-item {
+            + .webgene-item {
+              margin: 30px 0 0;
+            }
+          }
+        }
+      }
+      .btnMore {
+        position: static;
+        margin: 40px auto 0;
+      }
+    }
+    .sec03 {
+      padding: 50px 0 100px;
+      .secBoxList {
+        margin: 0 0 80px;
+        .secBox {
+          + .secBox {
+            margin: 60px 0 0;
+          }
+          .photoBox {
+            margin: 0 0 30px;
+            .listBox {
+              .list {
+                + .list {
+                  top: -20px;
+                  left: -10px;
+                }
+              }
+            }
+          }
+          .txtBox {
+            .ttl {
+              h3 {
+                padding: 0 10px 0 0;
+                font-size: 20px;
+              }
+              p {
+                padding: 0 10px 0 0;
+                font-size: 13px;
+              }
+            }
+            .txt {
+              margin: 0 0 40px;
+            }
+          }
+        }
+      }
+      .linkPanel {
+        .linkItem {
+          + .linkItem {
+            margin: 20px 0 0;
+          }
+          a {
+            height: 200px;
+          }
+          .dl {
+            .dt {
+              font-size: 24px;
+            }
+          }
+        }
+      }
+    }
+    .sec04 {
+      padding: 0 0 60px;
+      .listPanel {
+        .webgene-blog {
+          .webgene-item {
+            a {
+              padding: 10px 40px 10px 0;
+              background: url(https://iwasaki-reform.com/system_panel/uploads/images/blog_list_arrow.png)
+                right bottom 15px no-repeat;
+              background-size: 30px auto;
+            }
+            .infoBox {
+              margin: 0 0 10px;
+            }
+          }
+        }
+      }
+      .btnMore {
+        position: static;
+        margin: 40px auto 0;
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	reason
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .reasonMain {
+    .topSection {
+      padding: 50px 0 0;
+      .txt {
+        padding: 0 0 40px;
+        font-size: 16px;
+      }
+    }
+    .sec01 {
+      padding: 60px 0 30px;
+      .topContainer {
+        padding: 0 0 60px;
+        .linkList {
+          .ul {
+            .li {
+              padding: 5px;
+              + .li {
+                border-top: none;
+              }
+              .photo {
+                width: 70px;
+              }
+              .txtBox {
+                width: calc(100% - 90px);
+                padding: 5px 0;
+                background: url(https://iwasaki-reform.com/system_panel/uploads/images/reason_sec01_top_list_arrow.png)
+                  right bottom no-repeat;
+                background-size: 40px auto;
+                .ttl {
+                  font-size: 16px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .section {
+        padding: 60px 0;
+        .secTtlBox {
+          .point {
+            position: absolute;
+            top: -15px;
+            left: -10px;
+            width: 80px;
+            z-index: 1;
+          }
+          .secTtl {
+            h3 {
+              padding: 0 10px 0 0;
+              font-size: 20px;
+            }
+          }
+        }
+        .topTxt {
+          margin: 0 0 30px;
+        }
+        .imageMap {
+          position: static;
+          width: 100%;
+          max-width: 300px;
+          margin: 0 auto 20px;
+        }
+        .listBox {
+          .ul {
+            .li {
+              padding: 30px 20px;
+              + .li {
+                margin: 20px 0 0;
+              }
+              .dl {
+                .dt {
+                  margin: 0 0 15px;
+                  &.ttl01 {
+                    width: 70px;
+                  }
+                  &.ttl02 {
+                    width: 80px;
+                  }
+                  &.ttl03 {
+                    width: 60px;
+                  }
+                }
+                .dd {
+                  font-size: 18px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .slidePanel {
+      padding: 0 0 60px;
+      .slideBox {
+        .ul {
+          .li {
+            width: calc(100% / 2);
+          }
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	service
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .serviceMain {
+    .topSection {
+      padding: 40px 0;
+      .secTtl {
+        margin: 0 0 20px;
+        font-size: 20px;
+      }
+      .txt {
+        margin: 0 0 30px;
+        p + p {
+          margin: 20px 0 0;
+        }
+      }
+      .btnItems {
+        .btnPaging {
+          width: 200px;
+          margin: 0 auto 20px;
+        }
+      }
+    }
+    .section {
+      .secContainer {
+        + .secContainer {
+          margin: 60px 0 0;
+        }
+      }
+      .topBox {
+        .txtBox {
+          padding: 20px 0 0;
+          .secTtl {
+            h3 {
+              padding: 0 10px 0 0;
+              font-size: 20px;
+            }
+          }
+          .ttl {
+            margin: 0 0 15px;
+            font-size: 18px;
+          }
+        }
+      }
+      .checkPanel {
+        margin: 40px 0 0;
+        padding: 15px;
+        .ttl {
+          margin: 0 0 15px;
+          font-size: 18px;
+        }
+        .listBox {
+          .ul {
+            .li {
+              padding: 10px;
+              + .li {
+                margin: 10px 0 0;
+              }
+            }
+          }
+        }
+      }
+      .constructionPanel {
+        margin: 40px 0 0;
+        .secTtl {
+          h3 {
+            padding: 0 10px 0 0;
+            font-size: 18px;
+          }
+        }
+        .listBox {
+          .ul {
+            .li {
+              + .li {
+                margin: 30px 0 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    .sec01 {
+      padding: 40px 0;
+    }
+    .sec02 {
+      padding: 40px 0 80px;
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	recruit
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .recruitMain {
+    .topSection {
+      padding: 60px 0;
+      .secPanel {
+        .txtBox {
+          padding: 20px;
+          .txt {
+            p + p {
+              margin: 20px 0 0;
+            }
+          }
+        }
+      }
+    }
+    .sec01 {
+      padding: 40px 0 80px;
+      .secBoxList {
+        .secBox {
+          + .secBox {
+            margin: 60px 0 0;
+          }
+          .photoBox {
+            margin: 0 0 30px;
+            .listBox {
+              .list {
+                + .list {
+                  top: -20px;
+                  left: -10px;
+                }
+              }
+            }
+          }
+          .txtBox {
+            .ttl {
+              h3 {
+                font-size: 20px;
+              }
+              p {
+                padding: 0 10px 0 0;
+                font-size: 16px;
+              }
+            }
+            .txt {
+              margin: 0 0 40px;
+            }
+          }
+        }
+      }
+    }
+    .sec02 {
+      padding: 60px 0;
+      .listPanel {
+        &::before {
+          left: 45%;
+        }
+        .listBox {
+          padding: 20px;
+          .dl {
+            display: block;
+            .dt {
+              width: 100%;
+              margin: 0 0 5px;
+            }
+            .dd {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    .sec03 {
+      padding: 60px 0;
+      .listBox {
+        .ul {
+          .li {
+            + .li {
+              margin: 30px 0 0;
+            }
+          }
+          .dl {
+            .dt {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+    .sec04 {
+      padding: 60px 0;
+      .infoBox {
+        .dl {
+          + .dl {
+            margin: 15px 0 0;
+          }
+          .dt {
+            padding: 5px 10px;
+          }
+          .dd {
+            padding: 10px 10px;
+          }
+        }
+      }
+    }
+    .sec05 {
+      padding: 60px 0;
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	company
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .companyMain {
+    .topSection {
+      padding: 60px 0;
+      .secPanel {
+        .txtBox {
+          padding: 20px;
+          .txt {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    .sec01 {
+      padding: 60px 0;
+      .secBox {
+        .photoBox {
+          .name {
+            p {
+              font-size: 16px;
+            }
+            .em {
+              font-size: 20px;
+            }
+          }
+        }
+        .txtBox {
+          padding: 20px 0 0;
+        }
+      }
+    }
+    .sec02 {
+      padding: 60px 0;
+      .listBox {
+        .ul {
+          .dl {
+            padding: 15px 20px;
+            .dt {
+              margin: 0 0 5px;
+            }
+          }
+        }
+      }
+    }
+    .sec03 {
+      padding: 60px 0;
+      .secPanel {
+        padding: 20px;
+      }
+      .infoBox {
+        margin: 0 0 30px;
+        .dl {
+          + .dl {
+            margin: 15px 0 0;
+          }
+          .dt {
+            padding: 5px 10px;
+          }
+          .dd {
+            padding: 10px 10px;
+          }
+        }
+      }
+    }
+    .sec04 {
+      padding: 60px 0;
+      .staffBox {
+        max-width: 400px;
+        margin: 0 auto;
+        p {
+          margin: 10px 0 0;
+          font-size: 18px;
+        }
+      }
+      .staffList {
+        margin: 30px 0 0;
+        .ul {
+          .li {
+            + .li {
+              margin: 30px 0 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	contact
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .contactMain {
+    .sec01 {
+      padding: 60px 0 80px;
+    }
+    .sec02 {
+      padding: 60px 0 80px;
+      .telBox {
+        max-width: 400px;
+        .tel {
+          margin: 0 0 5px;
+          a {
+            p {
+            }
+            .span {
+              font-size: 14px;
+            }
+            .em {
+              font-size: 24px;
+              line-height: 1.2;
+            }
+          }
+        }
+        > p {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	form
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .formMain {
+    .contactForm {
+      .form {
+        .checkList {
+          .ul {
+            padding: 0;
+          }
+        }
+      }
+      .formBox {
+        + .formBox {
+          margin-top: 40px;
+        }
+
+        > .dl {
+          display: block;
+          width: 100%;
+          padding: 10px;
+          &::before {
+            display: none;
+          }
+          &.line {
+            .dt {
+              padding: 10px;
+            }
+          }
+
+          > .dt {
+            display: block;
+            width: 100%;
+            margin: 0;
+            padding: 10px;
+
+            .span {
+              width: auto;
+              min-width: 0;
+              margin-right: 10px;
+              padding: 0;
+              font-size: 16px;
+              text-align: left;
+
+              br {
+                display: none;
+              }
+            }
+
+            .em {
+              font-size: 12px;
+              vertical-align: middle;
+            }
+
+            .aside {
+              margin-top: 5px;
+
+              p {
+                font-size: 12px;
+
+                br {
+                  display: none;
+                }
+              }
+            }
+          }
+
+          > .dd {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border-bottom: none;
+          }
+        }
+        .radioBox {
+          padding: 0;
+        }
+        .radioList01 {
+          .list {
+            display: block;
+            margin: 0;
+            + .list {
+              margin: 20px 0 0;
+            }
+          }
+        }
+
+        .checkList01 {
+          .ul {
+            .li {
+              display: block;
+              + .li {
+                margin: 10px 0 0;
+              }
+            }
+          }
+          .checkItem {
+            display: inline-block;
+            padding: 0 5px 0 0;
+            + input {
+              display: inline-block;
+              width: 150px;
+            }
+          }
+        }
+
+        .addressBox,
+        .dateBox {
+          .dl {
+            display: block;
+
+            .dt {
+              display: block;
+              width: 100%;
+            }
+
+            .dd {
+              display: block;
+            }
+          }
+        }
+
+        .datePanel {
+          display: block;
+          font-size: 14px;
+          + .datePanel {
+            margin: 20px 0 0;
+          }
+          > * {
+            padding: 0 0 5px;
+          }
+          input {
+            width: 60px;
+          }
+          .selectBox {
+            width: 60px;
+          }
+          .dateTtl {
+            margin: 0 10px 0 0;
+          }
+          .dateTxt {
+            margin: 0 5px;
+          }
+        }
+
+        .dateBox {
+          input[type="text"] {
+            width: 70px;
+          }
+
+          .radioList {
+            display: block;
+            margin: 10px 0 0;
+          }
+        }
+
+        .selectBox {
+          width: 180px;
+        }
+
+        .privacy {
+          .agreeBox {
+            height: 250px;
+            padding: 20px 10px;
+          }
+        }
+      }
+      .fileUploadBox {
+        display: block;
+        .fileBox {
+          width: 100%;
+        }
+        .fileArea {
+          display: block;
+          .inputFile {
+            width: 200px;
+          }
+          > p,
+          .fileTxt {
+            width: 100%;
+            margin: 10px 0 0;
+          }
+        }
+      }
+      .fileUploadTitleBox {
+        margin: 40px 0 20px;
+        .fileUploadTitle {
+          p {
+            padding: 0 15px 0 0;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	blog
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .blogSection {
+    padding: 50px 0 100px;
+    .catePanel {
+      margin: 0 0 40px;
+      .webgene-blog {
+        .webgene-item {
+          margin: 0 auto;
+          + .webgene-item {
+            margin: 20px auto 0;
+          }
+        }
+      }
+    }
+    .webgene-pagination {
+      margin: 60px auto 0;
+    }
+    .blogPanel {
+      &--detail {
+        .webgene-blog {
+          .info {
+            margin: 0 0 10px;
+          }
+          .ttlBox {
+            margin: 0 0 20px;
+            font-size: 20px;
+          }
+          .slickSlide {
+            margin: 0 0 40px;
+            .slider {
+              .li {
+                > div {
+                  padding: 0 0 70%;
+                }
+              }
+            }
+          }
+          .thumb-item {
+            &.slider {
+              .li {
+                > div {
+                  overflow: hidden;
+                  position: relative;
+                  padding: 0 0 100%;
+                }
+                img {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                }
+              }
+            }
+          }
+          .slick-prev {
+            left: -20px;
+          }
+          .slick-next {
+            right: -20px;
+          }
+          .postBox {
+            padding: 0;
+          }
+        }
+        .btnBackBox {
+          margin: 50px 0 0;
+        }
+        .btnBack {
+          margin: 40px auto 0;
+        }
+      }
+    }
+  }
+  .blogMain {
+    .blogPanel {
+      &--list {
+        .webgene-blog {
+          .webgene-item {
+            a {
+              padding: 20px 10px;
+              background: url(https://iwasaki-reform.com/system_panel/uploads/images/blog_list_arrow.png)
+                right bottom 5px no-repeat;
+              background-size: 25px auto;
+            }
+            .photo {
+              margin: 0 0 15px;
+            }
+            .txtBox {
+              padding: 0 15px 0 0;
+              .title {
+                margin: 0 0 10px;
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	case
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .caseMain {
+    .casePanel {
+      &--list {
+        .webgene-blog {
+          .webgene-item {
+            + .webgene-item {
+              margin: 30px 0 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	temp
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .tempMain {
+  }
+}

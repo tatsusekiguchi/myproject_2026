@@ -1,0 +1,2408 @@
+@charset "UTF-8";
+@import "./mixin";
+@import "./mod";
+/* CSS Document */
+
+/*===================================================
+	画面用CSS（PC/SMP）
+===================================================*/
+
+/*////////////////////////////////////////////////////////////
+	TOP
+///////////////////////////////////////////////////////////*/
+.topMain {
+  .loadingContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    background: #ffffff;
+    .loadingLogo {
+      width: 40%;
+      max-width: 450px;
+    }
+  }
+  .topKvContainer {
+    position: relative;
+    padding: 0 90px;
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 230px;
+      z-index: -1;
+      background: #51835c;
+    }
+    .topKvPanel {
+      position: relative;
+      height: 700px;
+      .topKv {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        .kvBox {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+        .kvBox > div {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+        .kvBox .kv01 {
+          background: url("https://sit-321391.sibloo.com/system_panel/uploads/images/top_kv_01.png")
+            center no-repeat;
+          background-size: cover;
+        }
+        .kvBox .kv02 {
+          background: url("https://sit-321391.sibloo.com/system_panel/uploads/images/top_kv_02.png")
+            center no-repeat;
+          background-size: cover;
+        }
+        .kvBox .kv03 {
+          background: url("https://sit-321391.sibloo.com/system_panel/uploads/images/top_kv_03.png")
+            center no-repeat;
+          background-size: cover;
+        }
+      }
+      .kvTitleBox {
+        position: absolute;
+        top: 45%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        max-width: 1320px;
+        margin: 0 auto;
+        padding: 0 60px;
+        h1 {
+          font-size: 34px;
+        }
+      }
+    }
+    .kvText {
+      padding: 30px 20px;
+      color: #ffffff;
+      text-align: center;
+    }
+  }
+  .sec01 {
+    position: relative;
+    padding: 150px 0;
+    background: url("https://sit-321391.sibloo.com/system_panel/uploads/images/top_sec01_bg.png")
+      center no-repeat;
+    background-size: cover;
+    .secContainer {
+      .secTtl {
+        margin: 0 0 40px;
+        padding: 0 60px;
+        font-size: 24px;
+        color: #51835c;
+        text-align: right;
+      }
+      .txtBox {
+        .txt {
+          font-size: 18px;
+          line-height: 2.5;
+          letter-spacing: 0.08em;
+        }
+      }
+      @media (min-width: 1025px) {
+        .txtBox {
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: center;
+          align-items: flex-start;
+          gap: 36px;
+          .txt {
+            writing-mode: vertical-rl;
+          }
+        }
+      }
+    }
+    .line {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -16px;
+      width: 3px;
+      height: 39px;
+      margin: 0 auto;
+    }
+  }
+  .sec02 {
+    padding: 120px 0;
+    background: #f7f6f0;
+    .secTtlBox {
+      margin: 0 0 60px;
+      text-align: center;
+      .sub {
+        margin: 0 0 5px;
+        font-size: 18px;
+        color: #51835c;
+      }
+      .secTtl {
+        font-size: 24px;
+        font-weight: bold;
+      }
+    }
+    .linkPanel {
+      a {
+        display: block;
+        padding: 40px;
+        color: #ffffff;
+        text-align: center;
+        border-radius: 10px;
+        background: url("https://sit-321391.sibloo.com/system_panel/uploads/images/top_sec02_list_arrow.png")
+          right 10px bottom 10px no-repeat #5e8a68;
+        background-size: 20px auto;
+      }
+      .linkBox {
+        position: relative;
+        border-radius: 6px;
+        border-left: 1px solid #91aa97;
+        border-right: 1px solid #91aa97;
+        &::before {
+          content: "";
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          width: calc(50% - 25px);
+          height: 1px;
+          background: #91aa97;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          display: block;
+          top: 0;
+          right: 0;
+          width: calc(50% - 25px);
+          height: 1px;
+          background: #91aa97;
+        }
+        .inner {
+          position: relative;
+          border-radius: 6px;
+          &::before {
+            content: "";
+            position: absolute;
+            display: block;
+            left: 0;
+            bottom: 0;
+            width: calc(50% - 60px);
+            height: 1px;
+            background: #91aa97;
+            transition: 0.6s;
+          }
+          &:after {
+            content: "";
+            position: absolute;
+            display: block;
+            right: 0;
+            bottom: 0;
+            width: calc(50% - 60px);
+            height: 1px;
+            background: #91aa97;
+            transition: 0.6s;
+          }
+        }
+        .dl {
+          padding: 30px 20px;
+          .dt {
+            margin: 0 0 20px;
+            .span {
+              position: absolute;
+              top: -13px;
+              left: 0;
+              right: 0;
+              width: 60px;
+              margin: 0 auto;
+              font-size: 20px;
+              color: #94bea0;
+            }
+            .em {
+              position: relative;
+              padding: 0 0 10px;
+              font-size: 24px;
+              font-weight: bold;
+              &:after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 30px;
+                height: 1px;
+                margin: 0 auto;
+                background: #94bea0;
+              }
+            }
+          }
+          .dd {
+            .more {
+              position: absolute;
+              left: 0;
+              right: 0;
+              bottom: -13px;
+              width: 120px;
+              margin: 0 auto;
+            }
+            .en {
+              position: absolute;
+              right: 10%;
+              bottom: -12px;
+              font-size: 40px;
+              color: #739d7c;
+            }
+          }
+        }
+      }
+    }
+    @media (min-width: 1025px) {
+      .linkPanel {
+        a {
+          .linkBox {
+            .inner {
+              &::before {
+                width: 50%;
+              }
+              &:after {
+                width: 50%;
+              }
+            }
+          }
+          .dl {
+            .dd {
+              .more {
+                opacity: 0;
+                transition: 0.6s;
+                transition-delay: 0.2s;
+              }
+            }
+          }
+          &:hover {
+            opacity: 1;
+            background-color: #34633e;
+            .linkBox {
+              .inner {
+                &::before {
+                  width: calc(50% - 60px);
+                }
+                &:after {
+                  width: calc(50% - 60px);
+                }
+              }
+            }
+            .dl {
+              .dd {
+                .more {
+                  opacity: 1;
+                }
+              }
+            }
+          }
+        }
+      }
+      .linkPanelList {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        margin: 20px 0 0;
+        .linkPanel {
+          width: calc((100% / 3) - 10px);
+        }
+      }
+    }
+  }
+  .sec03 {
+    padding: 120px 0;
+    .secTtlBox {
+      margin: 0 0 20px;
+      text-align: right;
+      .sub {
+        margin: 0 0 5px;
+        font-size: 18px;
+        color: #51835c;
+      }
+      .secTtl {
+        font-size: 24px;
+        font-weight: bold;
+      }
+    }
+    .topTxt {
+      margin: 0 0 60px;
+      text-align: right;
+    }
+    .listBox {
+      .ul {
+        .li {
+          a {
+            display: block;
+            padding: 20px;
+            text-align: center;
+            border-radius: 6px;
+            background: url("https://sit-321391.sibloo.com/system_panel/uploads/images/top_sec03_list_arrow.png")
+              right 10px bottom 10px no-repeat #f7f9f4;
+            background-size: 20px auto;
+          }
+          .photoBox {
+            img {
+              border-radius: 6px;
+            }
+          }
+          .dl {
+            padding: 20px 0 10px;
+            .dt {
+              position: relative;
+              margin: 0 0 20px;
+              padding: 0 0 10px;
+              &:after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 30px;
+                height: 1px;
+                margin: 0 auto;
+                background: #282828;
+              }
+              .span {
+                max-width: 200px;
+                margin: 0 auto 10px;
+                padding: 2px 10px;
+                font-size: 14px;
+                background: #e4e9dc;
+              }
+              .em {
+                font-size: 24px;
+              }
+            }
+          }
+        }
+      }
+      @media (min-width: 1025px) {
+        .ul {
+          display: flex;
+          justify-content: space-between;
+          gap: 20px;
+          .li {
+            width: calc((100% / 3) - 10px);
+          }
+        }
+      }
+    }
+  }
+  .sec04 {
+    position: relative;
+    z-index: 2;
+    a {
+      display: block;
+      height: 847px;
+      padding: 150px 0;
+      background: url("https://sit-321391.sibloo.com/system_panel/uploads/images/top_sec04_bg.png")
+        center top no-repeat;
+      background-size: cover;
+    }
+    @media (min-width: 1025px) {
+      .secWrap01 {
+        transition: 0.6s;
+      }
+      a {
+        &:hover {
+          opacity: 1;
+          .secWrap01 {
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+    .secTtlBox {
+      margin: 0 0 60px;
+      .sub {
+        margin: 0 0 5px;
+        font-size: 18px;
+        color: #94bea0;
+      }
+      .secTtl {
+        font-size: 24px;
+        font-weight: bold;
+      }
+    }
+    .ttl {
+      margin: 0 0 30px;
+      font-size: 30px;
+    }
+    .txt {
+      line-height: 2.5;
+      p + p {
+        margin: 20px 0 0;
+      }
+    }
+  }
+  .instaSec {
+    position: relative;
+    margin: -50px 0 0;
+    padding: 120px 0;
+    color: #ffffff;
+    background: #94bea0;
+    .secTtlBox {
+      margin: 0 0 60px;
+      text-align: center;
+      .sub {
+        margin: 0 0 5px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #c1e0ca;
+      }
+      .secTtl {
+        font-size: 24px;
+        font-weight: bold;
+      }
+    }
+    .instaPanel {
+      max-width: 1200px;
+      margin: 0 auto;
+      .instaList {
+        .webgene-blog {
+          display: flex;
+          flex-wrap: wrap;
+          margin: -5px 0 0 -5px;
+          .webgene-item {
+            width: calc((100% / 3) - 5px);
+            margin: 5px 0 0 5px;
+            a {
+              display: block;
+            }
+            .photo {
+              position: relative;
+              height: 0;
+              padding: 0 0 100%;
+            }
+            img {
+              @include cover-image;
+            }
+            video {
+              @include cover-image;
+            }
+          }
+        }
+      }
+      .moreBox {
+        a {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          padding: 15px;
+          color: #ffffff;
+          background: #2e4a34;
+          p {
+            display: inline-block;
+            padding: 5px 30px;
+            color: #ffffff;
+            background: url(https://sit-321391.sibloo.com/system_panel/uploads/images/btn_more_arrow_black.png)
+              right center no-repeat;
+            background-size: 20px auto;
+            transition: 0.6s;
+          }
+        }
+      }
+    }
+    @media (min-width: 1025px) {
+      .instaPanel {
+        display: flex;
+        justify-content: space-between;
+        .instaList {
+          width: calc(100% - 300px);
+        }
+        .moreBox {
+          width: 295px;
+          a {
+            p {
+              background: url(https://sit-321391.sibloo.com/system_panel/uploads/images/btn_more_arrow_black.png)
+                right center no-repeat;
+              background-size: 20px auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	about
+///////////////////////////////////////////////////////////*/
+.aboutMain {
+  .sec01 {
+    position: relative;
+    .secContainer01 {
+      padding: 100px 0;
+      .dl {
+        .dt {
+          margin: 0 0 30px;
+          font-size: 34px;
+          color: #4b7855;
+          text-align: center;
+        }
+        .dd {
+          .txt {
+            line-height: 2.5;
+            p + p {
+              margin: 20px 0 0;
+            }
+          }
+        }
+      }
+    }
+    .secContainer02 {
+      position: relative;
+      padding: 0 0 120px;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: calc(100% - 220px);
+        z-index: -1;
+        background: #f8f6f0;
+      }
+      .mvPanel {
+        margin: 0 0 60px;
+        padding: 150px 0;
+        border-radius: 10px;
+        background: url("https://sit-321391.sibloo.com/system_panel/uploads/images/about_sec01_mv.png")
+          center no-repeat;
+        background-size: cover;
+        .secBox {
+          width: 90%;
+          padding: 40px;
+          color: #ffffff;
+          border-radius: 0 10px 10px 0;
+          background: #5e8a68;
+          .pageSecTtlBox {
+            .sub {
+              color: #c1e0ca;
+            }
+          }
+        }
+        @media (min-width: 1025px) {
+          .secBox {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .pageSecTtlBox {
+              width: 200px;
+              margin: 0 auto;
+            }
+            .txt {
+              width: calc(100% - 250px);
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+      .listBox {
+        .ul {
+          .li {
+            padding: 30px;
+            border-radius: 10px;
+            background: #ffffff;
+          }
+          .icon {
+            width: 80px;
+            margin: 0 auto 20px;
+          }
+          .dl {
+            .dt {
+              margin: 0 0 20px;
+              font-size: 24px;
+              text-align: center;
+            }
+            .dd {
+              line-height: 2;
+            }
+          }
+        }
+        @media (min-width: 1025px) {
+          .ul {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            .li {
+              width: calc((100% / 3) - 10px);
+            }
+          }
+        }
+      }
+    }
+  }
+  .sec02 {
+    position: relative;
+    z-index: 2;
+    margin: -30px 0 0;
+    padding: 120px 0;
+    color: #ffffff;
+    background: url("https://sit-321391.sibloo.com/system_panel/uploads/images/about_sec02_bg.png")
+      center top no-repeat;
+    background-size: cover;
+    .pageSecTtlBox {
+      .sub {
+        color: #c1e0ca;
+        font-weight: bold;
+      }
+    }
+    .topTtl {
+      margin: 0 0 50px;
+      font-size: 34px;
+      font-weight: bold;
+      text-align: center;
+    }
+    .txtBox {
+      max-width: 1000px;
+      margin: 0 auto;
+      .txt {
+        + .txt {
+          margin: 30px 0 0;
+        }
+        > p {
+          line-height: 2.5;
+          + p {
+            margin: 30px 0 0;
+          }
+        }
+        .message {
+          font-size: 24px;
+        }
+      }
+    }
+    .logo {
+      position: absolute;
+      right: 5%;
+      bottom: 20%;
+      width: 30%;
+      max-width: 600px;
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	history
+///////////////////////////////////////////////////////////*/
+.historyMain {
+  .sec01 {
+    position: relative;
+    z-index: 2;
+    padding: 120px 0;
+    background: url("https://sit-321391.sibloo.com/system_panel/uploads/images/history_sec01_bg.png")
+      no-repeat;
+    background-size: cover;
+    .topTtl {
+      margin: 0 0 50px;
+      font-size: 34px;
+      color: #4b7855;
+      text-align: center;
+    }
+    .historyRingsContainer {
+      max-width: 1000px;
+      margin: 0 auto;
+      color: #2a3828;
+      .historyRingsMain {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 40px;
+      }
+      .historyRingWrap {
+        position: relative;
+        aspect-ratio: 1;
+      }
+      .historyRingSvg {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      .historyRingHit {
+        cursor: pointer;
+      }
+      .historyRingBody {
+        transition:
+          stroke 0.25s,
+          opacity 0.25s;
+      }
+      .historyActiveRing {
+        pointer-events: none;
+        transition: r 0.3s ease;
+      }
+      .historyPulse {
+        pointer-events: none;
+      }
+      .historyCards {
+        min-height: 330px;
+      }
+      .historyCard {
+        width: 100%;
+        animation: historyCardIn 0.35s ease;
+      }
+      .historyCardYear {
+        display: inline-block;
+        margin-bottom: 14px;
+        padding: 5px 14px;
+        border-radius: 20px;
+        color: #4a6450;
+        background: #e8f0e8;
+        font-size: 13px;
+        letter-spacing: 0.12em;
+      }
+      .historyCardTitle {
+        margin-bottom: 14px;
+        color: #2a3828;
+        font-size: 26px;
+        font-weight: 500;
+        line-height: 1.45;
+      }
+      .historyCardBody {
+        margin-bottom: 16px;
+        color: #5a534c;
+        font-size: 15px;
+        line-height: 1.85;
+      }
+      .historyCardQuote {
+        margin-bottom: 16px;
+        padding: 14px 18px;
+        border-left: 3px solid #4a6450;
+        border-radius: 0 6px 6px 0;
+        background: #f2eee8;
+      }
+      .historyCardQuote p {
+        color: #3a4a38;
+        font-family: "Hiragino Mincho ProN", serif;
+        font-size: 14px;
+        line-height: 1.8;
+      }
+      .historyCardStat {
+        color: #7a9982;
+        font-size: 13px;
+        letter-spacing: 0.04em;
+      }
+      .historyRingsHint {
+        display: none;
+      }
+      .historyTimeline {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        margin-top: 24px;
+      }
+      .historyTimeline::before {
+        content: "";
+        position: absolute;
+        z-index: 0;
+        top: 7px;
+        left: 7%;
+        right: 7%;
+        height: 1px;
+        background: #c8d0c8;
+      }
+      .historyTimelineItem {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        align-items: center;
+        gap: 7px;
+        padding: 0;
+        border: 0;
+        color: #9a9490;
+        background: transparent;
+        cursor: pointer;
+      }
+      .historyTimelineDot {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: #c8d0c8;
+        transition: 0.25s;
+      }
+      .historyTimelineYear {
+        font-size: 13px;
+      }
+      .historyTimelineItem:hover .historyTimelineDot {
+        background: #4a6450;
+        transform: scale(1.2);
+      }
+      .historyTimelineItem.is-active {
+        color: #a86a52;
+        font-weight: 500;
+      }
+      .historyTimelineItem.is-active .historyTimelineDot {
+        background: #a86a52;
+        transform: scale(1.4);
+      }
+    }
+  }
+  .sec02 {
+    position: relative;
+    z-index: 1;
+    margin: -30px 0 0;
+    padding: 120px 0;
+    color: #ffffff;
+    background: url("https://sit-321391.sibloo.com/system_panel/uploads/images/history_sec02_bg.png")
+      no-repeat;
+    background-size: cover;
+    .pageSecTtlBox {
+      .sub {
+        color: #c1e0ca;
+      }
+    }
+    .txtBox {
+      .txt {
+        text-align: center;
+        line-height: 2.5;
+        p + p {
+          margin: 20px 0 0;
+        }
+      }
+    }
+  }
+}
+
+@keyframes historyCardIn {
+  from {
+    opacity: 0;
+    transform: translateX(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	service
+///////////////////////////////////////////////////////////*/
+.serviceMain {
+  .topSection {
+    padding: 120px 0;
+    text-align: center;
+    .logoDuskin {
+      width: 120px;
+      margin: 0 auto 10px;
+    }
+    .logoCompany {
+      width: 80px;
+      margin: 0 auto 10px;
+    }
+    .topTtl {
+      margin: 0 0 60px;
+      font-size: 34px;
+      color: #4b7855;
+    }
+    .txt {
+      text-align: left;
+      line-height: 2.5;
+      p + p {
+        margin: 30px 0 0;
+      }
+    }
+  }
+  .serviceSection {
+    padding: 0 0 120px;
+    .topTxt {
+      margin: 0 0 60px;
+      text-align: center;
+    }
+    .secContainer {
+      + .secContainer {
+        margin: 100px 0 0;
+      }
+    }
+    .secPanel {
+      .photo {
+        img {
+          border-radius: 6px;
+        }
+      }
+      .txtBox {
+        .ttl {
+          position: relative;
+          margin: 0 0 25px;
+          text-align: center;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            margin: auto 0;
+            z-index: -1;
+            background: #00000a;
+          }
+          h3 {
+            display: inline-block;
+            padding: 0 40px;
+            font-size: 24px;
+            background: #ffffff;
+          }
+        }
+        .txt {
+          line-height: 2.5;
+          p + p {
+            margin: 20px 0 0;
+          }
+        }
+        .extraBox {
+          margin: 20px 0 0;
+          padding: 20px 30px;
+          border-radius: 10px;
+          background: #f8f6f0;
+          .dl {
+            .dt {
+              position: relative;
+              margin: 0 0 10px;
+              &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 1px;
+                margin: auto 0;
+                background: #00000a;
+              }
+              p {
+                position: relative;
+                display: inline-block;
+                padding: 0 15px 0 0;
+                font-size: 18px;
+                background: #f8f6f0;
+              }
+            }
+            .dd {
+              line-height: 2;
+            }
+          }
+        }
+      }
+    }
+    @media (min-width: 1025px) {
+      .secPanel {
+        display: flex;
+        justify-content: space-between;
+        .photo {
+          width: 38%;
+        }
+        .txtBox {
+          width: 58%;
+        }
+      }
+    }
+    .listPanel {
+      margin: 60px 0 0;
+      .ttl {
+        position: relative;
+        margin: 0 0 25px;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 1px;
+          margin: auto 0;
+          z-index: -1;
+          background: #00000a;
+        }
+        h3 {
+          display: inline-block;
+          padding: 0 40px 0 0;
+          font-size: 24px;
+          background: #ffffff;
+        }
+      }
+      .listBox {
+        .ul {
+          .li {
+            .photo {
+              img {
+                border-radius: 6px;
+              }
+            }
+            .dl {
+              padding: 20px 0 0;
+              .dt {
+                margin: 0 0 15px;
+                font-size: 20px;
+                text-align: center;
+              }
+              .dd {
+                line-height: 2;
+              }
+            }
+          }
+        }
+        @media (min-width: 1025px) {
+          .ul {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -40px 0 0 -25px;
+            .li {
+              width: calc((100% / 3) - 25px);
+              margin: 40px 0 0 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .facilitySection {
+    padding: 120px 0;
+    background: url(https://sit-321391.sibloo.com/system_panel/uploads/images/service_facility_sec_bg.png)
+      no-repeat;
+    background-size: cover;
+    .secContainer {
+      + .secContainer {
+        margin: 100px 0 0;
+      }
+    }
+    .secPanel01 {
+      max-width: 1400px;
+      margin: 0 auto;
+      .photo {
+        img {
+          border-radius: 6px;
+        }
+      }
+      .txtBox {
+        .ttl {
+          position: relative;
+          margin: 0 0 25px;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            margin: auto 0;
+            background: #00000a;
+          }
+          h3 {
+            position: relative;
+            display: inline-block;
+            padding: 0 20px 0 0;
+            font-size: 24px;
+            background: #f8f6f0;
+          }
+        }
+        .txt {
+          a {
+            display: inline-block;
+          }
+          .dl {
+            display: flex;
+          }
+        }
+      }
+      .mapArea {
+      }
+    }
+    @media (min-width: 1025px) {
+      .secPanel01 {
+        display: flex;
+        justify-content: space-between;
+        .photo {
+          width: 28%;
+        }
+        .txtBox {
+          width: 30%;
+        }
+        .mapArea {
+          width: 35%;
+          .mapBox {
+            padding: 0 0 55%;
+          }
+        }
+      }
+    }
+    .secPanel02 {
+      max-width: 1400px;
+      margin: 80px auto 0;
+      .innerBox {
+        max-width: 1200px;
+        padding: 40px;
+        background: #ffffff;
+      }
+      .pTtl {
+        position: relative;
+        margin: 0 0 25px;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 1px;
+          margin: auto 0;
+          background: #00000a;
+        }
+        h3 {
+          position: relative;
+          display: inline-block;
+          padding: 0 20px 0 0;
+          font-size: 24px;
+          background: #ffffff;
+        }
+      }
+      .secBox {
+        .photoBox {
+          .photo {
+            img {
+              border-radius: 6px;
+            }
+          }
+          .profile {
+            margin: 15px 0 0;
+            padding: 20px;
+            line-height: 2;
+            border-radius: 6px;
+            background: #f8f6f0;
+          }
+        }
+        .txtBox {
+          padding: 30px 0 0;
+          .messageTtl {
+            display: inline-block;
+            padding: 5px 30px;
+            font-size: 24px;
+            color: #ffffff;
+            border-radius: 6px;
+            background: #5e8a68;
+          }
+          .txt {
+            padding: 20px 0 0;
+          }
+        }
+      }
+      @media (min-width: 1025px) {
+        .secBox {
+          display: flex;
+          justify-content: space-between;
+          .photoBox {
+            width: 350px;
+          }
+          .txtBox {
+            width: calc(100% - 400px);
+            .messageTtl {
+              position: relative;
+              left: -80px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .strengthSection {
+    padding: 120px 0;
+    color: #ffffff;
+    background: url(https://sit-321391.sibloo.com/system_panel/uploads/images/service_strength_sec_bg.png)
+      no-repeat;
+    background-size: cover;
+    .pageSecTtlBox {
+      .sub {
+        color: #c1e0ca;
+      }
+    }
+    .secBox01 {
+      margin: 0 0 80px;
+      text-align: center;
+      h3 {
+        margin: 0 0 40px;
+        font-size: 34px;
+      }
+      .txt {
+        line-height: 2.5;
+        + .txt {
+          margin: 40px 0 0;
+        }
+      }
+    }
+    .secBox02 {
+      max-width: 900px;
+      margin: 0 auto;
+      .dl {
+        + .dl {
+          margin: 40px 0 0;
+        }
+        .dt {
+          font-size: 24px;
+        }
+        .dd {
+          line-height: 2.5;
+        }
+      }
+      @media (min-width: 1025px) {
+        .dl {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .dt {
+            width: 45%;
+            padding: 20px 0;
+            border-right: 1px solid #ffffff;
+          }
+          .dd {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	intro
+///////////////////////////////////////////////////////////*/
+.introMain {
+  .sec01 {
+    padding: 120px 0;
+    .pageSecTtlBox {
+      text-align: left;
+    }
+    .topPanel {
+      margin: 0 0 100px;
+      .txt {
+        line-height: 2.5;
+      }
+      .secBox {
+        margin: 0 0 20px;
+        .photoBox {
+          position: relative;
+          .photo {
+            img {
+              border-radius: 10px;
+            }
+          }
+          .name {
+            position: absolute;
+            right: 0;
+            bottom: 40px;
+            width: 65%;
+            max-width: 280px;
+          }
+        }
+        .txtBox {
+          .ttlBox {
+            margin: 0 0 20px;
+            .ttl {
+              + .ttl {
+                margin: 5px 0 0;
+              }
+              p {
+                display: inline-block;
+                padding: 5px 15px;
+                font-size: 24px;
+                color: #ffffff;
+                border-radius: 6px;
+                background: #5e8a68;
+              }
+            }
+          }
+        }
+      }
+      @media (min-width: 1025px) {
+        .secBox {
+          display: flex;
+          justify-content: space-between;
+          .photoBox {
+            width: 40%;
+          }
+          .txtBox {
+            width: 55%;
+          }
+        }
+      }
+    }
+    .secContainer {
+      .section {
+        + .section {
+          margin: 80px 0 0;
+        }
+        .photo {
+          img {
+            border-radius: 6px;
+          }
+        }
+        .txtBox {
+          .headBox {
+            position: relative;
+            margin: 0 0 20px;
+            padding: 0 0 20px;
+            &:after {
+              content: "";
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              width: 100px;
+              height: 1px;
+              background: #9e9e9e;
+            }
+            .topTtl {
+              margin: 0 0 10px;
+              font-size: 24px;
+            }
+          }
+          .bodyBox {
+            .txt {
+              line-height: 2.5;
+            }
+          }
+        }
+      }
+      @media (min-width: 1025px) {
+        .section {
+          display: flex;
+          justify-content: space-between;
+          &:nth-child(odd) {
+            flex-direction: row-reverse;
+          }
+          .photo {
+            width: 40%;
+          }
+          .txtBox {
+            width: 55%;
+          }
+        }
+      }
+    }
+  }
+  .sec02 {
+    padding: 120px 0;
+    color: #ffffff;
+    background: url(https://sit-321391.sibloo.com/system_panel/uploads/images/intro_sec02_bg.png)
+      no-repeat;
+    background-size: cover;
+    .pageSecTtlBox {
+      text-align: left;
+      .sub {
+        color: #c1e0ca;
+      }
+    }
+    .flowList {
+      .flowBox {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        &:before {
+          content: "";
+          position: absolute;
+          top: 7px;
+          left: 160px;
+          width: 1px;
+          height: calc(100% - 8px);
+          background: #ffffff;
+        }
+        .left {
+          position: relative;
+          width: 160px;
+          &:after {
+            content: "";
+            position: absolute;
+            top: 8px;
+            right: -6px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ffffff;
+          }
+          p {
+            font-size: 20px;
+          }
+        }
+        .right {
+          width: calc(100% - 220px);
+          padding: 0 0 40px;
+          .dl {
+            .dt {
+              font-size: 20px;
+            }
+            .dd {
+              padding: 15px 0 0;
+              line-height: 2;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	recruit
+///////////////////////////////////////////////////////////*/
+.recruitMain {
+  .topSection {
+    padding: 120px 0;
+    text-align: center;
+    .secTtl {
+      margin: 0 0 20px;
+      font-size: 34px;
+      color: #4b7855;
+    }
+    .txt {
+      line-height: 2.5;
+    }
+  }
+  .sec01 {
+    position: relative;
+    padding: 0 0 120px;
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: calc(100% - 300px);
+      z-index: -1;
+      background: #f8f6f0;
+    }
+    .topPhoto {
+      margin: 0 auto 100px;
+      img {
+        border-radius: 10px;
+      }
+    }
+    .topTxt {
+      margin: 0 0 80px;
+      text-align: center;
+      line-height: 2.5;
+      p + p {
+        margin: 30px 0 0;
+      }
+    }
+    .chartPanel {
+      max-width: 900px;
+      margin: 0 auto;
+      .chartTtl {
+        margin: 0 0 30px;
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+      }
+      .chartBoxList {
+        .chartBox {
+          padding: 25px 15px;
+          color: #ffffff;
+          text-align: center;
+          cursor: pointer;
+          border-radius: 10px;
+          background: #5e8a68;
+          .inner {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            padding: 20px 5px;
+            border-radius: 10px;
+            border: 1px solid #91aa97;
+          }
+          .num {
+            position: absolute;
+            top: -15px;
+            left: 0;
+            right: 0;
+            width: 50px;
+            margin: 0 auto;
+            font-size: 20px;
+            color: #94bea0;
+            background: #5e8a68;
+          }
+          .dl {
+            .dt {
+              position: relative;
+              margin: 0 0 10px;
+              padding: 0 0 5px;
+              font-size: 22px;
+              &:after {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 30px;
+                height: 1px;
+                margin: 0 auto;
+                background: #94bea0;
+              }
+            }
+            .dd {
+              padding: 0 5px;
+              text-align: left;
+              line-height: 1.7;
+            }
+          }
+        }
+      }
+      @media (min-width: 1025px) {
+        .chartTtl {
+          display: none;
+        }
+        .chartBoxList {
+          position: relative;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          margin: -30px 0 0 -30px;
+          padding: 150px 0 0;
+          &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 500px;
+            height: 510px;
+            margin: auto;
+            z-index: -1;
+            background: url(https://sit-321391.sibloo.com/system_panel/uploads/images/recruit_chart_bg.png)
+              no-repeat;
+            background-size: 100% auto;
+          }
+          .chartBox {
+            width: calc((100% / 3) - 30px);
+            margin: 30px 0 0 30px;
+          }
+          .chartBox01 {
+            order: 2;
+            position: relative;
+            top: -170px;
+          }
+          .chartBox02 {
+            order: 1;
+          }
+          .chartBox03 {
+            order: 3;
+          }
+          .chartBox04 {
+            order: 4;
+          }
+          .chartBox05 {
+            order: 5;
+          }
+        }
+      }
+    }
+  }
+  .sec02 {
+    padding: 120px 0;
+    .secContainer {
+      padding: 40px 20px;
+      color: #ffffff;
+      text-align: center;
+      border-radius: 10px;
+      background: #5e8a68;
+      .pageSecTtlBox {
+        .sub {
+          color: #c1e0ca;
+        }
+      }
+      .dl {
+        margin: 0 0 30px;
+        .dt {
+          margin: 0 0 15px;
+          font-size: 30px;
+        }
+        .dd {
+          line-height: 2;
+        }
+      }
+      .btnRecruit {
+        max-width: 240px;
+        margin: 0 auto;
+        a {
+          display: block;
+          padding: 10px 15px;
+          font-weight: bold;
+          color: #ffffff;
+          border-radius: 6px;
+          background: #c07e5e;
+          p {
+            display: inline-block;
+            padding: 0 20px;
+            background: url(https://sit-321391.sibloo.com/system_panel/uploads/images/icon_target_white.png)
+              right center no-repeat;
+            background-size: 10px auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	company
+///////////////////////////////////////////////////////////*/
+.companyMain {
+  .sec01 {
+    padding: 120px 0;
+    .dataListBox {
+      .ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px 3%;
+        .li {
+          position: relative;
+          width: 31.333%;
+          height: 160px;
+          overflow: hidden;
+          border-radius: 6px;
+          background: #eef2e8;
+          .dl {
+            height: 100%;
+            .dt {
+              position: absolute;
+              z-index: 1;
+              top: 0;
+              left: 0;
+              width: 65%;
+              height: 110px;
+              padding: 12px 0 0 12px;
+              color: #ffffff;
+              font-size: 16px;
+              background: url(https://sit-321391.sibloo.com/system_panel/uploads/images/company_counter_bg.png)
+                no-repeat;
+              background-size: 100% auto;
+            }
+            .dd {
+              position: relative;
+              z-index: 2;
+              display: flex;
+              align-items: baseline;
+              justify-content: center;
+              height: 100%;
+              padding: 65px 12px 15px;
+              color: #222222;
+              line-height: 1;
+              .em {
+                font-size: 48px;
+                font-weight: bold;
+                letter-spacing: 0.02em;
+              }
+              .span {
+                margin: 0 0 3px 5px;
+                font-size: 22px;
+              }
+            }
+          }
+          .aside {
+            position: absolute;
+            right: 10px;
+            bottom: 8px;
+          }
+        }
+      }
+    }
+  }
+  .sec02 {
+    .infoBox {
+      margin: 0 0 120px;
+      .dl {
+        line-height: 2;
+        .dt {
+          padding: 15px;
+          border-bottom: 1px solid #5e8a68;
+        }
+        .dd {
+          padding: 15px;
+          border-bottom: 1px solid #eef2e8;
+          a {
+            display: inline-block;
+          }
+        }
+      }
+      @media (min-width: 1025px) {
+        .dl {
+          display: flex;
+          justify-content: space-between;
+          .dt {
+            width: 260px;
+          }
+          .dd {
+            width: calc(100% - 265px);
+          }
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	contact
+///////////////////////////////////////////////////////////*/
+.contactMain {
+  .sec01 {
+    padding: 120px 0;
+    .topBox {
+      margin: 0 0 60px;
+      .topTtl {
+        position: relative;
+        margin: 0 0 20px;
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 1px;
+          margin: auto 0;
+          z-index: -1;
+          background: #00000a;
+        }
+        h3 {
+          display: inline-block;
+          padding: 0 40px 0 0;
+          font-size: 24px;
+          background: #ffffff;
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	form
+///////////////////////////////////////////////////////////*/
+.formMain {
+  /* 入力項目
+  --------------------------------------*/
+  /*テキストボックス・メール・電話*/
+  .contactForm input[type="text"],
+  .contactForm input[type="email"],
+  .contactForm input[type="tel"] {
+    width: 100%;
+    height: 50px;
+    padding-left: 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #f8f6f0;
+    background: #f8f6f0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  /*テキストエリア*/
+  .contactForm textarea {
+    width: 100%;
+    height: 200px;
+    padding: 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #f8f6f0;
+    background: #f8f6f0;
+    resize: none;
+    // box-shadow: 0 1px 2px rgba(3, 0, 11, 0.14);
+  }
+  .contactForm input[type="text"]:focus,
+  .contactForm input[type="email"]:focus,
+  .contactForm input[type="tel"]:focus,
+  .contactForm textarea:focus {
+    outline: 0;
+    border: 2px solid #90cefd;
+  }
+  .btnSubmitBox {
+    max-width: 220px;
+    margin: 40px auto 0;
+    text-align: center;
+  }
+  .contactForm button[type="submit"] {
+    overflow: hidden;
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 12px 10px;
+    font-size: 16px;
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    background: #c07e5e;
+    transition: 0.6s;
+  }
+  .contactForm button[type="submit"][disabled] {
+    opacity: 0.6;
+    cursor: default;
+    pointer-events: none;
+  }
+  .contactForm .form {
+    padding: 0 0 60px;
+    .checkList {
+      .ul {
+        padding: 12px 0 0;
+        + .ul {
+          margin: 10px 0 0;
+        }
+        .li {
+          + .li {
+            margin: 10px 0 0;
+          }
+        }
+      }
+    }
+    .checkList01 {
+      .ul {
+        .li {
+          display: inline-block;
+          + .li {
+            margin: 0 0 0 10px;
+          }
+        }
+      }
+      .checkItem {
+        display: inline-block;
+        padding: 0 5px 0 0;
+        + input {
+          display: inline-block;
+          width: 150px;
+        }
+      }
+      .otherTxt {
+        display: inline-block;
+      }
+    }
+    .checkItem {
+      + .checkItem {
+        margin-top: 10px;
+      }
+      position: relative;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      input[type="checkbox"] {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        z-index: 1;
+      }
+      label {
+        display: inline-block;
+        padding-left: 30px;
+        position: relative;
+        cursor: pointer;
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          width: 18px;
+          height: 18px;
+          transform: translateY(-50%);
+          border: 1px solid #d3d3d3;
+          background: #f8f6f0;
+        }
+      }
+      input[type="checkbox"]:checked + label::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        width: 7px;
+        height: 14px;
+        transform: translateY(-50%) rotate(40deg);
+        border-bottom: 3px solid #34623e;
+        border-right: 3px solid #34623e;
+      }
+      &.agreeCheck {
+        justify-content: center;
+      }
+    }
+
+    .radioList01 {
+      .list {
+        display: inline-block;
+        margin: 0 20px 0 0;
+      }
+      .otherTxt {
+        display: inline-block;
+      }
+    }
+
+    .radioBox {
+      padding: 5px 0;
+      .radio {
+        position: relative;
+        display: inline-block;
+      }
+
+      input[type="radio"] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: 1;
+      }
+
+      label {
+        position: relative;
+        padding: 5px 0 5px 35px;
+      }
+
+      label:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 25px;
+        height: 25px;
+        margin: auto 0;
+        border-radius: 50%;
+        border: 1px solid #2d2c30;
+        background: #ffffff;
+        box-sizing: border-box;
+      }
+
+      input[type="radio"]:checked + label:before {
+        border: 8px solid #2d2c30;
+      }
+    }
+
+    .postalBox {
+      margin: 0 0 5px;
+      input {
+        width: 90px;
+      }
+
+      input + .span {
+        display: inline-block;
+        margin: 0 5px;
+      }
+
+      .postalTxt {
+        display: inline-block;
+        margin: 0 5px;
+      }
+      + input {
+        + input {
+          margin: 5px 0;
+        }
+      }
+    }
+
+    .selectBox {
+      display: inline-block;
+      width: 200px;
+      select {
+        display: block;
+        width: 100%;
+        padding: 11px 20px;
+        font-size: 16px;
+        color: #000000;
+        line-height: 1.5em;
+        border-radius: 0;
+        border: 1px solid #deebe4;
+        border-radius: 15px;
+        background: #f7f7f7;
+        background-size: 10px auto;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+      + .span {
+        display: inline-block;
+        margin: 0 5px;
+      }
+    }
+  }
+  .contactForm {
+    .formBox {
+      + .formBox {
+        margin-top: 60px;
+      }
+
+      > .dl {
+        position: relative;
+        display: flex;
+        width: 100%;
+        &.line {
+          > .dt {
+            vertical-align: top;
+          }
+        }
+
+        > .dt {
+          overflow: hidden;
+          width: 280px;
+          margin: 0 2px 0 0;
+          padding: 20px 10px;
+          border-bottom: 1px solid #5e8a68;
+          .span {
+            display: inline-block;
+            min-width: 165px;
+            margin-right: 10px;
+            padding: 0 0 0 5px;
+            color: #34623e;
+            vertical-align: middle;
+          }
+
+          .em {
+            display: inline-block;
+            padding: 0 8px;
+            font-size: 14px;
+            color: #ffffff;
+            vertical-align: middle;
+            border-radius: 4px;
+            background: #c07e5e;
+          }
+
+          .small {
+            font-size: 12px;
+          }
+
+          .aside {
+            margin-top: 5px;
+            p {
+              font-size: 14px;
+              padding-left: 1em;
+              text-indent: -1em;
+            }
+          }
+
+          @media (min-width: 1025px) {
+            .span {
+              float: left;
+            }
+            .em {
+              float: right;
+            }
+          }
+        }
+
+        > .dd {
+          position: relative;
+          width: calc(100% - 285px);
+          padding: 10px 20px;
+          border-bottom: 1px solid #eef2e8;
+          .aside {
+            margin-top: 5px;
+            p {
+              font-size: 14px;
+              padding-left: 1em;
+              text-indent: -1em;
+            }
+          }
+        }
+      }
+      .datePanel {
+        display: flex;
+        justify-content: space-between;
+        font-size: 15px;
+        + .datePanel {
+          margin: 10px 0 0;
+        }
+        > * {
+          display: flex;
+          align-items: center;
+        }
+        input {
+          width: 70px;
+          border-radius: 15px;
+        }
+        .selectBox {
+          width: 70px;
+        }
+        .dateTtl {
+          margin: 0 10px 0 0;
+        }
+        .dateTxt {
+          margin: 0 5px;
+        }
+      }
+      .addressBox,
+      .dateBox {
+        .dl {
+          display: table;
+          width: 100%;
+
+          + .dl {
+            margin-top: 10px;
+          }
+
+          .dt {
+            display: table-cell;
+            width: 60px;
+            vertical-align: middle;
+          }
+
+          .dd {
+            display: table-cell;
+            vertical-align: middle;
+          }
+        }
+      }
+      .ageInput {
+        input {
+          display: inline-block;
+          width: 120px;
+          margin: 0 5px 0 0;
+        }
+        > p {
+          display: inline-block;
+        }
+      }
+      .meetingBox {
+        margin: 0 0 20px;
+        .radioList {
+          display: inline-block;
+          .list {
+            display: inline-block;
+            margin: 0 20px 0 0;
+          }
+        }
+      }
+      .dateBox {
+        + .dateBox {
+          margin: 10px 0 0;
+        }
+        + .txt {
+          margin: 10px 0 0;
+        }
+        input[type="text"] {
+          width: 90px;
+        }
+
+        .em {
+          display: inline-block;
+        }
+
+        .span {
+          display: inline-block;
+          margin: 0 5px;
+          vertical-align: middle;
+        }
+        .radioList {
+          display: inline-block;
+          margin: 0 0 0 40px;
+
+          .list {
+            display: inline-block;
+            margin: 0 20px 0 0;
+          }
+        }
+      }
+      .caution {
+        margin-top: 10px;
+        color: #d20000;
+        line-height: 2;
+      }
+      .telBox {
+        padding: 10px 10px 40px;
+        font-size: 0;
+        font-weight: 400;
+        text-align: left;
+        line-height: 2;
+        > * {
+          display: inline-block;
+          font-size: 14px;
+        }
+      }
+      .telTxt {
+        padding: 10px 10px 0;
+      }
+      .privacy {
+        padding: 10px;
+
+        > p {
+          margin: 0 0 20px;
+          text-align: left;
+        }
+
+        .agreeBox {
+          overflow: scroll;
+          height: 500px;
+          padding: 20px;
+          text-align: left;
+          border-radius: 4px;
+          border: 1px solid #edebe6;
+          background: #edebe6;
+          .box {
+            + .box {
+              margin: 30px 0 0;
+            }
+            .link {
+              a {
+                display: inline-block;
+              }
+            }
+          }
+          p {
+            line-height: 2;
+          }
+          .tel {
+            p,
+            a {
+              display: inline-block;
+            }
+          }
+        }
+      }
+
+      .privacy + .checkItem {
+        margin: 40px 0;
+        text-align: center;
+      }
+    }
+    .fileUploadBox {
+      .ttl {
+        margin: 0 0 10px;
+        line-height: 2;
+      }
+      .fileBox {
+      }
+      .fileArea {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        + .fileArea {
+          margin: 10px 0 0;
+        }
+
+        .inputFile {
+          position: relative;
+          width: 28%;
+          font-size: 16px;
+          color: #b4d2be;
+          text-align: center;
+          border: 1px solid #41ab6d;
+          background: #ffffff;
+
+          input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+          }
+
+          p {
+            padding: 12px 10px;
+          }
+        }
+
+        > p,
+        .fileTxt {
+          width: 70%;
+        }
+        .fileTxt {
+          p {
+            display: inline-block;
+          }
+          .fileName {
+            margin: 0 10px 0 0;
+          }
+          .attention {
+            font-size: 13px;
+            color: #54765f;
+          }
+        }
+      }
+      .txt {
+        line-height: 2;
+      }
+    }
+    .aside {
+      margin: 10px 0 0;
+    }
+    .fileUploadTitleBox {
+      margin: 60px 0 30px;
+      .fileUploadTitle {
+        position: relative;
+        max-width: 440px;
+        margin: 0 0 20px;
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          height: 1px;
+          margin: auto;
+          background: #000000;
+        }
+        p {
+          position: relative;
+          display: inline-block;
+          padding: 0 20px 0 0;
+          font-size: 30px;
+          font-weight: bold;
+          background: #ffffff;
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	complete
+///////////////////////////////////////////////////////////*/
+.complete {
+  padding: 60px 0 100px;
+  .txt {
+    margin: 0 0 40px;
+    text-align: center;
+    line-height: 3;
+  }
+  .btnMoreBox {
+    text-align: center;
+  }
+  .btnMore {
+    max-width: 220px;
+    margin: 0 auto;
+    a {
+      display: block;
+      padding: 10px 15px;
+      font-weight: bold;
+      color: #ffffff;
+      border-radius: 6px;
+      background: #c07e5e;
+    }
+  }
+}

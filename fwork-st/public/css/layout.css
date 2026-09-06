@@ -1,0 +1,1733 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+	画面用CSS（PC/SMP）
+===================================================*/
+/*////////////////////////////////////////////////////////////
+	TOP
+///////////////////////////////////////////////////////////*/
+.topMain > h1 {
+  font-size: 0;
+}
+.topMain .topKvPanel .topKvContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100vh;
+}
+.topMain .topKvPanel .topKv {
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+.topMain .topKvPanel .topKv img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.topMain .sec01 {
+  margin: -1px 0 0;
+  padding: 60px 0 100px;
+  color: #ffffff;
+  text-align: center;
+  background: url(https://sit-10205333.sibloo.com/system_panel/uploads/images/top_sec01_bg.png) center no-repeat;
+  background-size: cover;
+}
+.topMain .sec01 .secTtl {
+  margin: 0 0 50px;
+  font-size: 34px;
+}
+.topMain .sec01 .list {
+  max-width: 1060px;
+  margin: 0 auto;
+}
+.topMain .sec01 .list .ul .li {
+  padding: 40px 20px;
+}
+.topMain .sec01 .list .ul .li:nth-child(1) {
+  color: #b33932;
+  background: url(https://sit-10205333.sibloo.com/system_panel/uploads/images/top_sec01_list_bg_01.png) no-repeat;
+  background-size: contain;
+}
+.topMain .sec01 .list .ul .li:nth-child(2) {
+  background: url(https://sit-10205333.sibloo.com/system_panel/uploads/images/top_sec01_list_bg_02.png) no-repeat;
+  background-size: contain;
+}
+.topMain .sec01 .list .ul .li:nth-child(3) {
+  background: url(https://sit-10205333.sibloo.com/system_panel/uploads/images/top_sec01_list_bg_03.png) no-repeat;
+  background-size: contain;
+}
+.topMain .sec01 .list .ul .li:nth-child(4) {
+  background: url(https://sit-10205333.sibloo.com/system_panel/uploads/images/top_sec01_list_bg_04.png) no-repeat;
+  background-size: contain;
+}
+@media (min-width: 1025px) {
+  .topMain .sec01 .list .ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px 0;
+  }
+  .topMain .sec01 .list .ul .li {
+    width: calc(50% - 20px);
+  }
+}
+.topMain .sec02 {
+  padding: 100px 0;
+}
+.topMain .sec02 .secTtl {
+  margin: 0 0 50px;
+  font-size: 34px;
+  text-align: center;
+}
+.topMain .sec02 .secTtl .ttl p {
+  display: inline;
+}
+.topMain .sec02 .secTtl .ttl .em {
+  background: linear-gradient(transparent 60%, #e0d7ae 60%);
+}
+.topMain .sec03 {
+  text-align: center;
+  background: #ffffff;
+}
+.topMain .sec03 .secContainer .secTtl {
+  font-size: 70px;
+}
+.topMain .sec03 .secContainer .secTtl h2 {
+  position: relative;
+  display: inline;
+  padding: 0 0 40px;
+}
+.topMain .sec03 .secContainer .secTtl h2:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 80px;
+  height: 2px;
+  margin: 0 auto;
+  background: #ef6b3d;
+}
+.topMain .sec03 .secContainer .secPanel .secBox a {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.topMain .sec03 .secContainer .secPanel .secBox .dl .dt {
+  margin: 0 0 40px;
+  font-size: 34px;
+}
+.topMain .sec03 .secContainer .secPanel .secBox .dl .dd {
+  line-height: 2;
+}
+.topMain .sec03 .secContainer .secPanel .secBox01 a {
+  background: url(https://sit-10205333.sibloo.com/system_panel/uploads/images/top_sec03_arrow_01.png) right bottom no-repeat;
+  background-size: 50px auto;
+}
+.topMain .sec03 .secContainer .secPanel .secBox02 a {
+  background: url(https://sit-10205333.sibloo.com/system_panel/uploads/images/top_sec03_arrow_02.png) right bottom no-repeat;
+  background-size: 50px auto;
+}
+.topMain .sec03 .secContainer .secPanel .secBox03 a {
+  background: url(https://sit-10205333.sibloo.com/system_panel/uploads/images/top_sec03_arrow_03.png) right bottom no-repeat;
+  background-size: 50px auto;
+}
+@media (min-width: 1025px) {
+  .topMain .sec03 .secContainer {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #000000;
+  }
+  .topMain .sec03 .secContainer .secTtl {
+    width: 120px;
+    writing-mode: vertical-lr;
+    border-right: 1px solid #000000;
+  }
+  .topMain .sec03 .secContainer .secPanel {
+    display: flex;
+    width: calc(100% - 120px);
+  }
+  .topMain .sec03 .secContainer .secPanel > * {
+    width: 50%;
+  }
+  .topMain .sec03 .secContainer .secPanel .secBox a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.6s;
+  }
+  .topMain .sec03 .secContainer .secPanel .secBox a:hover {
+    opacity: 1;
+  }
+  .topMain .sec03 .secContainer .secPanel .secBox a:hover::before {
+    opacity: 0;
+  }
+  .topMain .sec03 .secContainer .secPanel .secBox01 {
+    border-right: 1px solid #000000;
+  }
+  .topMain .sec03 .secContainer .secPanel .secBox01 a {
+    height: 900px;
+  }
+  .topMain .sec03 .secContainer .secPanel .secBox01 a::before {
+    background: url(https://sit-10205333.sibloo.com/system_panel/uploads/images/top_sec03_bg_01.png) no-repeat;
+    background-size: cover;
+  }
+  .topMain .sec03 .secContainer .secPanel .secBox02 {
+    border-bottom: 1px solid #000000;
+  }
+  .topMain .sec03 .secContainer .secPanel .secBox02 a::before {
+    background: url(https://sit-10205333.sibloo.com/system_panel/uploads/images/top_sec03_bg_02.png) no-repeat;
+    background-size: cover;
+  }
+  .topMain .sec03 .secContainer .secPanel .secBox03 a::before {
+    background: url(https://sit-10205333.sibloo.com/system_panel/uploads/images/top_sec03_bg_03.png) no-repeat;
+    background-size: cover;
+  }
+  .topMain .sec03 .secContainer .secPanel .secBoxList .secBox a {
+    height: 450px;
+  }
+}
+.topMain .sec04 {
+  padding: 100px 0 160px;
+  text-align: center;
+  background: #f6eee2;
+}
+.topMain .sec04 .secTtl {
+  position: relative;
+  margin: 0 0 50px;
+  padding: 0 0 20px;
+  font-size: 34px;
+}
+.topMain .sec04 .secTtl:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 50px;
+  height: 2px;
+  margin: 0 auto;
+  background: #181b39;
+}
+.topMain .sec04 .listBox {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.topMain .sec04 .listBox .ul .li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.topMain .sec04 .listBox .ul .li + .li {
+  margin: 30px 0 0;
+}
+.topMain .sec04 .listBox .ul .li.list01 {
+  background: url(https://sit-10205333.sibloo.com/system_panel/uploads/images/top_sec04_bg_01.png) center no-repeat;
+  background-size: cover;
+}
+.topMain .sec04 .listBox .ul .li.list02 {
+  background: url(https://sit-10205333.sibloo.com/system_panel/uploads/images/top_sec04_bg_02.png) center no-repeat;
+  background-size: cover;
+}
+.topMain .sec04 .listBox .ul .li.list03 {
+  background: url(https://sit-10205333.sibloo.com/system_panel/uploads/images/top_sec04_bg_03.png) center no-repeat;
+  background-size: cover;
+}
+.topMain .sec04 .listBox .ul .li.list04 {
+  background: url(https://sit-10205333.sibloo.com/system_panel/uploads/images/top_sec04_bg_04.png) center no-repeat;
+  background-size: cover;
+}
+.topMain .sec04 .listBox .ul .dl .dt {
+  margin: 0 0 20px;
+  font-size: 22px;
+}
+.topMain .sec04 .listBox .ul .dl .dd {
+  font-size: 18px;
+  line-height: 1.7;
+}
+@media (min-width: 1025px) {
+  .topMain .sec04 .listBox {
+    display: flex;
+    justify-content: space-between;
+  }
+  .topMain .sec04 .listBox .ul {
+    width: 49%;
+  }
+  .topMain .sec04 .listBox .ul .li {
+    height: 335px;
+  }
+  .topMain .sec04 .listBox .ul .dl {
+    max-width: 460px;
+    margin: 0 auto;
+  }
+  .topMain .sec04 .listBox .ul:nth-child(1) {
+    position: relative;
+    top: 60px;
+  }
+}
+.topMain .sec05 {
+  padding: 120px 0;
+  background: url(https://sit-10205333.sibloo.com/system_panel/uploads/images/top_sec05_bg.png) no-repeat;
+  background-size: cover;
+}
+.topMain .sec05 .secWrap01 {
+  position: relative;
+}
+.topMain .sec05 .secContainer .secTtlBox .secTtl {
+  position: relative;
+  margin: 0 0 50px;
+  padding: 0 0 20px;
+  font-size: 34px;
+  color: #f7efe3;
+  text-align: center;
+}
+.topMain .sec05 .secContainer .secTtlBox .secTtl:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 50px;
+  height: 2px;
+  margin: 0 auto;
+  background: #f7efe3;
+}
+.topMain .sec05 .secContainer .blogPanel .webgene-blog .webgene-header {
+  display: none;
+}
+.topMain .sec05 .secContainer .blogPanel .webgene-blog .webgene-item a {
+  display: block;
+  color: #ffffff;
+}
+.topMain .sec05 .secContainer .blogPanel .webgene-blog .webgene-item .txtBox {
+  margin: 10px 0 0;
+}
+.topMain .sec05 .more {
+  width: 50px;
+}
+.topMain .sec05 .more a {
+  display: block;
+}
+@media (min-width: 1025px) {
+  .topMain .sec05 .secContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .topMain .sec05 .secContainer .secTtlBox {
+    width: 120px;
+  }
+  .topMain .sec05 .secContainer .blogPanel {
+    width: calc(100% - 300px);
+  }
+  .topMain .sec05 .secContainer .blogPanel .webgene-blog {
+    display: flex;
+    margin: 0 0 0 -60px;
+  }
+  .topMain .sec05 .secContainer .blogPanel .webgene-blog .webgene-item {
+    width: calc(33.3333333333% - 60px);
+    margin: 0 0 0 60px;
+  }
+  .topMain .sec05 .secContainer .blogPanel .webgene-blog .webgene-item .photo {
+    position: relative;
+    height: 350px;
+  }
+  .topMain .sec05 .secContainer .blogPanel .webgene-blog .webgene-item .photo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .topMain .sec05 .more {
+    position: absolute;
+    left: 55px;
+    bottom: 20px;
+  }
+}
+.topMain .sec06 {
+  background: url(https://sit-10205333.sibloo.com/system_panel/uploads/images/top_sec06_bg.jpg) no-repeat;
+  background-attachment: fixed;
+}
+.topMain .sec06 .fixedImage {
+  display: none;
+}
+.topMain .sec06 .secContainer {
+  padding: 100vh 0 0;
+}
+.topMain .sec06 .secContainer .secPanel {
+  padding: 80px 20px;
+  background: rgba(255, 255, 255, 0.9);
+}
+.topMain .sec06 .secContainer .secPanel .secTtl {
+  position: relative;
+  margin: 0 0 50px;
+  padding: 0 0 20px;
+  font-size: 34px;
+  text-align: center;
+}
+.topMain .sec06 .secContainer .secPanel .secTtl:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 50px;
+  height: 2px;
+  margin: 0 auto;
+  background: #181b39;
+}
+.topMain .sec06 .secContainer .secPanel .infoBox {
+  max-width: 880px;
+  margin: 0 auto;
+}
+.topMain .sec06 .secContainer .secPanel .infoBox .dl {
+  line-height: 2;
+}
+.topMain .sec06 .secContainer .secPanel .infoBox .dl .dt {
+  padding: 15px 30px;
+  border-bottom: 1px solid #c9aa4c;
+}
+.topMain .sec06 .secContainer .secPanel .infoBox .dl .dd {
+  padding: 15px 40px;
+  border-bottom: 1px solid #181b39;
+}
+.topMain .sec06 .secContainer .secPanel .infoBox .dl .dd a {
+  display: inline-block;
+}
+@media (min-width: 1025px) {
+  .topMain .sec06 .secContainer .secPanel .infoBox .dl {
+    display: flex;
+  }
+  .topMain .sec06 .secContainer .secPanel .infoBox .dl .dt {
+    width: 200px;
+  }
+  .topMain .sec06 .secContainer .secPanel .infoBox .dl .dd {
+    width: calc(100% - 200px);
+  }
+}
+.topMain .slidePanel {
+  margin: 2px 0 0;
+}
+.topMain .slidePanel .slideBox .ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.topMain .slidePanel .slideBox .ul .li {
+  width: 20%;
+  margin: 0 1px;
+}
+
+/*////////////////////////////////////////////////////////////
+	service
+///////////////////////////////////////////////////////////*/
+.serviceMain .pageKvPanel {
+  background: url(https://sit-10205333.sibloo.com/system_panel/uploads/images/service_kv.png) no-repeat;
+  background-size: cover;
+}
+.serviceMain .topContainer {
+  padding: 50px 0;
+  background: #22485a;
+}
+.serviceMain .topContainer .linkList {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.serviceMain .topContainer .linkList .ul .li {
+  cursor: pointer;
+}
+@media (min-width: 1025px) {
+  .serviceMain .topContainer .linkList .ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  .serviceMain .topContainer .linkList .ul .li {
+    width: calc(33.3333333333% - 20px);
+  }
+}
+.serviceMain .section {
+  padding: 120px 0;
+}
+.serviceMain .section .secTtl {
+  position: relative;
+  margin: 0 0 50px;
+  padding: 0 0 20px;
+  font-size: 34px;
+  text-align: center;
+}
+.serviceMain .section .secTtl:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 50px;
+  height: 2px;
+  margin: 0 auto;
+  background: #181b39;
+}
+.serviceMain .section .explainContainer {
+  margin: 80px 0 0;
+}
+.serviceMain .section .explainContainer .dl + .dl {
+  margin: 30px 0 0;
+}
+.serviceMain .section .explainContainer .dl .dt {
+  font-size: 24px;
+}
+.serviceMain .section .explainContainer .dl .dd {
+  line-height: 2;
+}
+@media (min-width: 1025px) {
+  .serviceMain .section .explainContainer .dl {
+    display: flex;
+    align-items: center;
+  }
+  .serviceMain .section .explainContainer .dl .dt {
+    width: 420px;
+    padding: 30px 15px 30px 0;
+    border-right: 1px solid #000000;
+  }
+  .serviceMain .section .explainContainer .dl .dd {
+    width: calc(100% - 420px);
+    padding: 30px 20px;
+  }
+}
+.serviceMain .section .flowContainer {
+  margin: 100px 0 0;
+}
+.serviceMain .section .flowContainer .flowTtl {
+  margin: 0 0 40px;
+  padding: 0 0 0 15px;
+  font-size: 34px;
+}
+.serviceMain .section .flowContainer .flowTtl h3 {
+  line-height: 1.1;
+}
+.serviceMain .section .flowContainer .flowTtl.flowTtl01 {
+  border-left: 6px solid #e4cfa9;
+}
+.serviceMain .section .flowContainer .flowTtl.flowTtl02 {
+  border-left: 6px solid #42415d;
+}
+.serviceMain .section .flowContainer .flowTtl.flowTtl03 {
+  border-left: 6px solid #c6954e;
+}
+.serviceMain .section .flowContainer .flowList01 .ol .li {
+  position: relative;
+  padding: 20px 20px 40px;
+  text-align: center;
+  border: 2px solid #a43932;
+  background: #e4cfa9;
+}
+.serviceMain .section .flowContainer .flowList01 .ol .li .dl .dt {
+  margin: 0 0 15px;
+  font-size: 34px;
+}
+.serviceMain .section .flowContainer .flowList01 .ol .li .dl .dd {
+  font-size: 24px;
+}
+@media (min-width: 1025px) {
+  .serviceMain .section .flowContainer .flowList01 .ol {
+    display: flex;
+    justify-content: space-between;
+  }
+  .serviceMain .section .flowContainer .flowList01 .ol .li {
+    width: calc(25% - 30px);
+  }
+  .serviceMain .section .flowContainer .flowList01 .ol .li + .li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -33px;
+    bottom: 0;
+    width: 25px;
+    height: 40px;
+    margin: auto 0;
+    background: url(https://sit-10205333.sibloo.com/system_panel/uploads/images/service_flow_arrow_01.png) no-repeat;
+    background-size: 100% auto;
+  }
+}
+.serviceMain .section .flowContainer .flowList02 .ol .li {
+  position: relative;
+  padding: 20px 20px 40px;
+  text-align: center;
+  border: 2px solid #e0693f;
+  background: #f6e5d7;
+}
+.serviceMain .section .flowContainer .flowList02 .ol .li .dl .dt {
+  margin: 0 0 15px;
+  font-size: 34px;
+}
+.serviceMain .section .flowContainer .flowList02 .ol .li .dl .dd {
+  font-size: 24px;
+}
+@media (min-width: 1025px) {
+  .serviceMain .section .flowContainer .flowList02 .ol {
+    display: flex;
+    justify-content: space-between;
+  }
+  .serviceMain .section .flowContainer .flowList02 .ol .li {
+    width: calc(33.3333333333% - 40px);
+  }
+  .serviceMain .section .flowContainer .flowList02 .ol .li + .li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -43px;
+    bottom: 0;
+    width: 25px;
+    height: 40px;
+    margin: auto 0;
+    background: url(https://sit-10205333.sibloo.com/system_panel/uploads/images/service_flow_arrow_01.png) no-repeat;
+    background-size: 100% auto;
+  }
+  .serviceMain .section .flowContainer .flowList02 .ol .li .dl .dd {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 110px;
+  }
+}
+.serviceMain .section .flowContainer .flowList03 .ol .li {
+  position: relative;
+  padding: 20px 20px 40px;
+  color: #ffffff;
+  text-align: center;
+  border: 2px solid #c6954e;
+  background: #456950;
+}
+.serviceMain .section .flowContainer .flowList03 .ol .li .dl .dt {
+  margin: 0 0 15px;
+  font-size: 34px;
+}
+.serviceMain .section .flowContainer .flowList03 .ol .li .dl .dd {
+  font-size: 24px;
+}
+@media (min-width: 1025px) {
+  .serviceMain .section .flowContainer .flowList03 .ol {
+    display: flex;
+    justify-content: space-between;
+  }
+  .serviceMain .section .flowContainer .flowList03 .ol .li {
+    width: calc(20% - 30px);
+  }
+  .serviceMain .section .flowContainer .flowList03 .ol .li + .li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -33px;
+    bottom: 0;
+    width: 25px;
+    height: 40px;
+    margin: auto 0;
+    background: url(https://sit-10205333.sibloo.com/system_panel/uploads/images/service_flow_arrow_01.png) no-repeat;
+    background-size: 100% auto;
+  }
+  .serviceMain .section .flowContainer .flowList03 .ol .li .dl .dd {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 75px;
+  }
+}
+.serviceMain .section .flowContainer .aside {
+  margin: 15px 0 0;
+}
+.serviceMain .sec01 .secContainer .ttlBox {
+  margin: 0 0 30px;
+}
+.serviceMain .sec01 .secContainer .ttlBox .ttl {
+  font-size: 34px;
+  text-align: center;
+}
+.serviceMain .sec01 .secContainer .ttlBox .ttl p {
+  display: inline;
+}
+.serviceMain .sec01 .secContainer .ttlBox .ttl .em {
+  background: linear-gradient(transparent 60%, #e0d7ae 60%);
+}
+.serviceMain .sec01 .checkContainer {
+  margin: 40px 0 80px;
+  border: 1px solid #86283e;
+  background: #ffffff;
+}
+.serviceMain .sec01 .checkContainer .dl .dt {
+  padding: 30px;
+  font-size: 24px;
+  color: #ffffff;
+  text-align: center;
+  background: #86283e;
+}
+.serviceMain .sec01 .checkContainer .dl .dd {
+  padding: 30px;
+}
+.serviceMain .sec01 .checkContainer .dl .dd .ul .li {
+  padding: 0 0 0 30px;
+  background: url(https://sit-10205333.sibloo.com/system_panel/uploads/images/service_list_chaeck_01.png) left center no-repeat;
+  background-size: 20px auto;
+}
+.serviceMain .sec01 .checkContainer .dl .dd .ul .li + .li {
+  margin: 10px 0 0;
+}
+@media (min-width: 1025px) {
+  .serviceMain .sec01 .checkContainer .dl {
+    display: flex;
+    justify-content: stretch;
+  }
+  .serviceMain .sec01 .checkContainer .dl .dt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+  }
+  .serviceMain .sec01 .checkContainer .dl .dd {
+    width: calc(100% - 350px);
+  }
+}
+.serviceMain .sec01 .chart {
+  max-width: 600px;
+  margin: 40px auto;
+}
+.serviceMain .sec02 {
+  background: #dcd0a3;
+}
+.serviceMain .sec02 .secContainer .ttlBox {
+  margin: 0 0 30px;
+}
+.serviceMain .sec02 .secContainer .ttlBox .ttl {
+  font-size: 34px;
+  text-align: center;
+}
+.serviceMain .sec02 .secContainer .ttlBox .ttl p {
+  display: inline;
+}
+.serviceMain .sec02 .secContainer .ttlBox .ttl .em {
+  background: linear-gradient(transparent 60%, #ef6b3d 60%);
+}
+.serviceMain .sec02 .checkContainer {
+  margin: 40px 0 80px;
+  border: 1px solid #ef6b3d;
+  background: #ffffff;
+}
+.serviceMain .sec02 .checkContainer .dl .dt {
+  padding: 30px;
+  font-size: 24px;
+  color: #ffffff;
+  text-align: center;
+  background: #ef6b3d;
+}
+.serviceMain .sec02 .checkContainer .dl .dd {
+  padding: 30px;
+}
+.serviceMain .sec02 .checkContainer .dl .dd .ul .li {
+  padding: 0 0 0 30px;
+  background: url(https://sit-10205333.sibloo.com/system_panel/uploads/images/service_list_chaeck_02.png) left center no-repeat;
+  background-size: 20px auto;
+}
+.serviceMain .sec02 .checkContainer .dl .dd .ul .li + .li {
+  margin: 10px 0 0;
+}
+@media (min-width: 1025px) {
+  .serviceMain .sec02 .checkContainer .dl {
+    display: flex;
+    justify-content: stretch;
+  }
+  .serviceMain .sec02 .checkContainer .dl .dt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+  }
+  .serviceMain .sec02 .checkContainer .dl .dd {
+    width: calc(100% - 350px);
+  }
+}
+.serviceMain .sec03 {
+  background: #f1f3e7;
+}
+.serviceMain .sec03 .secContainer .ttlBox {
+  margin: 0 0 30px;
+}
+.serviceMain .sec03 .secContainer .ttlBox .ttl {
+  font-size: 34px;
+  text-align: center;
+}
+.serviceMain .sec03 .secContainer .ttlBox .ttl p {
+  display: inline;
+}
+.serviceMain .sec03 .secContainer .ttlBox .ttl .em {
+  background: linear-gradient(transparent 60%, #e1d8ae 60%);
+}
+.serviceMain .sec03 .checkContainer {
+  margin: 40px 0 80px;
+  border: 1px solid #456950;
+  background: #ffffff;
+}
+.serviceMain .sec03 .checkContainer .dl .dt {
+  padding: 30px;
+  font-size: 24px;
+  color: #ffffff;
+  text-align: center;
+  background: #456950;
+}
+.serviceMain .sec03 .checkContainer .dl .dd {
+  padding: 30px;
+}
+.serviceMain .sec03 .checkContainer .dl .dd .ul .li {
+  padding: 0 0 0 30px;
+  background: url(https://sit-10205333.sibloo.com/system_panel/uploads/images/service_list_chaeck_03.png) left center no-repeat;
+  background-size: 20px auto;
+}
+.serviceMain .sec03 .checkContainer .dl .dd .ul .li + .li {
+  margin: 10px 0 0;
+}
+@media (min-width: 1025px) {
+  .serviceMain .sec03 .checkContainer .dl {
+    display: flex;
+    justify-content: stretch;
+  }
+  .serviceMain .sec03 .checkContainer .dl .dt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+  }
+  .serviceMain .sec03 .checkContainer .dl .dd {
+    width: calc(100% - 350px);
+  }
+}
+.serviceMain .secYearSupport {
+  padding: 120px 0;
+  color: #d8cda7;
+  background: #22485a;
+}
+.serviceMain .secYearSupport .secTtl {
+  position: relative;
+  margin: 0 0 50px;
+  padding: 0 0 20px;
+  font-size: 34px;
+  text-align: center;
+}
+.serviceMain .secYearSupport .secTtl:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 50px;
+  height: 2px;
+  margin: 0 auto;
+  background: #cc252a;
+}
+.serviceMain .secYearSupport .secContainer .ttlBox {
+  margin: 0 0 30px;
+}
+.serviceMain .secYearSupport .secContainer .ttlBox .ttl {
+  font-size: 34px;
+  text-align: center;
+}
+.serviceMain .secYearSupport .secContainer .txt p + p {
+  margin: 30px 0 0;
+}
+
+/*////////////////////////////////////////////////////////////
+	contact
+///////////////////////////////////////////////////////////*/
+.contactMain .pageKvPanel {
+  background: url(https://sit-10205333.sibloo.com/system_panel/uploads/images/contact_kv.png) no-repeat;
+  background-size: cover;
+}
+.contactMain .sec01 {
+  padding: 80px 0 100px;
+  background: #f5ede0;
+}
+.contactMain .sec01 .secTtl {
+  position: relative;
+  margin: 0 0 50px;
+  padding: 0 0 20px;
+  font-size: 34px;
+  text-align: center;
+}
+.contactMain .sec01 .secTtl:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 50px;
+  height: 2px;
+  margin: 0 auto;
+  background: #181b39;
+}
+.contactMain .sec01 .topTxt {
+  margin: 0 0 40px;
+  text-align: center;
+}
+
+/*////////////////////////////////////////////////////////////
+	form
+///////////////////////////////////////////////////////////*/
+.formMain {
+  /* 入力項目
+  --------------------------------------*/
+  /*テキストボックス・メール・電話*/
+  /*テキストエリア*/
+}
+.formMain .contactForm input[type=text],
+.formMain .contactForm input[type=email],
+.formMain .contactForm input[type=tel] {
+  width: 100%;
+  height: 50px;
+  padding-left: 20px;
+  font-size: 16px;
+  border: 1px solid #b39e7c;
+  background: #ffffff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.formMain .contactForm textarea {
+  width: 100%;
+  height: 200px;
+  padding: 20px;
+  font-size: 16px;
+  border: 1px solid #b39e7c;
+  background: #ffffff;
+  resize: none;
+}
+.formMain .contactForm input[type=text]:focus,
+.formMain .contactForm input[type=email]:focus,
+.formMain .contactForm input[type=tel]:focus,
+.formMain .contactForm textarea:focus {
+  outline: 0;
+  border: 2px solid #90cefd;
+}
+.formMain .btnSubmitBox {
+  max-width: 230px;
+  margin: 40px auto 0;
+}
+.formMain .contactForm button[type=submit] {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 7px 10px;
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "Helvetica Neue", "Helvetica", "Arial", sans-serif, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+  font-size: 15px;
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  border: 1px solid #85283d;
+  background: #85283d;
+  transition: 0.6s;
+}
+.formMain .contactForm button[type=submit]:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -10px;
+  bottom: 0;
+  width: 30px;
+  height: 5px;
+  margin: auto 0;
+  background: url(https://sit-10205333.sibloo.com/system_panel/uploads/images/btn_more_arrow.png) no-repeat;
+  background-size: 100% auto;
+  transition: 0.6s;
+}
+@media (min-width: 1025px) {
+  .formMain .contactForm button[type=submit]:hover:after {
+    right: -15px;
+  }
+}
+.formMain .contactForm button[type=submit][disabled] {
+  opacity: 0.6;
+  cursor: default;
+  pointer-events: none;
+}
+.formMain .contactForm .form {
+  padding: 0 0 60px;
+}
+.formMain .contactForm .form .checkList .ul {
+  padding: 12px 0 0;
+}
+.formMain .contactForm .form .checkList .ul + .ul {
+  margin: 10px 0 0;
+}
+.formMain .contactForm .form .checkList .ul .li + .li {
+  margin: 10px 0 0;
+}
+.formMain .contactForm .form .checkList .list + .list {
+  margin: 10px 0 0;
+}
+.formMain .contactForm .form .checkList01 .ul .li {
+  display: inline-block;
+}
+.formMain .contactForm .form .checkList01 .ul .li + .li {
+  margin: 0 0 0 10px;
+}
+.formMain .contactForm .form .checkList01 .checkItem {
+  display: inline-block;
+  padding: 0 5px 0 0;
+}
+.formMain .contactForm .form .checkList01 .checkItem + input {
+  display: inline-block;
+  width: 150px;
+}
+.formMain .contactForm .form .checkList01 .otherTxt {
+  display: inline-block;
+}
+.formMain .contactForm .form .checkItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.formMain .contactForm .form .checkItem + .checkItem {
+  margin-top: 10px;
+}
+.formMain .contactForm .form .checkItem input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+}
+.formMain .contactForm .form .checkItem label {
+  display: inline-block;
+  padding-left: 30px;
+  position: relative;
+  cursor: pointer;
+}
+.formMain .contactForm .form .checkItem label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  transform: translateY(-50%);
+  border: 1px solid #b39e7c;
+  background: #ffffff;
+}
+.formMain .contactForm .form .checkItem input[type=checkbox]:checked + label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  width: 7px;
+  height: 14px;
+  transform: translateY(-50%) rotate(40deg);
+  border-bottom: 3px solid #c9aa4c;
+  border-right: 3px solid #c9aa4c;
+}
+.formMain .contactForm .form .checkItem.agreeCheck {
+  justify-content: center;
+}
+.formMain .contactForm .form .radioList01 .list {
+  display: inline-block;
+  margin: 0 20px 0 0;
+}
+.formMain .contactForm .form .radioList01 .otherTxt {
+  display: inline-block;
+}
+.formMain .contactForm .form .radioBox {
+  padding: 10px 0;
+}
+.formMain .contactForm .form .radioBox .radio {
+  position: relative;
+  display: inline-block;
+}
+.formMain .contactForm .form .radioBox input[type=radio] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+}
+.formMain .contactForm .form .radioBox label {
+  position: relative;
+  padding: 5px 0 5px 35px;
+}
+.formMain .contactForm .form .radioBox label:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 25px;
+  height: 25px;
+  margin: auto 0;
+  border-radius: 50%;
+  border: 1px solid #b7c5b2;
+  background: #eff8ec;
+  box-sizing: border-box;
+}
+.formMain .contactForm .form .radioBox input[type=radio]:checked + label:before {
+  border: 8px solid #000000;
+}
+.formMain .contactForm .form .postalBox {
+  margin: 0 0 5px;
+}
+.formMain .contactForm .form .postalBox input {
+  width: 90px;
+}
+.formMain .contactForm .form .postalBox input + .span {
+  display: inline-block;
+  margin: 0 5px;
+}
+.formMain .contactForm .form .postalBox .postalTxt {
+  display: inline-block;
+  margin: 0 5px;
+}
+.formMain .contactForm .form .postalBox + input + input {
+  margin: 5px 0;
+}
+.formMain .contactForm .form .selectBox {
+  display: inline-block;
+  width: 200px;
+}
+.formMain .contactForm .form .selectBox select {
+  display: block;
+  width: 100%;
+  padding: 11px 20px;
+  font-size: 16px;
+  color: #000000;
+  line-height: 1.5em;
+  border-radius: 0;
+  border: 1px solid #deebe4;
+  border-radius: 15px;
+  background: #f7f7f7;
+  background-size: 10px auto;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.formMain .contactForm .form .selectBox + .span {
+  display: inline-block;
+  margin: 0 5px;
+}
+.formMain .contactForm .formBox + .formBox {
+  margin-top: 60px;
+}
+.formMain .contactForm .formBox > .dl {
+  position: relative;
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid #b39e7c;
+}
+.formMain .contactForm .formBox > .dl.line > .dt {
+  vertical-align: top;
+}
+.formMain .contactForm .formBox > .dl > .dt {
+  overflow: hidden;
+  width: 340px;
+  margin: 0 2px 0 0;
+  padding: 20px 10px;
+}
+.formMain .contactForm .formBox > .dl > .dt .span {
+  display: inline-block;
+  min-width: 165px;
+  margin-right: 10px;
+  padding: 0 0 0 5px;
+  vertical-align: middle;
+}
+.formMain .contactForm .formBox > .dl > .dt .span p {
+  display: inline-block;
+}
+.formMain .contactForm .formBox > .dl > .dt .em {
+  display: inline-block;
+  padding: 0 8px;
+  font-size: 14px;
+  color: #ffffff;
+  vertical-align: middle;
+  background: #c9aa4c;
+}
+.formMain .contactForm .formBox > .dl > .dt .small {
+  display: inline-block;
+  margin: 0 0 0 10px;
+  font-size: 13px;
+}
+.formMain .contactForm .formBox > .dl > .dt .aside {
+  margin-top: 0;
+}
+.formMain .contactForm .formBox > .dl > .dt .aside p {
+  font-size: 14px;
+  padding-left: 1em;
+  text-indent: -1em;
+}
+@media (min-width: 1025px) {
+  .formMain .contactForm .formBox > .dl > .dt .span {
+    float: left;
+  }
+  .formMain .contactForm .formBox > .dl > .dt .em {
+    float: right;
+  }
+}
+.formMain .contactForm .formBox > .dl > .dd {
+  position: relative;
+  width: calc(100% - 345px);
+  padding: 10px 20px;
+}
+.formMain .contactForm .formBox .datePanel {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+}
+.formMain .contactForm .formBox .datePanel + .datePanel {
+  margin: 10px 0 0;
+}
+.formMain .contactForm .formBox .datePanel > * {
+  display: flex;
+  align-items: center;
+}
+.formMain .contactForm .formBox .datePanel input {
+  width: 70px;
+  border-radius: 15px;
+}
+.formMain .contactForm .formBox .datePanel .selectBox {
+  width: 70px;
+}
+.formMain .contactForm .formBox .datePanel .dateTtl {
+  margin: 0 10px 0 0;
+}
+.formMain .contactForm .formBox .datePanel .dateTxt {
+  margin: 0 5px;
+}
+.formMain .contactForm .formBox .addressBox .dl,
+.formMain .contactForm .formBox .dateBox .dl {
+  display: table;
+  width: 100%;
+}
+.formMain .contactForm .formBox .addressBox .dl + .dl,
+.formMain .contactForm .formBox .dateBox .dl + .dl {
+  margin-top: 10px;
+}
+.formMain .contactForm .formBox .addressBox .dl .dt,
+.formMain .contactForm .formBox .dateBox .dl .dt {
+  display: table-cell;
+  width: 60px;
+  vertical-align: middle;
+}
+.formMain .contactForm .formBox .addressBox .dl .dd,
+.formMain .contactForm .formBox .dateBox .dl .dd {
+  display: table-cell;
+  vertical-align: middle;
+}
+.formMain .contactForm .formBox .addressBox .innerBox + .innerBox {
+  margin: 5px 0 0;
+}
+@media (min-width: 1025px) {
+  .formMain .contactForm .formBox .addressBox .innerBox {
+    display: flex;
+    align-items: center;
+  }
+  .formMain .contactForm .formBox .addressBox .innerBox > p {
+    width: 80px;
+    font-size: 16px;
+  }
+  .formMain .contactForm .formBox .addressBox .innerBox .inputBox {
+    width: calc(100% - 80px);
+  }
+}
+.formMain .contactForm .formBox .ageInput input {
+  display: inline-block;
+  width: 120px;
+  margin: 0 5px 0 0;
+}
+.formMain .contactForm .formBox .ageInput > p {
+  display: inline-block;
+}
+.formMain .contactForm .formBox .meetingBox {
+  margin: 0 0 20px;
+}
+.formMain .contactForm .formBox .meetingBox .radioList {
+  display: inline-block;
+}
+.formMain .contactForm .formBox .meetingBox .radioList .list {
+  display: inline-block;
+  margin: 0 20px 0 0;
+}
+.formMain .contactForm .formBox .dateBox + .dateBox {
+  margin: 10px 0 0;
+}
+.formMain .contactForm .formBox .dateBox + .txt {
+  margin: 10px 0 0;
+}
+.formMain .contactForm .formBox .dateBox input[type=text] {
+  width: 90px;
+}
+.formMain .contactForm .formBox .dateBox .em {
+  display: inline-block;
+}
+.formMain .contactForm .formBox .dateBox .span {
+  display: inline-block;
+  margin: 0 5px;
+  vertical-align: middle;
+}
+.formMain .contactForm .formBox .dateBox .radioList {
+  display: inline-block;
+  margin: 0 0 0 40px;
+}
+.formMain .contactForm .formBox .dateBox .radioList .list {
+  display: inline-block;
+  margin: 0 20px 0 0;
+}
+.formMain .contactForm .formBox .caution {
+  margin-top: 10px;
+  color: #d20000;
+  line-height: 2;
+}
+.formMain .contactForm .formBox .telBox {
+  padding: 10px 10px 40px;
+  font-size: 0;
+  font-weight: 400;
+  text-align: left;
+  line-height: 2;
+}
+.formMain .contactForm .formBox .telBox > * {
+  display: inline-block;
+  font-size: 14px;
+}
+.formMain .contactForm .formBox .telTxt {
+  padding: 10px 10px 0;
+}
+.formMain .contactForm .formBox .privacy {
+  padding: 10px;
+}
+.formMain .contactForm .formBox .privacy > p {
+  margin: 0 0 20px;
+  text-align: left;
+}
+.formMain .contactForm .formBox .privacy .agreeBox {
+  overflow: scroll;
+  height: 500px;
+  padding: 20px;
+  text-align: left;
+  border: 1px solid #b39e7c;
+  background: #e3d8c7;
+}
+.formMain .contactForm .formBox .privacy .agreeBox .box + .box {
+  margin: 30px 0 0;
+}
+.formMain .contactForm .formBox .privacy .agreeBox .box .link a {
+  display: inline-block;
+}
+.formMain .contactForm .formBox .privacy .agreeBox p {
+  line-height: 2;
+}
+.formMain .contactForm .formBox .privacy .agreeBox .tel p,
+.formMain .contactForm .formBox .privacy .agreeBox .tel a {
+  display: inline-block;
+}
+.formMain .contactForm .formBox .privacy + .checkItem {
+  margin: 40px 0;
+  text-align: center;
+}
+.formMain .contactForm .fileUploadBox .ttl {
+  margin: 0 0 10px;
+  line-height: 2;
+}
+.formMain .contactForm .fileUploadBox .fileBox {
+  display: flex;
+  align-items: center;
+  gap: 0 20px;
+}
+.formMain .contactForm .fileUploadBox .fileBox + .fileBox {
+  margin: 10px 0 0;
+}
+.formMain .contactForm .fileUploadBox .place {
+  width: 100px;
+}
+.formMain .contactForm .fileUploadBox .fileArea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 20px;
+  width: calc(100% - 120px);
+}
+.formMain .contactForm .fileUploadBox .fileArea + .fileArea {
+  margin: 10px 0 0;
+}
+.formMain .contactForm .fileUploadBox .fileArea .inputFile {
+  position: relative;
+  width: 180px;
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+  border: 1px solid #b39e7c;
+  background: #d2c2a8;
+}
+.formMain .contactForm .fileUploadBox .fileArea .inputFile input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.formMain .contactForm .fileUploadBox .fileArea .inputFile p {
+  padding: 12px 10px;
+}
+.formMain .contactForm .fileUploadBox .fileArea > p,
+.formMain .contactForm .fileUploadBox .fileArea .fileTxt {
+  width: 70%;
+}
+.formMain .contactForm .fileUploadBox .fileArea .fileTxt p {
+  display: inline-block;
+}
+.formMain .contactForm .fileUploadBox .fileArea .fileTxt .fileName {
+  margin: 0 10px 0 0;
+}
+.formMain .contactForm .fileUploadBox .fileArea .fileTxt .attention {
+  font-size: 13px;
+  color: #54765f;
+}
+.formMain .contactForm .fileUploadBox .txt {
+  line-height: 2;
+}
+.formMain .contactForm .aside {
+  margin: 10px 0 0;
+}
+.formMain .contactForm .fileUploadTitleBox {
+  margin: 60px 0 30px;
+}
+.formMain .contactForm .fileUploadTitleBox .fileUploadTitle {
+  position: relative;
+  max-width: 440px;
+  margin: 0 0 20px;
+}
+.formMain .contactForm .fileUploadTitleBox .fileUploadTitle:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  margin: auto;
+  background: #000000;
+}
+.formMain .contactForm .fileUploadTitleBox .fileUploadTitle p {
+  position: relative;
+  display: inline-block;
+  padding: 0 20px 0 0;
+  font-size: 30px;
+  font-weight: bold;
+  background: #ffffff;
+}
+
+/*////////////////////////////////////////////////////////////
+	complete
+///////////////////////////////////////////////////////////*/
+.complete {
+  padding: 60px 0 100px;
+}
+.complete .txt {
+  margin: 0 0 40px;
+  text-align: center;
+  line-height: 3;
+}
+.complete .btnMore {
+  width: 220px;
+  margin: 0 auto;
+}
+.complete .btnMore a {
+  display: block;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+  background: #85283d;
+}
+
+/*////////////////////////////////////////////////////////////
+	blog
+///////////////////////////////////////////////////////////*/
+.blogMain .pageKvPanel {
+  background: url(https://sit-10205333.sibloo.com/system_panel/uploads/images/blog_kv.png) no-repeat;
+  background-size: cover;
+}
+.blogMain .blogSection {
+  padding: 80px 0 120px;
+}
+.blogMain .catePanel {
+  padding: 40px 0 80px;
+}
+.blogMain .catePanel .webgene-blog .webgene-header {
+  display: none;
+}
+.blogMain .catePanel .webgene-blog .webgene-item {
+  display: inline-block;
+  width: 220px;
+  margin: 0 10px 0 0;
+}
+.blogMain .catePanel .webgene-blog .webgene-item a {
+  position: relative;
+  display: block;
+  padding: 10px 10px;
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+  background: #214657;
+}
+.blogMain .blogPanel--list .webgene-blog .webgene-header {
+  display: none;
+}
+.blogMain .blogPanel--list .webgene-blog .webgene-item a {
+  display: block;
+  padding: 0 0 5px;
+  border-bottom: 1px solid #181b39;
+}
+.blogMain .blogPanel--list .webgene-blog .webgene-item .photo {
+  margin: 0 0 20px;
+}
+.blogMain .blogPanel--list .webgene-blog .webgene-item .photo img {
+  border-radius: 6px;
+}
+.blogMain .blogPanel--list .webgene-blog .webgene-item .title {
+  min-height: 30px;
+  margin: 0 0 10px;
+}
+.blogMain .blogPanel--list .webgene-blog .webgene-item .more p {
+  display: block;
+  background: url(https://sit-10205333.sibloo.com/system_panel/uploads/images/blog_list_arrow.png) right 5px center no-repeat;
+  background-size: 10px auto;
+}
+@media (min-width: 1025px) {
+  .blogMain .blogPanel--list .webgene-blog {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -80px 0 0 -80px;
+  }
+  .blogMain .blogPanel--list .webgene-blog .webgene-item {
+    width: calc(33.3333333333% - 80px);
+    margin: 80px 0 0 80px;
+  }
+  .blogMain .blogPanel--list .webgene-blog .webgene-item .photo {
+    position: relative;
+    height: 240px;
+  }
+  .blogMain .blogPanel--list .webgene-blog .webgene-item .photo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.blogMain .blogPanel--list .webgene-pagination {
+  overflow: hidden;
+  width: 100%;
+  margin: 100px auto 0;
+  font-size: 14px;
+}
+.blogMain .blogPanel--list .webgene-pagination ul {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+.blogMain .blogPanel--list .webgene-pagination ul li {
+  display: inline-block;
+  margin: 0 2px;
+}
+.blogMain .blogPanel--list .webgene-pagination ul li a {
+  display: block;
+  width: 45px;
+  color: #ffffff;
+  line-height: 45px;
+  text-align: center;
+  background: #d7cebf;
+}
+.blogMain .blogPanel--list .webgene-pagination ul .prev {
+  margin: 0 2px 0 0;
+}
+.blogMain .blogPanel--list .webgene-pagination ul .next {
+  position: relative;
+  margin: 0 0 0 2px;
+}
+.blogMain .blogPanel--list .webgene-pagination ul .selected a {
+  background: #214657;
+}
+@media (min-width: 1025px) {
+  .blogMain .blogPanel--list .webgene-pagination ul .prev {
+    float: left;
+  }
+  .blogMain .blogPanel--list .webgene-pagination ul .next {
+    float: right;
+  }
+}
+.blogMain .blogPanel--detail {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.blogMain .blogPanel--detail .webgene-blog .webgene-header {
+  display: none;
+}
+.blogMain .blogPanel--detail .webgene-blog .info {
+  margin: 0 0 15px;
+}
+.blogMain .blogPanel--detail .webgene-blog .info .cate {
+  display: inline-block;
+  min-width: 100px;
+  margin: 0 10px 0 0;
+  padding: 0 10px;
+  color: #ffffff;
+  text-align: center;
+  background: #171a1c;
+}
+.blogMain .blogPanel--detail .webgene-blog .info .time {
+  display: inline-block;
+  vertical-align: middle;
+}
+.blogMain .blogPanel--detail .webgene-blog .ttlBox {
+  margin: 0 0 30px;
+  padding: 0 0 10px;
+  font-size: 30px;
+  border-bottom: 1px solid #181b39;
+}
+.blogMain .blogPanel--detail .webgene-blog img {
+  border-radius: 6px;
+}
+.blogMain .blogPanel--detail .webgene-blog .slickSlide {
+  margin: 0 0 40px;
+}
+.blogMain .blogPanel--detail .webgene-blog .slick-list {
+  margin: 0 0 10px;
+}
+.blogMain .blogPanel--detail .webgene-blog .thumb-item {
+  max-width: 800px;
+  margin: 0 0 10px;
+}
+@media (min-width: 1025px) {
+  .blogMain .blogPanel--detail .webgene-blog .thumb-item img {
+    display: block;
+    max-height: 600px;
+    object-fit: cover;
+  }
+}
+.blogMain .blogPanel--detail .webgene-blog .slideNav .slider .li > div {
+  overflow: hidden;
+  position: relative;
+  padding: 0 0 65%;
+}
+.blogMain .blogPanel--detail .webgene-blog .slideNav .slider .li img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.blogMain .blogPanel--detail .webgene-blog .slideNav .slick-slide {
+  margin: 0 5px;
+}
+.blogMain .blogPanel--detail .webgene-blog .postBox .photo {
+  margin-bottom: 40px;
+}
+.blogMain .blogPanel--detail .webgene-blog .postBox .photo img {
+  width: auto;
+  max-width: 100%;
+}
+.blogMain .blogPanel--detail .webgene-blog .postBox .postTxt {
+  line-height: 2;
+}
+.blogMain .blogPanel--detail .webgene-blog .postBox .postTxt p + p {
+  margin: 30px 0 0;
+}
+.blogMain .blogPanel--detail .webgene-blog .postBox .postTxt img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+.blogMain .blogPanel--detail .webgene-blog .postBox .pdfArea {
+  margin: 40px 0 0;
+}
+.blogMain .blogPanel--detail .webgene-blog .postBox .pdfArea a {
+  color: #2151a3;
+}
+.blogMain .blogPanel--detail .webgene-blog .videoBox {
+  margin: 40px 0 0;
+}
+.blogMain .blogPanel--detail .btnBackBox {
+  margin: 80px 0 0;
+  text-align: center;
+}
+.blogMain .blogPanel--detail .btnContact {
+  max-width: 280px;
+  margin: 0 auto;
+}
+.blogMain .blogPanel--detail .btnContact a {
+  position: relative;
+  display: block;
+  padding: 10px;
+  color: #ffffff;
+  text-align: center;
+  border: 1px solid #85283d;
+  background: #85283d;
+}
+.blogMain .blogPanel--detail .btnContact a:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -10px;
+  bottom: 0;
+  width: 30px;
+  height: 5px;
+  margin: auto 0;
+  background: url(https://sit-10205333.sibloo.com/system_panel/uploads/images/btn_more_arrow.png) no-repeat;
+  background-size: 100% auto;
+  transition: 0.6s;
+}
+@media (min-width: 1025px) {
+  .blogMain .blogPanel--detail .btnContact a:hover:after {
+    right: -15px;
+  }
+}
+.blogMain .blogPanel--detail .btnMore {
+  max-width: 220px;
+  margin: 60px auto 0;
+}
+.blogMain .blogPanel--detail .btnMore a {
+  display: block;
+  padding: 10px;
+  color: #ffffff;
+  text-align: center;
+  background: #214657;
+}
+.blogMain .blogPanel--detail .webgene-item-aroundPageLink {
+  display: inline-block;
+}
+.blogMain .blogPanel--detail .webgene-item-aroundPageLink a {
+  display: block;
+  width: 40px;
+  color: #ffffff;
+  line-height: 44px;
+  border-radius: 20px;
+  background: #d10b14;
+}

@@ -1,0 +1,328 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+	共通CSS（SMP）
+===================================================*/
+/* --------------------------------------------------
+	base
+-------------------------------------------------- */
+body {
+  min-width: 0;
+  font-size: 14px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/*改行*/
+.pcBreak {
+  display: none;
+}
+
+.spBreak {
+  display: block;
+}
+
+/*spのみ表示*/
+.pcHidden {
+  display: block;
+}
+
+.spHidden {
+  display: none;
+}
+
+#sideBtn {
+  display: none;
+}
+
+.topicPath {
+  display: none;
+}
+
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 20px;
+  z-index: 999;
+  background: #ffffff;
+}
+.header .headWrap {
+  position: relative;
+}
+.header .logo {
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+}
+.header .logo a {
+  display: block;
+  width: 90px;
+}
+.header .hamburger {
+  cursor: pointer;
+  position: fixed;
+  top: 25px;
+  right: 20px;
+  width: 28px;
+  height: 8px;
+  z-index: 10000;
+}
+.header .hamburger span {
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background: #000000;
+  transform: translateX(-50%);
+  transition: 0.4s;
+}
+.header .hamburger span:nth-of-type(1) {
+  top: 10px;
+}
+.header .hamburger span:nth-of-type(2) {
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.header .hamburger span:nth-of-type(3) {
+  bottom: 10px;
+}
+.header .hamburger.is-open span {
+  top: 50%;
+  bottom: auto;
+}
+.header .hamburger.is-open span:nth-of-type(1) {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.header .hamburger.is-open span:nth-of-type(2) {
+  opacity: 0;
+}
+.header .hamburger.is-open span:nth-of-type(3) {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* --------------------------------------------------
+	nav
+-------------------------------------------------- */
+.navBox {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 20px 80px;
+  z-index: 998;
+  background: #ffffff;
+  transition: 0.6s;
+}
+.navBox.active {
+  top: 53px;
+}
+.navBox .navList {
+  padding: 30px 0 10px;
+}
+.navBox .navList ul li + li {
+  margin: 5px 0 0;
+}
+.navBox .navList ul li a {
+  display: block;
+  padding: 5px 10px;
+  font-size: 13px;
+}
+.navBox .navItemBox {
+  margin: 0 0 20px;
+}
+.navBox .navItemBox .navItem01 {
+  margin: 0 0 20px;
+}
+.navBox .navItemBox .navItem01 ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.navBox .navItemBox .navItem01 ul li a {
+  display: block;
+  padding: 2px 10px;
+  font-size: 13px;
+  text-align: center;
+  border: 1px solid #000000;
+}
+.navBox .navItemBox .navItem02 .telBox {
+  margin: 0 0 10px;
+}
+.navBox .navItemBox .navItem02 .telBox .tel01 a {
+  display: inline-block;
+}
+.navBox .navItemBox .navItem02 .telBox .tel01 span {
+  display: inline-block;
+  font-size: 13px;
+  line-height: 1;
+}
+.navBox .navItemBox .navItem02 .telBox .tel01 em {
+  display: inline-block;
+  font-size: 24px;
+  line-height: 1;
+}
+.navBox .navItemBox .navItem02 .telBox .tel02 a {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 1;
+}
+.navBox .navItemBox .navItem02 .mailBox {
+  width: 180px;
+}
+.navBox .navItemBox .navItem02 .mailBox a {
+  display: block;
+  padding: 7px 10px;
+  font-size: 14px;
+  color: #ffffff;
+  text-align: center;
+  background: #d61807;
+}
+.navBox .navItemBox .navItem02 .mailBox a span {
+  display: inline-block;
+  padding: 0 0 0 20px;
+  background: url("../image/common/header_mail.png") left center no-repeat;
+  background-size: 15px auto;
+}
+.navBox .langBox {
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+.navBox .langBox .language {
+  position: relative;
+  width: 120px;
+  text-align: center;
+}
+.navBox .langBox .language .lang {
+  cursor: pointer;
+  padding: 5px 10px;
+  border: 1px solid #e5e5e3;
+  background: url("../image/common/header_lang_arrow.png") right 10px center no-repeat #f9f9f8;
+  background-size: 10px auto;
+}
+.navBox .langBox .language .langList {
+  display: none;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 100%;
+}
+.navBox .langBox .language .langList ul {
+  border: 1px solid #e5e5e3;
+}
+.navBox .langBox .language .langList ul li + li {
+  border-top: 1px solid #e5e5e3;
+}
+.navBox .langBox .language .langList ul li a {
+  display: block;
+  padding: 5px 10px;
+  font-size: 13px;
+  text-align: center;
+  background: #f9f9f8;
+}
+
+/* --------------------------------------------------
+	main
+-------------------------------------------------- */
+.main {
+  margin: 53px 0 0;
+}
+
+.pageKvContainer {
+  padding: 0 0 0 20px;
+}
+.pageKvContainer .pageKv {
+  height: 250px;
+}
+.pageKvContainer .kvTitle {
+  position: relative;
+  left: -25px;
+  bottom: 0;
+}
+.pageKvContainer .kvTitle h1 {
+  min-width: 200px;
+  padding: 20px;
+  font-size: 22px;
+}
+
+.pageSecTtlBox {
+  margin: 0 0 40px;
+}
+.pageSecTtlBox h2 {
+  font-size: 24px;
+}
+.pageSecTtlBox p {
+  font-size: 16px;
+}
+
+.mapBox {
+  padding: 0 0 70%;
+}
+
+/* --------------------------------------------------
+	footer
+-------------------------------------------------- */
+.footer .footContact {
+  padding: 50px 0;
+}
+.footer .footContact .ttlBox {
+  margin: 0 0 30px;
+  font-size: 20px;
+}
+.footer .footContact .itemBox {
+  padding: 15px 20px;
+}
+.footer .footContact .itemBox dl dt {
+  font-size: 20px;
+}
+.footer .footContact .secBox01 {
+  margin: 0 0 40px;
+}
+.footer .footContact .secBox02 .itemBox + .itemBox,
+.footer .footContact .secBox03 .itemBox + .itemBox {
+  margin: 20px 0 0;
+}
+.footer .footNavContainer {
+  padding: 25px 0;
+}
+.footer .footNavContainer .footNav ul {
+  gap: 15px;
+}
+.footer .footPanel {
+  padding: 50px 0 20px;
+}
+.footer .footPanel .pagetop {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  width: 40px;
+}
+.footer .footPanel .logo {
+  width: 100px;
+  margin: 0 0 20px;
+}
+.footer .footPanel .txt a {
+  display: inline-block;
+  color: #ffffff;
+}
+.footer .footPanel .sns {
+  margin: 30px 0 0;
+}
+.footer .footPanel .sns ul {
+  display: block;
+}
+.footer .footPanel .sns ul li + li {
+  margin: 15px 0 0;
+}
+.footer .footPanel .copy {
+  margin: 40px 0 0;
+  text-align: center;
+}

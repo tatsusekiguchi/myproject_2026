@@ -1,0 +1,646 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap");
+/* CSS Document */
+/*===================================================
+	共通CSS（PC/SMP）
+===================================================*/
+/*////////////////////////////////////////////////////////////
+	共通設定
+///////////////////////////////////////////////////////////*/
+/* --------------------------------------------------
+	base
+-------------------------------------------------- */
+* {
+  box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+  line-height: 1.5;
+  color: #161616;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  background: #ffffff;
+  transition: 2s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.5;
+}
+
+.txt {
+  line-height: 2;
+}
+
+/*リンク */
+a {
+  color: #161616;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* 画像幅 */
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* clearfix */
+.clearfix::after {
+  content: ".";
+  display: block;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.spBreak {
+  display: none;
+}
+
+@media (min-width: 1025px) {
+  a {
+    transition: 0.6s;
+  }
+
+  a:hover {
+    opacity: 0.6;
+  }
+}
+.fax a {
+  pointer-events: none;
+}
+
+.gothic {
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+}
+
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+@media (min-width: 1025px) {
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 0 0 5%;
+    z-index: 999;
+    background: #ffffff;
+  }
+  header .headBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0 10px;
+  }
+  header .headBox .logo {
+    width: 15%;
+    max-width: 240px;
+  }
+  header .headBox .logo a {
+    display: block;
+  }
+  header .headContact {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    display: table;
+    max-width: 180px;
+    width: 10%;
+    height: 80px;
+    padding: 0 10px;
+    color: #ffffff;
+    text-align: center;
+    background: #9d3b2f;
+  }
+  header .headContact div {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  header .headContact span {
+    display: inline-block;
+    padding-top: 17px;
+    font-size: clamp(12px, 1vw, 16px);
+    background: url("../image/common/header_mail.png") center top no-repeat;
+    background-size: 17px auto;
+  }
+  header #menuBtn {
+    display: none;
+  }
+}
+/* --------------------------------------------------
+	nav
+-------------------------------------------------- */
+@media (min-width: 1025px) {
+  nav {
+    width: 80%;
+    padding: 0 10% 0 0;
+  }
+  nav ul {
+    text-align: center;
+  }
+  nav ul li {
+    display: inline-block;
+  }
+  nav ul li + li {
+    margin-left: 1vw;
+  }
+  nav ul li a {
+    display: block;
+    text-align: center;
+    letter-spacing: 0;
+  }
+  nav ul li em {
+    font-size: clamp(12px, 1vw, 16px);
+  }
+  nav ul .contact {
+    display: none;
+  }
+}
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+@media (max-width: 1090px) {
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    z-index: 999;
+    background: #ffffff;
+  }
+  header .headBox {
+    padding: 20px 0 5px;
+  }
+  header .headBox .logo {
+    width: 140px;
+  }
+  header .headBox .logo a {
+    display: block;
+  }
+  header .headContact {
+    display: none;
+  }
+  header #menuBtn {
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    display: block;
+    width: 44px;
+    height: 24px;
+    z-index: 9999;
+    cursor: pointer;
+  }
+  header #menuBtn span {
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    z-index: 9999;
+    background: #000;
+    transition: all 0.4s;
+  }
+  header #menuBtn span:nth-child(1) {
+    top: 0;
+  }
+  header #menuBtn span:nth-child(2) {
+    top: 12px;
+  }
+  header #menuBtn span:nth-child(3) {
+    top: 24px;
+  }
+  header #menuBtn.active {
+    width: 40px;
+    height: 40px;
+  }
+  header #menuBtn.active span:nth-child(1) {
+    top: 16px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  header #menuBtn.active span:nth-child(2) {
+    right: -50%;
+    opacity: 0;
+    -webkit-animation: active-menu-bar02 0.8s forwards;
+    animation: active-menu-bar02 1s forwards;
+  }
+  header #menuBtn.active span:nth-child(3) {
+    top: 16px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  @-webkit-keyframes active-menu-bar02 {
+    100% {
+      height: 0;
+    }
+  }
+  @keyframes active-menu-bar02 {
+    100% {
+      height: 0;
+    }
+  }
+}
+/* --------------------------------------------------
+	nav
+-------------------------------------------------- */
+@media (max-width: 1090px) {
+  nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 100px 20px 20px;
+    z-index: 999;
+    background: white;
+  }
+  nav ul {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  nav ul li {
+    letter-spacing: 0.1em;
+  }
+  nav ul li + li {
+    margin-top: 20px;
+  }
+  nav ul li a {
+    display: block;
+  }
+  nav ul li em {
+    display: block;
+    font-size: 18px;
+  }
+  nav ul .contact {
+    display: block;
+  }
+  nav ul .contact a {
+    padding: 15px;
+    color: #ffffff;
+    text-align: center;
+    background: #9d3b2f;
+  }
+  nav ul .contact a em {
+    display: inline-block;
+    padding-top: 17px;
+    font-size: 14px;
+    background: url("../image/common/header_mail.png") center top no-repeat;
+    background-size: 17px auto;
+  }
+}
+/* --------------------------------------------------
+	main
+-------------------------------------------------- */
+main {
+  overflow: hidden;
+  margin: 123px 0 0;
+}
+
+@media (max-width: 1090px) {
+  main {
+    margin: 93px 0 0;
+  }
+}
+.pageKvPanel {
+  text-align: center;
+}
+.pageKvPanel .kvTitle {
+  padding: 40px 20px 25px;
+}
+.pageKvPanel .kvTitle h1 {
+  font-size: 40px;
+}
+
+.pageSecTtlBox {
+  margin: 0 0 50px;
+}
+.pageSecTtlBox .sub {
+  position: relative;
+  display: inline-block;
+  margin: 0 0 3px;
+  padding: 0 0 0 25px;
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+}
+.pageSecTtlBox .sub::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 15px;
+  height: 15px;
+  margin: auto 0;
+  border-radius: 50%;
+  background: #9d3b2f;
+}
+.pageSecTtlBox .pageSecTtl {
+  font-size: 34px;
+  font-weight: bold;
+}
+.pageSecTtlBox.center {
+  text-align: center;
+}
+
+.pageSecTtlBox02 {
+  margin: 0 0 50px;
+}
+.pageSecTtlBox02 .sub {
+  position: relative;
+  display: inline-block;
+  margin: 0 0 3px;
+  padding: 0 0 0 25px;
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+  color: #aeaeae;
+}
+.pageSecTtlBox02 .sub::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 15px;
+  height: 15px;
+  margin: auto 0;
+  border-radius: 50%;
+  background: #9d3b2f;
+}
+.pageSecTtlBox02 .pageSecTtl {
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+}
+.pageSecTtlBox02.center {
+  text-align: center;
+}
+
+.pageSecSubTtlBox {
+  margin: 0 0 50px;
+  text-align: center;
+}
+.pageSecSubTtlBox .pageSecSubTtl {
+  max-width: 650px;
+  margin: 0 auto;
+  border-bottom: 1px solid #242424;
+}
+.pageSecSubTtlBox .pageSecSubTtl > * {
+  position: relative;
+  display: inline-block;
+  padding: 0 40px 10px;
+  font-size: 28px;
+}
+.pageSecSubTtlBox .pageSecSubTtl > *::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  width: 16px;
+  height: 42px;
+  background: url("../image/common/page_sec_sub_ttl_slash.png") no-repeat;
+  background-size: 100% auto;
+}
+
+.secWrap {
+  max-width: 1640px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.secWrap01 {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.secWrap02 {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.mapBox {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding: 0 0 45%;
+}
+.mapBox iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.btnMore {
+  max-width: 250px;
+}
+.btnMore a {
+  position: relative;
+  display: block;
+  padding: 12px 10px;
+  text-align: center;
+  border-radius: 4px;
+  border: 1px solid #534e47;
+  background: #eeebe8;
+}
+.btnMore a:after {
+  content: "";
+  position: absolute;
+  top: 40%;
+  right: -15px;
+  width: 30px;
+  height: 5px;
+  background: url("../image/common/btn_more_arrow.png") center no-repeat;
+  background-size: 30px auto;
+}
+
+.btnMoreMail {
+  max-width: 250px;
+}
+.btnMoreMail a {
+  position: relative;
+  display: block;
+  padding: 12px 10px;
+  text-align: center;
+  border-radius: 4px;
+  border: 1px solid #534e47;
+  background: #eeebe8;
+}
+.btnMoreMail a:after {
+  content: "";
+  position: absolute;
+  top: 40%;
+  right: -15px;
+  width: 30px;
+  height: 5px;
+  background: url("../image/common/btn_mail_arrow.png") center no-repeat;
+  background-size: 30px auto;
+}
+
+/* --------------------------------------------------
+	footer
+-------------------------------------------------- */
+.footer .footContact {
+  padding: 60px 0;
+  color: #ffffff;
+  text-align: center;
+  background: #534e47;
+}
+.footer .footContact .pageSecTtlBox {
+  margin: 0 0 20px;
+}
+.footer .footContact .topTxt {
+  margin: 0 0 60px;
+}
+.footer .footContact .contactItems .itemBox {
+  padding: 0 20px 20px;
+  border-top: 1px solid #8c8781;
+  border-bottom: 1px solid #8c8781;
+}
+.footer .footContact .contactItems .itemBox dl dt {
+  position: relative;
+  top: -15px;
+  display: inline-block;
+  padding: 0 20px;
+  background: #534e47;
+}
+.footer .footContact .contactItems .itemBox dl dt span {
+  display: inline-block;
+  font-size: 20px;
+}
+.footer .footContact .contactItems .itemBox dl dt .mail {
+  display: inline-block;
+  padding: 0 25px;
+  background: url("../image/common/footer_contact_mail.png") left center no-repeat;
+  background-size: 20px auto;
+}
+.footer .footContact .contactItems .itemBox dl dd {
+  padding: 15px 0 0;
+}
+.footer .footContact .contactItems .itemBox dl dd .tel a {
+  display: inline-block;
+  font-size: 34px;
+  color: #ffffff;
+  line-height: 1.2;
+}
+.footer .footContact .contactItems .itemBox dl dd .tel p {
+  margin: 10px 0 0;
+}
+.footer .footContact .contactItems .itemBox dl dd .btnMoreMail {
+  margin: 0 auto;
+}
+@media (min-width: 1025px) {
+  .footer .footContact .contactItems {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer .footContact .contactItems .itemBox {
+    width: 46%;
+  }
+}
+.footer .footPanel {
+  position: relative;
+  padding: 60px 0 20px;
+  text-align: center;
+}
+.footer .footPanel .pagetop {
+  position: absolute;
+  top: 60px;
+  right: 5%;
+  width: 50px;
+  cursor: pointer;
+}
+.footer .footPanel .logoBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin: 0 0 30px;
+}
+.footer .footPanel .logoBox .logo {
+  width: 280px;
+}
+.footer .footPanel .logoBox .insta {
+  width: 40px;
+}
+.footer .footPanel .logoBox .insta a {
+  display: inline-block;
+}
+.footer .footPanel .txt {
+  margin: 0 0 30px;
+  font-size: 18px;
+}
+.footer .footPanel .info {
+  font-size: 18px;
+}
+.footer .footPanel .info .tel {
+  margin: 0 0 15px;
+}
+.footer .footPanel .info .tel a {
+  display: inline-block;
+}
+.footer .footPanel .copy {
+  margin: 60px 0 0;
+}
+
+/* --------------------------------------------------
+	fadeAnimation
+-------------------------------------------------- */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  /* 背景カラー */
+  z-index: 9999;
+  /* 一番手前に */
+  pointer-events: none;
+  /* 他の要素にアクセス可能にするためにポインターイベントは無効に */
+  opacity: 0;
+  /* 初期値では非表示 */
+  -webkit-transition: opacity 0.8s ease;
+  /* アニメーション時間は 0.8秒 */
+  -ms-transition: opacity 0.8s ease;
+  -moz-transition: opacity 0.8s ease;
+  transition: opacity 0.8s ease;
+}
+
+/*body要素に.fadeoutセレクタがある場合には、レイヤーが表示されるようにopacityを１に設定します。*/
+body.fadeout::after {
+  opacity: 1;
+}
+
+/*お好みで、.fadeoutセレクタ以下の他の要素にもアニメーション用のCSSを定義します*/
+/*DEMOではページ遷移時にarticle要素のスケールもアニメーションさせています*/
+body.fadeout article {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}

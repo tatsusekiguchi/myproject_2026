@@ -1,0 +1,232 @@
+@charset "UTF-8";
+@import "./mixin";
+@import "./mod";
+/* CSS Document */
+
+/*===================================================
+	共通CSS（SMP）
+===================================================*/
+
+/* --------------------------------------------------
+	base
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  body {
+    min-width: 0;
+    font-size: $SPfontSize;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  /*改行*/
+  .pcBreak {
+    display: none;
+  }
+  .spBreak {
+    display: block;
+  }
+  /*spのみ表示*/
+  .pcHidden {
+    display: block;
+  }
+  .spHidden {
+    display: none;
+  }
+  #sideBtn {
+    display: none;
+  }
+  .topicPath {
+    display: none;
+  }
+}
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .header {
+    padding: 15px 20px;
+    .hamburger {
+      cursor: pointer;
+      display: block;
+      position: fixed;
+      top: 8px;
+      right: 10px;
+      width: 50px;
+      height: 40px;
+      z-index: 10000;
+      .span {
+        background: #ffffff;
+        position: absolute;
+        left: 50%;
+        width: 30px;
+        height: 1px;
+        transform: translateX(-50%);
+        transition: 0.4s;
+
+        &:nth-of-type(1) {
+          top: 10px;
+        }
+
+        &:nth-of-type(2) {
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        &:nth-of-type(3) {
+          bottom: 10px;
+        }
+      }
+      &.is-open {
+        .span {
+          background: #ffffff;
+        }
+        .span:nth-of-type(1) {
+          transform: translate(-50%, 9px) rotate(-45deg);
+        }
+
+        .span:nth-of-type(2) {
+          opacity: 0;
+        }
+
+        .span:nth-of-type(3) {
+          transform: translate(-50%, -9px) rotate(45deg);
+        }
+      }
+    }
+  }
+}
+
+/* --------------------------------------------------
+	nav
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .navBox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    padding: 60px 0 60px;
+    color: #ffffff;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.6);
+    transition: 0.6s;
+    .navList {
+      .ul {
+        border-top: 1px solid #ffffff;
+        .li {
+          text-align: center;
+          border-bottom: 1px solid #ffffff;
+          a {
+            display: block;
+            padding: 20px 10px;
+            font-size: 14px;
+            color: #ffffff;
+            line-height: 1.2;
+          }
+        }
+      }
+    }
+    .navItem {
+      padding: 20px 0 0;
+      .contact {
+        width: 180px;
+        margin: 0 auto;
+        a {
+          display: block;
+          padding: 5px 10px;
+          font-size: 14px;
+          color: #ffffff;
+          text-align: center;
+          border-radius: 30px;
+          border: 1px solid #ffffff;
+          background: rgba(124, 77, 34, 0.25);
+        }
+      }
+    }
+  }
+}
+
+/* --------------------------------------------------
+	main
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .main {
+  }
+  .pageKvContainer {
+    .secWrap01 {
+      height: 200px;
+      padding: 0 20px 30px;
+    }
+    .pageKvTitle {
+      h1 {
+        font-size: 24px;
+      }
+    }
+  }
+  .pageSecTtlBox {
+    margin: 0 0 40px;
+    padding: 30px 0 0;
+    .pageSecTtl {
+      font-size: 20px;
+    }
+    &.center {
+      background: url(https://iwasaki-reform.com/system_panel/uploads/images/page_sec_ttl_icon.png)
+        center top no-repeat;
+      background-size: 50px auto;
+    }
+    &.left {
+      background: url(https://iwasaki-reform.com/system_panel/uploads/images/page_sec_ttl_icon.png)
+        left top no-repeat;
+      background-size: 50px auto;
+    }
+  }
+  .mapBox {
+    padding: 0 0 70%;
+  }
+}
+
+/* --------------------------------------------------
+	footer
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .footer {
+    .footContact {
+      padding: 40px 0;
+      .secContainer {
+        .itemPanel {
+          .itemBox {
+            padding: 20px;
+            .dl {
+              .dt {
+                margin: 0 0 15px;
+                font-size: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .footPanel {
+      padding: 40px 0 20px;
+      .pagetop {
+        position: absolute;
+        top: 0;
+        right: 20px;
+        width: 40px;
+        cursor: pointer;
+      }
+      .logo {
+        margin: 0 0 20px;
+        font-size: 24px;
+      }
+      .txt {
+        line-height: 1.7;
+      }
+      .copy {
+        margin: 60px 0 0;
+      }
+    }
+  }
+}

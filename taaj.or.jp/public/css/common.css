@@ -1,0 +1,379 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap");
+/* CSS Document */
+/*===================================================
+	共通CSS（PC/SMP）
+===================================================*/
+/*////////////////////////////////////////////////////////////
+	共通設定
+///////////////////////////////////////////////////////////*/
+/* --------------------------------------------------
+	base
+-------------------------------------------------- */
+* {
+  box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+  line-height: 1.5;
+  color: #21535c;
+  font-size: 16px;
+  background: #f5f5f5;
+  transition: 2s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.5;
+}
+
+.txt {
+  line-height: 2.5;
+}
+
+/*リンク */
+a {
+  color: #21535c;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* 画像幅 */
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* clearfix */
+.clearfix::after {
+  content: ".";
+  display: block;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.spBreak {
+  display: none;
+}
+
+@media (min-width: 1025px) {
+  a {
+    transition: 0.6s;
+  }
+
+  a:hover {
+    opacity: 0.6;
+  }
+}
+.fax a {
+  pointer-events: none;
+}
+
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+@media (min-width: 1025px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: #ffffff;
+  }
+  .header .headTop {
+    padding: 5px 20px;
+    border-bottom: 1px solid #dfdfdf;
+  }
+  .header .headTop .title {
+    max-width: 1800px;
+    margin: 0 auto;
+    font-size: 14px;
+    color: #9e9e9e;
+  }
+  .header .headMain {
+    padding: 10px 20px 0;
+  }
+  .header .headWrap {
+    max-width: 1800px;
+    margin: 0 auto;
+  }
+  .header .headContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header .logo {
+    width: 120px;
+  }
+  .header .logo a {
+    display: block;
+  }
+  .header .headItem {
+    width: calc(100% - 200px);
+  }
+  .header .headItem ul {
+    display: flex;
+    justify-content: center;
+    gap: 0 2vw;
+  }
+  .header .headItem ul li a {
+    display: inline-block;
+    color: #414141;
+  }
+  .header .hamburger {
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    width: 45px;
+    cursor: pointer;
+  }
+}
+/* --------------------------------------------------
+	nav
+-------------------------------------------------- */
+.navBox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.7);
+}
+.navBox .navWrap {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.navBox .navContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #ffffff;
+}
+.navBox .navContainer .leftBox .navLogo {
+  width: 160px;
+  margin: 0 0 20px;
+}
+.navBox .navContainer .leftBox .info {
+  margin: 0 0 20px;
+  font-size: 14px;
+  line-height: 2;
+}
+.navBox .navContainer .leftBox .sns ul {
+  display: flex;
+  gap: 10px;
+}
+.navBox .navContainer .leftBox .sns ul li {
+  width: 30px;
+}
+.navBox .navContainer .leftBox .sns ul li a {
+  display: block;
+}
+.navBox .navContainer .rightBox .navList ul li + li {
+  margin: 20px 0 0;
+}
+.navBox .navContainer .rightBox .navList ul li a {
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: underline;
+}
+@media (min-width: 1025px) {
+  .navBox .navContainer {
+    display: flex;
+    justify-content: space-between;
+  }
+  .navBox .navContainer .leftBox {
+    width: 30%;
+  }
+  .navBox .navContainer .rightBox {
+    width: 60%;
+  }
+  .navBox .navContainer .rightBox .navList {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.navBox .navClose {
+  position: absolute;
+  top: 40px;
+  right: 50px;
+  width: 45px;
+  cursor: pointer;
+}
+
+/* --------------------------------------------------
+	main
+-------------------------------------------------- */
+.main {
+  overflow: hidden;
+  margin: 94px 0 0;
+}
+
+.pageTitleContainer {
+  padding: 30px 20px;
+  background: #7fb841;
+}
+.pageTitleContainer .pageTitleBox {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 15px 20px;
+  text-align: center;
+  background: #ffffff;
+}
+.pageTitleContainer .pageTitleBox h1 {
+  font-size: 34px;
+  font-weight: bold;
+}
+.pageTitleContainer .pageTitleBox p {
+  color: #88ba60;
+}
+
+.pageSecTtlBox {
+  margin: 0 0 40px;
+  text-align: center;
+}
+.pageSecTtlBox .pageSecTtl {
+  display: inline-block;
+  min-width: 220px;
+  padding: 0 40px 10px;
+  font-size: 24px;
+  font-weight: bold;
+  border-bottom: 1px solid #21535c;
+}
+
+.secWrap {
+  max-width: 1640px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.secWrap01 {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.secWrap02 {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.mapBox {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding: 0 0 45%;
+}
+.mapBox iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.btnMore {
+  width: 100%;
+  max-width: 160px;
+}
+.btnMore a {
+  display: block;
+  padding: 7px 10px;
+  color: #ffffff;
+  text-align: center;
+  background: #7fb841;
+}
+
+/* --------------------------------------------------
+	footer
+-------------------------------------------------- */
+.footer {
+  position: relative;
+  padding: 80px 0 20px;
+  color: #ffffff;
+  background: #6ba032;
+}
+.footer .logo {
+  width: 180px;
+  margin: 0 0 20px;
+}
+.footer .txt {
+  line-height: 2;
+}
+.footer .copy {
+  margin: 40px 0 0;
+  font-size: 14px;
+  text-align: right;
+}
+.footer .pagetop {
+  position: absolute;
+  top: 60px;
+  right: 10%;
+  width: 50px;
+  cursor: pointer;
+}
+
+/* --------------------------------------------------
+	fadeAnimation
+-------------------------------------------------- */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  /* 背景カラー */
+  z-index: 9999;
+  /* 一番手前に */
+  pointer-events: none;
+  /* 他の要素にアクセス可能にするためにポインターイベントは無効に */
+  opacity: 0;
+  /* 初期値では非表示 */
+  -webkit-transition: opacity 0.8s ease;
+  /* アニメーション時間は 0.8秒 */
+  -ms-transition: opacity 0.8s ease;
+  -moz-transition: opacity 0.8s ease;
+  transition: opacity 0.8s ease;
+}
+
+/*body要素に.fadeoutセレクタがある場合には、レイヤーが表示されるようにopacityを１に設定します。*/
+body.fadeout::after {
+  opacity: 1;
+}
+
+/*お好みで、.fadeoutセレクタ以下の他の要素にもアニメーション用のCSSを定義します*/
+/*DEMOではページ遷移時にarticle要素のスケールもアニメーションさせています*/
+body.fadeout article {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}

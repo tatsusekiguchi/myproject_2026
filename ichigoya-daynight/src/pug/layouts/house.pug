@@ -1,0 +1,183 @@
+// ▽メイン▽
+.houseMain.main
+	.pageKvContainer
+		.pageKvTitle
+			.ttlInner
+				p OUR HOME
+				h1 お住まい紹介
+	.sec01
+		.secWrap01
+			.pageSecTtlBox
+				.pageSecTtl
+					h2 空き状況
+		.secContainer
+			.secWrap01
+				.linkList
+					.ul
+						.li(data-target="house01")
+							a(href="#")
+								.icon
+									img(src="https://ichigoya-daynight.co.jp/system_panel/uploads/images/house_sec01_icon_01.png", alt="")
+								.info
+									.ttl
+										p 一期家１号館
+									.address
+										p 豊中市柴原町
+								.status
+									.mark
+										p ×
+									.txt
+										p 満室
+								.arrow
+									img(src="https://ichigoya-daynight.co.jp/system_panel/uploads/images/house_sec01_arrow.png", alt="")
+						.li(data-target="house02")
+							a(href="#")
+								.icon
+									img(src="https://ichigoya-daynight.co.jp/system_panel/uploads/images/house_sec01_icon_02.png", alt="")
+								.info
+									.ttl
+										p 一期家２号館
+									.address
+										p 豊中市柴原町
+								.status
+									.mark
+										p ×
+									.txt
+										p 満室
+								.arrow
+									img(src="https://ichigoya-daynight.co.jp/system_panel/uploads/images/house_sec01_arrow.png", alt="")
+						.li(data-target="house03")
+							a(href="#")
+								.icon
+									img(src="https://ichigoya-daynight.co.jp/system_panel/uploads/images/house_sec01_icon_02.png", alt="")
+								.info
+									.ttl
+										p 一期家３号館
+									.address
+										p 豊中市桜の町
+								.status
+									.mark
+										p ×
+									.txt
+										p 満室
+								.arrow
+									img(src="https://ichigoya-daynight.co.jp/system_panel/uploads/images/house_sec01_arrow.png", alt="")
+						.li(data-target="house04")
+							a(href="#")
+								.icon
+									img(src="https://ichigoya-daynight.co.jp/system_panel/uploads/images/house_sec01_icon_02.png", alt="")
+								.info
+									.ttl
+										p 一期家４号館
+									.address
+										p 豊中市柴原町
+								.status
+									.mark
+										p ×
+									.txt
+										p 満室
+								.arrow
+									img(src="https://ichigoya-daynight.co.jp/system_panel/uploads/images/house_sec01_arrow.png", alt="")
+						.li(data-target="house05")
+							a(href="#")
+								.icon
+									img(src="https://ichigoya-daynight.co.jp/system_panel/uploads/images/house_sec01_icon_02.png", alt="")
+								.info
+									.ttl
+										p 一期家５号館
+									.address
+										p 豊中市刀根山町
+								.status
+									.mark
+										p 〇
+									.txt
+										p 空きあり
+								.arrow
+									img(src="https://ichigoya-daynight.co.jp/system_panel/uploads/images/house_sec01_arrow.png", alt="")
+					.animal
+						img(src="https://ichigoya-daynight.co.jp/system_panel/uploads/images/house_sec01_animal.png", alt="")
+	.sec02
+		.secWrap01
+			.pageSecTtlBox
+				.pageSecTtl
+					h2 施設紹介
+		.secContainerList
+			mixin houseContainer(target, color, number, address, gender, rent, capacity, recommend, imageType)
+				.secContainer(class=target + " " + color)
+					.secWrap01
+						.introBox
+							.photo
+								img(src="https://ichigoya-daynight.co.jp/system_panel/uploads/images/house_sec02_top_img_0" + imageType + ".png", alt="")
+							.txtBox
+								.ttl
+									.icon
+										img(src="https://ichigoya-daynight.co.jp/system_panel/uploads/images/house_sec02_ttl_icon_" + color + ".png", alt="")
+									h3 一期家#{number}号館
+								.infoBox
+									.dl
+										.dt 所在地
+										.dd= address
+									.dl
+										.dt 受け入れ対象
+										.dd １８歳から６４歳までの#{gender}、知的障害、精神障害
+									.dl
+										.dt 家賃
+										.dd= rent
+									.dl
+										.dt 受け入れ人数
+										.dd= capacity
+						.recommendBox
+							.balloon
+								img(src="https://ichigoya-daynight.co.jp/system_panel/uploads/images/house_sec02_recommend_balloon_" + color + ".png", alt="おすすめポイント")
+							.txt
+								p= recommend
+						.listBox
+							.ul
+								- for (var i = 0; i < 3; i++)
+									.li
+										img(src="https://ichigoya-daynight.co.jp/system_panel/uploads/images/house_sec02_list_img_" + imageType + "_1.png", alt="")
+			+houseContainer("house01", "blue", "１", "大阪府豊中市柴原町５-３-１９", "男性", "２３,０００円〜３１,０００円", "４名", "清潔感のある室内と鍵付き個室、Wi-Fiを完備。駅から徒歩7分で、市民病院やスーパーも徒歩圏内。静かで落ち着いた住宅エリアにあり、安心して暮らせる環境です。", "1")
+			+houseContainer("house02", "pink", "２", "大阪府豊中市柴原町４-２-４５", "女性", "２３,０００円〜３１,０００円", "５名", "清潔感のある室内と鍵付き個室、Wi-Fiを完備。駅から徒歩5分とアクセスも良く、市民病院やスーパーも徒歩圏内。便利さと落ち着いた住環境を兼ね備えています。", "2")
+			+houseContainer("house03", "pink", "３", "大阪府豊中市桜の町６-１６-３０", "女性", "２３,０００円〜３１,０００円", "４名", "清潔感のある室内と鍵付き個室、Wi-Fiを完備。駅から徒歩10分で、市民病院やスーパーも徒歩圏内。静かな環境に加え、可愛い動物たちと一緒に暮らせるのが魅力です。", "2")
+			+houseContainer("house04", "pink", "４", "大阪府豊中市柴原町５-１８-２７", "女性", "２４,０００円〜３３,０００円", "３名", "清潔感のある室内と鍵付き個室、Wi-Fiを完備。駅から徒歩8分で、市民病院やスーパーも徒歩圏内。静かで落ち着いた住宅エリアにあり、安心して暮らせる環境です。", "2")
+			+houseContainer("house05", "pink", "５", "大阪府豊中市刀根山町", "女性", "２３,０００円〜３１,０００円", "４名", "清潔感のある室内と鍵付き個室、Wi-Fiを完備。生活に便利な環境と落ち着いた住空間を備え、一人ひとりが安心して暮らせる住まいです。", "2")
+	.sec03
+		.secWrap01
+			.pageSecTtlBox
+				.pageSecTtl
+					h2 毎月の料金例
+			.secContainer
+				.section
+					.secTtl
+						h3 家賃３３,０００円の場合
+					.feePanel
+						.feeList
+							.dl
+								.dt 家賃
+								.dd ３３,０００円
+							.dl
+								.dt 食費
+								.dd
+									p 朝 １２,０００円
+									p 夜 １８,０００円
+							.dl
+								.dt 修繕積立費
+								.dd ３,０００円
+						.feeList
+							.dl
+								.dt 水道光熱費
+								.dd １５,０００円
+							.dl
+								.dt 日用品費
+								.dd ５,０００円
+							.dl
+								.dt 合計
+								.dd ８６,０００円
+				.section
+					.secTtl
+						h3 補助を受けた場合の実質の自己負担額
+					.feeList
+						.dl
+							.dt 国からの特別給付費（１０,０００円/月）を受けた場合
+							.dd ７６,０００円
+// △メイン△

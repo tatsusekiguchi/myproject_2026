@@ -1,0 +1,108 @@
+// ▽メイン▽
+.historyMain.main
+	.pageKvContainer
+		.pageKvPanel
+			.pageKv
+				img(src="https://sit-321391.sibloo.com/system_panel/uploads/images/history_kv.png" alt="")
+			.kvTitleBox
+				h1 ケンモクの歴史
+	.sec01
+		.secWrap02
+			.pageSecTtlBox
+				.sub
+					p History
+				.pageSecTtl
+					h2 根を張り続けた、20年の年輪
+			.topTtl
+				h3 一つひとつの年輪が、地域と共に歩んだ証です。
+			.historyRingsContainer
+				.historyRingsMain
+					.historyRingWrap
+						svg.historyRingSvg(viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-label="会社の歩みを表した年輪")
+							defs
+								radialGradient#historyCoreGrad(cx="50%" cy="50%" r="50%")
+									stop(offset="0%" stop-color="#5A7860")
+									stop(offset="100%" stop-color="#3A5640")
+							circle.historyPulse(cx="150" cy="150" r="18" fill="none" stroke="#A86A52" stroke-width="1" opacity="0")
+							circle.historyRingBody(data-history-id="2023" cx="150" cy="150" r="136" fill="none" stroke="#4A6450" stroke-width="9" opacity="0.13")
+							circle.historyRingBody(data-history-id="2020" cx="150" cy="150" r="112" fill="none" stroke="#4A6450" stroke-width="9" opacity="0.2")
+							circle.historyRingBody(data-history-id="2018" cx="150" cy="150" r="90" fill="none" stroke="#4A6450" stroke-width="8" opacity="0.28")
+							circle.historyRingBody(data-history-id="2015" cx="150" cy="150" r="70" fill="none" stroke="#4A6450" stroke-width="8" opacity="0.38")
+							circle.historyRingBody(data-history-id="2012" cx="150" cy="150" r="52" fill="none" stroke="#4A6450" stroke-width="7" opacity="0.5")
+							circle.historyRingBody(data-history-id="2008" cx="150" cy="150" r="36" fill="none" stroke="#4A6450" stroke-width="6" opacity="0.65")
+							circle.historyRingBody(data-history-id="2005" cx="150" cy="150" r="18" fill="url(#historyCoreGrad)")
+							text(x="150" y="154" text-anchor="middle" font-size="8" fill="#F0EDE6" pointer-events="none") 創業
+							each ring in [{id:'2023',r:136,w:18},{id:'2020',r:112,w:18},{id:'2018',r:90,w:16},{id:'2015',r:70,w:16},{id:'2012',r:52,w:14},{id:'2008',r:36,w:14},{id:'2005',r:18,w:24}]
+								circle.historyRingHit(data-history-id=ring.id cx="150" cy="150" r=ring.r fill="none" stroke="transparent" stroke-width=ring.w)
+							circle.historyActiveRing(cx="150" cy="150" r="18" fill="none" stroke="#A86A52" stroke-width="2.5")
+							each label in [{year:'2023',y:13},{year:'2020',y:37},{year:'2018',y:59},{year:'2015',y:79},{year:'2012',y:97},{year:'2008',y:113}]
+								text.historyYearLabel(x="150" y=label.y text-anchor="middle" font-size="9" fill="#4A6450" opacity="0.6" pointer-events="none")= label.year
+							circle(cx="150" cy="150" r="146" fill="none" stroke="#B8C8B8" stroke-width="1" stroke-dasharray="5 4" opacity="0.5" pointer-events="none")
+					.historyCards
+						.historyCard.is-active(data-history-card="2005")
+							p.historyCardYear 2005年10月
+							h4.historyCardTitle 高槻の地に、<br>根を下ろす。
+							p.historyCardBody 大阪府高槻市にて株式会社ケンモクを創業。ダスキンフランチャイズとして、介護・福祉用品のレンタル・販売事業をスタート。
+							.historyCardQuote
+								p 「地域の方々の暮らしに、安心と安全を届けたい」——その一心から始まりました。
+							p.historyCardStat 創業メンバー数名からのスタート
+						.historyCard(data-history-card="2008")
+							p.historyCardYear 2008年
+							h4.historyCardTitle 家事代行事業へ、<br>枝を伸ばす。
+							p.historyCardBody ダスキン野田メリーメイドの家事代行サービスを開始。介護に加え、日常の暮らしそのものを支える事業へと領域を広げる。
+							.historyCardQuote
+								p 「必要な支えを、必要な人へ。」事業の幅を広げることが、より多くの方への貢献につながると確信しました。
+						.historyCard(data-history-card="2012")
+							p.historyCardYear 2012年
+							h4.historyCardTitle 箕面へ、<br>根を広げる。
+							p.historyCardBody 大阪府箕面市に第2のステーションを開設。高槻エリアを超え、より広い地域の方々へサービスを届ける体制を整える。
+							.historyCardQuote
+								p 一つの地域で信頼を積み上げてきたからこそ、次の根を張る場所が見えてきました。
+							p.historyCardStat 拠点：高槻・箕面
+						.historyCard(data-history-card="2015")
+							p.historyCardYear 2015年
+							h4.historyCardTitle スタッフとともに、<br>幹を太くする。
+							p.historyCardBody スタッフ数が着実に増加。クレド（行動指針）を策定し、「Agility・Grit・Empathy」の3つの強みが会社の文化として根付いていく。
+							.historyCardQuote
+								p 会社が大きくなるほど、大切なのは「どんな人たちの集まりか」だと実感しました。
+						.historyCard(data-history-card="2018")
+							p.historyCardYear 2018年
+							h4.historyCardTitle 奈良へ、<br>年輪を刻む。
+							p.historyCardBody 奈良県生駒市に第3のステーションを開設。大阪・奈良にまたがるエリアカバーが実現し、地域の方々の暮らしを支える拠点が整う。
+							.historyCardQuote
+								p 根を張ることと、広がることは矛盾しない。それぞれの地域で丁寧に根付くことを大切にしてきました。
+							p.historyCardStat 拠点：高槻・箕面・奈良生駒
+						.historyCard(data-history-card="2020")
+							p.historyCardYear 2020年
+							h4.historyCardTitle フロントオフィスで、<br>より迅速に。
+							p.historyCardBody 全社の事務機能を集約したフロントオフィスを設立。業務効率化を進め、スタッフがより現場・お客様に集中できる体制へ。
+							.historyCardQuote
+								p 「すぐに動ける」ことが、地域の信頼につながる。俊敏さを仕組みで支える体制をつくりました。
+						.historyCard(data-history-card="2023")
+							p.historyCardYear 2023年〜現在
+							h4.historyCardTitle 67名、<br>そして次の年輪へ。
+							p.historyCardBody スタッフ数67名。3つのステーションを拠点に、家事代行・介護福祉用品・住宅リフォームの3事業で地域の暮らしを支え続けている。
+							.historyCardQuote
+								p 20年で積み重ねた年輪は、これからも増え続けます。地域に根を張り、ともに健やかに。
+							p.historyCardStat スタッフ：67名 ／ 高槻・箕面・奈良生駒
+				p.historyRingsHint ↓ 下の年号をタップ
+				.historyTimeline(role="tablist" aria-label="会社の歩み")
+					each item in [{id:'2005',year:'2005'},{id:'2008',year:'2008'},{id:'2012',year:'2012'},{id:'2015',year:'2015'},{id:'2018',year:'2018'},{id:'2020',year:'2020'},{id:'2023',year:'2023年〜'}]
+						button.historyTimelineItem(class=item.id === '2005' ? 'is-active' : '' type="button" role="tab" aria-selected=item.id === '2005' data-history-id=item.id)
+							p.historyTimelineDot
+							p.historyTimelineYear= item.year
+	.sec02
+		.secWrap01
+			.pageSecTtlBox
+				.sub
+					p And beyond
+				.pageSecTtl
+					h2 そしてその先へ
+			.txtBox
+				.txt
+					p 根を張ることは、広がることでもある。
+					p 高槻の地に生まれ、箕面へ、奈良へ。<br>一つひとつの年輪を刻みながら、ケンモクは地域とともに歩んできました。
+					p これから２０年も、変わらない軸があります。<br>「喜びのタネをまき続けること」。<br>そして、その種が芽吹いた先に、より多くの方の安心と笑顔があること。
+					p 家事代行、介護福祉用具、住宅リフォーム。<br>事業の形は違っても、目指す先はひとつです。<br>地域に根を張り、ともに健やかに。
+					p ケンモクはこれからも、暮らしに寄り添い続けます。
+// △メイン△

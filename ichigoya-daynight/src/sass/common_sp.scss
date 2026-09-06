@@ -1,0 +1,247 @@
+@charset "UTF-8";
+@import "./mixin";
+@import "./mod";
+/* CSS Document */
+
+/*===================================================
+	共通CSS（SMP）
+===================================================*/
+
+/* --------------------------------------------------
+	base
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  body {
+    min-width: 0;
+    font-size: $SPfontSize;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  /*改行*/
+  .pcBreak {
+    display: none;
+  }
+  .spBreak {
+    display: block;
+  }
+  /*spのみ表示*/
+  .pcHidden {
+    display: block;
+  }
+  .spHidden {
+    display: none;
+  }
+  #sideBtn {
+    display: none;
+  }
+  .topicPath {
+    display: none;
+  }
+}
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background: #ffffff;
+    .headerWrap {
+      padding: 10px 20px;
+    }
+    .logoBox {
+      position: relative;
+      .headTtl {
+        position: absolute;
+        top: 0;
+        left: 60px;
+        font-size: 10px;
+      }
+      .logo {
+        width: 50px;
+        a {
+          display: block;
+        }
+      }
+    }
+    .hamburger {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 40px;
+      height: 36px;
+      cursor: pointer;
+      .span {
+        position: absolute;
+        left: 5px;
+        width: 28px;
+        height: 1px;
+        background: #403a3b;
+        transition: 0.4s;
+      }
+      .span:nth-of-type(1) {
+        top: 8px;
+      }
+      .span:nth-of-type(2) {
+        top: 17px;
+      }
+      .span:nth-of-type(3) {
+        top: 26px;
+      }
+      &.is-open {
+        .span:nth-of-type(1) {
+          top: 17px;
+          transform: rotate(45deg);
+        }
+        .span:nth-of-type(2) {
+          opacity: 0;
+        }
+        .span:nth-of-type(3) {
+          top: 17px;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+}
+
+/* --------------------------------------------------
+	nav
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .navBox {
+    overflow: auto;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: calc(100% - 66px);
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.96);
+    transition: 0.6s;
+    &.active {
+      top: 66px;
+      opacity: 1;
+    }
+    .navList {
+      .ul {
+        .li {
+          padding: 0 0 0 20px;
+          + .li {
+            margin: 15px 0 0;
+          }
+          a {
+            display: inline-block;
+            font-weight: 400;
+          }
+          &:nth-child(1) {
+            background: url(https://ichigoya-daynight.co.jp/system_panel/uploads/images/nav_icon_01.png)
+              left center no-repeat;
+          }
+          &:nth-child(2) {
+            background: url(https://ichigoya-daynight.co.jp/system_panel/uploads/images/nav_icon_02.png)
+              left center no-repeat;
+          }
+          &:nth-child(3) {
+            background: url(https://ichigoya-daynight.co.jp/system_panel/uploads/images/nav_icon_03.png)
+              left center no-repeat;
+          }
+          &:nth-child(4) {
+            background: url(https://ichigoya-daynight.co.jp/system_panel/uploads/images/nav_icon_04.png)
+              left center no-repeat;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* --------------------------------------------------
+	main
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .main {
+    margin: 88px 0 0;
+  }
+  .pageKvContainer {
+    height: 200px;
+    margin: 0;
+    .pageKvTitle {
+      &::before {
+        width: 280px;
+        height: 150px;
+      }
+      p {
+        font-size: 12px;
+      }
+      h1 {
+        font-size: 24px;
+      }
+    }
+  }
+  .pageSecTtlBox {
+    margin: 0 0 45px;
+    .pageSecTtl {
+      font-size: 24px;
+      &::before {
+        width: 40px;
+      }
+    }
+  }
+  .mapBox {
+    padding: 0 0 70%;
+  }
+}
+
+/* --------------------------------------------------
+	footer
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 80px 0 20px;
+    .logo {
+      width: 70px;
+    }
+    .animal {
+      top: 60px;
+      right: 20px;
+      width: 80px;
+    }
+    .pagetop {
+      top: -20px;
+      right: 20px;
+      bottom: 0;
+      width: 45px;
+    }
+    .txt {
+      margin: 30px 0 0;
+      font-size: 14px;
+    }
+    .footNav {
+      margin: 35px 0 0;
+      .ul {
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+        text-align: left;
+        .li {
+          width: auto;
+          margin: 15px 0 0;
+          &:first-child {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+    .copy {
+      margin: 50px 0 0;
+      padding: 0 50px;
+      font-size: 12px;
+    }
+  }
+}

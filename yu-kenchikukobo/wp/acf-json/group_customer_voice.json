@@ -1,0 +1,170 @@
+{
+  "key": "group_customer_voice",
+  "title": "お客様の声",
+  "fields": [
+    {
+      "key": "field_customer_voices",
+      "label": "お客様の声",
+      "name": "customer_voices",
+      "type": "repeater",
+      "instructions": "お客様の声を登録してください。「+」ボタンで追加、ドラッグアンドドロップで順番を変更できます。",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "field_voice_title",
+      "min": 0,
+      "max": 0,
+      "layout": "table",
+      "button_label": "お客様の声を追加",
+      "sub_fields": [
+        {
+          "key": "field_voice_title",
+          "label": "タイトル",
+          "name": "voice_title",
+          "type": "text",
+          "instructions": "お客様の声のタイトルを入力してください。",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "例：耐震リフォームで安心して暮らせるようになりました",
+          "prepend": "",
+          "append": "",
+          "maxlength": 100
+        },
+        {
+          "key": "field_voice_stamp",
+          "label": "スタンプ表示",
+          "name": "voice_stamp",
+          "type": "true_false",
+          "instructions": "スタンプを表示する場合はチェックを入れてください。",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "message": "スタンプを表示する",
+          "default_value": 0,
+          "ui": 1,
+          "ui_on_text": "表示",
+          "ui_off_text": "非表示"
+        },
+        {
+          "key": "field_voice_image",
+          "label": "メイン画像",
+          "name": "voice_image",
+          "type": "image",
+          "instructions": "お客様の声のメイン画像をアップロードしてください。",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "return_format": "array",
+          "preview_size": "medium",
+          "library": "all",
+          "min_width": "",
+          "min_height": "",
+          "min_size": "",
+          "max_width": "",
+          "max_height": "",
+          "max_size": "",
+          "mime_types": "jpg,jpeg,png,gif"
+        },
+        {
+          "key": "field_voice_content",
+          "label": "本文",
+          "name": "voice_content",
+          "type": "textarea",
+          "instructions": "お客様の声の本文を入力してください。",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "お客様からいただいたお声やコメントを記載してください。",
+          "maxlength": "",
+          "rows": 6,
+          "new_lines": "br"
+        },
+        {
+          "key": "field_voice_supplement_images",
+          "label": "補足画像",
+          "name": "voice_supplement_images",
+          "type": "repeater",
+          "instructions": "補足画像を最大3枚まで追加できます。",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "collapsed": "",
+          "min": 0,
+          "max": 3,
+          "layout": "table",
+          "button_label": "補足画像を追加",
+          "sub_fields": [
+            {
+              "key": "field_supplement_image",
+              "label": "画像",
+              "name": "supplement_image",
+              "type": "image",
+              "instructions": "補足画像をアップロードしてください。",
+              "required": 1,
+              "conditional_logic": 0,
+              "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+              },
+              "return_format": "array",
+              "preview_size": "medium",
+              "library": "all",
+              "min_width": "",
+              "min_height": "",
+              "min_size": "",
+              "max_width": "",
+              "max_height": "",
+              "max_size": "",
+              "mime_types": "jpg,jpeg,png,gif"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page_template",
+        "operator": "==",
+        "value": "page-voice.php"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": 1,
+  "description": "お客様の声を管理するためのフィールドグループです。"
+}

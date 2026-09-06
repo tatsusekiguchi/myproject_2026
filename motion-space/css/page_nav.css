@@ -1,0 +1,117 @@
+@CHARSET "UTF-8";
+/*wp-pagenavi base*/
+.wp-pagenavi {
+clear: both;
+    text-align: center;
+    width: 400px;
+    margin: 0 auto;
+    float: none!important;
+    margin-top: 30px;;
+    margin-bottom: 30px;
+
+}
+.wp-pagenavi a, .wp-pagenavi span {
+	color: #3e638f!important;
+	background-color: #eff2f7!important;
+	border: solid 1px #e0e0d2;
+	padding: 8px 15px;
+	margin: 0 2px;
+	white-space: nowrap;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 0px!important;
+	-webkit-transition: 0.2s ease-in-out;
+	-moz-transition: 0.2s ease-in-out;
+	-o-transition: 0.2s ease-in-out;
+	transition: none;
+	text-align: center;
+	text-decoration:none;
+}
+.wp-pagenavi a:hover{
+    color:#FFF!important;
+    background:#3e638f!important;
+    border-color:#3e638f!important;
+    }
+.wp-pagenavi span.current{
+	color: #FFF!important;
+	background: #3e638f!important;
+	border-color: #3e638f!important;
+	font-weight: bold;
+
+    border-radius: 0px!important;
+    }
+@media(max-width:320px){
+.wp-pagenavi {
+    width: 300px;
+    margin-bottom: 30px;
+
+}
+}
+
+
+.pager-box-detail {
+clear: both;
+    text-align: center;
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+
+}
+.pager-box-detail li {
+	width: 47px;
+	display: block;
+}
+.pager-box-detail li.left {
+	float: left;
+}
+.pager-box-detail li.right {
+	float: right;
+}
+.pager-box-detail li.center {
+	width: 100px;
+	float: left;
+    margin-left: 145px;
+}
+.pager-box-detail a, .pager-box-detail span {
+	color: #3e638f!important;
+	background-color: #eff2f7!important;
+	border: solid 1px #e0e0d2;
+	padding: 8px 15px;
+	margin: 0 2px;
+	white-space: nowrap;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 0px!important;
+	-webkit-transition: 0.2s ease-in-out;
+	-moz-transition: 0.2s ease-in-out;
+	-o-transition: 0.2s ease-in-out;
+	transition: none;
+	text-align: center;
+	text-decoration:none;
+}
+.pager-box-detail a:hover{
+    color:#FFF!important;
+    background:#3e638f!important;
+    border-color:#3e638f!important;
+    }
+.pager-box-detail span.current{
+	color: #FFF!important;
+	background: #3e638f!important;
+	border-color: #3e638f!important;
+	font-weight: bold;
+
+    border-radius: 0px!important;
+    }
+@media(max-width:320px){
+.pager-box-detail {
+    width: 300px;
+    margin-bottom: 30px;
+
+}
+.pager-box-detail li.center {
+    width: auto;
+    float: left;
+    margin-left: 50px;
+}
+}

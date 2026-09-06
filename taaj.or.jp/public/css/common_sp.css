@@ -1,0 +1,176 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+	共通CSS（SMP）
+===================================================*/
+/* --------------------------------------------------
+	base
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  body {
+    min-width: 0;
+    font-size: 14px;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  /*改行*/
+  .pcBreak {
+    display: none;
+  }
+
+  .spBreak {
+    display: block;
+  }
+
+  /*spのみ表示*/
+  .pcHidden {
+    display: block;
+  }
+
+  .spHidden {
+    display: none;
+  }
+
+  #sideBtn {
+    display: none;
+  }
+
+  .topicPath {
+    display: none;
+  }
+}
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: #ffffff;
+  }
+  .header .headTop {
+    display: none;
+  }
+  .header .headMain {
+    padding: 10px 20px;
+  }
+  .header .logo {
+    width: 100px;
+  }
+  .header .logo a {
+    display: block;
+  }
+  .header .headItem {
+    display: none;
+  }
+  .header .hamburger {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 40px;
+    cursor: pointer;
+  }
+}
+/* --------------------------------------------------
+	nav
+-------------------------------------------------- */
+.navBox .navWrap {
+  display: block;
+  padding: 20px 0 60px;
+}
+.navBox .navContainer {
+  padding: 40px 0;
+}
+.navBox .navContainer .leftBox {
+  margin: 0 0 30px;
+  padding: 0 20px;
+}
+.navBox .navContainer .leftBox .navLogo {
+  width: 120px;
+  margin: 0 0 15px;
+}
+.navBox .navContainer .leftBox .info {
+  margin: 0 0 15px;
+  font-size: 13px;
+}
+.navBox .navContainer .rightBox .navList ul {
+  border-top: 1px solid #ffffff;
+}
+.navBox .navContainer .rightBox .navList ul li {
+  border-bottom: 1px solid #ffffff;
+}
+.navBox .navContainer .rightBox .navList ul li + li {
+  margin: 0;
+}
+.navBox .navContainer .rightBox .navList ul li a {
+  display: block;
+  padding: 15px 20px;
+}
+.navBox .navClose {
+  top: 10px;
+  right: 20px;
+  width: 40px;
+}
+
+/* --------------------------------------------------
+	main
+-------------------------------------------------- */
+.main {
+  margin: 63px 0 0;
+}
+
+.pageTitleContainer {
+  padding: 30px 20px;
+}
+.pageTitleContainer .pageTitleBox {
+  max-width: 400px;
+  padding: 10px 20px;
+}
+.pageTitleContainer .pageTitleBox h1 {
+  font-size: 24px;
+}
+
+.pageSecTtlBox {
+  margin: 0 0 30px;
+}
+.pageSecTtlBox .pageSecTtl {
+  min-width: 200px;
+  padding: 0 30px 10px;
+  font-size: 20px;
+}
+
+.mapBox {
+  padding: 0 0 70%;
+}
+
+/* --------------------------------------------------
+	footer
+-------------------------------------------------- */
+.footer {
+  padding: 60px 0 20px;
+}
+.footer .logo {
+  width: 140px;
+  margin: 0 0 20px;
+}
+.footer .txt {
+  line-height: 2;
+}
+.footer .copy {
+  margin: 40px 0 0;
+  font-size: 12px;
+  text-align: center;
+}
+.footer .pagetop {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  width: 40px;
+  cursor: pointer;
+}

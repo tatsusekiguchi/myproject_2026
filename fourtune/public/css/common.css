@@ -1,0 +1,292 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*===================================================
+	共通CSS（PC/SMP）
+===================================================*/
+
+/*////////////////////////////////////////////////////////////
+	01. PC版、スマホ版　共通設定
+///////////////////////////////////////////////////////////*/
+
+/* --------------------------------------------------
+	base
+-------------------------------------------------- */
+* {
+  box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  font-family:
+    "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",
+    sans-serif;
+  min-width: 1000px;
+  line-height: 1.5;
+  color: #222222;
+  font-size: 15px;
+  background-color: #ffffff;
+}
+
+/*リンク */
+a {
+  color: #0c0c0c;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* 画像幅 */
+img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+/* clearfix */
+.clearfix::after {
+  content: ".";
+  display: block;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: url("../image/common/header_border.png") bottom repeat-x #ffffff;
+}
+header .headTop {
+  overflow: hidden;
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 10px;
+}
+header .headLeft {
+  float: left;
+  width: 55%;
+}
+header .headLeft > h1 {
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: #000000;
+}
+header .headLeft > .logo {
+  width: 278px;
+}
+header .headRight {
+  float: right;
+  width: 45%;
+  text-align: right;
+}
+header .headRight p {
+  display: inline-block;
+}
+header .headRight .pcTtl {
+  width: 504px;
+  margin-bottom: 30px;
+}
+header .headRight .pcTel {
+  width: 313px;
+}
+header .smtMenu {
+  display: none;
+}
+
+/* --------------------------------------------------
+	nav
+-------------------------------------------------- */
+nav {
+  width: 100%;
+  min-width: 1000px;
+  /*background: url("../image/common/header_border.png") bottom repeat-x #ffffff;*/
+}
+nav ul {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 20px 10px;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+  font-size: 17px;
+  font-weight: bold;
+  background: url("../image/common/nav_dot.png") left center no-repeat;
+}
+nav ul li:last-child {
+  background:
+    url("../image/common/nav_dot.png") left center no-repeat,
+    url("../image/common/nav_dot.png") right center no-repeat;
+}
+nav ul li a {
+  display: block;
+  margin: 0 0 0 10px;
+  padding: 2px 20px;
+  color: #161616;
+}
+nav ul li a:hover {
+  text-decoration: none;
+}
+nav ul li:nth-child(1) img {
+  width: 80px;
+}
+nav ul li:nth-child(2) img {
+  width: 65px;
+}
+nav ul li:nth-child(3) img {
+  width: 129px;
+}
+nav ul li:nth-child(4) img {
+  width: 97px;
+}
+nav ul li:nth-child(5) img {
+  width: 96px;
+}
+@media (min-width: 1025px) {
+  nav.fixed {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    background: url("../image/common/header_border.png") bottom repeat-x #ffffff;
+  }
+  nav.fixed ul {
+    /*padding:10px;*/
+  }
+  nav ul li.current a {
+    color: #ffffff;
+    border-radius: 6px;
+    background: #194375;
+  }
+}
+/* --------------------------------------------------
+	.cntnt
+-------------------------------------------------- */
+@media (min-width: 1025px) {
+  .cntnt {
+    padding-top: 218px;
+  }
+}
+.contWrap {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.ttlBorder {
+  position: relative;
+  padding-bottom: 30px;
+  text-align: center;
+}
+.ttlBorder:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 288px;
+  height: 9px;
+  margin: 0 auto;
+  background: url("../image/common/ttl_border.png") no-repeat;
+  background-size: 288px auto;
+}
+/* --------------------------------------------------
+	pagetop
+-------------------------------------------------- */
+#pagetop {
+  display: block;
+  position: fixed;
+  right: 0;
+  bottom: 35px;
+  width: 57px;
+  cursor: pointer;
+}
+/* --------------------------------------------------
+	banner
+-------------------------------------------------- */
+.banner {
+  padding: 20px 10px;
+  background: #214d7e;
+}
+.banner > div {
+  max-width: 1020px;
+  margin: 0 auto;
+}
+.banner ul {
+  overflow: hidden;
+  margin: 0 0 0 -2%;
+}
+.banner li {
+  float: left;
+  width: 30%;
+  margin: 0 0 0 2%;
+}
+/* --------------------------------------------------
+	footer
+-------------------------------------------------- */
+footer {
+  background: url("../image/common/footer_bg.png");
+}
+footer .footWrap {
+  display: table;
+  width: 100%;
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 40px 10px 60px;
+}
+footer .footWrap > div {
+  display: table-cell;
+  width: 50%;
+}
+footer .footWrap dl {
+  width: 265px;
+  padding: 0 10px;
+  text-align: center;
+}
+footer .footWrap dl dt {
+  width: 188px;
+  margin: 0 auto 30px;
+}
+footer .footWrap dl dd + dd {
+  display: inline-block;
+  margin-top: 30px;
+  text-align: left;
+}
+footer .footWrap ul {
+  display: table-cell;
+  width: 50%;
+  text-align: right;
+  vertical-align: bottom;
+}
+footer .footWrap ul li {
+  display: inline-block;
+  width: 425px;
+}
+footer .footNav {
+  margin-bottom: 30px;
+  text-align: center;
+}
+footer .footNav li {
+  display: inline-block;
+  padding: 0 30px;
+  font-size: 13px;
+}
+footer .copy {
+  padding: 10px 0;
+  font-size: 13px;
+  color: #ffffff;
+  text-align: center;
+  background: #000000;
+}

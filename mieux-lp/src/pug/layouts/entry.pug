@@ -1,0 +1,126 @@
+// ▽メイン▽
+main#contact.formPage
+    #section__contact
+        .secWrap01
+            .contactContainer
+                .secTtlBox
+                    .secTtl.secTtlEntry
+                        img(src=(root_path || '') + "image/form/title_entry.png", alt="")
+                    .sub
+                        h1 ご応募
+                .topTxt.txt
+                    p ご応募は下記フォーマットにご記入いただき「個人情報の取り扱いについて同意」に<br class="pcBreak">チェックボタンを押して内容をご確認のうえ、送信してください。自動で受付メールを送信いたします。<br>メールが送信されない場合、お手数ですが、下記電話番号までご連絡ください。
+                .formBox
+                    form#contactForm
+                        dl.radioForm
+                            dt
+                                span お問合せ項目
+                                em 必須
+                            dd
+                                .radioArea
+                                    <p>
+                                        <span class="mwform-radio-field horizontal-item">
+                                            <label>
+                                                <input type="radio" name="radio_content" value="応募する">
+                                                <span class="mwform-radio-field-text">応募する</span>
+                                            </label>
+                                        </span>
+                                        <span class="mwform-radio-field horizontal-item">
+                                            <label>
+                                                <input type="radio" name="radio_content" value="その他">
+                                                <span class="mwform-radio-field-text">その他</span>
+                                            </label>
+                                        </span>
+                        dl
+                            dt
+                                span お名前
+                                em 必須
+                            dd
+                                .inputBox
+                                    input(type="text" placeholder="お名前")
+                        dl
+                            dt
+                                span フリガナ
+                                em 必須
+                            dd
+                                .inputBox
+                                    input(type="text" placeholder="")
+                        dl
+                            dt
+                                span 経験年数
+                            dd
+                                .inputBox
+                                    input(type="text" placeholder="経験年数")
+                        dl
+                            dt
+                                span 生年月日
+                            dd
+                                .inputBox
+                                    input(type="text" placeholder="生年月日")
+                        dl
+                            dt
+                                span メールアドレス
+                                em 必須
+                            dd
+                                .inputBox
+                                    input(type="email" placeholder="メールアドレス")
+                        dl
+                            dt
+                                span メールアドレス確認
+                                em 必須
+                            dd
+                                .inputBox
+                                    input(type="email" placeholder="メールアドレス確認")
+                        dl
+                            dt
+                                span 電話番号
+                            dd
+                                .inputBox
+                                    input(type="text" placeholder="電話番号")
+                        dl.msg
+                            dt
+                                span その他
+                                em 必須
+                            dd
+                                .inputBox
+                                    textarea(placeholder="お問合せ内容")
+                                //- <div class="checkItem agreeCheck">
+                                //-     <label>
+                                //-         <span class="mwform-checkbox-field horizontal-item">
+                                //-             <label>
+                                //-                 <input type="checkbox" name="agreeCheck[data][]" value="個人情報の取り扱い">
+                                //-                 <span class="mwform-checkbox-field-text"></span>
+                                //-             </label>
+                                //-         </span>
+                                //-         <a href="">個人情報の取り扱い</a>
+                                //-         <em>について同意する</em>
+                                //-     </label>
+                                //- </div>
+                        <div class="checkItem agreeCheck">
+                            <label>
+                                <span class="mwform-checkbox-field horizontal-item">
+                                    <label>
+                                        <input type="checkbox" name="agreeCheck[data][]" value="個人情報の取り扱い">
+                                        <span class="mwform-checkbox-field-text">個人情報の取り扱い</span>
+                                    </label>
+                                </span>
+                                <input type="hidden" name="agreeCheck[separator]" value=",">
+                                <input type="hidden" name="__children[agreeCheck][]" value="{&quot;\u500b\u4eba\u60c5\u5831\u306e\u53d6\u308a\u6271\u3044&quot;:&quot;\u500b\u4eba\u60c5\u5831\u306e\u53d6\u308a\u6271\u3044&quot;}">
+                            </label>
+                            <span>個人情報の取り扱いについて同意する</span>
+                        </div>
+                        .agreeTxt
+                            p 当社の個人情報保護方針について<br class="spBreak">同意される方のみ送信できます。
+                        .submitButton.confirmButton
+                            <input type="submit" value="確認" class="wpcf7-form-control has-spinner wpcf7-submit"/>
+script.
+    document.addEventListener('DOMContentLoaded', function() {
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                window.location.href = '/mieux-lp/public/entryConfirm/';
+            });
+        }
+    });
+// △メイン△

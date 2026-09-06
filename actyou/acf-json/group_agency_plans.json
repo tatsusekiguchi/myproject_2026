@@ -1,0 +1,137 @@
+{
+    "key": "group_agency_plans",
+    "title": "旅行会社様専用プラン",
+    "fields": [
+        {
+            "key": "field_agency_plan_countries",
+            "label": "国別プラン",
+            "name": "agency_plan_countries",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "国名を登録し、その国に紐づくプランを複数登録できます。",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "row",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_agency_country_name",
+            "button_label": "国名を追加",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_agency_country_name",
+                    "label": "国名",
+                    "name": "country_name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "例：韓国",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_agency_plan_countries"
+                },
+                {
+                    "key": "field_agency_country_plans",
+                    "label": "プラン",
+                    "name": "plans",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "table",
+                    "pagination": 0,
+                    "min": 0,
+                    "max": 0,
+                    "collapsed": "field_agency_plan_name",
+                    "button_label": "プランを追加",
+                    "rows_per_page": 20,
+                    "parent_repeater": "field_agency_plan_countries",
+                    "sub_fields": [
+                        {
+                            "key": "field_agency_plan_name",
+                            "label": "プラン名",
+                            "name": "plan_name",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_agency_country_plans"
+                        },
+                        {
+                            "key": "field_agency_plan_pdf",
+                            "label": "PDFダウンロード",
+                            "name": "pdf_download",
+                            "aria-label": "",
+                            "type": "file",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "library": "all",
+                            "min_size": "",
+                            "max_size": "",
+                            "mime_types": "pdf",
+                            "parent_repeater": "field_agency_country_plans"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "agency/index.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1782844800
+}

@@ -1,0 +1,182 @@
+// ▽メイン▽
+.serviceMain.main
+    .pageTitlePanel
+        .pageTitle
+            p SERVICE
+            h1 サービス紹介
+    .sec01.serviceSection
+        .secWrap01
+            .pageSecTtlBox
+                .sub
+                    p SERVICE
+                .pageSecTtl
+                    h2 サービス内容
+            .serviceIntro
+                .photo
+                    img(src='https://jiken-soudan.com/system_panel/uploads/images/service_sec01_photo.png' alt='')
+                .introText
+                    h3 被害や状況を的確に伝え、<br>警察や周囲に理解されるようサポート。
+                    .txt
+                        p 被害を警察に訴えたけど、動いてもらえなかった。泣き寝入りはしたくない。<br>そんな方は、古村までご相談ください。同じ被害や状況でも、正確に伝えることができれば、警察は動きやすくなります。民事上のトラブルであっても、事実を正確に伝えることが、解決への道となります。ご相談いただければ、事実を整理し、戦略を立てながら証拠を揃え、警察をはじめとする第三者に、あなたの状況が正確に伝わるようサポートします。
+            .serviceProcess
+                h3 事実整理から報告書作成まで一貫対応
+                .txt
+                    p 元刑事の視点で、事実でを整理し、周囲に理解されるようサポートします。
+                .chart
+                    img(src='https://jiken-soudan.com/system_panel/uploads/images/service_sec01_chart.png' alt='')
+    .sec02.serviceSection
+        .secWrap01
+            .pageSecTtlBox
+                .sub
+                    p REASON
+                .pageSecTtl
+                    h2 被害届が受理されにくい理由と対策
+            .lead
+                p 直接的な危害がまだないと、「具体的な被害がなく、事件にならない。」と判断されやすい傾向があります。<br>しかし、状況を正しく整理し伝えることで、事件性を認めてもらえる可能性があります。
+            .casePanel
+                .ul.accord
+                    each data in [{ttl:'ハラスメント', txt:'会社内で起きたことだと、「会社内の問題」と受け止められ、事件化に至りにくいケースがあります。しかし、行為の継続性や悪質性を整理することで、事件として扱われる可能性があります。'}, {ttl:'性被害', txt:'第三者の目撃者がいないことが多く、「立証が難しい」と判断されやすい傾向があります。しかし、被害直後の状況や周辺の証拠を整理することで、立証の材料を揃えられる可能性があります。'}, {ttl:'誹謗中傷', txt:'発信者が特定できないと、「捜査が困難」と判断されやすい傾向があります。しかし、投稿内容や発信の経緯を整理することで、特定・立件につながる可能性があります。'}, {ttl:'DV被害', txt:'家庭内で起きたことだと、「夫婦・家族間の問題」として民事的に扱われやすい傾向があります。しかし、暴力の実態や継続性を証拠として示すことで、事件として受理される可能性があります。'}, {ttl:'ストーカー被害', txt:'まだ直接的な危害が及んでいない段階だと、「被害が具体化していない」と判断されやすい傾向があります。しかし、行動パターンや接触の記録を整理することで、危険性を正しく伝えられる可能性があります。'}, {ttl:'その他あなたが被害を受けたと感じること', txt:'ここにない被害でも、あなたが被害だと感じたのであれば、遠慮なくご相談ください。被害や事件の形は様々です。まずはあなたの身に起きたことを聞かせてください。'}]
+                        .li
+                            .dl
+                                .dt
+                                    h3= data.ttl
+                                    .mark
+                                        .line01
+                                        .line02
+                                .dd.txt
+                                    p= data.txt
+    .sec03.serviceSection
+        .secWrap01
+            .pageSecTtlBox
+                .sub
+                    p STRENGTH
+                .pageSecTtl
+                    h2 事件相談古村事務所の強み
+            .strengthList
+                .ul
+                    .li
+                        .number
+                            p 01
+                        .ttl
+                            p 元捜査一課刑事の
+                            p.em 着眼点・調査力
+                        .txt
+                            p 約３５年、現場の最前線で捜査をしてきました。現場での実況見分や証拠集め、聞き込み調査、現場の指揮など、刑事の延長上に今の仕事があります。警察のことを熟知しており、警察が求めるものが分かるのも強みです。
+                    .li
+                        .number
+                            p 02
+                        .ttl
+                            p.em 行政書士の資格
+                            p で一貫サポート
+                        .txt
+                            p 告訴状・告発状の代書、その他届け出・申請のための書類作成も当事務所で一貫してお手伝いできます。
+    .sec04.serviceSection
+        .secWrap01
+            .pageSecTtlBox
+                .sub
+                    p FLOW
+                .pageSecTtl
+                    h2 サービスの流れ
+            .flowList
+                .ul
+                    .li
+                        .step
+                            p STEP
+                            p.em 01
+                        .flowTtl
+                            h3 初回無料相談
+                        .txt
+                            p まずは無料相談をご利用ください。<br>●被害状況を丁寧にヒアリング<br>●事件性があるかを判断<br>●文書化できるかを確認<br>事件性があり、文書化できると判断した場合は、次のステップへ進みます。
+                    .li
+                        .step
+                            p STEP
+                            p.em 02
+                        .flowTtl
+                            h3 お見積り・契約
+                        .txt
+                            p 一つとして同じ事件はありません。<br>状況に応じて戦略を立て、お見積りを作成します。<br>ご契約後、事件の文書化に着手します。
+                    .li
+                        .step
+                            p STEP
+                            p.em 03
+                        .flowTtl
+                            h3 事実整理・事件の文書化
+                        .txt
+                            p 刑事事件として扱えるであろうポイントを突き、事件を整理しながら、事実関係を正式な書面にまとめます。<br>文書化することで、警察やその他機関に正しく事件を伝えることができます。
+                    .li
+                        .step
+                            p STEP
+                            p.em 04
+                        .flowTtl
+                            h3 必要に応じた裏付け調査
+                        .txt
+                            p 証拠は、直接証拠、状況証拠、物証、書証、アリバイ、目撃情報など様々です。<br>文書化した書面をもとに、必要な証拠を集めます。<br>必要に応じて、実況見分と同様、事件現場の位置関係や状況を、写真・図面などの形で正確に記録・書面化します。
+                            .investigationList
+                                .ul
+                                    .liItem
+                                        p 現場検証
+                                    .liItem
+                                        p 尾行・張り込み
+                                    .liItem
+                                        p 聞き込み調査
+                                    .liItem
+                                        p 写真・映像記録
+                                    .liItem
+                                        p デジタル証拠の保全
+                    .li
+                        .step
+                            p STEP
+                            p.em 05
+                        .flowTtl
+                            h3 状況に応じて戦略を立て直す
+                        .txt
+                            p 警察の捜査と同様、調査は一筋縄では行かないことがあります。<br>状況に応じて戦略を考え、依頼主様と打合せをしながら、粘り強く進めていきます。<br>※被害届が提出できるまで、数カ月かかるケースが多いです。
+                    .li
+                        .step
+                            p STEP
+                            p.em 06
+                        .flowTtl
+                            h3 被害届などの提出・受理
+                        .txt
+                            p 一度不受理になった被害届を、万全な形でもう一度提出しましょう。<br>あなたの被害届が受理されるよう、精一杯サポートいたします。
+    .sec05.serviceSection
+        .secWrap01
+            .pageSecTtlBox
+                .sub
+                    p PRICE
+                .pageSecTtl
+                    h2 料金
+            .lead
+                p 事件ごとに調査や進め方が異なるため、お見積りいたします。<br>調査終了後、行政書士業務に移行する場合は、行政書士法に基づく契約を別途締結いたします。<br>なお、全国の事件案件に対応していますが、お打ち合わせ場所は新宿のオフィスになります。
+            .priceTable
+                .dl
+                    .dt
+                        p 初回相談
+                    .dd
+                        p 無料
+                .dl
+                    .dt
+                        p ２回目以降のご相談
+                        p.span ※契約に至らない場合のみ
+                    .dd
+                        p 1時間あたり5,000円
+                .dl
+                    .dt
+                        p 事件整理・調査・文書化
+                    .dd
+                        p 案件ごとにお見積り
+    .secBnr.serviceSection
+        .secWrap01
+            //- .serviceBnr
+            //-     img(src='https://jiken-soudan.com/system_panel/uploads/images/service_sec_bnr.png' alt='戦うのはあなたです。古村を頼っていただければ誠心誠意サポートします。')
+            .supportPanel
+                .inner
+                    .txt
+                        p 戦うのは、あなたです。<br>古村を頼っていただければ、<br>参謀として戦路から実行まで誠心誠意サポートします。
+                .photo
+                    img(src="https://jiken-soudan.com/system_panel/uploads/images/service_bnr_person.png", alt="")
+            .btnMore
+                a(href='/?topContact')
+                    div
+                        p 初回無料相談
+// △メイン△

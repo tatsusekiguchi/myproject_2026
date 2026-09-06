@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<!-- css-->
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/slick.css">
+	<link rel="stylesheet" href="../css/slick-theme.css">
+	<link rel="stylesheet" href="../css/validationEngine.css">
+	<link rel="stylesheet" href="../css/animate.css">
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/layout.css">
+	<link rel="stylesheet" media="screen and (max-width: 1139px)" type="text/css" href="../css/common_sp.css">
+	<link rel="stylesheet" media="screen and (max-width: 1139px)" type="text/css" href="../css/layout_sp.css">
+	<link rel="stylesheet" href="../css/attach.css">
+	<!-- js-->
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+	<script src="../js/jquery-1.11.3.min.js"></script>
+	<script src="../js/slick.min.js"></script>
+	<script src="../js/infiniteslide.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/scrollAnimation.js"></script>
+	<script src="../js/gsapAnimation.js"></script>
+	<script src="../js/validate.js"></script>
+	<script src="../js/validateJa.js"></script>
+	<script src="../js/jpostal.js"></script>
+	<script src="../js/autokana.js"></script>
+	<script src="../js/formContact.js"></script>
+	<script>
+		(function(d) {
+			var config = {
+					kitId: 'zmp5pxk',
+					scriptTimeout: 3000,
+					async: true
+				},
+				h = d.documentElement,
+				t = setTimeout(function() {
+					h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+				}, config.scriptTimeout),
+				tk = d.createElement("script"),
+				f = false,
+				s = d.getElementsByTagName("script")[0],
+				a;
+			h.className += " wf-loading";
+			tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+			tk.async = true;
+			tk.onload = tk.onreadystatechange = function() {
+				a = this.readyState;
+				if (f || a && a != "complete" && a != "loaded") return;
+				f = true;
+				clearTimeout(t);
+				try {
+					Typekit.load(config)
+				} catch (e) {}
+			};
+			s.parentNode.insertBefore(tk, s)
+		})(document);
+	</script>
+	<!-- title-->
+	<title></title>
+</head>
+
+<body class="page" id="entryConfirm">
+	<!-- ▽header▽-->
+	<header class="header">
+		<div class="logo"><a href=""><img class="logoWhite" src="../image/common/header_logo_white.png" alt=""><img class="logoBlack" src="../image/common/header_logo_black.png" alt=""></a></div>
+		<div class="headItemBox">
+			<div class="headItem">
+				<ul>
+					<li><a href="">お問い合わせ</a></li>
+					<li><a href="">応募する</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="hamburgerBox">
+			<div class="hamburger"><span class="top"></span>
+				<p>MENU</p><span class="bottom"></span>
+			</div>
+		</div>
+		<div class="navBox">
+			<div class="navPanel">
+				<div class="navList">
+					<ul>
+						<li><a href="#">TOP</a></li>
+						<li><a href="#section__concept">CONCEPT</a></li>
+						<li><a href="#section__news">WHAT’S NEW</a></li>
+						<li><a href="#section__features">FEATURES</a></li>
+						<li class="line"><a href="#section__require">WHO WE’RE LOOKING FOR</a></li>
+						<li><a href="#section__requirements">REQUIREMENTS</a></li>
+						<li><a href="#section__info">SALON LIST</a></li>
+					</ul>
+				</div>
+				<div class="navMessage">
+					<p>We shine a light on each individual’s unique<br>sensibility and become a driving force that leads<br>them toward their next self.</p>
+				</div>
+				<div class="snsBox">
+					<ul>
+						<li><a href="https://www.instagram.com/noema.hair/" target="_blank" rel="noopener"><img src="../image/common/icon_instagram.png" alt=""></a></li>
+						<li><a href="#" target="_blank" rel="noopener"><img src="../image/common/icon_line.png" alt=""></a></li>
+						<li><a href="#" target="_blank" rel="noopener"><img src="../image/common/icon_twitter.png" alt=""></a></li>
+					</ul>
+					<div class="navLogo"><img src="../image/common/nav_logo.png" alt=""></div>
+				</div>
+				<div class="photo"><img src="../image/common/nav_photo.png" alt=""></div>
+			</div>
+		</div>
+		<div class="fixedSpBottomNav">
+			<ul>
+				<li><a href="">お問い合わせ</a></li>
+				<li><a href="">応募する</a></li>
+			</ul>
+		</div>
+	</header>
+	<!-- △header△-->
+	<!-- ▽メイン▽-->
+	<main id="contactConfirm">
+		<div id="section__contact">
+			<div class="secWrap01">
+				<div class="contactContainer">
+					<div class="secTtlBox">
+						<div class="secTtl secTtlEntry"><img src="../image/form/title_entry.png" alt=""></div>
+						<div class="sub">
+							<h1>ご応募</h1>
+						</div>
+					</div>
+					<div class="formConfirm">
+						<form id="confirmForm" method="post" action="" enctype="multipart/form-data">
+							<dl class="radioForm">
+								<dt><span>お問い合わせ項目*</span></dt>
+								<dd>
+									<div class="radioArea">応募する
+										<input type="hidden" name="radio_kind" value="応募する">
+										<input type="hidden" name="__children[radio_kind][]" value="{&quot;\u65b0\u5352\u63a1\u7528&quot;:&quot;\u65b0\u5352\u63a1\u7528&quot;,&quot;\u4e2d\u9014\u63a1\u7528&quot;:&quot;\u4e2d\u9014\u63a1\u7528&quot;}">
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt><span>お名前*</span></dt>
+								<dd>
+									<div class="inputBox">山田花子
+										<input type="hidden" name="name" value="山田花子">
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt><span>フリガナ*</span></dt>
+								<dd>
+									<div class="inputBox">ヤマダハナコ
+										<input type="hidden" name="furigana" value="ヤマダハナコ">
+									</div>
+								</dd>
+							</dl>
+							<dl class="msg">
+								<dt><span>お問合せ内容</span></dt>
+								<dd>
+									<div class="inputBox">ここにお問い合わせ内容ここにお問い合わせ
+										<input type="hidden" name="msg" value="ここにお問い合わせ内容ここにお問い合わせ">
+									</div>
+								</dd>
+							</dl>
+							<div class="privacy">
+								<div class="agreeBox">
+									<div class="box">
+										<dl>
+											<dt>個人情報の取り扱いについて</dt>
+											<dd>当社は、当社が取得した個人情報の取扱いに関し、個人情報の保護に関する法律、個人情報保護に関するガイドライン等の指針、その他個人情報保護に関する関係法令を遵守します。</dd>
+										</dl>
+									</div>
+									<div class="box">
+										<dl>
+											<dt>２.個人情報の安全管理</dt>
+											<dd>当社は、個人情報の保護に関して、組織的、物理的、人的、技術的に適切な対策を実施し、当社の取り扱う個人情報の漏えい、滅失又はき損の防止その他の個人情報の安全管理のために必要かつ適切な措置を講ずるものとします。</dd>
+										</dl>
+									</div>
+									<div class="box">
+										<dl>
+											<dt>３.個人情報の取得等の遵守事項</dt>
+											<dd>
+												<p>当社による個人情報の取得、利用、提供については、以下の事項を遵守します。</p>
+												<p>(1)個人情報の取得</p>
+												<p>当社は、当社が管理するインターネットによる情報提供サイト（以下「本サイト」といいます。）の運営に必要な範囲で、本サイトの一般利用者（以下「ユーザー」といいます。）又は本サイトに広告掲載を行う者（以下「掲載主」といいます。）から、ユーザー又は掲載主に係る個人情報を取得することがあります。</p>
+												<p>(2)個人情報の利用目的</p>
+												<p>当社は、当社が取得した個人情報について、法令に定める場合又は本人の同意を得た場合を除き、以下に定める利用目的の達成に必要な範囲を超えて利用することはありません。</p>
+												<p>①　本サイトの運営、維持、管理</p>
+												<p>②　本サイトを通じたサービスの提供及び紹介</p>
+												<p>(3)個人情報の提供等</p>
+												<p>当社は、法令で定める場合を除き、本人の同意に基づき取得した個人情報を、本人の事前の同意なく第三者に提供することはありません。なお、本人の求めによる個人情報の開示、訂正、追加若しくは削除又は利用目的の通知については、法令に従いこれを行うとともに、ご意見、ご相談に関して適切に対応します。</p>
+											</dd>
+										</dl>
+									</div>
+									<div class="box">
+										<dl>
+											<dt>4 .個人情報の利用目的の変更</dt>
+											<dd>当社は、前項で特定した利用目的は、予め本人の同意を得た場合を除くほかは、原則として変更しません。但し、変更前の利用目的と相当の関連性を有すると合理的に認められる範囲において、予め変更後の利用目的を公表の上で変更を行う場合はこの限りではありません。</dd>
+										</dl>
+									</div>
+									<div class="box">
+										<dl>
+											<dt>５.個人情報の第三者提供</dt>
+											<dd>当社は、個人情報の取扱いの全部又は一部を第三者に委託する場合、その適格性を十分に審査し、その取扱いを委託された個人情報の安全管理が図られるよう、委託を受けた者に対する必要かつ適切な監督を行うこととします。</dd>
+										</dl>
+									</div>
+									<div class="box">
+										<dl>
+											<dt>６.個人情報の取扱いの改善・見直し</dt>
+											<dd>当社は、個人情報の取扱い、管理体制及び取組みに関する点検を実施し、継続的に改善・見直しを行います。</dd>
+										</dl>
+									</div>
+									<div class="box">
+										<dl>
+											<dt>７.個人情報の廃棄</dt>
+											<dd>当社は、個人情報の利用目的に照らしその必要性が失われたときは、個人情報を消去又は廃棄するものとし、当該消去及び廃棄は、外部流失等の危険を防止するために必要かつ適切な方法により、業務の遂行上必要な限りにおいて行います。</dd>
+										</dl>
+									</div>
+									<div class="box">
+										<p>【株式会社eli】</p>
+										<p>〒462-0842　名古屋市北区志賀南通1-18 西脇ビル 2A</p>
+										<p><a href="tel:0529828758">TEL：052-982-8758</a></p>
+										<p></p>
+									</div>
+									<p></p>
+								</div>
+							</div>
+							<div class="checkItem agreeCheck">
+								<label><br>
+									<input type="checkbox"><span>個人情報の取り扱いについて同意する</span><br>
+								</label>
+							</div>
+							<div class="submitButton">
+								<input type="submit" name="mwform_submitButton" value="送信">
+								<button type="submit" name="submitBack" value="" class="btnBack">修正</button>
+							</div>
+							<input type="hidden" id="mw_wp_form_token" name="mw_wp_form_token" value="0bac259e45"><input type="hidden" name="_wp_http_referer" value="/wacca_recruit_confirm/"><input type="hidden" name="mw-wp-form-form-id" value="137"><input type="hidden" name="mw-wp-form-form-verify-token" value="b7cf7293657980f99b05759f94933746597e7545">
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			const confirmForm = document.getElementById('confirmForm');
+			if (confirmForm) {
+				confirmForm.addEventListener('submit', function(e) {
+					e.preventDefault();
+
+					const submitButton = e.submitter;
+					if (submitButton && submitButton.name === 'submitBack') {
+						// 修正ボタン - contactページに戻る
+						window.location.href = '/mieux-lp/public/entry/';
+					} else {
+						// 送信ボタン - contactCompleteページへ
+						window.location.href = '/mieux-lp/public/contactComplete/';
+					}
+				});
+			}
+		});
+	</script>
+	<!-- △メイン△-->
+	<!-- ▽footer▽-->
+	<footer class="footer">
+		<div class="logo"><img src="../image/common/footer_logo.png" alt=""></div>
+		<div class="footBox01">
+			<div class="photo"><img src="../image/common/footer_photo.png" alt=""></div>
+			<div class="footNav">
+				<ul>
+					<li><a href="#">TOP</a></li>
+					<li><a href="#section__concept">CONCEPT</a></li>
+					<li><a href="#section__news">WHAT’S NEW</a></li>
+					<li><a href="#section__features">FEATURES</a></li>
+					<li class="line"><a href="#section__require">WHO WE’RE LOOKING FOR</a></li>
+					<li><a href="#section__requirements">REQUIREMENTS</a></li>
+					<li><a href="#section__info">SALON LIST</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="footBox02">
+			<dl>
+				<dt>Sensitivity and Essence</dt>
+				<dd>We shine a light on each individual’s unique sensibility and<br>become a driving force that leads them toward their next self.</dd>
+			</dl>
+			<div class="snsBox">
+				<ul>
+					<li><a href="https://www.instagram.com/noema.hair/" target="_blank" rel="noopener"><img src="../image/common/icon_instagram.png" alt=""></a></li>
+					<li><a href="#" target="_blank" rel="noopener"><img src="../image/common/icon_line.png" alt=""></a></li>
+					<li><a href="#" target="_blank" rel="noopener"><img src="../image/common/icon_twitter.png" alt=""></a></li>
+				</ul>
+			</div>
+			<div class="bottomBox">
+				<div class="copy">
+					<p>Copyright &copy; NOEMA Ltd all rights reserved.</p>
+				</div>
+				<div class="policy"><a href="">プライバシーポリシー</a></div>
+			</div>
+		</div>
+	</footer>
+	<!-- △footer△-->
+</body>
+
+</html>

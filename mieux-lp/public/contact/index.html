@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<!-- css-->
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/slick.css">
+	<link rel="stylesheet" href="../css/slick-theme.css">
+	<link rel="stylesheet" href="../css/validationEngine.css">
+	<link rel="stylesheet" href="../css/animate.css">
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/layout.css">
+	<link rel="stylesheet" media="screen and (max-width: 1139px)" type="text/css" href="../css/common_sp.css">
+	<link rel="stylesheet" media="screen and (max-width: 1139px)" type="text/css" href="../css/layout_sp.css">
+	<link rel="stylesheet" href="../css/attach.css">
+	<!-- js-->
+	<script src="../js/jquery-1.11.3.min.js"></script>
+	<script src="../js/slick.min.js"></script>
+	<script src="../js/infiniteslide.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/scrollAnimation.js"></script>
+	<script src="../js/validate.js"></script>
+	<script src="../js/validateJa.js"></script>
+	<script src="../js/jpostal.js"></script>
+	<script src="../js/autokana.js"></script>
+	<script src="../js/formContact.js"></script>
+	<script>
+		(function(d) {
+			var config = {
+					kitId: 'fmx6ynq',
+					scriptTimeout: 3000,
+					async: true
+				},
+				h = d.documentElement,
+				t = setTimeout(function() {
+					h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+				}, config.scriptTimeout),
+				tk = d.createElement("script"),
+				f = false,
+				s = d.getElementsByTagName("script")[0],
+				a;
+			h.className += " wf-loading";
+			tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+			tk.async = true;
+			tk.onload = tk.onreadystatechange = function() {
+				a = this.readyState;
+				if (f || a && a != "complete" && a != "loaded") return;
+				f = true;
+				clearTimeout(t);
+				try {
+					Typekit.load(config)
+				} catch (e) {}
+			};
+			s.parentNode.insertBefore(tk, s)
+		})(document);
+	</script>
+	<!-- title-->
+	<title></title>
+</head>
+
+<body class="page" id="contact">
+	<!-- ▽header▽-->
+	<header class="header">
+		<div class="logoBox">
+			<div class="logo logoWhite"><a href="../"><img src="../image/common/header_logo.png" alt=""></a></div>
+			<div class="logo logoBlack"><a href="../"><img src="../image/common/header_logo_black.png" alt=""></a></div>
+			<div class="headTtl">
+				<p>東海エリアを中心に14店舗展開中の肌質改善サロン</p>
+			</div>
+		</div>
+		<div class="navBox">
+			<div class="navContainer">
+				<div class="navLogo"><a href=""><img src="../image/common/nav_logo.png" alt=""></a></div>
+				<div class="navList">
+					<ul>
+						<li><a href="#section__vision">mieuxのビジョン</a></li>
+						<li><a href="#section__store">展開エリア</a></li>
+						<li><a href="#section__message">オーナーメッセージ</a></li>
+						<li><a href="#section__faq">よくある質問</a></li>
+						<li><a href="#section__step">採用までの流れ</a></li>
+					</ul>
+					<ul>
+						<li><a href="#section__attraction">４つの魅力</a></li>
+						<li><a href="#section__recommend">こんな方におすすめ</a></li>
+						<li><a href="#section__flow">開業までの流れ</a></li>
+						<li><a href="#section__interview">FCオーナーの声</a></li>
+					</ul>
+				</div>
+				<div class="navItem">
+					<ul>
+						<li>
+							<div class="btnMore"><a href="../entry"><span>応募する</span></a></div>
+						</li>
+						<li>
+							<div class="btnMore"><a href="../contact"><span>お問い合わせ</span></a></div>
+						</li>
+						<li>
+							<div class="btnMore btnOfficial"><a href="http://mieux-cosme.com" target="_blank" rel="noopener"><span>オフィシャルサイト</span></a></div>
+						</li>
+					</ul>
+				</div>
+				<div class="navSns">
+					<div class="insta"><a href="https://www.instagram.com/mieux___official/" target="_blank" rel="noopener"><img src="../image/common/nav_insta.png" alt=""></a></div>
+				</div>
+			</div>
+		</div>
+		<div class="hamburger"><span></span><span></span><span></span></div>
+		<div class="fixedNavBox">
+			<ul>
+				<li><a href="../entry"><span><span>応募する</span></span></a></li>
+				<li><a href="../contact"><span><span>お問い合わせ</span></span></a></li>
+			</ul>
+		</div>
+	</header>
+	<!-- △header△-->
+	<!-- ▽メイン▽-->
+	<main class="formPage" id="contact">
+		<div id="section__contact">
+			<div class="secWrap01">
+				<div class="contactContainer">
+					<div class="secTtlBox">
+						<div class="secTtl secTtlContact"><img src="../image/form/title_contact.png" alt=""></div>
+						<div class="sub">
+							<h1>お問い合わせ</h1>
+						</div>
+					</div>
+					<div class="topTxt txt">
+						<p>お問い合わせは下記フォーマットにご記入いただき「個人情報の取り扱いについて同意」に<br class="pcBreak">チェックボタンを押して内容をご確認のうえ、送信してください。自動で受付メールを送信いたします。<br>メールが送信されない場合、お手数ですが、下記電話番号までご連絡ください。</p>
+					</div>
+					<div class="formBox">
+						<form id="contactForm">
+							<dl class="radioForm">
+								<dt><span>お問合せ項目</span><em>必須</em></dt>
+								<dd>
+									<div class="radioArea">
+										<p>
+											<span class="mwform-radio-field horizontal-item">
+												<label>
+													<input type="radio" name="radio_content" value="会社について">
+													<span class="mwform-radio-field-text">会社について</span>
+												</label>
+											</span>
+											<span class="mwform-radio-field horizontal-item">
+												<label>
+													<input type="radio" name="radio_content" value="その他">
+													<span class="mwform-radio-field-text">その他</span>
+												</label>
+											</span>
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt><span>お名前</span><em>必須</em></dt>
+								<dd>
+									<div class="inputBox">
+										<input type="text" placeholder="お名前">
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt><span>フリガナ</span><em>必須</em></dt>
+								<dd>
+									<div class="inputBox">
+										<input type="text" placeholder="フリガナ">
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt><span>生年月日</span></dt>
+								<dd>
+									<div class="inputBox">
+										<input type="text" placeholder="生年月日">
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt><span>メールアドレス</span><em>必須</em></dt>
+								<dd>
+									<div class="inputBox">
+										<input type="email" placeholder="メールアドレス">
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt><span>メールアドレス確認</span><em>必須</em></dt>
+								<dd>
+									<div class="inputBox">
+										<input type="email" placeholder="メールアドレス確認">
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt><span>電話番号</span></dt>
+								<dd>
+									<div class="inputBox">
+										<input type="text" placeholder="電話番号 ">
+									</div>
+								</dd>
+							</dl>
+							<dl class="msg">
+								<dt><span>お問合せ内容</span><em>必須</em></dt>
+								<dd>
+									<div class="inputBox">
+										<textarea placeholder="お問合せ内容"></textarea>
+									</div>
+								</dd>
+							</dl>
+							<div class="checkItem agreeCheck">
+								<label>
+									<span class="mwform-checkbox-field horizontal-item">
+										<label>
+											<input type="checkbox" name="agreeCheck[data][]" value="個人情報の取り扱い">
+											<span class="mwform-checkbox-field-text">個人情報の取り扱い</span>
+										</label>
+									</span>
+									<input type="hidden" name="agreeCheck[separator]" value=",">
+									<input type="hidden" name="__children[agreeCheck][]" value="{&quot;\u500b\u4eba\u60c5\u5831\u306e\u53d6\u308a\u6271\u3044&quot;:&quot;\u500b\u4eba\u60c5\u5831\u306e\u53d6\u308a\u6271\u3044&quot;}">
+								</label>
+								<span>個人情報の取り扱いについて同意する</span>
+							</div>
+							<div class="agreeTxt">
+								<p>当社の個人情報保護方針について<br class="spBreak">同意される方のみ送信できます。</p>
+							</div>
+							<div class="submitButton confirmButton"><input type="submit" value="確認" class="wpcf7-form-control has-spinner wpcf7-submit" /></div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			const contactForm = document.getElementById('contactForm');
+			if (contactForm) {
+				contactForm.addEventListener('submit', function(e) {
+					e.preventDefault();
+					window.location.href = '/mieux-lp/public/contactConfirm/';
+				});
+			}
+		});
+	</script>
+	<!-- △メイン△-->
+	<!-- ▽footer▽-->
+	<footer class="footer">
+		<div class="footPanel">
+			<div class="footBox">
+				<div class="txtBox">
+					<div class="ttlHead">
+						<div class="ttl">
+							<p>その手で、<br>だれかの美しさを<br class="spBreak">育てる仕事を。</p>
+						</div>
+						<div class="insta"><a href="https://www.instagram.com/mieux___official/" target="_blank" rel="noopener"><img src="../image/common/footer_insta.png" alt=""></a></div>
+					</div>
+					<div class="navItem">
+						<ul>
+							<li>
+								<div class="btnMore"><a href="../entry"><span>応募する</span></a></div>
+							</li>
+							<li>
+								<div class="btnMore"><a href="../contact"><span>お問い合わせ</span></a></div>
+							</li>
+							<li>
+								<div class="btnMore btnOfficial"><a href="http://mieux-cosme.com" target="_blank" rel="noopener"><span>オフィシャルサイト</span></a></div>
+							</li>
+							<li class="insta">
+								<div class="btnMore"><a href="#" target="_blank" rel="noopener"><span>Instagram</span></a></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="logoBox">
+					<div class="logo"><img src="../image/common/footer_logo.png" alt=""></div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- △footer△-->
+</body>
+
+</html>

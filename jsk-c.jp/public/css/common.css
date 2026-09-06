@@ -1,0 +1,545 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap");
+/* CSS Document */
+/*===================================================
+	共通CSS（PC/SMP）
+===================================================*/
+/*////////////////////////////////////////////////////////////
+	共通設定
+///////////////////////////////////////////////////////////*/
+/* --------------------------------------------------
+	base
+-------------------------------------------------- */
+* {
+  box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "Helvetica Neue", "Helvetica", "Arial", sans-serif, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000000;
+  font-size: 16px;
+  background: #ffffff;
+  transition: 2s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.5;
+}
+
+.txt {
+  line-height: 2;
+}
+
+/*リンク */
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* 画像幅 */
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* clearfix */
+.clearfix::after {
+  content: ".";
+  display: block;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.spBreak {
+  display: none;
+}
+
+@media (min-width: 1025px) {
+  a {
+    transition: 0.6s;
+  }
+
+  a:hover {
+    opacity: 0.6;
+  }
+}
+.fax a {
+  pointer-events: none;
+}
+
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 40px;
+  z-index: 999;
+}
+.header .logo {
+  width: 100px;
+}
+.header .logo a {
+  display: block;
+}
+
+@media (min-width: 1025px) {
+  .header .headWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header .hamburger {
+    display: none;
+  }
+}
+/* --------------------------------------------------
+	nav
+-------------------------------------------------- */
+@media (min-width: 1025px) {
+  .navBox ul {
+    display: flex;
+    align-items: center;
+    gap: 0 30px;
+    font-size: 15px;
+  }
+  .navBox ul li a {
+    position: relative;
+    display: inline-block;
+  }
+}
+@media (min-width: 1025px) and (min-width: 1025px) {
+  .navBox ul li:not(.contact) a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #000000;
+    transition: width 0.3s ease;
+  }
+  .navBox ul li:not(.contact) a:hover {
+    opacity: 1;
+  }
+  .navBox ul li:not(.contact) a:hover::after {
+    width: 100%;
+  }
+}
+@media (min-width: 1025px) {
+  .navBox ul .contact {
+    width: 140px;
+  }
+  .navBox ul .contact a {
+    display: block;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #000000;
+  }
+}
+@media (min-width: 1025px) and (min-width: 1025px) {
+  .navBox ul .contact a:hover {
+    opacity: 1;
+    color: #b5a253;
+    border: 1px solid #b4a152;
+  }
+}
+/* --------------------------------------------------
+	main
+-------------------------------------------------- */
+.main {
+  overflow: hidden;
+}
+
+.pageMain {
+  margin: 100px 0 0;
+}
+
+.pageTitlePanel {
+  padding: 60px 20px;
+  text-align: center;
+  background: #fbfaf7;
+}
+.pageTitlePanel h1 {
+  margin: 0 0 5px;
+  font-size: 32px;
+}
+.pageTitlePanel p {
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.secWrap {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.secWrap01 {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.secWrap02 {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.mapBox {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding: 0 0 45%;
+}
+.mapBox iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.topicPath {
+  padding: 40px 0;
+}
+.topicPath ol {
+  display: flex;
+  font-size: 12px;
+}
+.topicPath ol li + li {
+  margin: 0 0 0 10px;
+  padding: 0 0 0 12px;
+  background: url("../image/common/topic_arrow.png") left center no-repeat;
+  background-size: 4px auto;
+}
+.topicPath ol li a {
+  position: relative;
+  display: inline-block;
+}
+@media (min-width: 1025px) {
+  .topicPath ol li a::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #000000;
+    transition: width 0.3s ease;
+  }
+  .topicPath ol li a:hover {
+    opacity: 1;
+  }
+  .topicPath ol li a:hover::after {
+    width: 100%;
+  }
+}
+
+/* --------------------------------------------------
+	footer
+-------------------------------------------------- */
+.footer .footContact .contactKv {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 680px;
+  padding: 0 20px;
+}
+.footer .footContact .kvBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.footer .footContact .kvBox > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer .footContact .kvBox .kv01 {
+  background: url("../image/common/contact_kv_01.png") center no-repeat;
+  background-size: cover;
+}
+.footer .footContact .kvBox .kv02 {
+  background: url("../image/common/contact_kv_02.png") center no-repeat;
+  background-size: cover;
+}
+.footer .footContact .kvBox .kv03 {
+  background: url("../image/common/contact_kv_03.png") center no-repeat;
+  background-size: cover;
+}
+.footer .footContact .kvBox .kv04 {
+  background: url("../image/common/contact_kv_04.png") center no-repeat;
+  background-size: cover;
+}
+.footer .footContact .contactPanel {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer .footContact .contactPanel .contactBox {
+  max-width: 640px;
+  padding: 40px 60px 60px;
+  background: #ffffff;
+}
+.footer .footContact .contactPanel .contactBox .ttl01 {
+  margin: 0 0 10px;
+  font-family: "Open Sans";
+  font-size: 32px;
+  font-weight: 500;
+}
+.footer .footContact .contactPanel .contactBox .ttl02 {
+  margin: 0 0 30px;
+  font-size: 18px;
+}
+.footer .footContact .contactPanel .contactBox .btnMail {
+  max-width: 520px;
+  margin: 40px 0 0;
+  /* 擬似要素の共通スタイル */
+  /* 左上へ配置 */
+  /* 右下へ配置 */
+  /* 左下へ配置 */
+  /* 右上へ配置 */
+  /* hover */
+}
+.footer .footContact .contactPanel .contactBox .btnMail a {
+  position: relative;
+  display: block;
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+  background: url("../image/common/more_arrow_right_white.png") right 30px center no-repeat #b4a152;
+  background-size: 25px auto;
+}
+.footer .footContact .contactPanel .contactBox .btnMail a span {
+  display: block;
+  padding: 20px;
+  background: url("../image/common/contact_mail.png") left 40px center no-repeat;
+  background-size: 50px auto;
+}
+@media (min-width: 1025px) {
+  .footer .footContact .contactPanel .contactBox .btnMail a:hover {
+    background: url("../image/common/more_arrow_right_white.png") right 25px center no-repeat #b4a152;
+    background-size: 25px auto;
+  }
+}
+.footer .footContact .contactPanel .contactBox .btnMail a::after,
+.footer .footContact .contactPanel .contactBox .btnMail a::before,
+.footer .footContact .contactPanel .contactBox .btnMail a span::after,
+.footer .footContact .contactPanel .contactBox .btnMail a span::before {
+  background-color: #000000;
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 10;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+.footer .footContact .contactPanel .contactBox .btnMail a::after {
+  width: 0px;
+  height: 2px;
+  top: -1px;
+  left: -1px;
+}
+.footer .footContact .contactPanel .contactBox .btnMail a::before {
+  width: 0px;
+  height: 2px;
+  right: -1px;
+  bottom: -1px;
+}
+.footer .footContact .contactPanel .contactBox .btnMail a span::after {
+  width: 2px;
+  height: 0px;
+  left: -1px;
+  bottom: -1px;
+}
+.footer .footContact .contactPanel .contactBox .btnMail a span::before {
+  width: 2px;
+  height: 0px;
+  top: -1px;
+  right: -1px;
+}
+@media (min-width: 1025px) {
+  .footer .footContact .contactPanel .contactBox .btnMail a:hover::after,
+.footer .footContact .contactPanel .contactBox .btnMail a:hover::before {
+    width: 100%;
+    width: calc(100% + 1px);
+  }
+  .footer .footContact .contactPanel .contactBox .btnMail a:hover span::after,
+.footer .footContact .contactPanel .contactBox .btnMail a:hover span::before {
+    height: 100%;
+    height: calc(100% + 1px);
+  }
+}
+.footer .footContact .contactPanel .contactBox dl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 15px;
+  margin: 40px 0 0;
+}
+.footer .footContact .contactPanel .contactBox dl dt {
+  font-size: 12px;
+  color: #7a6301;
+}
+.footer .footContact .contactPanel .contactBox dl dd a {
+  display: inline-block;
+  font-size: 24px;
+}
+.footer .footPanel {
+  padding: 70px 0 160px;
+}
+.footer .footPanel .footBox .leftBox .logo {
+  width: 120px;
+}
+.footer .footPanel .footBox .rightBox ul {
+  display: flex;
+  gap: 0 30px;
+  margin: 0 0 30px;
+}
+.footer .footPanel .footBox .rightBox ul li a {
+  position: relative;
+  display: block;
+  font-size: 15px;
+}
+@media (min-width: 1025px) {
+  .footer .footPanel .footBox .rightBox ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #000000;
+    transition: width 0.3s ease;
+  }
+  .footer .footPanel .footBox .rightBox ul li a:hover {
+    opacity: 1;
+  }
+  .footer .footPanel .footBox .rightBox ul li a:hover::after {
+    width: 100%;
+  }
+}
+.footer .footPanel .footBox .rightBox .sns {
+  text-align: right;
+}
+.footer .footPanel .footBox .rightBox .sns .insta a {
+  display: inline-block;
+  padding: 3px 0 3px 40px;
+  font-size: 15px;
+  background: url("../image/common/footer_instagram.png") left center no-repeat;
+  background-size: 30px auto;
+}
+@media (min-width: 1025px) {
+  .footer .footPanel .footBox {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.footer .footPanel .txt {
+  font-size: 14px;
+}
+.footer .footPanel .txt p + p {
+  margin: 10px 0 0;
+}
+.footer .footBottom {
+  padding: 5px 0;
+  font-size: 12px;
+  color: #ffffff;
+  background: #767676;
+}
+.footer .footBottom ul li {
+  display: inline-block;
+}
+.footer .footBottom ul li + li {
+  margin: 0 0 0 15px;
+}
+.footer .footBottom ul li a {
+  display: inline-block;
+  color: #ffffff;
+}
+@media (min-width: 1025px) {
+  .footer .footBottom .secWrap01 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* --------------------------------------------------
+	fadeAnimation
+-------------------------------------------------- */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  /* 背景カラー */
+  z-index: 9999;
+  /* 一番手前に */
+  pointer-events: none;
+  /* 他の要素にアクセス可能にするためにポインターイベントは無効に */
+  opacity: 0;
+  /* 初期値では非表示 */
+  -webkit-transition: opacity 0.8s ease;
+  /* アニメーション時間は 0.8秒 */
+  -ms-transition: opacity 0.8s ease;
+  -moz-transition: opacity 0.8s ease;
+  transition: opacity 0.8s ease;
+}
+
+/*body要素に.fadeoutセレクタがある場合には、レイヤーが表示されるようにopacityを１に設定します。*/
+body.fadeout::after {
+  opacity: 1;
+}
+
+/*お好みで、.fadeoutセレクタ以下の他の要素にもアニメーション用のCSSを定義します*/
+/*DEMOではページ遷移時にarticle要素のスケールもアニメーションさせています*/
+body.fadeout article {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}

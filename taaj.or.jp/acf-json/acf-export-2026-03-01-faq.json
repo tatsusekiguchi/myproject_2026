@@ -1,0 +1,202 @@
+[
+  {
+    "key": "group_faq",
+    "title": "よくあるご質問",
+    "fields": [
+      {
+        "key": "field_faq_section_01",
+        "label": "大会や研修の参加について",
+        "name": "faq_section_01",
+        "type": "repeater",
+        "instructions": "「大会や研修の参加について」のFAQを登録してください。",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "collapsed": "field_faq_01_question",
+        "min": 0,
+        "max": 0,
+        "layout": "block",
+        "button_label": "FAQを追加",
+        "sub_fields": [
+          {
+            "key": "field_faq_01_question",
+            "label": "質問",
+            "name": "faq_01_question",
+            "type": "text",
+            "instructions": "質問内容を入力してください。",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "placeholder": "例：どのような会社ですか？",
+            "prepend": "",
+            "append": "",
+            "maxlength": 200
+          },
+          {
+            "key": "field_faq_01_answer",
+            "label": "回答",
+            "name": "faq_01_answer",
+            "type": "textarea",
+            "instructions": "回答内容を入力してください。",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "placeholder": "質問に対する詳細な回答を記載してください。",
+            "maxlength": "",
+            "rows": 6,
+            "new_lines": ""
+          }
+        ]
+      },
+      {
+        "key": "field_faq_section_02",
+        "label": "入会と情報について",
+        "name": "faq_section_02",
+        "type": "repeater",
+        "instructions": "「入会と情報について」のFAQを登録してください。",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "collapsed": "field_faq_02_question",
+        "min": 0,
+        "max": 0,
+        "layout": "block",
+        "button_label": "FAQを追加",
+        "sub_fields": [
+          {
+            "key": "field_faq_02_question",
+            "label": "質問",
+            "name": "faq_02_question",
+            "type": "text",
+            "instructions": "質問内容を入力してください。",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "placeholder": "例：見積もりは無料ですか？",
+            "prepend": "",
+            "append": "",
+            "maxlength": 200
+          },
+          {
+            "key": "field_faq_02_answer",
+            "label": "回答",
+            "name": "faq_02_answer",
+            "type": "textarea",
+            "instructions": "回答内容を入力してください。",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "placeholder": "質問に対する詳細な回答を記載してください。",
+            "maxlength": "",
+            "rows": 6,
+            "new_lines": ""
+          }
+        ]
+      },
+      {
+        "key": "field_faq_section_03",
+        "label": "トレーニングと資格取得について",
+        "name": "faq_section_03",
+        "type": "repeater",
+        "instructions": "「トレーニングと資格取得について」のFAQを登録してください。",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "collapsed": "field_faq_03_question",
+        "min": 0,
+        "max": 0,
+        "layout": "block",
+        "button_label": "FAQを追加",
+        "sub_fields": [
+          {
+            "key": "field_faq_03_question",
+            "label": "質問",
+            "name": "faq_03_question",
+            "type": "text",
+            "instructions": "質問内容を入力してください。",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "placeholder": "例：工事期間はどのくらいかかりますか？",
+            "prepend": "",
+            "append": "",
+            "maxlength": 200
+          },
+          {
+            "key": "field_faq_03_answer",
+            "label": "回答",
+            "name": "faq_03_answer",
+            "type": "textarea",
+            "instructions": "回答内容を入力してください。",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "placeholder": "質問に対する詳細な回答を記載してください。",
+            "maxlength": "",
+            "rows": 6,
+            "new_lines": ""
+          }
+        ]
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "page_template",
+          "operator": "==",
+          "value": "faq/index.php"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "よくあるご質問を管理するためのフィールドグループです。"
+  }
+]

@@ -1,0 +1,1053 @@
+@charset "UTF-8";
+@import "./mixin";
+@import "./mod";
+/* CSS Document */
+
+/*===================================================
+	画面用CSS（PC/SMP）
+===================================================*/
+
+/*////////////////////////////////////////////////////////////
+	TOP
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .topMain {
+    .loadingContainer {
+      .loadingLogo {
+        width: 100%;
+        max-width: 250px;
+      }
+    }
+    .topKvContainer {
+      padding: 0;
+      &:before {
+        height: 150px;
+      }
+      .topKvPanel {
+        height: 350px;
+        .kvTitleBox {
+          position: absolute;
+          top: 40%;
+          left: 20px;
+          right: 0;
+          padding: 0 20px;
+          h1 {
+            font-size: 24px;
+          }
+        }
+      }
+      .kvText {
+        padding: 25px 20px;
+        color: #ffffff;
+        text-align: center;
+      }
+    }
+    .sec01 {
+      padding: 60px 0;
+      .secContainer {
+        .secTtl {
+          margin: 0 0 40px;
+          padding: 0 20px;
+          font-size: 20px;
+        }
+        .txtBox {
+          .txt {
+            font-size: 16px;
+            line-height: 2;
+            + .txt {
+              margin: 20px 0 0;
+            }
+          }
+        }
+      }
+    }
+    .sec02 {
+      padding: 60px 0;
+      .secTtlBox {
+        margin: 0 0 40px;
+        .sub {
+          font-size: 16px;
+        }
+        .secTtl {
+          font-size: 20px;
+        }
+      }
+      .linkPanelList {
+        margin: 20px 0 0;
+      }
+      .linkPanel {
+        + .linkPanel {
+          margin: 20px 0 0;
+        }
+        a {
+          padding: 20px;
+          background: url("https://sit-321391.sibloo.com/system_panel/uploads/images/top_sec02_list_arrow.png")
+            right 6px bottom 6px no-repeat #5e8a68;
+          background-size: 15px auto;
+        }
+        .linkBox {
+          .inner {
+          }
+          .dl {
+            padding: 30px 15px;
+            .dt {
+              margin: 0 0 15px;
+              .em {
+                font-size: 20px;
+              }
+            }
+            .dd {
+              .more {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: -10px;
+                width: 120px;
+                margin: 0 auto;
+              }
+              .en {
+                position: absolute;
+                right: 20px;
+                bottom: -10px;
+                font-size: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .sec03 {
+      padding: 60px 0;
+      .secTtlBox {
+        text-align: center;
+        .sub {
+          font-size: 16px;
+        }
+        .secTtl {
+          font-size: 20px;
+        }
+      }
+      .topTxt {
+        margin: 0 0 30px;
+        text-align: center;
+      }
+      .listBox {
+        .ul {
+          .li {
+            + .li {
+              margin: 20px 0 0;
+            }
+            a {
+              background: url("https://sit-321391.sibloo.com/system_panel/uploads/images/top_sec03_list_arrow.png")
+                right 10px bottom 10px no-repeat #f7f9f4;
+              background-size: 20px auto;
+            }
+            .dl {
+              padding: 20px 0 10px;
+              .dt {
+                padding: 0 0 10px;
+                .span {
+                  max-width: 180px;
+                  margin: 0 auto 10px;
+                  padding: 2px 10px;
+                  font-size: 13px;
+                }
+                .em {
+                  font-size: 20px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .sec04 {
+      a {
+        padding: 100px 0;
+        height: auto;
+      }
+      .secTtlBox {
+        margin: 0 0 40px;
+        .sub {
+          font-size: 16px;
+        }
+        .secTtl {
+          font-size: 20px;
+        }
+      }
+      .ttl {
+        margin: 0 0 25px;
+        font-size: 20px;
+      }
+    }
+    .instaSec {
+      margin: -30px 0 0;
+      padding: 60px 0;
+      .secTtlBox {
+        margin: 0 0 40px;
+        .sub {
+          font-size: 16px;
+        }
+        .secTtl {
+          font-size: 20px;
+        }
+      }
+      .instaPanel {
+        .instaList {
+          .webgene-blog {
+            .webgene-item {
+              width: calc((100% / 2) - 5px);
+            }
+          }
+        }
+        .moreBox {
+          margin: 20px auto 0;
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	about
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .aboutMain {
+    .sec01 {
+      .secContainer01 {
+        padding: 60px 0 100px;
+        .dl {
+          .dt {
+            margin: 0 0 25px;
+            font-size: 20px;
+          }
+          .dd {
+            .txt {
+              line-height: 2.5;
+              p + p {
+                margin: 15px 0 0;
+              }
+            }
+          }
+        }
+      }
+      .secContainer02 {
+        padding: 0 0 60px;
+        &::before {
+          height: calc(100% - 100px);
+        }
+        .mvPanel {
+          margin: 0 0 50px;
+          padding: 80px 0;
+          .secBox {
+            width: 96%;
+            padding: 40px 20px;
+            .pageSecTtlBox {
+              margin: 0 0 30px;
+            }
+          }
+        }
+        .listBox {
+          .ul {
+            .li {
+              padding: 20px;
+              + .li {
+                margin: 20px 0 0;
+              }
+            }
+            .icon {
+              width: 60px;
+              margin: 0 auto 15px;
+            }
+            .dl {
+              .dt {
+                margin: 0 0 15px;
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .sec02 {
+      margin: -30px 0 0;
+      padding: 60px 0;
+      background: url("https://sit-321391.sibloo.com/system_panel/uploads/images/about_sec02_bg.png")
+        center top no-repeat;
+      background-size: cover;
+      .topTtl {
+        margin: 0 0 40px;
+        font-size: 20px;
+      }
+      .txtBox {
+        .txt {
+          + .txt {
+            margin: 20px 0 0;
+          }
+          > p {
+            + p {
+              margin: 20px 0 0;
+            }
+          }
+          .message {
+            font-size: 18px;
+          }
+        }
+      }
+      .logo {
+        position: absolute;
+        right: 20px;
+        bottom: 30px;
+        width: 40%;
+        max-width: 400px;
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	history
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .historyMain {
+    .sec01 {
+      padding: 60px 0;
+      .topTtl {
+        margin: 0 0 40px;
+        font-size: 18px;
+      }
+      .historyRingsContainer {
+        display: flex;
+        flex-direction: column;
+        .historyRingsMain {
+          display: contents;
+        }
+        .historyRingWrap {
+          order: 1;
+          width: 260px;
+          margin: 0 auto;
+        }
+        .historyYearLabel {
+          display: none;
+        }
+        .historyRingsHint {
+          order: 2;
+          display: block;
+          margin: 4px 0 8px;
+          color: #9a9490;
+          font-size: 10px;
+          letter-spacing: 0.04em;
+          text-align: center;
+        }
+        .historyTimeline {
+          order: 3;
+          margin: 0;
+        }
+        .historyTimeline::before {
+          top: 5px;
+          left: 5%;
+          right: 5%;
+        }
+        .historyTimelineItem {
+          gap: 5px;
+        }
+        .historyTimelineDot {
+          width: 10px;
+          height: 10px;
+        }
+        .historyTimelineYear {
+          font-size: 9px;
+        }
+        .historyCards {
+          order: 4;
+          min-height: 0;
+          margin: 16px 0 0;
+          padding: 16px;
+          border: 1px solid #d8d0c4;
+          border-radius: 10px;
+          background: #fdfbf8;
+        }
+        .historyCardYear {
+          margin-bottom: 8px;
+          padding: 3px 9px;
+          font-size: 9px;
+        }
+        .historyCardTitle {
+          margin-bottom: 8px;
+          font-family: "Hiragino Mincho ProN", serif;
+          font-size: 15px;
+        }
+        .historyCardBody {
+          margin-bottom: 10px;
+          font-size: 11px;
+          line-height: 1.8;
+        }
+        .historyCardQuote {
+          margin-bottom: 8px;
+          padding: 8px 10px;
+          border-left-width: 2px;
+        }
+        .historyCardQuote p {
+          font-size: 10px;
+          line-height: 1.75;
+        }
+        .historyCardStat {
+          font-size: 10px;
+        }
+      }
+    }
+    .sec02 {
+      padding: 60px 0;
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	service
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .serviceMain {
+    .topSection {
+      padding: 60px 0;
+      text-align: center;
+      .logoDuskin {
+        width: 100px;
+        margin: 0 auto 10px;
+      }
+      .logoCompany {
+        width: 50px;
+        margin: 0 auto 10px;
+      }
+      .topTtl {
+        margin: 0 0 40px;
+        font-size: 20px;
+      }
+      .txt {
+        p + p {
+          margin: 20px 0 0;
+        }
+      }
+    }
+    .serviceSection {
+      padding: 0 0 60px;
+      .topTxt {
+        margin: 0 0 40px;
+      }
+      .secContainer {
+        + .secContainer {
+          margin: 60px 0 0;
+        }
+      }
+      .secPanel {
+        .photo {
+        }
+        .txtBox {
+          padding: 20px 0 0;
+          .ttl {
+            margin: 0 0 20px;
+            h3 {
+              padding: 0 20px;
+              font-size: 18px;
+            }
+          }
+          .extraBox {
+            margin: 15px 0 0;
+            padding: 15px 20px;
+            .dl {
+              .dt {
+                p {
+                  padding: 0 10px 0 0;
+                  font-size: 16px;
+                }
+              }
+              .dd {
+                line-height: 2;
+              }
+            }
+          }
+        }
+      }
+      .listPanel {
+        margin: 50px 0 0;
+        .ttl {
+          margin: 0 0 20px;
+          h3 {
+            padding: 0 20px 0 0;
+            font-size: 18px;
+          }
+        }
+        .listBox {
+          .ul {
+            .li {
+              + .li {
+                margin: 40px 0 0;
+              }
+              .dl {
+                padding: 15px 0 0;
+                .dt {
+                  margin: 0 0 15px;
+                  font-size: 16px;
+                }
+              }
+            }
+          }
+          @media (min-width: 1025px) {
+            .ul {
+              display: flex;
+              flex-wrap: wrap;
+              margin: -40px 0 0 -25px;
+              .li {
+                width: calc((100% / 3) - 25px);
+                margin: 40px 0 0 25px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .facilitySection {
+      padding: 60px 0;
+      .secContainer {
+        + .secContainer {
+          margin: 60px 0 0;
+        }
+      }
+      .secPanel01 {
+        .photo {
+          margin: 0 0 20px;
+        }
+        .txtBox {
+          margin: 0 0 20px;
+          .ttl {
+            margin: 0 0 15px;
+            h3 {
+              padding: 0 20px 0 0;
+              font-size: 18px;
+            }
+          }
+          .txt {
+            a {
+              display: inline-block;
+            }
+            .dl {
+              display: flex;
+            }
+          }
+        }
+      }
+      .secPanel02 {
+        margin: 50px auto 0;
+        .innerBox {
+          padding: 20px;
+        }
+        .pTtl {
+          margin: 0 0 15px;
+          h3 {
+            padding: 0 20px 0 0;
+            font-size: 18px;
+          }
+        }
+        .secBox {
+          .photoBox {
+            .profile {
+              margin: 15px 0 0;
+              padding: 15px;
+            }
+          }
+          .txtBox {
+            padding: 20px 0 0;
+            .messageTtl {
+              padding: 5px 15px;
+              font-size: 18px;
+            }
+            .txt {
+              padding: 15px 0 0;
+            }
+          }
+        }
+      }
+    }
+    .strengthSection {
+      padding: 60px 0;
+      .secBox01 {
+        margin: 0 0 50px;
+        h3 {
+          margin: 0 0 30px;
+          font-size: 20px;
+        }
+        .txt {
+          line-height: 2.5;
+          + .txt {
+            margin: 30px 0 0;
+          }
+        }
+      }
+      .secBox02 {
+        max-width: 600px;
+        margin: 0 auto;
+        .dl {
+          + .dl {
+            margin: 30px 0 0;
+          }
+          .dt {
+            margin: 0 0 10px;
+            padding: 0 0 5px;
+            font-size: 18px;
+            border-bottom: 1px solid #ffffff;
+          }
+          .dd {
+            line-height: 2.5;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	intro
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .introMain {
+    .sec01 {
+      padding: 60px 0;
+      .topPanel {
+        margin: 0 0 60px;
+        .secBox {
+          margin: 0 0 15px;
+          .photoBox {
+            margin: 0 0 20px;
+            .name {
+              position: absolute;
+              right: 0;
+              bottom: 30px;
+              width: 65%;
+              max-width: 250px;
+            }
+          }
+          .txtBox {
+            .ttlBox {
+              margin: 0 0 15px;
+              .ttl {
+                + .ttl {
+                  margin: 4px 0 0;
+                }
+                p {
+                  padding: 5px 15px;
+                  font-size: 18px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .secContainer {
+        .section {
+          + .section {
+            margin: 50px 0 0;
+          }
+          .photo {
+            margin: 0 0 20px;
+          }
+          .txtBox {
+            .headBox {
+              margin: 0 0 15px;
+              padding: 0 0 15px;
+              &:after {
+                width: 80px;
+              }
+              .topTtl {
+                margin: 0 0 10px;
+                font-size: 18px;
+              }
+            }
+            .bodyBox {
+              .txt {
+                line-height: 2.5;
+              }
+            }
+          }
+        }
+      }
+    }
+    .sec02 {
+      padding: 60px 0;
+      .flowList {
+        .flowBox {
+          &:before {
+            content: "";
+            position: absolute;
+            top: 7px;
+            left: 90px;
+            width: 1px;
+            height: calc(100% - 8px);
+            background: #ffffff;
+          }
+          .left {
+            width: 90px;
+            &:after {
+              content: "";
+              position: absolute;
+              top: 5px;
+              right: -6px;
+              width: 10px;
+              height: 10px;
+              border-radius: 50%;
+              background: #ffffff;
+            }
+            p {
+              font-size: 16px;
+            }
+          }
+          .right {
+            width: calc(100% - 120px);
+            padding: 0 0 35px;
+            .dl {
+              .dt {
+                font-size: 16px;
+              }
+              .dd {
+                padding: 10px 0 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	recruit
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .recruitMain {
+    .topSection {
+      padding: 60px 0;
+      .secTtl {
+        margin: 0 0 20px;
+        font-size: 20px;
+      }
+    }
+    .sec01 {
+      padding: 0 0 60px;
+      &:before {
+        height: calc(100% - 100px);
+      }
+      .topPhoto {
+        margin: 0 auto 60px;
+      }
+      .topTxt {
+        margin: 0 0 50px;
+        p + p {
+          margin: 20px 0 0;
+        }
+      }
+      .chartPanel {
+        max-width: 400px;
+        .chartBoxList {
+          .chartBox {
+            padding: 25px 15px;
+            + .chartBox {
+              margin: 20px 0 0;
+            }
+            .inner {
+              padding: 20px 5px;
+            }
+            .dl {
+              .dt {
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .sec02 {
+      padding: 60px 0;
+      .secContainer {
+        padding: 30px 20px;
+        .dl {
+          margin: 0 0 20px;
+          .dt {
+            margin: 0 0 10px;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	company
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .companyMain {
+    .sec01 {
+      padding: 60px 0;
+      .dataListBox {
+        .ul {
+          display: block;
+          .li {
+            width: 100%;
+            height: 150px;
+            + .li {
+              margin-top: 20px;
+            }
+            .dl {
+              .dt {
+                width: 224px;
+                max-width: 65%;
+                height: 101px;
+                padding: 20px 0 0 20px;
+                font-size: 18px;
+              }
+              .dd {
+                padding-top: 52px;
+                .em {
+                  font-size: 42px;
+                }
+                .span {
+                  font-size: 19px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .sec02 {
+      .infoBox {
+        margin: 0 0 60px;
+        .dl {
+          .dt {
+            padding: 5px 10px;
+          }
+          .dd {
+            padding: 5px 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	contact
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .contactMain {
+    .sec01 {
+      padding: 60px 0;
+      .topBox {
+        margin: 0 0 40px;
+        .topTtl {
+          margin: 0 0 15px;
+          h3 {
+            padding: 0 20px 0 0;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	form
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .formMain {
+    .contactForm {
+      .form {
+        .checkList {
+          .ul {
+            padding: 0;
+          }
+        }
+      }
+      .formBox {
+        + .formBox {
+          margin-top: 40px;
+        }
+
+        > .dl {
+          display: block;
+          width: 100%;
+          padding: 10px;
+          &::before {
+            display: none;
+          }
+          &.line {
+            .dt {
+              padding: 10px;
+            }
+          }
+
+          > .dt {
+            display: block;
+            width: 100%;
+            margin: 0;
+            padding: 10px;
+
+            .span {
+              width: auto;
+              min-width: 0;
+              margin-right: 10px;
+              padding: 0;
+              font-size: 16px;
+              text-align: left;
+
+              br {
+                display: none;
+              }
+            }
+
+            .em {
+              font-size: 12px;
+              vertical-align: middle;
+            }
+
+            .aside {
+              margin-top: 5px;
+
+              p {
+                font-size: 12px;
+
+                br {
+                  display: none;
+                }
+              }
+            }
+          }
+
+          > .dd {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border-bottom: none;
+          }
+        }
+        .radioBox {
+          padding: 5px 0;
+        }
+        .radioList01 {
+          .list {
+            display: block;
+            margin: 0;
+            + .list {
+              margin: 5px 0 0;
+            }
+          }
+        }
+
+        .checkList01 {
+          .ul {
+            .li {
+              display: block;
+              + .li {
+                margin: 10px 0 0;
+              }
+            }
+          }
+          .checkItem {
+            display: inline-block;
+            padding: 0 5px 0 0;
+            + input {
+              display: inline-block;
+              width: 150px;
+            }
+          }
+        }
+
+        .addressBox,
+        .dateBox {
+          .dl {
+            display: block;
+
+            .dt {
+              display: block;
+              width: 100%;
+            }
+
+            .dd {
+              display: block;
+            }
+          }
+        }
+
+        .datePanel {
+          display: block;
+          font-size: 14px;
+          + .datePanel {
+            margin: 20px 0 0;
+          }
+          > * {
+            padding: 0 0 5px;
+          }
+          input {
+            width: 60px;
+          }
+          .selectBox {
+            width: 60px;
+          }
+          .dateTtl {
+            margin: 0 10px 0 0;
+          }
+          .dateTxt {
+            margin: 0 5px;
+          }
+        }
+
+        .dateBox {
+          input[type="text"] {
+            width: 70px;
+          }
+
+          .radioList {
+            display: block;
+            margin: 10px 0 0;
+          }
+        }
+
+        .selectBox {
+          width: 180px;
+        }
+
+        .privacy {
+          .agreeBox {
+            height: 250px;
+            padding: 20px 10px;
+          }
+        }
+      }
+      .fileUploadBox {
+        display: block;
+        .fileBox {
+          width: 100%;
+        }
+        .fileArea {
+          display: block;
+          .inputFile {
+            width: 200px;
+          }
+          > p,
+          .fileTxt {
+            width: 100%;
+            margin: 10px 0 0;
+          }
+        }
+      }
+      .fileUploadTitleBox {
+        margin: 40px 0 20px;
+        .fileUploadTitle {
+          p {
+            padding: 0 15px 0 0;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}

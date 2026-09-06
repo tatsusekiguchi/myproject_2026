@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<!-- css-->
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/slick.css">
+	<link rel="stylesheet" href="../css/slick-theme.css">
+	<link rel="stylesheet" href="../css/validationEngine.css">
+	<link rel="stylesheet" href="../css/animate.css">
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/layout.css">
+	<link rel="stylesheet" media="screen and (max-width: 1139px)" type="text/css" href="../css/common_sp.css">
+	<link rel="stylesheet" media="screen and (max-width: 1139px)" type="text/css" href="../css/layout_sp.css">
+	<link rel="stylesheet" href="../css/attach.css">
+	<!-- js-->
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+	<script src="../js/jquery-1.11.3.min.js"></script>
+	<script src="../js/slick.min.js"></script>
+	<script src="../js/infiniteslide.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/scrollAnimation.js"></script>
+	<script src="../js/gsapAnimation.js"></script>
+	<script src="../js/validate.js"></script>
+	<script src="../js/validateJa.js"></script>
+	<script src="../js/jpostal.js"></script>
+	<script src="../js/autokana.js"></script>
+	<script src="../js/formContact.js"></script>
+	<script>
+		(function(d) {
+			var config = {
+					kitId: 'zmp5pxk',
+					scriptTimeout: 3000,
+					async: true
+				},
+				h = d.documentElement,
+				t = setTimeout(function() {
+					h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+				}, config.scriptTimeout),
+				tk = d.createElement("script"),
+				f = false,
+				s = d.getElementsByTagName("script")[0],
+				a;
+			h.className += " wf-loading";
+			tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+			tk.async = true;
+			tk.onload = tk.onreadystatechange = function() {
+				a = this.readyState;
+				if (f || a && a != "complete" && a != "loaded") return;
+				f = true;
+				clearTimeout(t);
+				try {
+					Typekit.load(config)
+				} catch (e) {}
+			};
+			s.parentNode.insertBefore(tk, s)
+		})(document);
+	</script>
+	<!-- title-->
+	<title></title>
+</head>
+
+<body class="page" id="entry">
+	<!-- ▽header▽-->
+	<header class="header">
+		<div class="logo"><a href=""><img class="logoWhite" src="../image/common/header_logo_white.png" alt=""><img class="logoBlack" src="../image/common/header_logo_black.png" alt=""></a></div>
+		<div class="headItemBox">
+			<div class="headItem">
+				<ul>
+					<li><a href="">お問い合わせ</a></li>
+					<li><a href="">応募する</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="hamburgerBox">
+			<div class="hamburger"><span class="top"></span>
+				<p>MENU</p><span class="bottom"></span>
+			</div>
+		</div>
+		<div class="navBox">
+			<div class="navPanel">
+				<div class="navList">
+					<ul>
+						<li><a href="#">TOP</a></li>
+						<li><a href="#section__concept">CONCEPT</a></li>
+						<li><a href="#section__news">WHAT’S NEW</a></li>
+						<li><a href="#section__features">FEATURES</a></li>
+						<li class="line"><a href="#section__require">WHO WE’RE LOOKING FOR</a></li>
+						<li><a href="#section__requirements">REQUIREMENTS</a></li>
+						<li><a href="#section__info">SALON LIST</a></li>
+					</ul>
+				</div>
+				<div class="navMessage">
+					<p>We shine a light on each individual’s unique<br>sensibility and become a driving force that leads<br>them toward their next self.</p>
+				</div>
+				<div class="snsBox">
+					<ul>
+						<li><a href="https://www.instagram.com/noema.hair/" target="_blank" rel="noopener"><img src="../image/common/icon_instagram.png" alt=""></a></li>
+						<li><a href="#" target="_blank" rel="noopener"><img src="../image/common/icon_line.png" alt=""></a></li>
+						<li><a href="#" target="_blank" rel="noopener"><img src="../image/common/icon_twitter.png" alt=""></a></li>
+					</ul>
+					<div class="navLogo"><img src="../image/common/nav_logo.png" alt=""></div>
+				</div>
+				<div class="photo"><img src="../image/common/nav_photo.png" alt=""></div>
+			</div>
+		</div>
+		<div class="fixedSpBottomNav">
+			<ul>
+				<li><a href="">お問い合わせ</a></li>
+				<li><a href="">応募する</a></li>
+			</ul>
+		</div>
+	</header>
+	<!-- △header△-->
+	<!-- ▽メイン▽-->
+	<main class="pageMain formPage" id="contact">
+		<div class="pageMainContainer">
+			<div class="pageTitleContainer">
+				<div class="pageTtlBox">
+					<div class="sub">
+						<p>ENTRY</p>
+					</div>
+					<div class="secTtl">
+						<h1>応募する</h1>
+					</div>
+				</div>
+			</div>
+			<div id="section__contact">
+				<div class="topBox">
+					<dl>
+						<dt>ご応募は以下の方法より<br class="spBreak">受け付けております。</dt>
+						<dd>
+							<p>InstagramのDMまたは下記エントリーフォームからご応募いただけます。<br>まずはお気軽にご連絡ください。</p>
+						</dd>
+					</dl>
+					<div class="btnInsta"><a href="https://www.instagram.com/noema.hair/" target="_blank" rel="noopener">
+							<div class="inner"><img src="../image/form/entry_insta.png" alt=""><span>Instagramからご応募</span></div>
+						</a></div>
+				</div>
+				<div class="formBox">
+					<form id="contactForm">
+						<dl class="radioForm">
+							<dt>項目*</dt>
+							<dd>
+								<div class="itemCheckPanel">
+									<div class="itemCheck">
+										<div class="itemCheck">
+											<span class="mwform-checkbox-field horizontal-item">
+												<label>
+													<input type="checkbox" name="itemCheck[data][]" value="サロンについて">
+													<span class="mwform-checkbox-field-text">サロンについて</span>
+												</label>
+											</span>
+											<span class="mwform-checkbox-field horizontal-item">
+												<label>
+													<input type="checkbox" name="itemCheck[data][]" value="掲載について">
+													<span class="mwform-checkbox-field-text">掲載について</span>
+												</label>
+											</span>
+											<span class="mwform-checkbox-field horizontal-item">
+												<label>
+													<input type="checkbox" name="itemCheck[data][]" value="その他">
+													<span class="mwform-checkbox-field-text">その他</span>
+												</label>
+											</span>
+										</div>
+									</div>
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt>お名前*</dt>
+							<dd>
+								<div class="inputBox">
+									<input type="text" placeholder="お名前">
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt>フリガナ*</dt>
+							<dd>
+								<div class="inputBox">
+									<input type="text" placeholder="フリガナ">
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt>性別*</dt>
+							<dd>
+								<div class="radioArea">
+									<p>
+										<span class="mwform-radio-field horizontal-item">
+											<label>
+												<input type="radio" name="radio_content" value="男性">
+												<span class="mwform-radio-field-text">男性</span>
+											</label>
+										</span>
+										<span class="mwform-radio-field horizontal-item">
+											<label>
+												<input type="radio" name="radio_content" value="女性">
+												<span class="mwform-radio-field-text">女性</span>
+											</label>
+										</span>
+										<span class="mwform-radio-field horizontal-item">
+											<label>
+												<input type="radio" name="radio_content" value="無回答">
+												<span class="mwform-radio-field-text">無回答</span>
+											</label>
+										</span>
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt>生年月日</dt>
+							<dd>
+								<div class="birthBox">
+									<ul>
+										<li>
+											<input type="text" placeholder="YYYY">
+										</li>
+										<li>
+											<input type="text" placeholder="MM">
+										</li>
+										<li>
+											<input type="text" placeholder="DD">
+										</li>
+									</ul>
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt>メールアドレス*</dt>
+							<dd>
+								<div class="inputBox">
+									<input type="email" placeholder="メールアドレス">
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt>電話番号*</dt>
+							<dd>
+								<div class="inputBox">
+									<input type="text" placeholder="電話番号">
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt>ご住所</dt>
+							<dd>
+								<div class="inputBox">
+									<input type="text" placeholder="ご住所">
+								</div>
+							</dd>
+						</dl>
+						<dl class="msg">
+							<dt>備考</dt>
+							<dd>
+								<div class="inputBox">
+									<textarea placeholder="備考"></textarea>
+								</div>
+								<div class="checkItem agreeCheck">
+									<label>
+										<span class="mwform-checkbox-field horizontal-item">
+											<label>
+												<input type="checkbox" name="agreeCheck[data][]" value="個人情報の取り扱い">
+												<span class="mwform-checkbox-field-text">個人情報の取り扱い</span>
+											</label>
+										</span>
+										<input type="hidden" name="agreeCheck[separator]" value=",">
+										<input type="hidden" name="__children[agreeCheck][]" value="{&quot;\u500b\u4eba\u60c5\u5831\u306e\u53d6\u308a\u6271\u3044&quot;:&quot;\u500b\u4eba\u60c5\u5831\u306e\u53d6\u308a\u6271\u3044&quot;}">
+									</label>
+									<span>個人情報の取り扱いについて同意する</span>
+								</div>
+								<div class="submitButton confirmButton"><input type="submit" value="確認" class="wpcf7-form-control has-spinner wpcf7-submit" /></div>
+							</dd>
+						</dl>
+					</form>
+				</div>
+			</div>
+		</div>
+	</main>
+	<!-- △メイン△-->
+	<!-- ▽footer▽-->
+	<footer class="footer">
+		<div class="logo"><img src="../image/common/footer_logo.png" alt=""></div>
+		<div class="footBox01">
+			<div class="photo"><img src="../image/common/footer_photo.png" alt=""></div>
+			<div class="footNav">
+				<ul>
+					<li><a href="#">TOP</a></li>
+					<li><a href="#section__concept">CONCEPT</a></li>
+					<li><a href="#section__news">WHAT’S NEW</a></li>
+					<li><a href="#section__features">FEATURES</a></li>
+					<li class="line"><a href="#section__require">WHO WE’RE LOOKING FOR</a></li>
+					<li><a href="#section__requirements">REQUIREMENTS</a></li>
+					<li><a href="#section__info">SALON LIST</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="footBox02">
+			<dl>
+				<dt>Sensitivity and Essence</dt>
+				<dd>We shine a light on each individual’s unique sensibility and<br>become a driving force that leads them toward their next self.</dd>
+			</dl>
+			<div class="snsBox">
+				<ul>
+					<li><a href="https://www.instagram.com/noema.hair/" target="_blank" rel="noopener"><img src="../image/common/icon_instagram.png" alt=""></a></li>
+					<li><a href="#" target="_blank" rel="noopener"><img src="../image/common/icon_line.png" alt=""></a></li>
+					<li><a href="#" target="_blank" rel="noopener"><img src="../image/common/icon_twitter.png" alt=""></a></li>
+				</ul>
+			</div>
+			<div class="bottomBox">
+				<div class="copy">
+					<p>Copyright &copy; NOEMA Ltd all rights reserved.</p>
+				</div>
+				<div class="policy"><a href="">プライバシーポリシー</a></div>
+			</div>
+		</div>
+	</footer>
+	<!-- △footer△-->
+</body>
+
+</html>

@@ -1,0 +1,865 @@
+<div class="l-main product_list">
+  <style>
+    /* 商品選択用チェックボックス */
+    .c-item-list__checkbox {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
+
+    .c-item-list__checkbox label {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      margin: 0;
+    }
+
+    .c-item-list__checkbox input[type="checkbox"] {
+      margin-right: 5px;
+      cursor: pointer;
+    }
+
+    .checkbox-label {
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    /* 商品数量入力 */
+    .c-item-list__quantity {
+      margin-top: 10px;
+      padding: 10px;
+      background: #f5f5f5;
+      border-radius: 4px;
+    }
+
+    .c-item-list__quantity label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+    }
+
+    .product-quantity {
+      width: 60px;
+      padding: 5px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      text-align: center;
+    }
+
+    .product-quantity:disabled {
+      background: #e0e0e0;
+      cursor: not-allowed;
+    }
+
+    /* 選択商品カート追加エリア */
+    .p-multi-cart-action {
+      margin: 30px 0;
+      padding: 20px;
+      background: #f9f9f9;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .p-multi-cart-action .c-btn-cart {
+      padding: 15px 30px;
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .p-multi-cart-action .c-btn-cart:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .selected-count {
+      font-size: 14px;
+      color: #666;
+      margin: 0;
+    }
+
+    .selected-count span {
+      font-weight: bold;
+      color: #333;
+      font-size: 18px;
+    }
+
+    /* 商品アイテムの位置調整 */
+    .c-item-list__item {
+      position: relative;
+    }
+
+    /* オプション選択エリア */
+    .c-item-list__options {
+      padding: 10px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    .c-item-list__options label {
+      margin: 0;
+    }
+
+    .product-option {
+      margin-top: 5px;
+    }
+  </style>
+  <!-- パンくずリスト -->
+  <div class="c-breadcrumbs u-container">
+    <ul class="c-breadcrumbs-list">
+      <li class="c-breadcrumbs-list__item">
+        <a href="<{$home_url}>"> ホーム </a>
+      </li>
+      <{if $smarty.get.mode != "grp"}> <{if $bid_name != ""}>
+      <li class="c-breadcrumbs-list__item">
+        <a href="<{$bid_link}>"> <{$bid_name}> </a>
+      </li>
+      <{/if}> <{if $sid_name != ""}>
+      <li class="c-breadcrumbs-list__item">
+        <a href="<{$sid_link}>"> <{$sid_name}> </a>
+      </li>
+      <{/if}> <{else}> <{section name=num loop=$group_breadcrumb}>
+      <li class="c-breadcrumbs-list__item">
+        <a href="<{$group_breadcrumb[num].link_url}>">
+          <{$group_breadcrumb[num].name}>
+        </a>
+      </li>
+      <{/section}> <{/if}>
+    </ul>
+  </div>
+  <!-- /.c-breadcrumbs -->
+  <!-- //パンくずリスト -->
+  <div class="l-contents-wrap u-container">
+    <!-- メインカラム -->
+    <div class="l-contents-main">
+      <h2 class="p-category__ttl">
+        <{if $sid_name != ""}> <{$sid_name}> <{elseif $bid_name != ""}>
+        <{$bid_name}> <{else}> 該当のカテゴリーがありません <{/if}>
+      </h2>
+      <!-- カテゴリー(大) フリースペース 1 -->
+      <{if $category_desc_1}>
+      <div class="p-category-free"><{$category_desc_1}></div>
+      <{/if}>
+      <!-- // カテゴリー(大) フリースペース 1 -->
+      <!-- カテゴリー(小) フリースペース 1 -->
+      <{if $subcategory_desc_1}>
+      <div class="p-category-free"><{$subcategory_desc_1}></div>
+      <{/if}>
+      <!-- // カテゴリー(小) フリースペース 1 -->
+      <!-- グループ フリースペース 1 -->
+      <{if $group_desc_1}>
+      <div class="p-category-free"><{$group_desc_1}></div>
+      <{/if}>
+      <!-- // グループ フリースペース 1 -->
+      <!-- 小カテゴリーリスト -->
+      <{if $subcategory_num != 0}>
+      <h3 class="u-visually-hidden">カテゴリー一覧</h3>
+      <ul class="p-category-list">
+        <{section name=num loop=$sub_category}>
+        <li class="p-category-list__item">
+          <a
+            class="p-category-list__link"
+            href="<{$sub_category[num].link_url}>"
+          >
+            <{if $sub_category[num].img_url != "" }>
+            <span class="p-category-list__img">
+              <img
+                src="<{$sub_category[num].img_url}>"
+                alt="<{$sub_category[num].name|escape:'html'}>"
+              />
+            </span>
+            <{/if}>
+            <span class="p-category-list__name">
+              <{$sub_category[num].name}>
+            </span>
+          </a>
+        </li>
+        <{/section}>
+      </ul>
+      <{/if}>
+      <!-- // 小カテゴリーリスト -->
+      <!-- 小グループリスト -->
+      <{if $subgroup_num != 0}>
+      <h3 class="u-visually-hidden">グループ一覧</h3>
+      <ul class="p-category-list">
+        <{section name=num loop=$sub_group}>
+        <li class="p-category-list__item">
+          <a class="p-category-list__link" href="<{$sub_group[num].link_url}>">
+            <{if $sub_group[num].img_url != "" }>
+            <span class="p-category-list__img">
+              <img src="<{$sub_group[num].img_url}>" />
+            </span>
+            <{/if}>
+            <span class="p-category-list__name">
+              <{$sub_group[num].name}>
+            </span>
+          </a>
+        </li>
+        <{/section}>
+      </ul>
+      <{/if}>
+      <!-- // 小グループリスト -->
+      <{if $productlist_num != 0}>
+      <!-- 複数商品カート追加 -->
+      <div class="p-item-list-head">
+        <div class="p-item-list-num">全<{$productlist_num}>商品</div>
+        <!-- ソート -->
+        <ul class="p-item-sort-list">
+          <li class="p-item-sort-list__item">
+            <{if $productlist_sort_now != ""}>
+            <a href="<{$productlist_sort_def}>">おすすめ順</a>
+            <{else}>
+            <span>おすすめ順</span>
+            <{/if}>
+          </li>
+          <li class="p-item-sort-list__item">
+            <{if $productlist_sort_now != "p"}>
+            <a href="<{$productlist_sort_price}>">価格順</a>
+            <{else}>
+            <span>価格順</span>
+            <{/if}>
+          </li>
+          <li class="p-item-sort-list__item">
+            <{if $productlist_sort_now != "n"}>
+            <a href="<{$productlist_sort_new}>">新着順</a>
+            <{else}>
+            <span>新着順</span>
+            <{/if}>
+          </li>
+        </ul>
+        <!-- // ソート -->
+      </div>
+      <!-- /.p-item-list-head -->
+      <!-- 商品リスト -->
+      <ul class="c-item-list">
+        <{section name=num loop=$productlist}>
+        <li class="c-item-list__item">
+          <{if !$productlist[num].soldout_flg}>
+          <!-- 商品選択チェックボックス -->
+          <div class="c-item-list__checkbox">
+            <label>
+              <input
+                type="checkbox"
+                class="product-checkbox"
+                data-product-id="<{$productlist[num].id}>"
+                data-product-name="<{$productlist[num].name|escape:'html'}>"
+                data-product-price="<{$productlist[num].price}>"
+              />
+              <span class="checkbox-label">選択</span>
+            </label>
+          </div>
+          <{/if}>
+          <div class="c-item-list__img u-img-scale">
+            <a href="<{$productlist[num].link_url}>">
+              <{if $productlist[num].img_url != ""}>
+              <img
+                src="<{$productlist[num].img_url}>"
+                alt="<{$productlist[num].name|escape:'html'}>"
+              />
+              <{else}>
+              <img
+                src="https://img.shop-pro.jp/tmpl_img/86/no-image.jpg"
+                alt="<{$productlist[num].name|escape:'html'}>"
+              />
+              <{/if}>
+            </a>
+          </div>
+          <div class="c-item-list__txt">
+            <div class="c-item-list__ttl">
+              <a href="<{$productlist[num].link_url}>">
+                <{$productlist[num].name}>
+              </a>
+            </div>
+            <{if !$productlist[num].soldout_flg}>
+            <div
+              class="c-item-list__price<{if $members_login_flg && $productlist[num].discount_flg}> is-discount<{/if}>"
+            >
+              <{* 販売価格（ログイン時は会員価格） *}>
+              <{$productlist[num].price}> <{*
+              割引率（ログイン時、通常販売価格と会員価格が異なる場合のみ） *}>
+              <{if $members_login_flg &&
+              $productlist[num].discount_flg}><{$productlist[num].discount_rate}>OFF<{/if}>
+            </div>
+            <{*
+            通常販売価格（ログイン時、通常販売価格と会員価格が異なる場合のみ）
+            *}> <{if $members_login_flg && $productlist[num].discount_flg}>
+            <div class="c-item-list__price is-strikethrough">
+              <{$productlist[num].regular_price}>
+            </div>
+            <{/if}> <{else}> <{* 売り切れの表記 *}>
+            <div class="c-item-list__price is-soldout">SOLD OUT</div>
+            <{/if}> <{* 簡易説明文 *}> <{if $productlist[num].s_expl != ""}>
+            <div class="c-item-list__expl"><{$productlist[num].s_expl}></div>
+            <{/if}>
+          </div>
+          <!-- 商品数量入力 -->
+          <{if !$productlist[num].soldout_flg}>
+          <div class="c-item-list__quantity">
+            <label>
+              数量:
+              <input
+                type="number"
+                class="product-quantity"
+                data-product-id="<{$productlist[num].id}>"
+                data-product-url="<{$productlist[num].link_url}>"
+                min="1"
+                value="1"
+                disabled
+              />
+            </label>
+          </div>
+          <!-- オプション選択（動的に読み込む） -->
+          <div
+            class="c-item-list__options"
+            data-product-id="<{$productlist[num].id}>"
+            style="margin-top: 10px; display: none"
+          >
+            <label>
+              オプション:
+              <select
+                class="product-option"
+                data-product-id="<{$productlist[num].id}>"
+              >
+                <option value="">読み込み中...</option>
+              </select>
+            </label>
+          </div>
+          <{/if}>
+        </li>
+        <{/section}>
+      </ul>
+      <!-- // 商品リスト -->
+
+      <!-- 選択商品をカートに追加ボタン -->
+      <div class="p-multi-cart-action">
+        <button
+          type="button"
+          id="add-selected-to-cart"
+          class="c-btn-cart"
+          disabled
+        >
+          <i class="c-icon-cart"></i>選択した商品をカートに入れる
+        </button>
+        <p class="selected-count">選択: <span id="selected-count">0</span>個</p>
+      </div>
+
+      <!-- ページャー -->
+      <{if $productlist_total_pages != 1}>
+      <div class="c-pager">
+        <div class="c-pager__total">
+          全<span><{$productlist_num}></span>商品中
+          <span><{$productlist_snum}> - <{$productlist_enum}></span>表示
+        </div>
+        <ul class="c-pager-list">
+          <li class="c-pager-list__item is-visible">
+            <{if $productlist_prev_page != ""}>
+            <a
+              href="<{$productlist_prev_page}>"
+              class="c-pager-list__link is-prev"
+            >
+              前へ
+            </a>
+            <{else}>
+            <span class="c-pager-list__link is-prev is-disabled"> 前へ </span>
+            <{/if}>
+          </li>
+          <{section name=pager start=$productlist_first_page
+          loop=$productlist_last_page+1}> <{if $smarty.section.pager.first &&
+          $smarty.section.pager.index > 1}>
+          <li class="c-pager-list__item">
+            <a href="<{$productlist_link_base}>" class="c-pager-list__link"
+              >1</a
+            >
+          </li>
+          <li class="c-pager-list__item">...</li>
+          <{/if}> <{if $smarty.section.pager.index ==
+          $productlist_current_page}>
+          <li class="c-pager-list__item is-visible">
+            <span class="c-pager-list__link is-disabled is-current">
+              <{$smarty.section.pager.index}>
+              <span class="c-pager-list__page">ページ目</span>
+            </span>
+          </li>
+          <{else}>
+          <li class="c-pager-list__item">
+            <a
+              href="<{$productlist_link_base}>&page=<{$smarty.section.pager.index}>"
+              class="c-pager-list__link"
+            >
+              <{$smarty.section.pager.index}>
+            </a>
+          </li>
+          <{/if}> <{if $smarty.section.pager.last && $smarty.section.pager.index
+          < $productlist_total_pages}>
+          <li class="c-pager-list__item">...</li>
+          <li class="c-pager-list__item">
+            <a
+              href="<{$productlist_link_base}>&page=<{$productlist_total_pages}>"
+              class="c-pager-list__link"
+            >
+              <{$productlist_total_pages}>
+            </a>
+          </li>
+          <{/if}> <{/section}>
+          <li class="c-pager-list__item is-visible">
+            <{if $productlist_next_page != ""}>
+            <a
+              href="<{$productlist_next_page}>"
+              class="c-pager-list__link is-next"
+            >
+              次へ
+            </a>
+            <{else}>
+            <span class="c-pager-list__link is-next is-disabled"> 次へ </span>
+            <{/if}>
+          </li>
+        </ul>
+      </div>
+      <!-- /.c-pager-list -->
+      <{/if}>
+      <!-- // ページャー -->
+      <!-- // 複数商品カート追加 -->
+      <{else}> <{if $subcategory_num == 0 && $subgroup_num == 0}>
+      <p class="c-not-found">該当する商品がありません</p>
+      <{/if}> <{/if}>
+      <!-- カテゴリー(大) フリースペース 2 -->
+      <{if $category_desc_2}>
+      <div class="p-category-free"><{$category_desc_2}></div>
+      <{/if}>
+      <!-- // カテゴリー(大) フリースペース 2 -->
+      <!-- カテゴリー(小) フリースペース 2 -->
+      <{if $subcategory_desc_2}>
+      <div class="p-category-free"><{$subcategory_desc_2}></div>
+      <{/if}>
+      <!-- // カテゴリー(小) フリースペース 2 -->
+      <!-- グループ フリースペース 2 -->
+      <{if $group_desc_2}>
+      <div class="p-category-free"><{$group_desc_2}></div>
+      <{/if}>
+      <!-- // グループ フリースペース 2 -->
+    </div>
+    <!-- サイドカラム -->
+    <div class="l-contents-side">
+      <!-- カテゴリーリスト -->
+      <{section name=num loop=$category}> <{if $smarty.section.num.first }>
+      <div class="l-side-navi">
+        <h3 class="l-side-navi__ttl">カテゴリー</h3>
+        <ul class="l-side-navi-list">
+          <{foreach from=$category item=cate name=cate}>
+          <li class="l-side-navi-list__item">
+            <{if $subcategory[$cate.bid]}>
+            <button class="l-side-navi-list__link js-toggle-btn">
+              <{$cate.name}>
+            </button>
+            <{else}>
+            <a href="<{$cate.link_url}>" class="l-side-navi-list__link is-link">
+              <{$cate.name}>
+            </a>
+            <{/if}> <{foreach from=$subcategory[$cate.bid] item=scate
+            name=scate}> <{if $smarty.foreach.scate.first}>
+            <ul class="l-side-navi-sub-list js-toggle-contents">
+              <li class="l-side-navi-sub-list__item">
+                <a href="<{$cate.link_url}>" class="l-side-navi-sub-list__link">
+                  全ての<{$cate.name}>
+                </a>
+              </li>
+              <{/if}>
+              <li class="l-side-navi-sub-list__item">
+                <a
+                  href="<{$scate.link_url}>"
+                  class="l-side-navi-sub-list__link"
+                >
+                  <{$scate.name}>
+                </a>
+              </li>
+              <{if $smarty.foreach.scate.last}>
+            </ul>
+            <{/if}> <{/foreach}>
+          </li>
+          <{/foreach}>
+        </ul>
+      </div>
+      <!-- /.l-side-navi -->
+      <{/if}> <{/section}>
+      <!-- // カテゴリーリスト -->
+      <!-- グループリスト -->
+      <{section name=num loop=$group}> <{if $smarty.section.num.first }>
+      <div class="l-side-navi">
+        <h3 class="l-side-navi__ttl">グループ</h3>
+        <ul class="l-side-navi-list">
+          <{/if}>
+          <li class="l-side-navi-list__item">
+            <a
+              href="<{$group[num].link_url}>"
+              class="l-side-navi-list__link is-link"
+            >
+              <{$group[num].name}>
+            </a>
+          </li>
+          <{if $smarty.section.num.last }>
+        </ul>
+      </div>
+      <!-- /.l-side-navi -->
+      <{/if}> <{/section}>
+      <!-- //グループリスト -->
+    </div>
+    <!-- /.l-contents-side -->
+  </div>
+  <!-- /.l-contents-wrap -->
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $(".js-toggle-btn").click(function () {
+      $(this).next(".js-toggle-contents").slideToggle(200, "swing");
+      $(this).toggleClass("is-on");
+    });
+
+    // カートに商品を追加する関数（POSTメソッド）
+    function submitToCart(product) {
+      // 動的にフォームを作成
+      var $form = $("<form>", {
+        method: "POST",
+        action: "https://nagasakiya.shop-pro.jp/cart/proxy/basket/items/add",
+      });
+
+      // 必須パラメータを追加
+      $form.append(
+        $("<input>", { type: "hidden", name: "product_id", value: product.pid })
+      );
+      $form.append(
+        $("<input>", {
+          type: "hidden",
+          name: "product_num",
+          value: product.product_num,
+        })
+      );
+      $form.append(
+        $("<input>", { type: "hidden", name: "shop_id", value: "PA01520616" })
+      );
+      $form.append(
+        $("<input>", {
+          type: "hidden",
+          name: "shop_domain",
+          value: "nagasakiya.shop-pro.jp",
+        })
+      );
+      $form.append(
+        $("<input>", { type: "hidden", name: "multi_add", value: "1" })
+      );
+
+      // オプションがある場合は追加
+      if (product.option1 && product.option1 !== "") {
+        $form.append(
+          $("<input>", {
+            type: "hidden",
+            name: "option1",
+            value: product.option1,
+          })
+        );
+      }
+
+      // リファレンストークンを追加
+      if (product.reference_token && product.reference_token !== "") {
+        $form.append(
+          $("<input>", {
+            type: "hidden",
+            name: "reference_token",
+            value: product.reference_token,
+          })
+        );
+      }
+
+      // ユーザーハッシュを追加
+      if (product.user_hash && product.user_hash !== "") {
+        $form.append(
+          $("<input>", {
+            type: "hidden",
+            name: "user_hash",
+            value: product.user_hash,
+          })
+        );
+      }
+
+      // メンバーハッシュを追加
+      if (product.members_hash && product.members_hash !== "") {
+        $form.append(
+          $("<input>", {
+            type: "hidden",
+            name: "members_hash",
+            value: product.members_hash,
+          })
+        );
+      }
+
+      // カート追加後の戻り先URL
+      var currentUrl = window.location.href.split("?")[0];
+      $form.append(
+        $("<input>", {
+          type: "hidden",
+          name: "back_url",
+          value: currentUrl + "?multi_add=1",
+        })
+      );
+
+      // フォームをbodyに追加して送信
+      $("body").append($form);
+      $form.submit();
+    }
+
+    // 複数商品カート追加の続き処理
+    // ページ読み込み時にセッションストレージをチェック
+    console.log("ページ読み込み - sessionStorage確認");
+    console.log(
+      "pendingCartItems:",
+      sessionStorage.getItem("pendingCartItems")
+    );
+    console.log("現在のURL:", window.location.href);
+
+    if (sessionStorage.getItem("pendingCartItems")) {
+      var pendingItems = JSON.parse(sessionStorage.getItem("pendingCartItems"));
+      var currentIndex = parseInt(sessionStorage.getItem("currentCartIndex"));
+      var totalItems = parseInt(sessionStorage.getItem("totalCartItems"));
+
+      console.log(
+        "保存データ検出 - currentIndex:",
+        currentIndex,
+        "totalItems:",
+        totalItems
+      );
+
+      // URLパラメータで multi_add=1 が付いている場合のみ処理
+      var urlParams = new URLSearchParams(window.location.search);
+      console.log("multi_add パラメータ:", urlParams.get("multi_add"));
+
+      if (urlParams.get("multi_add") === "1") {
+        currentIndex++;
+        console.log("次のインデックス:", currentIndex);
+
+        if (currentIndex < totalItems) {
+          // 次の商品を追加
+          sessionStorage.setItem("currentCartIndex", currentIndex.toString());
+          var nextProduct = pendingItems[currentIndex];
+          console.log("次の商品を追加:", nextProduct);
+
+          // POSTメソッドでカートに追加
+          setTimeout(function () {
+            submitToCart(nextProduct);
+          }, 500); // 少し待ってから送信
+        } else {
+          // すべて完了
+          console.log("全商品追加完了");
+          sessionStorage.removeItem("pendingCartItems");
+          sessionStorage.removeItem("currentCartIndex");
+          sessionStorage.removeItem("totalCartItems");
+          alert(totalItems + "個の商品をカートに追加しました");
+          // カートページへ遷移
+          window.location.href = "<{$cart_url}>";
+        }
+      } else {
+        console.log("multi_add パラメータがないため、継続処理をスキップ");
+      }
+    } else {
+      console.log("保存データなし");
+    }
+
+    // 複数商品カート機能
+    // チェックボックスの変更を監視
+    $(".product-checkbox").on("change", function () {
+      var $checkbox = $(this);
+      var productId = $checkbox.data("product-id");
+      var $quantityInput = $(
+        '.product-quantity[data-product-id="' + productId + '"]'
+      );
+      var $optionsDiv = $(
+        '.c-item-list__options[data-product-id="' + productId + '"]'
+      );
+
+      console.log("チェックボックス変更:", productId);
+      console.log("オプションDiv見つかった:", $optionsDiv.length);
+
+      if ($checkbox.is(":checked")) {
+        // チェックされた場合、数量入力を有効化
+        $quantityInput.prop("disabled", false);
+
+        // オプション情報を取得（まだ取得していない場合）
+        var $optionSelect = $optionsDiv.find(".product-option");
+        console.log("オプションセレクト見つかった:", $optionSelect.length);
+
+        if ($optionSelect.find("option").first().val() === "") {
+          console.log("オプション読み込み開始:", productId);
+          loadProductOptions(productId, $quantityInput.data("product-url"));
+        }
+
+        // オプション選択エリアを表示
+        $optionsDiv.css("display", "block");
+        console.log("オプション表示:", $optionsDiv.is(":visible"));
+      } else {
+        // チェックが外された場合、数量入力を無効化
+        $quantityInput.prop("disabled", true);
+        $optionsDiv.css("display", "none");
+      }
+
+      updateSelectedCount();
+      updateAddToCartButton();
+    });
+
+    // 商品詳細ページからオプション情報を取得
+    function loadProductOptions(productId, productUrl) {
+      var $optionSelect = $(
+        '.product-option[data-product-id="' + productId + '"]'
+      );
+
+      // URLが相対パスの場合は絶対URLに変換
+      var fullUrl = productUrl;
+      if (productUrl.indexOf("http") !== 0 && productUrl.indexOf("/") !== 0) {
+        // 相対パスの場合、現在のドメインを追加
+        fullUrl = window.location.origin + "/" + productUrl;
+      } else if (productUrl.indexOf("/") === 0) {
+        // /で始まる場合
+        fullUrl = window.location.origin + productUrl;
+      }
+
+      console.log("オプション取得URL:", fullUrl);
+
+      $.ajax({
+        url: fullUrl,
+        type: "GET",
+        dataType: "html",
+        success: function (html) {
+          console.log("商品ページ取得成功");
+          var $page = $(html);
+
+          // 商品詳細ページのオプションセレクトを探す（複数のセレクタを試す）
+          var $sourceOption = $page.find('select[name="opt[]"]').first();
+          if ($sourceOption.length === 0) {
+            $sourceOption = $page.find('select[name="option1"]').first();
+          }
+          if ($sourceOption.length === 0) {
+            $sourceOption = $page.find(".product_cart_select").first();
+          }
+
+          console.log("オプション要素見つかった:", $sourceOption.length);
+
+          if ($sourceOption.length > 0) {
+            // オプションがある場合、内容をコピー
+            var options = $sourceOption.find("option").clone();
+            $optionSelect.empty().append(options);
+            console.log("オプションコピー完了:", options.length + "個");
+          } else {
+            // オプションがない場合
+            $optionSelect.html('<option value="">オプションなし</option>');
+            console.log("オプションなし");
+          }
+
+          // リファレンストークンを取得して保存
+          var referenceToken = $page
+            .find('input[name="reference_token"]')
+            .val();
+          if (referenceToken) {
+            $optionSelect.attr("data-reference-token", referenceToken);
+            console.log("リファレンストークン取得:", referenceToken);
+          }
+
+          // user_hashとmembers_hashも取得
+          var userHash = $page.find('input[name="user_hash"]').val();
+          var membersHash = $page.find('input[name="members_hash"]').val();
+          if (userHash) {
+            $optionSelect.attr("data-user-hash", userHash);
+          }
+          if (membersHash) {
+            $optionSelect.attr("data-members-hash", membersHash);
+          }
+        },
+        error: function (xhr, status, error) {
+          console.error("オプション読み込みエラー:", error);
+          $optionSelect.html(
+            '<option value="">オプション読み込みエラー</option>'
+          );
+        },
+      });
+    }
+
+    // 選択数の更新
+    function updateSelectedCount() {
+      var count = $(".product-checkbox:checked").length;
+      $("#selected-count").text(count);
+    }
+
+    // カート追加ボタンの有効/無効を切り替え
+    function updateAddToCartButton() {
+      var hasSelected = $(".product-checkbox:checked").length > 0;
+      $("#add-selected-to-cart").prop("disabled", !hasSelected);
+    }
+
+    // 選択した商品をカートに追加（連続でカートページに遷移する方式）
+    $("#add-selected-to-cart").on("click", function () {
+      console.log("カート追加ボタンクリック");
+      var selectedProducts = [];
+
+      $(".product-checkbox:checked").each(function () {
+        var $checkbox = $(this);
+        var productId = $checkbox.data("product-id");
+        var $quantityInput = $(
+          '.product-quantity[data-product-id="' + productId + '"]'
+        );
+        var $optionSelect = $(
+          '.product-option[data-product-id="' + productId + '"]'
+        );
+        var quantity = parseInt($quantityInput.val()) || 1;
+        var optionValue = $optionSelect.val() || "";
+        var referenceToken = $optionSelect.attr("data-reference-token") || "";
+        var userHash = $optionSelect.attr("data-user-hash") || "";
+        var membersHash = $optionSelect.attr("data-members-hash") || "";
+
+        // オプションが「読み込み中...」の場合はエラー
+        if ($optionSelect.find("option").first().text() === "読み込み中...") {
+          alert(
+            "オプション情報の読み込みが完了していません。少しお待ちください。"
+          );
+          return false;
+        }
+
+        selectedProducts.push({
+          pid: productId,
+          product_num: quantity,
+          option1: optionValue, // option1パラメータとして送信
+          reference_token: referenceToken, // リファレンストークン
+          user_hash: userHash, // ユーザーハッシュ
+          members_hash: membersHash, // メンバーハッシュ
+        });
+      });
+
+      console.log("選択商品:", selectedProducts);
+
+      if (selectedProducts.length === 0) {
+        alert("商品を選択してください");
+        return;
+      }
+
+      // 選択商品情報をセッションストレージに保存
+      sessionStorage.setItem(
+        "pendingCartItems",
+        JSON.stringify(selectedProducts)
+      );
+      sessionStorage.setItem("currentCartIndex", "0");
+      sessionStorage.setItem(
+        "totalCartItems",
+        selectedProducts.length.toString()
+      );
+
+      console.log("sessionStorageに保存完了");
+      console.log("最初の商品を送信:", selectedProducts[0]);
+
+      // 最初の商品をカートに追加（POSTメソッドで送信）
+      submitToCart(selectedProducts[0]);
+    });
+  });
+</script>

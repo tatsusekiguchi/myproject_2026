@@ -1,0 +1,188 @@
+// ▽メイン▽
+main.next.propertyDetailMain
+    <article class="title_box top_level">
+        <div class="inner">
+        <h2 data-title="PROPERTY">物件情報</h2>
+        </div>
+    </article>
+    <div class="pankuzu">
+        <ul>
+        <li><a href="<?php echo home_url(); ?>">ホーム</a></li>
+        <li>物件情報</li>
+        </ul>
+    </div>
+    .propertyDetail_container
+        .contents_box
+            .topTitle
+                h3 物件情報
+            .detailTopPanel
+                .detailTopBox
+                    .ttl01
+                        p 賃貸
+                    .ttl02
+                        p 名古屋市中村区 椿町( 名古屋駅) の貸店舗
+            .caseSliderPanel.caseSliderPanel--pc
+                .caseSliderContainer
+                    .caseSlider
+                        .slider
+                            img(src=(root_path || '') + "common/image/property/detail_top_slide_01.png", alt="")
+                        .slider
+                            img(src=(root_path || '') + "common/image/property/detail_top_slide_01.png", alt="")
+                        .slider
+                            img(src=(root_path || '') + "common/image/property/detail_top_slide_01.png", alt="")
+                        .slider
+                            img(src=(root_path || '') + "common/image/property/detail_top_slide_01.png", alt="")
+            .detailMainContainer
+                .caseSliderPanel.caseSliderPanel--sp
+                    .caseSliderContainer
+                        .caseSlider
+                            .slider
+                                img(src=(root_path || '') + "common/image/property/detail_top_slide_01.png", alt="")
+                            .slider
+                                img(src=(root_path || '') + "common/image/property/detail_top_slide_01.png", alt="")
+                            .slider
+                                img(src=(root_path || '') + "common/image/property/detail_top_slide_01.png", alt="")
+                            .slider
+                                img(src=(root_path || '') + "common/image/property/detail_top_slide_01.png", alt="")
+                .pickupPanel
+                    .ttl PICK UP!
+                    .pickupBox
+                        p ターミナル駅前の一等地に位置する本物件は、改札からすぐの立地により視認性・集客力ともに優れ、物販やサービス業、事務所など幅広い業種での店舗展開に最適です。
+                .detailPanelTop
+                    dl
+                        dt 所在地
+                        dd 愛知県名古屋市中村区椿町
+                    dl
+                        dt 種目
+                        dd 貸店舗
+                    dl
+                        dt 築年月
+                        dd 1985年1月
+                    dl
+                        dt 設備 ・ サービス
+                        dd 看板取付スペースあり / 都市ガス
+                    dl
+                        dt 交通
+                        dd 東海道新幹線 / 名古屋駅 徒歩3分<br>ＪＲ中央線 / 名古屋駅 徒歩6分<br>名古屋市東山線 / 名古屋駅 徒歩8分
+                    dl
+                        dt 階建 / 階
+                        dd 地上 10階地下 1階建 / 4階～ 6階部分
+                    dl.remarks
+                        dt 出店可能業種
+                        dd 美容室・理容室、エステサロン、その他サロン、マッサージ・整体院、歯科、病院・クリニック、美容・医療・介護その他、ラーメン・中華料理、和食・寿司、うどん・そば、鉄板焼き・お好み焼き、洋食・レストラン、居酒屋・ダイニングバー、パン屋・ケーキ屋、テイクアウト・デリバリー、カフェ・喫茶店、バー・クラブ・スナックなど、その他飲食店、ファッション・雑貨、コンビニ・ドラッグストア、スーパーマーケット、小売・物販その他、ゲーム・パチンコ、カラオケ、ネットカフェ・漫画喫茶、スタジオ・ホール、アミューズメントその他、塾・スクール、その他
+                .floorInfoPanel
+                    .pTtl 各フロア空き情報
+                    .floorInfoList
+                        .floorInfo
+                            .floorBox01
+                                .floorTtl01
+                                    p 1F○○
+                                .floorTtl02
+                                    p 33.16 坪（109.63m²）
+                                .floorStatus
+                                    p.black 契約済
+                            .floorBox02
+                                ul
+                                    li
+                                        a(href="") 資料1DL
+                                    li
+                                        a(href="") 資料2DL
+                            .floorBox03
+                                .detailBtn
+                                    | 詳細を見る
+                        .floorInfo
+                            .floorBox01
+                                .floorTtl01
+                                    p 2F○○
+                                .floorTtl02
+                                    p 33.16 坪（109.63m²）
+                                .floorStatus
+                                    p.brown 72.6 万円
+                            .floorBox02
+                                ul
+                                    li
+                                        a(href="") 資料1DL
+                                    li
+                                        a(href="") 資料2DL
+                                    li
+                                        a(href="") 資料3DL
+                                    li
+                                        a(href="") 資料4DL
+                            .floorBox03
+                                .detailBtn
+                                    | 詳細を見る
+                .storeInfoPanel
+                    .tabItem
+                        .titleBox
+                            .ttl01
+                                p.black 空
+                            .ttl02
+                                p 4F 貸店舗
+                        .storeSlider
+                            .slider
+                                img(src=(root_path || '') + "common/image/property/detail_floor_img.png", alt="")
+                            .slider
+                                img(src=(root_path || '') + "common/image/property/detail_floor_img.png", alt="")
+                            .slider
+                                img(src=(root_path || '') + "common/image/property/detail_floor_img.png", alt="")
+                        .storeDetail
+                            dl
+                                dt 賃料
+                                dd 72.6万円
+                            dl
+                                dt 管理費等
+                                dd 72,600円
+                            dl
+                                dt 坪単価
+                                dd 2.1892㎡
+                            dl
+                                dt 敷金
+                                dd なし
+                            dl
+                                dt 補償金
+                                dd 6 ヶ月
+                            dl
+                                dt 礼金
+                                dd なし
+                            dl
+                                dt 保証金償却
+                                dd 解約時50% ３年以内１００％<br>５年以内７０％　以降５０％
+                            dl
+                                dt 維持費等
+                                dd インフォメーション看板料：33,000円 / 月
+                            dl
+                                dt 状態
+                                dd スケルトン
+                            dl
+                                dt 使用部分面積
+                                dd 109.63m²
+                            dl
+                                dt 坪数
+                                dd 33.16坪
+                            dl
+                                dt 建物構造・工法
+                                dd ＲＣ
+                            dl
+                                dt 契約期間
+                                dd 10年
+                            dl
+                                dt 現況
+                                dd 空
+                            dl
+                                dt 取引態様
+                                dd 仲介
+                            dl
+                                dt 適格請求書発行
+                                dd 可
+                            dl
+                                dt 引渡可能時期
+                                dd 相談
+                            dl
+                                dt 物件番号
+                                dd 6987011819
+                            dl.remarks
+                                dt 備考
+                                dd 賃貸保証等：加入要（初回：総賃料の１か月相当額　更新料月額賃料の１０％／年）<br>要保険<br>要保証会社<br>定期借家契約１０年
+                        .mapBox
+                             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12893.037026663673!2d140.3534141!3d36.1115411!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6022402f4cec0001%3A0xdbf27cbb235d0788!2sAct%20works!5e0!3m2!1sja!2sjp!4v1731906934322!5m2!1sja!2sjp" allow="fullscreen"></iframe>
+// △メイン△

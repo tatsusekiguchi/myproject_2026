@@ -1,0 +1,158 @@
+{
+  "key": "group_65f8c4d6e5f3a",
+  "title": "その他ページ - うなぎ弁当リスト",
+  "fields": [
+    {
+      "key": "field_65f8c4d6e5f3b",
+      "label": "うなぎ弁当リスト",
+      "name": "other_unagi_list",
+      "aria-label": "",
+      "type": "repeater",
+      "instructions": "うなぎ弁当の商品を追加できます。",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "layout": "block",
+      "pagination": 0,
+      "min": 0,
+      "max": 0,
+      "collapsed": "",
+      "button_label": "商品を追加",
+      "rows_per_page": 20,
+      "sub_fields": [
+        {
+          "key": "field_65f8c4d6e5f3c",
+          "label": "画像",
+          "name": "image",
+          "aria-label": "",
+          "type": "image",
+          "instructions": "",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "return_format": "array",
+          "library": "all",
+          "min_width": "",
+          "min_height": "",
+          "min_size": "",
+          "max_width": "",
+          "max_height": "",
+          "max_size": "",
+          "mime_types": "",
+          "preview_size": "medium",
+          "parent_repeater": "field_65f8c4d6e5f3b"
+        },
+        {
+          "key": "field_65f8c4d6e5f3d",
+          "label": "商品名",
+          "name": "product_name",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "商品名を入力してください（例：蒲焼き（一尾））",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": "",
+          "parent_repeater": "field_65f8c4d6e5f3b"
+        },
+        {
+          "key": "field_65f8c4d6e5f3e",
+          "label": "補足（任意）",
+          "name": "product_small_text",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "商品名に付随する小さい文字を入力してください（例：（鰻半身分・国産牛しぐれ入り））",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": "",
+          "parent_repeater": "field_65f8c4d6e5f3b"
+        },
+        {
+          "key": "field_65f8c4d6e5f3f",
+          "label": "金額",
+          "name": "price",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "金額を入力してください（例：３,０００）",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": "",
+          "parent_repeater": "field_65f8c4d6e5f3b"
+        },
+        {
+          "key": "field_65f8c4d6e5f40",
+          "label": "補足文",
+          "name": "description",
+          "aria-label": "",
+          "type": "textarea",
+          "instructions": "補足説明を入力してください（例：※タレ・肝付き）",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "maxlength": "",
+          "rows": 3,
+          "new_lines": "br",
+          "parent_repeater": "field_65f8c4d6e5f3b"
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page_template",
+        "operator": "==",
+        "value": "other/index.php"
+      }
+    ]
+  ],
+  "menu_order": 1,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "show_in_rest": 0
+}

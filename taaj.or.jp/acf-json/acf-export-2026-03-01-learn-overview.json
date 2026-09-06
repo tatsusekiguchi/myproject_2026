@@ -1,0 +1,239 @@
+[
+  {
+    "key": "group_learn_overview",
+    "title": "概要",
+    "fields": [
+      {
+        "key": "field_learn_overview_intro",
+        "label": "説明文",
+        "name": "learn_overview_intro",
+        "aria-label": "",
+        "type": "wysiwyg",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "tabs": "all",
+        "toolbar": "full",
+        "media_upload": 1,
+        "delay": 0
+      },
+      {
+        "key": "field_learn_overview_schedule",
+        "label": "開催スケジュール",
+        "name": "learn_overview_schedule",
+        "aria-label": "",
+        "type": "repeater",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "layout": "block",
+        "pagination": 0,
+        "min": 0,
+        "max": 0,
+        "collapsed": "field_schedule_date",
+        "button_label": "開催日を追加",
+        "rows_per_page": 20,
+        "sub_fields": [
+          {
+            "key": "field_schedule_date",
+            "label": "開催日",
+            "name": "schedule_date",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "例：第１回　202X 年〇月〇日（），〇日（）",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 2,
+            "new_lines": "br",
+            "parent_repeater": "field_learn_overview_schedule"
+          },
+          {
+            "key": "field_schedule_ta101",
+            "label": "TA101",
+            "name": "schedule_ta101",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "parent_repeater": "field_learn_overview_schedule"
+          },
+          {
+            "key": "field_schedule_basic",
+            "label": "ベイシックコース",
+            "name": "schedule_basic",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "parent_repeater": "field_learn_overview_schedule"
+          },
+          {
+            "key": "field_schedule_gestalt",
+            "label": "TAシュミュレートWS",
+            "name": "schedule_gestalt",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "parent_repeater": "field_learn_overview_schedule"
+          },
+          {
+            "key": "field_schedule_advance",
+            "label": "アドバンスコース",
+            "name": "schedule_advance",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "parent_repeater": "field_learn_overview_schedule"
+          },
+          {
+            "key": "field_schedule_ondemand",
+            "label": "オンデマンド",
+            "name": "schedule_ondemand",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "parent_repeater": "field_learn_overview_schedule"
+          },
+          {
+            "key": "field_schedule_sv",
+            "label": "SV",
+            "name": "schedule_sv",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "parent_repeater": "field_learn_overview_schedule"
+          },
+          {
+            "key": "field_schedule_exam",
+            "label": "試験準備コース",
+            "name": "schedule_exam",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "parent_repeater": "field_learn_overview_schedule"
+          }
+        ]
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "page_template",
+          "operator": "==",
+          "value": "learn/index.php"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": ""
+  }
+]

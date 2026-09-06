@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#F6F3EE;font-family:'Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif;color:#2A3828}
+
+.page-header{text-align:center;padding:32px 20px 12px}
+.page-eyebrow{font-size:10px;letter-spacing:0.2em;color:#7A9982;margin-bottom:8px}
+.page-title{font-size:22px;font-weight:500;color:#2A3828;line-height:1.4;margin-bottom:6px}
+.page-sub{font-size:11px;color:#7A746E}
+
+/* ── MAIN LAYOUT ── */
+.main-layout{display:grid;grid-template-columns:1fr 1fr;gap:0;max-width:680px;margin:0 auto;align-items:center;padding:16px 16px 0}
+
+/* ── RING SIDE ── */
+.ring-wrap{position:relative;aspect-ratio:1}
+.ring-wrap svg{width:100%;height:100%}
+
+/* ── CARD SIDE ── */
+.card-side{padding:0 0 0 20px;min-height:260px;display:flex;flex-direction:column;justify-content:center}
+
+.year-tag{display:inline-block;font-size:9px;font-weight:500;letter-spacing:0.12em;color:#4A6450;background:#E8F0E8;padding:3px 10px;border-radius:20px;margin-bottom:10px}
+.card-title{font-size:17px;font-weight:500;color:#2A3828; line-height:1.45;margin-bottom:10px}
+.card-body{font-size:11px;color:#5A534C;line-height:1.85;margin-bottom:12px}
+.card-quote{background:#F2EEE8;border-left:2px solid #4A6450;padding:10px 13px;border-radius:0 6px 6px 0;margin-bottom:12px}
+.card-quote p{font-size:10.5px;color:#3A4A38;line-height:1.8;font-family:'Hiragino Mincho ProN','Georgia',serif}
+.card-stat{font-size:10px;color:#7A9982;letter-spacing:0.04em}
+
+/* ── HINT ── */
+.hint-row{display:flex;align-items:center;justify-content:center;gap:16px;padding:12px 16px 6px;max-width:680px;margin:0 auto}
+.hint-dot{width:8px;height:8px;border-radius:50%;cursor:pointer;transition:transform 0.2s;flex-shrink:0}
+.hint-dot:hover{transform:scale(1.3)}
+.hint-dot.active{outline:2px solid #A86A52;outline-offset:2px}
+
+/* ── TIMELINE STRIP ── */
+.timeline-strip{max-width:680px;margin:0 auto;padding:4px 16px 16px;display:flex;align-items:flex-start;gap:0;position:relative}
+.timeline-strip::before{content:'';position:absolute;top:14px;left:calc(16px + 14px);right:calc(16px + 14px);height:1px;background:#C8D0C8;z-index:0}
+.tl-item{flex:1;display:flex;flex-direction:column;align-items:center;gap:5px;cursor:pointer;position:relative;z-index:1}
+.tl-dot{width:10px;height:10px;border-radius:50%;background:#C8D0C8;transition:all 0.25s;flex-shrink:0}
+.tl-item.active .tl-dot{background:#A86A52;transform:scale(1.4)}
+.tl-item:hover .tl-dot{background:#4A6450;transform:scale(1.2)}
+.tl-year{font-size:9px;color:#9A9490;transition:color 0.2s;white-space:nowrap}
+.tl-item.active .tl-year{color:#A86A52;font-weight:500}
+
+/* ── FUTURE BAND ── */
+.future-band{background:#2A3828;padding:20px 24px;text-align:center;margin-top:8px}
+.future-text{font-size:13px;color:#F0EDE6;font-family:'Hiragino Mincho ProN','Georgia',serif;line-height:1.9}
+.future-sub{font-size:9px;color:#7A9A82;margin-top:5px;letter-spacing:0.06em}
+
+/* ── RING ANIMATIONS ── */
+@keyframes ringPulse{0%{r:var(--pr);opacity:0.6}50%{r:calc(var(--pr) + 6px);opacity:0.2}100%{r:var(--pr);opacity:0}}
+.pulse-ring{animation:none}
+
+/* ── CARD FADE ── */
+@keyframes cardIn{from{opacity:0;transform:translateX(8px)}to{opacity:1;transform:translateX(0)}}
+.card-side.animating{animation:cardIn 0.35s ease forwards}
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <p class="page-eyebrow">HISTORY — 会社の歩み</p>
+  <p class="page-title">根を張り続けた、20年の年輪。</p>
+  <p class="page-sub">一つひとつの年輪が、地域と共に歩んだ証です。</p>
+</div>
+
+<div class="main-layout">
+  <!-- RING -->
+  <div class="ring-wrap">
+    <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" id="svg">
+      <defs>
+        <radialGradient id="coreGrad" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#5A7860"/>
+          <stop offset="100%" stop-color="#3A5640"/>
+        </radialGradient>
+      </defs>
+
+      <!-- pulse rings (hidden, shown on tap) -->
+      <circle id="pulse1" cx="150" cy="150" r="20" fill="none" stroke="#A86A52" stroke-width="1" opacity="0"/>
+      <circle id="pulse2" cx="150" cy="150" r="20" fill="none" stroke="#A86A52" stroke-width="1" opacity="0"/>
+
+      <!-- static rings -->
+      <circle class="ring-body" data-id="2023" cx="150" cy="150" r="136" fill="none" stroke="#4A6450" stroke-width="9" opacity="0.13" style="cursor:pointer"/>
+      <circle class="ring-body" data-id="2020" cx="150" cy="150" r="112" fill="none" stroke="#4A6450" stroke-width="9" opacity="0.2" style="cursor:pointer"/>
+      <circle class="ring-body" data-id="2018" cx="150" cy="150" r="90" fill="none" stroke="#4A6450" stroke-width="8" opacity="0.28" style="cursor:pointer"/>
+      <circle class="ring-body" data-id="2015" cx="150" cy="150" r="70" fill="none" stroke="#4A6450" stroke-width="8" opacity="0.38" style="cursor:pointer"/>
+      <circle class="ring-body" data-id="2012" cx="150" cy="150" r="52" fill="none" stroke="#4A6450" stroke-width="7" opacity="0.5" style="cursor:pointer"/>
+      <circle class="ring-body" data-id="2008" cx="150" cy="150" r="36" fill="none" stroke="#4A6450" stroke-width="6" opacity="0.65" style="cursor:pointer"/>
+      <!-- center -->
+      <circle class="ring-body" data-id="2005" cx="150" cy="150" r="18" fill="url(#coreGrad)" style="cursor:pointer"/>
+      <text x="150" y="154" text-anchor="middle" font-size="8" fill="#F0EDE6" font-family="sans-serif" style="pointer-events:none">創業</text>
+
+      <!-- hit areas (wider for easier tap) -->
+      <circle class="ring-hit" data-id="2023" cx="150" cy="150" r="136" fill="none" stroke="transparent" stroke-width="18" style="cursor:pointer"/>
+      <circle class="ring-hit" data-id="2020" cx="150" cy="150" r="112" fill="none" stroke="transparent" stroke-width="18" style="cursor:pointer"/>
+      <circle class="ring-hit" data-id="2018" cx="150" cy="150" r="90" fill="none" stroke="transparent" stroke-width="16" style="cursor:pointer"/>
+      <circle class="ring-hit" data-id="2015" cx="150" cy="150" r="70" fill="none" stroke="transparent" stroke-width="16" style="cursor:pointer"/>
+      <circle class="ring-hit" data-id="2012" cx="150" cy="150" r="52" fill="none" stroke="transparent" stroke-width="14" style="cursor:pointer"/>
+      <circle class="ring-hit" data-id="2008" cx="150" cy="150" r="36" fill="none" stroke="transparent" stroke-width="14" style="cursor:pointer"/>
+
+      <!-- active highlight ring -->
+      <circle id="activeRing" cx="150" cy="150" r="0" fill="none" stroke="#A86A52" stroke-width="2.5" opacity="0" style="pointer-events:none;transition:r 0.3s ease, opacity 0.3s ease"/>
+
+      <!-- year labels -->
+      <text x="150" y="13" text-anchor="middle" font-size="9" fill="#4A6450" opacity="0.6" font-family="sans-serif" style="pointer-events:none">2023</text>
+      <text x="150" y="37" text-anchor="middle" font-size="9" fill="#4A6450" opacity="0.6" font-family="sans-serif" style="pointer-events:none">2020</text>
+      <text x="150" y="59" text-anchor="middle" font-size="9" fill="#4A6450" opacity="0.6" font-family="sans-serif" style="pointer-events:none">2018</text>
+      <text x="150" y="79" text-anchor="middle" font-size="9" fill="#4A6450" opacity="0.6" font-family="sans-serif" style="pointer-events:none">2015</text>
+      <text x="150" y="97" text-anchor="middle" font-size="9" fill="#4A6450" opacity="0.6" font-family="sans-serif" style="pointer-events:none">2012</text>
+      <text x="150" y="113" text-anchor="middle" font-size="9" fill="#4A6450" opacity="0.6" font-family="sans-serif" style="pointer-events:none">2008</text>
+
+      <!-- future dashed -->
+      <circle cx="150" cy="150" r="146" fill="none" stroke="#B8C8B8" stroke-width="1" stroke-dasharray="5 4" opacity="0.5" style="pointer-events:none"/>
+    </svg>
+  </div>
+
+  <!-- CARD -->
+  <div class="card-side" id="cardSide">
+    <span class="year-tag" id="cardYear">2005年10月</span>
+    <p class="card-title" id="cardTitle">高槻の地に、<br>根を下ろす。</p>
+    <p class="card-body" id="cardBody">大阪府高槻市にて株式会社ケンモクを創業。ダスキンフランチャイズとして、介護・福祉用品のレンタル・販売事業をスタート。</p>
+    <div class="card-quote"><p id="cardQuote">「地域の方々の暮らしに、安心と安全を届けたい」——その一心から始まりました。</p></div>
+    <p class="card-stat" id="cardStat">創業メンバー数名からのスタート</p>
+  </div>
+</div>
+
+<!-- TIMELINE DOTS -->
+<div class="timeline-strip" id="timelineStrip">
+  <div class="tl-item active" data-id="2005"><div class="tl-dot"></div><span class="tl-year">2005</span></div>
+  <div class="tl-item" data-id="2008"><div class="tl-dot"></div><span class="tl-year">2008</span></div>
+  <div class="tl-item" data-id="2012"><div class="tl-dot"></div><span class="tl-year">2012</span></div>
+  <div class="tl-item" data-id="2015"><div class="tl-dot"></div><span class="tl-year">2015</span></div>
+  <div class="tl-item" data-id="2018"><div class="tl-dot"></div><span class="tl-year">2018</span></div>
+  <div class="tl-item" data-id="2020"><div class="tl-dot"></div><span class="tl-year">2020</span></div>
+  <div class="tl-item" data-id="2023"><div class="tl-dot"></div><span class="tl-year">2023〜</span></div>
+</div>
+
+<div class="future-band">
+  <p class="future-text">まだ描かれていない年輪が、<br>これからも積み重なっていく。</p>
+  <p class="future-sub">— 株式会社ケンモク　代表取締役　上野一憲</p>
+</div>
+
+<script>
+const data = {
+  '2005':{ year:'2005年10月', title:'高槻の地に、\n根を下ろす。', body:'大阪府高槻市にて株式会社ケンモクを創業。ダスキンフランチャイズとして、介護・福祉用品のレンタル・販売事業をスタート。', quote:'「地域の方々の暮らしに、安心と安全を届けたい」——その一心から始まりました。', stat:'創業メンバー数名からのスタート', r:18 },
+  '2008':{ year:'2008年', title:'家事代行事業へ、\n枝を伸ばす。', body:'ダスキン野田メリーメイドの家事代行サービスを開始。介護に加え、日常の暮らしそのものを支える事業へと領域を広げる。', quote:'「必要な支えを、必要な人へ。」事業の幅を広げることが、より多くの方への貢献につながると確信しました。', stat:'', r:36 },
+  '2012':{ year:'2012年', title:'箕面へ、\n根を広げる。', body:'大阪府箕面市に第2のステーションを開設。高槻エリアを超え、より広い地域の方々へサービスを届ける体制を整える。', quote:'一つの地域で信頼を積み上げてきたからこそ、次の根を張る場所が見えてきました。', stat:'拠点：高槻・箕面', r:52 },
+  '2015':{ year:'2015年', title:'スタッフとともに、\n幹を太くする。', body:'スタッフ数が着実に増加。クレド（行動指針）を策定し、「Agility・Grit・Empathy」の3つの強みが会社の文化として根付いていく。', quote:'会社が大きくなるほど、大切なのは「どんな人たちの集まりか」だと実感しました。', stat:'', r:70 },
+  '2018':{ year:'2018年', title:'奈良へ、\n年輪を刻む。', body:'奈良県生駒市に第3のステーションを開設。大阪・奈良にまたがるエリアカバーが実現し、地域の方々の暮らしを支える拠点が整う。', quote:'根を張ることと、広がることは矛盾しない。それぞれの地域で丁寧に根付くことを大切にしてきました。', stat:'拠点：高槻・箕面・奈良生駒', r:90 },
+  '2020':{ year:'2020年', title:'フロントオフィスで、\nより迅速に。', body:'全社の事務機能を集約したフロントオフィスを設立。業務効率化を進め、スタッフがより現場・お客様に集中できる体制へ。', quote:'「すぐに動ける」ことが、地域の信頼につながる。俊敏さを仕組みで支える体制をつくりました。', stat:'', r:112 },
+  '2023':{ year:'2023年〜現在', title:'67名、\nそして次の年輪へ。', body:'スタッフ数67名。3つのステーションを拠点に、家事代行・介護福祉用品・住宅リフォームの3事業で地域の暮らしを支え続けている。', quote:'20年で積み重ねた年輪は、これからも増え続けます。地域に根を張り、ともに健やかに。', stat:'スタッフ：67名 ／ 高槻・箕面・奈良生駒', r:136 },
+};
+
+const activeRing = document.getElementById('activeRing');
+const cardSide = document.getElementById('cardSide');
+let currentId = '2005';
+
+// set initial active ring
+activeRing.setAttribute('r', data['2005'].r);
+activeRing.setAttribute('opacity','1');
+
+function activate(id) {
+  if(!data[id]) return;
+  currentId = id;
+  const d = data[id];
+
+  // update ring highlight
+  activeRing.setAttribute('r', d.r);
+  activeRing.setAttribute('opacity','1');
+
+  // pulse effect
+  animatePulse(d.r);
+
+  // update card
+  cardSide.style.opacity = '0';
+  cardSide.style.transform = 'translateX(8px)';
+  cardSide.style.transition = 'opacity 0.15s, transform 0.15s';
+  setTimeout(()=>{
+    document.getElementById('cardYear').textContent = d.year;
+    document.getElementById('cardTitle').innerHTML = d.title.replace('\n','<br>');
+    document.getElementById('cardBody').textContent = d.body;
+    document.getElementById('cardQuote').textContent = d.quote;
+    document.getElementById('cardStat').textContent = d.stat;
+    cardSide.style.opacity = '1';
+    cardSide.style.transform = 'translateX(0)';
+  }, 150);
+
+  // update timeline dots
+  document.querySelectorAll('.tl-item').forEach(el=>{
+    el.classList.toggle('active', el.dataset.id === id);
+  });
+
+  // update ring bodies
+  document.querySelectorAll('.ring-body').forEach(el=>{
+    if(el.dataset.id === id){
+      el.style.stroke = '#A86A52';
+      el.style.opacity = '0.7';
+    } else {
+      el.style.stroke = '#4A6450';
+      el.style.opacity = el.getAttribute('opacity') || '0.4';
+    }
+  });
+}
+
+function animatePulse(r) {
+  const p1 = document.getElementById('pulse1');
+  const p2 = document.getElementById('pulse2');
+  [p1,p2].forEach(p=>{ p.setAttribute('r', r); p.setAttribute('opacity','0'); });
+  let start = null;
+  function step(ts){
+    if(!start) start = ts;
+    const p = Math.min((ts-start)/800, 1);
+    const r2 = r + p * 20;
+    const op = 0.5 * (1 - p);
+    p1.setAttribute('r', r2);
+    p1.setAttribute('opacity', op);
+    if(p < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+// ring clicks
+document.querySelectorAll('.ring-hit, .ring-body[data-id="2005"]').forEach(el=>{
+  el.addEventListener('click', ()=> activate(el.dataset.id));
+});
+
+// timeline clicks
+document.querySelectorAll('.tl-item').forEach(el=>{
+  el.addEventListener('click', ()=> activate(el.dataset.id));
+});
+
+// init
+activate('2005');
+</script>
+</body>
+</html>

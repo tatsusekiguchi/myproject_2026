@@ -1,0 +1,45 @@
+// ▽メイン▽
+main#contact.main
+	.pageTitlePanel
+		.pageTitle
+			.pageSecTtlBox
+				.sub
+					p - CONTACT -
+				.pageSecTtl
+					h2 お問い合わせ
+	.contactSection
+		.secWrap02
+			.topTxt.txt
+				p お問い合わせをいただいて2 ～ 3 営業日以内に内容の確認をさせていただき、<br>メールもしくは電話にて対応いたします。
+			.contactForm.formBox
+				form.simpleContactForm(novalidate)
+					.formRow
+						.formLabel
+							label(for="contactName") お名前
+							span.required 必須
+						.formInput
+							input#contactName(type="text", name="name", placeholder="例）山田　太郎", autocomplete="name", maxlength="100", required)
+					.formRow
+						.formLabel
+							label(for="contactEmail") メールアドレス
+							span.required 必須
+						.formInput
+							input#contactEmail(type="email", name="email", placeholder="例）info@sample.com", autocomplete="email", maxlength="254", required)
+					.formRow
+						.formLabel
+							label(for="contactEmailConfirm") メールアドレス(確認)
+							span.required 必須
+						.formInput
+							input#contactEmailConfirm(type="email", name="email_confirm", placeholder="確認のため再度お願いいたします。", autocomplete="off", maxlength="254", required)
+					.formRow.formRowTextarea
+						.formLabel
+							label(for="contactMessage") お問い合わせ内容
+						.formInput
+							textarea#contactMessage(name="message", maxlength="2000")
+					.formSubmit
+						button(type="submit") 送信する
+			.contactComplete(role="dialog", aria-modal="true", aria-labelledby="contactCompleteTitle", aria-hidden="true")
+				.completePanel
+					p#contactCompleteTitle 送信が完了しました
+					button.completeClose(type="button") 閉じる
+// △メイン△

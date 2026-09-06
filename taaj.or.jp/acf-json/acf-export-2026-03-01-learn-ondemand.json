@@ -1,0 +1,258 @@
+[
+  {
+    "key": "group_learn_ondemand",
+    "title": "オンデマンドコンテンツ",
+    "fields": [
+      {
+        "key": "field_ondemand_courses",
+        "label": "コース一覧",
+        "name": "ondemand_courses",
+        "aria-label": "",
+        "type": "repeater",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "layout": "block",
+        "pagination": 0,
+        "min": 0,
+        "max": 0,
+        "collapsed": "field_ondemand_course_title",
+        "button_label": "コースを追加",
+        "rows_per_page": 20,
+        "sub_fields": [
+          {
+            "key": "field_ondemand_course_title",
+            "label": "コースタイトル",
+            "name": "course_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "例：２０２６年度開催予定",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "parent_repeater": "field_ondemand_courses"
+          },
+          {
+            "key": "field_ondemand_course_theme",
+            "label": "テーマ",
+            "name": "course_theme",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0,
+            "parent_repeater": "field_ondemand_courses"
+          },
+          {
+            "key": "field_ondemand_course_description",
+            "label": "説明",
+            "name": "course_description",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0,
+            "parent_repeater": "field_ondemand_courses"
+          },
+          {
+            "key": "field_ondemand_course_datetime",
+            "label": "日時",
+            "name": "course_datetime",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0,
+            "parent_repeater": "field_ondemand_courses"
+          },
+          {
+            "key": "field_ondemand_course_venue",
+            "label": "会場",
+            "name": "course_venue",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0,
+            "parent_repeater": "field_ondemand_courses"
+          },
+          {
+            "key": "field_ondemand_course_instructor",
+            "label": "講師名",
+            "name": "course_instructor",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 2,
+            "new_lines": "br",
+            "parent_repeater": "field_ondemand_courses"
+          },
+          {
+            "key": "field_ondemand_course_instructor_intro",
+            "label": "講師紹介",
+            "name": "course_instructor_intro",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0,
+            "parent_repeater": "field_ondemand_courses"
+          },
+          {
+            "key": "field_ondemand_course_notes",
+            "label": "留意事項",
+            "name": "course_notes",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0,
+            "parent_repeater": "field_ondemand_courses"
+          },
+          {
+            "key": "field_ondemand_course_fee",
+            "label": "参加費",
+            "name": "course_fee",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0,
+            "parent_repeater": "field_ondemand_courses"
+          },
+          {
+            "key": "field_ondemand_course_apply_url",
+            "label": "申し込みURL",
+            "name": "course_apply_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "外部ページへのリンク",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "parent_repeater": "field_ondemand_courses"
+          }
+        ]
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "page_template",
+          "operator": "==",
+          "value": "learn/index.php"
+        }
+      ]
+    ],
+    "menu_order": 5,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": ""
+  }
+]

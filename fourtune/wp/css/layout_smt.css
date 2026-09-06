@@ -1,0 +1,1084 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*////////////////////////////////////////////////////////////
+	01. TOP
+/////////////////////////////////////////////////////////////*/
+/* --------------------------------------------------
+	kv
+-------------------------------------------------- */
+
+/* --------------------------------------------------
+	main
+-------------------------------------------------- */
+
+/* LESSON コース案内
+-------------------------------------------------- */
+#top #lesson .contWrap {
+  padding: 25px 10px;
+}
+#top #lesson .ttlBox {
+  position: static;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+#top #lesson .ttlBox h2 {
+  width: 93px;
+  margin: 0 auto 20px;
+}
+#top #lesson .ttlBox p {
+  margin: 0 auto 20px;
+}
+#top #lesson #lessonListPc {
+  display: none;
+}
+#top #lesson #lessonListSp {
+  overflow: hidden;
+  display: block;
+  margin: -13px 0 0 -2%;
+  text-align: center;
+}
+
+#top #lesson #lessonListSp li {
+  display: inline-block;
+  width: 47%;
+  margin: 13px 0 0 2%;
+}
+#top #lesson #lessonListSp dl {
+  border-radius: 6px;
+  background: #ffffff;
+}
+#top #lesson #lessonListSp dl dt {
+  display: table;
+  width: 100%;
+  height: 50px;
+  border-radius: 6px 6px 0 0;
+}
+#top #lesson #lessonListSp dl dt span {
+  display: table-cell;
+  padding: 0 10px;
+  vertical-align: middle;
+}
+#top #lesson #lessonListSp dl dd + dd {
+  padding: 5px 0;
+}
+#top #lesson #lessonListSp dl dd + dd a {
+  display: block;
+  width: 75px;
+  margin: 0 auto;
+}
+#top #lesson #lessonListSp li:nth-child(1) dl dt {
+  background: #68cfec;
+}
+#top #lesson #lessonListSp li:nth-child(1) dl dt img {
+  width: 77px;
+}
+#top #lesson #lessonListSp li:nth-child(2) dl dt {
+  background: #f9ca3d;
+}
+#top #lesson #lessonListSp li:nth-child(2) dl dt img {
+  width: 107px;
+}
+#top #lesson #lessonListSp li:nth-child(3) dl dt {
+  background: #fb7ca3;
+}
+#top #lesson #lessonListSp li:nth-child(3) dl dt img {
+  width: 92px;
+}
+#top #lesson #lessonListSp li:nth-child(4) dl dt {
+  background: #c8774f;
+}
+#top #lesson #lessonListSp li:nth-child(4) dl dt img {
+  width: 107px;
+}
+#top #lesson #lessonListSp li:nth-child(5) dl dt {
+  background: #089f9d;
+}
+#top #lesson #lessonListSp li:nth-child(5) dl dt img {
+  max-width: 151px;
+}
+#top #lesson #lessonListSp li:nth-child(6) dl dt {
+  background: #9ade41;
+}
+#top #lesson #lessonListSp li:nth-child(6) dl dt img {
+  width: 76px;
+}
+
+/* ABOUT 英会話スクール　フォーチューンとは
+-------------------------------------------------- */
+#top #about h2 {
+  width: 318px;
+  margin: 40px auto 25px;
+}
+#top #about h2 + p {
+  width: 100%;
+  margin: 0 auto 25px;
+}
+/*photoSlide*/
+#photoSlide {
+  width: 80%;
+  margin: 0 auto 35px;
+}
+/*POINT*/
+#top #about .pointList li:nth-child(-n + 2) {
+  width: 100%;
+  margin: 0 auto 40px;
+}
+#top #about .pointList li:nth-child(1) > dl,
+#top #about .pointList li:nth-child(1) > p,
+#top #about .pointList li:nth-child(2) > dl,
+#top #about .pointList li:nth-child(2) > p {
+  float: none;
+  width: 100%;
+}
+#top #about .pointList li:nth-child(-n + 2) dl {
+  margin-bottom: 20px;
+}
+#top #about .pointList li:nth-child(-n + 2) dl dt img {
+  max-width: 64px;
+}
+#top #about .pointList li:nth-child(-n + 2) dl dt span {
+  width: 85%;
+  padding-left: 3%;
+  font-size: 17px;
+}
+#top #about .pointList li:nth-child(3) dl {
+  padding: 20px 10px 30px;
+}
+#top #about .pointList li:nth-child(3) dl dt {
+  display: table;
+  width: 100%;
+  margin-bottom: 20px;
+}
+#top #about .pointList li:nth-child(3) dl dt img {
+  display: table-cell;
+  max-width: 64px;
+  margin: auto;
+  vertical-align: middle;
+}
+#top #about .pointList li:nth-child(3) dl dt span {
+  display: table-cell;
+  width: 85%;
+  padding-left: 3%;
+  font-size: 17px;
+  text-align: left;
+  vertical-align: middle;
+}
+#top #about .pointList li:nth-child(3) dl dd {
+  width: 100%;
+}
+/*////////////////////////////////////////////////////////////
+	 下層ページ共通
+/////////////////////////////////////////////////////////////*/
+
+/* .kv
+-------------------------------------------------- */
+.kv {
+  min-height: 102px;
+}
+.kv > div {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 10px;
+}
+.kv h2 {
+  margin: 30px auto 0;
+}
+
+.kv + section {
+  background: none;
+}
+
+/*////////////////////////////////////////////////////////////
+	 コース紹介共通
+/////////////////////////////////////////////////////////////*/
+.tabMenu ul {
+  bottom: -20px;
+  margin: 0 auto 45px;
+  padding: 0 10px;
+  text-align: center;
+}
+.tabMenu ul li {
+  width: 45%;
+  max-width: 160px;
+}
+.tabMenu ul li,
+.tabMenu ul li + li {
+  margin: 10px 0 0 0;
+}
+
+/* タイトル、コンテンツ共通
+-------------------------------------------------- */
+.course section + section {
+  margin-top: 40px;
+}
+.course .courseTtl {
+  margin-bottom: 20px;
+}
+.course .introTopBox {
+  padding: 0 10px 70px;
+}
+.course .introTopBox .introTop {
+  margin-bottom: 20px;
+}
+.course .introTopBox .introTop > p,
+.course .introTopBox .introTop > div {
+  float: none;
+  width: 100%;
+}
+.course .introTopBox .introTop > p {
+  margin-bottom: 20px;
+}
+.course .introTopBox .introTop + p {
+  margin-bottom: 20px;
+}
+.course .introTopBox ul {
+  display: none;
+}
+.course .introBox {
+  overflow: hidden;
+  padding: 0 10px;
+}
+.course .introBox > p,
+.course .introBox > dl {
+  float: none;
+  width: 100%;
+}
+.course .introBox > p {
+  margin-bottom: 20px;
+}
+.course .introBox > dl dt {
+  margin-bottom: 10px;
+  padding-left: 10px;
+  font-size: 16px;
+}
+.course .introBox > dl dd {
+  padding-left: 0;
+}
+.course .pointList {
+  margin-bottom: 30px;
+}
+.course .pointList li {
+  width: 45%;
+}
+.course .pointList li:nth-child(2) {
+  position: static;
+  margin: 0;
+}
+
+/* 例えば
+-------------------------------------------------- */
+.course .examTxt {
+  margin: 20px 0;
+  padding: 0 10px;
+}
+
+/* コース詳細 コース料金
+-------------------------------------------------- */
+.detailBox {
+  padding: 20px;
+}
+.detailBox h4 {
+  width: 175px;
+  margin: 0 auto 20px;
+  padding: 5px;
+  font-size: 12px;
+}
+.detailBox > dl dt {
+  padding: 10px;
+  font-size: 12px;
+}
+.detailBox > dl + dl {
+  margin: 20px 0 0;
+}
+.detailBox > dl + .detailTbl {
+  margin: 25px 0 0;
+}
+.detailBox .detailTbl {
+  width: 100%;
+  border-top: 1px solid #a0d3e1;
+}
+.detailBox .detailTbl th {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 12px;
+  border-bottom: none;
+}
+.detailBox .detailTbl td {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 12px;
+  text-align: center;
+  border-bottom: none;
+}
+.detailBox .detailTbl + h4 {
+  margin: 20px auto 10px;
+}
+.detailBox .timeTbl {
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto;
+  border-top: 1px solid #a0d3e1;
+  border-left: 1px solid #a0d3e1;
+  border-right: 1px solid #a0d3e1;
+}
+
+.detailBox .timeTbl thead th {
+  padding: 10px 0;
+  font-size: 12px;
+}
+.detailBox .timeTbl tr td {
+  padding: 10px;
+  font-size: 12px;
+}
+
+/* 多読プログラムについて
+-------------------------------------------------- */
+.course .reading .ttlBorder span img {
+  width: 157px;
+}
+.course .reading .ttlBorder + p {
+  margin: 30px auto 20px;
+  font-size: 14px;
+}
+.course .reading .contWrap div {
+  margin: 0 auto 30px;
+}
+.course .reading .contWrap div p + p {
+  margin-top: 20px;
+}
+.course .reading .contWrap ul li,
+.course .reading .contWrap ul li + li {
+  float: none;
+  width: 100%;
+}
+.course .reading .contWrap ul li + li {
+  margin-top: 20px;
+}
+
+/* レッスン一覧
+-------------------------------------------------- */
+.course .lessonList {
+  height: auto;
+}
+.course .lessonList .contWrap {
+  padding: 25px 10px;
+}
+.course .lessonList .ttlBox {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+.course .lessonList .ttlBox h2 {
+  width: 93px;
+  margin: 0 auto 20px;
+}
+.course .lessonList .ttlBox p {
+  margin: 0 auto 20px;
+  color: #ffffff;
+  text-align: center;
+}
+.course .lessonList #lessonListPc {
+  display: none;
+}
+.course .lessonList #lessonListSp {
+  overflow: hidden;
+  display: block;
+  margin: -13px 0 0 -2%;
+  text-align: center;
+}
+
+.course .lessonList #lessonListSp li {
+  display: inline-block;
+  width: 47%;
+  margin: 13px 0 0 2%;
+}
+.course .lessonList #lessonListSp dl {
+  border-radius: 6px;
+  background: #ffffff;
+}
+.course .lessonList #lessonListSp dl dt {
+  display: table;
+  width: 100%;
+  height: 50px;
+  border-radius: 6px 6px 0 0;
+}
+.course .lessonList #lessonListSp dl dt span {
+  display: table-cell;
+  padding: 0 10px;
+  vertical-align: middle;
+}
+.course .lessonList #lessonListSp dl dd + dd {
+  padding: 5px 0;
+}
+.course .lessonList #lessonListSp dl dd + dd a {
+  display: block;
+  width: 75px;
+  margin: 0 auto;
+}
+.course .lessonList #lessonListSp li:nth-child(1) dl dt {
+  background: #68cfec;
+}
+.course .lessonList #lessonListSp li:nth-child(1) dl dt img {
+  width: 77px;
+}
+.course .lessonList #lessonListSp li:nth-child(2) dl dt {
+  background: #f9ca3d;
+}
+.course .lessonList #lessonListSp li:nth-child(2) dl dt img {
+  width: 107px;
+}
+.course .lessonList #lessonListSp li:nth-child(3) dl dt {
+  background: #fb7ca3;
+}
+.course .lessonList #lessonListSp li:nth-child(3) dl dt img {
+  width: 92px;
+}
+.course .lessonList #lessonListSp li:nth-child(4) dl dt {
+  background: #c8774f;
+}
+.course .lessonList #lessonListSp li:nth-child(4) dl dt img {
+  width: 107px;
+}
+.course .lessonList #lessonListSp li:nth-child(5) dl dt {
+  background: #089f9d;
+}
+.course .lessonList #lessonListSp li:nth-child(5) dl dt img {
+  max-width: 151px;
+}
+.course .lessonList #lessonListSp li:nth-child(6) dl dt {
+  background: #9ade41;
+}
+.course .lessonList #lessonListSp li:nth-child(6) dl dt img {
+  width: 76px;
+}
+/*////////////////////////////////////////////////////////////
+	 コース紹介一覧
+/////////////////////////////////////////////////////////////*/
+
+/* .kv
+-------------------------------------------------- */
+#courseList .kv {
+  background: url("../image/course/course_kv_sp.png") no-repeat;
+  background-size: cover;
+}
+#courseList .kv h2 {
+  width: 108px;
+}
+
+/* メイン
+-------------------------------------------------- */
+#courseList .kv + section {
+  padding-top: 30px;
+}
+#courseList .ttlBorder {
+  margin: 0 auto 20px;
+}
+#courseList .ttlBorder img {
+  width: 94px;
+}
+#courseList .ttlBorder + p {
+  margin-bottom: 20px;
+  padding: 0 10px;
+  text-align: left;
+}
+#courseList section section {
+  padding: 25px 10px;
+}
+#courseList #course01 h4 img {
+  width: 244px;
+}
+#courseList #course02 h4 img {
+  max-width: 324px;
+}
+#courseList #course03 h4 img {
+  width: 222px;
+}
+#courseList #course04 h4 img {
+  max-width: 355px;
+}
+#courseList #course05 h4 img {
+  width: 246px;
+}
+#courseList #course06 h4 img {
+  width: 256px;
+}
+#courseList h4 + div {
+  padding: 10px;
+}
+#courseList h4 + div > p,
+#courseList h4 + div > dl {
+  float: none;
+  width: 100%;
+}
+#courseList h4 + div > p {
+  margin-bottom: 20px;
+}
+#courseList h4 + div > dl dt {
+  margin-bottom: 10px;
+  padding-left: 0;
+  font-size: 16px;
+  text-align: center;
+  border: none !important;
+}
+#courseList h4 + div > dl dt + dd {
+  margin-bottom: 20px;
+}
+#courseList h4 + div > dl dd + dd {
+  text-align: center;
+}
+#courseList h4 + div > dl dd + dd a {
+  width: 150px;
+}
+
+/*////////////////////////////////////////////////////////////
+	 親子英会話コース
+/////////////////////////////////////////////////////////////*/
+/* .kv
+-------------------------------------------------- */
+#parentChild .kv {
+  background: url("../image/course/course_kv_sp.png") no-repeat;
+  background-size: cover;
+}
+#parentChild .kv h2 {
+  width: 110px;
+}
+
+/* メイン
+-------------------------------------------------- */
+#parentChild #sec01 h3 span {
+  width: 255px;
+}
+#parentChild #sec02 h3 span {
+  width: 218px;
+}
+#parentChild #sec03 h3 span {
+  width: 229px;
+}
+#parentChild #sec04 h3 span {
+  width: 214px;
+}
+
+/*////////////////////////////////////////////////////////////
+	 幼稚園英会話コース
+/////////////////////////////////////////////////////////////*/
+/* .kv
+-------------------------------------------------- */
+#kindergarten .kv {
+  background: url("../image/course/course_kv_sp.png") no-repeat;
+  background-size: cover;
+}
+#kindergarten .kv h2 {
+  width: 211px;
+}
+#kindergarten #sec01 h3 span {
+  width: 178px;
+}
+#kindergarten #sec02 h3 span {
+  width: 159px;
+}
+#kindergarten #sec03 h3 span {
+  width: 177px;
+}
+
+/*////////////////////////////////////////////////////////////
+	 小学生英会話コース
+/////////////////////////////////////////////////////////////*/
+/* .kv
+-------------------------------------------------- */
+#primary .kv {
+  background: url("../image/course/course_kv_sp.png") no-repeat;
+  background-size: cover;
+}
+#primary .kv h2 {
+  width: 211px;
+}
+#primary #sec01 h3 span {
+  width: 160px;
+}
+#primary #sec02 h3 span {
+  width: 177px;
+}
+
+/*////////////////////////////////////////////////////////////
+	 エリートキッズコース
+/////////////////////////////////////////////////////////////*/
+/* .kv
+-------------------------------------------------- */
+#elite .kv {
+  background: url("../image/course/course_kv_sp.png") no-repeat;
+  background-size: cover;
+}
+#elite .kv h2 {
+  width: 136px;
+  margin: 20px auto 0;
+}
+#elite .kv + section {
+  padding-top: 30px;
+}
+#elite #sec01 h3 span {
+  width: 177px;
+}
+
+/*////////////////////////////////////////////////////////////
+	 小5・小6プライベートレッスン
+/////////////////////////////////////////////////////////////*/
+/* .kv
+-------------------------------------------------- */
+#private .kv {
+  background: url("../image/course/course_kv_sp.png") no-repeat;
+  background-size: cover;
+}
+#private .kv h2 {
+  width: 196px;
+  margin: 20px auto 0;
+}
+#private .kv + section {
+  padding-top: 30px;
+}
+#private #sec01 h3 span {
+  width: 290px;
+}
+
+/*////////////////////////////////////////////////////////////
+	 中・高校生以上英会話コース
+/////////////////////////////////////////////////////////////*/
+/* .kv
+-------------------------------------------------- */
+#general .kv {
+  background: url("../image/course/course_kv_sp.png") no-repeat;
+  background-size: cover;
+}
+#general .kv h2 {
+  width: 220px;
+  margin: 20px auto 0;
+}
+#general #sec01 h3 span {
+  width: 230px;
+}
+#general #sec01 h3 span {
+  width: 240px;
+}
+#general #sec01 h3 span {
+  width: 214px;
+}
+
+/*////////////////////////////////////////////////////////////
+	 先生紹介
+/////////////////////////////////////////////////////////////*/
+/* .kv
+-------------------------------------------------- */
+#teacher .kv {
+  background: url("../image/course/course_kv_sp.png") no-repeat;
+  background-size: cover;
+}
+#teacher .kv h2 {
+  width: 87px;
+}
+#teacher .kv + section {
+  padding-top: 20px;
+}
+#teacher section {
+  margin-bottom: 80px;
+}
+#teacher .ttlBorder {
+  margin-bottom: 20px;
+}
+#teacher #sec01 .ttlBorder img {
+  width: 76px;
+}
+#teacher #sec02 .ttlBorder img {
+  width: 114px;
+}
+#teacher .ttlBorder + p {
+  margin-bottom: 30px;
+  text-align: left;
+}
+#teacher #sec02 .ttlBorder + p br {
+  display: none;
+}
+#teacher #sec01 dl + dl {
+  margin-top: 30px;
+}
+#teacher #sec02 dl + dl {
+  margin-top: 20px;
+}
+#teacher section dl dt {
+  padding: 0 0 10px;
+  font-size: 18px;
+}
+#teacher #sec01 dl dt {
+  margin-bottom: 20px;
+}
+#teacher section dl dt span {
+  padding-left: 20px;
+  background-size: 16px auto;
+}
+#teacher section dl dd {
+  padding: 0;
+}
+#teacher #sec01 dd > p,
+#teacher #sec01 dd > div {
+  float: none;
+  width: 100%;
+}
+#teacher #sec01 dd > p {
+  margin-bottom: 20px;
+}
+
+/*////////////////////////////////////////////////////////////
+	 無料体験レッスン
+/////////////////////////////////////////////////////////////*/
+/* .kv
+-------------------------------------------------- */
+#freelesson .kv {
+  background: url("../image/course/course_kv_sp.png") no-repeat;
+  background-size: cover;
+}
+#freelesson .kv h2 {
+  width: 174px;
+}
+#freelesson .kv + section {
+  padding-top: 30px;
+}
+#freelesson .ttlBorder {
+  margin-bottom: 20px;
+}
+#freelesson #sec01 .ttlBorder img {
+  width: 152px;
+}
+#freelesson .ttlBorder + p {
+  margin-bottom: 40px;
+  font-size: 12px;
+  font-weight: normal;
+}
+#freelesson .ttlBorder + p + p {
+  display: none;
+}
+#freelesson .flow h4 {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+#freelesson .flow dl dt {
+  line-height: 35px;
+}
+#freelesson .flow #flow1 dt span {
+  width: 119px;
+}
+#freelesson .flow #flow2 dt span {
+  width: 239px;
+}
+#freelesson .flow #flow3 dt span {
+  width: 299px;
+}
+#freelesson .flow #flow4 dt span {
+  max-width: 357px;
+}
+#freelesson .flow #flow5 dt span {
+  width: 203px;
+}
+#freelesson .flow dl dd {
+  padding: 20px 0 30px;
+}
+#freelesson .flow dl dd > p {
+  padding: 0 10px;
+}
+#freelesson .flow .contactBnr {
+  min-height: 0;
+  margin-top: 10px;
+  padding: 20px;
+}
+#freelesson .flow .contactBnr .infoTxt01 {
+  display: none;
+}
+#freelesson .flow .contactBnr ul {
+  max-width: 670px;
+  margin: 0 auto;
+}
+#freelesson .flow .contactBnr ul li {
+  display: block;
+}
+#freelesson .flow .contactBnr ul li + li {
+  margin-top: 10px;
+}
+#freelesson .flow .contactBnr ul li + li.fax {
+  display: none;
+}
+#freelesson .flow .contactBnr ul .mail {
+  position: static;
+}
+#freelesson .flow .contactBnr ul + p {
+  display: none;
+}
+
+/*////////////////////////////////////////////////////////////
+	 スクール紹介
+/////////////////////////////////////////////////////////////*/
+/* .kv
+-------------------------------------------------- */
+#school .kv {
+  background: url("../image/course/course_kv_sp.png") no-repeat;
+  background-size: cover;
+}
+#school .kv h2 {
+  width: 130px;
+}
+#school .kv + section {
+  padding-top: 30px;
+}
+#school .ttlBorder {
+  margin-bottom: 20px;
+}
+#school #sec01 .ttlBorder img {
+  width: 91px;
+}
+#school #sec02 .ttlBorder img {
+  width: 114px;
+}
+#school section section {
+  margin-top: 40px;
+}
+#school h4 {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+#school .message .msgBox > p,
+#school .message .msgBox > div {
+  float: none;
+  width: 100%;
+}
+#school .message .msgBox > p {
+  margin-bottom: 20px;
+}
+#school .message .msgBox > div {
+  padding: 0;
+}
+#school .message .msgBox > div p + p {
+  margin-top: 0;
+}
+#school .map {
+  margin-bottom: 50px;
+}
+#school .map > div {
+  height: 160px;
+}
+
+/*////////////////////////////////////////////////////////////
+	 お問い合わせ
+/////////////////////////////////////////////////////////////*/
+/* .kv
+-------------------------------------------------- */
+#contact .kv {
+  background: url("../image/course/course_kv_sp.png") no-repeat;
+  background-size: cover;
+}
+#contact .kv h2 {
+  width: 130px;
+}
+#contact .telBox {
+  display: none;
+}
+#contact section {
+  padding-top: 30px;
+}
+#contact h3 span {
+  width: 209px;
+  margin-bottom: 20px;
+}
+#contact h3 + p {
+  display: block;
+  margin-bottom: 25px;
+}
+#contact .formBox {
+  margin-bottom: 30px;
+  padding: 20px;
+}
+#contact .formBox dl + dl {
+  margin-top: 30px;
+}
+#contact .formBox dl + p {
+  margin-top: 10px;
+}
+#contact .formBox dl dt {
+  padding-left: 10px;
+  font-size: 15px;
+}
+#contact .formBox dl dt span {
+  font-size: 12px;
+}
+#contact .formBox + p {
+  margin-bottom: 25px;
+}
+#contact .formBox + p input {
+  width: 120px;
+  height: 60px;
+  background-size: 120px auto;
+}
+/*////////////////////////////////////////////////////////////
+	 採用情報
+/////////////////////////////////////////////////////////////*/
+/* .kv
+-------------------------------------------------- */
+#recruit .kv {
+  background: url("../image/course/course_kv_sp.png") no-repeat;
+  background-size: cover;
+}
+#recruit .kv h2 {
+  width: 88px;
+}
+#recruit .kv + dl {
+  margin: 0 auto 40px;
+  padding: 30px 10px 0;
+}
+#recruit .kv + dl dt {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+#recruit .kv + dl dd {
+  text-align: left;
+}
+#recruit .ttlBorder {
+  margin-bottom: 20px;
+}
+#recruit #sec01 .ttlBorder img {
+  max-width: 350px;
+}
+#recruit .meritBox {
+  margin-bottom: 40px;
+  padding: 10px;
+}
+#recruit .meritBox ul li {
+  width: 47%;
+  margin: -20px 0 0 -2%;
+}
+#recruit .meritBox ul li,
+#recruit .meritBox ul li + li {
+  margin: 20px 0 0 2%;
+}
+#recruit section section {
+  margin-bottom: 40px;
+}
+#recruit h4 {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+#recruit .lessonBox ul {
+  margin-bottom: 20px;
+}
+#recruit .lessonBox ul li {
+  float: left;
+  width: 48%;
+  margin: -20px 0 0 -2%;
+}
+#recruit .lessonBox ul li,
+#recruit .lessonBox ul li + li {
+  margin: 20px 0 0 2%;
+}
+#recruit .lessonBox ul + p {
+  text-align: left;
+}
+#recruit .message .msgBox > p,
+#recruit .message .msgBox > div {
+  float: none;
+  width: 100%;
+}
+#recruit .message .msgBox > p {
+  margin-bottom: 20px;
+}
+#recruit .message .msgBox > div {
+  padding: 0;
+}
+#recruit .message .msgBox > div p + p {
+  margin-top: 0;
+}
+#recruit .recruitBox {
+  text-align: left;
+}
+#recruit .recruitBox > div {
+  width: 100%;
+}
+#recruit .recruitBox dl dt,
+#recruit .recruitBox dl dd {
+  vertical-align: top;
+}
+#recruit .recruitBox dl dt {
+  border-right: 3px solid #778cab;
+}
+
+#courseList .camimg {
+  width: 100%;
+  margin: 0 auto 1em;
+}
+
+.map {
+  width: 100%;
+  margin-right: 0;
+}
+
+/*////////////////////////////////////////////////////////////
+	 アクセス
+/////////////////////////////////////////////////////////////*/
+/* .kv
+-------------------------------------------------- */
+#access .kv {
+  background: url("../image/course/course_kv_sp.png") no-repeat;
+  background-size: cover;
+}
+#access .kv h2 {
+  width: 100px;
+}
+#access #sec01 {
+  padding: 60px 0;
+}
+#access #sec01 .ttlBorder img {
+  width: 80px;
+}
+#access #sec01 .secBox {
+  display: block;
+  padding: 40px 0;
+}
+#access #sec01 .secBox .txtBox {
+  width: 100%;
+  margin: 0 0 30px;
+}
+#access #sec01 .secBox .txtBox .infoBox {
+}
+#access #sec01 .secBox .txtBox .infoBox dl {
+  display: flex;
+  align-items: center;
+}
+#access #sec01 .secBox .txtBox .infoBox dl + dl {
+  margin: 20px 0 0;
+}
+#access #sec01 .secBox .txtBox .infoBox dl dt {
+  width: 60px;
+  padding: 10px 0;
+}
+#access #sec01 .secBox .txtBox .infoBox dl dd {
+  padding: 10px 15px;
+  border-left: 4px solid #778cab;
+}
+#access #sec01 .secBox .txtBox .infoBox dl dd .accessBtn {
+  max-width: 180px;
+  margin: 10px 0 0;
+}
+#access #sec01 .secBox .mapPanel {
+  width: 100%;
+}
+#access #sec01 .secBox .mapBox {
+  padding: 0 0 70%;
+}
+#access #sec01 .photoList {
+  display: block;
+  max-width: 400px;
+  margin: 0 auto;
+}
+#access #sec01 .photoList .photoBox {
+  width: 100%;
+}
+#access #sec01 .photoList .photoBox + .photoBox {
+  margin: 30px 0 0;
+}

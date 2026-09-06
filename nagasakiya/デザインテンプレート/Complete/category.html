@@ -1,0 +1,845 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,minimum-scale=1.0"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!-- css-->
+    <link
+      rel="stylesheet"
+      href="https://gigaplus.makeshop.jp/2068nagasaki/css/reset.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://gigaplus.makeshop.jp/2068nagasaki/css/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://gigaplus.makeshop.jp/2068nagasaki/css/common.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://gigaplus.makeshop.jp/2068nagasaki/css/layout.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 1024px)"
+      type="text/css"
+      href="https://gigaplus.makeshop.jp/2068nagasaki/css/common_sp.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 1024px)"
+      type="text/css"
+      href="https://gigaplus.makeshop.jp/2068nagasaki/css/layout_sp.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://gigaplus.makeshop.jp/2068nagasaki/css/attach.css"
+    />
+    <!-- js-->
+    <script src="https://gigaplus.makeshop.jp/2068nagasaki/js/jquery-1.11.3.min.js"></script>
+    <script src="https://gigaplus.makeshop.jp/2068nagasaki/js/common.js"></script>
+    <script src="https://gigaplus.makeshop.jp/2068nagasaki/js/scrollAnimation.js"></script>
+    <!-- title-->
+    <title><{$page.title}></title>
+    <{$makeshop.head}>
+  </head>
+
+  <body class="page">
+    <!-- ▽header▽-->
+    <{$makeshop.body_top}> <{$module.custom_header}>
+    <!-- △header△-->
+    <!-- ▽メイン▽-->
+    <main class="main" id="itemList">
+      <div class="itemListPageMain">
+        <div class="secWrap01">
+          <div class="secContainer">
+            <div class="catePanel">
+              <h2>カテゴリー</h2>
+              <ul class="side-category-list">
+                <{section name=i loop=$category_menu.list}> <{if
+                $category_menu.list[i].child_category.has_item}>
+                <li
+                  class="side-category-item"
+                  data-category-code="<{$category_menu.list[i].code}>"
+                >
+                  <p class="accordion active">
+                    <{$category_menu.list[i].name}>
+                  </p>
+                  <ul class="side-category-child-item">
+                    <!--カテゴリー一覧へのリンクを出しておきたい場合は下記<li>タグをアクティブ
+                        <li><a href="<{$category_menu.list[i].url}>" class="child-item">すべての<{$category_menu.list[i].name}></a></li>
+                        -->
+                    <{section name=j
+                    loop=$category_menu.list[i].child_category.list}>
+                    <li
+                      class="<{if $category_menu.list[i].child_category.list[j].name == 'メンズ'}>mens<{elseif $category_menu.list[i].child_category.list[j].name == 'レディース'}>ladies<{else}>other-item<{/if}>"
+                    >
+                      <a
+                        href="<{$category_menu.list[i].child_category.list[j].url}>"
+                        class="child-item"
+                        ><{$category_menu.list[i].child_category.list[j].name}></a
+                      >
+                    </li>
+                    <{/section}>
+                  </ul>
+                </li>
+                <{else}>
+                <li
+                  class="side-category-item"
+                  data-category-code="<{$category_menu.list[i].code}>"
+                >
+                  <a href="<{$category_menu.list[i].url}>"
+                    ><{$category_menu.list[i].name}></a
+                  >
+                </li>
+                <{/if}> <{/section}> <{if $bulk_menu.has_item}> <{section name=i
+                loop=$bulk_menu.list}>
+                <div class="side-category-item">
+                  <a href="<{$bulk_menu.list[i].url}>"
+                    ><{$bulk_menu.list[i].name}></a
+                  >
+                </div>
+                <{/section}> <{/if}>
+              </ul>
+            </div>
+            <div class="itemPanel">
+              <h2 id="categoryTitle"><{$category.name}></h2>
+              <div class="listTable">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>商品名</th>
+                      <th>価格</th>
+                      <th>サイズ</th>
+                      <th>数量</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <{if $category.item.has_item}> <{section name=i
+                    loop=$category.item.list}>
+                    <tr>
+                      <td>
+                        <dl>
+                          <dt>商品名</dt>
+                          <dd>
+                            <p><{$category.item.list[i].name|escape:html}></p>
+                          </dd>
+                        </dl>
+                      </td>
+                      <td>
+                        <dl>
+                          <dt>価格</dt>
+                          <dd>
+                            <{if $category.item.list[i].is_sale}>
+                            <p class="original-price">
+                              ￥<{$category.item.list[i].original_price|number_format}>
+                            </p>
+                            <p class="sale-price">
+                              ￥<{$category.item.list[i].price|number_format}>（税込）
+                            </p>
+                            <{else}>
+                            <p>
+                              ￥<{$category.item.list[i].price|number_format}>（税込）
+                            </p>
+                            <{/if}>
+                          </dd>
+                        </dl>
+                      </td>
+                      <td>
+                        <dl>
+                          <dt>サイズ</dt>
+                          <dd>
+                            <{* バリエーションがある場合 *}> <{if
+                            $category.item.list[i].has_variation}>
+                            <select
+                              name="variation_id_<{$smarty.section.i.index}>"
+                              class="variation-select"
+                              data-index="<{$smarty.section.i.index}>"
+                            >
+                              <option value="">未選択</option>
+                              <{section name=v
+                              loop=$category.item.list[i].variation.list}>
+                              <option
+                                value="<{$category.item.list[i].variation.list[v].id}>"
+                                data-stock="<{$category.item.list[i].variation.list[v].stock}>"
+                              >
+                                <{$category.item.list[i].variation.list[v].name}>
+                              </option>
+                              <{/section}>
+                            </select>
+
+                            <{* オプションがある場合 *}> <{elseif
+                            $category.item.list[i].has_option &&
+                            $category.item.list[i].option.has_item}> <{if
+                            $category.item.list[i].option.option1.has_item}>
+                            <select
+                              name="option1_id_<{$smarty.section.i.index}>"
+                              class="option-select"
+                              data-index="<{$smarty.section.i.index}>"
+                            >
+                              <option value="">未選択</option>
+                              <{section name=o1
+                              loop=$category.item.list[i].option.option1.list}>
+                              <option
+                                value="<{$category.item.list[i].option.option1.list[o1].id}>"
+                              >
+                                <{$category.item.list[i].option.option1.list[o1].name}>
+                              </option>
+                              <{/section}>
+                            </select>
+                            <{/if}> <{if
+                            $category.item.list[i].option.option2.has_item}>
+                            <select
+                              name="option2_id_<{$smarty.section.i.index}>"
+                              class="option-select option2-select"
+                              data-index="<{$smarty.section.i.index}>"
+                            >
+                              <option value="">未選択</option>
+                              <{section name=o2
+                              loop=$category.item.list[i].option.option2.list}>
+                              <option
+                                value="<{$category.item.list[i].option.option2.list[o2].id}>"
+                              >
+                                <{$category.item.list[i].option.option2.list[o2].name}>
+                              </option>
+                              <{/section}>
+                            </select>
+                            <{/if}> <{else}>
+                            <span>-</span>
+                            <{/if}>
+                          </dd>
+                        </dl>
+                      </td>
+                      <td>
+                        <dl>
+                          <dt>数量</dt>
+                          <dd>
+                            <{if $category.item.list[i].is_soldout}>
+                            <input type="number" min="0" value="0" disabled />
+                            <{else}>
+                            <input
+                              type="number"
+                              name="quantity_<{$smarty.section.i.index}>"
+                              min="0"
+                              value="0"
+                              data-index="<{$smarty.section.i.index}>"
+                              data-system-code="<{$category.item.list[i].system_code}>"
+                              class="quantity-input"
+                            />
+                            <{/if}>
+                          </dd>
+                        </dl>
+                      </td>
+                    </tr>
+                    <{/section}> <{else}>
+                    <tr>
+                      <td colspan="4">
+                        <p class="empty">このカテゴリーには商品がありません</p>
+                      </td>
+                    </tr>
+                    <{/if}>
+                  </tbody>
+                </table>
+              </div>
+              <div class="cautionTxt">
+                <div class="txt">
+                  <p>
+                    当店では、商品のご使用目的・方法・結果等について一切の責任を負いません。<br />ご購入後のご使用は、お客様の自己判断・自己責任にてお願いいたします。<br />注意事項が入ります。注意事項が入ります。注意事項が入ります。注意事項が入ります。注意事項が入ります。注意事項が入ります。注意事項が入ります。注意事項が入ります。注意事項が入ります。注意事項が入ります。注意事項が入ります。
+                  </p>
+                </div>
+              </div>
+              <div class="checkItem agreeCheck">
+                <label>
+                  <input type="checkbox" id="agreeCheckbox" /><span
+                    >同意する</span
+                  >
+                </label>
+              </div>
+              <button type="button" id="submitBtn" disabled>
+                <span>購入する</span>
+              </button>
+              <div class="bnrShoppingGuide">
+                <a href="/view/page/shopping-guide"
+                  ><img
+                    src="https://gigaplus.makeshop.jp/2068nagasaki/image/common/bnr_shopping_guide.png"
+                    alt="ショッピングガイド"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- △メイン△-->
+    <!-- ▽footer▽-->
+    <{$module.custom_footer}>
+    <!-- △footer△-->
+    <script>
+      $(document).ready(function () {
+        // サイドメニューの絞り込み（現在の高校と「その他の商品」のみ表示）
+        var currentUrl = window.location.pathname;
+
+        // URLからカテゴリーコードを抽出（例: /view/category/ichinomiya-h-m → ichinomiya-h-m）
+        var categoryCodeMatch = currentUrl.match(/\/view\/category\/([^\/]+)/);
+        var currentCategoryCode = categoryCodeMatch ? categoryCodeMatch[1] : "";
+
+        console.log("現在のURL:", currentUrl);
+        console.log("現在のカテゴリーコード:", currentCategoryCode);
+
+        if (currentCategoryCode) {
+          // 親カテゴリーコードを推定（例: ichinomiya-h-m → ichinomiya-h）
+          var parentCategoryCode = "";
+
+          // ハイフンで分割して最初の2つの部分を親カテゴリーとして扱う
+          var parts = currentCategoryCode.split("-");
+          if (parts.length >= 2) {
+            parentCategoryCode = parts[0] + "-" + parts[1]; // 例: ichinomiya-h
+          } else {
+            parentCategoryCode = currentCategoryCode; // すでに親カテゴリー
+          }
+
+          console.log("親カテゴリーコード:", parentCategoryCode);
+
+          // 各カテゴリー項目をチェック
+          $(".side-category-item").each(function() {
+            var $item = $(this);
+            var categoryCode = $item.data("category-code");
+            var categoryName = $item.find(".accordion").text().trim();
+
+            // アンカータグのみの場合
+            if (!categoryName) {
+              categoryName = $item.find("a").first().text().trim();
+            }
+
+            console.log("カテゴリー:", categoryName, "コード:", categoryCode);
+
+            // 現在のカテゴリーコードが、この親カテゴリーコードで始まるかチェック
+            var isCurrentCategory = currentCategoryCode.indexOf(categoryCode) === 0;
+            var isOtherProducts = categoryName === "その他の商品" || categoryCode === "other";
+
+            // 現在のカテゴリーまたは「その他の商品」以外は非表示
+            if (!isCurrentCategory && !isOtherProducts) {
+              $item.hide();
+            } else {
+              console.log("→ 表示:", categoryName);
+            }
+          });
+
+          // h2タイトルに親カテゴリー名を追加（子カテゴリーの場合）
+          var $currentCategoryItem = $(".side-category-item[data-category-code='" + parentCategoryCode + "']:visible");
+          if ($currentCategoryItem.length > 0 && currentCategoryCode !== parentCategoryCode) {
+            // 子カテゴリーの場合
+            var parentCategoryName = $currentCategoryItem.find(".accordion").text().trim();
+            if (!parentCategoryName) {
+              parentCategoryName = $currentCategoryItem.find("a").first().text().trim();
+            }
+
+            var currentTitle = $("#categoryTitle").text();
+            var newTitle = parentCategoryName + " : " + currentTitle;
+            $("#categoryTitle").text(newTitle);
+
+            console.log("タイトル更新:", currentTitle, "→", newTitle);
+          }
+        }
+
+        // 商品情報をコンソールに表示
+        var categoryData = {
+          name: "<{$category.name|escape:javascript}>",
+          items: [
+            <{section name=i loop=$category.item.list}>
+            {
+              index: <{$smarty.section.i.index}>,
+              name: "<{$category.item.list[i].name|escape:javascript}>",
+              system_code: "<{$category.item.list[i].system_code}>",
+              price: "<{$category.item.list[i].price}>",
+              is_sale: <{if $category.item.list[i].is_sale}>true<{else}>false<{/if}>,
+              has_variation: <{if $category.item.list[i].has_variation}>true<{else}>false<{/if}>,
+              has_option: <{if $category.item.list[i].has_option}>true<{else}>false<{/if}>,
+              is_soldout: <{if $category.item.list[i].is_soldout}>true<{else}>false<{/if}>,
+              <{if $category.item.list[i].has_variation}>
+              variations: [
+                <{section name=v loop=$category.item.list[i].variation.list}>
+                {
+                  id: "<{$category.item.list[i].variation.list[v].id}>",
+                  name: "<{$category.item.list[i].variation.list[v].name|escape:javascript}>",
+                  stock: "<{$category.item.list[i].variation.list[v].stock}>"
+                }<{if !$smarty.section.v.last}>,<{/if}>
+                <{/section}>
+              ],
+              <{/if}>
+              <{if $category.item.list[i].has_option}>
+              options: {
+                <{if $category.item.list[i].option.option1.has_item}>
+                option1: [
+                  <{section name=o1 loop=$category.item.list[i].option.option1.list}>
+                  {
+                    id: "<{$category.item.list[i].option.option1.list[o1].id}>",
+                    name: "<{$category.item.list[i].option.option1.list[o1].name|escape:javascript}>"
+                  }<{if !$smarty.section.o1.last}>,<{/if}>
+                  <{/section}>
+                ],
+                <{/if}>
+                <{if $category.item.list[i].option.option2.has_item}>
+                option2: [
+                  <{section name=o2 loop=$category.item.list[i].option.option2.list}>
+                  {
+                    id: "<{$category.item.list[i].option.option2.list[o2].id}>",
+                    name: "<{$category.item.list[i].option.option2.list[o2].name|escape:javascript}>"
+                  }<{if !$smarty.section.o2.last}>,<{/if}>
+                  <{/section}>
+                ]
+                <{/if}>
+              }
+              <{/if}>
+            }<{if !$smarty.section.i.last}>,<{/if}>
+            <{/section}>
+          ]
+        };
+
+        console.log("=== カテゴリー情報 ===");
+        console.log(categoryData);
+        console.log("=====================");
+
+        console.log("=== 全商品データ ===");
+        console.log(categoryData.items);
+        console.log("===================");
+
+        console.log("=== データ構造の説明 ===");
+        console.log("MakeShopでは「バリエーション」と「オプショングループ」は別機能で併用不可です");
+        console.log("has_variation=true の商品: variations配列にデータあり、optionsなし");
+        console.log("has_option=true の商品: options配列にデータあり、variationsなし");
+        console.log("");
+        categoryData.items.forEach(function(item, index) {
+          console.log("【商品" + index + "】 " + item.name);
+          console.log("  商品コード:", item.system_code);
+          console.log("  has_variation:", item.has_variation);
+          console.log("  has_option:", item.has_option);
+          if (item.variations) {
+            console.log("  &#10003; バリエーション数:", item.variations.length);
+            item.variations.forEach(function(v) {
+              console.log("    - " + v.name + " (ID:" + v.id + ", 在庫:" + v.stock + ")");
+            });
+          }
+          if (item.options) {
+            console.log("  &#10003; オプション:");
+            if (item.options.option1) {
+              console.log("    オプション1:", item.options.option1.length + "個");
+            }
+            if (item.options.option2) {
+              console.log("    オプション2:", item.options.option2.length + "個");
+            }
+          }
+          console.log("");
+        });
+        console.log("======================");
+
+        // 商品詳細ページから情報を取得する関数
+        function fetchProductDetailPage(systemCode, itemIndex) {
+          var detailUrl = "https://2068nagasaki.shop2.makeshop.jp/view/item/" + systemCode;
+
+          return fetch(detailUrl)
+            .then(function(response) {
+              if (!response.ok) {
+                throw new Error("HTTP " + response.status);
+              }
+              return response.text();
+            })
+            .then(function(html) {
+              var parser = new DOMParser();
+              var doc = parser.parseFromString(html, "text/html");
+
+              console.log("=== 商品詳細ページ取得: " + systemCode + " ===");
+
+              // 商品名を取得
+              var productNameEl = doc.querySelector(".item-title");
+              var productName = productNameEl ? productNameEl.textContent.trim() : "";
+              console.log("商品名:", productName);
+
+              // MakeShopのオプション選択を探す（data-id属性で特定）
+              var options = [];
+              var option1Select = doc.querySelector("select[data-id='makeshop-item-option1']");
+              var option2Select = doc.querySelector("select[data-id='makeshop-item-option2']");
+
+              // オプション1を処理
+              if (option1Select) {
+                var option1Label = "";
+                var labelEl = option1Select.closest(".makeshop-option-wrap");
+                if (labelEl) {
+                  var labelText = labelEl.querySelector(".makeshop-option-label");
+                  if (labelText) {
+                    option1Label = labelText.textContent.trim();
+                  }
+                }
+
+                var option1Items = [];
+                var option1Options = option1Select.querySelectorAll("option");
+                option1Options.forEach(function(opt) {
+                  var value = opt.value;
+                  var text = opt.textContent.trim();
+                  // value="0"の"--選択してください"はスキップ
+                  if (value && value !== "0") {
+                    option1Items.push({ value: value, text: text });
+                  }
+                });
+
+                if (option1Items.length > 0) {
+                  options.push({
+                    type: "option1",
+                    label: option1Label || "オプション1",
+                    items: option1Items
+                  });
+                  console.log("オプション1:", option1Label, "-", option1Items.length + "個");
+                }
+              }
+
+              // オプション2を処理
+              if (option2Select) {
+                var option2Label = "";
+                var labelEl = option2Select.closest(".makeshop-option-wrap");
+                if (labelEl) {
+                  var labelText = labelEl.querySelector(".makeshop-option-label");
+                  if (labelText) {
+                    option2Label = labelText.textContent.trim();
+                  }
+                }
+
+                var option2Items = [];
+                var option2Options = option2Select.querySelectorAll("option");
+                option2Options.forEach(function(opt) {
+                  var value = opt.value;
+                  var text = opt.textContent.trim();
+                  if (value && value !== "0") {
+                    option2Items.push({ value: value, text: text });
+                  }
+                });
+
+                if (option2Items.length > 0) {
+                  options.push({
+                    type: "option2",
+                    label: option2Label || "オプション2",
+                    items: option2Items
+                  });
+                  console.log("オプション2:", option2Label, "-", option2Items.length + "個");
+                }
+              }
+
+              console.log("========================");
+
+              return {
+                systemCode: systemCode,
+                itemIndex: itemIndex,
+                productName: productName,
+                options: options
+              };
+            })
+            .catch(function(error) {
+              console.error("商品詳細ページ取得エラー(" + systemCode + "):", error);
+              return null;
+            });
+        }
+
+        // カテゴリページのセレクトボックスを更新する関数
+        function updateCategoryPageSelects(data) {
+          if (!data || !data.options || data.options.length === 0) {
+            return;
+          }
+
+          console.log("=== セレクトボックス更新: " + data.systemCode + " ===");
+
+          // 該当する商品の行を探す
+          var $targetRow = null;
+          $(".quantity-input").each(function() {
+            if ($(this).data("system-code") === data.systemCode) {
+              $targetRow = $(this).closest("tr");
+              return false; // break
+            }
+          });
+
+          if (!$targetRow) {
+            console.log("対象行が見つかりません");
+            return;
+          }
+
+          // サイズ選択のセルを探す
+          var $sizeCell = $targetRow.find("dd").filter(function() {
+            var dt = $(this).prev("dt");
+            return dt.text().trim() === "サイズ";
+          });
+
+          if ($sizeCell.length === 0) {
+            console.log("サイズセルが見つかりません");
+            return;
+          }
+
+          // 既存のセレクトボックスをクリア
+          $sizeCell.empty();
+
+          // 取得したオプションでセレクトボックスを作成
+          data.options.forEach(function(option) {
+            var selectName = option.type === "option1" ? "option1_id_" + data.itemIndex : "option2_id_" + data.itemIndex;
+            var selectClass = option.type === "option1" ? "option-select" : "option-select option2-select";
+
+            var $select = $("<select>")
+              .attr("name", selectName)
+              .addClass(selectClass)
+              .attr("data-index", data.itemIndex);
+
+            // 初期オプション
+            $select.append($("<option>").val("").text("選択してください"));
+
+            // オプション項目を追加
+            option.items.forEach(function(item) {
+              $select.append($("<option>").val(item.value).text(item.text));
+            });
+
+            $sizeCell.append($select);
+            console.log(option.label + "のセレクトボックスを作成しました (" + option.items.length + "項目)");
+          });
+        }
+
+        // 全商品の詳細ページを順次取得
+        function fetchAllProductDetails() {
+          if (categoryData.items.length === 0) {
+            return;
+          }
+
+          console.log("=== 全商品の詳細ページ取得開始 ===");
+          console.log("対象商品数:", categoryData.items.length);
+
+          // 順次取得（並列にすると負荷が高くなるため）
+          var index = 0;
+          function fetchNext() {
+            if (index >= categoryData.items.length) {
+              console.log("=== 全商品の詳細ページ取得完了 ===");
+              return;
+            }
+
+            var item = categoryData.items[index];
+            var currentIndex = index;
+            index++;
+
+            // テンプレートタグでオプションデータがある場合はスキップ
+            if (item.has_option && item.options && (item.options.option1 || item.options.option2)) {
+              console.log("商品" + currentIndex + "はテンプレートにデータあり、スキップ");
+              // 次の商品へ（500msの遅延を入れる）
+              setTimeout(fetchNext, 500);
+              return;
+            }
+
+            // バリエーションデータがある場合もスキップ
+            if (item.has_variation && item.variations && item.variations.length > 0) {
+              console.log("商品" + currentIndex + "はバリエーションあり、スキップ");
+              setTimeout(fetchNext, 500);
+              return;
+            }
+
+            // 詳細ページを取得
+            fetchProductDetailPage(item.system_code, currentIndex)
+              .then(function(data) {
+                if (data && data.options && data.options.length > 0) {
+                  updateCategoryPageSelects(data);
+                }
+                // 次の商品へ（サーバー負荷を考慮して500msの遅延）
+                setTimeout(fetchNext, 500);
+              });
+          }
+
+          fetchNext();
+        }
+
+        // ページロード後、詳細ページ取得を開始
+        setTimeout(function() {
+          fetchAllProductDetails();
+        }, 1000);
+
+        // 同意チェックボックスの制御
+        $("#agreeCheckbox").on("change", function () {
+          $("#submitBtn").prop("disabled", !this.checked);
+        });
+
+        // 購入ボタンクリック時の処理
+        $("#submitBtn").on("click", function (e) {
+          e.preventDefault();
+
+          var $btn = $(this);
+
+          // 送信するデータを収集
+          var itemsData = [];
+          var hasError = false;
+
+          $(".quantity-input").each(function () {
+            var $input = $(this);
+            var quantity = parseInt($input.val()) || 0;
+
+            if (quantity > 0) {
+              var index = $input.data("index");
+              var systemCode = $input.data("system-code");
+
+              // 同じ行（tr）内のselect要素を探す
+              var $row = $input.closest("tr");
+              var $variationSelect = $row.find(".variation-select");
+              var $option1Select = $row
+                .find(".option-select")
+                .not(".option2-select");
+              var $option2Select = $row.find(".option2-select");
+
+              var variationId = "";
+              var option1Id = "";
+              var option2Id = "";
+
+              // バリエーションがある場合
+              if ($variationSelect.length > 0) {
+                variationId = $variationSelect.val() || "";
+                if (!variationId) {
+                  alert("サイズを選択してください");
+                  hasError = true;
+                  return false;
+                }
+                // バリエーションの場合、system_codeをバリエーションIDに置き換え
+                systemCode = variationId;
+              }
+
+              // 存在する要素から値を取得
+              if ($option1Select.length > 0) {
+                option1Id = $option1Select.val() || "";
+                if (!option1Id) {
+                  alert("サイズを選択してください");
+                  hasError = true;
+                  return false;
+                }
+              }
+              if ($option2Select.length > 0) {
+                option2Id = $option2Select.val() || "";
+                if (!option2Id) {
+                  alert("サイズを選択してください");
+                  hasError = true;
+                  return false;
+                }
+              }
+
+              // brand_info形式: コード区分,商品コード,数量,定期購入フラグ,オプション1,オプション2,オプショングループ
+              var brandInfo =
+                "1," +
+                systemCode +
+                "," +
+                quantity +
+                ",N," +
+                option1Id +
+                "," +
+                option2Id +
+                ",";
+
+              itemsData.push({
+                system_code: systemCode,
+                brand_info: brandInfo,
+              });
+
+              console.log("=== カート追加情報 ===");
+              console.log("商品コード:", systemCode);
+              console.log("数量:", quantity);
+              console.log("バリエーションID:", variationId || "なし");
+              console.log("オプション1 ID:", option1Id || "なし");
+              console.log("オプション2 ID:", option2Id || "なし");
+              console.log("送信するbrand_info:", brandInfo);
+              console.log("====================");
+            }
+          });
+
+          if (hasError) {
+            return;
+          }
+
+          if (itemsData.length === 0) {
+            alert("数量を1以上に設定してください");
+            return;
+          }
+
+          // ボタンを無効化
+          $btn.prop("disabled", true).text("追加中...");
+
+          // 各商品を順次カートに追加
+          var currentIndex = 0;
+
+          var addNextItem = function () {
+            if (currentIndex >= itemsData.length) {
+              // 全ての商品を追加完了
+              console.log("全ての商品をカートに追加しました");
+              $btn.text("追加しました&#10003;");
+
+              // カートページへリダイレクト
+              setTimeout(function () {
+                window.location.href = "/shop/basket.html";
+              }, 1000);
+              return;
+            }
+
+            var item = itemsData[currentIndex];
+            var iframeName = "cart-iframe-" + Date.now() + "-" + currentIndex;
+
+            // iframeを作成
+            var $iframe = $(
+              '<iframe name="' +
+                iframeName +
+                '" style="display:none;"></iframe>',
+            );
+            $("body").append($iframe);
+
+            // フォームを作成
+            var $tempForm = $("<form>", {
+              action:
+                "https://2068nagasaki.shop2.makeshop.jp/api/basket/add.html",
+              method: "post",
+              target: iframeName,
+              "accept-charset": "EUC-JP",
+              style: "display:none;",
+            });
+
+            $tempForm.append(
+              $("<input>", {
+                type: "hidden",
+                name: "brand_info",
+                value: item.brand_info,
+              }),
+            );
+
+            $tempForm.append(
+              $("<input>", {
+                type: "hidden",
+                name: "system_code",
+                value: item.system_code,
+              }),
+            );
+
+            $("body").append($tempForm);
+            $tempForm[0].submit();
+
+            console.log(
+              "商品 " + (currentIndex + 1) + "/" + itemsData.length + " 追加中",
+            );
+
+            // フォームを削除
+            setTimeout(function () {
+              $tempForm.remove();
+            }, 100);
+
+            // 次の商品を追加（500ms後）
+            currentIndex++;
+            setTimeout(addNextItem, 500);
+          };
+
+          // 最初の商品から追加開始
+          addNextItem();
+        });
+      });
+    </script>
+    <{$makeshop.body_bottom}>
+  </body>
+</html>

@@ -1,0 +1,150 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--color-background-secondary);font-family:'Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif;display:flex;justify-content:center;padding:24px 0 32px}
+
+.phone-frame{width:320px;background:#F6F3EE;border-radius:28px;overflow:hidden;border:6px solid #2A3828;position:relative}
+.phone-notch{width:80px;height:18px;background:#2A3828;border-radius:0 0 12px 12px;margin:0 auto}
+
+.phone-body{overflow:hidden}
+
+.ph{text-align:center;padding:20px 18px 10px}
+.ph-eyebrow{font-size:9px;letter-spacing:0.18em;color:#7A9982;margin-bottom:6px}
+.ph-title{font-size:16px;font-weight:500;color:#2A3828;font-family:'Hiragino Mincho ProN','Georgia',serif;line-height:1.4;margin-bottom:4px}
+.ph-sub{font-size:10px;color:#7A746E;line-height:1.6}
+
+.ring-area{position:relative;width:200px;margin:8px auto 0;aspect-ratio:1}
+.ring-area svg{width:100%;height:100%}
+
+.tl-dots{display:flex;align-items:flex-start;justify-content:center;gap:0;padding:10px 12px 4px;position:relative}
+.tl-dots::before{content:'';position:absolute;top:18px;left:20px;right:20px;height:1px;background:#C8D0C8;z-index:0}
+.tl-item{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;cursor:pointer;position:relative;z-index:1}
+.tl-dot{width:9px;height:9px;border-radius:50%;background:#C8D0C8;transition:all 0.25s;flex-shrink:0}
+.tl-item.active .tl-dot{background:#A86A52;transform:scale(1.4)}
+.tl-year{font-size:8px;color:#9A9490;white-space:nowrap;line-height:1.3;text-align:center}
+.tl-item.active .tl-year{color:#A86A52;font-weight:500}
+
+.hint-text{text-align:center;font-size:9px;color:#B0A8A0;margin:2px 0 8px;letter-spacing:0.04em}
+
+.card-area{margin:0 12px 12px;background:#FDFBF8;border:0.5px solid #D8D0C4;border-radius:10px;padding:14px 15px;min-height:140px;transition:opacity 0.2s}
+.card-year-tag{display:inline-block;font-size:8px;font-weight:500;letter-spacing:0.1em;color:#4A6450;background:#E8F0E8;padding:2px 8px;border-radius:20px;margin-bottom:7px}
+.card-title{font-size:13px;font-weight:500;color:#2A3828;font-family:'Hiragino Mincho ProN','Georgia',serif;line-height:1.4;margin-bottom:7px}
+.card-body{font-size:10px;color:#5A534C;line-height:1.8;margin-bottom:8px}
+.card-quote{background:#F2EEE8;border-left:2px solid #4A6450;padding:7px 10px;border-radius:0 5px 5px 0;margin-bottom:7px}
+.card-quote p{font-size:9.5px;color:#3A4A38;line-height:1.75;font-family:'Hiragino Mincho ProN','Georgia',serif}
+.card-stat{font-size:9px;color:#7A9982}
+
+.future-band{background:#2A3828;padding:16px 18px;text-align:center}
+.future-text{font-size:11px;color:#F0EDE6;font-family:'Hiragino Mincho ProN','Georgia',serif;line-height:1.9}
+.future-sub{font-size:8px;color:#7A9A82;margin-top:4px;letter-spacing:0.05em}
+
+.phone-home{width:80px;height:4px;background:#2A382840;border-radius:2px;margin:8px auto 10px}
+</style>
+
+<h2 class="sr-only">スマートフォン表示：年輪タイムラインページのレイアウト</h2>
+
+<div class="phone-frame">
+  <div class="phone-notch"></div>
+  <div class="phone-body">
+
+    <div class="ph">
+      <p class="ph-eyebrow">HISTORY — 会社の歩み</p>
+      <p class="ph-title">根を張り続けた、<br>20年の年輪。</p>
+      <p class="ph-sub">年号をタップして歩みをご覧ください</p>
+    </div>
+
+    <div class="ring-area">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" id="mSvg">
+        <circle cx="100" cy="100" r="93" fill="none" stroke="#B8C8B8" stroke-width="1" stroke-dasharray="4 3" opacity="0.5"/>
+        <circle class="mr" data-id="2023" cx="100" cy="100" r="80" fill="none" stroke="#4A6450" stroke-width="7" opacity="0.13"/>
+        <circle class="mr" data-id="2020" cx="100" cy="100" r="65" fill="none" stroke="#4A6450" stroke-width="7" opacity="0.20"/>
+        <circle class="mr" data-id="2018" cx="100" cy="100" r="52" fill="none" stroke="#4A6450" stroke-width="6" opacity="0.28"/>
+        <circle class="mr" data-id="2015" cx="100" cy="100" r="40" fill="none" stroke="#4A6450" stroke-width="6" opacity="0.38"/>
+        <circle class="mr" data-id="2012" cx="100" cy="100" r="29" fill="none" stroke="#4A6450" stroke-width="5" opacity="0.50"/>
+        <circle class="mr" data-id="2008" cx="100" cy="100" r="19" fill="none" stroke="#4A6450" stroke-width="5" opacity="0.65"/>
+        <circle class="mr" data-id="2005" cx="100" cy="100" r="10" fill="#4A6450" opacity="0.85"/>
+        <text x="100" y="103" text-anchor="middle" font-size="6" fill="#F0EDE6" font-family="sans-serif" style="pointer-events:none">創業</text>
+        <circle id="mActive" cx="100" cy="100" r="10" fill="none" stroke="#A86A52" stroke-width="2" opacity="1" style="pointer-events:none;transition:r 0.3s"/>
+      </svg>
+    </div>
+
+    <p class="hint-text">↓ 下の年号をタップ</p>
+
+    <div class="tl-dots" id="mDots">
+      <div class="tl-item active" data-id="2005"><div class="tl-dot"></div><span class="tl-year">2005</span></div>
+      <div class="tl-item" data-id="2008"><div class="tl-dot"></div><span class="tl-year">2008</span></div>
+      <div class="tl-item" data-id="2012"><div class="tl-dot"></div><span class="tl-year">2012</span></div>
+      <div class="tl-item" data-id="2015"><div class="tl-dot"></div><span class="tl-year">2015</span></div>
+      <div class="tl-item" data-id="2018"><div class="tl-dot"></div><span class="tl-year">2018</span></div>
+      <div class="tl-item" data-id="2020"><div class="tl-dot"></div><span class="tl-year">2020</span></div>
+      <div class="tl-item" data-id="2023"><div class="tl-dot"></div><span class="tl-year">現在</span></div>
+    </div>
+
+    <div class="card-area" id="mCard">
+      <span class="card-year-tag" id="mYear">2005年10月</span>
+      <p class="card-title" id="mTitle">高槻の地に、根を下ろす。</p>
+      <p class="card-body" id="mBody">大阪府高槻市にて株式会社ケンモクを創業。介護・福祉用品のレンタル・販売事業をスタート。</p>
+      <div class="card-quote"><p id="mQuote">「地域の方々の暮らしに、安心と安全を届けたい」——その一心から始まりました。</p></div>
+      <p class="card-stat" id="mStat">創業メンバー数名からのスタート</p>
+    </div>
+
+    <div class="future-band">
+      <p class="future-text">まだ描かれていない年輪が、<br>これからも積み重なっていく。</p>
+      <p class="future-sub">— 代表取締役　上野一憲</p>
+    </div>
+
+    <div class="phone-home"></div>
+  </div>
+</div>
+
+<script>
+const mData = {
+  '2005':{year:'2005年10月',title:'高槻の地に、根を下ろす。',body:'大阪府高槻市にて株式会社ケンモクを創業。介護・福祉用品のレンタル・販売事業をスタート。',quote:'「地域の方々の暮らしに、安心と安全を届けたい」——その一心から始まりました。',stat:'創業メンバー数名からのスタート',r:10},
+  '2008':{year:'2008年',title:'家事代行事業へ、枝を伸ばす。',body:'ダスキン野田メリーメイドの家事代行サービスを開始。日常の暮らしそのものを支える事業へと領域を広げる。',quote:'「必要な支えを、必要な人へ。」より多くの方への貢献につながると確信しました。',stat:'',r:19},
+  '2012':{year:'2012年',title:'箕面へ、根を広げる。',body:'大阪府箕面市に第2のステーションを開設。高槻エリアを超え、より広い地域へサービスを届ける体制を整える。',quote:'一つの地域で信頼を積み上げてきたからこそ、次の根を張る場所が見えてきました。',stat:'拠点：高槻・箕面',r:29},
+  '2015':{year:'2015年',title:'スタッフとともに、幹を太くする。',body:'クレド（行動指針）を策定。「Agility・Grit・Empathy」の3つの強みが会社の文化として根付いていく。',quote:'会社が大きくなるほど、大切なのは「どんな人たちの集まりか」だと実感しました。',stat:'',r:40},
+  '2018':{year:'2018年',title:'奈良へ、年輪を刻む。',body:'奈良県生駒市に第3のステーションを開設。大阪・奈良にまたがるエリアカバーが実現。',quote:'根を張ることと、広がることは矛盾しない。それぞれの地域で丁寧に根付くことを大切にしてきました。',stat:'拠点：高槻・箕面・奈良生駒',r:52},
+  '2020':{year:'2020年',title:'フロントオフィスで、より迅速に。',body:'全社の事務機能を集約したフロントオフィスを設立。スタッフがより現場・お客様に集中できる体制へ。',quote:'「すぐに動ける」ことが、地域の信頼につながる。俊敏さを仕組みで支える体制をつくりました。',stat:'',r:65},
+  '2023':{year:'2023年〜現在',title:'67名、そして次の年輪へ。',body:'スタッフ数67名。3つのステーションを拠点に、3事業で地域の暮らしを支え続けている。',quote:'20年で積み重ねた年輪は、これからも増え続けます。地域に根を張り、ともに健やかに。',stat:'スタッフ：67名 ／ 高槻・箕面・奈良生駒',r:80},
+};
+
+const mActive = document.getElementById('mActive');
+const mCard = document.getElementById('mCard');
+
+function mActivate(id) {
+  const d = mData[id];
+  if(!d) return;
+
+  mActive.setAttribute('r', d.r);
+
+  document.querySelectorAll('.mr').forEach(el => {
+    if(el.dataset.id === id){
+      el.style.stroke = '#A86A52';
+      el.style.opacity = '0.65';
+    } else {
+      el.style.stroke = '#4A6450';
+      el.style.opacity = el.getAttribute('opacity');
+    }
+  });
+
+  document.querySelectorAll('#mDots .tl-item').forEach(el => {
+    el.classList.toggle('active', el.dataset.id === id);
+  });
+
+  mCard.style.opacity = '0';
+  setTimeout(() => {
+    document.getElementById('mYear').textContent = d.year;
+    document.getElementById('mTitle').textContent = d.title;
+    document.getElementById('mBody').textContent = d.body;
+    document.getElementById('mQuote').textContent = d.quote;
+    document.getElementById('mStat').textContent = d.stat;
+    mCard.style.opacity = '1';
+  }, 150);
+}
+
+document.querySelectorAll('#mDots .tl-item').forEach(el => {
+  el.addEventListener('click', () => mActivate(el.dataset.id));
+});
+
+mActivate('2005');
+</script>

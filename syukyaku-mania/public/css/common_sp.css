@@ -1,0 +1,162 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+	共通CSS（SMP）
+===================================================*/
+/* --------------------------------------------------
+	base
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  body {
+    min-width: 0;
+    font-size: 16px;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  /*改行*/
+  .pcBreak {
+    display: none;
+  }
+
+  .spBreak {
+    display: block;
+  }
+
+  /*spのみ表示*/
+  .pcHidden {
+    display: block;
+  }
+
+  .spHidden {
+    display: none;
+  }
+
+  #sideBtn {
+    display: none;
+  }
+
+  .topicPath {
+    display: none;
+  }
+}
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+.header {
+  padding: 25px;
+}
+.header .logoBox {
+  width: 140px;
+}
+.header .hamburger {
+  cursor: pointer;
+  position: fixed;
+  top: 25px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 40px;
+  z-index: 10000;
+  border-radius: 20px;
+  background: #ffffff;
+}
+.header .hamburger .hamburgerBtn {
+  position: relative;
+  width: 25px;
+  height: 10px;
+}
+.header .hamburger span {
+  position: absolute;
+  left: 50%;
+  width: 25px;
+  height: 2px;
+  background: #707070;
+  transform: translateX(-50%);
+  transition: 0.4s;
+}
+.header .hamburger span:nth-of-type(1) {
+  top: 0;
+}
+.header .hamburger span:nth-of-type(2) {
+  bottom: 0;
+}
+.header .hamburger.is-open span:nth-of-type(1) {
+  transform: translate(-50%, 4px) rotate(-45deg);
+}
+.header .hamburger.is-open span:nth-of-type(2) {
+  transform: translate(-50%, -4px) rotate(45deg);
+}
+
+/* --------------------------------------------------
+	nav
+-------------------------------------------------- */
+.navBox {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  padding: 60px 0 60px;
+  z-index: 999;
+  background: #ffffff;
+  opacity: 0;
+  transition: 0.6s;
+}
+.navBox.active {
+  right: 0;
+  z-index: 1000;
+  opacity: 1;
+}
+.navBox ul {
+  padding: 0 20px 40px;
+}
+.navBox ul li a {
+  display: block;
+  padding: 10px 0;
+  font-weight: 700;
+}
+
+/* --------------------------------------------------
+	main
+-------------------------------------------------- */
+.mapBox {
+  padding: 0 0 70%;
+}
+
+/* --------------------------------------------------
+	footer
+-------------------------------------------------- */
+.footer {
+  padding: 60px 25px 0;
+}
+.footer .footPanel {
+  margin: 0 0 10px;
+}
+.footer .footPanel .leftBox {
+  margin: 0 0 30px;
+}
+.footer .footPanel .leftBox .messageJp {
+  max-width: 225px;
+}
+.footer .footPanel .rightBox .footNav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0 25px;
+}
+.footer .footPanel .rightBox .footNav ul li a {
+  min-width: 95px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.footer .footPanel .rightBox .copy {
+  margin: 15px 0 0;
+  font-size: 10px;
+}

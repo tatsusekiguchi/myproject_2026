@@ -1,0 +1,138 @@
+[
+  {
+    "key": "group_instructor",
+    "title": "講師一覧",
+    "fields": [
+      {
+        "key": "field_instructor_list",
+        "label": "講師リスト",
+        "name": "instructor_list",
+        "type": "repeater",
+        "instructions": "講師情報を追加してください。登録Noは自動で採番されます。",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "collapsed": "field_instructor_name",
+        "min": 0,
+        "max": 0,
+        "layout": "block",
+        "button_label": "講師を追加",
+        "sub_fields": [
+          {
+            "key": "field_instructor_name",
+            "label": "氏名",
+            "name": "name",
+            "type": "text",
+            "instructions": "氏名（ふりがな）",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "50",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "placeholder": "山田　太郎（やまだたろう）",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+          },
+          {
+            "key": "field_instructor_qualification",
+            "label": "資格",
+            "name": "qualification",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "25",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "placeholder": "TSTA-P",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+          },
+          {
+            "key": "field_instructor_sv_project",
+            "label": "SVプロジェクト参加",
+            "name": "sv_project",
+            "type": "text",
+            "instructions": "参加している場合は「※」など記号を入力",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "25",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "placeholder": "※",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+          },
+          {
+            "key": "field_instructor_introduction",
+            "label": "紹介",
+            "name": "introduction",
+            "type": "textarea",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": "br"
+          },
+          {
+            "key": "field_instructor_url",
+            "label": "参考URL",
+            "name": "url",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+            },
+            "default_value": "",
+            "placeholder": "https://example.com"
+          }
+        ]
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "page_template",
+          "operator": "==",
+          "value": "instructor/index.php"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "講師一覧を管理するためのフィールドグループです。"
+  }
+]

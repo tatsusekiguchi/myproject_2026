@@ -1,0 +1,65 @@
+body {
+  opacity: 0;
+}
+
+@media (max-width: 1024px) {
+  .header .navBox {
+    top: -100%;
+    opacity: 0;
+  }
+
+  .header .navBox.active {
+    top: 0;
+    opacity: 1;
+    z-index: 999;
+  }
+}
+
+.topMain .sec01 .titleContainer .secPanel .photoBox .photo01,
+.topMain .sec01 .titleContainer .secPanel .photoBox .photo02,
+.topMain .sec01 .titleContainer .secPanel .photoBox .photo03 {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.topMain .sec01 .titleContainer .secPanel .photoBox .photo01.show,
+.topMain .sec01 .titleContainer .secPanel .photoBox .photo02.show,
+.topMain .sec01 .titleContainer .secPanel .photoBox .photo03.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.beginnerMain .topSection .balloonPanel .balloonBox .balloon {
+  opacity: 0;
+}
+.beginnerMain .topSection .balloonPanel .balloonBox .balloon.show {
+  opacity: 1;
+}
+.beginnerMain .sec01 .secContainer .photo {
+  opacity: 0;
+  transform: scale(0.3);
+}
+.beginnerMain .sec01 .secContainer .photo.show {
+  opacity: 1;
+  transform: scale(1);
+}
+.beginnerMain .sec01 .flowContainer .secPanel .photoBox {
+  opacity: 0;
+  transform: scale(0.3);
+  transition: opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.5);
+}
+.beginnerMain .sec01 .flowContainer .secPanel .photoBox.show {
+  opacity: 1;
+  transform: scale(1);
+}
+.companyMain .sec01 .secBox .photoBox .photo {
+  opacity: 0;
+  transform: scale(0.3);
+  transition: opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.5);
+}
+.companyMain .sec01 .secBox .photoBox .photo.show {
+  opacity: 1;
+  transform: scale(1);
+}

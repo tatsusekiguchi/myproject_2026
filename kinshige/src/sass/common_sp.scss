@@ -1,0 +1,278 @@
+@charset "UTF-8";
+@import "./mixin";
+@import "./mod";
+/* CSS Document */
+
+/*===================================================
+	共通CSS（SMP）
+===================================================*/
+
+/* --------------------------------------------------
+	base
+-------------------------------------------------- */
+body {
+  min-width: 0;
+  font-size: $SPfontSize;
+}
+a:hover {
+  text-decoration: none;
+}
+/*改行*/
+.pcBreak {
+  display: none;
+}
+.spBreak {
+  display: block;
+}
+/*spのみ表示*/
+.pcHidden {
+  display: block;
+}
+.spHidden {
+  display: none;
+}
+#sideBtn {
+  display: none;
+}
+.topicPath {
+  display: none;
+}
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  padding: 20px;
+  z-index: 999;
+  background: #f4efe2;
+  .logo {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    width: 50px;
+    transition: 0.6s;
+    a {
+      display: block;
+    }
+  }
+  .hamburger {
+    cursor: pointer;
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 24px;
+    height: 18px;
+    z-index: 10000;
+    span {
+      background: #231815;
+      position: absolute;
+      left: 50%;
+      width: 24px;
+      height: 2px;
+      transform: translateX(-50%);
+      transition: 0.4s;
+    }
+    span:nth-of-type(1) {
+      top: 0;
+    }
+    span:nth-of-type(2) {
+      top: 8px;
+    }
+    span:nth-of-type(3) {
+      bottom: 0;
+    }
+    &.is-open span {
+      background: #231815;
+    }
+    &.is-open span:nth-of-type(1) {
+      transform: translate(-50%, 8px) rotate(-45deg);
+    }
+    &.is-open span:nth-of-type(2) {
+      opacity: 0;
+    }
+    &.is-open span:nth-of-type(3) {
+      transform: translate(-50%, -8px) rotate(45deg);
+    }
+  }
+}
+.topHeader {
+  background: none;
+  .logo {
+    opacity: 0;
+  }
+  &.fixed {
+    background: #f4efe2;
+    .logo {
+      opacity: 1;
+    }
+  }
+}
+
+/* --------------------------------------------------
+	nav
+-------------------------------------------------- */
+.navBox {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 80px 20px 80px;
+  text-align: center;
+  z-index: 999;
+  // background: rgba(0, 0, 0, 0.8);
+  background: #f4efe2;
+  transition: 0.6s;
+  overflow: auto;
+  &.active {
+    top: 0;
+  }
+  .navList {
+    ul {
+      border-top: 1px solid #d9d9d9;
+      li {
+        border-bottom: 1px solid #d9d9d9;
+        > p {
+          display: none;
+        }
+        a {
+          display: block;
+          padding: 20px 0;
+        }
+        ul {
+          border: none;
+          li {
+            &:last-child {
+              border-bottom: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .navItem {
+    padding: 20px 0 0;
+    .telBox {
+      text-align: center;
+      > p {
+        margin: 0 0 3px;
+        font-size: 13px;
+      }
+      .tel {
+        a {
+          display: inline-block;
+          padding: 0 0 0 30px;
+          font-size: 26px;
+          font-weight: bold;
+          line-height: 1;
+          background: url("../image/common/header_tel.png") no-repeat;
+          background-size: 25px auto;
+        }
+      }
+    }
+  }
+}
+
+/* --------------------------------------------------
+	main
+-------------------------------------------------- */
+.main {
+  margin: 60px 0 0;
+}
+.pageKvContainer {
+  &:before {
+    width: calc(100% - 100px);
+    height: 20px;
+  }
+  &:after {
+    width: 100px;
+    height: 20px;
+  }
+  .pageKvPanel {
+    padding: 0 40px;
+    width: 60%;
+    max-width: 600px;
+    height: 250px;
+    .kvTtl {
+      position: absolute;
+      top: 0;
+      left: 40%;
+      padding: 20px 10px;
+      font-size: 20px;
+    }
+  }
+}
+.pageSecTtlBox {
+  margin: 0 0 40px;
+  .pageSecTtl {
+    padding: 4px;
+    border: 2px solid #fbf9f4;
+    h2 {
+      padding: 25px 10px;
+      font-size: 20px;
+    }
+  }
+}
+.mapBox {
+  padding: 0 0 70%;
+}
+
+/* --------------------------------------------------
+	footer
+-------------------------------------------------- */
+.footer {
+  .footContact {
+    padding: 50px 0;
+    .secTtl {
+      margin: 0 0 25px;
+      font-size: 20px;
+    }
+    .itemPanel {
+      max-width: 440px;
+      .itemBox {
+        + .itemBox {
+          margin: 30px 0 0;
+        }
+        dl {
+          dt {
+            margin: 0 0 10px;
+            font-size: 20px;
+          }
+          dd {
+            a {
+              padding: 10px;
+              font-size: 24px;
+            }
+            > p {
+              font-size: 13px;
+              margin: 10px 0 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .footPanel {
+    padding: 50px 0 15px;
+    .logo {
+      width: 50px;
+      margin: 0 auto 20px;
+    }
+    .info {
+      dl {
+        dt {
+          width: 70px;
+        }
+      }
+    }
+    .copy {
+      margin: 40px 0 0;
+      text-align: center;
+    }
+  }
+}

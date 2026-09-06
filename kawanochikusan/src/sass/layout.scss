@@ -1,0 +1,2391 @@
+@charset "UTF-8";
+@import "./mixin";
+@import "./mod";
+/* CSS Document */
+
+/*===================================================
+	画面用CSS（PC/SMP）
+===================================================*/
+
+/*////////////////////////////////////////////////////////////
+	TOP
+///////////////////////////////////////////////////////////*/
+.topMain {
+  .topKvContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    .topKv {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    .topKvTitle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      transform: translate(-50%, -50%);
+      padding: 20px 15px;
+      h1 {
+        font-size: 60px;
+        color: #ffffff;
+        text-align: center;
+        letter-spacing: 0.1em;
+      }
+    }
+  }
+  .fixedVideoPanel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .sec01 {
+    margin: 100vh 0 0;
+    padding: 120px 0;
+    background: url(https://kawachiku.jp/system_panel/uploads/images/top_sec01_bg.png)
+      no-repeat;
+    background-size: cover;
+    .secContainer01 {
+      max-width: 1400px;
+      margin: 0 auto 100px;
+      .ttlBox {
+        margin: 0 0 40px;
+        .ttl01 {
+          font-size: 60px;
+          font-weight: 700;
+        }
+        .ttl02 {
+          margin: 5px 0 0;
+        }
+      }
+      .secBox {
+        position: relative;
+        .txtBox {
+          .txt {
+            margin: 0 0 40px;
+          }
+        }
+      }
+      @media (min-width: 1025px) {
+        .secBox {
+          .imgBox {
+            position: absolute;
+            left: 55%;
+            bottom: 0;
+            width: 35%;
+            z-index: 0;
+          }
+          .txtBox {
+            position: relative;
+            width: 60%;
+            z-index: 1;
+          }
+        }
+      }
+    }
+  }
+  .instaSection {
+    .secTtlBox {
+      margin: 0 0 50px;
+      text-align: center;
+      .secTtl {
+        font-size: 40px;
+      }
+    }
+    .instaPanel {
+      max-width: 1200px;
+      margin: 0 auto;
+      .instaList {
+        .webgene-blog {
+          display: flex;
+          flex-wrap: wrap;
+          .webgene-item {
+            width: calc(100% / 4);
+            a {
+              display: block;
+            }
+            .photo {
+              position: relative;
+              height: 0;
+              padding: 0 0 100%;
+            }
+            img {
+              @include cover-image;
+            }
+            video {
+              @include cover-image;
+            }
+          }
+        }
+      }
+      .moreBox {
+        a {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          padding: 15px;
+          color: #ffffff;
+          background: #1a1819;
+          p {
+            display: inline-block;
+            padding: 5px 50px 5px 0;
+            color: #ffffff;
+            background: url(https://kawachiku.jp/system_panel/uploads/images/btn_more_arrow_black.png)
+              right center no-repeat;
+            background-size: 30px auto;
+            transition: 0.6s;
+          }
+        }
+      }
+    }
+    @media (min-width: 1025px) {
+      .instaPanel {
+        display: flex;
+        justify-content: space-between;
+        .instaList {
+          width: calc(100% - 300px);
+        }
+        .moreBox {
+          width: 280px;
+          a {
+            p {
+              background: url(https://kawachiku.jp/system_panel/uploads/images/btn_more_arrow_black.png)
+                right center no-repeat;
+              background-size: 30px auto;
+            }
+          }
+        }
+      }
+    }
+  }
+  .sec02 {
+    position: relative;
+    background: #4a4c52;
+    .slideContainer {
+      position: relative;
+      overflow: hidden;
+      height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 0 0 100px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(74, 76, 82, 0.6);
+        z-index: 1;
+      }
+      .slidePanel {
+        display: flex;
+        gap: 30px;
+        height: 1000px;
+        transform: rotate(30deg);
+        .slideBox {
+          position: relative;
+          width: 260px;
+          .ul {
+            .li {
+              margin: 15px 0;
+            }
+          }
+        }
+        .slideBox01 {
+          height: 700px;
+        }
+        .slideBox02 {
+          top: -30px;
+          height: 800px;
+        }
+        .slideBox03 {
+          top: -10px;
+          height: 900px;
+        }
+        .slideBox04 {
+          top: -200px;
+          height: 1000px;
+        }
+      }
+    }
+    .secContainer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 100px 0;
+      z-index: 1;
+      color: #ffffff;
+      .secTtlBox {
+        margin: 0 0 50px;
+        .secTtl {
+          font-size: 40px;
+        }
+      }
+      .txt {
+        margin: 0 0 60px;
+      }
+    }
+  }
+  .fixedPhotoPanel {
+    height: 600px;
+    background-image: url(https://kawachiku.jp/system_panel/uploads/images/top_fixed_photo_01.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    .photo {
+      display: none;
+    }
+  }
+  .sec03 {
+    padding: 120px 0;
+    color: #ffffff;
+    background: url(https://kawachiku.jp/system_panel/uploads/images/top_sec03_bg.png)
+      no-repeat;
+    background-size: cover;
+    .secTtlBox {
+      margin: 0 0 50px;
+      .secTtl {
+        font-size: 40px;
+      }
+    }
+    .secBox {
+      position: relative;
+      .photoBox {
+      }
+      .txtBox {
+        .ul {
+          .li {
+            padding: 10px 40px 10px 20px;
+            border-bottom: 1px solid #ffffff;
+            a {
+              display: block;
+              padding: 12px 55px 12px 0;
+              color: #f6f1ed;
+              background: url(https://kawachiku.jp/system_panel/uploads/images/btn_more_arrow_black.png)
+                right center no-repeat;
+              background-size: 45px auto;
+            }
+            .em {
+              font-size: 30px;
+            }
+            .span {
+            }
+          }
+        }
+      }
+    }
+    @media (min-width: 1025px) {
+      .secBox {
+        .photoBox {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 50%;
+        }
+        .txtBox {
+          width: 48%;
+        }
+      }
+    }
+  }
+  .sec04 {
+    padding: 120px 0;
+    background: #ffffff;
+    .shopSection {
+      margin: 0 0 100px;
+      .secBox {
+        .txtBox {
+          .secTtlBox {
+            margin: 0 0 50px;
+            .secTtl {
+              font-size: 40px;
+            }
+          }
+        }
+      }
+      @media (min-width: 1025px) {
+        .secBox {
+          display: flex;
+          justify-content: space-between;
+          .photo {
+            width: 45%;
+          }
+          .txtBox {
+            width: 50%;
+          }
+        }
+      }
+    }
+    .calendarSection {
+      margin: 0 0 100px;
+      .secTtlBox {
+        margin: 0 0 30px;
+        text-align: center;
+        .secTtl {
+          font-size: 40px;
+        }
+      }
+      .calendarBox {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding: 0 0 45%;
+        iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100% !important;
+          height: 100% !important;
+        }
+      }
+    }
+  }
+  .sec05 {
+    padding: 120px 0;
+    color: #ffffff;
+    background: #2b2c31;
+    .secTtlBox {
+      margin: 0 0 50px;
+      text-align: center;
+      .secTtl {
+        font-size: 40px;
+      }
+    }
+    .blogListPanel {
+      position: relative;
+      max-width: 1100px;
+      margin: 0 auto;
+      .webgene-blog {
+        .webgene-header {
+          display: none;
+        }
+        .webgene-item {
+          > a {
+            display: block;
+            color: #ffffff;
+          }
+          .photo {
+          }
+          .title {
+            min-height: 75px;
+            padding: 10px;
+          }
+          .title + a {
+            display: block;
+            padding: 10px;
+            font-size: 16px;
+            color: #ffffff;
+            border-bottom: 1px solid #ffffff;
+            background: url(https://kawachiku.jp/system_panel/uploads/images/top_blog_arrow.png)
+              right 10px center no-repeat;
+            background-size: 6px auto;
+          }
+          .more {
+            padding: 10px;
+            font-size: 16px;
+            color: #ffffff;
+            border-bottom: 1px solid #ffffff;
+            background: url(https://kawachiku.jp/system_panel/uploads/images/top_blog_arrow.png)
+              right 10px center no-repeat;
+            background-size: 6px auto;
+          }
+        }
+      }
+      .btnMoreWhite {
+        margin: 60px auto 0;
+        text-align: center;
+      }
+      @media (min-width: 1025px) {
+        .webgene-blog {
+          display: flex;
+          margin: 0 0 0 -60px;
+          .webgene-item {
+            width: calc((100% / 3) - 60px);
+            margin: 0 0 0 60px;
+            .photo {
+              position: relative;
+              height: 0;
+              padding: 0 0 120%;
+              img {
+                @include cover-image;
+              }
+            }
+          }
+        }
+      }
+      @media (min-width: 1500px) {
+        .btnMoreWhite {
+          position: absolute;
+          top: 40%;
+          left: -200px;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	about
+///////////////////////////////////////////////////////////*/
+.aboutMain {
+  .mainContainer {
+    color: #ffffff;
+    background: url(https://kawachiku.jp/system_panel/uploads/images/about_main_bg.png);
+  }
+  .topSection {
+    padding: 80px 0 150px 40px;
+    .secContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      .wrap {
+        width: 90%;
+      }
+      .secPanel {
+        margin: 100px 0 0;
+        .ttl {
+          font-size: 34px;
+        }
+      }
+      @media (min-width: 1025px) {
+        .secPanel {
+          display: flex;
+          justify-content: space-between;
+          .ttl {
+            width: 20%;
+            writing-mode: vertical-rl;
+            h2 {
+              line-height: 1.7;
+            }
+          }
+          .txtBox {
+            width: 70%;
+          }
+        }
+      }
+    }
+  }
+  .sectionList {
+    padding: 0 0 200px;
+    .section {
+      padding: 60px 0 0;
+      .wrap {
+        position: relative;
+        .fixedTtl01 {
+          position: absolute;
+          top: -60px;
+          right: 5%;
+          width: 550px;
+        }
+        .fixedTtl02 {
+          position: absolute;
+          top: -60px;
+          left: 5%;
+          width: 550px;
+        }
+        .fixedTtl03 {
+          position: absolute;
+          top: -60px;
+          right: 5%;
+          width: 550px;
+        }
+        .fixedTtl04 {
+          position: absolute;
+          top: -60px;
+          left: 10%;
+          width: 350px;
+        }
+        .fixedTtl05 {
+          position: absolute;
+          top: -60px;
+          right: 5%;
+          width: 550px;
+        }
+      }
+      .secContainer01 {
+        position: relative;
+        margin: 0 0 60px;
+        .ttl {
+          font-size: 34px;
+        }
+      }
+      .secContainer02 {
+        position: relative;
+        padding: 0 20px;
+        .txt {
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+      }
+      + .section {
+        margin: 150px 0 0;
+      }
+      &:nth-child(odd) {
+        .wrap {
+          padding: 0 80px 0 0;
+        }
+      }
+      &:nth-child(even) {
+        .wrap {
+          padding: 0 0 0 80px;
+        }
+      }
+    }
+    @media (min-width: 1025px) {
+      .section {
+        .secContainer01 {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .mv {
+            width: 70%;
+          }
+          .ttl {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 30%;
+            writing-mode: vertical-rl;
+            h2 {
+              line-height: 1.7;
+            }
+          }
+        }
+        &:nth-child(even) {
+          .secContainer01 {
+            flex-direction: row-reverse;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	commitment
+///////////////////////////////////////////////////////////*/
+.commitmentMain {
+  .mainContainer {
+    background: url(https://kawachiku.jp/system_panel/uploads/images/commitment_main_bg.png);
+  }
+  .topSection {
+    padding: 80px 0;
+    background: #ffffff;
+    .secContainer {
+      .secPanel {
+        .ttl {
+          margin: 0 0 20px;
+          font-size: 34px;
+        }
+      }
+    }
+  }
+  .pagingPanel {
+    padding: 120px 0 80px;
+    .linkList {
+      .ul {
+        .li {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 0 15px;
+          padding: 5px 15px;
+          cursor: pointer;
+          border-bottom: 1px solid #1a1819;
+          .em {
+            font-size: 34px;
+          }
+          .span {
+            font-size: 20px;
+          }
+          .arrow {
+            width: 30px;
+          }
+        }
+      }
+      @media (min-width: 1025px) {
+        .ul {
+          display: flex;
+          justify-content: space-between;
+          .li {
+            width: 30%;
+            max-width: 330px;
+          }
+        }
+      }
+    }
+  }
+  .sectionList {
+    padding: 0 0 100px;
+    .section {
+      position: relative;
+      padding: 100px 0 0;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 200px);
+      }
+      + .section {
+        margin: 150px 0 0;
+      }
+      .wrap {
+        position: relative;
+      }
+      .secTtlBox {
+        .secTtl {
+          .num {
+            font-size: 34px;
+            color: #e6b422;
+          }
+          .ttl {
+            font-size: 34px;
+            color: #ffffff;
+            letter-spacing: 0.05em;
+          }
+        }
+      }
+      .secContainer {
+        width: 85%;
+        padding: 80px;
+        background: #ffffff;
+        .secBox {
+          + .secBox {
+            margin: 100px 0 0;
+          }
+          .txtBox {
+            padding: 20px 0;
+            h3 {
+              margin: 0 0 20px;
+              font-size: 34px;
+            }
+          }
+        }
+      }
+      &:nth-child(odd) {
+        .secContainer {
+          margin: 0 0 0 auto;
+        }
+      }
+      &:nth-child(even) {
+        .secContainer {
+          margin: 0 auto 0 0;
+        }
+      }
+      &:nth-child(1) {
+        &::before {
+          background: url(https://kawachiku.jp/system_panel/uploads/images/commitment_sec01_bg.png)
+            no-repeat;
+          background-size: cover;
+        }
+      }
+      &:nth-child(2) {
+        &::before {
+          background: url(https://kawachiku.jp/system_panel/uploads/images/commitment_sec02_bg.png)
+            no-repeat;
+          background-size: cover;
+        }
+      }
+      &:nth-child(3) {
+        &::before {
+          background: url(https://kawachiku.jp/system_panel/uploads/images/commitment_sec03_bg.png)
+            no-repeat;
+          background-size: cover;
+        }
+      }
+    }
+    @media (min-width: 1025px) {
+      .section {
+        .secTtlBox {
+          width: 50px;
+          text-align: center;
+          .secTtl {
+            .ttl {
+              writing-mode: vertical-rl;
+            }
+          }
+        }
+        .secContainer {
+          .secBox {
+            display: flex;
+            justify-content: space-between;
+            .photo {
+              width: 50%;
+            }
+            .txtBox {
+              width: 45%;
+            }
+            &:nth-child(odd) {
+              flex-direction: row-reverse;
+            }
+          }
+        }
+        &:nth-child(odd) {
+          .secTtlBox {
+            position: absolute;
+            top: 0;
+            left: 8%;
+          }
+        }
+        &:nth-child(even) {
+          .secTtlBox {
+            position: absolute;
+            top: 0;
+            right: 8%;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	facility
+///////////////////////////////////////////////////////////*/
+.facilityMain {
+  .sec01 {
+    padding: 100px 0;
+    .secWrap {
+      max-width: 1440px;
+    }
+    .secBox {
+      margin: 0 0 60px;
+      .txtBox {
+        padding: 20px 0 0;
+        .ttlBox {
+          margin: 0 0 20px;
+          h3 {
+            font-size: 30px;
+          }
+        }
+        .txt {
+          line-height: 2.5;
+        }
+      }
+    }
+    @media (min-width: 1025px) {
+      .secBox {
+        display: flex;
+        justify-content: space-between;
+        .photo {
+          width: 45%;
+        }
+        .txtBox {
+          width: 50%;
+        }
+      }
+    }
+  }
+  .sec02 {
+    padding: 100px 0 200px;
+    .secWrap {
+      max-width: 1440px;
+    }
+  }
+  .listPanel {
+    .listBox {
+      max-width: 1300px;
+      .ul {
+        .photo {
+          position: relative;
+        }
+        .dl {
+          margin: 10px 0 0;
+          .dt {
+            margin: 0 0 10px;
+            font-size: 28px;
+          }
+          .dd {
+            // font-size: 17px;
+            line-height: 2;
+          }
+        }
+      }
+      @media (min-width: 1025px) {
+        .ul {
+          display: flex;
+          flex-wrap: wrap;
+          margin: -30px 0 0 -40px;
+          .li {
+            width: calc((100% / 3) - 40px);
+            margin: 30px 0 0 40px;
+          }
+          .photo {
+            height: 0;
+            padding: 0 0 66%;
+            img {
+              @include cover-image;
+            }
+          }
+        }
+      }
+    }
+  }
+  .sec03 {
+    padding: 100px 0;
+    background: url(https://kawachiku.jp/system_panel/uploads/images/facility_sec03_bg.png);
+    .secWrap {
+      max-width: 1340px;
+    }
+    .secBoxList {
+      .secBox {
+        .photoBox {
+          position: relative;
+        }
+        .ttlBox {
+          .ttl {
+            p {
+              display: inline;
+              padding: 3px;
+              font-size: 30px;
+              color: #ffffff;
+              background: #1a1819;
+            }
+          }
+        }
+      }
+    }
+    @media (min-width: 1025px) {
+      .secBoxList {
+        display: flex;
+        justify-content: space-between;
+        .secBox {
+          width: 48%;
+          .ttlBox {
+            position: absolute;
+            left: 20px;
+            bottom: -100px;
+            display: flex;
+            align-items: flex-end;
+            flex-direction: row-reverse;
+            gap: 0 5px;
+            .ttl {
+              width: 50px;
+              p {
+                padding: 10px 3px;
+                writing-mode: vertical-rl;
+              }
+            }
+            .ttl02 {
+              position: relative;
+              bottom: 20px;
+            }
+            .ttl03 {
+              position: relative;
+              bottom: 60px;
+            }
+          }
+          .txtBox {
+            padding: 20px 0 0 150px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	shop
+///////////////////////////////////////////////////////////*/
+.shopMain {
+  .sec01 {
+    padding: 100px 0;
+    .secWrap {
+      max-width: 1440px;
+    }
+    .secBox {
+      + .secBox {
+        margin: 80px 0 0;
+        padding: 80px 0 0;
+        border-top: 1px solid #1a1819;
+      }
+      .txtBox {
+        .ttlBox {
+          margin: 0 0 10px;
+          h3 {
+            font-size: 30px;
+          }
+        }
+        .subBox {
+          margin: 0 0 20px;
+          padding: 10px 0;
+          line-height: 2;
+          border-top: 1px solid #1a1819;
+          border-bottom: 1px solid #1a1819;
+          a {
+            display: inline-block;
+          }
+        }
+        .txt {
+          line-height: 2.5;
+        }
+      }
+    }
+    @media (min-width: 1025px) {
+      .secBox {
+        display: flex;
+        justify-content: space-between;
+        .photo {
+          width: 45%;
+        }
+        .txtBox {
+          width: 50%;
+        }
+      }
+    }
+  }
+  .sec02 {
+    padding: 100px 0 200px;
+    .infoBox {
+      .dl {
+        line-height: 2;
+        .dt {
+          padding: 15px 0;
+          border-bottom: 1px solid #1a1819;
+        }
+        .dd {
+          padding: 15px 40px;
+          border-bottom: 1px solid #d4d4d4;
+          a {
+            display: inline-block;
+          }
+        }
+      }
+      @media (min-width: 1025px) {
+        .dl {
+          display: flex;
+          .dt {
+            width: 300px;
+          }
+          .dd {
+            width: calc(100% - 300px);
+          }
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	oct268
+///////////////////////////////////////////////////////////*/
+.oct268Main {
+  .mainContainer {
+    font-family:
+      "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic",
+      "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo",
+      "verdana", sans-serif;
+  }
+  .topSection {
+    padding: 100px 0;
+    color: #ffffff;
+    background: url(#{$imgPath}oct268_top_bg.png) no-repeat;
+    background-size: cover;
+    .secContainer01 {
+      position: relative;
+      margin: 0 0 100px;
+      padding: 140px 20px;
+      .secPanel {
+        position: relative;
+        max-width: 1600px;
+        margin: 0 auto;
+        .ttl {
+          max-width: 650px;
+          margin: 0 0 30px;
+        }
+        .txt {
+          max-width: 600px;
+        }
+      }
+    }
+    @media (min-width: 1025px) {
+      .secContainer01 {
+        min-height: 800px;
+        .photo {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 70%;
+          height: 800px;
+          img {
+            @include cover-image;
+          }
+        }
+      }
+    }
+    .secContainer02 {
+      .secWrap {
+        max-width: 1440px;
+        margin: 0 auto;
+      }
+      .ttl {
+        margin: 0 0 20px;
+        font-size: 34px;
+        font-weight: bold;
+      }
+      .secBox {
+        .logoBox {
+          .logo {
+            max-width: 700px;
+          }
+        }
+      }
+      @media (min-width: 1025px) {
+        .secBox {
+          display: flex;
+          justify-content: space-between;
+          .txt {
+            width: 45%;
+          }
+          .logoBox {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+  .sec01 {
+    padding: 120px 0;
+    .secBoxList {
+      max-width: 1340px;
+      margin: 0 auto 100px;
+    }
+    .secBox {
+      + .secBox {
+        margin: 80px 0 0;
+        padding: 80px 0 0;
+        border-top: 1px solid #1a1819;
+      }
+      .txtBox {
+        padding: 20px 0 0;
+        .ttlBox {
+          position: relative;
+          margin: 0 0 10px;
+          padding: 0 0 10px;
+          font-weight: bold;
+          border-bottom: 1px solid #1a1819;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 8px;
+            left: -100px;
+            width: 80px;
+            height: 10px;
+            background: #1a1819;
+          }
+          h2 {
+            font-size: 30px;
+          }
+        }
+        .txt {
+          line-height: 2.2;
+        }
+      }
+    }
+    @media (min-width: 1025px) {
+      .secBox {
+        display: flex;
+        justify-content: space-between;
+        .photo {
+          width: 50%;
+        }
+        .txtBox {
+          width: 45%;
+        }
+        &:nth-child(even) {
+          flex-direction: row-reverse;
+        }
+      }
+    }
+    .menuBox {
+      max-width: 1340px;
+      margin: 0 auto;
+    }
+  }
+  .slidePanel {
+    .slideBox {
+      .ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .li {
+          width: calc(100% / 4);
+          margin: 0 5px;
+        }
+      }
+    }
+  }
+  .sec02 {
+    padding: 120px 0;
+    .pageSecTtlBox {
+      font-weight: bold;
+    }
+    .topTxt {
+      margin: 0 0 60px;
+      text-align: center;
+    }
+    .secBoxList {
+      max-width: 1340px;
+      margin: 0 auto 60px;
+    }
+    .secBox {
+      + .secBox {
+        margin: 80px 0 0;
+        padding: 80px 0 0;
+        border-top: 1px solid #1a1819;
+      }
+      .txtBox {
+        padding: 10px 0 0;
+        .ttlBox {
+          position: relative;
+          max-width: 500px;
+          margin: 0 0 10px;
+          padding: 0 0 10px;
+          font-weight: bold;
+          border-bottom: 1px solid #1a1819;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 8px;
+            left: -100px;
+            width: 80px;
+            height: 10px;
+            background: #1a1819;
+          }
+          h2 {
+            font-size: 30px;
+          }
+        }
+        .txt {
+          line-height: 2.2;
+        }
+      }
+    }
+    @media (min-width: 1025px) {
+      .secBox {
+        display: flex;
+        justify-content: space-between;
+        .photo {
+          width: 45%;
+        }
+        .txtBox {
+          width: 50%;
+        }
+        &:nth-child(even) {
+          flex-direction: row-reverse;
+        }
+      }
+    }
+    .listBox {
+      max-width: 1340px;
+      margin: 0 auto;
+      .ul {
+        .photo {
+          position: relative;
+        }
+        p {
+          margin: 10px 0 0;
+          font-size: 20px;
+          text-align: center;
+        }
+      }
+      @media (min-width: 1025px) {
+        .ul {
+          display: flex;
+          flex-wrap: wrap;
+          margin: -30px 0 0 -40px;
+          .li {
+            width: calc((100% / 3) - 40px);
+            margin: 30px 0 0 40px;
+          }
+          .photo {
+            height: 0;
+            padding: 0 0 66%;
+            img {
+              @include cover-image;
+            }
+          }
+        }
+      }
+    }
+  }
+  .formSection {
+    padding: 0 0 120px;
+    .titlePanel {
+      padding: 0 0 0 100px;
+      .pageSecTtlBox {
+        position: relative;
+        font-weight: bold;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 8px;
+          left: -100px;
+          width: 80px;
+          height: 10px;
+          background: #1a1819;
+        }
+        .pageSecTtl {
+          max-width: 500px;
+          border-bottom: 1px solid #1a1819;
+        }
+      }
+    }
+    .formContainer {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .topTxt {
+      margin: 0 0 40px;
+      .aside {
+        p {
+          position: relative;
+          padding: 0 0 0 1.2em;
+          &::before {
+            content: "※";
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+  .infoSection {
+    padding: 0 0 120px;
+    .secContainer {
+      .txtPanel {
+        .topBox {
+          padding: 20px 10px;
+          .dl {
+            display: flex;
+            align-items: center;
+            margin: 0 0 10px;
+            gap: 0 60px;
+            .dd {
+              a {
+                display: inline-block;
+                padding: 0 0 0 20px;
+                background: url(https://kawachiku.jp/system_panel/uploads/images/oct268_insta.png)
+                  left center no-repeat;
+                background-size: 15px auto;
+              }
+            }
+          }
+        }
+        .infoBox {
+          .dl {
+            line-height: 2;
+            .dt {
+              padding: 10px;
+              border-bottom: 1px solid #1a1819;
+            }
+            .dd {
+              padding: 10px 20px;
+              border-bottom: 1px solid #d4d4d4;
+              a {
+                display: inline-block;
+              }
+            }
+          }
+          @media (min-width: 1025px) {
+            .dl {
+              display: flex;
+              .dt {
+                width: 120px;
+              }
+              .dd {
+                width: calc(100% - 120px);
+              }
+            }
+          }
+        }
+      }
+    }
+    @media (min-width: 1025px) {
+      .secContainer {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        .txtPanel {
+          width: 50%;
+        }
+        .mapPanel {
+          width: 45%;
+          .mapBox {
+            height: 330px;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+  .calendarSection {
+    padding: 0 0 120px;
+    .calendarBox {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding: 0 0 45%;
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	company
+///////////////////////////////////////////////////////////*/
+.companyMain {
+  .sec01 {
+    position: relative;
+    margin: 120px 0;
+    .photoBox {
+      position: relative;
+      .name {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        p {
+          display: inline-block;
+          color: #ffffff;
+        }
+        .em {
+          margin: 0 0 0 10px;
+          font-size: 24px;
+        }
+      }
+    }
+    .txtBox {
+      .txt {
+        + .txt {
+          margin: 30px 0 0;
+        }
+      }
+    }
+    @media (min-width: 1025px) {
+      .photoBox {
+        position: absolute;
+        top: 40px;
+        right: 0;
+        width: 40%;
+        max-width: 680px;
+      }
+      .txtBox {
+        .txt01 {
+          width: 55%;
+        }
+        .txt02 {
+          width: 55%;
+        }
+      }
+    }
+  }
+  .sec02 {
+    margin: 0 0 120px;
+    .infoBox {
+      .dl {
+        line-height: 2;
+        .dt {
+          padding: 15px 0;
+          border-bottom: 1px solid #1a1819;
+        }
+        .dd {
+          padding: 15px 40px;
+          border-bottom: 1px solid #d4d4d4;
+          a {
+            display: inline-block;
+          }
+        }
+      }
+      @media (min-width: 1025px) {
+        .dl {
+          display: flex;
+          .dt {
+            width: 300px;
+          }
+          .dd {
+            width: calc(100% - 300px);
+          }
+        }
+      }
+    }
+  }
+  .sec03 {
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	contact
+///////////////////////////////////////////////////////////*/
+.contactMain {
+  .sec01 {
+    padding: 80px 0;
+    .secTtl {
+      margin: 0 0 40px;
+      h2 {
+        font-size: 34px;
+      }
+      p {
+        margin: 10px 0 0;
+      }
+    }
+  }
+  .sec02 {
+    padding: 60px 120px;
+    .secTtl {
+      margin: 0 0 40px;
+      h2 {
+        font-size: 34px;
+      }
+    }
+    .telBox {
+      max-width: 600px;
+      padding: 10px 20px;
+      text-align: center;
+      background: #f2f2f2;
+      a {
+        display: inline-block;
+        font-size: 34px;
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	form
+///////////////////////////////////////////////////////////*/
+.formMain {
+  /* 入力項目
+  --------------------------------------*/
+  /*テキストボックス・メール・電話*/
+  .contactForm input[type="text"],
+  .contactForm input[type="email"],
+  .contactForm input[type="tel"] {
+    width: 100%;
+    height: 50px;
+    padding-left: 20px;
+    font-size: 16px;
+    border: 1px solid #f2f2f2;
+    background: #f2f2f2;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  /*テキストエリア*/
+  .contactForm textarea {
+    width: 100%;
+    height: 200px;
+    padding: 20px;
+    font-size: 16px;
+    border: 1px solid #f2f2f2;
+    background: #f2f2f2;
+    resize: none;
+    // box-shadow: 0 1px 2px rgba(3, 0, 11, 0.14);
+  }
+  .contactForm input[type="text"]:focus,
+  .contactForm input[type="email"]:focus,
+  .contactForm input[type="tel"]:focus,
+  .contactForm textarea:focus {
+    outline: 0;
+    border: 2px solid #90cefd;
+  }
+  .btnSubmitBox {
+    max-width: 200px;
+    margin: 40px auto 0;
+    text-align: center;
+  }
+  .contactForm button[type="submit"] {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: 20px 10px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    background: url(https://kawachiku.jp/system_panel/uploads/images/form_submit_usi.png)
+      right center no-repeat;
+    background-size: 50px auto;
+    transition: 0.6s;
+  }
+  .contactForm .mincho button[type="submit"] {
+    font-family:
+      "Zen Old Mincho", "游明朝", YuMincho, "ヒラギノ明朝 ProN W3",
+      "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+  }
+  .contactForm button[type="submit"][disabled] {
+    opacity: 0.6;
+    cursor: default;
+    pointer-events: none;
+  }
+  .contactForm .form {
+    padding: 0 0 60px;
+    .checkList {
+      .ul {
+        padding: 12px 0 0;
+        + .ul {
+          margin: 10px 0 0;
+        }
+        .li {
+          + .li {
+            margin: 10px 0 0;
+          }
+        }
+      }
+    }
+    .checkList01 {
+      .ul {
+        .li {
+          display: inline-block;
+          + .li {
+            margin: 0 0 0 10px;
+          }
+        }
+      }
+      .checkItem {
+        display: inline-block;
+        padding: 0 5px 0 0;
+        + input {
+          display: inline-block;
+          width: 150px;
+        }
+      }
+      .otherTxt {
+        display: inline-block;
+      }
+    }
+    .checkItem {
+      + .checkItem {
+        margin-top: 10px;
+      }
+      position: relative;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      input[type="checkbox"] {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        z-index: 1;
+      }
+      label {
+        display: inline-block;
+        padding-left: 30px;
+        position: relative;
+        cursor: pointer;
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          width: 18px;
+          height: 18px;
+          transform: translateY(-50%);
+          border: 1px solid #eadac1;
+          background: #f2f2f2;
+        }
+      }
+      input[type="checkbox"]:checked + label::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        width: 7px;
+        height: 14px;
+        transform: translateY(-50%) rotate(40deg);
+        border-bottom: 3px solid #2d2c30;
+        border-right: 3px solid #2d2c30;
+      }
+      &.agreeCheck {
+        justify-content: center;
+      }
+    }
+
+    .radioList01 {
+      .list {
+        display: inline-block;
+        margin: 0 20px 0 0;
+      }
+      .otherTxt {
+        display: inline-block;
+      }
+    }
+
+    .radioBox {
+      padding: 5px 0;
+      .radio {
+        position: relative;
+        display: inline-block;
+      }
+
+      input[type="radio"] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: 1;
+      }
+
+      label {
+        position: relative;
+        padding: 5px 0 5px 35px;
+      }
+
+      label:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 25px;
+        height: 25px;
+        margin: auto 0;
+        border-radius: 50%;
+        border: 1px solid #2d2c30;
+        background: #ffffff;
+        box-sizing: border-box;
+      }
+
+      input[type="radio"]:checked + label:before {
+        border: 8px solid #2d2c30;
+      }
+    }
+
+    .postalBox {
+      margin: 0 0 5px;
+      input {
+        width: 90px;
+      }
+
+      input + .span {
+        display: inline-block;
+        margin: 0 5px;
+      }
+
+      .postalTxt {
+        display: inline-block;
+        margin: 0 5px;
+      }
+      + input {
+        + input {
+          margin: 5px 0;
+        }
+      }
+    }
+
+    .selectBox {
+      display: inline-block;
+      width: 200px;
+      select {
+        display: block;
+        width: 100%;
+        padding: 11px 20px;
+        font-size: 16px;
+        color: #000000;
+        line-height: 1.5em;
+        border-radius: 0;
+        border: 1px solid #deebe4;
+        border-radius: 15px;
+        background: #f7f7f7;
+        background-size: 10px auto;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+      + .span {
+        display: inline-block;
+        margin: 0 5px;
+      }
+    }
+  }
+  .contactForm {
+    .formBox {
+      + .formBox {
+        margin-top: 60px;
+      }
+
+      > .dl {
+        position: relative;
+        display: flex;
+        width: 100%;
+        &.line {
+          > .dt {
+            vertical-align: top;
+          }
+        }
+
+        > .dt {
+          overflow: hidden;
+          width: 280px;
+          margin: 0 2px 0 0;
+          padding: 20px 10px;
+          border-bottom: 1px solid #1a1819;
+          .span {
+            display: inline-block;
+            min-width: 165px;
+            margin-right: 10px;
+            padding: 0 0 0 5px;
+            vertical-align: middle;
+          }
+
+          .em {
+            display: inline-block;
+            padding: 0 8px;
+            font-size: 14px;
+            vertical-align: middle;
+            background: #e6b422;
+          }
+
+          .small {
+            font-size: 12px;
+          }
+
+          .aside {
+            margin-top: 5px;
+            p {
+              font-size: 14px;
+              padding-left: 1em;
+              text-indent: -1em;
+            }
+          }
+
+          @media (min-width: 1025px) {
+            .span {
+              float: left;
+            }
+            .em {
+              float: right;
+            }
+          }
+        }
+
+        > .dd {
+          position: relative;
+          width: calc(100% - 282px);
+          padding: 10px 20px;
+          border-bottom: 1px solid #d4d4d4;
+          .aside {
+            margin-top: 5px;
+            p {
+              font-size: 14px;
+              padding-left: 1em;
+              text-indent: -1em;
+            }
+          }
+        }
+      }
+      .datePanel {
+        display: flex;
+        justify-content: space-between;
+        font-size: 15px;
+        + .datePanel {
+          margin: 10px 0 0;
+        }
+        > * {
+          display: flex;
+          align-items: center;
+        }
+        input {
+          width: 70px;
+          border-radius: 15px;
+        }
+        .selectBox {
+          width: 70px;
+        }
+        .dateTtl {
+          margin: 0 10px 0 0;
+        }
+        .dateTxt {
+          margin: 0 5px;
+        }
+      }
+      .addressBox,
+      .dateBox {
+        .dl {
+          display: table;
+          width: 100%;
+
+          + .dl {
+            margin-top: 10px;
+          }
+
+          .dt {
+            display: table-cell;
+            width: 60px;
+            vertical-align: middle;
+          }
+
+          .dd {
+            display: table-cell;
+            vertical-align: middle;
+          }
+        }
+      }
+      .ageInput {
+        input {
+          display: inline-block;
+          width: 120px;
+          margin: 0 5px 0 0;
+        }
+        > p {
+          display: inline-block;
+        }
+      }
+      .meetingBox {
+        margin: 0 0 20px;
+        .radioList {
+          display: inline-block;
+          .list {
+            display: inline-block;
+            margin: 0 20px 0 0;
+          }
+        }
+      }
+      .dateBox {
+        + .dateBox {
+          margin: 10px 0 0;
+        }
+        + .txt {
+          margin: 10px 0 0;
+        }
+        input[type="text"] {
+          width: 90px;
+        }
+
+        .em {
+          display: inline-block;
+        }
+
+        .span {
+          display: inline-block;
+          margin: 0 5px;
+          vertical-align: middle;
+        }
+        .radioList {
+          display: inline-block;
+          margin: 0 0 0 40px;
+
+          .list {
+            display: inline-block;
+            margin: 0 20px 0 0;
+          }
+        }
+      }
+      .caution {
+        margin-top: 10px;
+        color: #d20000;
+        line-height: 2;
+      }
+      .telBox {
+        padding: 10px 10px 40px;
+        font-size: 0;
+        font-weight: 400;
+        text-align: left;
+        line-height: 2;
+        > * {
+          display: inline-block;
+          font-size: 14px;
+        }
+      }
+      .telTxt {
+        padding: 10px 10px 0;
+      }
+      .privacy {
+        padding: 10px;
+
+        > p {
+          margin: 0 0 20px;
+          text-align: left;
+        }
+
+        .agreeBox {
+          overflow: scroll;
+          height: 500px;
+          padding: 20px;
+          text-align: left;
+          border: 1px solid #dddddd;
+          background: #dddddd;
+          .box {
+            + .box {
+              margin: 30px 0 0;
+            }
+            .link {
+              a {
+                display: inline-block;
+              }
+            }
+          }
+          p {
+            line-height: 2;
+          }
+          .tel {
+            p,
+            a {
+              display: inline-block;
+            }
+          }
+        }
+      }
+
+      .privacy + .checkItem {
+        margin: 40px 0;
+        text-align: center;
+      }
+    }
+    .fileUploadBox {
+      .ttl {
+        margin: 0 0 10px;
+        line-height: 2;
+      }
+      .fileBox {
+      }
+      .fileArea {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        + .fileArea {
+          margin: 10px 0 0;
+        }
+
+        .inputFile {
+          position: relative;
+          width: 28%;
+          font-size: 16px;
+          color: #b4d2be;
+          text-align: center;
+          border: 1px solid #41ab6d;
+          background: #ffffff;
+
+          input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+          }
+
+          p {
+            padding: 12px 10px;
+          }
+        }
+
+        > p,
+        .fileTxt {
+          width: 70%;
+        }
+        .fileTxt {
+          p {
+            display: inline-block;
+          }
+          .fileName {
+            margin: 0 10px 0 0;
+          }
+          .attention {
+            font-size: 13px;
+            color: #54765f;
+          }
+        }
+      }
+      .txt {
+        line-height: 2;
+      }
+    }
+    .aside {
+      margin: 10px 0 0;
+    }
+    .fileUploadTitleBox {
+      margin: 60px 0 30px;
+      .fileUploadTitle {
+        position: relative;
+        max-width: 440px;
+        margin: 0 0 20px;
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          height: 1px;
+          margin: auto;
+          background: #000000;
+        }
+        p {
+          position: relative;
+          display: inline-block;
+          padding: 0 20px 0 0;
+          font-size: 30px;
+          font-weight: bold;
+          background: #ffffff;
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	complete
+///////////////////////////////////////////////////////////*/
+.complete {
+  padding: 60px 0 100px;
+  .txt {
+    margin: 0 0 40px;
+    text-align: center;
+    line-height: 3;
+  }
+  .btnMoreBox {
+    text-align: center;
+  }
+  .btnMore {
+    margin: 0 auto;
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	blog
+///////////////////////////////////////////////////////////*/
+.blogMain {
+  .blogSection {
+    padding: 0 0 120px;
+  }
+  .postContainer {
+    position: relative;
+    padding: 0 250px 0 0;
+  }
+  .catePanel {
+    padding: 40px 0 80px;
+    .webgene-blog {
+      .webgene-header {
+        display: none;
+      }
+      .webgene-item {
+        a {
+          display: block;
+          padding: 9px 15px;
+          font-size: 16px;
+          text-align: center;
+          border: 1px solid #1a1819;
+          background: url(https://kawachiku.jp/system_panel/uploads/images/btn_more_arrow.png)
+            right 15px center no-repeat;
+          background-size: 25px auto;
+        }
+      }
+    }
+    @media (min-width: 1025px) {
+      .webgene-blog {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -10px 0 0 -10px;
+        .webgene-item {
+          width: calc((100% / 4) - 10px);
+          margin: 10px 0 0 10px;
+        }
+      }
+    }
+  }
+  .blogPanel {
+    &--list {
+      .webgene-blog {
+        .webgene-header {
+          display: none;
+        }
+        .webgene-item {
+          a {
+            display: block;
+          }
+          .photo {
+            margin: 0 0 20px;
+          }
+          .title {
+            min-height: 30px;
+            margin: 0 0 10px;
+          }
+          .more {
+            padding: 0 0 5px;
+            border-bottom: 1px solid #4f4f4f;
+            p {
+              display: block;
+              padding: 0 25px 0 0;
+              background: url(https://kawachiku.jp/system_panel/uploads/images/blog_list_arrow.png)
+                right center no-repeat;
+              background-size: 6px auto;
+            }
+          }
+        }
+      }
+      @media (min-width: 1025px) {
+        .webgene-blog {
+          display: flex;
+          flex-wrap: wrap;
+          margin: -50px 0 0 -40px;
+          .webgene-item {
+            width: calc((100% / 3) - 40px);
+            margin: 50px 0 0 40px;
+            .photo {
+              position: relative;
+              height: 240px;
+              img {
+                @include cover-image;
+              }
+            }
+          }
+        }
+      }
+      .webgene-pagination {
+        overflow: hidden;
+        width: 100%;
+        margin: 100px auto 0;
+        font-size: 14px;
+        ul {
+          max-width: 700px;
+          margin: 0 auto;
+          text-align: center;
+          li {
+            display: inline-block;
+            margin: 0 2px;
+
+            a {
+              display: block;
+              width: 45px;
+              color: #ffffff;
+              line-height: 45px;
+              text-align: center;
+              background: #cdcdcd;
+            }
+          }
+          .prev {
+            margin: 0 2px 0 0;
+          }
+          .next {
+            position: relative;
+            margin: 0 0 0 2px;
+          }
+          .selected {
+            a {
+              background: #0f0b09;
+            }
+          }
+          @media (min-width: 1025px) {
+            .prev {
+              float: left;
+            }
+            .next {
+              float: right;
+            }
+          }
+        }
+      }
+    }
+    &--detail {
+      .webgene-blog {
+        .webgene-header {
+          display: none;
+        }
+        .info {
+          margin: 0 0 15px;
+          .cate {
+            display: inline-block;
+            min-width: 100px;
+            margin: 0 10px 0 0;
+            padding: 0 10px;
+            color: #ffffff;
+            text-align: center;
+            background: #171a1c;
+          }
+          .time {
+            display: inline-block;
+            vertical-align: middle;
+          }
+        }
+        .ttlBox {
+          margin: 0 0 30px;
+          padding: 0 0 10px;
+          font-size: 30px;
+          border-bottom: 1px solid #090908;
+        }
+        .slickSlide {
+          margin: 0 0 40px;
+        }
+        .slick-list {
+          margin: 0 0 10px;
+        }
+        .thumb-item {
+          max-width: 800px;
+          margin: 0 0 10px;
+          @media (min-width: 1025px) {
+            img {
+              display: block;
+              // width: auto;
+              max-height: 600px;
+              // margin: 0 auto;
+              object-fit: cover;
+            }
+          }
+        }
+        .slick-slide {
+        }
+        .slideNav {
+          .slider {
+            .li {
+              > div {
+                overflow: hidden;
+                position: relative;
+                padding: 0 0 65%;
+              }
+              img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+          }
+          .slick-slide {
+            margin: 0 5px;
+          }
+        }
+        .postBox {
+          .photo {
+            margin-bottom: 40px;
+            img {
+              width: auto;
+              max-width: 100%;
+            }
+          }
+          .postTxt {
+            line-height: 2;
+            p + p {
+              margin: 30px 0 0;
+            }
+            img {
+              max-width: 100%;
+              width: auto;
+              height: auto;
+            }
+          }
+          .pdfArea {
+            margin: 40px 0 0;
+            a {
+              color: #2151a3;
+            }
+          }
+        }
+        .videoBox {
+          margin: 40px 0 0;
+        }
+      }
+      .btnBackBox {
+        margin: 80px 0 0;
+        text-align: center;
+      }
+      .btnContact {
+        max-width: 280px;
+        margin: 0 auto;
+        a {
+          display: block;
+          padding: 10px;
+          font-size: 16px;
+          color: #ffffff;
+          text-align: center;
+          border-radius: 30px;
+          background: #97ae51;
+        }
+      }
+      .btnMore {
+        margin: 40px 0 0;
+      }
+      .btnBack {
+        max-width: 260px;
+        margin: 100px auto 0;
+        a {
+          display: block;
+          padding: 10px;
+          color: #26518a;
+          text-align: center;
+          border-radius: 30px;
+          border: 1px solid #5fadab;
+          background: url(https://s-9937637.smooooth.jp/system_panel/uploads/images/btn_back_arrow.png)
+            left 15px center no-repeat #f6f8fa;
+          background-size: 15px auto;
+        }
+      }
+      .webgene-item-aroundPageLink {
+        display: inline-block;
+        a {
+          display: block;
+          width: 40px;
+          color: #ffffff;
+          line-height: 44px;
+          border-radius: 20px;
+          background: #d10b14;
+        }
+      }
+    }
+  }
+  .archivePanel {
+    .webgene-header {
+      padding: 10px;
+      font-size: 18px;
+      border-bottom: 1px solid #1a1819;
+    }
+    .webgene-item {
+      padding: 10px;
+      a {
+        display: inline-block;
+      }
+    }
+  }
+  @media (min-width: 1025px) {
+    .archivePanel {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 180px;
+    }
+  }
+}

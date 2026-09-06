@@ -1,0 +1,850 @@
+@charset "UTF-8";
+@import "./mixin";
+@import "./mod";
+/* CSS Document */
+
+/*===================================================
+	画面用CSS（PC/SMP）
+===================================================*/
+
+/*////////////////////////////////////////////////////////////
+	TOP
+///////////////////////////////////////////////////////////*/
+#top {
+  .entryPanel {
+    width: 100%;
+    a {
+      padding: 20px 25px 25px;
+      border-radius: 10px;
+    }
+    .entryBox {
+      width: 100%;
+      margin: 0 auto;
+      .entryTtlBox {
+        gap: 0 10px;
+        margin: 0 0 15px;
+        padding: 0 0 10px;
+        background: url("../image/top/entry_title_arrow.png") right center
+          no-repeat;
+        background-size: 15px auto;
+        .sub {
+          font-size: 50px;
+        }
+        .secTtl {
+          font-size: 14px;
+        }
+      }
+      .txt {
+        font-size: 11px;
+      }
+    }
+  }
+  .topKvContainer {
+    .kvPanelList {
+      display: flex;
+      height: calc(100vh - 85px);
+      ul {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        li {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0;
+          transition: opacity 0.5s ease-in-out;
+          &.active {
+            opacity: 1;
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+      .leftPanel,
+      .rightPanel {
+        display: none;
+      }
+      .canterPanel {
+        width: 100%;
+        height: calc(100vh - 85px);
+
+        .topBox,
+        .bottomBox {
+          height: 50%;
+        }
+      }
+      .rightPanel {
+        .enTxt {
+          display: none;
+        }
+      }
+    }
+  }
+  .topInnerContainer {
+    .titlePanel {
+      .titleBox {
+        position: relative;
+        top: -55px;
+        .logo {
+          width: 100%;
+          max-width: 355px;
+          margin: 0 auto 20px;
+        }
+        .ttl {
+          font-size: 18px;
+        }
+      }
+    }
+    .infoSlidePanel {
+      position: absolute;
+      left: -10%;
+      bottom: 33%;
+      width: 120%;
+      padding: 0;
+      transform: rotate(-6deg);
+      .infoSlideBox {
+        .infoSlide {
+          width: 85%;
+          // min-width: 170px;
+          min-width: 210px;
+        }
+      }
+    }
+  }
+  #section {
+    &__concept {
+      margin-top: 5vh;
+      height: 90vh;
+      padding: 80px 25px 100px;
+      .secContainer {
+        width: 100%;
+        .secTtlBox {
+          margin: 0 0 30px;
+          .sub {
+            font-size: 50px;
+          }
+          .secTtl {
+            font-size: 14px;
+          }
+        }
+        .txtBox01 {
+          margin: 0 0 30px;
+          .txt {
+            p {
+              font-size: 16px;
+              em {
+                margin: 2px 4px;
+                padding: 4px 5px;
+                border: 1px solid #ffffff;
+              }
+            }
+          }
+        }
+        .txtBox02 {
+          dl {
+            dt {
+              margin: 0 0 10px;
+              font-size: 20px;
+            }
+            dd {
+              font-size: 8px;
+            }
+          }
+        }
+      }
+    }
+    &__news {
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 107%;
+        height: 105%;
+        background: #ffffff;
+        transform: rotate(-8deg) translateY(-30px) translateX(-10px);
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        top: -20px;
+        right: 25px;
+        width: 135px;
+        height: 50px;
+      }
+      .secContainer {
+        padding: 50px 25px;
+        color: #ffffff;
+        background: #000000;
+      }
+      .secTtlBox {
+        display: block;
+        margin: 0 0 30px;
+        text-align: center;
+        .sub {
+          font-size: 50px;
+        }
+        .secTtl {
+          font-size: 14px;
+        }
+      }
+      .secPanel {
+        .mainBox {
+          margin: 0 0 40px;
+          .mainItem {
+            a {
+              color: #ffffff;
+            }
+            .photoBox {
+              margin: 0 0 20px;
+              .circle {
+                position: absolute;
+                top: -30px;
+                right: -20px;
+                left: auto;
+                width: 74px;
+              }
+              .photo {
+                padding: 0 0 66%;
+              }
+            }
+            .txtBox {
+              dl {
+                dt {
+                  margin: 0 0 5px;
+                }
+                dd {
+                  font-size: 16px;
+                }
+              }
+              .read {
+                display: none;
+              }
+            }
+          }
+        }
+        .subBox {
+          .listBox {
+            .subItem {
+              + .subItem {
+                margin: 20px 0 0;
+              }
+              a {
+                align-items: center;
+                gap: 0 25px;
+                color: #ffffff;
+              }
+              .photo {
+                width: 115px;
+                height: 80px;
+                padding: 0;
+              }
+              .txtBox {
+                width: calc(100% - 140px);
+                display: flex;
+                flex-direction: column;
+                dl {
+                  dt {
+                    margin: 0 0 5px;
+                    font-size: 12px;
+                  }
+                  dd {
+                    padding: 0;
+                    font-size: 16px;
+                  }
+                }
+                .read {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+      .pagingBox {
+        max-width: 250px;
+        margin: 40px auto 0;
+        text-align: center;
+        .pagingList {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .prev,
+          .next {
+            width: 55px;
+            cursor: pointer;
+          }
+          .counter {
+            flex: 1;
+            font-size: 16px;
+            text-align: center;
+            @include helveticaMedium;
+            span {
+              padding: 0.5em;
+            }
+          }
+        }
+      }
+    }
+    &__features {
+      padding: 50px 0 90vh;
+      .secTtlBox {
+        display: block;
+        margin: 0 0 30px;
+        text-align: center;
+        .sub {
+          font-size: 50px;
+        }
+        .secTtl {
+          font-size: 14px;
+        }
+      }
+      .featuresBoardContainer {
+        padding: 0;
+        .featuresBoardPanel {
+          margin-bottom: 50vh;
+          will-change: transform, opacity;
+          backface-visibility: hidden;
+          transform: translate3d(0, 0, 0);
+          &:last-child {
+            margin-bottom: 0;
+          }
+          .panelInner {
+            .leftBox {
+              display: none;
+            }
+            .rightBox {
+              .secBox01 {
+                .txtBox {
+                  padding: 30px 25px 10px;
+                  .title {
+                    margin: 0 0 20px;
+                    font-size: 44px;
+                  }
+                  .num {
+                    font-size: 25px;
+                    text-align: right;
+                  }
+                }
+              }
+              .secBox02 {
+                padding: 0 25px 50px;
+                dl {
+                  margin: 0;
+                  dt {
+                    margin: 0 0 15px;
+                    font-size: 20px;
+                  }
+                  dd {
+                    font-size: 14px;
+                  }
+                }
+                .numTxt {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &__require {
+      position: relative;
+      padding: 40px 0 0;
+      .secTtlBox {
+        width: 100%;
+        margin: 0;
+        padding: 0 25px;
+        text-align: left;
+        border-bottom: none;
+        .sub {
+          font-size: 50px;
+        }
+        .secTtl {
+          font-size: 14px;
+        }
+      }
+      .secContainer {
+        .imgRequire {
+          margin: 0 -40px 0 -20px;
+        }
+        .textRequire {
+          position: absolute;
+          top: 70px;
+          left: 25px;
+          width: calc(100% - 50px);
+          max-width: 640px;
+        }
+      }
+      .entryPanel {
+        position: absolute;
+        left: 0;
+        bottom: 40px;
+        width: 100%;
+        padding: 0 25px;
+      }
+    }
+    &__requirements {
+      padding: 40px 25px 80px;
+      .secTtlBox {
+        width: 100%;
+        margin: 0 0 40px;
+        padding: 0 0 15px;
+        .sub {
+          font-size: 50px;
+        }
+        .secTtl {
+          font-size: 14px;
+        }
+      }
+      .infoBox {
+        max-width: 920px;
+        margin: 0 auto;
+        dl {
+          padding: 10px 0;
+          font-size: 14px;
+          line-height: 1.7;
+          dt {
+            width: 100px;
+            span {
+              display: none;
+            }
+          }
+          dd {
+            width: calc(100% - 100px);
+            > p {
+              + p {
+                margin: 10px 0 0;
+              }
+              span {
+                display: none;
+              }
+            }
+            aside {
+              margin: 10px 0 0;
+              p {
+                font-size: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+    &__info {
+      position: relative;
+      background: url("../image/top/sec_info_bg.png") no-repeat;
+      background-size: cover;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 107%;
+        height: 105%;
+        background: url("../image/top/sec_info_bg.png") no-repeat;
+        background-size: cover;
+        transform: rotate(-8deg) translateY(-30px) translateX(-10px);
+      }
+      .secContainer {
+        padding: 50px 25px;
+      }
+      .secTtlBox {
+        width: 100%;
+        margin: 0 0 30px;
+        padding: 0;
+        border-bottom: none;
+        .sub {
+          font-size: 50px;
+        }
+        .secTtl {
+          font-size: 14px;
+        }
+      }
+      .secPanel {
+        width: 100%;
+        .secBox {
+          + .secBox {
+            margin: 35px 0 0;
+          }
+          .txtBox {
+            margin: 15px 0 0;
+            dl {
+              dt {
+                margin: 0 0 10px;
+                font-size: 20px;
+              }
+              dd {
+                .info01 {
+                  margin: 0 0 10px;
+                  font-size: 14px;
+                }
+                .info02 {
+                  font-size: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &__comment {
+      padding: 60px 0 40px;
+      .commentMainContainer {
+        padding: 0 25px 50px;
+        .commentPanel {
+          .pHead {
+            margin: 0 0 30px;
+            .secTtlBox {
+              padding: 0;
+              .sub {
+                font-size: 50px;
+              }
+              .secTtl {
+                font-size: 14px;
+              }
+            }
+          }
+          .pBody {
+            padding: 40px 25px;
+            border-radius: 10px;
+            background: #ffffff;
+            .secBox {
+              .photo {
+                max-width: 160px;
+                margin: 0 auto 20px;
+              }
+              .txtBox {
+                dl {
+                  dt {
+                    display: block;
+                    margin: 0 0 15px;
+                    text-align: center;
+                    span {
+                      font-size: 12px;
+                    }
+                    em {
+                      display: block;
+                      font-size: 18px;
+                    }
+                  }
+                  dd {
+                    font-size: 12px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .commentSlidePanel {
+        padding: 0 0 40px;
+        .commentSlideBox {
+          ul {
+            li {
+              width: calc(100% / 2);
+            }
+          }
+        }
+      }
+      .txtPanel {
+        display: none;
+      }
+      .entryPanel {
+        width: calc(100% - 50px);
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	news
+///////////////////////////////////////////////////////////*/
+#news {
+  #newsDetailContainer {
+    width: 100%;
+    padding: 50px 0 60px;
+    .titlePanel {
+      margin: 0 0 30px;
+      .time {
+        margin: 0 0 5px;
+        font-size: 12px;
+      }
+      .title {
+        font-size: 20px;
+      }
+    }
+    .detailPanel {
+      .photo {
+        margin: 0 0 30px;
+      }
+      .postBox {
+        p {
+          + p {
+            margin: 20px 0 0;
+          }
+        }
+      }
+    }
+    .btnBack {
+      margin: 60px 0 0;
+      a {
+        padding: 60px 0 0;
+        background: url("../image/common/btn_back_circle.png") center top
+          no-repeat;
+        background-size: 50px auto;
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	contact
+///////////////////////////////////////////////////////////*/
+.formPage {
+  #section {
+    &__contact {
+      padding: 40px 0 70px;
+      .topTxt {
+        margin: 0 0 50px;
+        font-size: 14px;
+        text-align: left;
+      }
+      .topBox {
+        margin: 0 0 50px;
+        dl {
+          margin: 0 0 20px;
+          text-align: left;
+          dt {
+            margin: 0 0 15px;
+            font-size: 22px;
+          }
+          dd {
+            font-size: 14px;
+          }
+        }
+        .btnInsta {
+          max-width: 340px;
+          margin: 0 auto;
+          a {
+            border-radius: 10px;
+            .inner {
+              height: 75px;
+              gap: 0 15px;
+              padding: 15px 0;
+              font-size: 14px;
+              img {
+                width: 24px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*===================================================
+	フォーム
+===================================================*/
+.formBox {
+  form > dl {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    + dl {
+      margin: 15px 0 0;
+    }
+    dt {
+      width: 100px;
+    }
+    dd {
+      width: calc(100% - 100px);
+    }
+    &.msg {
+      align-items: flex-start;
+    }
+  }
+  .radioForm {
+    dd {
+      padding: 5px 0 0;
+    }
+  }
+  ::placeholder {
+    font-size: 12px;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"] {
+    height: 35px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  textarea {
+    height: 150px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .birthBox {
+    height: 35px;
+    ul {
+      li {
+        width: 70px;
+        + li {
+          padding: 0 0 0 15px;
+        }
+      }
+    }
+    input {
+      height: 30px;
+      padding: 0 5px;
+    }
+  }
+  .checkItem {
+    margin: 20px 0 15px;
+    > label > span {
+      height: 20px;
+      padding-left: 15px;
+    }
+    > label > span::before {
+      width: 15px;
+      height: 15px;
+    }
+    input:checked + span::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -5px;
+      left: 4px;
+      width: 10px;
+      height: 16px;
+      transform: rotate(40deg);
+      border-bottom: 2px solid #454545;
+      border-right: 2px solid #454545;
+    }
+    &.agreeCheck {
+      font-size: 12px;
+    }
+  }
+  .itemCheck {
+    .mwform-checkbox-field {
+      span {
+        padding-left: 15px;
+      }
+    }
+  }
+  form .mwform-radio-field {
+    + .mwform-radio-field {
+      margin: 0 0 0 10px;
+    }
+    .mwform-radio-field-text {
+      padding: 0 0 0 20px;
+      background: url("../image/form/form_radio_off.png") left center no-repeat;
+      background-size: 15px auto;
+    }
+    input[type="radio"]:checked + .mwform-radio-field-text {
+      background: url("../image/form/form_radio_on.png") left center no-repeat;
+      background-size: 15px auto;
+    }
+  }
+  .privacy {
+    max-width: 205px;
+    margin: 35px auto 0;
+    .agreeBox {
+      height: 80px;
+      padding: 10px;
+      font-size: 10px;
+    }
+    .box {
+      + .box {
+        margin: 5px 0 0;
+      }
+    }
+  }
+  .agreeTxt {
+    margin: 0 0 20px;
+    padding: 0 10px;
+  }
+  .submitButton {
+    max-width: 240px;
+    .submitTxt {
+      font-size: 14px;
+    }
+    input[type="submit"] {
+      height: 55px;
+      font-size: 14px;
+    }
+  }
+}
+#contactConfirm {
+  .formConfirm {
+    dl {
+      padding: 10px 0;
+      font-size: 12px;
+      > * {
+        padding: 0;
+      }
+      dt {
+        width: 100px;
+        margin: 0 0 5px;
+      }
+      dd {
+        width: calc(100% - 100px);
+      }
+    }
+    .submitButton {
+      flex-direction: row;
+      gap: 0 15px;
+      max-width: 330px;
+      margin: 0 auto;
+      padding: 30px 0 0;
+    }
+    input[type="submit"] {
+      order: 2;
+      width: 100%;
+      height: 55px;
+      font-size: 16px;
+    }
+    button.btnBack {
+      order: 1;
+      width: 100%;
+      height: 55px;
+      font-size: 16px;
+    }
+  }
+}
+#contactComplete {
+  #section__contact {
+    h1 {
+      margin: 0 0 20px;
+      font-size: 50px;
+    }
+    dl {
+      dt {
+        font-size: 20px;
+      }
+      dd {
+        > p {
+          font-size: 12px;
+        }
+        a {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .btnToTop {
+    max-width: 200px;
+    margin: 40px auto 0;
+    a {
+      span {
+        font-size: 14px;
+      }
+    }
+  }
+}

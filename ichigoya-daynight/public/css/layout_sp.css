@@ -1,0 +1,469 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+	画面用CSS（PC/SMP）
+===================================================*/
+/*////////////////////////////////////////////////////////////
+	TOP
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .topMain {
+    margin: 88px 0 0;
+  }
+  .topMain .topKvContainer .topKvPanel {
+    padding: 0 0 50px;
+  }
+  .topMain .topKvContainer .topKvPanel .topKv {
+    width: calc(100vw + 30px);
+  }
+  .topMain .topKvContainer .topKvPanel .kvInner {
+    height: 100%;
+  }
+  .topMain .topKvContainer .topKvPanel .kvTitle {
+    width: 90%;
+    padding: 0 0 30%;
+  }
+  .topMain .topKvContainer .topKvPanel .kvAnimal {
+    position: absolute;
+    right: 20px;
+    bottom: 30px;
+    width: 20%;
+  }
+  .topMain .sec01 {
+    padding: 0 0 40px;
+  }
+  .topMain .sec01 .secContainer {
+    padding: 40px 0 100px;
+    background: url(https://ichigoya-daynight.co.jp/system_panel/uploads/images/top_sec01_bg.png) center top no-repeat;
+    background-size: 100% auto;
+  }
+  .topMain .sec01 .secContainer .ttlPanel {
+    margin: 0 0 30px;
+  }
+  .topMain .sec01 .secContainer .ttlPanel .title {
+    max-width: 220px;
+    margin: 0 0 30px;
+  }
+  .topMain .sec01 .secContainer .ttlPanel .btnBox {
+    max-width: 240px;
+    margin: 0;
+  }
+  .topMain .sec01 .secContainer .ttlPanel .btnBox .btnMoreBlue {
+    margin: 0 0 15px;
+  }
+  .topMain .sec01 .secContainer .secPanel .txtBox .balloon {
+    max-width: 90px;
+    margin: 0 0 10px;
+  }
+  .topMain .sec01 .secContainer .secPanel .txtBox .ttl {
+    margin: 0 0 15px;
+    font-size: 18px;
+  }
+  .topMain .sec02 {
+    margin: 0 0 60px;
+    padding: 0 20px;
+  }
+  .topMain .sec02 .secContainer {
+    padding: 80px 0;
+  }
+  .topMain .sec02 .secTtlBox .balloon {
+    max-width: 90px;
+    margin: 0 auto 10px;
+  }
+  .topMain .sec02 .secTtlBox .secTtl {
+    font-size: 20px;
+  }
+  .topMain .sec02 .listBox .ul .li:not(:first-child) {
+    margin: 40px 0 0;
+  }
+  .topMain .sec03 {
+    margin: 0 0 60px;
+  }
+  .topMain .sec03 .secContainer {
+    display: block;
+  }
+  .topMain .sec03 .ttlPanel {
+    justify-content: center;
+    width: 100%;
+    margin: 0 0 5px;
+  }
+  .topMain .sec03 .ttlPanel .secTtlBox {
+    flex: initial;
+  }
+  .topMain .sec03 .ttlPanel .secTtlBox .balloon {
+    max-width: 110px;
+    margin: 0 0 15px;
+  }
+  .topMain .sec03 .ttlPanel .secTtlBox .secTtl {
+    font-size: 20px;
+  }
+  .topMain .sec03 .ttlPanel .animal {
+    width: 80px;
+    margin: 0 0 0 20px;
+  }
+  .topMain .sec03 .secPanel {
+    width: 100%;
+    min-height: 0;
+    padding: 80px 5px;
+  }
+  .topMain .sec03 .secPanel .webgene-item a {
+    padding: 18px 10px 18px 50px;
+    background-position: 10px center;
+    font-size: 14px;
+  }
+  .topMain .sec04 {
+    padding: 0 0 60px;
+  }
+  .topMain .sec04 .secTtlBox {
+    margin: 0 0 30px;
+  }
+  .topMain .sec04 .secTtlBox .balloon {
+    max-width: 90px;
+    margin: 0 auto 10px;
+  }
+  .topMain .sec04 .secTtlBox .secTtl {
+    font-size: 20px;
+  }
+  .topMain .sec04 .secContainer {
+    display: block;
+  }
+  .topMain .sec04 .secContainer .leftBox,
+.topMain .sec04 .secContainer .rightBox {
+    width: 100%;
+  }
+  .topMain .sec04 .secContainer .infoBox .dl {
+    min-height: 60px;
+  }
+  .topMain .sec04 .secContainer .infoBox .dl .dt {
+    width: 25%;
+    padding: 12px 0;
+  }
+  .topMain .sec04 .secContainer .infoBox .dl .dd {
+    width: calc(75% - 4px);
+    padding: 12px 0 12px 15px;
+  }
+  .topMain .sec04 .secContainer .rightBox {
+    margin: 30px 0 0;
+  }
+  .topMain .sec04 .secContainer .mapBox {
+    padding: 0 0 70%;
+  }
+}
+/*////////////////////////////////////////////////////////////
+	about
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .aboutMain .sec01 {
+    padding: 60px 0 30px;
+    background-position: center top 60px;
+    background-size: auto 55%;
+  }
+  .aboutMain .sec01 .secContainer {
+    display: block;
+  }
+  .aboutMain .sec01 .secContainer .leftPanel,
+.aboutMain .sec01 .secContainer .rightPanel {
+    width: 100%;
+  }
+  .aboutMain .sec01 .secContainer .leftPanel .title {
+    max-width: 280px;
+    margin: 0 auto 35px;
+  }
+  .aboutMain .sec01 .secContainer .rightPanel .txt {
+    font-size: 13px;
+    line-height: 2.2;
+  }
+  .aboutMain .sec02 {
+    padding: 30px 0;
+    background-position: center bottom;
+    background-size: 100% auto;
+  }
+  .aboutMain .sec02 .title {
+    max-width: 500px;
+    margin: 0 0 30px;
+  }
+  .aboutMain .sec02 .secContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+  .aboutMain .sec02 .secContainer .photoBox {
+    order: 1;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .aboutMain .sec02 .secContainer .photoBox .name {
+    margin: 15px 0 0;
+  }
+  .aboutMain .sec02 .secContainer .photoBox .name .span {
+    font-size: 12px;
+  }
+  .aboutMain .sec02 .secContainer .photoBox .name .em {
+    font-size: 18px;
+  }
+  .aboutMain .sec02 .secContainer .txtBox {
+    order: 2;
+    width: 100%;
+  }
+  .aboutMain .sec02 .secContainer .txtBox .txt {
+    font-size: 13px;
+    line-height: 2.2;
+  }
+  .aboutMain .sec03 {
+    padding: 30px 0;
+  }
+  .aboutMain .sec03 .secContainer .secPanel:not(:first-child) {
+    margin: 45px 0 0;
+  }
+  .aboutMain .sec03 .secContainer .secPanel:nth-child(odd) .secBox .photo {
+    order: 1;
+  }
+  .aboutMain .sec03 .secContainer .secPanel:nth-child(odd) .secBox .txtBox {
+    order: 2;
+  }
+  .aboutMain .sec03 .secContainer .secPanel:nth-child(even) .secBox {
+    padding: 0;
+  }
+  .aboutMain .sec03 .secContainer .secPanel .secBox {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .aboutMain .sec03 .secContainer .secPanel .secBox .photo {
+    order: 1;
+    width: 100%;
+    max-width: 455px;
+    margin: 0 auto;
+  }
+  .aboutMain .sec03 .secContainer .secPanel .secBox .txtBox {
+    order: 2;
+    width: 100%;
+    padding: 0;
+  }
+  .aboutMain .sec03 .secContainer .secPanel .secBox .txtBox .ttl {
+    margin: 0 0 15px;
+    font-size: 20px;
+  }
+  .aboutMain .sec03 .secContainer .secPanel .secBox .txtBox .txt {
+    font-size: 13px;
+    line-height: 2.2;
+  }
+  .aboutMain .sec04 {
+    padding: 30px 0 60px;
+  }
+  .aboutMain .sec04 .title {
+    max-width: 300px;
+    margin: 0 auto 25px;
+  }
+}
+/*////////////////////////////////////////////////////////////
+	house
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .houseMain .sec01 {
+    padding: 60px 0;
+  }
+  .houseMain .sec01 .secContainer {
+    padding: 30px 0;
+  }
+  .houseMain .sec01 .secContainer .linkList .ul {
+    display: block;
+  }
+  .houseMain .sec01 .secContainer .linkList .ul .li:not(:first-child) {
+    margin: 15px 0 0;
+  }
+  .houseMain .sec01 .secContainer .linkList .ul .li a {
+    min-height: 80px;
+    padding: 10px;
+  }
+  .houseMain .sec01 .secContainer .linkList .ul .li .icon {
+    width: 32px;
+    margin: 0 8px 0 0;
+  }
+  .houseMain .sec01 .secContainer .linkList .ul .li .info .ttl {
+    font-size: 14px;
+  }
+  .houseMain .sec01 .secContainer .linkList .ul .li .info .address {
+    font-size: 11px;
+  }
+  .houseMain .sec01 .secContainer .linkList .ul .li .status {
+    width: 90px;
+    margin: 0 0 0 8px;
+  }
+  .houseMain .sec01 .secContainer .linkList .ul .li .status .mark p {
+    font-size: 50px;
+  }
+  .houseMain .sec01 .secContainer .linkList .ul .li .status .txt {
+    font-size: 14px;
+  }
+  .houseMain .sec01 .secContainer .linkList .animal {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: 90px;
+    margin: 25px 0 0 auto;
+  }
+  .houseMain .sec02 {
+    padding: 0 20px;
+  }
+  .houseMain .sec02 .secContainer {
+    padding: 35px 0;
+  }
+  .houseMain .sec02 .secContainer .introBox {
+    display: block;
+  }
+  .houseMain .sec02 .secContainer .introBox .photo,
+.houseMain .sec02 .secContainer .introBox .txtBox {
+    width: 100%;
+  }
+  .houseMain .sec02 .secContainer .introBox .txtBox {
+    margin: 25px 0 0;
+  }
+  .houseMain .sec02 .secContainer .introBox .txtBox .ttl {
+    margin: 0 0 15px;
+    font-size: 20px;
+  }
+  .houseMain .sec02 .secContainer .introBox .txtBox .infoBox .dl {
+    min-height: 50px;
+    font-size: 12px;
+  }
+  .houseMain .sec02 .secContainer .introBox .txtBox .infoBox .dl .dt {
+    width: 100px;
+  }
+  .houseMain .sec02 .secContainer .recommendBox {
+    margin: 30px 0;
+    padding: 25px 15px 15px;
+  }
+  .houseMain .sec02 .secContainer .recommendBox .balloon {
+    left: 10px;
+    width: 120px;
+  }
+  .houseMain .sec02 .secContainer .recommendBox .txt {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+  .houseMain .sec02 .secContainer .listBox .ul {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .houseMain .sec03 {
+    padding: 60px 0;
+  }
+  .houseMain .sec03 .secContainer .section + .section {
+    margin: 50px 0 0;
+  }
+  .houseMain .sec03 .secContainer .section .secTtl {
+    align-items: flex-start;
+    gap: 12px;
+    margin: 0 0 15px;
+  }
+  .houseMain .sec03 .secContainer .section .secTtl h3 {
+    max-width: 85%;
+    font-size: 18px;
+  }
+  .houseMain .sec03 .secContainer .section .secTtl::after {
+    margin: 13px 0 0;
+  }
+  .houseMain .sec03 .secContainer .section .feePanel {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .houseMain .sec03 .secContainer .section .feeList .dl {
+    min-height: 55px;
+    padding: 10px;
+    font-size: 12px;
+  }
+  .houseMain .sec03 .secContainer .section .feeList .dl .dd {
+    margin: 0 0 0 10px;
+  }
+}
+/*////////////////////////////////////////////////////////////
+	blog
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .blogMain .blogSection {
+    padding: 40px 0 80px;
+  }
+  .blogMain .catePanel {
+    padding: 40px 0;
+  }
+  .blogMain .catePanel .webgene-blog .webgene-item {
+    display: block;
+    width: 180px;
+    margin: 0 auto 20px;
+  }
+  .blogMain .blogPanel--list .webgene-blog {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -40px 0 0 -10px;
+  }
+  .blogMain .blogPanel--list .webgene-blog .webgene-item {
+    width: calc(50% - 10px);
+    margin: 40px 0 0 10px;
+  }
+  .blogMain .blogPanel--list .webgene-blog .webgene-item .photo {
+    position: relative;
+    height: 0;
+    margin: 0 0 10px;
+    padding: 0 0 80%;
+  }
+  .blogMain .blogPanel--list .webgene-blog .webgene-item .photo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .blogMain .blogPanel--list .webgene-blog .webgene-item .title {
+    min-height: 0;
+    margin: 0;
+  }
+  .blogMain .blogPanel--list .webgene-blog .webgene-item .more p {
+    padding: 5px 0;
+    font-size: 12px;
+    background: url(https://sit-9545227.sibloo.com/system_panel/uploads/images/btn_more_arrow.png) right 2px center no-repeat;
+    background-size: 6px auto;
+  }
+  .blogMain .blogPanel--list .webgene-pagination {
+    margin: 60px auto 0;
+  }
+  .blogMain .blogPanel--detail .webgene-blog .ttlBox {
+    font-size: 20px;
+  }
+  .blogMain .blogPanel--detail .webgene-blog .slickSlide {
+    margin: 0 0 40px;
+  }
+  .blogMain .blogPanel--detail .webgene-blog .slickSlide .slider .li > div {
+    padding: 0 0 70%;
+  }
+  .blogMain .blogPanel--detail .webgene-blog .thumb-item.slider .li > div {
+    overflow: hidden;
+    position: relative;
+    padding: 0 0 100%;
+  }
+  .blogMain .blogPanel--detail .webgene-blog .thumb-item.slider .li img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .blogMain .blogPanel--detail .webgene-blog .slick-prev {
+    left: -20px;
+  }
+  .blogMain .blogPanel--detail .webgene-blog .slick-next {
+    right: -20px;
+  }
+  .blogMain .blogPanel--detail .btnBackBox {
+    margin: 50px 0 0;
+  }
+  .blogMain .blogPanel--detail .btnBack {
+    margin: 40px auto 0;
+  }
+  .blogMain .blogPanel--detail .btnMore {
+    margin: 40px auto 0;
+  }
+}

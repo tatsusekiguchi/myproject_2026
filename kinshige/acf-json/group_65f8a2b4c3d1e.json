@@ -1,0 +1,113 @@
+{
+  "key": "group_65f8a2b4c3d1e",
+  "title": "トップページバナー設定",
+  "fields": [
+    {
+      "key": "field_65f8a2b4c3d1f",
+      "label": "バナー",
+      "name": "top_banners",
+      "aria-label": "",
+      "type": "repeater",
+      "instructions": "バナー画像を追加できます。基本1枚のみ表示されます。",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "layout": "block",
+      "pagination": 0,
+      "min": 0,
+      "max": 0,
+      "collapsed": "",
+      "button_label": "バナーを追加",
+      "rows_per_page": 20,
+      "sub_fields": [
+        {
+          "key": "field_65f8a2b4c3d20",
+          "label": "バナー画像",
+          "name": "banner_image",
+          "aria-label": "",
+          "type": "image",
+          "instructions": "",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "return_format": "array",
+          "library": "all",
+          "min_width": "",
+          "min_height": "",
+          "min_size": "",
+          "max_width": "",
+          "max_height": "",
+          "max_size": "",
+          "mime_types": "",
+          "preview_size": "medium",
+          "parent_repeater": "field_65f8a2b4c3d1f"
+        },
+        {
+          "key": "field_65f8a2b4c3d21",
+          "label": "リンクURL",
+          "name": "banner_url",
+          "aria-label": "",
+          "type": "url",
+          "instructions": "バナーのリンク先URLを入力してください。",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "https://example.com",
+          "parent_repeater": "field_65f8a2b4c3d1f"
+        },
+        {
+          "key": "field_65f8a2b4c3d22",
+          "label": "表示する",
+          "name": "banner_visible",
+          "aria-label": "",
+          "type": "true_false",
+          "instructions": "チェックを入れると、このバナーが表示されます。",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "message": "",
+          "default_value": 1,
+          "ui": 1,
+          "ui_on_text": "表示",
+          "ui_off_text": "非表示",
+          "parent_repeater": "field_65f8a2b4c3d1f"
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post",
+        "operator": "==",
+        "value": "30"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "show_in_rest": 0
+}

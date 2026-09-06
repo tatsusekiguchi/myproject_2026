@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title><{$page.title}></title>
+    <meta name="description" content="<{$page.description}>" />
+    <link rel="canonical" href="<{$page.canonical_url}>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="<{$page.title}>" />
+    <meta property="og:description" content="<{$page.description}>" />
+    <meta property="og:site_name" content="<{$shop.name}>" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="shortcut icon" type="image/ico" href="<{$shop.favicon_url}>" />
+    <link href="<{$page.css}>" rel="stylesheet" />
+    <link
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <{$makeshop.head}>
+  </head>
+
+  <body>
+    <{$makeshop.body_top}> <{$module.header}>
+
+    <div class="contents">
+      <div class="breadcrumb">
+        <span class="breadcrumb-item"><a href="<{$url.top}>">ホーム</a></span>
+        <span class="breadcrumb-item current">検索結果</span>
+      </div>
+
+      <div class="container">
+        <{$module.side}>
+
+        <main class="main">
+          <section class="main-section">
+            <!--検索結果-->
+            <div class="category-title">
+              <h2>
+                検索結果
+                <span>
+                  <{if $search.keyword}> <{$search.keyword}> <{/if}> <{if
+                  $search.category.name}> <{$search.category.name}> <{/if}> <{if
+                  $search.price_low || $search.price_high}> <{if
+                  $search.price_low}><{$search.price_low}>円<{/if}>～<{if
+                  $search.price_high}><{$search.price_high}>円<{/if}> <{/if}>
+                  <{if $search.original_code}> <{$search.original_code}> <{/if}>
+                </span>
+              </h2>
+              <dl class="list-head-sort">
+                <dt>並べ替え：</dt>
+                <dd>
+                  <a href="<{$search.sort_low_price_url}>">価格の低い順</a>
+                </dd>
+                <dd>
+                  <a href="<{$search.sort_high_price_url}>">価格の高い順</a>
+                </dd>
+                <dd><a href="<{$search.sort_recommend_url}>">おすすめ順</a></dd>
+                <dd><a href="<{$search.sort_new_url}>">新着順</a></dd>
+              </dl>
+            </div>
+
+            <!--検索アイテム-->
+            <{if $search.item.has_item}>
+
+            <ul class="item-list">
+              <{section name=i loop=$search.item.list}>
+              <li>
+                <div class="item-icon">
+                  <{if $search.item.list[i].is_soldout}>
+                  <p class="item-soldout">SOLD OUT</p>
+                  <{elseif $search.item.list[i].is_sale}>
+                  <p class="item-sale">SALE</p>
+                  <{/if}>
+                </div>
+
+                <div class="item-list-image">
+                  <a href="<{$search.item.list[i].url}>"
+                    ><img
+                      src="<{$search.item.list[i].image_L}>"
+                      alt=""
+                      loading="lazy"
+                  /></a>
+                  <div class="favorite item-list-favorite">
+                    <a
+                      href="<{$search.item.list[i].favorite_entry_url}>"
+                      class="favorite-icon favorite-off <{if $search.item.list[i].is_favorite}>hide<{/if}>"
+                    ></a>
+                    <a
+                      href="<{$search.item.list[i].favorite_remove_url}>"
+                      class="favorite-icon favorite-on <{if !$search.item.list[i].is_favorite}>hide<{/if}>"
+                    ></a>
+                  </div>
+                </div>
+                <{if $search.item.list[i].base_category.url}>
+                <p class="item-category">
+                  <a href="<{$search.item.list[i].base_category.url}>"
+                    ><{$search.item.list[i].base_category.name}></a
+                  >
+                </p>
+                <{/if}>
+                <p class="item-name">
+                  <a href="<{$search.item.list[i].url}>"
+                    ><{$search.item.list[i].name|escape:html}></a
+                  >
+                </p>
+                <{if $search.item.list[i].is_sale}>
+                <p class="price original-price">
+                  ￥<{$search.item.list[i].original_price|number_format}><span
+                    >（税込）</span
+                  >
+                </p>
+                <p class="price item-sale-price">
+                  ￥<{$search.item.list[i].price|number_format}><span
+                    class="tax"
+                    >（税込）</span
+                  >
+                  <span class="sale-discount-rate"
+                    >[<{$search.item.list[i].sale_rate}>%OFF</span
+                  >]
+                </p>
+                <{else}>
+                <p class="price">
+                  <{$search.item.list[i].price|number_format}><span
+                    >（税込）</span
+                  >
+                </p>
+                <{/if}>
+                <div
+                  class="review-summary-container"
+                  data-gname="<{$search.item.list[i].system_code}>"
+                  data-pid="<{$search.item.list[i].system_code}>"
+                  data-group="true"
+                  data-action="summary"
+                ></div>
+                <div class="item-list-cart">
+                  <{if $search.item.list[i].is_soldout}>
+                  <div class="item-list-sold item-list-btn">売り切れ</div>
+                  <{else}>
+                  <form
+                    action="https://nagasaki2068.shop1.makeshop.jp/api/basket/add.html"
+                    method="post"
+                    class="ajax-cart-form"
+                    accept-charset="EUC-JP"
+                  >
+                    <!-- オプションがある場合 -->
+                    <{if $search.item.list[i].has_option &&
+                    $search.item.list[i].option.has_item}> <{if
+                    $search.item.list[i].option.option1.has_item}>
+                    <div class="item-option-select">
+                      <label
+                        ><{$search.item.list[i].option.option1_label}>：</label
+                      >
+                      <select name="option1_id" class="option-select">
+                        <option value="">選択してください</option>
+                        <{section name=o1
+                        loop=$search.item.list[i].option.option1.list}>
+                        <option
+                          value="<{$search.item.list[i].option.option1.list[o1].id}>"
+                        >
+                          <{$search.item.list[i].option.option1.list[o1].name}>
+                        </option>
+                        <{/section}>
+                      </select>
+                    </div>
+                    <{/if}> <{if $search.item.list[i].option.option2.has_item}>
+                    <div class="item-option-select">
+                      <label
+                        ><{$search.item.list[i].option.option2_label}>：</label
+                      >
+                      <select name="option2_id" class="option-select">
+                        <option value="">選択してください</option>
+                        <{section name=o2
+                        loop=$search.item.list[i].option.option2.list}>
+                        <option
+                          value="<{$search.item.list[i].option.option2.list[o2].id}>"
+                        >
+                          <{$search.item.list[i].option.option2.list[o2].name}>
+                        </option>
+                        <{/section}>
+                      </select>
+                    </div>
+                    <{/if}> <{/if}>
+
+                    <!-- オプショングループ（固定値） -->
+                    <div class="item-option-group">
+                      <label>サイズ：</label>
+                      <select
+                        name="option_group[]"
+                        class="option-group-select"
+                        data-item-name="size"
+                      >
+                        <option value="">選択してください</option>
+                        <option value="S|0">S</option>
+                        <option value="M|0">M</option>
+                        <option value="L|0">L</option>
+                      </select>
+                    </div>
+
+                    <!-- 数量入力 -->
+                    <div class="item-quantity-select">
+                      <label>数量：</label>
+                      <input
+                        type="number"
+                        name="quantity"
+                        value="1"
+                        min="1"
+                        class="quantity-input"
+                      />
+                    </div>
+
+                    <input
+                      type="hidden"
+                      name="brand_info"
+                      value=""
+                      class="brand-info-input"
+                    />
+                    <input
+                      type="hidden"
+                      name="system_code"
+                      value="<{$search.item.list[i].system_code}>"
+                    />
+
+                    <button
+                      type="submit"
+                      class="item-list-btn add-list-cart cart-order-btn ajax-cart-add"
+                    >
+                      カートに入れる
+                    </button>
+                  </form>
+                  <{/if}>
+                </div>
+              </li>
+              <{/section}>
+            </ul>
+
+            <!--ページャー-->
+            <div class="pager-wrap">
+              <p class="total-count">
+                （全<span><{$search.total_count}></span>件）<{$search.display_count}>件表示
+              </p>
+              <{if $search.pager.has_item}>
+              <ul class="pager">
+                <{if !$search.pager.is_first_display}>
+                <li>
+                  <a href="<{$search.pager.first_url}>"
+                    ><span class="prev">一番前へ</span></a
+                  >
+                </li>
+                <{/if}> <{section name=i loop=$search.pager.list}> <{if
+                $search.pager.list[i].is_current_page}>
+                <li>
+                  <span class="current"><{$search.pager.list[i].number}></span>
+                </li>
+                <{else}>
+                <li>
+                  <a href="<{$search.pager.list[i].url}>"
+                    ><span><{$search.pager.list[i].number}></span></a
+                  >
+                </li>
+                <{/if}> <{/section}> <{if !$search.pager.is_last_display}>
+                <li>
+                  <a href="<{$search.pager.last_url}>"
+                    ><span class="next">最後へ</span></a
+                  >
+                </li>
+                <{/if}>
+              </ul>
+              <{/if}>
+            </div>
+
+            <{else}>
+            <p class="empty">
+              ご指定の条件に一致する商品が見つかりませんでした
+            </p>
+            <{/if}>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <{$module.footer}>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // フォーム送信前にbrand_infoを構築
+        $(".ajax-cart-form").on("submit", function (e) {
+          e.preventDefault();
+
+          var $form = $(this);
+          var $btn = $form.find(".ajax-cart-add");
+          var originalText = $btn.text();
+
+          // brand_infoの構築
+          var systemCode = $form.find('input[name="system_code"]').val();
+          var quantity = $form.find('input[name="quantity"]').val() || 1;
+          var option1Id = $form.find('select[name="option1_id"]').val() || "";
+          var option2Id = $form.find('select[name="option2_id"]').val() || "";
+
+          // オプショングループの値を収集
+          var optionGroupValues = [];
+          var optionGroupDetails = []; // デバッグ用
+          $form.find('select[name="option_group[]"]').each(function () {
+            var value = $(this).val();
+            var itemName = $(this).data("item-name");
+            if (value) {
+              optionGroupValues.push(value);
+              // デバッグ用: 選択されたオプショングループの詳細を保存
+              var parts = value.split("|");
+              optionGroupDetails.push({
+                groupName: itemName,
+                selectedValue: parts[0],
+                price: parts[1],
+              });
+            }
+          });
+          var optionGroupStr = optionGroupValues.join(",");
+
+          // brand_info形式: コード区分,商品コード,数量,定期購入フラグ,オプション1,オプション2,オプショングループ
+          var brandInfo =
+            "1," +
+            systemCode +
+            "," +
+            quantity +
+            ",N," +
+            option1Id +
+            "," +
+            option2Id +
+            "," +
+            optionGroupStr;
+
+          // brand_infoを設定
+          $form.find('input[name="brand_info"]').val(brandInfo);
+
+          // デバッグ: 選択された値をコンソールに出力
+          console.log("=== カート追加情報 ===");
+          console.log("商品コード:", systemCode);
+          console.log("数量:", quantity);
+          console.log("オプション1 ID:", option1Id || "なし");
+          console.log("オプション2 ID:", option2Id || "なし");
+          if (optionGroupDetails.length > 0) {
+            console.log("オプショングループ:");
+            optionGroupDetails.forEach(function (detail) {
+              console.log(
+                "  - " +
+                  detail.groupName +
+                  ": " +
+                  detail.selectedValue +
+                  " (価格差: " +
+                  detail.price +
+                  "円)"
+              );
+            });
+          } else {
+            console.log("オプショングループ: なし");
+          }
+          console.log("送信するbrand_info:", brandInfo);
+          console.log("====================");
+
+          // ボタンを無効化
+          $btn.prop("disabled", true).text("追加中...");
+
+          // 非表示のiframeを作成
+          var iframeName = "cart-iframe-" + Date.now();
+          var $iframe = $(
+            '<iframe name="' + iframeName + '" style="display:none;"></iframe>'
+          );
+          $("body").append($iframe);
+
+          // フォームのtargetをiframeに設定
+          $form.attr("target", iframeName);
+
+          // フォームを送信
+          $form[0].submit();
+
+          // 成功メッセージを表示
+          setTimeout(function () {
+            $btn.text("追加しました✓");
+
+            // 2秒後に元に戻す
+            setTimeout(function () {
+              $btn.prop("disabled", false).text(originalText);
+              $iframe.remove();
+            }, 2000);
+          }, 500);
+        });
+      });
+    </script>
+    <script src="<{$page.javascript}>"></script>
+    <{$makeshop.body_bottom}>
+  </body>
+</html>

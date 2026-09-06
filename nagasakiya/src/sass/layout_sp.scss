@@ -1,0 +1,381 @@
+@charset "UTF-8";
+@import "./mixin";
+@import "./mod";
+/* CSS Document */
+
+/*===================================================
+	画面用CSS（PC/SMP）
+===================================================*/
+
+/*////////////////////////////////////////////////////////////
+	TOP
+///////////////////////////////////////////////////////////*/
+#top {
+  .topKvContainer {
+    height: 350px;
+    .kvTitlePanel {
+      width: 90%;
+      padding: 20px;
+      h1 {
+        font-size: 24px;
+      }
+      p {
+        margin: 10px 0 0;
+        font-size: 13px;
+        line-height: 1.5;
+      }
+    }
+  }
+  .sec01 {
+    padding: 50px 0;
+    .topMessage {
+      margin: 0 0 30px;
+      font-size: 22px;
+    }
+    .secContainer {
+      &::before {
+        content: "";
+        width: 100%;
+      }
+    }
+    .secPanel {
+      padding: 30px 20px;
+      .ttl {
+        margin: 0 0 25px;
+      }
+      .listBox {
+        max-width: 400px;
+        ul {
+          li {
+            + li {
+              margin: 15px 0 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .sec02 {
+    padding: 60px 0;
+    .listBox {
+      max-width: 400px;
+      ul {
+        li {
+          + li {
+            margin: 20px 0 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	itemList
+///////////////////////////////////////////////////////////*/
+#itemList {
+  .itemListPageMain {
+    padding: 50px 0 80px;
+    .secContainer {
+      h2 {
+        margin: 0 0 20px;
+        padding: 0 0 5px 15px;
+        font-size: 18px;
+        border-left: 5px solid #1874b7;
+        border-bottom: 2px solid #000000;
+      }
+      .catePanel {
+        margin: 0 0 30px;
+        .side-category-list {
+          padding: 0 15px;
+          > li {
+            margin: 0 0 30px;
+          }
+        }
+      }
+      .itemPanel {
+      }
+    }
+    .listTable {
+      table {
+        thead {
+          display: none;
+        }
+        tbody {
+          tr {
+            display: block;
+            border: 1px solid #000000;
+            + tr {
+              margin: 30px 0 0;
+            }
+          }
+          td {
+            display: block;
+          }
+          dl {
+            dt {
+              padding: 10px;
+              font-weight: bold;
+              color: #2d4c8f;
+              background: #bcdff2;
+            }
+            dd {
+              padding: 10px;
+            }
+          }
+        }
+      }
+    }
+    .bnrShoppingGuide {
+      max-width: 600px;
+      margin: 60px auto 0;
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	guide
+///////////////////////////////////////////////////////////*/
+#guide {
+  .sectionTitle {
+    margin: 0 0 20px;
+    padding: 0 0 5px 15px;
+    font-size: 18px;
+    border-left: 5px solid #1874b7;
+    border-bottom: 2px solid #000000;
+  }
+  .sectionSubTitle {
+    margin: 0 0 20px;
+    padding: 0 0 0 20px;
+    font-size: 16px;
+    background: url("../image/common/guide_ttl_circle.png") left center
+      no-repeat;
+    background-size: 15px auto;
+  }
+  .topSection {
+    padding: 0 0 50px;
+    .topTxt {
+      margin: 0 0 30px;
+    }
+    .stepPanel {
+      margin: 0 0 40px;
+      .stepBox {
+        + .stepBox {
+          margin: 15px 0 0;
+        }
+        dl {
+          dt {
+            margin: 0 0 5px;
+          }
+          dd {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    .advicePanel {
+      padding: 30px 20px;
+      dl {
+        margin: 0 0 20px;
+        dt {
+          margin: 0 0 15px;
+          font-size: 16px;
+        }
+      }
+      .uniformBox {
+        max-width: 280px;
+        .uniform01 {
+          width: 43%;
+        }
+        .uniform02 {
+          width: 48%;
+        }
+      }
+    }
+  }
+  .detailSection {
+    padding: 0 0 60px;
+    .topTitleLabel {
+      padding: 15px 20px;
+      .title {
+        max-width: 320px;
+        h2 {
+          padding: 0 15px;
+          font-size: 18px;
+        }
+      }
+    }
+    .section {
+      padding: 40px 0 60px;
+      .typeList {
+        margin: 20px 0 40px;
+        ol {
+          gap: 10px;
+          li {
+            flex: 0 0 auto;
+            min-width: 140px;
+            max-width: 140px;
+            padding: 10px 5px;
+          }
+        }
+      }
+      .secPanel {
+        padding: 20px;
+        .topBox {
+          margin: 0 0 40px;
+          .txt {
+            margin: 0 0 30px;
+          }
+          ul {
+            max-width: 400px;
+            margin: 0 auto;
+            li {
+              + li {
+                margin: 10px 0 0;
+              }
+            }
+          }
+        }
+        .secBox {
+          + .secBox {
+            margin: 40px 0 0;
+          }
+          .photoBox {
+            .photo {
+              margin: 0 0 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .aboutSection {
+    padding: 0 0 100px;
+    .section {
+      + .section {
+        margin: 50px 0 0;
+      }
+      h2 {
+        margin: 0 0 20px;
+        padding: 0 0 5px 15px;
+        font-size: 18px;
+        border-left: 5px solid #1874b7;
+        border-bottom: 2px solid #000000;
+      }
+      .txtBox {
+        padding: 0 20px;
+        .txt {
+          + .txt {
+            margin: 20px 0 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	faq
+///////////////////////////////////////////////////////////*/
+#faq {
+  .topSection {
+    padding: 0 0 40px;
+    .linkList {
+      max-width: 400px;
+      margin: 0 auto;
+      ul {
+        li {
+          + li {
+            margin: 10px 0 0;
+          }
+        }
+      }
+    }
+  }
+  .faqSection {
+    padding: 0 0 100px;
+    .section {
+      + .section {
+        margin: 50px 0 0;
+      }
+      h2 {
+        margin: 0 0 20px;
+        padding: 0 0 5px 15px;
+        font-size: 18px;
+        border-left: 5px solid #1874b7;
+        border-bottom: 2px solid #000000;
+      }
+    }
+    .secBox {
+      .ttlHead {
+        padding: 10px 20px 10px 10px;
+        background: url("../image/common/accord_plus.png") right 10px center
+          no-repeat #1874b7;
+        background-size: 15px auto;
+        &.active {
+          background: url("../image/common/accord_minus.png") right 10px center
+            no-repeat #1874b7;
+          background-size: 15px auto;
+        }
+        .icon {
+          width: 30px;
+          font-size: 20px;
+        }
+        .ttl {
+        }
+      }
+      .cntBody {
+        padding: 15px 20px;
+        .txt {
+          + .txt {
+            margin: 15px 0 0;
+          }
+        }
+      }
+      + .secBox {
+        margin: 25px 0 0;
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	policy
+///////////////////////////////////////////////////////////*/
+.policyContents {
+  .category-title {
+    .guide-title {
+      font-size: 22px;
+      span {
+        font-size: 14px;
+      }
+    }
+  }
+  .policy-box {
+    padding: 20px;
+    pre {
+      font-size: 13px;
+      line-height: 1.9;
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	contract
+///////////////////////////////////////////////////////////*/
+.contractContents {
+  .category-title {
+    .guide-title {
+      font-size: 22px;
+    }
+  }
+  .contract-section {
+    dt {
+      font-size: 15px;
+    }
+    dd {
+      font-size: 14px;
+      line-height: 1.8;
+    }
+  }
+}

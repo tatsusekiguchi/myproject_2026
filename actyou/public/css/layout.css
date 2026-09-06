@@ -1,0 +1,2336 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+	画面用CSS（PC/SMP）
+===================================================*/
+/*////////////////////////////////////////////////////////////
+	TOP
+///////////////////////////////////////////////////////////*/
+#top .topKvContainer {
+  position: relative;
+}
+#top .topKvContainer .topKv {
+  position: relative;
+  width: 100%;
+  height: 700px;
+}
+#top .topKvContainer .topKv .kvBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#top .topKvContainer .topKv .kvBox > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#top .topKvContainer .topKv .kvBox .kv01 {
+  background: url("../image/top/top_kv_01.png") center no-repeat;
+  background-size: cover;
+}
+#top .topKvContainer .topKv .kvBox .kv02 {
+  background: url("../image/top/top_kv_02.png") center no-repeat;
+  background-size: cover;
+}
+#top .topKvContainer .topKv .kvBox .kv03 {
+  background: url("../image/top/top_kv_03.png") center no-repeat;
+  background-size: cover;
+}
+#top .topKvContainer .kvTitleBox {
+  position: absolute;
+  right: 5%;
+  bottom: 60px;
+  text-align: right;
+  color: #ffffff;
+}
+#top .topKvContainer .kvTitleBox .kvTitle01 {
+  font-size: 44px;
+  font-weight: 700;
+}
+#top .topKvContainer .kvTitleBox .kvTitle02 {
+  font-size: 20px;
+}
+#top .postSection {
+  padding: 100px 0;
+}
+#top .postSection .secContainer .section .rightBox .postPanel {
+  overflow: scroll;
+  padding: 20px;
+  border-bottom: 1px solid #767676;
+}
+#top .postSection .secContainer .section .rightBox .postPanel ul {
+  height: 200px;
+}
+#top .postSection .secContainer .section .rightBox .postPanel ul li + li {
+  margin: 15px 0 0;
+}
+#top .postSection .secContainer .section .rightBox .postPanel ul li a {
+  display: flex;
+  justify-content: space-between;
+}
+#top .postSection .secContainer .section .rightBox .postPanel ul li span {
+  width: 100px;
+}
+#top .postSection .secContainer .section .rightBox .postPanel ul li p {
+  width: calc(100% - 100px);
+}
+@media (min-width: 1025px) {
+  #top .postSection .secContainer {
+    display: flex;
+    justify-content: space-between;
+  }
+  #top .postSection .secContainer .section {
+    display: flex;
+    justify-content: space-between;
+    width: 48%;
+  }
+  #top .postSection .secContainer .section .leftBox {
+    width: 160px;
+  }
+  #top .postSection .secContainer .section .rightBox {
+    flex: 1;
+  }
+}
+#top .sec01 {
+  position: relative;
+  padding: 120px 0;
+  color: #ffffff;
+  background: url("../image/top/sec01_bg.png") center no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+#top .sec01::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 500px;
+  background: #ffffff;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+#top .sec01:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 500px;
+  height: 500px;
+  background: #ffffff;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+#top .sec01 .secContainer01,
+#top .sec01 .secContainer02,
+#top .sec01 .btnMore {
+  position: relative;
+  z-index: 1;
+}
+#top .sec01 .secContainer01 {
+  margin: 0 0 100px;
+}
+#top .sec01 .secContainer01 .secBox .txtBox {
+  padding: 30px 0;
+}
+#top .sec01 .secContainer01 .secBox .txtBox .secTtl {
+  margin: 0 0 20px;
+}
+#top .sec01 .secContainer01 .secBox .txtBox .secTtl h2 {
+  font-size: 34px;
+  font-weight: 700;
+}
+#top .sec01 .secContainer01 .secBox .txtBox .secTtl p {
+  font-size: 18px;
+  color: #ffac61;
+}
+#top .sec01 .secContainer01 .secBox .txtBox .txt {
+  line-height: 2.5;
+}
+#top .sec01 .secContainer01 .secBox .txtBox .txt p + p {
+  margin: 20px 0 0;
+}
+@media (min-width: 1025px) {
+  #top .sec01 .secContainer01 .secBox {
+    display: flex;
+    justify-content: space-between;
+  }
+  #top .sec01 .secContainer01 .secBox .photoBox {
+    width: 48%;
+  }
+  #top .sec01 .secContainer01 .secBox .txtBox {
+    width: 48%;
+  }
+}
+#top .sec01 .secContainer02 {
+  text-align: center;
+}
+#top .sec01 .secContainer02 h3 {
+  margin: 0 0 20px;
+  font-size: 34px;
+  font-weight: 700;
+}
+#top .sec01 .secContainer02 .topTxt {
+  margin: 0 0 40px;
+}
+#top .sec01 .secContainer02 .listPanel {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 40px;
+  background: #d27b2c;
+}
+#top .sec01 .secContainer02 .listPanel .listBox ul li {
+  position: relative;
+  background: url("../image/top/sec01_list_bg.png") center no-repeat;
+  background-size: cover;
+}
+#top .sec01 .secContainer02 .listPanel .listBox ul li dl {
+  position: relative;
+  top: -5px;
+  left: -5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px 30px;
+  border: 1px solid #ffffff;
+}
+#top .sec01 .secContainer02 .listPanel .listBox ul li dl dt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 78px;
+  margin: 0 0 10px;
+  font-size: 26px;
+  font-weight: 700;
+}
+#top .sec01 .secContainer02 .listPanel .listBox ul li dl dd .txt {
+  line-height: 2;
+}
+#top .sec01 .secContainer02 .listPanel .listBox ul li dl dd .dot {
+  width: 8px;
+  height: 8px;
+  background: #ffffff;
+  border-radius: 50%;
+}
+#top .sec01 .secContainer02 .listPanel .listBox ul li dl dd .dot.dot01 {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+}
+#top .sec01 .secContainer02 .listPanel .listBox ul li dl dd .dot.dot02 {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+}
+#top .sec01 .secContainer02 .listPanel .listBox ul li dl dd .dot.dot03 {
+  position: absolute;
+  bottom: -4px;
+  left: -4px;
+}
+#top .sec01 .secContainer02 .listPanel .listBox ul li dl dd .dot.dot04 {
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+}
+@media (min-width: 1025px) {
+  #top .sec01 .secContainer02 .listPanel .listBox ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  #top .sec01 .secContainer02 .listPanel .listBox ul li {
+    width: calc(33.3333333333% - 30px);
+  }
+}
+#top .sec01 .btnMore {
+  margin: 40px 0 0;
+  text-align: center;
+}
+#top .sec02 .section {
+  padding: 80px 0;
+  color: #ffffff;
+}
+#top .sec02 .section.section01 {
+  background: url("../image/top/sec02_bg_01.png") center no-repeat;
+  background-size: cover;
+}
+#top .sec02 .section.section02 {
+  background: url("../image/top/sec02_bg_02.png") center no-repeat;
+  background-size: cover;
+}
+#top .sec02 .section.section03 {
+  background: url("../image/top/sec02_bg_03.png") center no-repeat;
+  background-size: cover;
+}
+#top .sec02 .section.section04 {
+  background: url("../image/top/sec02_bg_04.png") center no-repeat;
+  background-size: cover;
+}
+#top .sec02 .section .secPanel {
+  padding: 60px 20px;
+  background: rgba(0, 0, 0, 0.7);
+}
+#top .sec02 .section .secPanel .secBox {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+#top .sec02 .section .secPanel .secBox h2 {
+  max-width: 500px;
+  margin: 0 auto 30px;
+  padding: 0 0 10px;
+  font-size: 34px;
+  font-weight: 700;
+  text-align: center;
+  border-bottom: 1px solid #ffffff;
+}
+#top .sec02 .section .secPanel .secBox .btnMore {
+  margin: 50px 0 0;
+  text-align: center;
+}
+#top .sec03 {
+  padding: 80px 0;
+  color: #ffffff;
+  background: #2fa57a;
+}
+#top .sec03 .secTtl {
+  margin: 0 0 40px;
+}
+#top .sec03 .secTtl h2 {
+  font-size: 34px;
+  font-weight: 700;
+  text-align: center;
+}
+#top .sec03 .listBox ul li a {
+  display: block;
+  color: #ffffff;
+}
+#top .sec03 .listBox ul li .photoBox {
+  position: relative;
+  height: 0;
+  padding: 0 0 66%;
+}
+#top .sec03 .listBox ul li .photoBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#top .sec03 .listBox ul li .txtBox {
+  margin: 10px 0 0;
+}
+@media (min-width: 1025px) {
+  #top .sec03 .listBox ul {
+    display: flex;
+    gap: 20px;
+  }
+  #top .sec03 .listBox ul li {
+    width: calc(25% - 10px);
+  }
+}
+#top .sec03 .btnMore {
+  margin: 60px 0 0;
+  text-align: center;
+}
+#top .instagramSection {
+  padding: 100px 0;
+}
+#top .instagramSection .section + .section {
+  margin: 100px 0 0;
+}
+#top .instagramSection .more {
+  max-width: 200px;
+  margin: 50px auto 0;
+}
+#top .instagramSection .more a {
+  display: block;
+  padding: 8px 10px;
+  font-size: 14px;
+  color: #ffffff;
+  text-align: center;
+  background: #d61807;
+}
+#top .secAbout {
+  padding: 60px 0 120px;
+}
+#top .secAbout .listBox ul li a {
+  position: relative;
+  display: block;
+  padding: 0 0 0 10px;
+  color: #ffffff;
+}
+#top .secAbout .listBox ul li .ttl {
+  position: absolute;
+  left: 0;
+  bottom: 15px;
+  width: calc(100% - 20px);
+  padding: 10px 30px;
+  text-align: center;
+  border-radius: 0 20px 20px 0;
+  background: url("../image/common/btn_more_circle_red.png") right 10px center no-repeat #242424;
+  background-size: 28px auto;
+}
+@media (min-width: 1025px) {
+  #top .secAbout .listBox ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  #top .secAbout .listBox ul li {
+    width: calc(33.3333333333% - 20px);
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	reason
+///////////////////////////////////////////////////////////*/
+#reason .pageKvContainer .pageKv {
+  background: url("../image/reason/kv.png") left center no-repeat;
+  background-size: cover;
+}
+#reason .topSection {
+  padding: 100px 0;
+}
+#reason .topSection .secTtl {
+  margin: 0 0 20px;
+  font-size: 34px;
+  font-weight: 700;
+}
+#reason .sec01 .seContainer01 {
+  margin: 0 0 100px;
+}
+#reason .sec01 .seContainer01 .secPanel {
+  border-radius: 10px 10px 0 0;
+  border: 1px solid #d61807;
+}
+#reason .sec01 .seContainer01 .secPanel + .secPanel {
+  margin: 60px 0 0;
+}
+#reason .sec01 .seContainer01 .secPanel .pHead {
+  position: relative;
+  padding: 10px 20px 10px 100px;
+  border-radius: 10px 10px 0 0;
+  background: #d61807;
+}
+#reason .sec01 .seContainer01 .secPanel .pHead .point {
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border: 1px solid #257847;
+  background: #ffffff;
+}
+#reason .sec01 .seContainer01 .secPanel .pHead .point span {
+  font-size: 13px;
+  line-height: 1.2;
+}
+#reason .sec01 .seContainer01 .secPanel .pHead .point em {
+  font-size: 26px;
+  font-weight: 700;
+  color: #d61807;
+  line-height: 1;
+}
+#reason .sec01 .seContainer01 .secPanel .pHead .ttl {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+}
+#reason .sec01 .seContainer01 .secPanel .pBody {
+  padding: 30px 60px;
+}
+#reason .sec01 .seContainer01 .secPanel .pBody .secBox .txtBox .txt {
+  line-height: 2.5;
+}
+#reason .sec01 .seContainer01 .secPanel .pBody .secBox .txtBox .txt p + p {
+  margin: 20px 0 0;
+}
+@media (min-width: 1025px) {
+  #reason .sec01 .seContainer01 .secPanel .pBody .secBox {
+    display: flex;
+    justify-content: space-between;
+  }
+  #reason .sec01 .seContainer01 .secPanel .pBody .secBox .photo {
+    width: 40%;
+  }
+  #reason .sec01 .seContainer01 .secPanel .pBody .secBox .txtBox {
+    width: 55%;
+  }
+  #reason .sec01 .seContainer01 .secPanel:nth-child(even) .pBody .secBox {
+    flex-direction: row-reverse;
+  }
+}
+#reason .sec01 .seContainer02 {
+  position: relative;
+  padding: 0 0 100px;
+}
+#reason .sec01 .seContainer02::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: calc(100% - 200px);
+  z-index: -1;
+  background: url("../image/reason/sec01_trouble_bg.png") center no-repeat;
+  background-size: cover;
+}
+#reason .sec01 .seContainer02 .secPanel {
+  margin: 0 0 40px;
+}
+#reason .sec01 .seContainer02 .secPanel .pTtl {
+  max-width: 400px;
+  margin: 0 0 20px;
+  padding: 5px 20px;
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 0 20px 20px 0;
+  background: #242424;
+}
+#reason .sec01 .seContainer02 .secPanel .listBox ul li .txt {
+  margin: 10px 0 0;
+}
+@media (min-width: 1025px) {
+  #reason .sec01 .seContainer02 .secPanel .listBox ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  #reason .sec01 .seContainer02 .secPanel .listBox ul li {
+    width: calc(33.3333333333% - 20px);
+  }
+}
+#reason .sec01 .seContainer02 .arrow {
+  width: 80px;
+  margin: 0 auto 30px;
+}
+#reason .sec01 .seContainer02 .message {
+  font-size: 34px;
+  font-weight: 700;
+  color: #2550a2;
+  text-align: center;
+}
+
+/*////////////////////////////////////////////////////////////
+	service
+///////////////////////////////////////////////////////////*/
+.serviceMain .topSection {
+  margin: 50px 0 0;
+  padding: 100px 0;
+  color: #ffffff;
+  background: url("../image/service/service_top_bg.png") center no-repeat;
+  background-size: cover;
+}
+.serviceMain .topSection .secBox .txtBox h2 {
+  margin: 0 0 15px;
+  font-size: 32px;
+  font-weight: 700;
+}
+.serviceMain .topSection .secBox .txtBox .txt {
+  line-height: 2.5;
+}
+@media (min-width: 1025px) {
+  .serviceMain .topSection .secBox {
+    display: flex;
+    justify-content: space-between;
+  }
+  .serviceMain .topSection .secBox .photo {
+    width: 40%;
+  }
+  .serviceMain .topSection .secBox .txtBox {
+    width: 55%;
+  }
+}
+.serviceMain .secService {
+  padding: 120px 0;
+}
+.serviceMain .secService .listBox {
+  position: relative;
+}
+.serviceMain .secService .listBox ul li .photoBox {
+  position: relative;
+}
+.serviceMain .secService .listBox ul li .photoBox .ttl {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.serviceMain .secService .listBox ul li .photoBox .ttl p {
+  display: inline-block;
+  min-width: 100px;
+  padding: 5px 20px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  background: #242424;
+}
+.serviceMain .secService .listBox ul li .txt {
+  margin: 10px 0 0;
+}
+@media (min-width: 1025px) {
+  .serviceMain .secService .listBox ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px 20px;
+  }
+  .serviceMain .secService .listBox ul li {
+    width: calc(33.3333333333% - 20px);
+  }
+}
+.serviceMain .secReason {
+  padding: 100px 0;
+  color: #ffffff;
+  background: url("../image/service/reason_sec_bg.png") center no-repeat;
+  background-size: cover;
+}
+.serviceMain .secReason .pageSecTtlBox h2 {
+  color: #ffffff;
+}
+.serviceMain .secReason .pageSecTtlBox p {
+  color: #ffac61;
+}
+.serviceMain .secReason .listPanel {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 40px;
+  background: #d27b2c;
+}
+.serviceMain .secReason .listPanel .listBox ul li {
+  position: relative;
+  background: url("../image/service/reason_list_bg.png") center no-repeat;
+  background-size: cover;
+}
+.serviceMain .secReason .listPanel .listBox ul li dl {
+  position: relative;
+  top: -5px;
+  left: -5px;
+  width: 100%;
+  height: 100%;
+  padding: 20px 30px;
+  border: 1px solid #ffffff;
+}
+.serviceMain .secReason .listPanel .listBox ul li dl dt {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 78px;
+  margin: 0 0 10px;
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+  z-index: 1;
+}
+.serviceMain .secReason .listPanel .listBox ul li dl dd .txt {
+  position: relative;
+  z-index: 1;
+  line-height: 2;
+}
+.serviceMain .secReason .listPanel .listBox ul li dl dd .dot {
+  width: 8px;
+  height: 8px;
+  background: #ffffff;
+  border-radius: 50%;
+}
+.serviceMain .secReason .listPanel .listBox ul li dl dd .dot.dot01 {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+}
+.serviceMain .secReason .listPanel .listBox ul li dl dd .dot.dot02 {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+}
+.serviceMain .secReason .listPanel .listBox ul li dl dd .dot.dot03 {
+  position: absolute;
+  bottom: -4px;
+  left: -4px;
+}
+.serviceMain .secReason .listPanel .listBox ul li dl dd .dot.dot04 {
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+}
+.serviceMain .secReason .listPanel .listBox ul li .num {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-size: 80px;
+  color: #d8653e;
+  line-height: 1;
+  z-index: 0;
+}
+@media (min-width: 1025px) {
+  .serviceMain .secReason .listPanel .listBox ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  .serviceMain .secReason .listPanel .listBox ul li {
+    width: calc(33.3333333333% - 30px);
+  }
+}
+.serviceMain .secCase {
+  padding: 120px 0;
+}
+.serviceMain .secCase .section + .section {
+  margin: 60px 0 0;
+}
+.serviceMain .secCase .section .secTtl {
+  margin: 0 0 40px;
+  padding: 0 0 5px;
+  font-size: 30px;
+  font-weight: 700;
+  border-bottom: 1px solid #000000;
+}
+.serviceMain .secCase .section .secTtl h3 {
+  position: relative;
+  padding: 0 0 0 20px;
+}
+.serviceMain .secCase .section .secTtl h3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 10px;
+  height: 4px;
+  margin: auto 0;
+  background: #d61807;
+}
+.serviceMain .secCase .section .txtBox dl dt {
+  margin: 0 0 10px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #d61807;
+}
+.serviceMain .secCase .section .txtBox dl dd {
+  line-height: 2.5;
+}
+.serviceMain .secCase .section .secBox + .secBox {
+  margin: 60px 0 0;
+}
+.serviceMain .secCase .section .secBox .photoBox {
+  position: relative;
+}
+.serviceMain .secCase .section .secBox .photoBox .ttl {
+  position: absolute;
+  top: 20px;
+  left: -10px;
+  width: 100%;
+}
+.serviceMain .secCase .section .secBox .photoBox .ttl p {
+  display: inline-block;
+  min-width: 150px;
+  padding: 5px 20px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 0 20px 20px 0;
+  background: #242424;
+}
+@media (min-width: 1025px) {
+  .serviceMain .secCase .section .secBox {
+    display: flex;
+    justify-content: space-between;
+  }
+  .serviceMain .secCase .section .secBox .photoBox {
+    width: 45%;
+  }
+  .serviceMain .secCase .section .secBox .txtBox {
+    width: 50%;
+  }
+  .serviceMain .secCase .section .secBox:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+}
+.serviceMain .secCase .message {
+  margin: 60px 0 0;
+  font-size: 34px;
+  font-weight: 700;
+  color: #2550a2;
+  text-align: center;
+}
+
+/*////////////////////////////////////////////////////////////
+	corp
+///////////////////////////////////////////////////////////*/
+#corp .pageKvContainer .pageKv {
+  background: url("../image/corp/kv.png") left center no-repeat;
+  background-size: cover;
+}
+#corp + .footer .footContact--init {
+  display: none;
+}
+#corp + .footer .footContact--corp {
+  display: block;
+}
+
+/*////////////////////////////////////////////////////////////
+	school
+///////////////////////////////////////////////////////////*/
+#school .pageKvContainer .pageKv {
+  background: url("../image/school/kv.png") left center no-repeat;
+  background-size: cover;
+}
+#school + .footer .footContact--init {
+  display: none;
+}
+#school + .footer .footContact--school {
+  display: block;
+}
+
+/*////////////////////////////////////////////////////////////
+	personal
+///////////////////////////////////////////////////////////*/
+#personal .pageKvContainer .pageKv {
+  background: url("../image/personal/kv.png") left center no-repeat;
+  background-size: cover;
+}
+#personal .topSection {
+  margin: 80px 0 0;
+  text-align: center;
+  background: url("../image/personal/top_bg.png") center no-repeat;
+  background-size: cover;
+}
+#personal .topSection .secPanel {
+  position: relative;
+  max-width: 1640px;
+  margin: 0 auto;
+  padding: 190px 20px;
+}
+#personal .topSection .secBox .secTtl {
+  max-width: 650px;
+  margin: 0 auto 30px;
+  padding: 3px;
+  border: 6px solid #bab438;
+}
+#personal .topSection .secBox .secTtl .inner {
+  padding: 20px;
+  border: 3px solid #bab438;
+}
+#personal .topSection .secBox .secTtl h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #d61807;
+}
+#personal .topSection .secBox .txt {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+@media (min-width: 1025px) {
+  #personal .topSection .photoBox01 .photo01 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+  }
+  #personal .topSection .photoBox01 .photo02 {
+    position: absolute;
+    top: 80px;
+    left: 10%;
+    width: 200px;
+  }
+  #personal .topSection .photoBox01 .photo03 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+  }
+  #personal .topSection .photoBox02 .photo04 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+  }
+  #personal .topSection .photoBox02 .photo05 {
+    position: absolute;
+    right: 15%;
+    bottom: 0;
+    width: 180px;
+  }
+  #personal .topSection .photoBox02 .photo06 {
+    position: absolute;
+    right: 0;
+    bottom: 100px;
+    width: 150px;
+  }
+}
+#personal .sec01 {
+  padding: 120px 0;
+}
+#personal .sec01 .secBox + .secBox {
+  margin: 60px 0 0;
+}
+#personal .sec01 .secBox .txtBox h3 {
+  margin: 0 0 15px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #d61807;
+}
+#personal .sec01 .secBox .txtBox .txt {
+  line-height: 2.5;
+}
+@media (min-width: 1025px) {
+  #personal .sec01 .secBox {
+    display: flex;
+    justify-content: space-between;
+  }
+  #personal .sec01 .secBox .photo {
+    width: 45%;
+  }
+  #personal .sec01 .secBox .txtBox {
+    width: 50%;
+  }
+  #personal .sec01 .secBox:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}
+#personal .sec02 {
+  padding: 100px 0;
+  color: #ffffff;
+  background: #f97b0a;
+}
+#personal .sec02 .pageSecTtlBox h2 {
+  color: #ffffff;
+}
+#personal .sec02 .pageSecTtlBox p {
+  color: #d61807;
+}
+#personal .sec02 .listBox ul li .photoBox {
+  position: relative;
+  padding: 0 0 0 10px;
+  color: #ffffff;
+}
+#personal .sec02 .listBox ul li .ttl {
+  position: absolute;
+  left: 0;
+  bottom: 15px;
+  width: 100%;
+}
+#personal .sec02 .listBox ul li .ttl p {
+  display: inline-block;
+  padding: 10px 30px;
+  text-align: center;
+  border-radius: 0 20px 20px 0;
+  background: #242424;
+}
+#personal .sec02 .listBox ul li .txt {
+  margin: 10px 0 0;
+}
+@media (min-width: 1025px) {
+  #personal .sec02 .listBox ul:not(.slick-initialized) {
+    display: flex;
+    justify-content: space-between;
+  }
+  #personal .sec02 .listBox ul:not(.slick-initialized) li {
+    width: calc(33.3333333333% - 20px);
+  }
+}
+#personal .sec02 .listBox .asiaTravelSlider {
+  margin: 0 60px;
+}
+#personal .sec02 .listBox .asiaTravelSlider li {
+  padding: 0 10px;
+}
+#personal .sec02 .listBox .asiaTravelSlider .slick-arrow {
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  background: center no-repeat;
+  background-size: contain;
+}
+#personal .sec02 .listBox .asiaTravelSlider .slick-arrow::before {
+  content: "";
+}
+#personal .sec02 .listBox .asiaTravelSlider .slick-prev {
+  left: -50px;
+  background-image: url("../image/common/slide_arrow_prev.png");
+}
+#personal .sec02 .listBox .asiaTravelSlider .slick-next {
+  right: -50px;
+  background-image: url("../image/common/slide_arrow_next.png");
+}
+#personal .sec03 {
+  padding: 100px 0;
+}
+#personal .sec03 .topTxt {
+  margin: 0 0 40px;
+  text-align: center;
+}
+#personal .sec03 .listBox ul li a {
+  display: block;
+}
+#personal .sec03 .listBox ul li .photoBox {
+  position: relative;
+  height: 0;
+  padding: 0 0 66%;
+}
+#personal .sec03 .listBox ul li .photoBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#personal .sec03 .listBox ul li .txtBox {
+  margin: 10px 0 0;
+}
+@media (min-width: 1025px) {
+  #personal .sec03 .listBox ul {
+    display: flex;
+    gap: 20px;
+  }
+  #personal .sec03 .listBox ul li {
+    width: calc(25% - 10px);
+  }
+}
+#personal .sec03 .btnMore {
+  margin: 60px 0 0;
+  text-align: center;
+}
+#personal .sec04 {
+  padding: 100px 0;
+  color: #ffffff;
+  background: url("../image/personal/sec04_bg.png") center no-repeat;
+  background-size: cover;
+}
+#personal .sec04 .pageSecTtlBox h2 {
+  color: #ffffff;
+}
+#personal .sec04 .pageSecTtlBox p {
+  color: #ffac61;
+}
+#personal .sec04 .secBox + .secBox {
+  margin: 60px 0 0;
+}
+#personal .sec04 .secBox .txtBox {
+  padding: 20px 0;
+}
+#personal .sec04 .secBox .txtBox h3 {
+  margin: 0 0 15px;
+  font-size: 30px;
+  font-weight: 700;
+}
+#personal .sec04 .secBox .txtBox .txt {
+  line-height: 2.5;
+}
+@media (min-width: 1025px) {
+  #personal .sec04 .secBox {
+    display: flex;
+    justify-content: space-between;
+  }
+  #personal .sec04 .secBox .photo {
+    width: 45%;
+  }
+  #personal .sec04 .secBox .txtBox {
+    width: 50%;
+  }
+}
+#personal + .footer .footContact--init {
+  display: none;
+}
+#personal + .footer .footContact--personal {
+  display: block;
+}
+
+/*////////////////////////////////////////////////////////////
+	agency
+///////////////////////////////////////////////////////////*/
+#agency .pageKvContainer .pageKv {
+  background: url("../image/agency/kv.png") left center no-repeat;
+  background-size: cover;
+}
+#agency .topSection {
+  margin: 50px 0 0;
+  padding: 100px 0;
+  color: #ffffff;
+  background: url("../image/service/service_top_bg.png") center no-repeat;
+  background-size: cover;
+}
+#agency .topSection .secBox .txtBox h2 {
+  margin: 0 0 15px;
+  font-size: 32px;
+  font-weight: 700;
+}
+#agency .topSection .secBox .txtBox .txt {
+  line-height: 2.5;
+}
+@media (min-width: 1025px) {
+  #agency .topSection .secBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #agency .topSection .secBox .photo {
+    width: 40%;
+  }
+  #agency .topSection .secBox .txtBox {
+    width: 55%;
+  }
+}
+#agency .sec01 {
+  padding: 100px 0;
+}
+#agency .sec01 .topTxt {
+  margin: 0 0 40px;
+  text-align: center;
+}
+#agency .sec01 .secContainer .tabList {
+  margin: 0 0 40px;
+}
+#agency .sec01 .secContainer .tabList ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+#agency .sec01 .secContainer .tabList ul li {
+  width: calc(20% - 8px);
+}
+#agency .sec01 .secContainer .tabList ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 28px;
+  padding: 8px 10px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #ffffff;
+  text-align: center;
+  background: #d61807;
+  transition: opacity 0.3s;
+}
+#agency .sec01 .secContainer .tabList ul li a:hover {
+  opacity: 0.75;
+}
+#agency .sec01 .secContainer .tabList ul li.active a {
+  opacity: 0.75;
+}
+#agency .sec01 .secContainer .tabContent .tabPanel {
+  display: none;
+}
+#agency .sec01 .secContainer .tabContent .tabPanel.active {
+  display: block;
+}
+#agency .sec01 .secContainer .tabContent .secBoxPanel .secBox dl {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 4px 10px 20px;
+  border-bottom: 1px solid #767676;
+}
+#agency .sec01 .secContainer .tabContent .secBoxPanel .secBox dl dt {
+  font-weight: 700;
+}
+#agency .sec01 .secContainer .tabContent .secBoxPanel .secBox dl dd {
+  width: 160px;
+}
+@media (min-width: 1025px) {
+  #agency .sec01 .secContainer .tabContent .secBoxPanel .secBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0 20px;
+  }
+  #agency .sec01 .secContainer .tabContent .secBoxPanel .secBox dl {
+    width: calc(50% - 20px);
+  }
+  #agency .sec01 .secContainer .tabContent .secBoxPanel .secBox dl:first-child, #agency .sec01 .secContainer .tabContent .secBoxPanel .secBox dl:nth-child(2) {
+    border-top: 1px solid #767676;
+  }
+  #agency .sec01 .secContainer .tabContent .secBoxPanel .secBox dl dt {
+    width: calc(100% - 180px);
+  }
+}
+#agency .sec01 .secContainer .tabContent .btnPdf a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 32px;
+  padding: 6px 10px 6px 34px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #ffffff;
+  background: url("../image/common/icon_pdf.png") left 12px center no-repeat #cdcdcd;
+  background-size: 18px auto;
+  transition: opacity 0.3s;
+}
+#agency .sec01 .secContainer .tabContent .btnPdf a:hover {
+  opacity: 0.75;
+}
+#agency + .footer .footContact--init {
+  display: none;
+}
+#agency + .footer .footContact--agency {
+  display: block;
+}
+
+/*////////////////////////////////////////////////////////////
+	flow
+///////////////////////////////////////////////////////////*/
+#flow .pageKvContainer .pageKv {
+  background: url("../image/flow/kv.png") left center no-repeat;
+  background-size: cover;
+}
+#flow .sec01 {
+  padding: 120px 0;
+}
+#flow .sec01 .linkList {
+  max-width: 860px;
+  margin: 0 auto 60px;
+}
+#flow .sec01 .linkList ul li {
+  padding: 10px;
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  background: #d61807;
+}
+@media (min-width: 1025px) {
+  #flow .sec01 .linkList ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  #flow .sec01 .linkList ul li {
+    width: calc(33.3333333333% - 15px);
+  }
+}
+#flow .sec01 .section + .section {
+  margin: 80px 0 0;
+}
+#flow .sec01 .section .secTtl {
+  margin: 0 0 30px;
+  padding: 0 0 5px;
+  font-size: 30px;
+  font-weight: 700;
+  border-bottom: 1px solid #000000;
+}
+#flow .sec01 .section .secTtl h3 {
+  position: relative;
+  padding: 0 0 0 20px;
+}
+#flow .sec01 .section .secTtl h3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 10px;
+  height: 4px;
+  margin: auto 0;
+  background: #d61807;
+}
+#flow .sec01 .flowBox {
+  padding: 30px;
+  background: #fff1f0;
+}
+#flow .sec01 .flowBox + .flowBox {
+  margin: 20px 0 0;
+}
+#flow .sec01 .flowBox dl dt span {
+  display: inline-block;
+  margin: 0 15px 0 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+#flow .sec01 .flowBox dl dt em {
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 700;
+  color: #d61807;
+}
+@media (min-width: 1025px) {
+  #flow .sec01 .flowBox dl {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #flow .sec01 .flowBox dl dt {
+    display: flex;
+    align-items: center;
+    width: 280px;
+  }
+  #flow .sec01 .flowBox dl dd {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: calc(100% - 300px);
+    min-height: 65px;
+    padding: 0 0 0 30px;
+    border-left: 1px solid #000000;
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	faq
+///////////////////////////////////////////////////////////*/
+#faq .pageKvContainer .pageKv {
+  background: url("../image/faq/kv.png") left center no-repeat;
+  background-size: cover;
+}
+#faq .sec01 {
+  padding: 120px 0;
+}
+#faq .sec01 .linkList {
+  max-width: 960px;
+  margin: 0 auto 60px;
+}
+#faq .sec01 .linkList ul li {
+  padding: 10px;
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  background: #d61807;
+}
+@media (min-width: 1025px) {
+  #faq .sec01 .linkList ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px 0;
+  }
+  #faq .sec01 .linkList ul li {
+    width: calc(33.3333333333% - 15px);
+  }
+}
+#faq .sec01 .section + .section {
+  margin: 80px 0 0;
+}
+#faq .sec01 .section .secTtl {
+  margin: 0 0 30px;
+  padding: 0 0 5px;
+  font-size: 30px;
+  font-weight: 700;
+  border-bottom: 1px solid #000000;
+}
+#faq .sec01 .section .secTtl h3 {
+  position: relative;
+  padding: 0 0 0 20px;
+}
+#faq .sec01 .section .secTtl h3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 10px;
+  height: 4px;
+  margin: auto 0;
+  background: #d61807;
+}
+#faq .sec01 .faqBox + .faqBox {
+  margin: 20px 0 0;
+}
+#faq .sec01 .faqBox > dl > dt {
+  display: flex;
+  align-items: center;
+  padding: 10px 50px 10px 20px;
+  cursor: pointer;
+  background: url("../image/common/accord_plus.png") right 20px center no-repeat #e7780b;
+}
+#faq .sec01 .faqBox > dl > dt.active {
+  background: url("../image/common/accord_minus.png") right 20px center no-repeat #e7780b;
+}
+#faq .sec01 .faqBox > dl > dt span {
+  margin: 0 15px 0 0;
+  font-size: 22px;
+  color: #d61807;
+}
+#faq .sec01 .faqBox > dl > dt em {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+}
+#faq .sec01 .faqBox > dl > dd {
+  display: none;
+  padding: 15px 50px;
+  background: #fff1f0;
+}
+#faq .sec01 .itemList {
+  margin: 20px 0 0;
+  text-align: center;
+}
+#faq .sec01 .itemList .itemBox dl {
+  padding: 10px;
+  background: url("../image/faq/tel_bg.png") center no-repeat;
+  background-size: cover;
+}
+#faq .sec01 .itemList .itemBox dl dt {
+  font-size: 18px;
+}
+#faq .sec01 .itemList .itemBox dl dd .telBox .tel01 a {
+  display: inline-block;
+  font-size: 22px;
+  padding: 0 0 0 25px;
+  background: url("../image/common/footer_tel.png") left center no-repeat;
+  background-size: 20px auto;
+}
+#faq .sec01 .itemList .itemBox .mailBox a {
+  display: block;
+  width: 180px;
+  margin: 0 auto;
+  padding: 7px 10px;
+  font-size: 14px;
+  color: #ffffff;
+  text-align: center;
+  background: #d61807;
+}
+#faq .sec01 .itemList .itemBox .mailBox a span {
+  display: inline-block;
+  padding: 0 0 0 20px;
+  background: url("../image/common/header_mail.png") left center no-repeat;
+  background-size: 15px auto;
+}
+@media (min-width: 1025px) {
+  #faq .sec01 .itemList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+  #faq .sec01 .itemList .itemBox {
+    width: calc(25% - 10px);
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	company
+///////////////////////////////////////////////////////////*/
+#company .pageKvContainer .pageKv {
+  background: url("../image/company/kv.png") left center no-repeat;
+  background-size: cover;
+}
+#company .sec01 {
+  padding: 100px 0;
+}
+#company .sec01 .secBox .photoBox .nameBox {
+  margin: 10px 0 0;
+  text-align: right;
+}
+#company .sec01 .secBox .photoBox .nameBox p {
+  margin: 0 0 10px;
+}
+#company .sec01 .secBox .photoBox .nameBox .name {
+  display: inline-block;
+  width: 200px;
+}
+#company .sec01 .secBox .txtBox .txt {
+  line-height: 2.5;
+}
+#company .sec01 .secBox .txtBox .txt p + p {
+  margin: 20px 0 0;
+}
+@media (min-width: 1025px) {
+  #company .sec01 .secBox {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+  #company .sec01 .secBox .photoBox {
+    width: 380px;
+  }
+  #company .sec01 .secBox .txtBox {
+    width: calc(100% - 440px);
+  }
+}
+#company .sec02 {
+  padding: 50px 0;
+}
+#company .sec02 .topBox {
+  padding: 0 0 50px;
+}
+#company .sec02 .topBox dl {
+  text-align: center;
+}
+#company .sec02 .topBox dl dt {
+  margin: 0 0 15px;
+  font-size: 34px;
+  font-weight: 700;
+}
+#company .sec02 .topBox dl dd {
+  line-height: 2;
+}
+#company .sec02 .slidePanel .slideBox ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#company .sec02 .slidePanel .slideBox ul li {
+  width: 20%;
+  margin: 0 4px;
+}
+#company .sec03 {
+  padding: 50px 0 0;
+}
+#company .sec03 .infoBox {
+  padding: 0 0 60px;
+}
+#company .sec03 .infoBox dl {
+  width: 100%;
+  line-height: 2;
+}
+#company .sec03 .infoBox dl dt {
+  padding: 15px 30px;
+  color: #d61807;
+  border-bottom: 1px solid #d61807;
+}
+#company .sec03 .infoBox dl dd {
+  padding: 15px 20px;
+  border-bottom: 1px solid #1b2a39;
+}
+#company .sec03 .infoBox dl dd a {
+  display: inline-block;
+}
+#company .sec03 .infoBox dl:first-child dt {
+  border-top: 1px solid #d61807;
+}
+#company .sec03 .infoBox dl:first-child dd {
+  border-top: 1px solid #1b2a39;
+}
+@media (min-width: 1025px) {
+  #company .sec03 .infoBox dl {
+    display: flex;
+    justify-content: space-between;
+  }
+  #company .sec03 .infoBox dl dt {
+    width: 220px;
+  }
+  #company .sec03 .infoBox dl dd {
+    width: calc(100% - 225px);
+  }
+}
+#company .sec04 {
+  padding: 100px 0;
+  background: #fff1f0;
+}
+#company .sec04 .historyContainer .historyBox {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 40px;
+}
+#company .sec04 .historyContainer .historyBox::before {
+  content: "";
+  position: absolute;
+  left: 180px;
+  top: 5px;
+  width: 1px;
+  height: 100%;
+  background: #dac9c8;
+}
+#company .sec04 .historyContainer .historyBox .yearBox {
+  width: 100px;
+  text-align: right;
+}
+#company .sec04 .historyContainer .historyBox .yearBox .year01 {
+  font-size: 20px;
+  font-weight: 700;
+}
+#company .sec04 .historyContainer .historyBox .txtBox {
+  position: relative;
+  width: calc(100% - 200px);
+  padding: 0 0 0 20px;
+}
+#company .sec04 .historyContainer .historyBox .txtBox::before {
+  content: "";
+  position: absolute;
+  left: -24px;
+  top: 10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #000000;
+}
+#company .sec04 .historyContainer .historyBox .txtBox dl dt {
+  margin: 0 0 5px;
+  font-size: 20px;
+  font-weight: 700;
+}
+#company .sec04 .historyContainer .historyBox .txtBox dl dd {
+  line-height: 2;
+}
+#company .sec04 aside {
+  padding: 20px 100px 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/*////////////////////////////////////////////////////////////
+	contact
+///////////////////////////////////////////////////////////*/
+#contact .pageKvContainer .pageKv {
+  background: url("../image/contact/kv.png") left center no-repeat;
+  background-size: cover;
+}
+#contact .topSection {
+  padding: 100px 0;
+}
+#contact .topSection .secTtl {
+  margin: 0 0 20px;
+  padding: 0 0 5px;
+  font-size: 34px;
+  font-weight: 700;
+  text-align: center;
+  border-bottom: 2px solid #000000;
+}
+#contact .topSection .txt {
+  margin: 0 0 20px;
+}
+#contact .topSection .faqBox {
+  padding: 40px 20px;
+  background: url("../image/contact/top_bg.png") center no-repeat;
+  background-size: cover;
+}
+#contact .topSection .faqBox .faqBtn {
+  width: 240px;
+  margin: 0 auto;
+}
+#contact .topSection .faqBox .faqBtn a {
+  display: block;
+  padding: 10px 10px;
+  color: #ffffff;
+  text-align: center;
+  background: #d61807;
+}
+#contact .topSection .faqBox .faqBtn span {
+  display: block;
+  background: url("../image/common/btn_more_circle_red.png") right center no-repeat;
+  background-size: 28px auto;
+}
+#contact .sec01 {
+  padding: 60px 0;
+}
+#contact .sec01 .topTxt {
+  margin: 0 0 40px;
+  text-align: center;
+}
+#contact .sec02 {
+  padding: 60px 0 120px;
+}
+#contact .sec02 .pageSecTtlBox {
+  margin: 0 0 20px;
+}
+#contact .sec02 .topTxt {
+  margin: 0 0 40px;
+  text-align: center;
+}
+#contact .sec02 .topTxt p em {
+  font-weight: 700;
+}
+#contact .sec02 .topTxt p + p {
+  margin: 30px 0 0;
+}
+#contact .sec02 .secBox .itemBox {
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+}
+#contact .sec02 .secBox .itemBox dl dt {
+  margin: 0 0 5px;
+  font-size: 24px;
+}
+#contact .sec02 .secBox .itemBox dl dd .mailBox {
+  padding: 10px 0 0;
+}
+#contact .sec02 .secBox .itemBox dl dd .mailBox a {
+  display: block;
+  width: 180px;
+  margin: 0 auto;
+  padding: 7px 10px;
+  font-size: 14px;
+  color: #ffffff;
+  text-align: center;
+  background: #d61807;
+}
+#contact .sec02 .secBox .itemBox dl dd .mailBox a span {
+  display: inline-block;
+  padding: 0 0 0 20px;
+  background: url("../image/common/header_mail.png") left center no-repeat;
+  background-size: 15px auto;
+}
+#contact .sec02 .secBox .itemBox dl dd .telBox .tel01 a {
+  display: inline-block;
+  font-size: 30px;
+  padding: 0 0 0 25px;
+  background: url("../image/common/footer_tel.png") left center no-repeat;
+  background-size: 20px auto;
+}
+#contact .sec02 .secBox .itemBox dl dd .telBox .tel02 {
+  padding: 0 0 0 20px;
+  font-size: 14px;
+}
+@media (min-width: 1025px) {
+  #contact .sec02 .secBox {
+    display: flex;
+    justify-content: space-between;
+  }
+  #contact .sec02 .secBox .itemBox {
+    width: calc(33.3333333333% - 20px);
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	form
+///////////////////////////////////////////////////////////*/
+.contactContainer .formBox {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.contactContainer .formBox dl {
+  border-bottom: 1px solid #000000;
+}
+.contactContainer .formBox dl dt {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-self: stretch;
+  font-weight: bold;
+}
+.contactContainer .formBox dl dt em span {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 13px;
+  color: #ffffff;
+  line-height: 1;
+  background: #e7780b;
+}
+.contactContainer .formBox dl dt small {
+  display: block;
+  width: 100%;
+  margin: 5px 0 0;
+  font-size: 13px;
+}
+@media (min-width: 1025px) {
+  .contactContainer .formBox dl {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: none;
+  }
+  .contactContainer .formBox dl dt {
+    justify-content: flex-end;
+    width: 240px;
+    padding: 15px 0;
+    border-bottom: 1px solid #d61807;
+  }
+  .contactContainer .formBox dl dt em {
+    margin: 0 0 0 10px;
+  }
+  .contactContainer .formBox dl dd {
+    width: calc(100% - 245px);
+    padding: 5px 0 5px 20px;
+    border-bottom: 1px solid #000000;
+  }
+  .contactContainer .formBox dl.noRequire dt {
+    padding-right: 45px;
+  }
+  .contactContainer .formBox dl.multi {
+    align-items: flex-start;
+  }
+  .contactContainer .formBox dl.multi dt {
+    padding: 10px 0 0;
+  }
+  .contactContainer .formBox dl.long dt {
+    width: 480px;
+  }
+  .contactContainer .formBox dl.long dd {
+    width: calc(100% - 480px);
+  }
+  .contactContainer .formBox dl:first-child dt {
+    border-top: 1px solid #d61807;
+  }
+  .contactContainer .formBox dl:first-child dd {
+    border-top: 1px solid #000000;
+  }
+}
+.contactContainer .formBox .addressBox .postalBox {
+  display: flex;
+  align-items: center;
+}
+.contactContainer .formBox .addressBox .postalBox .inputBox {
+  width: 110px;
+}
+.contactContainer .formBox .addressBox .postalBox > span {
+  display: inline-block;
+  margin: 0 5px;
+}
+.contactContainer .formBox .addressBox .innerBox {
+  margin: 5px 0 0;
+}
+.contactContainer .formBox .birthBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.contactContainer .formBox .birthBox .inputBox,
+.contactContainer .formBox .birthBox .selectBox {
+  width: 70px;
+}
+.contactContainer .formBox .privacy {
+  margin: 30px 0 50px;
+}
+.contactContainer .formBox .privacy .agreeBox {
+  overflow: scroll;
+  height: 400px;
+  padding: 15px 20px;
+  line-height: 2;
+  border: 1px solid #000000;
+  background: #f1f1f1;
+}
+.contactContainer .formBox .privacy .box + .box {
+  margin: 40px 0 0;
+}
+.contactContainer .formBox .privacy dl dt {
+  margin: 0 0 5px;
+  font-weight: bold;
+}
+.contactContainer .formBox .privacy span {
+  display: block;
+}
+.contactContainer .formBox .privacy a {
+  display: inline-block;
+}
+
+.formBox {
+  /*テキストエリア*/
+}
+.formBox input[type=text],
+.formBox input[type=email],
+.formBox input[type=tel] {
+  width: 100%;
+  height: 60px;
+  padding-left: 25px;
+  font-size: 16px;
+  border-radius: 0;
+  border: 1px solid #000000;
+  background: #f2f2f2;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.formBox textarea {
+  width: 100%;
+  height: 180px;
+  padding: 20px 25px;
+  font-size: 16px;
+  border-radius: 0;
+  border: 1px solid #000000;
+  background: #f2f2f2;
+  resize: none;
+}
+.formBox input[type=text]:focus,
+.formBox input[type=email]:focus,
+.formBox input[type=tel]:focus,
+.formBox textarea:focus {
+  outline: 0;
+}
+.formBox ::placeholder {
+  color: #000000;
+  opacity: 0.3;
+}
+.formBox .submitBtn {
+  position: relative;
+  max-width: 280px;
+  margin: 60px auto 0;
+}
+.formBox .submitBtn input[type=submit] {
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0;
+  border: none;
+  background: #d61807;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  transition: 0.4s;
+}
+.formBox .submitBtn input[type=submit][disabled] {
+  cursor: default;
+  opacity: 0.6;
+}
+.formBox .radioList .wpcf7-form-control {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.formBox .radioList label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.formBox .radioList label input[type=radio] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin: 0 10px 0 0;
+  border: 1px solid #414141;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+.formBox .radioList label input[type=radio]:checked {
+  border-color: #414141;
+}
+.formBox .radioList label input[type=radio]:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d61807;
+}
+.formBox .radioList label .wpcf7-list-item-label {
+  cursor: pointer;
+}
+.formBox .checkList label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.formBox .checkList label input[type=checkbox] {
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  margin: 0 10px 0 0;
+  border-radius: 0;
+  border: 1px solid #aaaaaa;
+  position: relative;
+  cursor: pointer;
+}
+.formBox .checkList label input[type=checkbox]:checked {
+  border-color: #b5a253;
+  background: #b5a253;
+}
+.formBox .checkList label input[type=checkbox]:checked::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 6px;
+  width: 7px;
+  height: 14px;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  transform: rotate(45deg);
+}
+.formBox .checkList label .wpcf7-list-item-label {
+  cursor: pointer;
+}
+.formBox .checkItem {
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 0 0 15px;
+  text-align: center;
+}
+.formBox .checkItem > label {
+  position: relative;
+  display: block;
+}
+.formBox .checkItem input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+}
+.formBox .checkItem span {
+  display: block;
+  padding-left: 50px;
+  position: relative;
+}
+.formBox .checkItem span::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 30px;
+  height: 30px;
+  margin: auto 0;
+  border: 1px solid #000000;
+  background: #f2f2f2;
+}
+.formBox .checkItem input:checked + span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 10px;
+  height: 16px;
+  transform: rotate(40deg);
+  border-bottom: 3px solid #000000;
+  border-right: 3px solid #000000;
+}
+.formBox .checkItem.agreeCheck > label {
+  display: inline-block;
+}
+
+/*////////////////////////////////////////////////////////////
+	blog
+///////////////////////////////////////////////////////////*/
+#blog .pageKvContainer .pageKv {
+  background: url("../image/blog/kv.png") left center no-repeat;
+  background-size: cover;
+}
+#blog .blogContainer {
+  padding: 100px 0;
+}
+#blog .catePanel {
+  margin: 0 0 60px;
+}
+#blog .catePanel ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+#blog .catePanel ul li {
+  width: calc(20% - 8px);
+}
+#blog .catePanel ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 28px;
+  padding: 8px 10px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #ffffff;
+  text-align: center;
+  background: #d61807;
+  transition: opacity 0.3s;
+}
+#blog .catePanel ul li a:hover {
+  opacity: 0.75;
+}
+#blog .catePanel ul li.active a {
+  opacity: 0.75;
+}
+#blog .listPanel .listBox ul li a {
+  display: block;
+}
+#blog .listPanel .listBox ul li .photoBox {
+  position: relative;
+  height: 0;
+  padding: 0 0 66%;
+}
+#blog .listPanel .listBox ul li .photoBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#blog .listPanel .listBox ul li .txtBox {
+  margin: 10px 0 0;
+}
+@media (min-width: 1025px) {
+  #blog .listPanel .listBox ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 20px;
+  }
+  #blog .listPanel .listBox ul li {
+    width: calc(25% - 16px);
+  }
+}
+#blog .list__pagination {
+  margin: 60px 0 0;
+}
+#blog .list__pagination .pagination {
+  display: flex;
+  justify-content: center;
+}
+#blog .list__pagination .pagination li {
+  margin: 0 10px;
+}
+#blog .list__pagination .pagination li a,
+#blog .list__pagination .pagination li span {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  color: #ffffff;
+  background: #cdcdcd;
+}
+#blog .list__pagination .pagination li.current a,
+#blog .list__pagination .pagination li.current span {
+  background: #0f0b09;
+}
+#blog .list__pagination .pagination li.previous a:before,
+#blog .list__pagination .pagination li.previous span:before {
+  content: "<";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 14px;
+  height: 22px;
+  margin: auto;
+}
+#blog .list__pagination .pagination li.next a,
+#blog .list__pagination .pagination li.next span {
+  border: none;
+  background: none;
+}
+#blog .list__pagination .pagination li.next a:before,
+#blog .list__pagination .pagination li.next span:before {
+  content: ">";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 14px;
+  height: 22px;
+  margin: auto;
+}
+#blog .blogDetailContainer {
+  padding: 0 0 50px;
+}
+#blog .blogDetailContainer .thumbnailBox {
+  margin: 0 0 30px;
+}
+#blog .blogDetailContainer .postContents {
+  line-height: 2.5;
+}
+#blog .blogDetailContainer .postContents img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+#blog .tourDetailContainer {
+  padding: 0 0 50px;
+}
+#blog .tourDetailContainer .titlePanel {
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+  margin: 0 0 30px;
+  padding: 5px 20px 5px 0;
+  color: #ffffff;
+  background: #000000;
+}
+#blog .tourDetailContainer .titlePanel .cate p {
+  display: inline-block;
+  padding: 0 10px;
+  font-size: 14px;
+  background: #d61807;
+}
+#blog .tourDetailContainer .titlePanel .title {
+  flex: 1;
+  font-size: 22px;
+  font-weight: 700;
+}
+#blog .tourDetailContainer .mv {
+  margin: 0 0 30px;
+}
+#blog .tourDetailContainer .secTtl {
+  margin: 0 0 20px;
+  padding: 0 0 0 10px;
+  font-size: 24px;
+  font-weight: 700;
+  border-left: 4px solid #d61807;
+}
+#blog .tourDetailContainer .secTtl h3 {
+  line-height: 1.2;
+}
+#blog .tourDetailContainer .secTtl span {
+  display: inline-block;
+  margin: 0 0 0 5px;
+  font-size: 14px;
+  font-weight: 500;
+  vertical-align: middle;
+}
+#blog .tourDetailContainer .subSection {
+  margin: 0 0 60px;
+}
+#blog .tourDetailContainer .subSection .listBox {
+  margin: 0 0 50px;
+}
+#blog .tourDetailContainer .subSection .listBox ul li .photo {
+  position: relative;
+  height: 0;
+  padding: 0 0 66%;
+}
+#blog .tourDetailContainer .subSection .listBox ul li .photo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#blog .tourDetailContainer .subSection .listBox ul li p {
+  margin: 10px 0 0;
+}
+@media (min-width: 1025px) {
+  #blog .tourDetailContainer .subSection .listBox ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 20px;
+  }
+  #blog .tourDetailContainer .subSection .listBox ul li {
+    width: calc(50% - 16px);
+  }
+}
+#blog .tourDetailContainer .subSection .postContents {
+  line-height: 2.5;
+}
+#blog .tourDetailContainer .subSection .postContents img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+#blog .tourDetailContainer .scheduleSection {
+  margin: 0 0 60px;
+}
+@media (min-width: 1025px) {
+  #blog .tourDetailContainer .scheduleSection .scheduleTable {
+    border: 1px solid #000000;
+  }
+  #blog .tourDetailContainer .scheduleSection .scheduleTable .headBox {
+    display: table;
+    width: 100%;
+    border-bottom: 1px solid #000000;
+  }
+  #blog .tourDetailContainer .scheduleSection .scheduleTable .headBox .box {
+    display: table-cell;
+    width: 20%;
+    padding: 10px;
+    color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+    background: #e7780b;
+  }
+  #blog .tourDetailContainer .scheduleSection .scheduleTable .headBox .box + .box {
+    border-left: 1px solid #000000;
+  }
+  #blog .tourDetailContainer .scheduleSection .scheduleTable .headBox .date {
+    width: 20%;
+  }
+  #blog .tourDetailContainer .scheduleSection .scheduleTable .headBox .schedule {
+    width: 50%;
+  }
+  #blog .tourDetailContainer .scheduleSection .scheduleTable .headBox .meal {
+    width: 30%;
+  }
+  #blog .tourDetailContainer .scheduleSection .scheduleTable .cntBody .scheduleBox {
+    display: table;
+    width: 100%;
+    line-height: 2;
+  }
+  #blog .tourDetailContainer .scheduleSection .scheduleTable .cntBody .scheduleBox + .scheduleBox {
+    border-top: 1px solid #000000;
+  }
+  #blog .tourDetailContainer .scheduleSection .scheduleTable .cntBody .scheduleBox .box {
+    display: table-cell;
+    width: 20%;
+    vertical-align: middle;
+  }
+  #blog .tourDetailContainer .scheduleSection .scheduleTable .cntBody .scheduleBox .box + .box {
+    border-left: 1px solid #000000;
+  }
+  #blog .tourDetailContainer .scheduleSection .scheduleTable .cntBody .scheduleBox .box dl dt {
+    display: none;
+  }
+  #blog .tourDetailContainer .scheduleSection .scheduleTable .cntBody .scheduleBox .date {
+    width: 20%;
+    text-align: center;
+  }
+  #blog .tourDetailContainer .scheduleSection .scheduleTable .cntBody .scheduleBox .date dl {
+    padding: 20px;
+  }
+  #blog .tourDetailContainer .scheduleSection .scheduleTable .cntBody .scheduleBox .schedule {
+    width: 50%;
+  }
+  #blog .tourDetailContainer .scheduleSection .scheduleTable .cntBody .scheduleBox .schedule dl {
+    padding: 20px;
+  }
+  #blog .tourDetailContainer .scheduleSection .scheduleTable .cntBody .scheduleBox .meal {
+    width: 30%;
+  }
+  #blog .tourDetailContainer .scheduleSection .scheduleTable .cntBody .scheduleBox .meal dl dd ul li {
+    padding: 20px 40px;
+  }
+  #blog .tourDetailContainer .scheduleSection .scheduleTable .cntBody .scheduleBox .meal dl dd ul li + li {
+    border-top: 1px solid #000000;
+  }
+}
+#blog .tourDetailContainer .itemSection .section + .section {
+  margin: 40px 0 0;
+}
+#blog .tourDetailContainer .itemSection .priceBox {
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #000000;
+}
+#blog .tourDetailContainer .itemSection .priceBox p {
+  font-weight: 700;
+}
+#blog .tourDetailContainer .itemSection .priceBox em {
+  font-size: 22px;
+}
+#blog .tourDetailContainer .itemSection .priceBox span {
+  font-size: 16px;
+}
+#blog .tourDetailContainer .itemSection .priceBox + p {
+  margin: 3px 0 0;
+}
+#blog .tourDetailContainer .itemSection .pdfBox a {
+  display: block;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #000000;
+}
+#blog .tourDetailContainer .itemSection .pdfBox a span {
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+@media (min-width: 1025px) {
+  #blog .tourDetailContainer .itemSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  #blog .tourDetailContainer .itemSection .section {
+    width: 48%;
+  }
+}
+#blog .btnBackBox {
+  text-align: center;
+}

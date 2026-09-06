@@ -1,0 +1,1704 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+	画面用CSS（PC/SMP）
+===================================================*/
+/*////////////////////////////////////////////////////////////
+	TOP
+///////////////////////////////////////////////////////////*/
+#top {
+  margin: 0;
+}
+#top .topKvContainer {
+  height: 100vh;
+  background: url("../image/top/top_kv_01.png") center no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+@media (min-width: 1025px) {
+  #top .topKvContainer .topKvLogoPanel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 400px;
+    padding: 20px 20px 50px;
+    z-index: 1;
+    background: url("../image/top/top_window_bg.png") bottom center no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(0);
+    transition: transform 1.5s ease;
+  }
+  #top .topKvContainer .topKvLogoPanel::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 400px);
+    background: rgba(244, 239, 226, 0.9);
+    z-index: -1;
+  }
+  #top .topKvContainer .topKvLogoPanel.rollUp {
+    transform: translateY(-100%);
+  }
+  #top .topKvContainer .topKvLogoPanel.rollUp .topKvLogo {
+    opacity: 1;
+  }
+  #top .topKvContainer .topKvLogoPanel .topKvLogo {
+    opacity: 0;
+    width: 120px;
+    margin: 0 auto;
+    transition: 1s;
+  }
+}
+#top .topKvContainer .topBnrPanel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 60px;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+#top .topKvContainer .topBnrPanel .topBnr a {
+  display: block;
+}
+#top .topSection {
+  padding: 120px 0;
+  background: url("../image/top/top_sec_bg.png") center no-repeat;
+  background-size: cover;
+}
+#top .topSection .secContainer .txtPanel .txtBox {
+  padding: 0 20px;
+}
+#top .topSection .secContainer .txtPanel .txtBox .ttl {
+  margin: 0 0 30px;
+  font-size: 30px;
+  writing-mode: vertical-rl;
+}
+#top .topSection .secContainer .txtPanel .txtBox .ttl > * {
+  line-height: 2;
+}
+#top .topSection .secContainer .txtPanel .txtBox .txt {
+  margin: 0 0 30px;
+}
+@media (min-width: 1025px) {
+  #top .topSection .secContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  #top .topSection .secContainer .txtPanel {
+    width: 48%;
+  }
+  #top .topSection .secContainer .photoPanel {
+    width: 48%;
+  }
+}
+#top .lunchboxSec {
+  padding: 120px 0;
+}
+#top .lunchboxSec .secPanel {
+  position: relative;
+}
+#top .lunchboxSec .secPanel + .secPanel {
+  margin: 100px 0 0;
+}
+#top .lunchboxSec .secPanel > a {
+  display: block;
+}
+#top .lunchboxSec .secPanel .photo {
+  position: relative;
+}
+#top .lunchboxSec .secPanel .photo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: url("../image/top/lunchbox_photo_bg_01.png") center no-repeat;
+  background-size: contain;
+}
+#top .lunchboxSec .secPanel .photo::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background: url("../image/top/lunchbox_photo_bg_02.png") center no-repeat;
+  background-size: contain;
+}
+#top .lunchboxSec .secPanel .txtBox a {
+  display: block;
+  padding: 50px;
+  background: url("../image/top/lunchbox_box_bg_tri.png") left top no-repeat #ffffff;
+  background-size: 45px auto;
+}
+#top .lunchboxSec .secPanel .txtBox .ttlHead {
+  display: flex;
+  gap: 0 20px;
+}
+#top .lunchboxSec .secPanel .txtBox .ttlHead .ttl {
+  font-size: 30px;
+}
+#top .lunchboxSec .secPanel .txtBox .ttlHead .ttl > * {
+  line-height: 1.2;
+}
+#top .lunchboxSec .secPanel .txtBox .ttlHead .ttl span {
+  font-size: 16px;
+}
+#top .lunchboxSec .secPanel .txtBox .ttlHead .more {
+  width: 40px;
+}
+#top .lunchboxSec .secPanel .txtBox .ttlHead .more a {
+  display: block;
+}
+#top .lunchboxSec .secPanel .txtBox .cntBody .txt {
+  line-height: 2;
+}
+@media (min-width: 1025px) {
+  #top .lunchboxSec .secPanel .txtBox {
+    width: 50%;
+    max-width: 600px;
+  }
+  #top .lunchboxSec .secPanel .txtBox .inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 10px;
+  }
+  #top .lunchboxSec .secPanel .txtBox .ttlHead {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px 0;
+    width: 100px;
+  }
+  #top .lunchboxSec .secPanel .txtBox .ttlHead .ttl {
+    writing-mode: vertical-rl;
+  }
+  #top .lunchboxSec .secPanel .txtBox .ttlHead .more {
+    margin: 0 auto;
+  }
+  #top .lunchboxSec .secPanel .txtBox .cntBody {
+    width: calc(100% - 100px);
+  }
+  #top .lunchboxSec .secPanel:nth-child(odd) .txtBox {
+    position: absolute;
+    right: -40px;
+    bottom: -40px;
+  }
+  #top .lunchboxSec .secPanel:nth-child(even) .txtBox {
+    position: absolute;
+    left: -40px;
+    bottom: -40px;
+  }
+}
+#top .linkSec {
+  padding: 120px 0;
+  background: #ede8d7;
+}
+#top .linkSec .itemPanel .itemBox a {
+  position: relative;
+  display: block;
+}
+#top .linkSec .itemPanel .itemBox .ttl {
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+}
+#top .linkSec .itemPanel .itemBox .ttl01 {
+  width: 70%;
+}
+#top .linkSec .itemPanel .itemBox .ttl02 {
+  width: 60%;
+}
+@media (min-width: 1025px) {
+  #top .linkSec .itemPanel {
+    display: flex;
+    justify-content: space-between;
+  }
+  #top .linkSec .itemPanel .itemBox {
+    width: 48%;
+  }
+}
+#top .newsSec {
+  padding: 120px 0;
+}
+#top .newsSec .secContainer .titleBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#top .newsSec .secContainer .titleBox .ttl {
+  margin: 0 0 40px;
+  font-size: 30px;
+  writing-mode: vertical-rl;
+}
+#top .newsSec .secContainer .titleBox .more {
+  width: 180px;
+}
+#top .newsSec .secContainer .titleBox .more a {
+  position: relative;
+  display: block;
+  padding: 7px 10px;
+  text-align: center;
+  border-radius: 30px;
+  border: 1px solid #231815;
+}
+#top .newsSec .secContainer .titleBox .more a:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -12px;
+  bottom: 0;
+  width: 25px;
+  height: 1px;
+  margin: auto 0;
+  background: #231815;
+}
+#top .newsSec .secContainer .txtBox ul li a {
+  display: block;
+}
+#top .newsSec .secContainer .txtBox ul li .ttl {
+  margin: 10px 0 0;
+}
+@media (min-width: 1025px) {
+  #top .newsSec .secContainer {
+    display: flex;
+    justify-content: space-between;
+  }
+  #top .newsSec .secContainer .titleBox {
+    width: 200px;
+  }
+  #top .newsSec .secContainer .txtBox {
+    width: calc(100% - 300px);
+  }
+  #top .newsSec .secContainer .txtBox ul {
+    display: flex;
+    gap: 0 50px;
+  }
+  #top .newsSec .secContainer .txtBox ul li {
+    width: calc(33.3333333333% - 50px);
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	commitment
+///////////////////////////////////////////////////////////*/
+#commitment .pageKvContainer {
+  background: url("../image/commitment/kv.png") center no-repeat;
+  background-size: cover;
+}
+#commitment .topSection {
+  padding: 120px 0;
+  background: url("../image/commitment/top_sec_bg.png") center no-repeat;
+  background-size: cover;
+}
+#commitment .topSection .secContainer .ttlBox .ttl {
+  font-size: 30px;
+  writing-mode: vertical-rl;
+}
+#commitment .topSection .secContainer .ttlBox .ttl > * {
+  line-height: 2;
+}
+#commitment .topSection .secContainer .txtBox {
+  padding: 20px 0 0;
+}
+@media (min-width: 1025px) {
+  #commitment .topSection .secContainer {
+    display: flex;
+    justify-content: space-between;
+  }
+  #commitment .topSection .secContainer .ttlBox {
+    width: 25%;
+  }
+  #commitment .topSection .secContainer .txtBox {
+    width: 75%;
+  }
+}
+#commitment .sec01 {
+  padding: 120px 0;
+}
+#commitment .sec01 .secBox + .secBox {
+  margin: 100px 0 0;
+}
+#commitment .sec01 .secBox .txtBox {
+  padding: 15px 0 0;
+}
+#commitment .sec01 .secBox .txtBox h3 {
+  margin: 0 0 20px;
+  font-size: 26px;
+}
+@media (min-width: 1025px) {
+  #commitment .sec01 .secBox {
+    display: flex;
+    justify-content: space-between;
+  }
+  #commitment .sec01 .secBox .photo {
+    width: 50%;
+  }
+  #commitment .sec01 .secBox .txtBox {
+    width: 45%;
+  }
+  #commitment .sec01 .secBox:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	sale
+///////////////////////////////////////////////////////////*/
+#sale .pageKvContainer {
+  background: url("../image/sale/kv.png") center no-repeat;
+  background-size: cover;
+}
+#sale .topSection {
+  padding: 120px 0;
+  background: url("../image/sale/top_sec_bg.png") center no-repeat;
+  background-size: cover;
+}
+#sale .topSection .secContainer .txtBox h2 {
+  margin: 0 0 20px;
+  font-size: 30px;
+}
+@media (min-width: 1025px) {
+  #sale .topSection .secContainer {
+    display: flex;
+    justify-content: space-between;
+  }
+  #sale .topSection .secContainer .txtBox {
+    width: 58%;
+  }
+  #sale .topSection .secContainer .photo {
+    width: 40%;
+  }
+}
+#sale .telSection {
+  padding: 60px 0;
+  text-align: center;
+  background: #ecece9;
+}
+#sale .telSection .ttlBox {
+  margin: 0 0 30px;
+}
+#sale .telSection .ttlBox .ttl01 {
+  margin: 0 0 5px;
+  font-size: 24px;
+}
+#sale .telSection .ttlBox .ttl02 {
+  font-size: 14px;
+}
+#sale .telSection .itemBox {
+  max-width: 840px;
+  margin: 0 auto;
+}
+#sale .telSection .itemBox dl {
+  max-width: 380px;
+}
+#sale .telSection .itemBox dl dt {
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+#sale .telSection .itemBox dl dd a {
+  display: block;
+  padding: 8px 10px;
+  font-size: 28px;
+  border-top: 1px solid #231815;
+  border-bottom: 1px solid #231815;
+}
+#sale .telSection .itemBox aside {
+  font-size: 14px;
+  text-align: left;
+}
+@media (min-width: 1025px) {
+  #sale .telSection .itemBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  #sale .telSection .itemBox dl {
+    width: 49%;
+  }
+  #sale .telSection .itemBox aside {
+    width: 49%;
+    padding: 0 0 10px;
+  }
+}
+#sale .sec01 {
+  padding: 120px 0;
+}
+#sale .sec01 .pageSecTtlBox {
+  margin: 0 0 20px;
+}
+#sale .sec01 .topTxt {
+  margin: 0 0 60px;
+  text-align: center;
+}
+#sale .sec01 .secPanel {
+  margin: 0 0 50px;
+}
+#sale .sec01 .secPanel .txtBox .ttlBox {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 20px;
+  padding: 10px 0 0;
+}
+#sale .sec01 .secPanel .txtBox .ttlBox .ttl em {
+  font-size: 24px;
+}
+#sale .sec01 .secPanel .txtBox .ttlBox .ttl span {
+  font-size: 18px;
+}
+#sale .sec01 .secPanel .txtBox .ttlBox .price em {
+  font-size: 18px;
+}
+#sale .sec01 .secPanel .txtBox .ttlBox .price span {
+  font-size: 14px;
+}
+#sale .sec01 .secPanel .txtBox .txt p + p {
+  margin: 20px 0 0;
+}
+@media (min-width: 1025px) {
+  #sale .sec01 .secPanel {
+    display: flex;
+    justify-content: space-between;
+  }
+  #sale .sec01 .secPanel .photo {
+    width: 50%;
+  }
+  #sale .sec01 .secPanel .txtBox {
+    width: 45%;
+  }
+}
+#sale .sec01 .message {
+  max-width: 1000px;
+  margin: 0 auto 30px;
+  padding: 10px 20px;
+  font-size: 22px;
+  text-align: center;
+  background: url("../image/sale/sec01_message_bg.png") center no-repeat;
+  background-size: cover;
+}
+#sale .sec01 .listBox {
+  margin: 0 0 60px;
+}
+#sale .sec01 .listBox ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -30px 0 0 -30px;
+}
+#sale .sec01 .listBox ul li {
+  width: calc(33.3333333333% - 30px);
+  margin: 30px 0 0 30px;
+}
+#sale .sec01 .saleBox {
+  max-width: 1000px;
+  margin: 0 auto 30px;
+  padding: 20px;
+  text-align: center;
+  background: #e9e9e5;
+}
+#sale .sec01 .saleBox .txt {
+  line-height: 2;
+}
+#sale .sec01 .saleBox .txt p + p {
+  margin: 10px 0 0;
+}
+#sale .sec01 .subBox {
+  position: relative;
+  max-width: 550px;
+  margin: 0 auto;
+  padding: 3px;
+  text-align: center;
+  border: 1px solid #2a2a27;
+}
+#sale .sec01 .subBox::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #2a2a27;
+}
+#sale .sec01 .subBox .inner {
+  position: relative;
+  top: 5px;
+  padding: 10px;
+  font-size: 20px;
+}
+#sale .slidePanel {
+  padding: 0 0 120px;
+}
+#sale .slidePanel .slideBox ul {
+  display: flex;
+}
+#sale .slidePanel .slideBox ul li {
+  width: 20%;
+  margin: 0 2px;
+}
+
+/*////////////////////////////////////////////////////////////
+	lunchbox
+///////////////////////////////////////////////////////////*/
+.lunchboxMain .topSection {
+  padding: 120px 0;
+  background: url("../image/sale/top_sec_bg.png") center no-repeat;
+  background-size: cover;
+}
+.lunchboxMain .topSection .secContainer .txtBox h2 {
+  margin: 0 0 20px;
+  font-size: 30px;
+}
+.lunchboxMain .topSection .secContainer .photoList01 .multi {
+  display: flex;
+  gap: 0 5px;
+}
+.lunchboxMain .topSection .secContainer .photoList01 .multi li {
+  width: calc(50% - 5px);
+}
+.lunchboxMain .topSection .secContainer .photoList01 .single {
+  margin: 5px 0 0;
+}
+@media (min-width: 1025px) {
+  .lunchboxMain .topSection .secContainer {
+    display: flex;
+    justify-content: space-between;
+  }
+  .lunchboxMain .topSection .secContainer .txtBox {
+    width: 60%;
+  }
+  .lunchboxMain .topSection .secContainer .photo {
+    width: 37%;
+    padding: 30px 0 0;
+  }
+  .lunchboxMain .topSection .secContainer .photoList01 {
+    width: 37%;
+    padding: 30px 0 0;
+  }
+}
+.lunchboxMain .topSection .photoList02 {
+  padding: 40px 0 0;
+}
+.lunchboxMain .topSection .photoList02 ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.lunchboxMain .topSection .photoList02 ul li {
+  width: calc(16.6666666667% - 5px);
+}
+.lunchboxMain .useSection {
+  padding: 100px 0;
+}
+.lunchboxMain .useSection .secTtl {
+  margin: 0 0 40px;
+  text-align: center;
+}
+.lunchboxMain .useSection .secTtl > * {
+  position: relative;
+  display: inline-block;
+  padding: 0 60px;
+  font-size: 24px;
+}
+.lunchboxMain .useSection .secTtl > *:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 25px;
+  height: 1px;
+  margin: auto 0;
+  background: #231815;
+}
+.lunchboxMain .useSection .secTtl > *:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 25px;
+  height: 1px;
+  margin: auto 0;
+  background: #231815;
+}
+.lunchboxMain .useSection .secBox dl + dl {
+  margin: 50px 0 0;
+}
+.lunchboxMain .useSection .secBox dl dt {
+  font-size: 24px;
+}
+.lunchboxMain .useSection .secBox dl dd {
+  line-height: 2;
+}
+@media (min-width: 1025px) {
+  .lunchboxMain .useSection .secBox dl {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .lunchboxMain .useSection .secBox dl dt {
+    width: 260px;
+    padding: 15px 0;
+    border-right: 1px solid #231815;
+  }
+  .lunchboxMain .useSection .secBox dl dd {
+    width: calc(100% - 300px);
+    padding: 10px 0;
+  }
+}
+.lunchboxMain .telSection {
+  padding: 60px 0;
+  text-align: center;
+  background: #ecece9;
+}
+.lunchboxMain .telSection .topTxt {
+  margin: 0 0 40px;
+  line-height: 2;
+}
+.lunchboxMain .telSection .itemBox {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.lunchboxMain .telSection .itemBox + .itemBox {
+  margin: 30px auto 0;
+}
+.lunchboxMain .telSection .itemBox dl {
+  max-width: 380px;
+}
+.lunchboxMain .telSection .itemBox dl dt {
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+.lunchboxMain .telSection .itemBox dl dd a {
+  display: block;
+  padding: 8px 10px;
+  font-size: 28px;
+  border-top: 1px solid #231815;
+  border-bottom: 1px solid #231815;
+}
+.lunchboxMain .telSection .itemBox aside {
+  font-size: 14px;
+  text-align: left;
+}
+.lunchboxMain .telSection .itemBox .pdfBox {
+  max-width: 300px;
+}
+.lunchboxMain .telSection .itemBox .pdfBox a {
+  display: block;
+  padding: 15px 20px;
+  text-align: left;
+  background: #ffffff;
+}
+.lunchboxMain .telSection .itemBox .pdfBox a p {
+  padding: 0 0 0 55px;
+  font-size: 14px;
+  line-height: 1.7;
+  background: url("../image/common/icon_pdf.png") left center no-repeat;
+  background-size: 40px auto;
+}
+@media (min-width: 1025px) {
+  .lunchboxMain .telSection .itemBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .lunchboxMain .telSection .itemBox + .itemBox {
+    justify-content: flex-start;
+  }
+  .lunchboxMain .telSection .itemBox dl {
+    width: 49%;
+  }
+  .lunchboxMain .telSection .itemBox aside {
+    width: 49%;
+    padding: 0 0 10px;
+  }
+  .lunchboxMain .telSection .itemBox .pdfBox {
+    width: 49%;
+    margin: 0 0 0 30px;
+  }
+}
+.lunchboxMain .telSection .limitBox {
+  max-width: 500px;
+  margin: 40px auto 0;
+  padding: 20px;
+  background: #ddddd7;
+}
+.lunchboxMain .telSection .limitBox dl {
+  max-width: 420px;
+  margin: 0 auto;
+  text-align: left;
+}
+.lunchboxMain .telSection .limitBox dl dt {
+  margin: 0 0 10px;
+}
+.lunchboxMain .telSection .limitBox dl dt span {
+  font-size: 12px;
+}
+.lunchboxMain .telSection .limitBox dl dt em {
+  font-size: 22px;
+}
+.lunchboxMain .telSection .limitBox dl dd {
+  line-height: 2;
+}
+.lunchboxMain .sideMenuSection + .sideMenuSection {
+  margin: 80px 0 0;
+}
+.lunchboxMain .sideMenuSection .secTtl {
+  margin: 0 0 40px;
+  text-align: center;
+}
+.lunchboxMain .sideMenuSection .secTtl > * {
+  position: relative;
+  display: inline-block;
+  padding: 0 60px;
+  font-size: 24px;
+}
+.lunchboxMain .sideMenuSection .secTtl > *:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 25px;
+  height: 1px;
+  margin: auto 0;
+  background: #231815;
+}
+.lunchboxMain .sideMenuSection .secTtl > *:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 25px;
+  height: 1px;
+  margin: auto 0;
+  background: #231815;
+}
+.lunchboxMain .sideMenuSection .menuList ul li {
+  padding: 15px 20px;
+  border-bottom: 1px solid #090909;
+}
+.lunchboxMain .sideMenuSection .menuList ul dl {
+  line-height: 2;
+}
+.lunchboxMain .sideMenuSection .menuList ul dl dd {
+  text-align: right;
+}
+@media (min-width: 1025px) {
+  .lunchboxMain .sideMenuSection .menuList ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: -10px 0 0;
+  }
+  .lunchboxMain .sideMenuSection .menuList ul li {
+    width: calc(50% - 20px);
+    margin: 10px 0 0;
+  }
+  .lunchboxMain .sideMenuSection .menuList ul dl {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	packed
+///////////////////////////////////////////////////////////*/
+#packed .pageKvContainer {
+  background: url("../image/packed/kv.png") center no-repeat;
+  background-size: cover;
+}
+#packed .sec01 {
+  padding: 120px 0;
+}
+#packed .sec01 .pageSecTtlBox {
+  margin: 0 0 20px;
+}
+#packed .sec01 .topTxt {
+  margin: 0 0 40px;
+  text-align: center;
+}
+#packed .sec01 .topBox {
+  margin: 0 0 40px;
+}
+#packed .sec01 .topBox h3 {
+  margin: 0 0 20px;
+  font-size: 30px;
+}
+#packed .sec01 .listBox ul dl {
+  margin: 20px 0 0;
+}
+#packed .sec01 .listBox ul dl dt {
+  margin: 0 0 20px;
+  text-align: center;
+}
+#packed .sec01 .listBox ul dl dt em {
+  font-size: 24px;
+}
+#packed .sec01 .listBox ul dl dt span {
+  margin: 0 0 0 10px;
+  font-size: 20px;
+}
+#packed .sec01 .listBox ul dl dt small {
+  font-size: 14px;
+}
+#packed .sec01 .listBox ul dl dd {
+  font-size: 15px;
+  line-height: 2;
+}
+@media (min-width: 1025px) {
+  #packed .sec01 .listBox ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -40px 0 0 -40px;
+  }
+  #packed .sec01 .listBox ul li {
+    width: calc(50% - 40px);
+    margin: 40px 0 0 40px;
+  }
+}
+#packed .sec02 {
+  padding: 120px 0;
+  background: url("../image/packed/sec02_bg.png") center no-repeat;
+  background-size: cover;
+}
+#packed .sec02 .pageSecTtlBox {
+  margin: 0 0 20px;
+}
+#packed .sec02 .topTxt {
+  margin: 0 0 60px;
+  text-align: center;
+}
+#packed .sec02 .secContainer {
+  margin: 0 0 60px;
+}
+#packed .sec02 .secContainer .txtBox h3 {
+  margin: 0 0 20px;
+  font-size: 30px;
+}
+@media (min-width: 1025px) {
+  #packed .sec02 .secContainer {
+    display: flex;
+    justify-content: space-between;
+  }
+  #packed .sec02 .secContainer .txtBox {
+    width: 58%;
+  }
+  #packed .sec02 .secContainer .photo {
+    width: 40%;
+  }
+}
+#packed .sec02 .listBox {
+  margin: 0 0 100px;
+}
+#packed .sec02 .listBox ul dl {
+  margin: 20px 0 0;
+}
+#packed .sec02 .listBox ul dl dt {
+  margin: 0 0 20px;
+  text-align: center;
+}
+#packed .sec02 .listBox ul dl dt em {
+  font-size: 24px;
+}
+#packed .sec02 .listBox ul dl dt span {
+  margin: 0 0 0 10px;
+  font-size: 20px;
+}
+#packed .sec02 .listBox ul dl dt small {
+  font-size: 14px;
+}
+#packed .sec02 .listBox ul dl dd {
+  font-size: 15px;
+  line-height: 2;
+}
+@media (min-width: 1025px) {
+  #packed .sec02 .listBox ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -40px 0 0 -40px;
+  }
+  #packed .sec02 .listBox ul li {
+    width: calc(50% - 40px);
+    margin: 40px 0 0 40px;
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	wariko
+///////////////////////////////////////////////////////////*/
+#wariko .pageKvContainer {
+  background: url("../image/wariko/kv.png") center no-repeat;
+  background-size: cover;
+}
+#wariko .sec01 {
+  padding: 120px 0;
+}
+#wariko .sec01 .pageSecTtlBox {
+  margin: 0 0 20px;
+}
+#wariko .sec01 .topTxt {
+  margin: 0 0 40px;
+  text-align: center;
+}
+#wariko .sec01 .listBox01 {
+  margin: 0 0 40px;
+}
+#wariko .sec01 .listBox01 ul dl {
+  margin: 20px 0 0;
+}
+#wariko .sec01 .listBox01 ul dl dt {
+  margin: 0 0 20px;
+  text-align: center;
+}
+#wariko .sec01 .listBox01 ul dl dt em {
+  font-size: 24px;
+}
+#wariko .sec01 .listBox01 ul dl dt span {
+  margin: 0 0 0 10px;
+  font-size: 20px;
+}
+#wariko .sec01 .listBox01 ul dl dt small {
+  font-size: 14px;
+}
+#wariko .sec01 .listBox01 ul dl dd {
+  font-size: 15px;
+  line-height: 2;
+}
+@media (min-width: 1025px) {
+  #wariko .sec01 .listBox01 ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -40px 0 0 -40px;
+  }
+  #wariko .sec01 .listBox01 ul li {
+    width: calc(50% - 40px);
+    margin: 40px 0 0 40px;
+  }
+}
+#wariko .sec01 .listBox02 {
+  margin: 0 0 100px;
+}
+#wariko .sec01 .listBox02 ul dl {
+  margin: 20px 0 0;
+}
+#wariko .sec01 .listBox02 ul dl dt {
+  margin: 0 0 20px;
+  text-align: center;
+}
+#wariko .sec01 .listBox02 ul dl dt em {
+  display: block;
+  margin: 0 0 5px;
+  font-size: 24px;
+}
+#wariko .sec01 .listBox02 ul dl dt span {
+  font-size: 20px;
+}
+#wariko .sec01 .listBox02 ul dl dt small {
+  font-size: 14px;
+}
+#wariko .sec01 .listBox02 ul dl dd {
+  font-size: 15px;
+  line-height: 2;
+}
+@media (min-width: 1025px) {
+  #wariko .sec01 .listBox02 ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -40px 0 0 -20px;
+  }
+  #wariko .sec01 .listBox02 ul li {
+    width: calc(33.3333333333% - 20px);
+    margin: 40px 0 0 20px;
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+  houji
+///////////////////////////////////////////////////////////*/
+#houji .pageKvContainer {
+  background: url("../image/houji/kv.png") center no-repeat;
+  background-size: cover;
+}
+#houji .sec01 {
+  padding: 120px 0;
+}
+#houji .sec01 .pageSecTtlBox {
+  margin: 0 0 20px;
+}
+#houji .sec01 .topTxt {
+  margin: 0 0 40px;
+  text-align: center;
+}
+#houji .sec01 .listBox01 {
+  margin: 0 0 40px;
+}
+#houji .sec01 .listBox01 ul dl {
+  margin: 20px 0 0;
+}
+#houji .sec01 .listBox01 ul dl dt {
+  margin: 0 0 20px;
+  text-align: center;
+}
+#houji .sec01 .listBox01 ul dl dt em {
+  font-size: 24px;
+}
+#houji .sec01 .listBox01 ul dl dt span {
+  margin: 0 0 0 10px;
+  font-size: 20px;
+}
+#houji .sec01 .listBox01 ul dl dt small {
+  font-size: 14px;
+}
+#houji .sec01 .listBox01 ul dl dd {
+  font-size: 15px;
+  line-height: 2;
+}
+@media (min-width: 1025px) {
+  #houji .sec01 .listBox01 ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -40px 0 0 -40px;
+  }
+  #houji .sec01 .listBox01 ul li {
+    width: calc(50% - 40px);
+    margin: 40px 0 0 40px;
+  }
+}
+#houji .sec01 .listBox02 {
+  margin: 0 0 100px;
+}
+#houji .sec01 .listBox02 ul dl {
+  margin: 20px 0 0;
+}
+#houji .sec01 .listBox02 ul dl dt {
+  margin: 0 0 20px;
+  text-align: center;
+}
+#houji .sec01 .listBox02 ul dl dt em {
+  display: block;
+  margin: 0 0 5px;
+  font-size: 24px;
+}
+#houji .sec01 .listBox02 ul dl dt span {
+  font-size: 20px;
+}
+#houji .sec01 .listBox02 ul dl dt small {
+  font-size: 14px;
+}
+#houji .sec01 .listBox02 ul dl dd {
+  font-size: 15px;
+  line-height: 2;
+}
+@media (min-width: 1025px) {
+  #houji .sec01 .listBox02 ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -40px 0 0 -20px;
+  }
+  #houji .sec01 .listBox02 ul li {
+    width: calc(33.3333333333% - 20px);
+    margin: 40px 0 0 20px;
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+  other
+///////////////////////////////////////////////////////////*/
+#other .pageKvContainer {
+  background: url("../image/other/kv.png") center no-repeat;
+  background-size: cover;
+}
+#other .sec01,
+#other .sec03 {
+  padding: 120px 0;
+}
+#other .sec01 .secBoxList,
+#other .sec03 .secBoxList {
+  margin: 0 0 60px;
+}
+#other .sec01 .secBoxList .secBox + .secBox,
+#other .sec03 .secBoxList .secBox + .secBox {
+  margin: 60px 0 0;
+}
+#other .sec01 .secBoxList .secBox .txtBox h3,
+#other .sec03 .secBoxList .secBox .txtBox h3 {
+  margin: 0 0 20px;
+  font-size: 30px;
+}
+#other .sec01 .secBoxList .secBox .txtBox .ttlBox,
+#other .sec03 .secBoxList .secBox .txtBox .ttlBox {
+  margin: 0 0 20px;
+}
+#other .sec01 .secBoxList .secBox .txtBox .ttlBox .reserveTtl,
+#other .sec03 .secBoxList .secBox .txtBox .ttlBox .reserveTtl {
+  width: 110px;
+  margin: 0 0 20px;
+}
+#other .sec01 .secBoxList .secBox .txtBox .ttlBox .ttl,
+#other .sec03 .secBoxList .secBox .txtBox .ttlBox .ttl {
+  margin: 0 0 15px;
+}
+#other .sec01 .secBoxList .secBox .txtBox .ttlBox .ttl em,
+#other .sec03 .secBoxList .secBox .txtBox .ttlBox .ttl em {
+  font-size: 24px;
+}
+#other .sec01 .secBoxList .secBox .txtBox .ttlBox .price em,
+#other .sec03 .secBoxList .secBox .txtBox .ttlBox .price em {
+  font-size: 24px;
+}
+#other .sec01 .secBoxList .secBox .txtBox .txt,
+#other .sec03 .secBoxList .secBox .txtBox .txt {
+  font-size: 15px;
+}
+#other .sec01 .secBoxList .secBox .txtBox .txt p + p,
+#other .sec03 .secBoxList .secBox .txtBox .txt p + p {
+  margin: 20px 0 0;
+}
+#other .sec01 .secBoxList .secBox .txtBox .btnMore,
+#other .sec03 .secBoxList .secBox .txtBox .btnMore {
+  margin: 20px 0 0;
+}
+@media (min-width: 1025px) {
+  #other .sec01 .secBoxList .secBox,
+#other .sec03 .secBoxList .secBox {
+    display: flex;
+    justify-content: space-between;
+  }
+  #other .sec01 .secBoxList .secBox .photo,
+#other .sec03 .secBoxList .secBox .photo {
+    width: 50%;
+  }
+  #other .sec01 .secBoxList .secBox .txtBox,
+#other .sec03 .secBoxList .secBox .txtBox {
+    width: 45%;
+  }
+  #other .sec01 .secBoxList .secBox:nth-child(odd),
+#other .sec03 .secBoxList .secBox:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+}
+#other .sec01 .listBox,
+#other .sec03 .listBox {
+  margin: 0 0 100px;
+}
+#other .sec01 .listBox ul dl,
+#other .sec03 .listBox ul dl {
+  margin: 20px 0 0;
+}
+#other .sec01 .listBox ul dl dt,
+#other .sec03 .listBox ul dl dt {
+  margin: 0 0 20px;
+  text-align: center;
+}
+#other .sec01 .listBox ul dl dt em,
+#other .sec03 .listBox ul dl dt em {
+  display: block;
+  margin: 0 0 5px;
+  font-size: 24px;
+}
+#other .sec01 .listBox ul dl dt span,
+#other .sec03 .listBox ul dl dt span {
+  font-size: 20px;
+}
+#other .sec01 .listBox ul dl dt small,
+#other .sec03 .listBox ul dl dt small {
+  font-size: 14px;
+}
+#other .sec01 .listBox ul dl dd,
+#other .sec03 .listBox ul dl dd {
+  font-size: 15px;
+  line-height: 2;
+}
+@media (min-width: 1025px) {
+  #other .sec01 .listBox ul,
+#other .sec03 .listBox ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -40px 0 0 -20px;
+  }
+  #other .sec01 .listBox ul li,
+#other .sec03 .listBox ul li {
+    width: calc(33.3333333333% - 20px);
+    margin: 40px 0 0 20px;
+  }
+}
+#other .sec02 {
+  padding: 120px 0;
+  background: url("../image/other/sec02_bg.png") center no-repeat;
+  background-size: cover;
+}
+#other .sec02 .topBox {
+  margin: 0 0 40px;
+}
+#other .sec02 .topBox h3 {
+  margin: 0 0 20px;
+  font-size: 30px;
+}
+#other .sec02 .topBox .txt p + p {
+  margin: 20px 0 0;
+}
+#other .sec02 .listBox ul dl {
+  margin: 20px 0 0;
+}
+#other .sec02 .listBox ul dl dt {
+  margin: 0 0 20px;
+  text-align: center;
+}
+#other .sec02 .listBox ul dl dt em {
+  font-size: 24px;
+}
+#other .sec02 .listBox ul dl dt span {
+  margin: 0 0 0 10px;
+  font-size: 20px;
+}
+#other .sec02 .listBox ul dl dt small {
+  font-size: 14px;
+}
+#other .sec02 .listBox ul dl dd {
+  font-size: 15px;
+  line-height: 2;
+}
+@media (min-width: 1025px) {
+  #other .sec02 .listBox ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -40px 0 0 -40px;
+  }
+  #other .sec02 .listBox ul li {
+    width: calc(50% - 40px);
+    margin: 40px 0 0 40px;
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+  faq
+///////////////////////////////////////////////////////////*/
+#faq .pageKvContainer {
+  background: url("../image/faq/kv.png") center no-repeat;
+  background-size: cover;
+}
+#faq .topSection {
+  padding: 60px 0 100px;
+  text-align: center;
+}
+#faq .topSection .txt {
+  margin: 0 0 30px;
+}
+#faq .topSection .pagingBox {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  background: #ebebe7;
+}
+#faq .topSection .pagingBox ul {
+  max-width: 740px;
+  margin: 0 auto;
+}
+#faq .topSection .pagingBox ul li {
+  border-bottom: 1px solid #231815;
+}
+#faq .topSection .pagingBox ul li a {
+  display: block;
+  padding: 12px 0;
+  font-size: 20px;
+}
+@media (min-width: 1025px) {
+  #faq .topSection .pagingBox ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  #faq .topSection .pagingBox ul li {
+    width: 25%;
+  }
+}
+#faq .section + .section {
+  margin: 100px 0 0;
+}
+#faq .section .secTtl {
+  margin: 0 0 40px;
+  text-align: center;
+}
+#faq .section .secTtl > * {
+  position: relative;
+  display: inline-block;
+  padding: 0 60px;
+  font-size: 24px;
+}
+#faq .section .secTtl > *:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 25px;
+  height: 1px;
+  margin: auto 0;
+  background: #231815;
+}
+#faq .section .secTtl > *:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 25px;
+  height: 1px;
+  margin: auto 0;
+  background: #231815;
+}
+#faq .section .secBox {
+  position: relative;
+  padding: 40px 60px;
+  background: url("../image/faq/faq_tri.png") left top no-repeat #ffffff;
+  background-size: 80px auto;
+}
+#faq .section .secBox + .secBox {
+  margin: 20px 0 0;
+}
+#faq .section .secBox dl dt {
+  padding: 0 40px 0 0;
+  font-size: 24px;
+  cursor: pointer;
+  background: url("../image/faq/accord_plus.png") right center no-repeat;
+  background-size: 25px auto;
+}
+#faq .section .secBox dl dt.active {
+  background: url("../image/faq/accord_minus.png") right center no-repeat;
+  background-size: 25px auto;
+}
+#faq .section .secBox dl dd {
+  display: none;
+  padding: 20px 0 0;
+  line-height: 2;
+}
+#faq .section .secBox dl dd p + p {
+  margin: 20px 0 0;
+}
+
+/*////////////////////////////////////////////////////////////
+  about
+///////////////////////////////////////////////////////////*/
+#about .pageKvContainer {
+  background: url("../image/about/kv.png") center no-repeat;
+  background-size: cover;
+}
+#about .sec01 .secContainer01 {
+  padding: 60px 0;
+}
+#about .sec01 .secContainer01 .photoList .photo {
+  max-width: 500px;
+}
+@media (min-width: 1025px) {
+  #about .sec01 .secContainer01 .photoList {
+    display: flex;
+    justify-content: space-between;
+    margin: -200px 0 0;
+  }
+  #about .sec01 .secContainer01 .photoList .photo {
+    width: 45%;
+  }
+}
+#about .sec01 .secContainer02 {
+  padding: 80px 0;
+  color: #ffffff;
+  background: url("../image/about/sec01_cnt_bg.png") center no-repeat;
+  background-size: cover;
+}
+#about .sec01 .secContainer02 .listPanel .listPanelInner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#about .sec01 .secContainer02 .listPanel .listBox dl dt {
+  margin: 0 0 10px;
+  padding: 0 0 0 20px;
+  font-size: 30px;
+  line-height: 1;
+  border-left: 6px solid #988135;
+}
+#about .sec01 .secContainer02 .listPanel .listBox dl dd .ttl {
+  margin: 0 0 10px;
+  font-size: 30px;
+}
+#about .sec01 .secContainer02 .listPanel .listBox dl dd p {
+  line-height: 2;
+}
+#about .sec01 .secContainer02 .listPanel01 {
+  margin: 0 0 40px;
+  padding: 0 0 40px;
+  border-bottom: 1px solid #545454;
+}
+#about .sec01 .secContainer02 .listPanel01 .listBox + .listBox {
+  margin: 60px 0 0;
+}
+@media (min-width: 1025px) {
+  #about .sec01 .secContainer02 .listPanel01 .listBox02,
+#about .sec01 .secContainer02 .listPanel01 .listBox04 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  #about .sec01 .secContainer02 .listPanel01 .listBox02 dl,
+#about .sec01 .secContainer02 .listPanel01 .listBox04 dl {
+    width: 50%;
+  }
+  #about .sec01 .secContainer02 .listPanel01 .listBox03 {
+    padding: 0 0 0 10%;
+  }
+}
+@media (min-width: 1025px) {
+  #about .sec01 .secContainer02 .listPanel02 .listPanelInner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: -40px auto 0;
+  }
+  #about .sec01 .secContainer02 .listPanel02 .listPanelInner .listBox {
+    width: calc(50% - 40px);
+    margin: 40px 0 0;
+  }
+}
+#about .sec02 {
+  padding: 120px 0;
+  background: url("../image/about/sec02_bg.png") center no-repeat;
+  background-size: cover;
+}
+#about .sec02 .txt p + p {
+  margin: 20px 0 0;
+}
+#about .sec02 .name {
+  margin: 30px 0 0;
+}
+#about .sec02 .name em {
+  margin: 0 0 0 10px;
+  font-size: 24px;
+}
+#about .sec03 {
+  padding: 120px 0;
+}
+#about .sec03 .infoBox {
+  margin: 0 0 60px;
+}
+#about .sec03 .infoBox dl {
+  line-height: 2;
+}
+#about .sec03 .infoBox dl dt {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #988135;
+}
+#about .sec03 .infoBox dl dd {
+  padding: 15px 40px;
+  border-bottom: 1px solid #090909;
+}
+#about .sec03 .infoBox dl dd a {
+  display: inline-block;
+}
+@media (min-width: 1025px) {
+  #about .sec03 .infoBox dl {
+    display: flex;
+    justify-content: space-between;
+  }
+  #about .sec03 .infoBox dl dt {
+    width: 220px;
+  }
+  #about .sec03 .infoBox dl dd {
+    width: calc(100% - 225px);
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+  news
+///////////////////////////////////////////////////////////*/
+#news .pageKvContainer {
+  background: url("../image/news/kv.png") center no-repeat;
+  background-size: cover;
+}
+#news .newsSection {
+  padding: 80px 0 120px;
+}
+#news .newsSection .secWrap01 {
+  max-width: 880px;
+}
+#news .newsSection .catePanel {
+  margin: 0 0 60px;
+}
+#news .newsSection .catePanel ul {
+  max-width: 600px;
+  margin: 0 auto;
+}
+#news .newsSection .catePanel ul li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 135px;
+  color: #ffffff;
+  background: url("../image/news/cate_bg.png") center no-repeat;
+  background-size: cover;
+}
+#news .newsSection .catePanel ul li a span {
+  display: block;
+  width: 80%;
+  text-align: center;
+  background: url("../image/common/btn_arrow_right_white.png") right center no-repeat;
+}
+@media (min-width: 1025px) {
+  #news .newsSection .catePanel ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  #news .newsSection .catePanel ul li {
+    width: 160px;
+  }
+}
+#news .newsSection .listPanel ul li a {
+  display: block;
+  border-bottom: 1px solid #231815;
+}
+#news .newsSection .listPanel ul li .photo {
+  position: relative;
+}
+#news .newsSection .listPanel ul li .title {
+  min-height: 44px;
+  margin: 10px 0;
+  font-size: 15px;
+}
+#news .newsSection .listPanel ul li .more {
+  padding: 5px;
+  font-size: 14px;
+  background: url("../image/news/list_arrow.png") right 5px center no-repeat;
+}
+#news .newsSection .listPanel ul li .more a {
+  display: block;
+}
+@media (min-width: 1025px) {
+  #news .newsSection .listPanel ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -60px 0 0 -30px;
+  }
+  #news .newsSection .listPanel ul li {
+    width: calc(33.3333333333% - 30px);
+    margin: 60px 0 0 30px;
+  }
+  #news .newsSection .listPanel ul .photo {
+    height: 175px;
+  }
+  #news .newsSection .listPanel ul .photo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+#news .newsSection .list__pagination {
+  margin: 60px 0 0;
+}
+#news .newsSection .list__pagination .pagination {
+  display: flex;
+  justify-content: center;
+}
+#news .newsSection .list__pagination .pagination li {
+  margin: 0 10px;
+}
+#news .newsSection .list__pagination .pagination li a,
+#news .newsSection .list__pagination .pagination li span {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  background: #ffffff;
+}
+#news .newsSection .list__pagination .pagination li.current a,
+#news .newsSection .list__pagination .pagination li.current span {
+  color: #ffffff;
+  background: #231815;
+}
+#news .newsSection .list__pagination .pagination li.previous a:before,
+#news .newsSection .list__pagination .pagination li.previous span:before {
+  content: "<";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 14px;
+  height: 22px;
+  margin: auto;
+}
+#news .newsSection .list__pagination .pagination li.next a:before,
+#news .newsSection .list__pagination .pagination li.next span:before {
+  content: ">";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 14px;
+  height: 22px;
+  margin: auto;
+}
+#news .newsSection .detailPanel .title {
+  margin: 0 0 20px;
+  padding: 5px 10px;
+  font-size: 24px;
+  border-bottom: 1px solid #231815;
+}
+#news .newsSection .detailPanel .thumbnail {
+  margin: 0 0 20px;
+}
+#news .newsSection .detailPanel .postContents {
+  line-height: 2.5;
+}
+#news .newsSection .detailPanel .postContents img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+#news .newsSection .btnMore {
+  max-width: 220px;
+  margin: 40px auto 60px;
+}
+#news .newsSection .btnBack {
+  width: 180px;
+  margin: 0 auto;
+}
+#news .newsSection .btnBack a {
+  position: relative;
+  display: block;
+  padding: 7px 10px;
+  text-align: center;
+  border-radius: 30px;
+  border: 1px solid #231815;
+}
+#news .newsSection .btnBack a:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -12px;
+  bottom: 0;
+  width: 25px;
+  height: 1px;
+  margin: auto 0;
+  background: #231815;
+}

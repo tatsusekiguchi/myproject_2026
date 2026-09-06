@@ -1,0 +1,156 @@
+{
+  "key": "group_65f8d5e7f6g4b",
+  "title": "その他ページ - お飲み物・サイドメニュー",
+  "fields": [
+    {
+      "key": "field_65f8d5e7f6g4c",
+      "label": "お飲み物",
+      "name": "other_drinks_list",
+      "aria-label": "",
+      "type": "repeater",
+      "instructions": "お飲み物を追加できます。",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "layout": "table",
+      "pagination": 0,
+      "min": 0,
+      "max": 0,
+      "collapsed": "",
+      "button_label": "お飲み物を追加",
+      "rows_per_page": 20,
+      "sub_fields": [
+        {
+          "key": "field_65f8d5e7f6g4d",
+          "label": "商品名",
+          "name": "product_name",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "お茶 ペットボトル（345ml）",
+          "prepend": "",
+          "append": "",
+          "maxlength": "",
+          "parent_repeater": "field_65f8d5e7f6g4c"
+        },
+        {
+          "key": "field_65f8d5e7f6g4e",
+          "label": "金額",
+          "name": "price",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "１６２円",
+          "prepend": "",
+          "append": "",
+          "maxlength": "",
+          "parent_repeater": "field_65f8d5e7f6g4c"
+        }
+      ]
+    },
+    {
+      "key": "field_65f8d5e7f6g4f",
+      "label": "サイドメニュー",
+      "name": "other_side_menu_list",
+      "aria-label": "",
+      "type": "repeater",
+      "instructions": "サイドメニューを追加できます。",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "layout": "table",
+      "pagination": 0,
+      "min": 0,
+      "max": 0,
+      "collapsed": "",
+      "button_label": "サイドメニューを追加",
+      "rows_per_page": 20,
+      "sub_fields": [
+        {
+          "key": "field_65f8d5e7f6g50",
+          "label": "商品名",
+          "name": "product_name",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "ご飯",
+          "prepend": "",
+          "append": "",
+          "maxlength": "",
+          "parent_repeater": "field_65f8d5e7f6g4f"
+        },
+        {
+          "key": "field_65f8d5e7f6g51",
+          "label": "金額",
+          "name": "price",
+          "aria-label": "",
+          "type": "text",
+          "instructions": "",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "１６２円",
+          "prepend": "",
+          "append": "",
+          "maxlength": "",
+          "parent_repeater": "field_65f8d5e7f6g4f"
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page_template",
+        "operator": "==",
+        "value": "other/index.php"
+      }
+    ]
+  ],
+  "menu_order": 2,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "show_in_rest": 0
+}

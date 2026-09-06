@@ -1,0 +1,241 @@
+@charset "UTF-8";
+@import "./mixin";
+@import "./mod";
+/* CSS Document */
+
+/*===================================================
+	共通CSS（SMP）
+===================================================*/
+
+/* --------------------------------------------------
+	base
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  body {
+    min-width: 0;
+    font-size: $SPfontSize;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  /*改行*/
+  .pcBreak {
+    display: none;
+  }
+  .spBreak {
+    display: block;
+  }
+  /*spのみ表示*/
+  .pcHidden {
+    display: block;
+  }
+  .spHidden {
+    display: none;
+  }
+  #sideBtn {
+    display: none;
+  }
+  .topicPath {
+    display: none;
+  }
+}
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .header {
+    .headLogo {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      width: 120px;
+      a {
+        display: block;
+      }
+    }
+    .hamburger {
+      top: 10px;
+      right: 20px;
+    }
+  }
+}
+
+/* --------------------------------------------------
+	nav
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .navBox {
+    height: 100%;
+    padding: 20px 20px 60px;
+    .navContainer {
+      display: block;
+      width: 100%;
+      .leftPanel {
+        width: 100%;
+        margin-bottom: 40px;
+        .navLogo {
+          width: 150px;
+          margin-bottom: 20px;
+        }
+        .txt {
+          font-size: 12px;
+        }
+      }
+
+      .rightPanel {
+        display: block;
+        width: 100%;
+        .navList01,
+        .navList01 > .ul {
+          display: block;
+        }
+        .navList01 > .ul + .ul {
+          margin-top: 20px;
+        }
+        .navList .li + .li,
+        .subList .li + .li {
+          margin-top: 20px;
+        }
+        a {
+          display: block;
+        }
+        .navList {
+          .em {
+            font-size: 18px;
+            line-height: 1.4;
+          }
+          .span {
+            margin-top: 2px;
+            color: #94bea0;
+            font-size: 12px;
+            line-height: 1.5;
+          }
+        }
+
+        .subList {
+          margin-top: 25px;
+          padding: 0;
+          > .ul {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 12px 20px;
+          }
+          .li + .li {
+            margin-top: 0;
+          }
+          a {
+            font-size: 14px;
+          }
+        }
+
+        .navList02 {
+          margin-top: 25px;
+          padding-top: 20px;
+          border-top: 1px solid #555;
+        }
+      }
+    }
+  }
+}
+
+/* --------------------------------------------------
+	main
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .main {
+  }
+  .pageKvContainer {
+    padding: 0 20px 20px;
+    .pageKvPanel {
+      &:before {
+        left: -20px;
+        width: calc(100% - 20px);
+        height: 70px;
+      }
+      .pageKv {
+        height: 200px;
+      }
+      .kvTitleBox {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 30px;
+        width: 100%;
+        padding: 0 20px;
+        font-size: 24px;
+      }
+    }
+  }
+  .pageSecTtlBox {
+    margin: 0 0 40px;
+    .sub {
+      font-size: 16px;
+    }
+    .pageSecTtl {
+      font-size: 20px;
+    }
+  }
+  .mapBox {
+    padding: 0 0 70%;
+  }
+}
+
+/* --------------------------------------------------
+	footer
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 60px 20px 30px;
+    .secWrap {
+      position: relative;
+    }
+    .logo {
+      max-width: 150px;
+      margin: 0 auto 30px;
+    }
+    .txt {
+      margin: 0 0 40px;
+    }
+    .copy {
+      font-size: 13px;
+    }
+    .pagetop {
+      position: absolute;
+      top: 0;
+      right: 10px;
+      width: 35px;
+    }
+  }
+}
+
+/*   モーダルウインドウ
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .modalBoxWrap {
+    padding: 50px 10px;
+  }
+
+  .modalContent {
+    max-width: 580px;
+    .mdlBody {
+      min-height: 0;
+      padding: 50px 20px;
+      .modalTtl {
+        margin: 0 0 20px;
+        padding: 0 0 10px;
+        font-size: 20px;
+        &:after {
+          width: 80px;
+        }
+      }
+      .secBox {
+        .photo {
+          width: 120px;
+          height: 120px;
+          margin: 0 auto 20px;
+        }
+      }
+    }
+  }
+}

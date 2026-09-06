@@ -1,0 +1,23 @@
+/*
+Theme Name: SALONS HOT SPA Lani
+Author: SALONS HOT SPA Lani
+Author URI: nail-lani.com
+Description: SALONS HOT SPA Lani
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+.wp-caption,
+.wp-caption-text,
+.sticky,
+.gallery-caption,
+.bypostauthor,
+.alignright,
+.alignleft,
+.aligncenter,
+.screen-reader-text{
+
+}

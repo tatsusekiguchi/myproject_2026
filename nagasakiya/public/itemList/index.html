@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<!-- css-->
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/slick.css">
+	<link rel="stylesheet" href="../css/slick-theme.css">
+	<link rel="stylesheet" href="../css/validationEngine.css">
+	<link rel="stylesheet" href="../css/animate.css">
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/layout.css">
+	<link rel="stylesheet" media="screen and (max-width: 1024px)" type="text/css" href="../css/common_sp.css">
+	<link rel="stylesheet" media="screen and (max-width: 1024px)" type="text/css" href="../css/layout_sp.css">
+	<link rel="stylesheet" href="../css/attach.css">
+	<!-- js-->
+	<script src="../js/jquery-1.11.3.min.js"></script>
+	<script src="../js/slick.min.js"></script>
+	<script src="../js/infiniteslide.js"></script>
+	<script src="../js/common.js"></script>
+	<script src="../js/scrollAnimation.js"></script>
+	<script src="../js/validate.js"></script>
+	<script src="../js/validateJa.js"></script>
+	<script src="../js/jpostal.js"></script>
+	<script src="../js/autokana.js"></script>
+	<script src="../js/formContact.js"></script>
+	<!-- title-->
+	<title></title>
+</head>
+
+<body class="page">
+	<!-- ▽header▽-->
+	<header class="header">
+		<div class="headWrap">
+			<div class="logoBox">
+				<div class="logo"><a href=""><img src="../image/common/header_logo.png" alt=""></a></div>
+				<div class="headTtl">
+					<p>津島市を中心とした地域の指定制服・体育衣料・通学用品なら「長崎屋」</p>
+				</div>
+			</div>
+			<div class="navBox">
+				<div class="navList">
+					<ul>
+						<li>
+							<p class="pulldown">高校一覧</p>
+							<ul class="subList">
+								<li><a href="">○○高校</a></li>
+								<li><a href="">xx高校</a></li>
+								<li><a href="">○○高校</a></li>
+								<li><a href="">xx高校</a></li>
+								<li><a href="">○○高校</a></li>
+							</ul>
+						</li>
+						<li><a href="">中学一覧</a></li>
+						<li>
+							<p class="pulldown">その他の商品</p>
+							<ul class="subList">
+								<li><a href="">通学バッグ</a></li>
+								<li><a href="">ニット・セーター</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="navItem">
+					<ul>
+						<li class="search"><a href="">検索</a></li>
+						<li class="mypage"><a href="">マイページ</a></li>
+						<li class="cart"><a href="">カートを見る</a><span>2</span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="hamburger"><span></span><span></span><span></span></div>
+	</header>
+	<!-- △header△-->
+	<!-- ▽メイン▽-->
+	<main class="main" id="itemList">
+		<div class="itemListPageMain">
+			<div class="secWrap01">
+				<div class="secContainer">
+					<div class="catePanel">
+						<h2>カテゴリー</h2>
+						<ul class="side-category-list">
+							<li class="side-category-item" data-category-code="all_items" style="display: none;"><a href="/view/category/all_items">すべての商品</a></li>
+							<li class="side-category-item" data-category-code="ichinomiya-h">
+								<p class="accordion active">一宮高校</p>
+								<ul class="side-category-child-item">
+									<li class="other-item"><a class="child-item" href="/view/category/ichinomiya-h-all">全ての商品</a></li>
+									<li class="mens"><a class="child-item" href="/view/category/ichinomiya-h-m">メンズ</a></li>
+									<li class="ladies"><a class="child-item" href="/view/category/ichinomiya-h-l">レディース</a></li>
+								</ul>
+							</li>
+							<li class="side-category-item" data-category-code="wakamiya-h" style="display: none;">
+								<p class="accordion active">若宮商業高校</p>
+								<ul class="side-category-child-item">
+									<li class="other-item"><a class="child-item" href="/view/category/wakamiya-h-all">全ての商品</a></li>
+									<li class="mens"><a class="child-item" href="/view/category/wakamiya-h-m">メンズ</a></li>
+									<li class="ladies"><a class="child-item" href="/view/category/wakamiya-h-l">レディース</a></li>
+								</ul>
+							</li>
+							<li class="side-category-item" data-category-code="shoin-h" style="display: none;">
+								<p class="accordion active">松蔭高校</p>
+								<ul class="side-category-child-item">
+									<li class="other-item"><a class="child-item" href="/view/category/shoin-h-all">全ての商品</a></li>
+									<li class="mens"><a class="child-item" href="/view/category/shoin-h-m">メンズ</a></li>
+									<li class="ladies"><a class="child-item" href="/view/category/shoin-h-l">レディース</a></li>
+								</ul>
+							</li>
+							<li class="side-category-item" data-category-code="aisai-h" style="display: none;">
+								<p class="accordion active">愛西工科高校</p>
+								<ul class="side-category-child-item">
+									<li class="other-item"><a class="child-item" href="/view/category/aisai-h-all">全ての商品</a></li>
+									<li class="mens"><a class="child-item" href="/view/category/aisai-h-m">メンズ</a></li>
+									<li class="ladies"><a class="child-item" href="/view/category/aisai-h-l">レディース</a></li>
+								</ul>
+							</li>
+							<li class="side-category-item" data-category-code="ichinomiyanishi-h" style="display: none;">
+								<p class="accordion active">一宮西高校</p>
+								<ul class="side-category-child-item">
+									<li class="other-item"><a class="child-item" href="/view/category/ichinomiyanishi-h-all">全ての商品</a></li>
+									<li class="mens"><a class="child-item" href="/view/category/ichinomiyanishi-h-m">メンズ</a></li>
+									<li class="ladies"><a class="child-item" href="/view/category/ichinomiyanishi-h-l">レディース</a></li>
+								</ul>
+							</li>
+							<li class="side-category-item" data-category-code="kikuzato-h" style="display: none;">
+								<p class="accordion active">菊里高校</p>
+								<ul class="side-category-child-item">
+									<li class="other-item"><a class="child-item" href="/view/category/kikuzato-h-all">全ての商品</a></li>
+									<li class="mens"><a class="child-item" href="/view/category/kikuzato-h-m">メンズ</a></li>
+									<li class="ladies"><a class="child-item" href="/view/category/kikuzato-h-l">レディース</a></li>
+								</ul>
+							</li>
+							<li class="side-category-item" data-category-code="gojo-h" style="display: none;">
+								<p class="accordion active">五条高校</p>
+								<ul class="side-category-child-item">
+									<li class="other-item"><a class="child-item" href="/view/category/gojo-h-all">全ての商品</a></li>
+									<li class="mens"><a class="child-item" href="/view/category/gojo-h-m">メンズ</a></li>
+									<li class="ladies"><a class="child-item" href="/view/category/gojo-h-l">レディース</a></li>
+								</ul>
+							</li>
+							<li class="side-category-item" data-category-code="koyo-h" style="display: none;">
+								<p class="accordion active">向陽高校</p>
+								<ul class="side-category-child-item">
+									<li class="other-item"><a class="child-item" href="/view/category/koyo-h-all">全ての商品</a></li>
+									<li class="mens"><a class="child-item" href="/view/category/koyo-h-m">メンズ</a></li>
+									<li class="ladies"><a class="child-item" href="/view/category/koyo-h-l">レディース</a></li>
+								</ul>
+							</li>
+							<li class="side-category-item" data-category-code="saya-h" style="display: none;">
+								<p class="accordion active">佐屋高校</p>
+								<ul class="side-category-child-item">
+									<li class="other-item"><a class="child-item" href="/view/category/saya-h-all">全ての商品</a></li>
+									<li class="mens"><a class="child-item" href="/view/category/saya-h-m">メンズ</a></li>
+									<li class="ladies"><a class="child-item" href="/view/category/saya-h-l">レディース</a></li>
+								</ul>
+							</li>
+							<li class="side-category-item" data-category-code="showa-h" style="display: none;">
+								<p class="accordion active">昭和高校</p>
+								<ul class="side-category-child-item">
+									<li class="other-item"><a class="child-item" href="/view/category/showa-h-all">全ての商品</a></li>
+									<li class="mens"><a class="child-item" href="/view/category/showa-h-m">メンズ</a></li>
+									<li class="ladies"><a class="child-item" href="/view/category/showa-h-l">レディース</a></li>
+								</ul>
+							</li>
+							<li class="side-category-item" data-category-code="zuiryo-h" style="display: none;">
+								<p class="accordion active">瑞陵高校</p>
+								<ul class="side-category-child-item">
+									<li class="other-item"><a class="child-item" href="/view/category/zuiryo-h-all">全ての商品</a></li>
+									<li class="mens"><a class="child-item" href="/view/category/zuiryo-h-m">メンズ</a></li>
+									<li class="ladies"><a class="child-item" href="/view/category/zuiryo-h-l">レディース</a></li>
+								</ul>
+							</li>
+							<li class="side-category-item" data-category-code="seirinkan-h" style="display: none;">
+								<p class="accordion active">清林館高校</p>
+								<ul class="side-category-child-item">
+									<li class="other-item"><a class="child-item" href="/view/category/seirinkan-h-all">全ての商品</a></li>
+									<li class="mens"><a class="child-item" href="/view/category/seirinkan-h-m">メンズ</a></li>
+									<li class="ladies"><a class="child-item" href="/view/category/seirinkan-h-l">レディース</a></li>
+								</ul>
+							</li>
+							<li class="side-category-item" data-category-code="nakamura-h" style="display: none;">
+								<p class="accordion active">中村高校</p>
+								<ul class="side-category-child-item">
+									<li class="other-item"><a class="child-item" href="/view/category/nakamura-h-all">全ての商品</a></li>
+									<li class="mens"><a class="child-item" href="/view/category/nakamura-h-m">メンズ</a></li>
+									<li class="ladies"><a class="child-item" href="/view/category/nakamura-h-l">レディース</a></li>
+								</ul>
+							</li>
+							<li class="side-category-item" data-category-code="tsushima-h" style="display: none;">
+								<p class="accordion active">津島高校</p>
+								<ul class="side-category-child-item">
+									<li class="other-item"><a class="child-item" href="/view/category/tsushima-h-all">全ての商品</a></li>
+									<li class="mens"><a class="child-item" href="/view/category/tsushima-h-m">メンズ</a></li>
+									<li class="ladies"><a class="child-item" href="/view/category/tsushima-h-l">レディース</a></li>
+								</ul>
+							</li>
+							<li class="side-category-item" data-category-code="tsushimahigashi-h" style="display: none;">
+								<p class="accordion active">津島東高校</p>
+								<ul class="side-category-child-item">
+									<li class="other-item"><a class="child-item" href="/view/category/tsushimahigashi-h-all">全ての商品</a></li>
+									<li class="mens"><a class="child-item" href="/view/category/tsushimahigashi-h-m">メンズ</a></li>
+									<li class="ladies"><a class="child-item" href="/view/category/tsushimahigashi-h-l">レディース</a></li>
+								</ul>
+							</li>
+							<li class="side-category-item" data-category-code="tsushimahokusho-h" style="display: none;">
+								<p class="accordion active">津島北翔高校</p>
+								<ul class="side-category-child-item">
+									<li class="other-item"><a class="child-item" href="/view/category/tsushimahokusho-h-all">全ての商品</a></li>
+									<li class="mens"><a class="child-item" href="/view/category/tsushimahokusho-h-m">メンズ</a></li>
+									<li class="ladies"><a class="child-item" href="/view/category/tsushimahokusho-h-l">レディース</a></li>
+								</ul>
+							</li>
+							<li class="side-category-item" data-category-code="tempaku-h" style="display: none;">
+								<p class="accordion active">天白高校</p>
+								<ul class="side-category-child-item">
+									<li class="other-item"><a class="child-item" href="/view/category/tempaku-h-all">全ての商品</a></li>
+									<li class="mens"><a class="child-item" href="/view/category/tempaku-h-m">メンズ</a></li>
+									<li class="ladies"><a class="child-item" href="/view/category/tempaku-h-l">レディース</a></li>
+								</ul>
+							</li>
+							<li class="side-category-item" data-category-code="miwa-h" style="display: none;">
+								<p class="accordion active">美和高校</p>
+								<ul class="side-category-child-item">
+									<li class="other-item"><a class="child-item" href="/view/category/miwa-h-all">全ての商品</a></li>
+									<li class="mens"><a class="child-item" href="/view/category/miwa-h-m">メンズ</a></li>
+									<li class="ladies"><a class="child-item" href="/view/category/miwa-h-l">レディース</a></li>
+								</ul>
+							</li>
+							<li class="side-category-item" data-category-code="nagoyanishi-h" style="display: none;">
+								<p class="accordion active">名古屋西高校</p>
+								<ul class="side-category-child-item">
+									<li class="other-item"><a class="child-item" href="/view/category/nagoyanishi-h-all">全ての商品</a></li>
+									<li class="mens"><a class="child-item" href="/view/category/nagoyanishi-h-m">メンズ</a></li>
+									<li class="ladies"><a class="child-item" href="/view/category/nagoyanishi-h-l">レディース</a></li>
+								</ul>
+							</li>
+							<li class="side-category-item" data-category-code="meiwa-h" style="display: none;">
+								<p class="accordion active">明和高校</p>
+								<ul class="side-category-child-item">
+									<li class="other-item"><a class="child-item" href="/view/category/meiwa-h-all">全ての商品</a></li>
+									<li class="mens"><a class="child-item" href="/view/category/meiwa-h-m">メンズ</a></li>
+									<li class="ladies"><a class="child-item" href="/view/category/meiwa-h-l">レディース</a></li>
+								</ul>
+							</li>
+							<li class="side-category-item" data-category-code="saori-sh" style="display: none;">
+								<p class="accordion active">佐織特別支援学校</p>
+								<ul class="side-category-child-item">
+									<li class="other-item"><a class="child-item" href="/view/category/saori-sh-all">全ての商品</a></li>
+									<li class="mens"><a class="child-item" href="/view/category/saori-sh-m">メンズ</a></li>
+									<li class="ladies"><a class="child-item" href="/view/category/saori-sh-l">レディース</a></li>
+								</ul>
+							</li>
+							<li class="side-category-item" data-category-code="wakamiya-sh" style="display: none;">
+								<p class="accordion active">若宮高等特別支援学校</p>
+								<ul class="side-category-child-item">
+									<li class="other-item"><a class="child-item" href="/view/category/wakamiya-sh-all">全ての商品</a></li>
+									<li class="mens"><a class="child-item" href="/view/category/wakamiya-sh-m">メンズ</a></li>
+									<li class="ladies"><a class="child-item" href="/view/category/wakamiya-sh-l">レディース</a></li>
+								</ul>
+							</li>
+							<li class="side-category-item" data-category-code="other">
+								<p class="accordion active">その他の商品</p>
+								<ul class="side-category-child-item">
+									<li class="other-item"><a class="child-item" href="/view/category/other-bag">通学バッグ</a></li>
+									<li class="other-item"><a class="child-item" href="/view/category/other-nit">ニット・セーター</a></li>
+									<li class="other-item"><a class="child-item" href="/view/category/other-sox">ソックス</a></li>
+									<li class="other-item"><a class="child-item" href="/view/category/other-shut">シャツ</a></li>
+									<li class="other-item"><a class="child-item" href="/view/category/other-coat">コート</a></li>
+									<li class="other-item"><a class="child-item" href="/view/category/other-mizugi">スクール水着</a></li>
+									<li class="other-item"><a class="child-item" href="/view/category/other-item">その他</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<div class="itemPanel">
+						<h2>一宮高校</h2>
+						<div class="listTable">
+							<table>
+								<thead>
+									<tr>
+										<th>商品名</th>
+										<th>価格</th>
+										<th>サイズ</th>
+										<th>数量</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<dl>
+												<dt>商品名</dt>
+												<dd>
+													<p>必須品：ジャケット/A</p>
+												</dd>
+											</dl>
+										</td>
+										<td>
+											<dl>
+												<dt>価格</dt>
+												<dd>
+													<p>26,900円（税込29,590円）</p>
+												</dd>
+											</dl>
+										</td>
+										<td>
+											<dl>
+												<dt>サイズ</dt>
+												<dd>
+													<select>
+														<option value="">S</option>
+														<option value="">M</option>
+														<option value="">L</option>
+													</select>
+												</dd>
+											</dl>
+										</td>
+										<td>
+											<dl>
+												<dt>数量</dt>
+												<dd>
+													<input type="number" min="0" value="0">
+												</dd>
+											</dl>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<dl>
+												<dt>商品名</dt>
+												<dd>
+													<p>必須品：ジャケット/B</p>
+												</dd>
+											</dl>
+										</td>
+										<td>
+											<dl>
+												<dt>価格</dt>
+												<dd>
+													<p>26,900円（税込29,590円）</p>
+												</dd>
+											</dl>
+										</td>
+										<td>
+											<dl>
+												<dt>サイズ</dt>
+												<dd>
+													<select>
+														<option value="">S</option>
+														<option value="">M</option>
+														<option value="">L</option>
+													</select>
+												</dd>
+											</dl>
+										</td>
+										<td>
+											<dl>
+												<dt>数量</dt>
+												<dd>
+													<input type="number" min="0" value="0">
+												</dd>
+											</dl>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="cautionTxt">
+							<div class="txt">
+								<p>当店では、商品のご使用目的・方法・結果等について一切の責任を負いません。<br>ご購入後のご使用は、お客様の自己判断・自己責任にてお願いいたします。<br>注意事項が入ります。注意事項が入ります。注意事項が入ります。注意事項が入ります。注意事項が入ります。注意事項が入ります。注意事項が入ります。注意事項が入ります。注意事項が入ります。注意事項が入ります。注意事項が入ります。</p>
+							</div>
+						</div>
+						<div class="checkItem agreeCheck">
+							<label>
+								<input type="checkbox"><span>同意する</span>
+							</label>
+						</div>
+						<button type="submit" id="submitBtn"><span>購入する</span></button>
+						<div class="bnrShoppingGuide"><a href=""><img src="../image/common/bnr_shopping_guide.png" alt=""></a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<!-- △メイン△-->
+	<!-- ▽footer▽-->
+	<footer class="footer">
+		<div class="footContact">
+			<div class="pageSecTtlBox">
+				<div class="sub">
+					<p>Contact</p>
+				</div>
+				<div class="pageSecTtl">
+					<h2>お問い合わせ</h2>
+				</div>
+			</div>
+			<div class="secContainer">
+				<div class="secPanel">
+					<div class="leftBox">
+						<dl>
+							<dt>電話でお問い合わせ</dt>
+							<dd>
+								<div class="telBox"><a class="futura" href="tel:0120044132">0120-04-4132</a>
+									<p>【受付時間】１０：００～１９：００</p>
+								</div>
+							</dd>
+						</dl>
+					</div>
+					<div class="rightBox">
+						<dl>
+							<dt>WEBからのお問い合わせ</dt>
+							<dd>
+								<div class="mailBox"><a href=""><span class="futura">MAILFORM</span></a></div>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footPanel">
+			<div class="pagetop linkBtn" data-target="main"><a href="#"><img src="../image/common/pagetop.png" alt=""></a></div>
+			<div class="secWrap01">
+				<div class="secBox">
+					<div class="leftBox">
+						<div class="logo"><img src="../image/common/footer_logo.png" alt=""></div>
+						<div class="txt">
+							<p>【本社】<br>〒496-0803 愛知県津島市今市場町２丁目31</p><a href="tel:0567257060">TEL:0567-25-7060</a>
+						</div>
+					</div>
+					<div class="rightBox">
+						<div class="footBox">
+							<div class="footNav">
+								<ul>
+									<li><a href="">ショッピングガイド</a></li>
+									<li><a href="">お支払い方法について</a></li>
+									<li><a href="">配送方法・送料について</a></li>
+								</ul>
+								<ul>
+									<li><a href="">プライバシーポリシー</a></li>
+									<li><a href="">特定商取引法に基づく表記</a></li>
+									<li><a href="">お問い合わせ</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="footBox">
+							<div class="footNav">
+								<ul>
+									<li><a href="">ログイン</a></li>
+									<li><a href="">新規会員登録</a></li>
+								</ul>
+							</div>
+							<div class="bnrOhp"><a href="#" target="_blank" rel="noopener"><img src="../image/common/footer_bnr_ohp.png" alt=""></a></div>
+						</div>
+					</div>
+				</div>
+				<div class="copy">
+					<p>&copy;2025 学校制服 長崎屋.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- △footer△-->
+</body>
+
+</html>

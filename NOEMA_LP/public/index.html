@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<!-- css-->
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/slick-theme.css">
+	<link rel="stylesheet" href="css/validationEngine.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" media="screen and (max-width: 1139px)" type="text/css" href="css/common_sp.css">
+	<link rel="stylesheet" media="screen and (max-width: 1139px)" type="text/css" href="css/layout_sp.css">
+	<link rel="stylesheet" href="css/attach.css">
+	<!-- js-->
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/infiniteslide.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/scrollAnimation.js"></script>
+	<script src="js/gsapAnimation.js"></script>
+	<script src="js/validate.js"></script>
+	<script src="js/validateJa.js"></script>
+	<script src="js/jpostal.js"></script>
+	<script src="js/autokana.js"></script>
+	<script src="js/formContact.js"></script>
+	<script>
+		(function(d) {
+			var config = {
+					kitId: 'zmp5pxk',
+					scriptTimeout: 3000,
+					async: true
+				},
+				h = d.documentElement,
+				t = setTimeout(function() {
+					h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+				}, config.scriptTimeout),
+				tk = d.createElement("script"),
+				f = false,
+				s = d.getElementsByTagName("script")[0],
+				a;
+			h.className += " wf-loading";
+			tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+			tk.async = true;
+			tk.onload = tk.onreadystatechange = function() {
+				a = this.readyState;
+				if (f || a && a != "complete" && a != "loaded") return;
+				f = true;
+				clearTimeout(t);
+				try {
+					Typekit.load(config)
+				} catch (e) {}
+			};
+			s.parentNode.insertBefore(tk, s)
+		})(document);
+	</script>
+	<script src="js/kvSlideshow.js"></script>
+	<!-- title-->
+	<title></title>
+</head>
+
+<body>
+	<!-- ▽header▽-->
+	<header class="header">
+		<div class="logo"><a href=""><img class="logoWhite" src="image/common/header_logo_white.png" alt=""><img class="logoBlack" src="image/common/header_logo_black.png" alt=""></a></div>
+		<div class="headItemBox">
+			<div class="headItem">
+				<ul>
+					<li><a href="">お問い合わせ</a></li>
+					<li><a href="">応募する</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="hamburgerBox">
+			<div class="hamburger"><span class="top"></span>
+				<p>MENU</p><span class="bottom"></span>
+			</div>
+		</div>
+		<div class="navBox">
+			<div class="navPanel">
+				<div class="navList">
+					<ul>
+						<li><a href="#">TOP</a></li>
+						<li><a href="#section__concept">CONCEPT</a></li>
+						<li><a href="#section__news">WHAT’S NEW</a></li>
+						<li><a href="#section__features">FEATURES</a></li>
+						<li class="line"><a href="#section__require">WHO WE’RE LOOKING FOR</a></li>
+						<li><a href="#section__requirements">REQUIREMENTS</a></li>
+						<li><a href="#section__info">SALON LIST</a></li>
+					</ul>
+				</div>
+				<div class="navMessage">
+					<p>We shine a light on each individual’s unique<br>sensibility and become a driving force that leads<br>them toward their next self.</p>
+				</div>
+				<div class="snsBox">
+					<ul>
+						<li><a href="https://www.instagram.com/noema.hair/" target="_blank" rel="noopener"><img src="image/common/icon_instagram.png" alt=""></a></li>
+						<li><a href="#" target="_blank" rel="noopener"><img src="image/common/icon_line.png" alt=""></a></li>
+						<li><a href="#" target="_blank" rel="noopener"><img src="image/common/icon_twitter.png" alt=""></a></li>
+					</ul>
+					<div class="navLogo"><img src="image/common/nav_logo.png" alt=""></div>
+				</div>
+				<div class="photo"><img src="image/common/nav_photo.png" alt=""></div>
+			</div>
+		</div>
+		<div class="fixedSpBottomNav">
+			<ul>
+				<li><a href="">お問い合わせ</a></li>
+				<li><a href="">応募する</a></li>
+			</ul>
+		</div>
+	</header>
+	<!-- △header△-->
+	<!-- ▽メイン▽-->
+	<main id="top">
+		<div class="sectionBackContainer">
+			<div class="topKvContainer bgCnt01">
+				<div class="kvPanelList" id="kvPanelList">
+					<div class="leftPanel">
+						<ul>
+							<li><img src="image/top/top_kv_left_01_pc.jpg" alt=""></li>
+							<li><img src="image/top/top_kv_left_02_pc.jpg" alt=""></li>
+							<li><img src="image/top/top_kv_left_03_pc.jpg" alt=""></li>
+						</ul>
+					</div>
+					<div class="canterPanel">
+						<div class="topBox">
+							<ul>
+								<li><img class="switch" src="image/top/top_kv_top_01_pc.jpg" alt=""></li>
+								<li><img class="switch" src="image/top/top_kv_top_02_pc.jpg" alt=""></li>
+								<li><img class="switch" src="image/top/top_kv_top_03_pc.jpg" alt=""></li>
+							</ul>
+						</div>
+						<div class="bottomBox">
+							<ul>
+								<li><img class="switch" src="image/top/top_kv_bottom_01_pc.jpg" alt=""></li>
+								<li><img class="switch" src="image/top/top_kv_bottom_02_pc.jpg" alt=""></li>
+								<li><img class="switch" src="image/top/top_kv_bottom_03_pc.jpg" alt=""></li>
+							</ul>
+						</div>
+					</div>
+					<div class="rightPanel">
+						<ul>
+							<li><img src="image/top/top_kv_right_01_pc.jpg" alt=""></li>
+							<li><img src="image/top/top_kv_right_02_pc.jpg" alt=""></li>
+							<li><img src="image/top/top_kv_right_03_pc.jpg" alt=""></li>
+						</ul>
+						<div class="enTxt"><img src="image/top/top_kv_txt.png" alt=""></div>
+					</div>
+				</div>
+			</div>
+			<div class="bgCnt02"><img class="switch" src="image/top/sec_concept_bg_pc.png" alt=""></div>
+			<div class="bgCnt03"></div>
+			<div class="bgCnt04"><img class="switch" src="image/top/sec_features_bg_pc.png" alt=""></div>
+			<div class="bgCnt05"></div>
+			<div class="bgCnt06"></div>
+		</div>
+		<div class="topInnerContainer">
+			<div class="titlePanel">
+				<div class="titleBox">
+					<h1 class="logo"><img src="image/top/top_kv_logo.png" alt="NOEMA"></h1>
+					<div class="ttl">
+						<p>業務委託サロンオープンにつき<em>スタイリスト＆アイリスト募集中</em></p>
+					</div>
+				</div>
+			</div>
+			<div class="infoSlidePanel">
+				<div class="infoSlideBox">
+					<div class="infoSlide"><img src="image/top/top_info_slide.png" alt=""></div>
+				</div>
+			</div>
+		</div>
+		<div id="section__concept">
+			<div class="secContainer">
+				<div class="secPanel">
+					<div class="secTtlBox">
+						<div class="sub">
+							<p>CONCEPT</p>
+						</div>
+						<div class="secTtl">
+							<h2>コンセプト</h2>
+						</div>
+					</div>
+					<div class="txtBox01">
+						<div class="txt">
+							<p>人が本来もつ "ときめき、美意識" などの<br class="spBreak">内なる<em>感性</em>に寄り添い、<br class="spBreak">自分を更新し続ける。<br>高水準の労働環境で雑音を無くし<br class="spBreak">美容師の<em>本質</em>に向き合い<br>なりたい自分とありたい姿を叶える。<br>一人ひとりの感性に光を当て<br class="spBreak"> "次の自分" へ向かう原動力になる。</p>
+						</div>
+					</div>
+					<div class="txtBox02">
+						<dl>
+							<dt>Sensitivity and Essence</dt>
+							<dd>We honor the inner sensibility each person naturally holds — their sense of excitement, beauty, and intuition — and support them in continually evolving themselves. By creating a highly supportive working environment free from unnecessary distractions, we allow hairstylists to focus on the true essence of their craft, and to realize both who they want to become and how they want to live. We shine a light on each individual's unique sensibility and become a driving force that leads them toward their next self.</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="sectionAnimation" id="section__news">
+			<div class="secContainer">
+				<div class="secTtlBox">
+					<div class="sub">
+						<p>WHAT’S NEW</p>
+					</div>
+					<div class="secTtl">
+						<h2>新着情報</h2>
+					</div>
+				</div>
+				<div class="secPanel">
+					<div class="mainBox">
+						<div class="mainItem"><a href="">
+								<div class="photoBox">
+									<div class="photo"><img src="image/top/sec_news_photo.jpg" alt=""></div>
+									<div class="circle"><img class="switch" src="image/top/sec_news_circle_pc.png" alt=""></div>
+								</div>
+								<div class="txtBox">
+									<dl>
+										<dt>2026.04.11</dt>
+										<dd>サイトをオープンしました</dd>
+									</dl>
+									<div class="read">
+										<p>READ</p>
+									</div>
+								</div>
+							</a></div>
+					</div>
+					<div class="subBox">
+						<div class="listBox">
+							<div class="subItem"><a href="">
+									<div class="photo"><img src="image/top/sec_news_photo.jpg" alt=""></div>
+									<div class="txtBox">
+										<dl>
+											<dt>2026.04.11</dt>
+											<dd>会社説明会のご予約を開始しました</dd>
+										</dl>
+										<div class="read">
+											<p>READ</p>
+										</div>
+									</div>
+								</a></div>
+							<div class="subItem"><a href="">
+									<div class="photo"><img src="image/top/sec_news_photo.jpg" alt=""></div>
+									<div class="txtBox">
+										<dl>
+											<dt>2026.04.11</dt>
+											<dd>サイトをオープンしました</dd>
+										</dl>
+										<div class="read">
+											<p>READ</p>
+										</div>
+									</div>
+								</a></div>
+							<div class="subItem"><a href="">
+									<div class="photo"><img src="image/top/sec_news_photo.jpg" alt=""></div>
+									<div class="txtBox">
+										<dl>
+											<dt>2026.04.11</dt>
+											<dd>サイトをオープンしました</dd>
+										</dl>
+										<div class="read">
+											<p>READ</p>
+										</div>
+									</div>
+								</a></div>
+							<div class="subItem"><a href="">
+									<div class="photo"><img src="image/top/sec_news_photo.jpg" alt=""></div>
+									<div class="txtBox">
+										<dl>
+											<dt>2026.04.11</dt>
+											<dd>サイトをオープンしました</dd>
+										</dl>
+										<div class="read">
+											<p>READ</p>
+										</div>
+									</div>
+								</a></div>
+							<div class="subItem"><a href="">
+									<div class="photo"><img src="image/top/sec_news_photo.jpg" alt=""></div>
+									<div class="txtBox">
+										<dl>
+											<dt>2026.04.11</dt>
+											<dd>サイトをオープンしました</dd>
+										</dl>
+										<div class="read">
+											<p>READ</p>
+										</div>
+									</div>
+								</a></div>
+							<div class="subItem"><a href="">
+									<div class="photo"><img src="image/top/sec_news_photo.jpg" alt=""></div>
+									<div class="txtBox">
+										<dl>
+											<dt>2026.04.11</dt>
+											<dd>サイトをオープンしました</dd>
+										</dl>
+										<div class="read">
+											<p>READ</p>
+										</div>
+									</div>
+								</a></div>
+						</div>
+					</div>
+				</div>
+				<div class="pagingBox">
+					<div class="pagingList">
+						<div class="prev"><img src="image/top/sec_news_prev.png" alt=""></div>
+						<div class="counter">
+							<p><em>01</em><span> ／</span><em>05</em></p>
+						</div>
+						<div class="next"><img src="image/top/sec_news_next.png" alt=""></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="section__features">
+			<div class="secTtlBox">
+				<div class="sub">
+					<p>FEATURES</p>
+				</div>
+				<div class="secTtl">
+					<h2>サロンの特徴</h2>
+				</div>
+			</div>
+			<div class="featuresBoardContainer">
+				<div class="featuresBoardPanel">
+					<div class="panelInner">
+						<div class="leftBox">
+							<div class="photo"><img src="image/top/sec_features_left_photo_01.jpg" alt=""></div>
+						</div>
+						<div class="rightBox">
+							<div class="secBox01">
+								<div class="photo"><img class="switch" src="image/top/sec_features_right_photo_01_pc.jpg" alt=""></div>
+								<div class="txtBox">
+									<div class="title">
+										<h3>MARKETING<br>SUPPORT</h3>
+									</div>
+									<div class="num">
+										<p>#01</p>
+									</div>
+								</div>
+							</div>
+							<div class="secBox02">
+								<dl>
+									<dt>本部が集客</dt>
+									<dd>個人任せではなく、本部が集客をサポートする体制があるため、入客の不安を抱えすぎずにスタートできます。自分でゼロからお客様を集める負担を減らしながら、目の前のお客様への提案や技術にしっかり向き合える環境です。</dd>
+								</dl>
+								<div class="numTxt">
+									<p>FEATURES 01</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="featuresBoardPanel">
+					<div class="panelInner">
+						<div class="leftBox">
+							<div class="photo"><img src="image/top/sec_features_left_photo_02.jpg" alt=""></div>
+						</div>
+						<div class="rightBox">
+							<div class="secBox01">
+								<div class="photo"><img class="switch" src="image/top/sec_features_right_photo_02_pc.jpg" alt=""></div>
+								<div class="txtBox">
+									<div class="title">
+										<h3>EDUCATION</h3>
+									</div>
+									<div class="num">
+										<p>#02</p>
+									</div>
+								</div>
+							</div>
+							<div class="secBox02">
+								<dl>
+									<dt>教育制度あり</dt>
+									<dd>業務委託でも“入って終わり”ではなく、成長し続けられる環境を整えています。技術・提案力・感性まで高めながら、今よりもっと売れる美容師、選ばれる美容師を目指せます。自由な働き方の中でも、妥協せずスキルアップしたい人に合った環境です。</dd>
+								</dl>
+								<div class="numTxt">
+									<p>FEATURES 02</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="featuresBoardPanel">
+					<div class="panelInner">
+						<div class="leftBox">
+							<div class="photo"><img src="image/top/sec_features_left_photo_03.jpg" alt=""></div>
+						</div>
+						<div class="rightBox">
+							<div class="secBox01">
+								<div class="photo"><img class="switch" src="image/top/sec_features_right_photo_03_pc.jpg" alt=""></div>
+								<div class="txtBox">
+									<div class="title">
+										<h3>ACCESS</h3>
+									</div>
+									<div class="num">
+										<p>#03</p>
+									</div>
+								</div>
+							</div>
+							<div class="secBox02">
+								<dl>
+									<dt>駅近サロン</dt>
+									<dd>駅から通いやすい立地は、毎日の働きやすさはもちろん、お客様にとっても通い続けやすい大きな魅力です。集客面でも有利な環境の中で、自分の働き方と売上の両方を安定して築いていくことができます。通いやすさは、お客様に選ばれ続ける理由のひとつにもなります。</dd>
+								</dl>
+								<div class="numTxt">
+									<p>FEATURES 03</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="featuresBoardPanel">
+					<div class="panelInner">
+						<div class="leftBox">
+							<div class="photo"><img src="image/top/sec_features_left_photo_04.jpg" alt=""></div>
+						</div>
+						<div class="rightBox">
+							<div class="secBox01">
+								<div class="photo"><img class="switch" src="image/top/sec_features_right_photo_04_pc.jpg" alt=""></div>
+								<div class="txtBox">
+									<div class="title">
+										<h3>HIGHLY<br>DESIGNED</h3>
+									</div>
+									<div class="num">
+										<p>#04</p>
+									</div>
+								</div>
+							</div>
+							<div class="secBox02">
+								<dl>
+									<dt>デザイン性が高い</dt>
+									<dd>トレンドを取り入れた感度の高いデザインを発信しながら、ただ流行を追うだけではない“似合う”を大切にしています。美容師としての技術はもちろん、センスや空気感まで磨ける環境だからこそ、自分自身の価値も高めていけます。</dd>
+								</dl>
+								<div class="numTxt">
+									<p>FEATURES 04</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="sectionAnimation" id="section__require">
+			<div class="secTtlBox">
+				<div class="sub">
+					<p>WHO WE’RE LOOKING FOR</p>
+				</div>
+				<div class="secTtl">
+					<h2>NOEMAが求めるヒト</h2>
+				</div>
+			</div>
+			<div class="secContainer">
+				<div class="imgRequire"><img class="switch" src="image/top/sec_require_image_pc.png" alt=""></div>
+				<div class="textRequire"><img class="switch" src="image/top/sec_require_text_pc.png" alt=""></div>
+			</div>
+			<div class="entryPanel"><a href="">
+					<div class="entryBox">
+						<div class="entryTtlBox">
+							<div class="sub">
+								<p>ENTRY</p>
+							</div>
+							<div class="secTtl">
+								<h2>応募する</h2>
+							</div>
+						</div>
+						<div class="txt">
+							<p>本質と向き合いながら、自分らしく働く。<br>NOEMAは、技術・感性・人とのつながりを大切にしながら、新しい一歩を踏み出したい方をお待ちしています。</p>
+						</div>
+					</div>
+				</a></div>
+		</div>
+		<div class="sectionAnimation" id="section__requirements">
+			<div class="secTtlBox">
+				<div class="sub">
+					<p>REQUIREMENTS</p>
+				</div>
+				<div class="secTtl">
+					<h2>募集要項</h2>
+				</div>
+			</div>
+			<div class="infoBox">
+				<dl>
+					<dt>雇用形態</dt>
+					<dd>業務委託</dd>
+				</dl>
+				<dl>
+					<dt>営業時間</dt>
+					<dd>10:00〜22:00</dd>
+				</dl>
+				<dl>
+					<dt>給与</dt>
+					<dd>
+						<p>歩合給：45％〜65％ <span>／</span> <br class="spBreak">フリー売上：40％</p>
+						<p>[指名売上歩合]<br>70万円未満：45％<br>70万円以上：50％<br>120万円以上：55％<br>170万円以上：60％<br>220万円以上：65％</p>
+						<aside>
+							<p>※インボイス未加入の場合は歩合率より-5％（半年間の猶予あり）</p>
+						</aside>
+					</dd>
+				</dl>
+				<dl>
+					<dt>指名料</dt>
+					<dd>売上80万円以上で指名料＋500円〜 ／ 指名料100％バック</dd>
+				</dl>
+				<dl>
+					<dt>店販売上歩合</dt>
+					<dd>商品売上の10％支給</dd>
+				</dl>
+				<dl>
+					<dt>材料費<span>・</span><br class="spBreak">負担について</dt>
+					<dd>材料費：会社負担 ／ 消費税：個人負担 ／ 徴収なし</dd>
+				</dl>
+				<dl>
+					<dt>休日</dt>
+					<dd>定休日なし</dd>
+				</dl>
+				<dl>
+					<dt>教育制度</dt>
+					<dd>自社アカデミーによる技術教育制度あり</dd>
+				</dl>
+				<dl>
+					<dt>運営会社</dt>
+					<dd>エピクス 株式会社｜〒491-0862 愛知県一宮市緑4-10-25</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="sectionAnimation" id="section__info">
+			<div class="secContainer">
+				<div class="secTtlBox">
+					<div class="sub">
+						<p>SALON INFO</p>
+					</div>
+					<div class="secTtl">
+						<h2>サロン情報</h2>
+					</div>
+				</div>
+				<div class="secPanel">
+					<div class="secBox">
+						<div class="photoBox">
+							<div class="photo"><img src="image/top/noema_gifu_logo.jpg" alt=""></div>
+						</div>
+						<div class="txtBox">
+							<dl>
+								<dt>NOEMA GIFU</dt>
+								<dd>
+									<div class="info01">
+										<p>岐阜県岐阜市神田町6-11-1 協和第二ビル 1F</p><a href="tel:0000000000">TEL 000-000-0000</a>
+									</div>
+									<div class="info02">
+										<p>1F KYOWA DAINI BUILDING, 6-11-1<br>KANDA-MACHI, GIFU-SHI, GIFU</p>
+									</div>
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="secBox">
+						<div class="photoBox">
+							<div class="photo"><img src="image/top/noema_ichinomiya01.jpg" alt=""></div>
+							<div class="photo"><img src="image/top/noema_ichinomiya02.jpg" alt=""></div>
+							<div class="photo"><img src="image/top/noema_ichinomiya03.jpg" alt=""></div>
+							<div class="photo"><img src="image/top/noema_ichinomiya04.jpg" alt=""></div>
+							<div class="photo"><img src="image/top/noema_ichinomiya05.jpg" alt=""></div>
+							<div class="photo"><img src="image/top/noema_ichinomiya06.jpg" alt=""></div>
+							<div class="photo"><img src="image/top/noema_ichinomiya07.jpg" alt=""></div>
+							<div class="photo"><img src="image/top/noema_ichinomiya08.jpg" alt=""></div>
+						</div>
+						<div class="txtBox">
+							<dl>
+								<dt>NOEMA ICHINOMIYA</dt>
+								<dd>
+									<div class="info01">
+										<p>愛知県一宮市本町2丁目3-15</p><a href="tel:0000000000">TEL 000-000-0000</a>
+									</div>
+									<div class="info02">
+										<p>2-3-15 HONMACHI, ICHINOMIYA-SHI, AICHI</p>
+									</div>
+								</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="section__comment">
+			<div class="commentMainContainer sectionAnimation">
+				<div class="commentPanel">
+					<div class="pHead">
+						<div class="secTtlBox">
+							<div class="sub">
+								<p>COMMENT</p>
+							</div>
+							<div class="secTtl">
+								<h2>コメント</h2>
+							</div>
+						</div>
+					</div>
+					<div class="pBody">
+						<div class="secBox">
+							<div class="photo"><img src="image/top/sec_comment_photo.jpg" alt=""></div>
+							<div class="txtBox">
+								<dl>
+									<dt><span>PRODUCER</span><em>鈴木 拓</em></dt>
+									<dd>ここには拓さんのコメントが入ります。ここには拓さんのコメントが入ります。ここには拓さんのコメントが入ります。ここには拓さんのコメントが入ります。ここには拓さんのコメントが入ります。ここには拓さんのコメントが入ります。ここには拓さんのコメントが入ります。ここには拓さんのコメントが入ります。ここには拓さんのコメントが入ります。ここには拓さんのコメントが入ります。ここには拓さんのコメントが入ります。</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="commentSlidePanel">
+				<div class="commentSlideBox">
+					<ul>
+						<li><img src="image/top/sec_comment_slide_01.jpg" alt=""></li>
+						<li><img src="image/top/sec_comment_slide_02.jpg" alt=""></li>
+						<li><img src="image/top/sec_comment_slide_03.jpg" alt=""></li>
+						<li><img src="image/top/sec_comment_slide_04.jpg" alt=""></li>
+						<li><img src="image/top/sec_comment_slide_05.jpg" alt=""></li>
+						<li><img src="image/top/sec_comment_slide_06.jpg" alt=""></li>
+					</ul>
+				</div>
+			</div>
+			<div class="txtPanel">
+				<dl>
+					<dt>Sensitivity and Essence</dt>
+					<dd>We shine a light on each individual’s unique sensibility and<br>become a driving force that leads them toward their next self.</dd>
+				</dl>
+			</div>
+			<div class="entryPanel sectionAnimation"><a href="">
+					<div class="entryBox">
+						<div class="entryTtlBox">
+							<div class="sub">
+								<p>ENTRY</p>
+							</div>
+							<div class="secTtl">
+								<h2>応募する</h2>
+							</div>
+						</div>
+						<div class="txt">
+							<p>本質と向き合いながら、自分らしく働く。<br>NOEMAは、技術・感性・人とのつながりを大切にしながら、新しい一歩を踏み出したい方をお待ちしています。</p>
+						</div>
+					</div>
+				</a></div>
+		</div>
+	</main>
+	<!-- △メイン△-->
+	<!-- ▽footer▽-->
+	<footer class="footer">
+		<div class="logo"><img src="image/common/footer_logo.png" alt=""></div>
+		<div class="footBox01">
+			<div class="photo"><img src="image/common/footer_photo.png" alt=""></div>
+			<div class="footNav">
+				<ul>
+					<li><a href="#">TOP</a></li>
+					<li><a href="#section__concept">CONCEPT</a></li>
+					<li><a href="#section__news">WHAT’S NEW</a></li>
+					<li><a href="#section__features">FEATURES</a></li>
+					<li class="line"><a href="#section__require">WHO WE’RE LOOKING FOR</a></li>
+					<li><a href="#section__requirements">REQUIREMENTS</a></li>
+					<li><a href="#section__info">SALON LIST</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="footBox02">
+			<dl>
+				<dt>Sensitivity and Essence</dt>
+				<dd>We shine a light on each individual’s unique sensibility and<br>become a driving force that leads them toward their next self.</dd>
+			</dl>
+			<div class="snsBox">
+				<ul>
+					<li><a href="https://www.instagram.com/noema.hair/" target="_blank" rel="noopener"><img src="image/common/icon_instagram.png" alt=""></a></li>
+					<li><a href="#" target="_blank" rel="noopener"><img src="image/common/icon_line.png" alt=""></a></li>
+					<li><a href="#" target="_blank" rel="noopener"><img src="image/common/icon_twitter.png" alt=""></a></li>
+				</ul>
+			</div>
+			<div class="bottomBox">
+				<div class="copy">
+					<p>Copyright &copy; NOEMA Ltd all rights reserved.</p>
+				</div>
+				<div class="policy"><a href="">プライバシーポリシー</a></div>
+			</div>
+		</div>
+	</footer>
+	<!-- △footer△-->
+</body>
+
+</html>

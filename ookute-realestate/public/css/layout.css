@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+	画面用CSS（PC/SMP）
+===================================================*/
+/*////////////////////////////////////////////////////////////
+	propertylist
+///////////////////////////////////////////////////////////*/
+.propertylistMain.next .title_box::before {
+  background: url("../image/company/hd_bg.jpg") no-repeat center;
+  background-size: cover;
+}
+.propertylistMain .propertylist_container {
+  padding: 0 0 80px;
+}
+.propertylistMain .contents_box {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 50px 20px 100px;
+  background: #f4f4f4;
+}

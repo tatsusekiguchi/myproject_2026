@@ -1,0 +1,202 @@
+// ▽メイン▽
+.itemMain.main
+    .pageTitlePanel
+        .pageTitle
+            h1 ITEM
+    .itemSection
+        .secWrap01
+            .searchPanel
+                <form class="webgene-search-form" method="get" action="testproperty">
+                    <div id="" class=" webgene-search-form-block" rel="カテゴリ">
+                    <div class="search-title-wrapper">
+                    <p class="search-title">カテゴリ</p>
+                    </div>
+                    <div class="search-area-wrapper">
+                    <div class="search-subtitle-wrapper">
+                    </div>
+                    <div class="search-contents-wrapper">
+                    <label><input type="checkbox" class="property_facility_cd" name="s1l0[]" value="3">フォーマルバッグ</label>
+                    <label><input type="checkbox" class="property_facility_cd" name="s1l0[]" value="4">お受験/学校行事</label>
+                    <label><input type="checkbox" class="property_facility_cd" name="s1l0[]" value="5">パーティーバッグ</label>
+                    <label><input type="checkbox" class="property_facility_cd" name="s1l0[]" value="6">メンズバッグ</label>
+                    <label><input type="checkbox" class="property_facility_cd" name="s1l0[]" value="2">★カテゴリテスト02</label>
+                    <label><input type="checkbox" class="property_facility_cd" name="s1l0[]" value="1">★カテゴリテスト01</label>
+                    </div>
+                    </div>
+                    </div>
+                    <div id="" class=" webgene-search-form-block" rel="タグ">
+                    <div class="search-title-wrapper">
+                    <p class="search-title">タグ</p>
+                    </div>
+                    <div class="search-area-wrapper">
+                    <div class="search-subtitle-wrapper">
+                    </div>
+                    <div class="search-contents-wrapper">
+                    <label><input type="checkbox" class="property_facility_cd2" name="s2l0[]" value="6">SALE</label>
+                    <label><input type="checkbox" class="property_facility_cd2" name="s2l0[]" value="3">おすすめ</label>
+                    <label><input type="checkbox" class="property_facility_cd2" name="s2l0[]" value="5">ベストセラー</label>
+                    <label><input type="checkbox" class="property_facility_cd2" name="s2l0[]" value="4">サブバッグ</label>
+                    <label><input type="checkbox" class="property_facility_cd2" name="s2l0[]" value="2">★タグテスト02</label>
+                    <label><input type="checkbox" class="property_facility_cd2" name="s2l0[]" value="1">★タグテスト01</label>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="button_area">
+                        //- <div class="btnMoreWhite"><a href="itemsearch">
+                        //-     <div>
+                        //-         <p>リセット</p>
+                        //-     </div>
+                        //- </a></div>
+                        <input type="button" class="search-reset" value="リセット">
+                        <input type="submit" class="search-submit" value="絞り込む">
+                    </div>
+                    <input type="hidden" name="wgsearch" value="property">
+                </form>
+            .resultPanel
+                section.webgene-blog
+                    .webgene-header
+                        h2 商品一覧
+                    .webgene-item
+                        a(href="")
+                            .photo
+                                img(src="https://sit-7938494.sibloo.com/system_panel/uploads/images/item_sample.png", alt="")
+                            .txtBox
+                                .cate
+                                    p 人気商品
+                                .title
+                                    p 商品名が入ります。【おすすめ】
+                                .price
+                                    em ￥3,580
+                                    span （税込）
+                    .webgene-item
+                        a(href="")
+                            .photo
+                                img(src="https://sit-7938494.sibloo.com/system_panel/uploads/images/item_sample.png", alt="")
+                            .txtBox
+                                .cate
+                                    p 人気商品
+                                .title
+                                    p 商品名が入ります。【ベストセラー】
+                                .price
+                                    em ￥3,580
+                                    span （税込）
+                    .webgene-item
+                        a(href="")
+                            .photo
+                                img(src="https://sit-7938494.sibloo.com/system_panel/uploads/images/item_sample.png", alt="")
+                            .txtBox
+                                .cate
+                                    p 人気商品
+                                .title
+                                    p 商品名が入ります。
+                                .price
+                                    em ￥3,580
+                                    span （税込）
+                    .webgene-item
+                        a(href="")
+                            .photo
+                                img(src="https://sit-7938494.sibloo.com/system_panel/uploads/images/item_sample.png", alt="")
+                            .txtBox
+                                .cate
+                                    p 人気商品
+                                .title
+                                    p 商品名が入ります。
+                                .price
+                                    em ￥3,580
+                                    span （税込）
+                    .webgene-item
+                        a(href="")
+                            .photo
+                                img(src="https://sit-7938494.sibloo.com/system_panel/uploads/images/item_sample.png", alt="")
+                            .txtBox
+                                .cate
+                                    p 人気商品
+                                .title
+                                    p 商品名が入ります。
+                                .price
+                                    em ￥3,580
+                                    span （税込）
+                    .webgene-pagination
+                        ul
+                            li.prev
+                                a(href="/bloglist?wg%5Bwgc-1586149173114_page%5D=2") 前へ
+                            li.number
+                                a(href="/bloglist?wg%5Bwgc-1586149173114_page%5D=1") 1
+                            li.number
+                                a(href="/bloglist?wg%5Bwgc-1586149173114_page%5D=2") 2
+                            li.number.selected
+                                a(href="/bloglist?wg%5Bwgc-1586149173114_page%5D=3") 3
+                            li.next
+                                a(href="/bloglist?wg%5Bwgc-1586149173114_page%5D=2") 次へ
+    .cateItemSec
+        .secWrap01
+            .pageSecTtlBox
+                .sub
+                    p ITEM
+                .pageSecTtl
+                    h2 カテゴリから選ぶ
+            .listBox
+                .ul
+                    .li
+                        a(href="itemlist?s1l0%5B%5D=3&wgsearch=property")
+                            .secBox
+                                .photo
+                                    img(src="https://sit-7938494.sibloo.com/system_panel/uploads/images/top_sec01_img_01.png" alt="")
+                                .dl
+                                    .dt
+                                        p フォーマルバッグ
+                                    .dd
+                                        p お通夜・お葬式・法事・弔事
+                    .li
+                        a(href="itemlist?s1l0%5B%5D=4&wgsearch=property")
+                            .secBox
+                                .photo
+                                    img(src="https://sit-7938494.sibloo.com/system_panel/uploads/images/top_sec01_img_02.png" alt="")
+                                .dl
+                                    .dt
+                                        p お受験 / 学校行事
+                                    .dd
+                                        p お受験・入学式・卒業式・<br>授業参観
+                    .li
+                        a(href="itemlist?s1l0%5B%5D=5&wgsearch=property")
+                            .secBox
+                                .photo
+                                    img(src="https://sit-7938494.sibloo.com/system_panel/uploads/images/top_sec01_img_03.png" alt="")
+                                .dl
+                                    .dt
+                                        p パーティーバッグ
+                                    .dd
+                                        p 結婚式・披露宴・二次会・<br>謝恩会
+                    .li
+                        a(href="itemlist?s1l0%5B%5D=6&wgsearch=property")
+                            .secBox
+                                .photo
+                                    img(src="https://sit-7938494.sibloo.com/system_panel/uploads/images/top_sec01_img_04.png" alt="")
+                                .dl
+                                    .dt
+                                        p メンズバッグ
+                                    .dd
+                                        p 結婚式・お葬式・法事
+    .guideSec
+        .secWrap02
+            .pageSecTtlBox
+                .sub
+                    p GUIDE
+                .pageSecTtl
+                    h2 ご利用ガイド
+            .itemPanel
+                .itemBox
+                    a(href="faq")
+                        .dl
+                            .dt.faq
+                                p FAQ
+                            .dd
+                                p よくあるご質問はこちら
+                .itemBox
+                    a(href="formal")
+                        .dl
+                            .dt.howto
+                                p HOW TO
+                            .dd
+                                p フォーマルバッグの選び方
+// △メイン△

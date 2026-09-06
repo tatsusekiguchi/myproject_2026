@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,minimum-scale=1.0"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!-- css-->
+    <link
+      rel="stylesheet"
+      href="https://gigaplus.makeshop.jp/2068nagasaki/css/reset.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://gigaplus.makeshop.jp/2068nagasaki/css/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://gigaplus.makeshop.jp/2068nagasaki/css/common.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://gigaplus.makeshop.jp/2068nagasaki/css/layout.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 1024px)"
+      type="text/css"
+      href="https://gigaplus.makeshop.jp/2068nagasaki/css/common_sp.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 1024px)"
+      type="text/css"
+      href="https://gigaplus.makeshop.jp/2068nagasaki/css/layout_sp.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://gigaplus.makeshop.jp/2068nagasaki/css/attach.css"
+    />
+    <!-- js-->
+    <script src="https://gigaplus.makeshop.jp/2068nagasaki/js/jquery-1.11.3.min.js"></script>
+    <script src="https://gigaplus.makeshop.jp/2068nagasaki/js/common.js"></script>
+    <script src="https://gigaplus.makeshop.jp/2068nagasaki/js/scrollAnimation.js"></script>
+    <!-- title-->
+    <title><{$page.title}></title>
+    <{$makeshop.head}>
+  </head>
+
+  <body>
+    <!-- ▽header▽-->
+    <{$makeshop.body_top}> <{$module.custom_header}>
+    <!-- △header△-->
+    <!-- ▽メイン▽-->
+    <main class="main" id="top">
+      <div class="topKvContainer">
+        <div class="kvTitlePanel">
+          <div class="inner">
+            <h1 class="mincho">目指ざす未来を照らす制服</h1>
+            <p>
+              長崎屋は津島市を中心とした地域の中学校・高等学校の<br />指定制服・体育衣料・通学用品を取り扱っています。
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="sec01">
+        <div class="topMessage mincho">
+          <p>ご入学おめでとうございます。</p>
+        </div>
+        <div class="secContainer">
+          <div class="secPanel">
+            <div class="pageSecTtlBox">
+              <div class="sub">
+                <p>High School list</p>
+              </div>
+              <div class="pageSecTtl">
+                <h2>取扱い高校一覧</h2>
+              </div>
+            </div>
+            <div class="ttl">
+              <p>学校をお選びください。</p>
+            </div>
+            <div class="listBox">
+              <ul>
+                <{section name=i loop=$category_menu.list}>
+                <{if $category_menu.list[i].code == "hs"}>
+                <{section name=j loop=$category_menu.list[i].child_category.list}>
+                <li>
+                  <a
+                    href="<{$category_menu.list[i].child_category.list[j].url}>-all"
+                    ><{$category_menu.list[i].child_category.list[j].name}></a
+                  >
+                </li>
+                <{/section}>
+                <{/if}>
+                <{/section}>
+              </ul>
+            </div>
+          </div>
+
+        <div class="secContainer">
+          <div class="secPanel">
+            <div class="pageSecTtlBox">
+              <div class="sub">
+                <p>Junior High School list</p>
+              </div>
+              <div class="pageSecTtl">
+                <h2>取扱い中学校一覧</h2>
+              </div>
+            </div>
+            <div class="ttl">
+              <p>学校をお選びください。</p>
+            </div>
+            <div class="listBox">
+              <ul>
+                <{section name=i loop=$category_menu.list}>
+                <{if $category_menu.list[i].code == "jhs"}>
+                <{section name=j loop=$category_menu.list[i].child_category.list}>
+                <li>
+                  <a
+                    href="<{$category_menu.list[i].child_category.list[j].url}>"
+                    ><{$category_menu.list[i].child_category.list[j].name}></a
+                  >
+                </li>
+                <{/section}>
+                <{/if}>
+                <{/section}>
+              </ul>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+      <div class="sec02">
+        <div class="secWrap">
+          <div class="pageSecTtlBox">
+            <div class="sub">
+              <p>Other item</p>
+            </div>
+            <div class="pageSecTtl">
+              <h2>その他スクールアイテム</h2>
+            </div>
+          </div>
+          <div class="listBox">
+            <ul>
+              <li>
+                <a href="/view/category/other-bag"
+                  ><img
+                    src="https://gigaplus.makeshop.jp/2068nagasaki/image/common/top_other_item_01.png"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a href="/view/category/other-nit"
+                  ><img
+                    src="https://gigaplus.makeshop.jp/2068nagasaki/image/common/top_other_item_02.png"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a href="/view/category/other-sox"
+                  ><img
+                    src="https://gigaplus.makeshop.jp/2068nagasaki/image/common/top_other_item_03.png"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a href="/view/category/other-shut"
+                  ><img
+                    src="https://gigaplus.makeshop.jp/2068nagasaki/image/common/top_other_item_04.png"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a href="/view/category/other-coat"
+                  ><img
+                    src="https://gigaplus.makeshop.jp/2068nagasaki/image/common/top_other_item_05.png"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a href="/view/category/other-mizugi"
+                  ><img
+                    src="https://gigaplus.makeshop.jp/2068nagasaki/image/common/top_other_item_06.png"
+                    alt=""
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- △メイン△-->
+    <!-- ▽footer▽-->
+    <{$module.custom_footer}> <{$makeshop.body_bottom}>
+    <!-- △footer△-->
+  </body>
+</html>

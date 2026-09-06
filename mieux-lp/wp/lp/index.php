@@ -1,0 +1,599 @@
+<?php
+/*
+Template Name: mieux_フランチャイズLP
+*/
+?>
+<?php get_header("lp"); ?>
+	<!-- ▽メイン▽-->
+	<main id="top">
+		<div class="popupInfo">
+			<div class="topClose popupClose">
+				<p>Close Page</p>
+			</div>
+			<div class="popupInfo__inner">
+				<div class="popupMain">
+					<div class="popupTitle">
+						<p>新店舗オープンのお知らせ</p>
+					</div>
+					<div class="mainTitle">
+						<p>2025年7月1日<br class="spBreak">に東京に「自由が丘店」が<br class="spBreak">オープンいたしました。</p>
+					</div>
+					<dl>
+						<dt>mieux自由が丘店（ミュージユウガオカ）</dt>
+						<dd>
+							<p>住所：<br class="spBreak">東京都目黒区自由が丘1丁目3 <br class="spBreak">JIYUGAOKA EY 101<br>営業日：<br class="spBreak">〈平日〉10:00-20:00〈土日・祝〉10:00-19:00 <br>定休日：水曜・月曜</p>
+						</dd>
+					</dl>
+					<div class="instaButton"><a href="#" target="_blank" rel="noopener">自由が丘店のInstagramはこちら</a></div>
+				</div>
+				<div class="bottomClose popupClose">
+					<p>Close Page</p>
+				</div>
+			</div>
+		</div>
+		<div class="topMvWrapper">
+			<div class="topMvContainer">
+				<div class="mvTxtPanel">
+					<div class="franchise">
+						<p>フランチャイズオーナー募集中</p>
+					</div>
+					<div class="mvTitle">
+						<h1>その手で、<br>だれかの美しさを育てる仕事を。</h1>
+					</div>
+					<div class="circleList">
+						<ul>
+							<li>
+								<p>現場で学べる<br>実践型<br>トレーニング</p>
+							</li>
+							<li>
+								<p>物件選定から<br>内装まで<br>全面サポート</p>
+							</li>
+							<li>
+								<p>オープン後も<br>ずっと寄り添う<br>個別サポート</p>
+							</li>
+							<li>
+								<p>低リスク＆<br>低投資で<br>始められる仕組み</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="message"><img src="<?php bloginfo('template_url'); ?>/lp-asset/image/top/top_mv_message.png" alt=""></div>
+			</div>
+		</div>
+		<div id="section__vision">
+			<div class="secContainer">
+				<div class="circleList">
+					<ul>
+						<li>
+							<p>現場で学べる<br>実践型<br>トレーニング</p>
+						</li>
+						<li>
+							<p>物件選定から<br>内装まで<br>全面サポート</p>
+						</li>
+						<li>
+							<p>オープン後も<br>ずっと寄り添う<br>個別サポート</p>
+						</li>
+						<li>
+							<p>低リスク＆<br>低投資で<br>始められる仕組み</p>
+						</li>
+					</ul>
+				</div>
+				<div class="secTtl">
+					<p>VISION</p>
+					<h2>肌を育てるサロンから、<br class="spBreak">あなたの新しい未来をがはじまる。</h2>
+				</div>
+				<div class="txt">
+					<p>ファンデーションで隠すのではなく、<br class="spBreak">素肌そのものを育てていく。<br>mieuxは、そんな理念から生まれた<br class="spBreak">“肌質改善”スキンケアサロンです。</p>
+					<p>サロンケアとホームケアを組み合わせた<br class="spBreak">独自のプログラムで、お客様が自ら通い続けたくなる<br class="spBreak">仕組みを構築しています。</p>
+					<p>都度払い制と通いやすい価格で、<br class="spBreak">多くのお客様に選ばれ続けてきたmieux。<br>安定した収益と高い顧客満足度を両立する<br class="spBreak">このモデルを、あなたの街にも広げていきませんか。</p>
+				</div>
+			</div>
+		</div>
+		<div id="section__attraction">
+			<div class="topBalloon">
+				<div class="secTtl">
+					<p>ATTRACTION</p>
+					<h2>mieux でフランチャイズを始める4つの魅力</h2>
+				</div>
+			</div>
+			<div class="secContainer01">
+				<div class="secBoxList">
+					<div class="secBox">
+						<div class="photo"><img src="<?php bloginfo('template_url'); ?>/lp-asset/image/top/attraction_photo_01.png" alt=""></div>
+						<div class="txtBox">
+							<div class="ttl01">
+								<p>ATTRACTION 01</p>
+							</div>
+							<div class="ttl02">
+								<h3>もっと通いたくなる肌質改善という独自性</h3>
+							</div>
+							<div class="txt">
+								<p>mieuxは「肌を育てる」ことにこだわった肌質改善サロン。サロンケアとホームケアを組み合わせることで、お客様の方から自然とリピートしたくなるような仕組みを確立しています。都度払い制で通いやすく、長く続けてもらえるからこそ、安定した経営を実現できます。</p>
+							</div>
+						</div>
+					</div>
+					<div class="secBox">
+						<div class="photo"><img src="<?php bloginfo('template_url'); ?>/lp-asset/image/top/attraction_photo_02.png" alt=""></div>
+						<div class="txtBox">
+							<div class="ttl01">
+								<p>ATTRACTION 02</p>
+							</div>
+							<div class="ttl02">
+								<h3>自社ブランド×教育ノウハウの安心感</h3>
+							</div>
+							<div class="txt">
+								<p>非加熱・ノンウォーターにこだわったオリジナルスキンケアブランドは、お客様から高い支持を得ています。その商品力に加え、オーナーやスタッフの育成ノウハウも充実。サロンとホームケアの両輪で効果を実感してもらえるため、商品とサービスの両方に自信を持って提供することができます。</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="secContainer02">
+				<div class="secBoxList">
+					<div class="secBox">
+						<div class="photo"><img src="<?php bloginfo('template_url'); ?>/lp-asset/image/top/attraction_photo_03.png" alt=""></div>
+						<div class="txtBox">
+							<div class="ttl01">
+								<p>ATTRACTION 03</p>
+							</div>
+							<div class="ttl02">
+								<h3>固定費を抑えた持続可能なサロン経営</h3>
+							</div>
+							<div class="txt">
+								<p>小規模でも高収益を見込めるmieuxの経営モデル。1ベッドからでもスタートでき、家賃や人件費などの固定費を抑えながら、商品販売と施術収益の両方で安定した利益を確保できます。リピートしたくなる価格設定と仕組みでお客様に愛され、長く続けられるサロンづくりが可能です。</p>
+							</div>
+						</div>
+					</div>
+					<div class="secBox">
+						<div class="photo"><img src="<?php bloginfo('template_url'); ?>/lp-asset/image/top/attraction_photo_04.png" alt=""></div>
+						<div class="txtBox">
+							<div class="ttl01">
+								<p>ATTRACTION 04</p>
+							</div>
+							<div class="ttl02">
+								<h3>未経験からでも安心の研修・サポート</h3>
+							</div>
+							<div class="txt">
+								<p>ほとんどのオーナーが美容業界未経験からのスタート。数日間の集中研修で肌理論から施術、接客までしっかり学べます。開業後も経営勉強会やオンライン講座など学びの場が用意され、常にスキルを磨き続けられる環境です。初めてでも「できる自信」が育つサポート体制です。</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="section__store">
+			<div class="message"><img src="<?php bloginfo('template_url'); ?>/lp-asset/image/top/top_mv_message.png" alt=""></div>
+			<div class="secContainer">
+				<div class="ttlPanel">
+					<div class="secTtl">
+						<p>STORE DEVELOPEMENT</p>
+						<h2>東海エリアを中心に<br>15店舗展開中</h2>
+					</div>
+					<div class="txt">
+						<p>地元のお客様に支えられながら、<br>東海エリアを中心に15店舗がオープンしています。<br>どの店舗も、通いやすく居心地のよい空間で、<br>たくさんの方に気軽に足を運んでいただいています。<br>これから先、mieuxを新しい地域へ広げていくのは、<br>未来のオーナーとなるあなたです。</p>
+					</div>
+				</div>
+				<div class="mapPanel">
+					<div class="map"><img src="<?php bloginfo('template_url'); ?>/lp-asset/image/top/store_map.png" alt=""></div>
+				</div>
+				<div class="areaPanel">
+					<dl>
+						<dt>TOKYO</dt>
+						<dd>吉祥寺店／自由が丘店</dd>
+					</dl>
+					<dl>
+						<dt>AICHI</dt>
+						<dd>栄本店／名駅店／金山店／刈谷店／豊田店<br>岡崎店／名東一社店／春日井店／高畑店<br>徳川店／吹上店／植田店／大府店</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<div id="section__recommend">
+			<div class="topBalloon">
+				<div class="secTtl">
+					<p>RECOMMENDED</p>
+					<h2>mieuxのFC展開は<br class="spBreak">このような方におすすめです</h2>
+				</div>
+			</div>
+			<div class="secContainer">
+				<div class="secPanel">
+					<div class="ttl">
+						<p>（Business）</p>
+					</div>
+					<div class="photo"><img src="<?php bloginfo('template_url'); ?>/lp-asset/image/top/recommend_photo_01.png" alt=""></div>
+					<dl>
+						<dt>企業の方へ</dt>
+						<dd>女性の自立支援という理念に共感し、持続性のある事業を広げたい企業様へ。mieuxのフランチャイズは、サロン経営と商品販売を組み合わせた安定性のあるモデル。充実のサポート体制で、未経験の業界でも安心して開業できます。</dd>
+					</dl>
+				</div>
+				<div class="secPanel">
+					<div class="ttl">
+						<p>（Inexperienced Person）</p>
+					</div>
+					<div class="photo"><img src="<?php bloginfo('template_url'); ?>/lp-asset/image/top/recommend_photo_02.png" alt=""></div>
+					<dl>
+						<dt>エステ業界未経験の方へ</dt>
+						<dd>「完全都度払い」や、サロンケアとホームケアの両輪で続けやすい仕組みを取り入れています。施術だけに頼らず、商品販売を軸に安定した収益を実現できるため、既存サロンの差別化や新展開の柱としてご活用ください。</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<div id="section__flow">
+			<div class="secTtl">
+				<p>STORE DEVELOPMENT</p>
+				<h2>開業までの流れ</h2>
+			</div>
+			<div class="topTxt txt">
+				<p>フランチャイズに興味はあるけれど、「経験がない自分にもできるのか」「どんな準備が必要なのか」不安や疑問を感じている方も多いかもしれません。<br>でも、ご安心ください。mieuxでは、これまで15店舗のサロンを展開してきたノウハウを活かし、<br>未経験の方でも無理なくスタートできるよう、開業までの道のりを丁寧にサポートしています。</p>
+			</div>
+			<div class="topPager">
+				<ul>
+					<li class="prev"><img src="<?php bloginfo('template_url'); ?>/lp-asset/image/top/flow_prev.png" alt=""></li>
+					<li class="count"></li>
+					<li class="slash"></li>
+					<li class="count"></li>
+					<li class="next"><img src="<?php bloginfo('template_url'); ?>/lp-asset/image/top/flow_next.png" alt=""></li>
+				</ul>
+			</div>
+			<div class="flowSliderList">
+				<div class="flowSliderBox flowSliderBox01">
+					<div class="secBox">
+						<div class="num">
+							<p>01</p>
+						</div>
+						<div class="photo"><img src="<?php bloginfo('template_url'); ?>/lp-asset/image/top/flow_photo_01.png" alt=""></div>
+						<div class="txtBox">
+							<dl>
+								<dt>まずはお問い合わせください</dt>
+								<dd>お問い合わせページよりお気軽にご連絡ください。<br>事業内容や収益モデルがわかる詳細資料をお送りします。</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<div class="flowSliderBox flowSliderBox02">
+					<div class="secBox">
+						<div class="num">
+							<p>02</p>
+						</div>
+						<div class="photo"><img src="<?php bloginfo('template_url'); ?>/lp-asset/image/top/flow_photo_02.png" alt=""></div>
+						<div class="txtBox">
+							<dl>
+								<dt>個別説明会（対面 or オンライン）</dt>
+								<dd>mieuxのビジネスモデルや、肌質改善サロンの特徴、<br>サポート内容などを詳しくご説明いたします。<br>不安や疑問も、ここでしっかり解消できます。</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<div class="flowSliderBox flowSliderBox03">
+					<div class="secBox">
+						<div class="num">
+							<p>03</p>
+						</div>
+						<div class="photo"><img src="<?php bloginfo('template_url'); ?>/lp-asset/image/top/flow_photo_03.png" alt=""></div>
+						<div class="txtBox">
+							<dl>
+								<dt>店舗見学・体験</dt>
+								<dd>実際に営業中のサロンを見学し、<br>施術の様子やスタッフの雰囲気をご覧いただけます。<br>希望があれば施術体験も可能です。</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<div class="flowSliderBox flowSliderBox01">
+					<div class="secBox">
+						<div class="num">
+							<p>04</p>
+						</div>
+						<div class="photo"><img src="<?php bloginfo('template_url'); ?>/lp-asset/image/top/flow_photo_04.png" alt=""></div>
+						<div class="txtBox">
+							<dl>
+								<dt>事業プランニング・ご契約</dt>
+								<dd>立地やご希望に合わせた開業プランをご提案。<br>納得いただけたタイミングで、ご契約となります。</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<div class="flowSliderBox flowSliderBox01">
+					<div class="secBox">
+						<div class="num">
+							<p>05</p>
+						</div>
+						<div class="photo"><img src="<?php bloginfo('template_url'); ?>/lp-asset/image/top/flow_photo_05.png" alt=""></div>
+						<div class="txtBox">
+							<dl>
+								<dt>研修・準備スタート</dt>
+								<dd>技術研修、商品知識、接客マナーなど、<br>未経験の方でも安心してスタートできるように、しっかりサポートします。<br>物件の選定や内装など、開業準備も並行して進行。</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<div class="flowSliderBox flowSliderBox01">
+					<div class="secBox">
+						<div class="num">
+							<p>06</p>
+						</div>
+						<div class="photo"><img src="<?php bloginfo('template_url'); ?>/lp-asset/image/top/flow_photo_06.png" alt=""></div>
+						<div class="txtBox">
+							<dl>
+								<dt>サロンオープン</dt>
+								<dd>オープン後も、本部が運営・集客を継続サポート。<br>定期的なフォローアップや相談体制も整えています。</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+			</div>
+			<aside>
+				<p>※上記ステップは一例です。オーナー様のご経験やエリア条件に応じて、柔軟に対応いたします。</p>
+			</aside>
+		</div>
+		<div id="section__message">
+			<div class="bnrContainer">
+				<div class="bnrPanel bnrPanel01"><a href="#" target="_blank" rel="noopener">
+						<div class="inner">
+							<div class="secTtl">
+								<p>REQUEST INFORMATION</p>
+								<h2>資料請求はこちら</h2>
+							</div>
+							<div class="txt">
+								<p>mieuxの思いや仕組みを、<br class="spBreak">わかりやすくまとめた資料をご用意しています。<br>まずはじっくり知っていただくところから。<br class="spBreak">どうぞお気軽に、ご請求ください。</p>
+							</div>
+							<div class="arrow"><img src="<?php bloginfo('template_url'); ?>/lp-asset/image/top/bnt_link_arrow.png" alt=""></div>
+						</div>
+					</a></div>
+				<div class="bnrPanel bnrPanel02"><a href="<?php echo home_url(); ?>/contact_lp">
+						<div class="inner">
+							<div class="secTtl">
+								<p>REQUEST INFORMATION</p>
+								<h2>お問い合わせはこちら</h2>
+							</div>
+							<div class="txt">
+								<p>「ちょっと気になる」<br class="spBreak">その気持ちだけでも大歓迎です。<br>ご質問やご相談など、どんなことでも構いません。<br class="spBreak">まずは一度、お気軽にお問い合わせください。</p>
+							</div>
+							<div class="arrow"><img src="<?php bloginfo('template_url'); ?>/lp-asset/image/top/bnt_link_arrow.png" alt=""></div>
+						</div>
+					</a></div>
+			</div>
+			<div class="secContainer">
+				<div class="messageTitle">
+					<div class="title"><img src="<?php bloginfo('template_url'); ?>/lp-asset/image/top/message_title.png" alt=""></div>
+				</div>
+				<div class="secBox01">
+					<div class="photo"><img src="<?php bloginfo('template_url'); ?>/lp-asset/image/top/message_photo_01.png" alt=""></div>
+					<div class="txtBox">
+						<div class="secTtl">
+							<h2>肌に悩む人のそばに、<br>寄り添うサロンを、あなたの街にも。</h2>
+						</div>
+						<div class="txt">
+							<p>mieuxは、「肌をきれいにする」だけでなく、お客様と一緒に“肌を育てる”ことを大切に、これまで東海エリアを中心に15店舗のサロンをつくってきました。肌質改善というテーマに、まっすぐ向き合い続けてきたからこそ、「ここに来てよかった」と言ってくださるお客様が今も少しずつ増えています。</p>
+							<p>私たちの強みは、都度払い制や通いやすい価格だけではありません。お客様が自然とリピートしたくなる、“肌を育てる仕組み”と、売上の約7割を支えるオリジナルスキンケアという確かな収益モデル。これらに加え、未経験からでも自信を持ってスタートできる研修制度や、開業後のフォロー体制を整えています。実際に、多くのオーナーが美容業界未経験から挑戦し、サロンを成功させています。</p>
+						</div>
+					</div>
+				</div>
+				<div class="secBox02">
+					<div class="photo"><img src="<?php bloginfo('template_url'); ?>/lp-asset/image/top/message_photo_02.png" alt=""></div>
+					<div class="txtBox">
+						<div class="txt">
+							<p>mieuxの事業の根底には「女性の自立を応援したい」という想いがあります。経済的にも精神的にも、自分らしく生きられる選択肢を増やしていきたい。<br>だからこそ、フランチャイズという形で、共に未来をつくってくれる仲間を募集することにしました。</p>
+							<p>美容の経験がある方も、まったくの未経験からの挑戦も大歓迎です。人に喜ばれる仕事がしたい。お客様の肌にまっすぐ向き合いたい。そんな想いを持つ方と一緒に、mieuxを全国へ広げていけたら嬉しいです。</p>
+						</div>
+						<div class="name">
+							<dl>
+								<dt>菅原祥子</dt>
+								<dd>株式会社YORI 代表 / mieuxオーナー</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<div class="videoPanel">
+					<div class="videoBox">
+						<video poster="<?php bloginfo('template_url'); ?>/lp-asset/image/top/mieux_interview_sugawara.jpg" playsinline preload="metadata" controls>
+							<source src="<?php bloginfo('template_url'); ?>/lp-asset/image/top/interview_sugawara.mp4" type="video/mp4">
+						</video>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="section__interview">
+			<div class="secContainer">
+				<div class="interviewTitle">
+					<div class="title"><img src="<?php bloginfo('template_url'); ?>/lp-asset/image/top/interview_title.png" alt=""></div>
+				</div>
+				<div class="secBox">
+					<div class="secTtl">
+						<h2>加盟店オーナーが語る、<br class="spBreak">私たちのリアル。</h2>
+					</div>
+					<div class="txt">
+						<p>Mieuxでは、さまざまなバックグラウンドを持ったオーナーの方々が、それぞれの想いを持ってサロンを運営しています。<br>美容業界未経験からのスタート、子育てとの両立、独立の夢の実現。<br>これから一歩を踏み出すあなたにとって、ヒントになる声がきっと見つかるはずです。</p>
+					</div>
+				</div>
+				<div class="videoPanel">
+					<div class="videoBox">
+						<video poster="<?php bloginfo('template_url'); ?>/lp-asset/image/top/mieux_interview_hayashi.jpg" playsinline preload="metadata" controls>
+							<source src="<?php bloginfo('template_url'); ?>/lp-asset/image/top/interview_hayashi.mp4" type="video/mp4">
+						</video>
+					</div>
+					<div class="videoBox">
+						<video poster="<?php bloginfo('template_url'); ?>/lp-asset/image/top/mieux_interview_miyahara.jpg" playsinline preload="metadata" controls>
+							<source src="<?php bloginfo('template_url'); ?>/lp-asset/image/top/interview_miyahara.mp4" type="video/mp4">
+						</video>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="section__reason">
+			<div class="secContainer">
+				<div class="secBoxList">
+					<div class="secBox secBoxInit">
+						<div class="inner">
+							<div class="secTtl">
+								<p>STORE DEVELOPMENT</p>
+								<h2>はじめてでも、<br>安心して始められる<br class="spBreak">理由があります。</h2>
+							</div>
+						</div>
+					</div>
+					<div class="secBox secBox01">
+						<div class="inner">
+							<div class="num">
+								<p>01</p>
+							</div>
+							<dl>
+								<dt>未経験からでもしっかり育つ研修制度</dt>
+								<dd>多くのオーナーが美容業界未経験から挑戦しています。本部が主導する研修は「ゼロからの挑戦」を前提に設計。肌理論や商品知識、接客マナーなどの基礎をじっくり学んだうえで、現場で成果を上げているトレーナーが実技を指導します。数日間かけて基礎から実技までじっくり学ぶことで、不安をひとつずつ解消できる安心のプログラムです。</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="secBox secBox02">
+						<div class="inner">
+							<div class="num">
+								<p>02</p>
+							</div>
+							<dl>
+								<dt>開業後も“学び続ける”仕組み</dt>
+								<dd>オープン後も、定期的な経営勉強会やオンライン講座を開催し、スキンケアの最新知識やお客様対応のコツをシェアしています。実際のオーナーからの事例共有も多く、「こうすれば売上が伸びる」「この提案でリピート率が高まった」といったリアルな学びが得られる場です。経営が初めてでも、孤独を感じずに常にアップデートできます。</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="secBox secBox03">
+						<div class="inner">
+							<div class="num">
+								<p>03</p>
+							</div>
+							<dl>
+								<dt>経験者にも広がるキャリアの可能性</dt>
+								<dd>「技術と経験を活かして経営に挑戦したい」という経験者の方のステップアップもサポート。収益の柱となる商品販売と、安定的にお客様がリピートする仕組みを駆使しながら、経営計画も学べます。マネジメントやスタッフ育成、売上戦略など経営に必要な力も学び、自分らしくサロンオーナーとしてキャリアを広げられる環境です。</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="section__slide">
+			<div class="slidePanel">
+				<div class="slideBox">
+					<ul>
+						<li><img src="<?php bloginfo('template_url'); ?>/lp-asset/image/top/slide_photo_01.png" alt=""></li>
+						<li><img src="<?php bloginfo('template_url'); ?>/lp-asset/image/top/slide_photo_02.png" alt=""></li>
+						<li><img src="<?php bloginfo('template_url'); ?>/lp-asset/image/top/slide_photo_03.png" alt=""></li>
+						<li><img src="<?php bloginfo('template_url'); ?>/lp-asset/image/top/slide_photo_04.png" alt=""></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="section__faq">
+			<div class="secContainer">
+				<div class="secBox">
+					<div class="secTtlBox">
+						<div class="secTtl">
+							<p>FREQUENTLY ASKED QUESTION</p>
+							<h2>よくある質問</h2>
+						</div>
+					</div>
+					<div class="txtBox">
+						<dl class="accord">
+							<dt><span>Q.</span><em>美容業界の経験がなくても、本当に開業できますか？</em></dt>
+							<dd>
+								<div class="box">
+									<div class="answer">
+										<p>はい、可能です。mieuxでは未経験からスタートしたオーナー様も多数いらっしゃいます。<br>基礎から学べる研修制度と、開業後も続くサポート体制が整っているので、ご安心ください。</p>
+									</div>
+								</div>
+							</dd>
+						</dl>
+						<dl class="accord">
+							<dt><span>Q.</span><em>サロン運営は一人でもできますか？</em></dt>
+							<dd>
+								<div class="box">
+									<div class="answer">
+										<p>できます！パートや社員を雇用する方もいらっしゃいますが、ほとんどのオーナーさんが一人で運営されています。</p>
+									</div>
+								</div>
+							</dd>
+						</dl>
+						<dl class="accord">
+							<dt><span>Q.</span><em>研修はどれくらい時間がかかる？</em></dt>
+							<dd>
+								<div class="box">
+									<div class="answer">
+										<p>個人差がありますが、約１ヶ月で施術と接客を習得する方が多いです。早い人だと2週間で施術をマスターする人もいます。</p>
+									</div>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="section__step">
+			<div class="secContainer">
+				<div class="secTtl">
+					<p>FLOW FROM APPLICATION TO EMPLOYMENT</p>
+					<h2>応募から採用までの流れ</h2>
+				</div>
+				<div class="stepContainer">
+					<div class="stepPanel">
+						<div class="num"><img src="<?php bloginfo('template_url'); ?>/lp-asset/image/top/step_num_01.png" alt=""></div>
+						<dl>
+							<dt><span>エントリー</span></dt>
+							<dd>
+								<p>下記フォームより、資料請求またはお問い合わせください。<br>「少し話を聞いてみたい」という段階でも大歓迎です。</p>
+							</dd>
+						</dl>
+					</div>
+					<div class="stepPanel">
+						<div class="num"><img src="<?php bloginfo('template_url'); ?>/lp-asset/image/top/step_num_02.png" alt=""></div>
+						<dl>
+							<dt><span>個別面談・ヒアリング</span></dt>
+							<dd>
+								<p>mieuxの仕組みやビジネスモデルについて詳しくご説明し、あなたの希望やご状況をヒアリングします。疑問・不安もすべてこの場で解消していただけます。</p>
+							</dd>
+						</dl>
+					</div>
+					<div class="stepPanel">
+						<div class="num"><img src="<?php bloginfo('template_url'); ?>/lp-asset/image/top/step_num_03.png" alt=""></div>
+						<dl>
+							<dt><span>サロン見学</span></dt>
+							<dd>
+								<p>実際のmieuxサロンにて、店舗の雰囲気や施術内容、オーナー・スタッフの様子などをご覧いただきます。お客様とのやりとりや設備の使い方など、リアルな現場を体感できる貴重な機会です。</p>
+							</dd>
+						</dl>
+					</div>
+					<div class="stepPanel">
+						<div class="num"><img src="<?php bloginfo('template_url'); ?>/lp-asset/image/top/step_num_04.png" alt=""></div>
+						<dl>
+							<dt><span>契約・準備スタート</span></dt>
+							<dd>
+								<p>内容にご納得いただけましたら、正式な加盟契約を締結し、開業に向けた準備がスタートします。物件選定・開業資金のご相談・研修日程の調整など、本部と二人三脚で進めていきます。</p>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<div class="bnrContainer">
+				<div class="bnrPanel bnrPanel01"><a href="#" target="_blank" rel="noopener">
+						<div class="inner">
+							<div class="secTtl">
+								<p>REQUEST INFORMATION</p>
+								<h2>資料請求はこちら</h2>
+							</div>
+							<div class="txt">
+								<p>mieuxの思いや仕組みを、<br class="spBreak">わかりやすくまとめた資料をご用意しています。<br>まずはじっくり知っていただくところから。<br class="spBreak">どうぞお気軽に、ご請求ください。</p>
+							</div>
+							<div class="arrow"><img src="<?php bloginfo('template_url'); ?>/lp-asset/image/top/bnt_link_arrow.png" alt=""></div>
+						</div>
+					</a></div>
+				<div class="bnrPanel bnrPanel02"><a href="<?php echo home_url(); ?>/contact_lp">
+						<div class="inner">
+							<div class="secTtl">
+								<p>REQUEST INFORMATION</p>
+								<h2>お問い合わせはこちら</h2>
+							</div>
+							<div class="txt">
+								<p>「ちょっと気になる」<br class="spBreak">その気持ちだけでも大歓迎です。<br>ご質問やご相談など、どんなことでも構いません。<br class="spBreak">まずは一度、お気軽にお問い合わせください。</p>
+							</div>
+							<div class="arrow"><img src="<?php bloginfo('template_url'); ?>/lp-asset/image/top/bnt_link_arrow.png" alt=""></div>
+						</div>
+					</a></div>
+			</div>
+		</div>
+	</main>
+	<!-- △メイン△-->
+<?php get_footer("lp"); ?>

@@ -1,0 +1,1313 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+	画面用CSS（PC/SMP）
+===================================================*/
+/*////////////////////////////////////////////////////////////
+	TOP
+///////////////////////////////////////////////////////////*/
+#top .topKvContainer .topKv {
+  position: relative;
+  width: 100%;
+  height: 900px;
+}
+#top .topKvContainer .topKv .kvBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#top .topKvContainer .topKv .kvBox > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#top .topKvContainer .topKv .kvBox .kv01 {
+  background: url("../image/top/top_kv_01_pc.png") center no-repeat;
+  background-size: cover;
+}
+#top .topKvContainer .topKv .kvBox .kv02 {
+  background: url("../image/top/top_kv_02_pc.png") center no-repeat;
+  background-size: cover;
+}
+#top .topKvContainer .topKv .kvBox .kv03 {
+  background: url("../image/top/top_kv_03_pc.png") center no-repeat;
+  background-size: cover;
+}
+#top .topKvContainer .topKv .kvBox .kv04 {
+  background: url("../image/top/top_kv_04_pc.png") center no-repeat;
+  background-size: cover;
+}
+#top .topKvContainer .topKv .kvBox .kv05 {
+  background: url("../image/top/top_kv_05_pc.png") center no-repeat;
+  background-size: cover;
+}
+#top .topKvContainer .topKv .kvBox .kv06 {
+  background: url("../image/top/top_kv_06_pc.png") center no-repeat;
+  background-size: cover;
+}
+#top .topKvContainer .topKv .kvTitle {
+  display: none;
+  position: relative;
+  padding: 150px 120px;
+}
+#top .topKvContainer .topKv .kvTitle .kvTitleMain {
+  max-width: 450px;
+  margin: 0 0 60px;
+}
+#top .topKvContainer .topKv .kvTitle .kvTitleMain img {
+  transition: 0.6s;
+}
+#top .topKvContainer .topKv .kvTitle .kvTitleMain .white {
+  display: none;
+}
+#top .topKvContainer .topKv .kvTitle .kvTitleSub {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+}
+#top .topKvContainer .topKv .kvTitle .kvTitleSub h1 {
+  transition: 0.6s;
+}
+#top .topKvContainer .topKv .kvTitle.white {
+  color: #ffffff;
+}
+#top .topKvContainer .topKv .kvTitle.white .kvTitleMain .white {
+  display: block;
+}
+#top .topKvContainer .topKv .kvTitle.white .kvTitleMain .black {
+  display: none;
+}
+#top #section__concept {
+  padding: 120px 0 180px;
+}
+#top #section__concept .secTtl {
+  margin: 0 0 60px;
+  padding: 0 0 16px;
+  color: #6f6f6f;
+  text-align: center;
+  background: url("../image/top/concept_ttl_arrow.png") center bottom no-repeat;
+  background-size: 40px auto;
+}
+#top #section__concept .topMessage {
+  margin: 0 0 200px;
+  font-size: 28px;
+  text-align: center;
+  line-height: 2;
+}
+#top #section__concept .topMessage span {
+  display: block;
+}
+#top #section__concept .secPanelList {
+  margin: 0 0 180px;
+}
+#top #section__concept .secPanelList .secPanel + .secPanel {
+  margin: 180px 0 0;
+}
+#top #section__concept .secPanelList .secPanel .txtBox {
+  padding: 50px 0 0;
+}
+#top #section__concept .secPanelList .secPanel .txtBox .ttl {
+  margin: 0 0 40px;
+  font-size: 26px;
+  font-weight: 500;
+}
+@media (min-width: 1025px) {
+  #top #section__concept .secPanelList .secPanel {
+    display: flex;
+    justify-content: space-between;
+  }
+  #top #section__concept .secPanelList .secPanel .txtBox {
+    width: 45%;
+  }
+  #top #section__concept .secPanelList .secPanel .photo {
+    width: 50%;
+  }
+  #top #section__concept .secPanelList .secPanel:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}
+#top #section__concept .videoSection {
+  text-align: center;
+}
+#top #section__concept .videoSection .ttl {
+  margin: 0 0 30px;
+  font-size: 24px;
+}
+#top #section__concept .videoSection .videoPanel {
+  max-width: 960px;
+  margin: 0 auto;
+}
+#top #section__concept .videoSection .videoPanel .videoBox {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding: 0 0 60%;
+}
+#top #section__concept .videoSection .videoPanel .videoBox iframe,
+#top #section__concept .videoSection .videoPanel .videoBox video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  cursor: pointer;
+  outline: 2px solid #b4a152;
+  object-fit: cover;
+}
+#top #section__concept .videoSection .videoPanel + p {
+  margin: 10px 0 0;
+  font-size: 15px;
+}
+#top #section__consultation {
+  padding: 120px 0 160px;
+  background: #fafafa;
+}
+#top #section__consultation .secTtl {
+  margin: 0 0 60px;
+  text-align: center;
+}
+#top #section__consultation .secTtl h2 {
+  margin: 0 0 5px;
+  font-size: 32px;
+}
+#top #section__consultation .secTtl p {
+  font-family: "Open Sans";
+  font-size: 15px;
+  font-weight: 500;
+}
+#top #section__consultation .topTxt {
+  margin: 0 0 40px;
+  text-align: center;
+}
+#top #section__consultation .flowChartPanel {
+  max-width: 960px;
+  margin: 0 auto 80px;
+}
+#top #section__consultation .flowBoxList {
+  border-top: 1px solid #d9d9d9;
+}
+#top #section__consultation .flowBoxList .flowBox {
+  padding: 40px 0;
+  border-bottom: 1px solid #d9d9d9;
+}
+#top #section__consultation .flowBoxList .flowBox .inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+#top #section__consultation .flowBoxList .flowBox .num {
+  font-family: "Open Sans";
+  font-size: 28px;
+  color: #b4a152;
+}
+#top #section__consultation .flowBoxList .flowBox .ttl {
+  margin: 0 0 20px;
+  font-size: 28px;
+}
+#top #section__consultation .flowBoxList .flowBox .txt {
+  line-height: 1.7;
+}
+#top #section__consultation .more {
+  max-width: 440px;
+  margin: 120px auto 0;
+}
+#top #section__consultation .more a {
+  display: block;
+  padding: 20px 30px;
+  font-size: 18px;
+  text-align: center;
+  border: 1px solid #000000;
+  background: url("../image/common/more_arrow_right.png") right 30px center no-repeat;
+  background-size: 25px auto;
+}
+@media (min-width: 1025px) {
+  #top #section__consultation .more a:hover {
+    opacity: 1;
+    color: #b5a253;
+    border: 1px solid #b4a152;
+    background: url("../image/common/more_arrow_right.png") right 25px center no-repeat;
+    background-size: 25px auto;
+  }
+}
+#top #section__instagram {
+  margin: 160px 0 0;
+}
+#top #section__instagram .secTtl {
+  display: flex;
+  align-items: center;
+  gap: 0 20px;
+  padding: 0 0 60px;
+}
+#top #section__instagram .secTtl h2 {
+  font-family: "Open Sans";
+  font-size: 32px;
+  font-weight: 500;
+}
+#top #section__instagram .secTtl p {
+  position: relative;
+  top: 3px;
+  font-family: "Open Sans";
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+}
+#top #section__news {
+  margin: 200px 0 0;
+  padding: 0 0 160px;
+}
+#top #section__news .secTtl {
+  display: flex;
+  align-items: center;
+  gap: 0 20px;
+  padding: 0 0 60px;
+}
+#top #section__news .secTtl h2 {
+  font-family: "Open Sans";
+  font-size: 32px;
+  font-weight: 500;
+}
+#top #section__news .secTtl p {
+  position: relative;
+  top: 4px;
+  font-family: "Open Sans";
+  font-size: 15px;
+  font-weight: 500;
+}
+#top #section__news .listPanel ul {
+  font-size: 15px;
+  border-top: 1px solid #d9d9d9;
+}
+#top #section__news .listPanel ul li {
+  padding: 30px 200px;
+  border-bottom: 1px solid #d9d9d9;
+}
+#top #section__news .listPanel ul li .info .time {
+  display: inline-block;
+  margin: 0 60px 0 0;
+}
+#top #section__news .listPanel ul li .info .cate {
+  display: inline-block;
+  min-width: 90px;
+  padding: 5px;
+  font-size: 12px;
+  text-align: center;
+  border: 1px solid #000000;
+}
+#top #section__news .listPanel ul li .ttl {
+  padding: 5px 0 0;
+}
+#top #section__news .listPanel ul li .ttl a {
+  display: inline-block;
+  position: relative;
+}
+@media (min-width: 1025px) {
+  #top #section__news .listPanel ul li {
+    display: flex;
+    gap: 0 20px;
+  }
+  #top #section__news .listPanel ul li .ttl a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #000000;
+    transition: width 0.3s ease;
+  }
+  #top #section__news .listPanel ul li .ttl a:hover {
+    opacity: 1;
+  }
+  #top #section__news .listPanel ul li .ttl a:hover::after {
+    width: 100%;
+  }
+}
+#top #section__news .more {
+  margin: 40px 0 0;
+  text-align: right;
+}
+#top #section__news .more a {
+  display: inline-block;
+  padding: 0 60px 0 0;
+  background: url("../image/common/more_arrow_right.png") right 10px center no-repeat;
+  background-size: 25px auto;
+}
+@media (min-width: 1025px) {
+  #top #section__news .more a:hover {
+    opacity: 1;
+    background: url("../image/common/more_arrow_right.png") right center no-repeat;
+    background-size: 25px auto;
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	consultation
+///////////////////////////////////////////////////////////*/
+#consultation .topSection {
+  padding: 120px 0 160px;
+}
+#consultation .topSection .topPanel {
+  margin: 0 0 120px;
+}
+#consultation .topSection .topPanel .topTxt {
+  font-size: 18px;
+  text-align: center;
+  line-height: 2.5;
+}
+#consultation .topSection .photoPanel {
+  position: relative;
+  margin: 0 0 150px;
+}
+#consultation .topSection .photoPanel .secBox {
+  padding: 60px 0;
+}
+#consultation .topSection .photoPanel .secBox .txtBox .ttl {
+  margin: 0 0 20px;
+  font-size: 24px;
+  font-weight: 500;
+}
+#consultation .topSection .photoPanel .secBox .txtBox ul li {
+  position: relative;
+  padding: 0 0 0 1em;
+  font-size: 18px;
+}
+#consultation .topSection .photoPanel .secBox .txtBox ul li::before {
+  content: "・";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #afafaf;
+}
+#consultation .topSection .photoPanel .secBox .txtBox ul li + li {
+  margin: 10px 0 0;
+}
+@media (min-width: 1025px) {
+  #consultation .topSection .photoPanel .secBox {
+    width: 45%;
+  }
+  #consultation .topSection .photoPanel .photo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 380px;
+  }
+  #consultation .topSection .photoPanel .photo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+#consultation .topSection .contentContainer .ttl {
+  margin: 0 0 20px;
+  font-size: 20px;
+}
+#consultation .topSection .contentContainer .ttl + .txt {
+  margin: 0 0 30px;
+  font-size: 15px;
+}
+#consultation .topSection .contentContainer .listBox + .listBox {
+  margin: 40px 0 0;
+}
+#consultation .topSection .contentContainer .listBox ul li {
+  padding: 10px;
+  border: 1px solid #b4a152;
+}
+#consultation .topSection .contentContainer .listBox ul dl {
+  display: table;
+  width: 100%;
+  line-height: 2;
+}
+#consultation .topSection .contentContainer .listBox ul dl dt {
+  display: table-cell;
+  width: 53%;
+  height: 180px;
+  padding: 20px 10px;
+  text-align: center;
+  vertical-align: middle;
+  background: #fbfaf7;
+}
+#consultation .topSection .contentContainer .listBox ul dl dd {
+  display: table-cell;
+  padding: 20px;
+  font-size: 14px;
+  vertical-align: middle;
+}
+@media (min-width: 1025px) {
+  #consultation .topSection .contentContainer .listBox ul {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+  }
+  #consultation .topSection .contentContainer .listBox ul li {
+    width: calc(33.3333333333% - 30px);
+  }
+}
+#consultation #section__consultation {
+  padding: 120px 0 160px;
+  background: #fafafa;
+}
+#consultation #section__consultation .secTtl {
+  margin: 0 0 60px;
+  text-align: center;
+}
+#consultation #section__consultation .secTtl h2 {
+  margin: 0 0 5px;
+  font-size: 32px;
+}
+#consultation #section__consultation .secTtl p {
+  font-family: "Open Sans";
+  font-size: 15px;
+  font-weight: 700;
+}
+#consultation #section__consultation .topTxt {
+  margin: 0 0 40px;
+  text-align: center;
+}
+#consultation #section__consultation .flowBoxList {
+  border-top: 1px solid #d9d9d9;
+}
+#consultation #section__consultation .flowBoxList .flowBox {
+  padding: 40px 0;
+  border-bottom: 1px solid #d9d9d9;
+}
+#consultation #section__consultation .flowBoxList .flowBox .inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+#consultation #section__consultation .flowBoxList .flowBox .num {
+  font-family: "Open Sans";
+  font-size: 28px;
+  color: #b4a152;
+}
+#consultation #section__consultation .flowBoxList .flowBox .ttl {
+  margin: 0 0 20px;
+  font-size: 28px;
+}
+#consultation #section__consultation .flowBoxList .flowBox .txt {
+  line-height: 1.7;
+}
+#consultation #section__menu {
+  padding: 120px 0 160px;
+}
+#consultation #section__menu .secTtl {
+  margin: 0 0 60px;
+  text-align: center;
+}
+#consultation #section__menu .secTtl h2 {
+  margin: 0 0 5px;
+  font-size: 32px;
+}
+#consultation #section__menu .secTtl p {
+  font-family: "Open Sans";
+  font-size: 15px;
+  font-weight: 700;
+}
+#consultation #section__menu .topTxt {
+  margin: 0 0 60px;
+  text-align: center;
+}
+#consultation #section__menu .secBoxList {
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+#consultation #section__menu .secBoxList .secBox + .secBox {
+  margin: 60px 0 0;
+}
+#consultation #section__menu .secBoxList .secBox dl dt {
+  margin: 0 0 20px;
+  font-size: 20px;
+  font-weight: 500;
+}
+@media (min-width: 1025px) {
+  #consultation #section__menu .secBoxList .secBox dl dt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+#consultation #section__menu .secBoxList .secBox dl dd {
+  max-width: 790px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+#consultation #section__menu aside {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 12px;
+  line-height: 2;
+}
+#consultation #section__faq {
+  padding: 120px 0 160px;
+  background: #fbfaf7;
+}
+#consultation #section__faq .secTtl {
+  margin: 0 0 60px;
+  text-align: center;
+}
+#consultation #section__faq .secTtl h2 {
+  margin: 0 0 5px;
+  font-size: 32px;
+}
+#consultation #section__faq .secTtl p {
+  font-family: "Open Sans";
+  font-size: 15px;
+  font-weight: 700;
+}
+#consultation #section__faq .secBoxList {
+  border-top: 1px solid #d9d9d9;
+}
+#consultation #section__faq .secBoxList .secBox {
+  padding: 40px 0;
+  border-bottom: 1px solid #d9d9d9;
+}
+#consultation #section__faq .secBoxList .secBox dl {
+  max-width: 840px;
+  margin: 0 auto;
+  font-size: 18px;
+}
+#consultation #section__faq .secBoxList .secBox dl dt {
+  display: flex;
+  gap: 0 15px;
+  margin: 0 0 15px;
+}
+#consultation #section__faq .secBoxList .secBox dl dt span {
+  width: 22px;
+  font-family: "Open Sans";
+  font-weight: 500;
+  font-size: 28px;
+  color: #666666;
+  text-align: center;
+  line-height: 1;
+}
+#consultation #section__faq .secBoxList .secBox dl dd {
+  display: flex;
+  gap: 0 15px;
+}
+#consultation #section__faq .secBoxList .secBox dl dd span {
+  width: 22px;
+  font-family: "Open Sans";
+  font-weight: 500;
+  font-size: 28px;
+  color: #b4a152;
+  text-align: center;
+  line-height: 1.3;
+}
+#consultation #section__bottom {
+  padding: 120px 0;
+}
+#consultation #section__bottom dl {
+  text-align: center;
+}
+#consultation #section__bottom dl dt {
+  margin: 0 0 30px;
+  font-size: 32px;
+}
+#consultation #section__bottom dl dd {
+  font-size: 16px;
+  line-height: 2;
+}
+
+/*////////////////////////////////////////////////////////////
+	company
+///////////////////////////////////////////////////////////*/
+#company .topSection {
+  padding: 120px 0 160px;
+}
+#company .topSection .topPanel {
+  margin: 0 0 120px;
+}
+#company .topSection .topPanel .topTxt {
+  font-size: 18px;
+  text-align: center;
+  line-height: 2.5;
+}
+#company .topSection .photoPanel {
+  position: relative;
+}
+#company .topSection .photoPanel .secBox {
+  padding: 60px 0;
+}
+#company .topSection .photoPanel .secBox .txtBox .ttl {
+  margin: 0 0 20px;
+  font-size: 24px;
+  font-weight: 500;
+}
+@media (min-width: 1025px) {
+  #company .topSection .photoPanel .secBox {
+    width: 45%;
+  }
+  #company .topSection .photoPanel .photo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 380px;
+  }
+  #company .topSection .photoPanel .photo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+#company #section__team {
+  padding: 60px 0 0;
+}
+#company #section__team .secTtl {
+  margin: 0 0 60px;
+  text-align: center;
+}
+#company #section__team .secTtl h2 {
+  margin: 0 0 5px;
+  font-size: 32px;
+}
+#company #section__team .secTtl p {
+  font-family: "Open Sans";
+  font-size: 15px;
+  font-weight: 700;
+}
+#company #section__team .secPanel {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 0 160px;
+}
+#company #section__team .secPanel .topTxt {
+  margin: 0 0 60px;
+}
+#company #section__team .secPanel .secBox + .secBox {
+  margin: 60px 0 0;
+}
+#company #section__team .secPanel .secBox h3 {
+  margin: 0 0 20px;
+  font-size: 24px;
+}
+#company #section__team .secPanel .secBox dl + dl {
+  margin: 15px 0 0;
+}
+#company #section__team .secPanel .secBox dl dt {
+  font-weight: 700;
+}
+@media (min-width: 1025px) {
+  #company #section__team .secPanel .secBox dl {
+    display: flex;
+    gap: 0 20px;
+  }
+  #company #section__team .secPanel .secBox dl dt {
+    width: 110px;
+  }
+}
+#company #section__message {
+  padding: 180px 0 120px;
+}
+#company #section__message .secTtl {
+  margin: 0 0 60px;
+  text-align: center;
+}
+#company #section__message .secTtl h2 {
+  margin: 0 0 5px;
+  font-size: 32px;
+}
+#company #section__message .secTtl p {
+  font-family: "Open Sans";
+  font-size: 15px;
+  font-weight: 700;
+}
+#company #section__message .messagePanel {
+  margin: 0 0 200px;
+}
+#company #section__message .messagePanel .txtBox .txt + .txt {
+  margin: 30px 0 0;
+}
+#company #section__message .messagePanel .photoBox .name {
+  margin: 25px 0 0;
+}
+@media (min-width: 1025px) {
+  #company #section__message .messagePanel {
+    display: flex;
+    justify-content: space-between;
+  }
+  #company #section__message .messagePanel .txtBox {
+    width: calc(100% - 480px);
+  }
+  #company #section__message .messagePanel .photoBox {
+    width: 380px;
+  }
+}
+#company #section__message .profileSection h3 {
+  margin: 0 0 40px;
+  font-size: 28px;
+}
+#company #section__message .profileSection .infoBox > dl {
+  padding: 15px 40px;
+  line-height: 2;
+  border-bottom: 1px solid #d9d9d9;
+}
+#company #section__message .profileSection .infoBox > dl > dd dl + dl {
+  margin: 15px 0 0;
+}
+#company #section__message .profileSection .infoBox > dl > dd ul li {
+  position: relative;
+  padding: 0 0 0 1em;
+}
+#company #section__message .profileSection .infoBox > dl > dd ul li::before {
+  content: "・";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #afafaf;
+}
+#company #section__message .profileSection .infoBox > dl > dd ul li + li {
+  margin: 5px 0 0;
+}
+#company #section__message .profileSection .infoBox > dl > dd ul + * {
+  margin: 5px 0 0;
+}
+@media (min-width: 1025px) {
+  #company #section__message .profileSection .infoBox > dl {
+    display: flex;
+    gap: 0 20px;
+  }
+  #company #section__message .profileSection .infoBox > dl > dt {
+    width: 170px;
+  }
+  #company #section__message .profileSection .infoBox > dl > dd {
+    width: calc(100% - 190px);
+  }
+  #company #section__message .profileSection .infoBox > dl > dd dl {
+    display: flex;
+    gap: 0 20px;
+  }
+  #company #section__message .profileSection .infoBox > dl > dd dl dt {
+    width: 220px;
+  }
+  #company #section__message .profileSection .infoBox > dl > dd dl dd {
+    width: calc(100% - 240px);
+  }
+  #company #section__message .profileSection .infoBox > dl > dd dl dd a {
+    display: inline-block;
+  }
+}
+#company #section__message .profileSection .infoSection {
+  margin: 60px 0 0;
+}
+#company #section__message .profileSection .infoSection .accordTtl {
+  padding: 15px 0;
+  font-size: 18px;
+  cursor: pointer;
+  border-bottom: 1px solid #d9d9d9;
+  background: url("../image/common/accord_plus.png") right center no-repeat;
+  background-size: 20px auto;
+}
+#company #section__message .profileSection .infoSection .accordTtl.active {
+  background: url("../image/common/accord_minus.png") right center no-repeat;
+  background-size: 20px auto;
+}
+
+/*////////////////////////////////////////////////////////////
+	contact
+///////////////////////////////////////////////////////////*/
+#contact .contactSection {
+  padding: 120px 0;
+}
+#contact .contactSection .topTxt {
+  margin: 0 0 120px;
+  font-size: 18px;
+  text-align: center;
+  line-height: 2.5;
+}
+#contact .contactSection .formBox {
+  max-width: 980px;
+  margin: 0 auto;
+}
+#contact .contactSection .formBox dl {
+  padding: 15px 0;
+  font-size: 15px;
+}
+#contact .contactSection .formBox dl dt span {
+  display: inline-block;
+  vertical-align: top;
+}
+#contact .contactSection .formBox dl dt em {
+  display: inline-block;
+  margin: 0 0 0 10px;
+  padding: 3px 5px;
+  font-size: 12px;
+  color: #ffffff;
+  line-height: 1;
+  background: #cf4242;
+}
+#contact .contactSection .formBox dl dt small {
+  display: inline-block;
+  margin: 0 0 0 10px;
+  padding: 3px 5px;
+  font-size: 12px;
+  color: #ffffff;
+  line-height: 1;
+  background: #8f8f8f;
+}
+#contact .contactSection .formBox dl dd .inputBox {
+  position: relative;
+}
+#contact .contactSection .formBox dl dd .inputBox .wpcf7-not-valid-tip {
+  position: absolute;
+  left: 0;
+}
+#contact .contactSection .formBox dl dd aside {
+  margin: 5px 0 0;
+  font-size: 12px;
+}
+@media (min-width: 1025px) {
+  #contact .contactSection .formBox dl {
+    display: flex;
+    align-items: center;
+  }
+  #contact .contactSection .formBox dl dt {
+    width: 200px;
+    margin: 0 30px 0 0;
+  }
+  #contact .contactSection .formBox dl dd {
+    width: calc(100% - 200px);
+  }
+  #contact .contactSection .formBox dl.multi {
+    align-items: flex-start;
+  }
+  #contact .contactSection .formBox dl.multi dt {
+    padding: 10px 0 0;
+  }
+}
+#contact .contactSection .formBox .field-consultation dd .checkList {
+  margin: 20px 0;
+}
+@media (min-width: 1025px) {
+  #contact .contactSection .formBox .field-consultation.multi dt {
+    padding: 0;
+  }
+  #contact .contactSection .formBox .field-consultation dd .checkList .wpcf7-form-control {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 0;
+  }
+  #contact .contactSection .formBox .field-consultation dd .checkList .wpcf7-form-control .wpcf7-list-item {
+    width: 33.3333333333%;
+  }
+}
+#contact .contactSection .formBox .field-theme dd .checkList,
+#contact .contactSection .formBox .field-status dd .checkList,
+#contact .contactSection .formBox .field-concern dd .checkList,
+#contact .contactSection .formBox .field-method dd .checkList {
+  margin: 20px 0;
+}
+@media (min-width: 1025px) {
+  #contact .contactSection .formBox .field-theme.multi dt,
+#contact .contactSection .formBox .field-status.multi dt,
+#contact .contactSection .formBox .field-method.multi dt,
+#contact .contactSection .formBox .field-concern.multi dt {
+    padding: 0;
+  }
+  #contact .contactSection .formBox .field-theme dd .checkList .wpcf7-form-control,
+#contact .contactSection .formBox .field-status dd .checkList .wpcf7-form-control,
+#contact .contactSection .formBox .field-method dd .checkList .wpcf7-form-control,
+#contact .contactSection .formBox .field-concern dd .checkList .wpcf7-form-control {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 0;
+  }
+  #contact .contactSection .formBox .field-theme dd .checkList .wpcf7-form-control .wpcf7-list-item,
+#contact .contactSection .formBox .field-status dd .checkList .wpcf7-form-control .wpcf7-list-item,
+#contact .contactSection .formBox .field-method dd .checkList .wpcf7-form-control .wpcf7-list-item,
+#contact .contactSection .formBox .field-concern dd .checkList .wpcf7-form-control .wpcf7-list-item {
+    width: 50%;
+  }
+}
+#contact .contactSection .formBox .propertyList .propertyBox + .propertyBox {
+  margin: 20px 0 0;
+}
+#contact .contactSection .formBox .propertyList .propertyBox .unitBox {
+  display: flex;
+  align-items: center;
+}
+#contact .contactSection .formBox .propertyList .propertyBox .unitBox .inputBox {
+  width: 100px;
+}
+#contact .contactSection .formBox .propertyList .propertyBox .unitBox .unit {
+  display: inline-block;
+  margin: 0 0 0 10px;
+}
+@media (min-width: 1025px) {
+  #contact .contactSection .formBox .propertyList .propertyBox {
+    display: flex;
+    align-items: center;
+  }
+  #contact .contactSection .formBox .propertyList .propertyBox .ttl {
+    width: 80px;
+  }
+  #contact .contactSection .formBox .propertyList .propertyBox .item {
+    width: calc(100% - 85px);
+  }
+}
+#contact .contactSection .formBox .wpcf7 form .wpcf7-response-output {
+  text-align: center;
+}
+#contact .contactSection .bottomNote {
+  margin: 30px 0 0;
+  text-align: center;
+}
+#contact .contactSection .bottomNote aside {
+  display: inline-block;
+  font-size: 12px;
+  text-align: left;
+}
+
+/* --------------------------------------------------
+	form
+-------------------------------------------------- */
+.formBox {
+  /*テキストエリア*/
+}
+.formBox input[type=text],
+.formBox input[type=email],
+.formBox input[type=tel] {
+  width: 100%;
+  height: 45px;
+  padding-left: 25px;
+  font-size: 16px;
+  border: 1px solid #aaaaaa;
+  background: #ffffff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.formBox textarea {
+  width: 100%;
+  height: 100px;
+  padding: 20px 25px;
+  font-size: 16px;
+  border: 1px solid #aaaaaa;
+  background: #ffffff;
+  resize: none;
+}
+.formBox input[type=text]:focus,
+.formBox input[type=email]:focus,
+.formBox input[type=tel]:focus,
+.formBox textarea:focus {
+  outline: 0;
+}
+.formBox ::placeholder {
+  color: #000000;
+  opacity: 0.3;
+}
+.formBox .radioList {
+  display: flex;
+  gap: 0 40px;
+}
+.formBox .radioList .wpcf7-form-control {
+  display: flex;
+  gap: 0 20px;
+}
+.formBox .radioList label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.formBox .radioList label input[type=radio] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin: 0 10px 0 0;
+  border: 1px solid #aaaaaa;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+.formBox .radioList label input[type=radio]:checked {
+  border-color: #b5a253;
+}
+.formBox .radioList label input[type=radio]:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #b5a253;
+}
+.formBox .radioList label .wpcf7-list-item-label {
+  cursor: pointer;
+}
+.formBox .checkList label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.formBox .checkList label input[type=checkbox] {
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  margin: 0 10px 0 0;
+  border-radius: 0;
+  border: 1px solid #aaaaaa;
+  position: relative;
+  cursor: pointer;
+}
+.formBox .checkList label input[type=checkbox]:checked {
+  border-color: #b5a253;
+  background: #b5a253;
+}
+.formBox .checkList label input[type=checkbox]:checked::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 6px;
+  width: 7px;
+  height: 14px;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  transform: rotate(45deg);
+}
+.formBox .checkList label .wpcf7-list-item-label {
+  cursor: pointer;
+}
+.formBox .submitBtn {
+  position: relative;
+  max-width: 520px;
+  margin: 40px auto 0;
+  /* 擬似要素の共通スタイル */
+  /* 左上へ配置 */
+  /* 右下へ配置 */
+  /* 左下へ配置 */
+  /* 右上へ配置 */
+  /* hover */
+}
+.formBox .submitBtn > span {
+  display: block;
+  position: relative;
+}
+.formBox .submitBtn input[type=submit] {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 20px;
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 0;
+  background: url("../image/common/more_arrow_right_white.png") right 30px center no-repeat #b4a152;
+  background-size: 25px auto;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  transition: 0.6s;
+}
+.formBox .submitBtn input[type=submit][disabled] {
+  cursor: default;
+  opacity: 0.6;
+}
+@media (min-width: 1025px) {
+  .formBox .submitBtn input[type=submit]:hover {
+    background: url("../image/common/more_arrow_right_white.png") right 25px center no-repeat #b4a152;
+    background-size: 25px auto;
+  }
+}
+.formBox .submitBtn::after, .formBox .submitBtn::before,
+.formBox .submitBtn > span::after,
+.formBox .submitBtn > span::before {
+  background-color: #000000;
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 10;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  pointer-events: none;
+}
+.formBox .submitBtn::after {
+  width: 0px;
+  height: 2px;
+  top: -1px;
+  left: -1px;
+}
+.formBox .submitBtn::before {
+  width: 0px;
+  height: 2px;
+  right: -1px;
+  bottom: -1px;
+}
+.formBox .submitBtn > span::after {
+  width: 2px;
+  height: 0px;
+  left: -1px;
+  bottom: -1px;
+}
+.formBox .submitBtn > span::before {
+  width: 2px;
+  height: 0px;
+  top: -1px;
+  right: -1px;
+}
+@media (min-width: 1025px) {
+  .formBox .submitBtn:hover::after, .formBox .submitBtn:hover::before {
+    width: 100%;
+    width: calc(100% + 1px);
+  }
+  .formBox .submitBtn:hover > span::after, .formBox .submitBtn:hover > span::before {
+    height: 100%;
+    height: calc(100% + 1px);
+  }
+}
+.formBox .submitBtn .wpcf7-spinner {
+  position: absolute;
+}
+.formBox .wpcf7-form-control-wrap .wpcf7-not-valid-tip {
+  display: none;
+}
+.formBox .wpcf7-form-control-wrap.is-show .wpcf7-not-valid-tip {
+  display: block;
+}
+
+/* --------------------------------------------------
+	news
+-------------------------------------------------- */
+#news .newsSection {
+  padding: 120px 0;
+}
+#news .newsSection .listPanel ul {
+  font-size: 15px;
+  border-top: 1px solid #d9d9d9;
+}
+#news .newsSection .listPanel ul li {
+  padding: 30px 200px;
+  border-bottom: 1px solid #d9d9d9;
+}
+#news .newsSection .listPanel ul li .info .time {
+  display: inline-block;
+  margin: 0 60px 0 0;
+}
+#news .newsSection .listPanel ul li .info .cate {
+  display: inline-block;
+  min-width: 90px;
+  padding: 5px;
+  font-size: 12px;
+  text-align: center;
+  border: 1px solid #000000;
+}
+#news .newsSection .listPanel ul li .ttl {
+  padding: 5px 0 0;
+}
+#news .newsSection .listPanel ul li .ttl a {
+  display: inline-block;
+  position: relative;
+}
+@media (min-width: 1025px) {
+  #news .newsSection .listPanel ul li {
+    display: flex;
+    gap: 0 20px;
+  }
+  #news .newsSection .listPanel ul li .ttl a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #000000;
+    transition: width 0.3s ease;
+  }
+  #news .newsSection .listPanel ul li .ttl a:hover {
+    opacity: 1;
+  }
+  #news .newsSection .listPanel ul li .ttl a:hover::after {
+    width: 100%;
+  }
+}
+#news .newsSection .detailPanel .ttlBox {
+  margin: 0 0 60px;
+}
+#news .newsSection .detailPanel .ttlBox h2 {
+  margin: 0 0 20px;
+  font-size: 28px;
+}
+#news .newsSection .detailPanel .ttlBox .info .time {
+  display: inline-block;
+  margin: 0 25px 0 0;
+}
+#news .newsSection .detailPanel .ttlBox .info .cate {
+  display: inline-block;
+  min-width: 90px;
+  padding: 5px;
+  font-size: 12px;
+  text-align: center;
+  border: 1px solid #000000;
+}
+#news .newsSection .detailPanel .cntBox {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 2;
+}
+#news .newsSection .detailPanel .cntBox p + p {
+  margin: 20px 0 0;
+}
+#news .newsSection .detailPanel .cntBox img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+#news .newsSection .backPanel {
+  margin: 120px 0 0;
+}
+#news .newsSection .backPanel .btnBack a {
+  display: inline-block;
+  padding: 0 0 0 40px;
+  font-size: 15px;
+  background: url("../image/common/btn_back_arrow.png") left center no-repeat;
+  background-size: 24px auto;
+}
+@media (min-width: 1025px) {
+  #news .newsSection .backPanel .btnBack a:hover {
+    opacity: 1;
+    padding: 0 0 0 30px;
+    background: url("../image/common/btn_back_arrow.png") left center no-repeat;
+    background-size: 17px auto;
+  }
+}
+
+/* --------------------------------------------------
+	policy
+-------------------------------------------------- */
+#policy .policySection {
+  padding: 120px 0;
+}
+#policy .policySection .secContainer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+#policy .policySection .section {
+  margin: 80px 0 0;
+}
+#policy .policySection .section h2 {
+  margin: 0 0 20px;
+  font-size: 24px;
+}
+#policy .policySection .section .txt p + p {
+  margin: 30px 0 0;
+}
+#policy .policySection .section .txt a {
+  display: inline-block;
+  text-decoration: underline;
+}

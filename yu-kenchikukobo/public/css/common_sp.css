@@ -1,0 +1,200 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+	共通CSS（SMP）
+===================================================*/
+/* --------------------------------------------------
+	base
+-------------------------------------------------- */
+body {
+  min-width: 0;
+  font-size: 14px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/*改行*/
+.pcBreak {
+  display: none;
+}
+
+.spBreak {
+  display: block;
+}
+
+/*spのみ表示*/
+.pcHidden {
+  display: block;
+}
+
+.spHidden {
+  display: none;
+}
+
+#sideBtn {
+  display: none;
+}
+
+.topicPath {
+  display: none;
+}
+
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+header .headBox {
+  padding: 0;
+}
+header #menuBtn {
+  top: 20px;
+}
+
+/* --------------------------------------------------
+	main
+-------------------------------------------------- */
+main {
+  margin: 68px 0 0;
+}
+
+.pageKvPanel .kvTitle {
+  padding: 30px 20px 15px;
+}
+.pageKvPanel .kvTitle h1 {
+  font-size: 24px;
+}
+
+.pageSecTtlBox {
+  margin: 0 0 30px;
+}
+.pageSecTtlBox .sub {
+  margin: 0 0 5px;
+  padding: 0 0 0 15px;
+  font-size: 12px;
+}
+.pageSecTtlBox .sub::before {
+  width: 10px;
+  height: 10px;
+}
+.pageSecTtlBox .pageSecTtl {
+  font-size: 20px;
+}
+
+.pageSecTtlBox02 {
+  margin: 0 0 30px;
+}
+.pageSecTtlBox02 .sub {
+  margin: 0 0 5px;
+  padding: 0 0 0 15px;
+  font-size: 12px;
+}
+.pageSecTtlBox02 .sub::before {
+  width: 10px;
+  height: 10px;
+}
+.pageSecTtlBox02 .pageSecTtl {
+  font-size: 18px;
+}
+
+.pageSecSubTtlBox {
+  margin: 0 0 30px;
+}
+.pageSecSubTtlBox .pageSecSubTtl {
+  max-width: 450px;
+}
+.pageSecSubTtlBox .pageSecSubTtl > * {
+  padding: 0 30px 7px;
+  font-size: 18px;
+}
+.pageSecSubTtlBox .pageSecSubTtl > *::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  width: 14px;
+  height: 40px;
+  background: url("../image/common/page_sec_sub_ttl_slash.png") no-repeat;
+  background-size: 100% auto;
+}
+
+.mapBox {
+  padding: 0 0 70%;
+}
+
+/* --------------------------------------------------
+	footer
+-------------------------------------------------- */
+.footer .footContact {
+  padding: 40px 0;
+}
+.footer .footContact .pageSecTtlBox {
+  margin: 0 0 15px;
+}
+.footer .footContact .topTxt {
+  margin: 0 0 40px;
+}
+.footer .footContact .contactItems .itemBox {
+  padding: 0 20px 20px;
+  border-top: 1px solid #8c8781;
+  border-bottom: 1px solid #8c8781;
+}
+.footer .footContact .contactItems .itemBox + .itemBox {
+  margin: 60px 0 0;
+}
+.footer .footContact .contactItems .itemBox dl dt {
+  position: relative;
+  top: -15px;
+  padding: 0 20px;
+  background: #534e47;
+}
+.footer .footContact .contactItems .itemBox dl dt span {
+  font-size: 18px;
+}
+.footer .footContact .contactItems .itemBox dl dt .mail {
+  padding: 0 20px;
+  background: url("../image/common/footer_contact_mail.png") left center no-repeat;
+  background-size: 15px auto;
+}
+.footer .footContact .contactItems .itemBox dl dd {
+  padding: 10px 0 0;
+}
+.footer .footContact .contactItems .itemBox dl dd .tel a {
+  font-size: 30px;
+}
+.footer .footPanel {
+  padding: 60px 0 15px;
+}
+.footer .footPanel .pagetop {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  cursor: pointer;
+}
+.footer .footPanel .logoBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 0 0 25px;
+}
+.footer .footPanel .logoBox .logo {
+  width: 200px;
+}
+.footer .footPanel .logoBox .insta {
+  width: 35px;
+}
+.footer .footPanel .txt {
+  margin: 0 0 30px;
+  font-size: 15px;
+}
+.footer .footPanel .info {
+  font-size: 15px;
+}
+.footer .footPanel .info .tel {
+  margin: 0 0 15px;
+}
+.footer .footPanel .copy {
+  margin: 50px 0 0;
+}

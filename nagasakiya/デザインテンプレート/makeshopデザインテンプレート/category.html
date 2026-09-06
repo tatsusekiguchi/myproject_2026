@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="ja" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title><{$page.title}></title>
+    <meta name="description" content="<{$page.description}>" />
+    <link rel="canonical" href="<{$page.canonical_url}>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="<{$page.title}>" />
+    <meta property="og:description" content="<{$page.description}>" />
+    <meta property="og:site_name" content="<{$shop.name}>" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="shortcut icon" type="image/ico" href="<{$shop.favicon_url}>" />
+    <link href="<{$page.css}>" rel="stylesheet" />
+    <link
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <{$makeshop.head}>
+  </head>
+
+  <body>
+    <{$makeshop.body_top}> <{$module.header}>
+
+    <div class="contents">
+      <!--カテゴリートップビジュアル-->
+      <{if $category.image_url}>
+      <section class="main-visual">
+        <img
+          src="<{$category.image_url}>"
+          alt="<{$category.name}>"
+          class="category-image"
+        />
+      </section>
+      <{/if}>
+
+      <div class="breadcrumb">
+        <span class="breadcrumb-item"><a href="<{$url.top}>">ホーム</a></span>
+        <{section name=i loop=$category.breadcrumb_list.list}>
+        <span
+          class="breadcrumb-item <{if $category.breadcrumb_list.list[i].is_current}>current<{/if}>"
+        >
+          <a href="<{$category.breadcrumb_list.list[i].url}>"
+            ><{$category.breadcrumb_list.list[i].name}></a
+          >
+        </span>
+        <{/section}>
+      </div>
+
+      <div class="container">
+        <{$module.side}>
+
+        <main class="main">
+          <section class="main-section">
+            <!--カテゴリーおすすめ商品-->
+            <{if $category.recommend_item.has_item}>
+            <h2><{$category.name}>のおすすめ商品</h2>
+            <ul class="item-list">
+              <{section name=i loop=$category.recommend_item.list max=4}>
+              <li>
+                <div class="item-icon">
+                  <{if $category.recommend_item.list[i].is_soldout}>
+                  <p class="item-soldout">SOLD OUT</p>
+                  <{elseif $category.recommend_item.list[i].is_sale}>
+                  <p class="item-sale">SALE</p>
+                  <{/if}>
+                </div>
+
+                <div class="item-list-image">
+                  <a href="<{$category.recommend_item.list[i].url}>"
+                    ><img
+                      src="<{$category.recommend_item.list[i].image_L}>"
+                      alt=""
+                      loading="lazy"
+                  /></a>
+                  <div class="favorite item-list-favorite">
+                    <a
+                      href="<{$category.recommend_item.list[i].favorite_entry_url}>"
+                      class="favorite-icon favorite-off <{if $category.recommend_item.list[i].is_favorite}>hide<{/if}>"
+                    ></a>
+                    <a
+                      href="<{$category.recommend_item.list[i].favorite_remove_url}>"
+                      class="favorite-icon favorite-on <{if !$category.recommend_item.list[i].is_favorite}>hide<{/if}>"
+                    ></a>
+                  </div>
+                </div>
+                <{if $category.recommend_item.list[i].base_category.url}>
+                <p class="item-category">
+                  <a
+                    href="<{$category.recommend_item.list[i].base_category.url}>"
+                    ><{$category.recommend_item.list[i].base_category.name}></a
+                  >
+                </p>
+                <{/if}>
+                <p class="item-name">
+                  <a href="<{$category.recommend_item.list[i].url}>"
+                    ><{$category.recommend_item.list[i].name|escape:html}></a
+                  >
+                </p>
+                <{if $category.recommend_item.list[i].is_sale}>
+                <p class="price original-price">
+                  ￥<{$category.recommend_item.list[i].original_price|number_format}><span
+                    >（税込）</span
+                  >
+                </p>
+                <p class="price item-sale-price">
+                  ￥<{$category.recommend_item.list[i].price|number_format}><span
+                    class="tax"
+                    >（税込）</span
+                  >
+                  <span class="sale-discount-rate"
+                    >[<{$category.recommend_item.list[i].sale_rate}>%OFF</span
+                  >]
+                </p>
+                <{else}>
+                <p class="price">
+                  ￥<{$category.recommend_item.list[i].price|number_format}><span
+                    >（税込）</span
+                  >
+                </p>
+                <{/if}>
+                <div
+                  class="review-summary-container"
+                  data-gname="<{$category.recommend_item.list[i].system_code}>"
+                  data-pid="<{$category.recommend_item.list[i].system_code}>"
+                  data-group="true"
+                  data-action="summary"
+                ></div>
+                <div class="item-list-cart">
+                  <{if $category.recommend_item.list[i].is_soldout}>
+                  <div class="item-list-sold item-list-btn">売り切れ</div>
+                  <{else}>
+                  <form
+                    action="https://2068nagasaki.shop2.makeshop.jp/api/basket/add.html"
+                    method="post"
+                    class="ajax-cart-form"
+                    accept-charset="EUC-JP"
+                  >
+                    <!-- オプションがある場合 -->
+                    <{if $category.recommend_item.list[i].has_option &&
+                    $category.recommend_item.list[i].option.has_item}> <{if
+                    $category.recommend_item.list[i].option.option1.has_item}>
+                    <div class="item-option-select">
+                      <label
+                        ><{$category.recommend_item.list[i].option.option1_label}>：</label
+                      >
+                      <select name="option1_id" class="option-select">
+                        <option value="">選択してください</option>
+                        <{section name=o1
+                        loop=$category.recommend_item.list[i].option.option1.list}>
+                        <option
+                          value="<{$category.recommend_item.list[i].option.option1.list[o1].id}>"
+                        >
+                          <{$category.recommend_item.list[i].option.option1.list[o1].name}>
+                        </option>
+                        <{/section}>
+                      </select>
+                    </div>
+                    <{/if}> <{if
+                    $category.recommend_item.list[i].option.option2.has_item}>
+                    <div class="item-option-select">
+                      <label
+                        ><{$category.recommend_item.list[i].option.option2_label}>：</label
+                      >
+                      <select name="option2_id" class="option-select">
+                        <option value="">選択してください</option>
+                        <{section name=o2
+                        loop=$category.recommend_item.list[i].option.option2.list}>
+                        <option
+                          value="<{$category.recommend_item.list[i].option.option2.list[o2].id}>"
+                        >
+                          <{$category.recommend_item.list[i].option.option2.list[o2].name}>
+                        </option>
+                        <{/section}>
+                      </select>
+                    </div>
+                    <{/if}> <{/if}>
+
+                    <!-- オプショングループ（固定値） -->
+                    <div class="item-option-group">
+                      <label>サイズ：</label>
+                      <select
+                        name="option_group[]"
+                        class="option-group-select"
+                        data-item-name="size"
+                      >
+                        <option value="">選択してください</option>
+                        <option value="S|0">S</option>
+                        <option value="M|0">M</option>
+                        <option value="L|0">L</option>
+                      </select>
+                    </div>
+
+                    <!-- 数量入力 -->
+                    <div class="item-quantity-select">
+                      <label>数量：</label>
+                      <input
+                        type="number"
+                        name="quantity"
+                        value="1"
+                        min="1"
+                        class="quantity-input"
+                      />
+                    </div>
+
+                    <input
+                      type="hidden"
+                      name="brand_info"
+                      value=""
+                      class="brand-info-input"
+                    />
+                    <input
+                      type="hidden"
+                      name="system_code"
+                      value="<{$category.recommend_item.list[i].system_code}>"
+                    />
+
+                    <button
+                      type="submit"
+                      class="item-list-btn add-list-cart cart-order-btn ajax-cart-add"
+                    >
+                      カートに入れる
+                    </button>
+                  </form>
+                  <{/if}>
+                </div>
+              </li>
+              <{/section}>
+            </ul>
+            <{/if}>
+
+            <!--カテゴリー名-->
+            <div class="category-title">
+              <h2><{$category.name}><span><{$category.code}></span></h2>
+              <dl class="list-head-sort">
+                <dt>並べ替え：</dt>
+                <dd>
+                  <a href="<{$category.sort_low_price_url}>">価格の低い順</a>
+                </dd>
+                <dd>
+                  <a href="<{$category.sort_high_price_url}>">価格の高い順</a>
+                </dd>
+                <dd>
+                  <a href="<{$category.sort_recommend_url}>">おすすめ順</a>
+                </dd>
+                <dd><a href="<{$category.sort_new_url}>">新着順</a></dd>
+              </dl>
+            </div>
+
+            <!--子カテゴリー名-->
+            <{if $category.child_category.has_item}>
+            <ul class="category-child-item">
+              <{section name=i loop=$category.child_category.list}>
+              <li>
+                <a href="<{$category.child_category.list[i].url}>"
+                  ><{$category.child_category.list[i].name}><span
+                    class="child-category-count"
+                    >（<{$category.child_category.list[i].item_count}>）</span
+                  ></a
+                >
+              </li>
+              <{/section}>
+            </ul>
+            <{/if}>
+
+            <!--カテゴリーアイテム-->
+            <{if $category.item.has_item}>
+
+            <ul class="item-list">
+              <{section name=i loop=$category.item.list}>
+              <li>
+                <div class="item-icon">
+                  <{if $category.item.list[i].is_soldout}>
+                  <p class="item-soldout">SOLD OUT</p>
+                  <{elseif $category.item.list[i].is_sale}>
+                  <p class="item-sale">SALE</p>
+                  <{/if}>
+                </div>
+
+                <div class="item-list-image">
+                  <a href="<{$category.item.list[i].url}>"
+                    ><img
+                      src="<{$category.item.list[i].image_L}>"
+                      alt=""
+                      loading="lazy"
+                  /></a>
+                  <div class="favorite item-list-favorite">
+                    <a
+                      href="<{$category.item.list[i].favorite_entry_url}>"
+                      class="favorite-icon favorite-off <{if $category.item.list[i].is_favorite}>hide<{/if}>"
+                    ></a>
+                    <a
+                      href="<{$category.item.list[i].favorite_remove_url}>"
+                      class="favorite-icon favorite-on <{if !$category.item.list[i].is_favorite}>hide<{/if}>"
+                    ></a>
+                  </div>
+                </div>
+                <{if $category.item.list[i].base_category.url}>
+                <p class="item-category">
+                  <a href="<{$category.item.list[i].base_category.url}>"
+                    ><{$category.item.list[i].base_category.name}></a
+                  >
+                </p>
+                <{/if}>
+                <p class="item-name">
+                  <a href="<{$category.item.list[i].url}>"
+                    ><{$category.item.list[i].name|escape:html}></a
+                  >
+                </p>
+                <{if $category.item.list[i].is_sale}>
+                <p class="price original-price">
+                  ￥<{$category.item.list[i].original_price|number_format}><span
+                    >（税込）</span
+                  >
+                </p>
+                <p class="price item-sale-price">
+                  ￥<{$category.item.list[i].price|number_format}><span
+                    class="tax"
+                    >（税込）</span
+                  >
+                  <span class="sale-discount-rate"
+                    >[<{$category.item.list[i].sale_rate}>%OFF</span
+                  >]
+                </p>
+                <{else}>
+                <p class="price">
+                  ￥<{$category.item.list[i].price|number_format}><span
+                    >（税込）</span
+                  >
+                </p>
+                <{/if}>
+                <div
+                  class="review-summary-container"
+                  data-gname="<{$category.item.list[i].system_code}>"
+                  data-pid="<{$category.item.list[i].system_code}>"
+                  data-group="true"
+                  data-action="summary"
+                ></div>
+                <div class="item-list-cart">
+                  <{if $category.item.list[i].is_soldout}>
+                  <div class="item-list-sold item-list-btn">売り切れ</div>
+                  <{else}>
+                  <form
+                    action="https://2068nagasaki.shop2.makeshop.jp/api/basket/add.html"
+                    method="post"
+                    class="ajax-cart-form"
+                    accept-charset="EUC-JP"
+                  >
+                    <!-- オプションがある場合 -->
+                    <{if $category.item.list[i].has_option &&
+                    $category.item.list[i].option.has_item}> <{if
+                    $category.item.list[i].option.option1.has_item}>
+                    <div class="item-option-select">
+                      <label
+                        ><{$category.item.list[i].option.option1_label}>：</label
+                      >
+                      <select name="option1_id" class="option-select">
+                        <option value="">選択してください</option>
+                        <{section name=o1
+                        loop=$category.item.list[i].option.option1.list}>
+                        <option
+                          value="<{$category.item.list[i].option.option1.list[o1].id}>"
+                        >
+                          <{$category.item.list[i].option.option1.list[o1].name}>
+                        </option>
+                        <{/section}>
+                      </select>
+                    </div>
+                    <{/if}> <{if
+                    $category.item.list[i].option.option2.has_item}>
+                    <div class="item-option-select">
+                      <label
+                        ><{$category.item.list[i].option.option2_label}>：</label
+                      >
+                      <select name="option2_id" class="option-select">
+                        <option value="">選択してください</option>
+                        <{section name=o2
+                        loop=$category.item.list[i].option.option2.list}>
+                        <option
+                          value="<{$category.item.list[i].option.option2.list[o2].id}>"
+                        >
+                          <{$category.item.list[i].option.option2.list[o2].name}>
+                        </option>
+                        <{/section}>
+                      </select>
+                    </div>
+                    <{/if}> <{/if}>
+
+                    <!-- オプショングループ（固定値） -->
+                    <div class="item-option-group">
+                      <label>サイズ：</label>
+                      <select
+                        name="option_group[]"
+                        class="option-group-select"
+                        data-item-name="size"
+                      >
+                        <option value="">選択してください</option>
+                        <option value="S|0">S</option>
+                        <option value="M|0">M</option>
+                        <option value="L|0">L</option>
+                      </select>
+                    </div>
+
+                    <!-- 数量入力 -->
+                    <div class="item-quantity-select">
+                      <label>数量：</label>
+                      <input
+                        type="number"
+                        name="quantity"
+                        value="1"
+                        min="1"
+                        class="quantity-input"
+                      />
+                    </div>
+
+                    <input
+                      type="hidden"
+                      name="brand_info"
+                      value=""
+                      class="brand-info-input"
+                    />
+                    <input
+                      type="hidden"
+                      name="system_code"
+                      value="<{$category.item.list[i].system_code}>"
+                    />
+
+                    <button
+                      type="submit"
+                      class="item-list-btn add-list-cart cart-order-btn ajax-cart-add"
+                    >
+                      カートに入れる
+                    </button>
+                  </form>
+                  <{/if}>
+                </div>
+              </li>
+              <{/section}>
+            </ul>
+
+            <!--ページャー-->
+            <div class="pager-wrap">
+              <p class="total-count">
+                （全<span><{$category.total_count}></span>件）<{$category.display_count}>件表示
+              </p>
+              <{if $category.pager.has_item}>
+              <ul class="pager">
+                <{if !$category.pager.is_first_display}>
+                <li>
+                  <a href="<{$category.pager.first_url}>"
+                    ><span class="prev">一番前へ</span></a
+                  >
+                </li>
+                <{/if}> <{section name=i loop=$category.pager.list}> <{if
+                $category.pager.list[i].is_current_page}>
+                <li>
+                  <span class="current"
+                    ><{$category.pager.list[i].number}></span
+                  >
+                </li>
+                <{else}>
+                <li>
+                  <a href="<{$category.pager.list[i].url}>"
+                    ><span><{$category.pager.list[i].number}></span></a
+                  >
+                </li>
+                <{/if}> <{/section}> <{if !$category.pager.is_last_display}>
+                <li>
+                  <a href="<{$category.pager.last_url}>"
+                    ><span class="next">最後へ</span></a
+                  >
+                </li>
+                <{/if}>
+              </ul>
+              <{/if}>
+            </div>
+
+            <{else}>
+            <p class="empty">このカテゴリーには商品がありません</p>
+            <{/if}>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <{$module.footer}>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // フォーム送信前にbrand_infoを構築
+        $(".ajax-cart-form").on("submit", function (e) {
+          e.preventDefault();
+
+          var $form = $(this);
+          var $btn = $form.find(".ajax-cart-add");
+          var originalText = $btn.text();
+
+          // brand_infoの構築
+          var systemCode = $form.find('input[name="system_code"]').val();
+          var quantity = $form.find('input[name="quantity"]').val() || 1;
+          var option1Id = $form.find('select[name="option1_id"]').val() || "";
+          var option2Id = $form.find('select[name="option2_id"]').val() || "";
+
+          // オプショングループの値を収集
+          var optionGroupValues = [];
+          var optionGroupDetails = []; // デバッグ用
+          $form.find('select[name="option_group[]"]').each(function () {
+            var value = $(this).val();
+            var itemName = $(this).data("item-name");
+            if (value) {
+              optionGroupValues.push(value);
+              // デバッグ用: 選択されたオプショングループの詳細を保存
+              var parts = value.split("|");
+              optionGroupDetails.push({
+                groupName: itemName,
+                selectedValue: parts[0],
+                price: parts[1],
+              });
+            }
+          });
+          var optionGroupStr = optionGroupValues.join(",");
+
+          // brand_info形式: コード区分,商品コード,数量,定期購入フラグ,オプション1,オプション2,オプショングループ
+          var brandInfo =
+            "1," +
+            systemCode +
+            "," +
+            quantity +
+            ",N," +
+            option1Id +
+            "," +
+            option2Id +
+            "," +
+            optionGroupStr;
+
+          // brand_infoを設定
+          $form.find('input[name="brand_info"]').val(brandInfo);
+
+          // デバッグ: 選択された値をコンソールに出力
+          console.log("=== カート追加情報 ===");
+          console.log("商品コード:", systemCode);
+          console.log("数量:", quantity);
+          console.log("オプション1 ID:", option1Id || "なし");
+          console.log("オプション2 ID:", option2Id || "なし");
+          if (optionGroupDetails.length > 0) {
+            console.log("オプショングループ:");
+            optionGroupDetails.forEach(function (detail) {
+              console.log(
+                "  - " +
+                  detail.groupName +
+                  ": " +
+                  detail.selectedValue +
+                  " (価格差: " +
+                  detail.price +
+                  "円)",
+              );
+            });
+          } else {
+            console.log("オプショングループ: なし");
+          }
+          console.log("送信するbrand_info:", brandInfo);
+          console.log("====================");
+
+          // ボタンを無効化
+          $btn.prop("disabled", true).text("追加中...");
+
+          // 非表示のiframeを作成
+          var iframeName = "cart-iframe-" + Date.now();
+          var $iframe = $(
+            '<iframe name="' + iframeName + '" style="display:none;"></iframe>',
+          );
+          $("body").append($iframe);
+
+          // フォームのtargetをiframeに設定
+          $form.attr("target", iframeName);
+
+          // フォームを送信
+          $form[0].submit();
+
+          // 成功メッセージを表示
+          setTimeout(function () {
+            $btn.text("追加しました✓");
+
+            // 2秒後に元に戻す
+            setTimeout(function () {
+              $btn.prop("disabled", false).text(originalText);
+              $iframe.remove();
+            }, 2000);
+          }, 500);
+        });
+      });
+    </script>
+    <script src="<{$page.javascript}>"></script>
+    <{$makeshop.body_bottom}>
+  </body>
+</html>

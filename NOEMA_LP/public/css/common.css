@@ -1,0 +1,524 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap");
+/* CSS Document */
+/*===================================================
+	共通CSS（PC/SMP）
+===================================================*/
+/*////////////////////////////////////////////////////////////
+	共通設定
+///////////////////////////////////////////////////////////*/
+/* --------------------------------------------------
+	base
+-------------------------------------------------- */
+* {
+  box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  font-family: "hiragino-kaku-gothic-pron", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #000000;
+  font-size: 16px;
+  background: #ffffff;
+  transition: 2s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.5;
+}
+
+.txt {
+  line-height: 1.7;
+}
+
+/*リンク */
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* 画像幅 */
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* clearfix */
+.clearfix::after {
+  content: ".";
+  display: block;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.spBreak {
+  display: none;
+}
+
+@media (min-width: 1140px) {
+  a {
+    transition: 0.6s;
+  }
+
+  a:hover {
+    opacity: 0.6;
+  }
+}
+.fax a {
+  pointer-events: none;
+}
+
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+.header .logo {
+  position: fixed;
+  top: 3vw;
+  left: 5%;
+  width: 112px;
+  z-index: 999;
+}
+.header .logo a {
+  display: block;
+}
+.header .headItemBox {
+  position: fixed;
+  top: 3vw;
+  right: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 580px;
+  z-index: 999;
+}
+.header .headItemBox .headItem {
+  width: 460px;
+}
+.header .headItemBox .headItem ul {
+  display: flex;
+  justify-content: space-between;
+}
+.header .headItemBox .headItem ul li {
+  width: calc(50% - 10px);
+}
+.header .headItemBox .headItem ul li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid #ffffff;
+  background: #8d969d;
+}
+.header .hamburgerBox {
+  position: fixed;
+  top: 3vw;
+  right: 5%;
+  z-index: 1000;
+}
+.header .hamburgerBox .hamburger {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 60px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.header .hamburgerBox .hamburger p {
+  font-family: helvetica-neue-lt-pro, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  font-size: 20px;
+  transition: 0.4s;
+}
+.header .hamburgerBox .hamburger span {
+  position: absolute;
+  right: 0;
+  width: 30px;
+  height: 2px;
+  background: #ffffff;
+  transition: 0.4s;
+}
+.header .hamburgerBox .hamburger .top {
+  top: 0;
+}
+.header .hamburgerBox .hamburger .bottom {
+  bottom: 0;
+}
+.header .hamburgerBox .hamburger.is-open p {
+  opacity: 0;
+}
+.header .hamburgerBox .hamburger.is-open span {
+  width: 60px;
+}
+.header .hamburgerBox .hamburger.is-open .top {
+  transform: rotate(65deg);
+  top: 50%;
+}
+.header .hamburgerBox .hamburger.is-open .bottom {
+  transform: rotate(-65deg);
+  bottom: 50%;
+}
+.header.topHeader .logo .logoBlack {
+  display: none;
+}
+.header.pageHeader .logo .logoWhite {
+  display: none;
+}
+.header.pageHeader .headItemBox .headItem ul li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  font-size: 18px;
+  color: #000000;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid #000000;
+  background: #ffffff;
+}
+.header.pageHeader .hamburgerBox .hamburger:not(.is-open) {
+  color: #000000;
+}
+.header.pageHeader .hamburgerBox .hamburger:not(.is-open) span {
+  background: #000000;
+}
+
+/* --------------------------------------------------
+	nav
+-------------------------------------------------- */
+.navBox .navList ul li + li {
+  margin: 10px 0 0;
+}
+.navBox .navList ul li a {
+  display: inline-block;
+  font-family: helvetica-neue-lt-pro, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  font-size: 20px;
+  color: #ffffff;
+}
+@media (min-width: 1140px) {
+  .navBox .navList ul li.line a {
+    position: relative;
+  }
+  .navBox .navList ul li.line a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: currentColor;
+    transition: width 0.4s ease;
+  }
+  .navBox .navList ul li.line a:hover {
+    opacity: 1;
+  }
+  .navBox .navList ul li.line a:hover::after {
+    width: 100%;
+  }
+}
+.navBox .navMessage {
+  margin: 40px 0 30px;
+  font-family: helvetica-neue-lt-pro, sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  font-size: 12px;
+}
+.navBox .snsBox {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 40px;
+}
+.navBox .snsBox ul {
+  display: flex;
+  gap: 0 20px;
+}
+.navBox .snsBox ul li {
+  width: 25px;
+}
+.navBox .snsBox ul li a {
+  display: block;
+}
+.navBox .snsBox .navLogo {
+  width: 100px;
+}
+.navBox .photo {
+  max-width: 190px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1140px) {
+  .navBox {
+    display: none;
+    position: fixed;
+    top: 2vw;
+    right: 3%;
+    z-index: 999;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+  }
+  .navBox .navPanel {
+    width: 365px;
+    padding: 120px 45px 50px;
+    color: #ffffff;
+    transition: 0.6s;
+  }
+
+  .fixedSpBottomNav {
+    display: none;
+  }
+
+  .pageHeader .navBox {
+    background: rgba(0, 0, 0, 0.35);
+  }
+}
+/* --------------------------------------------------
+	main
+-------------------------------------------------- */
+main {
+  overflow: hidden;
+}
+
+.pageMain {
+  padding: 200px 25px 0;
+}
+
+.pageMainContainer {
+  width: 88%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.pageTitleContainer {
+  padding: 0 0 25px;
+  text-align: center;
+  border-bottom: 1px solid #000000;
+}
+.pageTitleContainer .sub {
+  font-family: futura-pt, sans-serif;
+  font-weight: 600;
+  font-size: clamp(60px, 5vw, 110px);
+}
+.pageTitleContainer .sub > * {
+  line-height: 1.2;
+}
+.pageTitleContainer .secTtl {
+  font-size: clamp(18px, 1.5vw, 26px);
+}
+
+.secWrap {
+  max-width: 1640px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.secWrap01 {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.secWrap02 {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.mapBox {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding: 0 0 45%;
+}
+.mapBox iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* --------------------------------------------------
+	footer
+-------------------------------------------------- */
+.footer {
+  padding: 100px 7%;
+  background: url("../image/common/footer_bg_pc.png") no-repeat;
+  background-size: cover;
+}
+.footer .logo {
+  width: 25%;
+  max-width: 375px;
+  margin: 0 0 160px;
+}
+.footer .footBox01 {
+  position: relative;
+  margin: 0 0 30px;
+}
+.footer .footBox01 .photo {
+  width: 30%;
+  max-width: 380px;
+  margin: 0 auto;
+}
+.footer .footBox01 .footNav ul li a {
+  display: inline-block;
+  font-family: helvetica-neue-lt-pro, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+}
+@media (min-width: 1140px) {
+  .footer .footBox01 .footNav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  .footer .footBox01 .footNav ul {
+    display: flex;
+    justify-content: center;
+    gap: 0 clamp(20px, 3vw, 40px);
+  }
+  .footer .footBox01 .footNav ul li a {
+    font-size: clamp(14px, 1.2vw, 22px);
+  }
+  .footer .footBox01 .footNav ul li.line a {
+    position: relative;
+    display: inline-block;
+  }
+  .footer .footBox01 .footNav ul li.line a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: currentColor;
+    transition: width 0.4s ease;
+  }
+  .footer .footBox01 .footNav ul li.line a:hover {
+    opacity: 1;
+  }
+  .footer .footBox01 .footNav ul li.line a:hover::after {
+    width: 100%;
+  }
+}
+.footer .footBox02 dl {
+  margin: 0 0 40px;
+  font-family: helvetica-neue-lt-pro, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+}
+.footer .footBox02 dl dt {
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+.footer .footBox02 dl dd {
+  font-size: 12px;
+}
+.footer .footBox02 .snsBox {
+  margin: 0 0 40px;
+}
+.footer .footBox02 .snsBox ul {
+  display: flex;
+  gap: 0 20px;
+}
+.footer .footBox02 .snsBox ul li {
+  width: 25px;
+}
+.footer .footBox02 .snsBox ul li a {
+  display: block;
+}
+.footer .footBox02 .bottomBox {
+  display: flex;
+  align-items: center;
+  gap: 0 20px;
+}
+.footer .footBox02 .bottomBox .copy {
+  font-family: helvetica-neue-lt-pro, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  font-size: 14px;
+  color: #ffffff;
+}
+.footer .footBox02 .bottomBox .policy a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* --------------------------------------------------
+	fadeAnimation
+-------------------------------------------------- */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  /* 背景カラー */
+  z-index: 9999;
+  /* 一番手前に */
+  pointer-events: none;
+  /* 他の要素にアクセス可能にするためにポインターイベントは無効に */
+  opacity: 0;
+  /* 初期値では非表示 */
+  -webkit-transition: opacity 0.8s ease;
+  /* アニメーション時間は 0.8秒 */
+  -ms-transition: opacity 0.8s ease;
+  -moz-transition: opacity 0.8s ease;
+  transition: opacity 0.8s ease;
+}
+
+/*body要素に.fadeoutセレクタがある場合には、レイヤーが表示されるようにopacityを１に設定します。*/
+body.fadeout::after {
+  opacity: 1;
+}
+
+/*お好みで、.fadeoutセレクタ以下の他の要素にもアニメーション用のCSSを定義します*/
+/*DEMOではページ遷移時にarticle要素のスケールもアニメーションさせています*/
+body.fadeout article {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}

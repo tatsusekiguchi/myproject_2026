@@ -1,0 +1,81 @@
+// ▽メイン▽
+.worksMain.main
+    .pageTitleContainer
+        .pageTitleBox
+            p WORKS
+            h1 製作事例
+    .worksSection
+        .secWrap01
+            .searchPanel
+                .searchTitle
+                    h2 条件で絞り込む
+                <form class="webgene-search-form" method="get" action="">
+                    <div rel="業種カテゴリ" title="業種カテゴリ" class=" webgene-search-form-block">
+                    <div class="search-title-wrapper">
+                    <p class="search-title">業種カテゴリ</p>
+                    </div>
+                    <div class="search-area-wrapper">
+                    <div class="search-subtitle-wrapper">
+                    </div>
+                    <div class="search-contents-wrapper">
+                    <label><input type="checkbox" class="property_facility_cd" name="s0l0[]" value="2">テスト業種カテゴリ02</label>
+                    <label><input type="checkbox" class="property_facility_cd" name="s0l0[]" value="1" checked="">テスト業種カテゴリ01</label>
+                    </div>
+                    </div>
+                    </div>
+                    <div rel="看板の種類" title="看板の種類" class=" webgene-search-form-block">
+                    <div class="search-title-wrapper">
+                    <p class="search-title">看板の種類</p>
+                    </div>
+                    <div class="search-area-wrapper">
+                    <div class="search-subtitle-wrapper">
+                    </div>
+                    <div class="search-contents-wrapper">
+                    <label><input type="checkbox" class="property_facility_cd2" name="s1l0[]" value="2">テスト看板02</label>
+                    <label><input type="checkbox" class="property_facility_cd2" name="s1l0[]" value="1">テスト看板01</label>
+                    </div>
+                    </div>
+                    </div>
+                    <div rel="材料の種類" title="材料の種類" class=" webgene-search-form-block">
+                    <div class="search-title-wrapper">
+                    <p class="search-title">材料の種類</p>
+                    </div>
+                    <div class="search-area-wrapper">
+                    <div class="search-subtitle-wrapper">
+                    </div>
+                    <div class="search-contents-wrapper">
+                    <label><input type="checkbox" class="property_facility_cd3" name="s2l0[]" value="2">テスト材料02</label>
+                    <label><input type="checkbox" class="property_facility_cd3" name="s2l0[]" value="1">テスト材料01</label>
+                    </div>
+                    </div>
+                    </div>
+                    <input type="submit" class="search-submit" value="この条件で絞り込む"><input type="hidden" name="wgsearch" value="property">
+                </form>
+            .resultPanel
+                section.webgene-blog
+                    .webgene-header
+                        h3 制作事例一覧
+                    - for (var i = 1; i <= 8; i++)
+                        .webgene-item
+                            a(href="")
+                                .photo
+                                    img(src="https://sit-4011322.sibloo.com/system_panel/uploads/images/top_sec01_list_01.png", alt="")
+                                .txtBox
+                                    .txt
+                                        p おかぁん食堂_カルプサイン電飾FFシートサイン_舞鶴市
+                                    .cate.works-category
+                                        div カテゴリ01、カテゴリ02
+                                        div カテゴリ03、カテゴリ04
+                    .webgene-pagination
+                        ul
+                            li.prev
+                                a(href="/bloglist?wg%5Bwgc-1586149173114_page%5D=2") 前へ
+                            li.number
+                                a(href="/bloglist?wg%5Bwgc-1586149173114_page%5D=1") 1
+                            li.number
+                                a(href="/bloglist?wg%5Bwgc-1586149173114_page%5D=2") 2
+                            li.number.selected
+                                a(href="/bloglist?wg%5Bwgc-1586149173114_page%5D=3") 3
+                            li.next
+                                a(href="/bloglist?wg%5Bwgc-1586149173114_page%5D=2") 次へ
+// △メイン△

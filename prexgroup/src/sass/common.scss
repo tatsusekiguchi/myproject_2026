@@ -1,0 +1,519 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap");
+@import "./mixin";
+@import "./mod";
+/* CSS Document */
+/*===================================================
+	共通CSS（PC/SMP）
+===================================================*/
+
+/*////////////////////////////////////////////////////////////
+	共通設定
+///////////////////////////////////////////////////////////*/
+
+/* --------------------------------------------------
+	base
+-------------------------------------------------- */
+* {
+  box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+}
+body {
+  position: relative;
+  overflow-x: hidden;
+  // font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3","Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+  font-family:
+    "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic",
+    "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo",
+    "verdana", sans-serif;
+  line-height: 1.5;
+  color: $mainColor;
+  font-size: $PCfontSize;
+  background: $bgBaseColor;
+  // transition: 2s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: $lhBase;
+}
+
+.txt {
+  line-height: $lhTxt;
+}
+
+/*リンク */
+a {
+  color: $mainColor;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+
+/* 画像幅 */
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* clearfix */
+.clearfix::after {
+  content: ".";
+  display: block;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.spBreak {
+  display: none;
+}
+
+@media (min-width: 1025px) {
+  a {
+    transition: 0.6s;
+  }
+
+  a:hover {
+    opacity: 0.6;
+  }
+}
+
+.fax {
+  a {
+    pointer-events: none;
+  }
+}
+
+.mincho {
+  font-family:
+    "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN",
+    "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 60px 15px;
+  z-index: 999;
+  background: #ffffff;
+  .logo {
+    width: 100px;
+    a {
+      display: block;
+    }
+  }
+  .hamburger {
+    cursor: pointer;
+    display: block;
+    position: fixed;
+    top: 30px;
+    right: 10px;
+    width: 50px;
+    height: 40px;
+    z-index: 10000;
+    .span {
+      background: #282828;
+      position: absolute;
+      left: 50%;
+      width: 30px;
+      height: 1px;
+      transform: translateX(-50%);
+      transition: 0.4s;
+
+      &:nth-of-type(1) {
+        top: 10px;
+      }
+
+      &:nth-of-type(2) {
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &:nth-of-type(3) {
+        bottom: 10px;
+      }
+    }
+    &.is-open {
+      .span {
+        background: #2f4453;
+      }
+      .span:nth-of-type(1) {
+        transform: translate(-50%, 9px) rotate(-45deg);
+      }
+
+      .span:nth-of-type(2) {
+        opacity: 0;
+      }
+
+      .span:nth-of-type(3) {
+        transform: translate(-50%, -9px) rotate(45deg);
+      }
+    }
+  }
+}
+@media (min-width: 1025px) {
+  .header {
+    .headTtl {
+      margin: 0 0 5px;
+    }
+    .headerContainer {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 60px 0 0;
+    }
+    .headItem {
+      display: flex;
+      align-items: center;
+      gap: 0 40px;
+      .list {
+        > .ul {
+          display: flex;
+          gap: 0 20px;
+          > .li {
+            position: relative;
+            > a {
+              display: inline-block;
+              padding: 0 20px;
+            }
+            .pulldown {
+              background: url("https://sit-7938494.sibloo.com/system_panel/uploads/images/nav_list_arrow.png")
+                right center no-repeat;
+              background-size: 10px auto;
+            }
+          }
+        }
+        .subList {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 160px;
+          border: 1px solid #e2dfdb;
+          .ul {
+            .li {
+              + .li {
+                border-top: 1px solid #e2dfdb;
+              }
+              a {
+                display: block;
+                padding: 8px 10px;
+                text-align: center;
+                background: #ffffff;
+              }
+            }
+          }
+        }
+        .pulldown:hover + .subList,
+        .pulldown:focus + .subList,
+        .subList:hover,
+        > .ul > .li:focus-within .subList {
+          display: block;
+        }
+      }
+      .btnAmazon {
+      }
+    }
+  }
+}
+
+/* --------------------------------------------------
+	nav
+-------------------------------------------------- */
+.navBox {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  width: 30%;
+  height: 100%;
+  max-width: 600px;
+  padding: 100px 60px;
+  z-index: 999;
+  background: #f2efeb;
+  transition: 0.6s;
+  .navList {
+    + .navList {
+      margin: 30px 0 0;
+    }
+    .ul {
+      .li {
+        + .li {
+          margin: 10px 0 0;
+        }
+        a {
+          display: inline-block;
+        }
+      }
+    }
+  }
+  .btnAmazon {
+    margin: 40px 0 0;
+  }
+}
+
+/* --------------------------------------------------
+	main
+-------------------------------------------------- */
+.main {
+  overflow: hidden;
+  margin: 83px 0 0;
+}
+.pageTitlePanel {
+  padding: 50px 20px;
+  .pageTitle {
+    font-family:
+      "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN",
+      "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+    font-size: 23px;
+    text-align: center;
+  }
+}
+.pageSecTtlBox {
+  margin: 0 0 50px;
+  text-align: center;
+  .sub {
+    margin: 0 0 5px;
+    color: #988b9e;
+  }
+  .pageSecTtl {
+    font-family:
+      "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN",
+      "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+    font-size: 23px;
+    letter-spacing: 0.05em;
+  }
+}
+.secWrap {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.secWrap01 {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.secWrap02 {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.mapBox {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding: 0 0 45%;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+.btnAmazon {
+  width: 160px;
+  a {
+    display: block;
+    padding: 5px;
+    color: #ffffff;
+    text-align: center;
+    background: #8b8b8a;
+    p {
+      display: inline-block;
+      padding: 0 0 0 22px;
+      background: url("https://sit-7938494.sibloo.com/system_panel/uploads/images/icon_amazon_cart.png")
+        left center no-repeat;
+      background-size: 17px auto;
+    }
+  }
+}
+.btnMore {
+  max-width: 220px;
+  margin: 0 auto;
+  a {
+    display: block;
+    padding: 8px 10px;
+    color: #ffffff;
+    text-align: center;
+    background: #988b9e;
+    p {
+      padding: 0 15px;
+      background: url("https://sit-7938494.sibloo.com/system_panel/uploads/images/btn_more_arrow_white.png")
+        right 5px center no-repeat;
+      transition: 0.6s;
+    }
+  }
+  @media (min-width: 1025px) {
+    a {
+      &:hover {
+        p {
+          background-position: right 0 center;
+        }
+      }
+    }
+  }
+}
+.btnMoreWhite {
+  max-width: 220px;
+  margin: 0 auto;
+  a {
+    display: block;
+    padding: 8px 10px;
+    text-align: center;
+    border: 1px solid #988b9e;
+    background: #ffffff;
+    p {
+      padding: 0 15px;
+      background: url("https://sit-7938494.sibloo.com/system_panel/uploads/images/btn_more_arrow.png")
+        right 5px center no-repeat;
+      transition: 0.6s;
+    }
+  }
+  @media (min-width: 1025px) {
+    a {
+      &:hover {
+        p {
+          background-position: right 0 center;
+        }
+      }
+    }
+  }
+}
+.guideSec {
+  padding: 80px 0;
+  .itemPanel {
+    max-width: 800px;
+    margin: 0 auto;
+    .itemBox {
+      border: 1px solid #e2dfdb;
+      a {
+        display: block;
+        padding: 20px;
+      }
+      .dl {
+        max-width: 280px;
+        margin: 0 auto;
+        .dt {
+          margin: 0 0 10px;
+          font-size: 22px;
+          color: #988b9e;
+          &.faq {
+            padding: 0 0 0 40px;
+            background: url("https://sit-7938494.sibloo.com/system_panel/uploads/images/top_guide_faq.png")
+              left center no-repeat;
+            background-size: 30px auto;
+          }
+          &.howto {
+            padding: 0 0 0 35px;
+            background: url("https://sit-7938494.sibloo.com/system_panel/uploads/images/top_guide_howto.png")
+              left center no-repeat;
+            background-size: 25px auto;
+          }
+        }
+        .dd {
+          line-height: 2;
+        }
+      }
+    }
+  }
+  @media (min-width: 1025px) {
+    .itemPanel {
+      display: flex;
+      justify-content: space-between;
+      .itemBox {
+        width: 48%;
+        a {
+          &:hover {
+            opacity: 1;
+            background: #f2efeb;
+          }
+        }
+      }
+    }
+  }
+}
+/* --------------------------------------------------
+	footer
+-------------------------------------------------- */
+.footer {
+  padding: 100px 0 50px;
+  color: #cccccc;
+  background: #282828;
+  .footBox {
+    .logoBox {
+      .logo {
+        width: 130px;
+        margin: 0 0 40px;
+      }
+      .txt {
+        margin: 0 0 10px;
+      }
+    }
+    .footNav {
+      display: flex;
+      justify-content: space-between;
+      .dl {
+        width: calc((100% / 3) - 20px);
+        font-size: 14px;
+        .dt {
+          margin: 0 0 30px;
+          padding: 0 5px 5px;
+          color: #988b9e;
+          border-bottom: 1px solid #988b9e;
+        }
+        .dd {
+          .ul {
+            .li {
+              + .li {
+                margin: 15px 0 0;
+              }
+              a {
+                display: inline-block;
+                color: #cccccc;
+                padding: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 1025px) {
+    .footBox {
+      display: flex;
+      justify-content: space-between;
+      .logoBox {
+        width: 30%;
+      }
+      .footNav {
+        width: 55%;
+      }
+    }
+  }
+  .copy {
+    margin: 100px 0 0;
+    font-size: 14px;
+  }
+}

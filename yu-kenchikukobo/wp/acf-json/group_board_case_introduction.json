@@ -1,0 +1,144 @@
+{
+  "key": "group_board_case_introduction",
+  "title": "掲示板設置施工事例",
+  "fields": [
+    {
+      "key": "field_board_cases",
+      "label": "掲示板設置施工事例",
+      "name": "board_cases",
+      "type": "repeater",
+      "instructions": "掲示板設置の施工事例を登録してください。「+」ボタンで追加、ドラッグアンドドロップで順番を変更できます。",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "field_board_case_title",
+      "min": 0,
+      "max": 0,
+      "layout": "table",
+      "button_label": "施工事例を追加",
+      "sub_fields": [
+        {
+          "key": "field_board_case_image",
+          "label": "画像",
+          "name": "board_case_image",
+          "type": "image",
+          "instructions": "掲示板設置の施工事例画像をアップロードしてください。",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "return_format": "array",
+          "preview_size": "medium",
+          "library": "all",
+          "min_width": "",
+          "min_height": "",
+          "min_size": "",
+          "max_width": "",
+          "max_height": "",
+          "max_size": "",
+          "mime_types": "jpg,jpeg,png,gif"
+        },
+        {
+          "key": "field_board_case_title",
+          "label": "施工名",
+          "name": "board_case_title",
+          "type": "text",
+          "instructions": "施工事例のタイトルを入力してください（50文字以内）。",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "例：公園案内掲示板設置工事",
+          "prepend": "",
+          "append": "",
+          "maxlength": 50
+        },
+        {
+          "key": "field_board_case_cost",
+          "label": "参考費用",
+          "name": "board_case_cost",
+          "type": "text",
+          "instructions": "参考費用を入力してください（30文字以内）。",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "例：100万円〜150万円",
+          "prepend": "",
+          "append": "",
+          "maxlength": 30
+        },
+        {
+          "key": "field_board_case_size",
+          "label": "サイズ",
+          "name": "board_case_size",
+          "type": "text",
+          "instructions": "掲示板のサイズを入力してください（30文字以内）。",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "例：W1800×H1200×D150mm",
+          "prepend": "",
+          "append": "",
+          "maxlength": 30
+        },
+        {
+          "key": "field_board_case_description",
+          "label": "説明文",
+          "name": "board_case_description",
+          "type": "textarea",
+          "instructions": "施工事例の詳細説明を入力してください。",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "施工の詳細、特徴、使用材料、設置場所の特徴などを記載してください。",
+          "maxlength": "",
+          "rows": 4,
+          "new_lines": "br"
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page_template",
+        "operator": "==",
+        "value": "page-board.php"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": 1,
+  "description": "掲示板設置の施工事例を管理するためのフィールドグループです。"
+}

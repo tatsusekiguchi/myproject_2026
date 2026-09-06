@@ -1,0 +1,1337 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+	画面用CSS（PC/SMP）
+===================================================*/
+/*////////////////////////////////////////////////////////////
+	TOP
+///////////////////////////////////////////////////////////*/
+#top #fView {
+  position: relative;
+  width: 100%;
+  height: 440px;
+  padding: 80px 0;
+}
+#top #fView:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: url("../image/top/top_kv_01.png") center no-repeat;
+}
+#top #fView dl {
+  color: #ffffff;
+  background: #d5bd7d;
+}
+#top #fView .ttl {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  padding: 40px 60px;
+  letter-spacing: 0.1em;
+}
+#top #fView .ttl dt {
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+#top #fView .ttl dd {
+  font-size: 17px;
+  line-height: 2;
+}
+#top #fView .news {
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  display: table;
+  width: 65%;
+  min-height: 90px;
+  padding: 0 35px;
+}
+#top #fView .news dt {
+  display: table-cell;
+  width: 75px;
+  font-size: 17px;
+  vertical-align: middle;
+}
+#top #fView .news dd {
+  display: table-cell;
+  padding-right: 40px;
+  vertical-align: middle;
+  background: url("../image/top/news_arrow.png") right center no-repeat;
+}
+#top #fView .news dd time {
+  display: inline-block;
+  margin-right: 20px;
+}
+#top #fView .news dd a {
+  display: inline-block;
+  color: #ffffff;
+}
+#top #about .intro {
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 95px 10px;
+}
+#top #about .intro .ttlBox {
+  float: left;
+  width: 45%;
+  padding: 40px 0 0;
+}
+#top #about .intro .ttlBox h2 span {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+#top #about .intro .ttlBox h2 span:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -40px;
+  bottom: 0;
+  width: 30px;
+  height: 1px;
+  margin: auto 0;
+  background: #d5bd7d;
+}
+#top #about .intro .ttlBox h2 em {
+  display: block;
+  font-size: 32px;
+}
+#top #about .intro .txt {
+  float: right;
+  width: 55%;
+  line-height: 2.5;
+}
+#top #about .intro .more {
+  float: left;
+}
+#top #about .intro .more a {
+  display: block;
+  width: 250px;
+  margin: 60px 0 0;
+  padding: 20px 0;
+  text-align: center;
+  line-height: 1;
+  border: 1px solid #695f59;
+  background: url("../image/top/more_arrow.png") right 15px center no-repeat;
+}
+#top #about .bnrBox {
+  padding: 100px 10px;
+}
+#top #about .bnrBox ul {
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#top #about .bnrBox ul li {
+  width: 50%;
+  height: 296px;
+  padding: 0 0 0 20%;
+}
+#top #about .bnrBox ul li dl {
+  height: 100%;
+  padding: 20px 30px;
+  text-align: center;
+  background: #ffffff;
+}
+#top #about .bnrBox ul li dl dt {
+  margin-bottom: 20px;
+}
+#top #about .bnrBox ul li dl dt span {
+  font-size: 13px;
+}
+#top #about .bnrBox ul li dl dt em {
+  display: block;
+  font-size: 32px;
+}
+#top #about .bnrBox ul li dl dd p {
+  margin-bottom: 20px;
+  line-height: 2;
+}
+#top #about .bnrBox ul li dl dd a {
+  display: block;
+  width: 150px;
+  margin: 0 auto;
+  padding: 10px 0;
+  color: #ffffff;
+  background: url("../image/top/bnr_link_arrow.png") right 10px center no-repeat #d5bd7d;
+}
+#top #about .bnrBox ul li:first-child {
+  float: left;
+  background: url("../image/top/bnr_img_01.png") left center no-repeat;
+}
+#top #about .bnrBox ul li:nth-child(2) {
+  float: right;
+  background: url("../image/top/bnr_img_02.png") left center no-repeat;
+}
+#top #service {
+  padding: 0 0 120px;
+}
+#top #service .topContainer {
+  margin: 0 0 100px;
+}
+#top #service .topContainer .txtPanel .txtBox {
+  max-width: 680px;
+}
+#top #service .topContainer .txtPanel .txtBox h2 {
+  margin: 0 0 20px;
+  font-size: 32px;
+}
+#top #service .topContainer .txtPanel .txtBox .txt {
+  line-height: 2;
+}
+@media (min-width: 1025px) {
+  #top #service .topContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+  #top #service .topContainer .txtPanel {
+    width: 50%;
+  }
+  #top #service .topContainer .mapPanel {
+    width: 50%;
+  }
+}
+#top #service .serviceContainer {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+#top #service .serviceContainer .ttlBox {
+  margin: 0 0 60px;
+}
+#top #service .serviceContainer .ttlBox h2 span {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+#top #service .serviceContainer .ttlBox h2 span:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -40px;
+  bottom: 0;
+  width: 30px;
+  height: 1px;
+  margin: auto 0;
+  background: #d5bd7d;
+}
+#top #service .serviceContainer .ttlBox h2 em {
+  display: block;
+  font-size: 32px;
+}
+#top #service .serviceContainer .ttlBox .txt {
+  line-height: 2;
+}
+@media (min-width: 1025px) {
+  #top #service .serviceContainer .ttlBox {
+    display: flex;
+    align-items: center;
+    gap: 0 60px;
+  }
+}
+#top #service .serviceContainer .listBox ol li a {
+  position: relative;
+  display: block;
+  background: url("../image/top/service_tri.png") right 10px bottom 10px no-repeat #fefcf7;
+  background-size: 20px auto;
+}
+#top #service .serviceContainer .listBox ol li a.noLink {
+  pointer-events: none;
+}
+#top #service .serviceContainer .listBox ol li dl {
+  position: relative;
+  padding: 30px;
+}
+#top #service .serviceContainer .listBox ol li dl dt {
+  display: inline-block;
+  margin: 0 0 15px;
+  padding: 0 0 5px;
+  font-size: 26px;
+  border-bottom: 1px solid #d5bd7d;
+}
+#top #service .serviceContainer .listBox ol li dl dd {
+  line-height: 2;
+}
+#top #service .serviceContainer .listBox ol li .num {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 100px;
+  color: #f8f3e7;
+  line-height: 1;
+}
+@media (min-width: 1025px) {
+  #top #service .serviceContainer .listBox ol {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  #top #service .serviceContainer .listBox ol li {
+    width: calc(50% - 20px);
+  }
+  #top #service .serviceContainer .listBox ol li a {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+}
+#top #information {
+  padding: 30px 0 60px;
+  text-align: center;
+}
+#top #information h2 {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 60px;
+  font-size: 21px;
+}
+#top #information h2:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  width: 30px;
+  height: 1px;
+  margin: 0 auto;
+  background: #d5bd7d;
+}
+#top #information .infoBox {
+  height: 450px;
+  padding: 0 10px;
+  border-top: 1px solid #e9e8e5;
+  border-bottom: 1px solid #e9e8e5;
+}
+#top #information .infoBox.infoBox01 {
+  background: url("../image/top/information_img_01.png") right center no-repeat;
+  background-size: contain;
+}
+#top #information .infoBox.infoBox02 {
+  background: url("../image/top/information_img_02.png") right center no-repeat;
+  background-size: contain;
+}
+#top #information .infoBox.infoBox03 {
+  background: url("../image/top/information_img_03.png") right center no-repeat;
+  background-size: contain;
+}
+#top #information .infoBox .box {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#top #information .infoBox .box dl {
+  max-width: 600px;
+  height: 450px;
+  padding: 80px 0 60px;
+  background: #ffffff;
+}
+#top #information .infoBox .box dl dt {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+#top #information .infoBox .box dl dd p {
+  margin-bottom: 20px;
+  line-height: 2;
+}
+#top #information .infoBox .box dl dd a {
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+  padding: 20px 0;
+  text-align: center;
+  line-height: 1;
+  border: 1px solid #695f59;
+  background: url("../image/top/more_arrow.png") right 15px center no-repeat;
+}
+#top #information .infoBox + p {
+  margin: 100px 0 0;
+  padding: 0 10px;
+  line-height: 2;
+}
+
+/*////////////////////////////////////////////////////////////
+	調査内容
+///////////////////////////////////////////////////////////*/
+#survey .kv {
+  background: url("../image/survey/kv.png") center no-repeat;
+  background-size: cover;
+}
+#survey > section {
+  padding: 50px 0;
+  text-align: center;
+}
+#survey > section h3 {
+  margin-bottom: 40px;
+}
+#survey > section h3 span {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 30px;
+  font-size: 21px;
+}
+#survey > section h3 span:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  width: 30px;
+  height: 1px;
+  margin: 0 auto;
+  background: #d5bd7d;
+}
+#survey > section h3 em {
+  display: block;
+  font-size: 30px;
+  line-height: 1;
+}
+#survey > section h4 {
+  position: relative;
+  max-width: 1240px;
+  margin: 0 auto 10px;
+  padding: 0 0 0 40px;
+  font-size: 21px;
+  text-align: left;
+}
+#survey > section h4:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 30px;
+  height: 1px;
+  margin: auto 0;
+  background: #d5bd7d;
+}
+#survey > section .secBox {
+  padding: 40px 10px;
+  border-top: 1px solid #e9e8e5;
+}
+#survey > section .secBox .wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+#survey #service h3 + p {
+  margin-bottom: 40px;
+  padding: 0 10px;
+  line-height: 2;
+}
+#survey #service #pageLink {
+  max-width: 1080px;
+  margin: 0 auto 50px;
+  padding: 0 10px;
+}
+#survey #service #pageLink ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -20px 0 0 -20px;
+}
+#survey #service #pageLink ul li {
+  margin: 20px 0 0 20px;
+  width: calc(25% - 20px);
+}
+#survey #service #pageLink ul li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  padding: 10px 0;
+  text-align: center;
+  line-height: 1.2;
+  border: 1px solid #695f59;
+  background: url("../image/top/more_arrow.png") right 15px center no-repeat;
+}
+#survey #service > section {
+  padding: 50px 0;
+  text-align: left;
+}
+#survey #service > section .priceList li {
+  border: 1px solid #0a0204;
+}
+#survey #service > section .priceList li + li {
+  margin-top: 30px;
+}
+#survey #service > section .priceList li dl {
+  display: table;
+  width: 100%;
+  min-height: 70px;
+}
+#survey #service > section .priceList li dl dt {
+  display: table-cell;
+  width: 50%;
+  padding: 0 50px;
+  font-weight: bold;
+  color: #ffffff;
+  vertical-align: middle;
+  background: #d5bd7d;
+}
+#survey #service > section .priceList li dl dd {
+  display: table-cell;
+  padding: 0 50px;
+  vertical-align: middle;
+}
+#survey #service > section .priceList li > p {
+  padding: 20px 50px;
+}
+#survey #service > section .surveyList section h5 {
+  padding: 20px 50px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  background: #d5bd7d;
+}
+#survey #service > section .surveyList section .box {
+  padding: 30px 50px 60px;
+  text-align: center;
+}
+#survey #service > section .surveyList section .box .txt {
+  margin-bottom: 30px;
+  text-align: left;
+  line-height: 2;
+}
+#survey #service > section .surveyList section .box img {
+  max-width: 600px;
+}
+#survey #service > section .message {
+  text-align: center;
+}
+#survey #service > section .message p {
+  display: inline-block;
+  width: 440px;
+  padding: 20px 10px;
+  line-height: 2;
+  border: 1px solid #695f59;
+}
+#survey #service .serviceSectionContainer section {
+  padding: 60px 20px;
+}
+#survey #service .serviceSectionContainer section:nth-child(odd) {
+  background: #f4f4f4;
+}
+#survey #service .serviceSectionContainer .secContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+#survey #service .serviceSectionContainer .secBox {
+  padding: 0;
+}
+#survey #service .serviceSectionContainer .secBox .txtBox .ttlBox {
+  margin: 0 0 15px;
+  border-bottom: 1px solid #d2d2d2;
+}
+#survey #service .serviceSectionContainer .secBox .txtBox .ttlBox h4 span {
+  margin: 0 20px 0 0;
+  color: #d5bd7d;
+}
+#survey #service .serviceSectionContainer .secBox .txtBox .txt {
+  line-height: 2;
+}
+#survey #service .serviceSectionContainer .secBox .txtBox .itemBox {
+  margin: 20px 0 0;
+}
+@media (min-width: 1025px) {
+  #survey #service .serviceSectionContainer .secBox {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+  #survey #service .serviceSectionContainer .secBox .photo {
+    width: 45%;
+  }
+  #survey #service .serviceSectionContainer .secBox .txtBox {
+    width: 50%;
+  }
+  #survey #service .serviceSectionContainer .itemPanel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  #survey #service .serviceSectionContainer .itemPanel .itemBox {
+    width: calc(50% - 10px);
+  }
+  #survey #service .serviceSectionContainer .pricePanel {
+    width: 50%;
+  }
+}
+#survey #service .serviceSectionContainer .itemPanel {
+  margin: 30px 0 0;
+}
+#survey #service .serviceSectionContainer .itemBox {
+  padding: 20px;
+  border: 1px solid #0a0204;
+  background: #ffffff;
+}
+#survey #service .serviceSectionContainer .itemBox dl {
+  line-height: 2;
+}
+#survey #service .serviceSectionContainer .itemBox dl dt {
+  margin: 0 0 5px;
+  padding: 0 0 0 20px;
+  background: url("../image/survey/service_list_check.png") left center no-repeat;
+  background-size: 15px auto;
+}
+#survey #service .serviceSectionContainer .pricePanel {
+  margin: 40px 0 0;
+  padding: 0 0 5px;
+  border-bottom: 1px solid #0a0204;
+}
+#survey #service .serviceSectionContainer .pricePanel dl {
+  display: flex;
+  align-items: baseline;
+  gap: 0 10px;
+}
+#survey #service .serviceSectionContainer .pricePanel dl dt {
+  font-size: 18px;
+}
+#survey #service .serviceSectionContainer .pricePanel dl dd em {
+  margin: 0 5px 0 0;
+  font-size: 28px;
+}
+#survey #service .serviceSectionContainer .pricePanel dl dd span {
+  font-size: 18px;
+}
+#survey #flow h3 + p {
+  margin-bottom: 40px;
+  padding: 0 10px;
+  line-height: 2;
+}
+#survey #flow h3 + p + aside {
+  margin-bottom: 50px;
+  color: #787878;
+  line-height: 2;
+}
+#survey #flow .secBox {
+  text-align: left;
+}
+#survey #flow .flowBox {
+  display: inline-block;
+  margin-bottom: 40px;
+  vertical-align: top;
+}
+#survey #flow .flowBox .ttl {
+  position: relative;
+  width: 230px;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  background: #d5bd7d;
+}
+#survey #flow .flowBox .start {
+  width: 740px;
+  margin-right: 15px;
+}
+#survey #flow .flowBox .second {
+  width: 230px;
+}
+#survey #flow .flowBox .third {
+  width: 500px;
+}
+#survey #flow .flowBox .ttl:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: linear-gradient(to bottom left, transparent 50%, #ffffff 50%) top left/100% 50% no-repeat, linear-gradient(to top left, transparent 50%, #ffffff 50%) bottom left/100% 50% no-repeat;
+}
+#survey #flow .flowBox .ttl:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  right: -19px;
+  top: 0;
+  background: linear-gradient(to bottom left, transparent 50%, #d5bd7d 50%) top left/100% 50% no-repeat, linear-gradient(to top left, transparent 50%, #d5bd7d 50%) bottom left/100% 50% no-repeat;
+}
+#survey #flow .flowBox .start:before {
+  background: none;
+}
+#survey #flow .flowBox .box ul {
+  overflow: hidden;
+}
+#survey #flow .flowBox .box ul li {
+  float: left;
+  width: 240px;
+}
+#survey #flow .flowBox .box ul li + li {
+  margin-left: 10px;
+}
+#survey #flow .flowBox .box div {
+  height: 110px;
+  padding: 20px 20px;
+  background: #eeeeee;
+}
+#survey #flow .flowBox .box p {
+  line-height: 2;
+}
+#survey #flow .follow .flowBox + .flowBox {
+  margin-left: 15px;
+}
+#survey #flow .report figure {
+  text-align: left;
+}
+#survey #flow .report figure img {
+  max-width: 950px;
+}
+#survey #flow .report figure figcaption {
+  margin-top: 40px;
+  line-height: 2;
+}
+#survey #flow .report + p {
+  margin-top: 80px;
+  padding: 0 10px;
+  line-height: 2.5;
+}
+
+/*////////////////////////////////////////////////////////////
+	会社概要
+///////////////////////////////////////////////////////////*/
+#about .kv {
+  background: url("../image/about/kv.png") center no-repeat;
+  background-size: cover;
+}
+#about > section {
+  padding: 50px 0;
+  text-align: center;
+}
+#about > section h3 {
+  margin-bottom: 40px;
+}
+#about > section h3 span {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 30px;
+  font-size: 21px;
+}
+#about > section h3 span:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  width: 30px;
+  height: 1px;
+  margin: 0 auto;
+  background: #d5bd7d;
+}
+#about > section h3 em {
+  display: block;
+  font-size: 30px;
+  line-height: 1;
+}
+#about #message h3 + p {
+  margin-bottom: 40px;
+  font-size: 22px;
+  line-height: 2;
+}
+#about #message .box {
+  overflow: hidden;
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+#about #message .box .photo {
+  float: right;
+  width: 30%;
+}
+#about #message .box .txt {
+  float: left;
+  width: 65%;
+  text-align: left;
+  line-height: 2;
+}
+#about #message .box .txt .name {
+  margin-top: 40px;
+  text-align: right;
+}
+#about #company .companyBox {
+  border-top: 1px solid #e9e8e5;
+}
+#about #company .companyBox > div {
+  position: relative;
+  border-bottom: 1px solid #e9e8e5;
+}
+#about #company .companyBox > div:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  z-index: -1;
+  background: #fefcf7;
+}
+#about #company .companyBox > div dl {
+  display: table;
+  max-width: 1020px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+  text-align: left;
+}
+#about #company .companyBox > div dl dt {
+  display: table-cell;
+  width: 220px;
+  padding: 20px 60px;
+  background: #fefcf7;
+}
+#about #company .companyBox > div dl dd {
+  position: relative;
+  display: table-cell;
+  padding: 20px 60px;
+  z-index: 1;
+  background: #ffffff;
+}
+#about #company .mapBox {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 30%;
+}
+#about #company .mapBox iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+#about #company .mapBox + p {
+  margin-top: 80px;
+  line-height: 2;
+}
+
+/*////////////////////////////////////////////////////////////
+	新着情報
+///////////////////////////////////////////////////////////*/
+#news .kv {
+  background: url("../image/news/kv.png") center no-repeat;
+  background-size: cover;
+}
+#news .newsBox {
+  overflow: hidden;
+  max-width: 1220px;
+  margin: 0 auto 100px;
+  padding: 80px 10px 40px;
+}
+#news .newsBox .mainBox .wrap {
+  max-width: 880px;
+}
+#news .newsBox .sideBox dl {
+  padding: 20px 10px 60px;
+  background: #fefcf7;
+}
+#news .newsBox .sideBox dl dt {
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+}
+#news .newsBox .sideBox dl dd {
+  padding: 0 10px;
+  border-top: 1px solid #d7d0be;
+}
+#news .newsBox .sideBox dl dd ul li {
+  padding: 20px 10px;
+  border-bottom: 1px solid #d7d0be;
+}
+@media (min-width: 1025px) {
+  #news .newsBox {
+    overflow: hidden;
+  }
+  #news .newsBox .mainBox {
+    float: right;
+    width: calc(100% - 325px);
+  }
+  #news .newsBox .sideBox {
+    float: left;
+    width: 265px;
+  }
+}
+#news #newslist .mainBox ul {
+  border-top: 1px solid #d7d0be;
+}
+#news #newslist .mainBox ul li {
+  overflow: hidden;
+  padding: 30px 0;
+  border-bottom: 1px solid #d7d0be;
+}
+#news #newslist .mainBox ul li .photo {
+  float: left;
+  width: 26%;
+}
+#news #newslist .mainBox ul li .txt {
+  float: right;
+  width: 72%;
+}
+#news #newslist .mainBox ul li .txt span {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 7px 10px;
+  color: #ffffff;
+  line-height: 1;
+  background: #d5bd7d;
+}
+#news #newslist .mainBox ul li .txt time {
+  position: relative;
+  display: inline-block;
+  padding-left: 30px;
+}
+#news #newslist .mainBox ul li .txt time:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 20px;
+  height: 1px;
+  margin: auto 0;
+  background: #d5bd7d;
+}
+#news #newslist .mainBox ul li .txt .ttl {
+  margin-top: 20px;
+}
+#news #newsdetail .ttlBox {
+  margin-bottom: 40px;
+}
+#news #newsdetail .ttlBox span {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 7px 10px;
+  color: #ffffff;
+  line-height: 1;
+  background: #d5bd7d;
+}
+#news #newsdetail .ttlBox time {
+  position: relative;
+  display: inline-block;
+  padding-left: 30px;
+}
+#news #newsdetail .ttlBox time:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 20px;
+  height: 1px;
+  margin: auto 0;
+  background: #d5bd7d;
+}
+#news #newsdetail .ttlBox .ttl {
+  margin-top: 20px;
+  font-size: 22px;
+}
+#news #newsdetail .postBox {
+  margin-bottom: 40px;
+}
+#news #newsdetail .authorBox {
+  margin-top: 60px;
+  border: 1px solid #d5bd7d;
+}
+#news #newsdetail .authorBox h4 {
+  padding: 20px;
+  color: #ffffff;
+  background: #d5bd7d;
+}
+#news #newsdetail .authorBox h4 + div {
+  padding: 30px;
+}
+#news #newsdetail .authorBox .box {
+  display: table;
+  width: 100%;
+  margin-bottom: 20px;
+}
+#news #newsdetail .authorBox .box .photo {
+  display: table-cell;
+  width: 35%;
+}
+#news #newsdetail .authorBox .box dl {
+  display: table-cell;
+  padding: 0 6%;
+}
+#news #newsdetail .authorBox .box dl dt {
+  font-size: 19px;
+}
+#news #newsdetail .authorBox .box + p {
+  line-height: 2;
+}
+#news .newsBox + p {
+  margin-bottom: 40px;
+  padding: 0 10px;
+  text-align: center;
+  line-height: 2;
+}
+
+/*////////////////////////////////////////////////////////////
+	ページネーション
+///////////////////////////////////////////////////////////*/
+.pagination {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 40px 0 0;
+}
+
+.pagination,
+.pagination li a {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination li + li {
+  margin-left: 5px;
+}
+
+.pagination a {
+  padding-top: 1px;
+  text-decoration: none;
+  border-left-width: 0;
+  min-width: 50px;
+  min-height: 50px;
+  color: #d5bd7d;
+  border: 1px solid #d5bd7d;
+}
+
+.pagination li.current a {
+  color: #ffffff;
+  background: #d5bd7d;
+}
+
+.pagination li:first-of-type a {
+  border-left-width: 1px;
+}
+
+.pagination li.first span,
+.pagination li.last span,
+.pagination li.previous span,
+.pagination li.next span {
+  /* screen readers only */
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.pagination li.first a::before,
+.pagination li.last a::after,
+.pagination li.previous a::before,
+.pagination li.next a::after {
+  display: inline-block;
+  font-family: Fontawesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+}
+
+.pagination li.first a::before {
+  content: "\f100";
+}
+
+.pagination li.last a::after {
+  content: "\f101";
+}
+
+.pagination li.previous a::before {
+  content: "\f104";
+}
+
+.pagination li.next a::after {
+  content: "\f105";
+}
+
+.pagination li.current a {
+  cursor: default;
+  pointer-events: none;
+}
+
+.pagination > li:first-child > a {
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+.pagination > li:last-child > a {
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+@media only screen and (max-width: 680px) {
+  .pagination li.first,
+.pagination li.last {
+    /* screen readers only */
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .pagination li.previous a {
+    border-left-width: 1px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .pagination li {
+    /* screen readers only */
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .pagination a {
+    min-width: 40px;
+    min-height: 40px;
+  }
+
+  .pagination li.current,
+.pagination li.first,
+.pagination li.last,
+.pagination li.previous,
+.pagination li.next {
+    position: initial;
+    top: initial;
+    left: initial;
+  }
+
+  .pagination li.previous a {
+    border-left-width: 0;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .pagination li.first,
+.pagination li.last {
+    /* screen readers only */
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .pagination li.previous a {
+    border-left-width: 1px;
+  }
+}
+@media only screen and (max-width: 240px) {
+  /* For watches? */
+  .pagination li {
+    width: 50%;
+  }
+
+  .pagination li.current {
+    order: 2;
+    width: 100%;
+    border-left-width: 1px;
+  }
+}
+.pagination li.current + .next,
+.pagination li.current + .next + .last {
+  display: none;
+}
+
+.pagingBox {
+  position: relative;
+  font-size: 16px;
+}
+.pagingBox .paging li {
+  display: inline-block;
+  text-align: center;
+}
+.pagingBox .paging .back,
+.pagingBox .paging .next {
+  width: 50px;
+}
+.pagingBox .paging .back a,
+.pagingBox .paging .next a {
+  display: block;
+  color: #d5bd7d;
+  line-height: 50px;
+  border: 1px solid #d5bd7d;
+}
+.pagingBox .paging .backList {
+  width: 200px;
+  margin: 0 15px;
+  background: #d5bd7d;
+}
+.pagingBox .paging .backList a {
+  display: block;
+  color: #ffffff;
+  line-height: 50px;
+}
+
+/*////////////////////////////////////////////////////////////
+	お問い合わせ
+///////////////////////////////////////////////////////////*/
+#contact .kv {
+  background: url("../image/contact/kv.png") center no-repeat;
+  background-size: cover;
+}
+#contact .topTxt {
+  padding: 40px 10px;
+  font-size: 22px;
+  text-align: center;
+  line-height: 2;
+}
+#contact > section {
+  padding: 50px 10px;
+  text-align: center;
+}
+#contact > section h3 {
+  margin-bottom: 40px;
+}
+#contact > section h3 span {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 30px;
+  font-size: 21px;
+}
+#contact > section h3 span:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  width: 30px;
+  height: 1px;
+  margin: 0 auto;
+  background: #d5bd7d;
+}
+#contact > section h3 em {
+  display: block;
+  font-size: 30px;
+  line-height: 1;
+}
+#contact #tel {
+  background: #fefcf7;
+}
+#contact #tel .tel {
+  margin-bottom: 20px;
+}
+#contact #tel .tel span {
+  font-size: 20px;
+}
+#contact #tel .tel a {
+  font-size: 40px;
+}
+#contact #tel .tel + p {
+  line-height: 2;
+}
+#contact #mail h3 + p {
+  margin-bottom: 40px;
+  line-height: 2;
+}
+#contact #mail h3 + p + aside {
+  margin-bottom: 40px;
+}
+#contact #mail form {
+  max-width: 820px;
+  margin: 0 auto 100px;
+}
+#contact #mail form dl {
+  text-align: left;
+}
+#contact #mail form dl dt {
+  margin-bottom: 10px;
+}
+#contact #mail form dl + dl {
+  margin-top: 30px;
+}
+@media (min-width: 1025px) {
+  #contact #mail form .nameBox {
+    overflow: hidden;
+    margin-bottom: 30px;
+  }
+  #contact #mail form .nameBox dl {
+    float: left;
+    width: 48%;
+  }
+  #contact #mail form .nameBox dl + dl {
+    float: right;
+    margin-top: 0;
+  }
+}
+#contact #mail form .privacy {
+  overflow: auto;
+  height: 240px;
+  margin: 30px 0;
+  padding: 20px;
+  text-align: left;
+  border: 1px solid #695f59;
+}
+#contact #mail form .privacy p {
+  line-height: 2;
+}
+#contact #mail form .agree {
+  margin-bottom: 50px;
+}
+#contact #mail form + p {
+  padding: 0 10px;
+  line-height: 2;
+}
+
+/* --------------------------------------------------
+	入力
+-------------------------------------------------- */
+/*テキストボックス・メール・電話*/
+#contact form input[type=text],
+#contact form input[type=email],
+#contact form input[type=tel] {
+  width: 100%;
+  height: 60px;
+  padding-left: 10px;
+  font-size: 14px;
+  border: 1px solid #695f59;
+  background: #ffffff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/*テキストエリア*/
+#contact form textarea {
+  width: 100%;
+  height: 170px;
+  padding-left: 10px;
+  font-size: 14px;
+  border: 1px solid #695f59;
+  background: #ffffff;
+  resize: none;
+}
+
+#contact form input[type=text]:focus,
+#contact form input[type=email]:focus,
+#contact form input[type=tel]:focus,
+#contact form textarea:focus {
+  outline: 0;
+  border: 2px solid #90cefd;
+}
+
+#contact form input[type=submit] {
+  width: 250px;
+  height: 50px;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid #695f59;
+  background: url("../image/contact/submit_arrow.png") right 15px center no-repeat #ffffff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+#contact form input[type=submit][disabled] {
+  pointer-events: none;
+  opacity: 0.4;
+}

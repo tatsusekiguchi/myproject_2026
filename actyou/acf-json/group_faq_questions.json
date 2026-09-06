@@ -1,0 +1,421 @@
+{
+    "key": "group_faq_questions",
+    "title": "よくあるご質問",
+    "fields": [
+        {
+            "key": "field_faq_reservation_questions",
+            "label": "ご予約について",
+            "name": "faq_reservation_questions",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "「itemList」を含む固定の質問はテンプレート側で固定表示しています。追加の質問はこちらに登録してください。",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "row",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_faq_reservation_question",
+            "button_label": "質問を追加",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_faq_reservation_question",
+                    "label": "Q",
+                    "name": "question",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_faq_reservation_questions"
+                },
+                {
+                    "key": "field_faq_reservation_answer",
+                    "label": "A",
+                    "name": "answer",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": 4,
+                    "placeholder": "",
+                    "new_lines": "br",
+                    "parent_repeater": "field_faq_reservation_questions"
+                }
+            ]
+        },
+        {
+            "key": "field_faq_cancel_questions",
+            "label": "ご予約の取消・変更について",
+            "name": "faq_cancel_questions",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "「itemList」を含む固定の質問はテンプレート側で固定表示しています。追加の質問はこちらに登録してください。",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "row",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_faq_cancel_question",
+            "button_label": "質問を追加",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_faq_cancel_question",
+                    "label": "Q",
+                    "name": "question",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_faq_cancel_questions"
+                },
+                {
+                    "key": "field_faq_cancel_answer",
+                    "label": "A",
+                    "name": "answer",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": 4,
+                    "placeholder": "",
+                    "new_lines": "br",
+                    "parent_repeater": "field_faq_cancel_questions"
+                }
+            ]
+        },
+        {
+            "key": "field_faq_payment_questions",
+            "label": "お支払いについて",
+            "name": "faq_payment_questions",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "row",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_faq_payment_question",
+            "button_label": "質問を追加",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_faq_payment_question",
+                    "label": "Q",
+                    "name": "question",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_faq_payment_questions"
+                },
+                {
+                    "key": "field_faq_payment_answer",
+                    "label": "A",
+                    "name": "answer",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": 4,
+                    "placeholder": "",
+                    "new_lines": "br",
+                    "parent_repeater": "field_faq_payment_questions"
+                }
+            ]
+        },
+        {
+            "key": "field_faq_irregular_questions",
+            "label": "旅行中のイレギュラーに関すること",
+            "name": "faq_irregular_questions",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "row",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_faq_irregular_question",
+            "button_label": "質問を追加",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_faq_irregular_question",
+                    "label": "Q",
+                    "name": "question",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_faq_irregular_questions"
+                },
+                {
+                    "key": "field_faq_irregular_answer",
+                    "label": "A",
+                    "name": "answer",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": 4,
+                    "placeholder": "",
+                    "new_lines": "br",
+                    "parent_repeater": "field_faq_irregular_questions"
+                }
+            ]
+        },
+        {
+            "key": "field_faq_overseas_questions",
+            "label": "海外旅行に関すること",
+            "name": "faq_overseas_questions",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "row",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_faq_overseas_question",
+            "button_label": "質問を追加",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_faq_overseas_question",
+                    "label": "Q",
+                    "name": "question",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_faq_overseas_questions"
+                },
+                {
+                    "key": "field_faq_overseas_answer",
+                    "label": "A",
+                    "name": "answer",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": 4,
+                    "placeholder": "",
+                    "new_lines": "br",
+                    "parent_repeater": "field_faq_overseas_questions"
+                }
+            ]
+        },
+        {
+            "key": "field_faq_other_questions",
+            "label": "その他",
+            "name": "faq_other_questions",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "「itemList」を含む固定の質問はテンプレート側で固定表示しています。追加の質問はこちらに登録してください。",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "row",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_faq_other_question",
+            "button_label": "質問を追加",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_faq_other_question",
+                    "label": "Q",
+                    "name": "question",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_faq_other_questions"
+                },
+                {
+                    "key": "field_faq_other_answer",
+                    "label": "A",
+                    "name": "answer",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": 4,
+                    "placeholder": "",
+                    "new_lines": "br",
+                    "parent_repeater": "field_faq_other_questions"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "faq/index.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1782844800
+}

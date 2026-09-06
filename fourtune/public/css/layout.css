@@ -1,0 +1,1241 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*////////////////////////////////////////////////////////////
+	TOP
+/////////////////////////////////////////////////////////////*/
+/* --------------------------------------------------
+	kv
+-------------------------------------------------- */
+
+/* --------------------------------------------------
+	main
+-------------------------------------------------- */
+
+/* LESSON コース案内
+-------------------------------------------------- */
+#top #lesson {
+	background: url("../image/top/lesson_bg.png") no-repeat;
+	background-size:cover; 
+}
+#top #lesson .contWrap {
+	position: relative;
+	padding: 110px 10px;
+}
+	#top #lesson .ttlBox {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 590px;
+		height: 160px;
+		margin:auto;
+		z-index: 1;
+	}
+		#top #lesson .ttlBox h2 {
+			width: 140px;
+			margin:0 auto 20px;
+		}
+		#top #lesson .ttlBox p {
+			color: #ffffff;
+		}
+#top #lesson #lessonListPc {
+	margin:-100px 0 0 -20px;
+	text-align: center;
+}
+	#top #lesson #lessonListPc li {
+		position: relative;
+		display: inline-block;
+		width: 30%;
+		margin:100px 0 0 2%; 
+	}
+		#top #lesson #lessonListPc li a {
+			position: absolute;
+			right: 30px;
+			bottom: 30px;
+			width: 100px;
+		}
+	#top #lesson #lessonListPc li:nth-child(1) {
+
+	}
+	#top #lesson #lessonListPc li:nth-child(2) {
+		top: -90px;
+	}
+	#top #lesson #lessonListPc li:nth-child(3) {
+		
+	}
+	#top #lesson #lessonListPc li:nth-child(4) {
+		
+	}
+	#top #lesson #lessonListPc li:nth-child(5) {
+		top: 90px;
+	}
+	#top #lesson #lessonListPc li:nth-child(6) {
+		
+	}
+#top #lesson #lessonListSp {
+	display: none;
+}
+
+/* ABOUT 英会話スクール　フォーチューンとは
+-------------------------------------------------- */
+#top #about h2 {
+	width: 485px;
+	margin:60px auto 40px; 
+}
+#top #about h2 + p {
+	width: 790px;
+	margin:0 auto 50px;
+}
+#top #about .slideWrap {
+	overflow: hidden;
+}
+/*photoSlide*/
+#photoSlide {
+	overflow: visible;
+	width: 90%;
+	margin: 0 auto 80px;
+}
+/*POINT*/
+#top #about .pointList {
+	
+}
+	#top #about .pointList li:nth-child(-n+2) {
+		overflow:hidden;
+		width: 900px;
+		margin: 0 auto 70px;
+		padding: 0 10px; 
+	}
+	#top #about .pointList li:nth-child(-n+2) dl dt{
+		display: table;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+		#top #about .pointList li:nth-child(-n+2) dl dt img {
+			display: table-cell;
+			width: 90px;
+			vertical-align: middle;
+		}
+		#top #about .pointList li:nth-child(-n+2) dl dt span {
+			display: table-cell;
+			width: 75%;
+			font-size: 22px;
+			text-align: left;
+			vertical-align: middle;
+		}
+	#top #about .pointList li:nth-child(1) > dl {
+		float: left;
+		width: 440px;
+	}
+	#top #about .pointList li:nth-child(1) > p {
+		float: right;
+		width: 410px;
+	}
+	#top #about .pointList li:nth-child(2) > dl {
+		float: right;
+		width: 440px;
+	}
+	#top #about .pointList li:nth-child(2) > p {
+		float: left;
+		width: 410px;
+	}
+	#top #about .pointList li:nth-child(3) {
+		background:#d8e2ef; 
+	}
+		#top #about .pointList li:nth-child(3) dl {
+			padding: 60px 10px;
+		}
+		#top #about .pointList li:nth-child(3) dl dt {
+			margin-bottom:30px;
+		}
+		#top #about .pointList li:nth-child(3) dl dt img {
+			display: block;
+			width: 90px;
+			margin: 0 auto 20px; 
+		}
+		#top #about .pointList li:nth-child(3) dl dt span {
+			display: block;
+			font-size: 22px;
+			text-align: center;
+		}
+		#top #about .pointList li:nth-child(3) dl dd {
+			width: 720px;
+			margin: 0 auto; 
+		}
+
+/*////////////////////////////////////////////////////////////
+	 下層ページ共通
+/////////////////////////////////////////////////////////////*/
+
+/* .kv
+-------------------------------------------------- */
+.kv {
+	min-height: 363px;
+}
+.kv > div {
+	max-width: 1020px;
+	margin: 0 auto;
+	padding: 10px;
+}
+	.kv h2 {
+		margin-top: 150px;
+	}
+
+.kv + section {
+	background: url("../image/common/header_border.png") top repeat-x;
+}
+
+/*////////////////////////////////////////////////////////////
+	 コース紹介共通
+/////////////////////////////////////////////////////////////*/
+
+/* タブ
+-------------------------------------------------- */
+.tabMenu {
+	background: url("../image/course/tab_bg.png");
+}
+	.tabMenu ul {
+		position: relative;
+		bottom: -30px;
+		max-width: 1020px;
+		margin: 0 auto 90px;
+		padding: 25px 10px 0;
+		text-align: left;
+	}
+		.tabMenu ul li {
+			display: inline-block;
+			width: 230px;
+		}
+		.tabMenu ul li + li {
+			margin-left:10px; 
+		}
+.course section + section {
+	margin-top: 90px;
+}
+
+/* 例えば
+-------------------------------------------------- */
+.course .examTxt {
+	margin:30px 0;
+	padding:0 20px;
+	line-height: 2;
+}
+	.course .examTxt em {
+		display: block;
+		font-weight: bold;
+		color: #9e5d00;
+	}
+
+/* タイトル、コンテンツ共通
+-------------------------------------------------- */
+.course .courseTtl {
+	margin-bottom: 40px;
+	padding: 15px 10px;
+	text-align: center;
+	background: #e5f1f5;
+}
+.course .courseTtl span {
+	display: inline-block;
+}
+.course .introTopBox {
+	padding: 0 10px 140px 20px; 
+}
+	.course .introTopBox .introTop {
+		overflow: hidden;
+		margin-bottom: 30px;
+	}
+		.course .introTopBox .introTop > p {
+			float: left;
+			width: 320px;
+		}
+		.course .introTopBox .introTop > div {
+			float: right;
+			width: 590px;
+			line-height: 2;
+		}
+	.course .introTopBox .introTop + p {
+		margin-bottom: 30px;
+		line-height: 2;
+	}
+	.course .introTopBox ul {
+		overflow: hidden;
+	}
+		.course .introTopBox ul li {
+			float: left;
+			width: 48%;
+		}
+		.course .introTopBox ul li + li {
+			float: right;
+		}
+.course .introBox {
+	overflow: hidden;
+	padding: 0 10px 0 20px; 
+}
+	.course .introBox > p {
+		float: left;
+		width: 320px;
+	}
+	.course .introBox > dl {
+		float: right;
+		width: 590px;
+	}
+		.course .introBox > dl dt {
+			margin-bottom: 30px;
+			padding-left:13px;
+			font-size: 22px;
+			font-weight: bold;
+			border-left: 6px solid #f9ca3d; 
+		}
+		.course .introBox > dl dd {
+			padding-left: 15px;
+			line-height: 2;
+		}
+.course .pointList {
+	margin-bottom: 70px;
+	text-align: center;
+}
+	.course .pointList li {
+		display: inline-block;
+		width: 300px;
+	}
+	.course .pointList li:nth-child(2) {
+		position: relative;
+		top: 30px;
+		margin: 0 10px;
+	}
+.course .addTxt {
+	margin: 25px 0 40px;
+	line-height: 2;
+}
+
+
+/* コース詳細 コース料金
+-------------------------------------------------- */
+.detailBox {
+	padding: 20px 40px 40px;
+	background: #e5f1f5;
+}
+	.detailBox h4 {
+		width: 350px;
+		margin: 0 auto 20px;
+		padding: 10px;
+		font-size: 22px;
+		font-weight: bold;
+		text-align: center;
+		border-radius: 30px; 
+		background: #ffffff; 
+	}
+	.detailBox > dl dt {
+		margin-bottom: 20px;
+		padding: 10px;
+		font-size: 22px;
+		color: #ffffff;
+		text-align: center;
+	}
+	.detailBox > dl.infoTime dt {
+		background: #a0d3e1;
+	}
+	.detailBox > dl.lv1 dt {
+		background: #ffac5a;
+	}
+	.detailBox > dl.lv2 dt {
+		background: #8b74ff;
+	}
+	.detailBox > dl.lv3 dt {
+		background: #ff745d;
+	}
+	.detailBox > dl.lv4 dt {
+		background: #37cd19;
+	}
+	.detailBox > dl.lv5 dt {
+		background: #415d97;
+	}
+	.detailBox > dl.lv6 dt {
+		background: #a7324b;
+	}
+	.detailBox > dl + dl {
+		margin: 30px 0 0;
+	}
+	.detailBox > dl + .detailTbl {
+		margin: 50px 0 0;
+	}
+	.detailBox .detailTbl {
+		width: 100%;
+		border-top: 1px solid #a0d3e1;
+	}
+	.detailBox .detailTbl th {
+		width: 220px;
+		padding: 20px;
+		font-size: 18px;
+		text-align: center;
+		vertical-align: middle;
+		border-bottom: 1px solid #ffffff;
+		background: #a0d3e1;
+	}
+	.detailBox .detailTbl td {
+		padding: 20px 40px;
+		font-size: 18px;
+		vertical-align: middle;
+		border-bottom: 1px solid #a0d3e1;
+		background: #ffffff;
+	}
+	.detailBox .detailTbl + h4 {
+		margin: 30px auto 20px;
+	}
+	.detailBox .timeTbl {
+		width: 100%;
+		max-width: 620px;
+		margin: 0 auto;
+		border-top: 1px solid #a0d3e1;
+		border-left: 1px solid #a0d3e1;
+		border-right: 1px solid #a0d3e1;
+	}
+	.detailBox .timeTbl + .timeTbl {
+		margin-top: 20px;
+	}
+		.detailBox .timeTbl thead th {
+			padding: 15px 0;
+			font-size: 18px;
+			text-align: center;
+			background: #ddeef3;
+		}
+		.detailBox .timeTbl tr {
+			border-bottom: 1px solid #a0d3e1;
+			background: #ffffff;
+		}
+		.detailBox .timeTbl.teacherHead tbody tr {
+			border-bottom: 1px dashed #a0d3e1;
+		}
+		.detailBox .timeTbl.teacherHead tbody tr.line {
+			border-bottom: 1px solid #a0d3e1;
+		}
+		.detailBox .timeTbl tr td {
+			width: 25%;
+			padding: 15px;
+			font-size: 18px;
+			text-align: center;
+		}
+		.detailBox .timeTbl tr td:nth-child(2) {
+			width: 50%;
+		}
+		.detailBox .timeTbl tr td.accepting {
+			color: #ff0000;
+		}
+
+/* 多読プログラムについて
+-------------------------------------------------- */
+.course .reading .ttlBorder span {
+	display: inline-block;
+}
+.course .reading .ttlBorder + p {
+	max-width: 785px;
+	margin: 60px auto 40px;
+	font-size: 22px;
+	font-weight: bold;
+	text-align: center;
+}
+.course .reading .contWrap div {
+	max-width: 785px;
+	margin: 0 auto 60px;
+	text-align: center;
+}
+	.course .reading .contWrap div p {
+		line-height: 2;
+	}
+	.course .reading .contWrap div p + p {
+		margin-top: 30px;
+	}
+.course .reading .contWrap ul {
+	overflow: hidden;
+}
+	.course .reading .contWrap ul li {
+		float: left;
+		width: 48%;
+	}
+	.course .reading .contWrap ul li + li {
+		float: right;
+	}
+
+/* レッスン一覧
+-------------------------------------------------- */
+.course .lessonList {
+	height: 500px;
+	margin-top: 80px;
+	background: url("../image/course/lesson_bg.png") no-repeat;
+	background-size:cover;
+}
+.course .lessonList .ttlBox {
+	display: none;
+}
+.course .lessonList #lessonListPc {
+	position: relative;
+	top: -60px;
+	margin:0 0 0 -2%;
+	text-align: center;
+}
+	.course .lessonList #lessonListPc li {
+		position: relative;
+		display: inline-block;
+		width: 25%;
+		margin:0 0 0 2%; 
+	}
+		.course .lessonList #lessonListPc li a {
+			position: absolute;
+			right: 30px;
+			bottom: 30px;
+			width: 100px;
+		}
+	.course .lessonList #lessonListPc li:nth-child(1) {
+		position: relative;
+		left: -80px;
+	}
+	.course .lessonList #lessonListPc li:nth-child(2) {
+		position: relative;
+		left: -80px;
+	}
+	.course .lessonList #lessonListPc li:nth-child(3) {
+		position: relative;
+		left: -80px;
+	}
+	.course .lessonList #lessonListPc li:nth-child(4) {
+		position: relative;
+		left: 100px;
+	}
+	.course .lessonList #lessonListPc li:nth-child(5) {
+		position: relative;
+		left: 100px;
+	}
+	.course .lessonList #lessonListPc li:nth-child(6) {
+		position: relative;
+		left: 100px;
+	}
+.course .lessonList #lessonListSp {
+	display: none;
+}
+/*////////////////////////////////////////////////////////////
+	 コース紹介一覧
+/////////////////////////////////////////////////////////////*/
+
+/* .kv
+-------------------------------------------------- */
+#courseList .kv {
+	background: url("../image/course/course_kv_pc.png") no-repeat;
+	background-size:cover; 
+}
+	#courseList .kv h2 {
+		width: 274px;
+	}
+
+/* メイン
+-------------------------------------------------- */
+#courseList .kv + section {
+	padding-top: 60px;
+}
+#courseList .ttlBorder {
+	margin: 0 auto 40px;
+}
+	#courseList .ttlBorder img {
+		width: 140px;
+	}
+#courseList .ttlBorder + p {
+	margin-bottom:40px;
+	text-align: center;
+}
+#courseList section section {
+	padding: 50px 10px; 
+	text-align: center;
+}
+#courseList h4 {
+	display: inline-block;
+	margin-bottom: 20px;
+}
+#courseList h4 + div {
+	overflow: hidden;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 20px 50px;
+	border-radius: 6px;
+	background: #ffffff; 
+}
+	#courseList h4 + div > p {
+		float: left;
+		width: 320px;
+	}
+	#courseList h4 + div > dl {
+		float: right;
+		width: 555px;
+		text-align: left;
+	}
+		#courseList h4 + div > dl dt {
+			margin-bottom:20px;
+			padding-left: 13px;
+			font-size: 22px;
+			font-weight: bold;
+		}
+		#courseList h4 + div > dl dt + dd {
+			margin-bottom: 40px;
+		}
+		#courseList h4 + div > dl dd + dd {
+			text-align: right;
+		}
+			#courseList h4 + div > dl dd + dd a {
+				display: inline-block;
+				width: 176px;
+			}
+#courseList #course01 {
+	background:#68cfec; 
+}
+	#courseList #course01 h4 + div > dl dt {
+		border-left: 6px solid #68cfec; 
+	}
+#courseList #course02 {
+	background:#f9ca3d; 
+}
+	#courseList #course02 h4 + div > dl dt {
+		border-left: 6px solid #f9ca3d; 
+	}
+#courseList #course03 {
+	background:#fb7ca3; 
+}
+	#courseList #course03 h4 + div > dl dt {
+		border-left: 6px solid #fb7ca3; 
+	}
+#courseList #course04 {
+	background:#c8774f; 
+}
+	#courseList #course04 h4 + div > dl dt {
+		border-left: 6px solid #c8774f;  
+	}
+#courseList #course05 {
+	background:#089f9d; 
+}
+	#courseList #course05 h4 + div > dl dt {
+		border-left: 6px solid #089f9d;  
+	}
+#courseList #course06 {
+	background:#9ade41; 
+}
+	#courseList #course06 h4 + div > dl dt {
+		border-left: 6px solid #9ade41;
+	}
+
+/*////////////////////////////////////////////////////////////
+	 親子英会話コース
+/////////////////////////////////////////////////////////////*/
+/* .kv
+-------------------------------------------------- */
+#parentChild .kv {
+	background: url("../image/course/course_kv_pc.png") no-repeat;
+	background-size:cover; 
+}
+	#parentChild .kv h2 {
+		width: 463px;
+	}
+
+
+/*////////////////////////////////////////////////////////////
+	 幼稚園英会話コース
+/////////////////////////////////////////////////////////////*/
+/* .kv
+-------------------------------------------------- */
+#kindergarten .kv {
+	background: url("../image/kindergarten/kv_pc.png") no-repeat;
+	background-size:cover; 
+}
+	#kindergarten .kv h2 {
+		width: 422px;
+	}
+
+/*////////////////////////////////////////////////////////////
+	 小学生英会話コース
+/////////////////////////////////////////////////////////////*/
+/* .kv
+-------------------------------------------------- */
+#primary .kv {
+	background: url("../image/primary/kv_pc.png") no-repeat;
+	background-size:cover; 
+}
+	#primary .kv h2 {
+		width: 422px;
+	}
+
+/*////////////////////////////////////////////////////////////
+	 エリートキッズコース
+/////////////////////////////////////////////////////////////*/
+/* .kv
+-------------------------------------------------- */
+#elite .kv {
+	background: url("../image/elite/kv_pc.png") no-repeat;
+	background-size:cover; 
+}
+	#elite .kv h2 {
+		width: 422px;
+		margin-top: 100px;
+	}
+#elite .kv + section {
+	padding-top: 60px;
+}
+
+/*////////////////////////////////////////////////////////////
+	 小5・小6プライベートレッスン
+/////////////////////////////////////////////////////////////*/
+/* .kv
+-------------------------------------------------- */
+#private .kv {
+	background: url("../image/private/kv_pc.png") no-repeat;
+	background-size:cover; 
+}
+	#private .kv h2 {
+		width: 392px;
+		margin-top: 100px;
+	}
+#private .kv + section {
+	padding-top: 60px;
+}
+
+/*////////////////////////////////////////////////////////////
+	 中・高校生以上英会話コース
+/////////////////////////////////////////////////////////////*/
+/* .kv
+-------------------------------------------------- */
+#general .kv {
+	background: url("../image/general/kv_pc.png") no-repeat;
+	background-size:cover; 
+}
+	#general .kv h2 {
+		width: 440px;
+		margin-top: 100px;
+	}
+
+/*////////////////////////////////////////////////////////////
+	 先生紹介
+/////////////////////////////////////////////////////////////*/
+/* .kv
+-------------------------------------------------- */
+#teacher .kv {
+	background: url("../image/teacher/kv_pc.png") no-repeat;
+	background-size:cover; 
+}
+	#teacher .kv h2 {
+		width: 428px;
+	}
+#teacher .kv + section {
+	padding-top: 60px;
+}
+#teacher section {
+	margin-bottom: 140px;
+}
+#teacher .ttlBorder {
+	margin-bottom: 40px;
+}
+	#teacher #sec01 .ttlBorder img {
+		width: 110px;
+	}
+	#teacher #sec02 .ttlBorder img {
+		width: 165px;
+	}
+#teacher .ttlBorder + p {
+	margin-bottom: 80px;
+	text-align: center;
+	line-height: 2;
+}
+#teacher #sec01 dl + dl {
+	margin-top: 70px;
+}
+#teacher #sec02 dl + dl {
+	margin-top: 50px;
+}
+#teacher section dl dt {
+	padding: 0 10px 10px 15px;
+	font-size: 28px;
+	background: url("../image/teacher/ttl_dot.png") left bottom repeat-x;
+	background-size: auto 6px;
+}
+#teacher #sec01 dl dt {
+	margin-bottom: 40px;
+}
+#teacher #sec02 dl dt {
+	margin-bottom: 20px;
+}
+	#teacher section dl dt span {
+		display: inline-block;
+		padding-left: 40px;
+		background: url("../image/teacher/ttl_icon.png") left center no-repeat;
+		background-size:32px auto;
+	}
+#teacher section dl dd {
+	padding: 0 10px;
+	line-height: 2;
+}
+#teacher #sec01 dd {
+	overflow: hidden;
+}
+	#teacher #sec01 dd > p {
+		float: left;
+		width: 345px;
+	}
+	#teacher #sec01 dd > div {
+		float: right;
+		width: 545px;
+	}
+
+/*////////////////////////////////////////////////////////////
+	 無料体験レッスン
+/////////////////////////////////////////////////////////////*/
+/* .kv
+-------------------------------------------------- */
+#freelesson .kv {
+	background: url("../image/freelesson/kv_pc.png") no-repeat;
+	background-size:cover; 
+}
+	#freelesson .kv h2 {
+		width: 379px;
+	}
+#freelesson .kv + section {
+	padding-top: 60px;
+}
+#freelesson .ttlBorder {
+	margin-bottom: 40px;
+}
+	#freelesson #sec01 .ttlBorder img {
+		width: 220px;
+	}
+#freelesson .ttlBorder + p {
+	margin-bottom: 20px;
+	text-align: center;
+	font-size: 22px;
+	font-weight: bold;
+}
+#freelesson .ttlBorder + p + p {
+	margin-bottom: 80px;
+	text-align: center;
+	line-height: 2;
+}
+#freelesson .flow {
+	text-align: center;
+}
+	#freelesson .flow h4 {
+		display: inline-block;
+		margin-bottom: 50px;
+		padding: 0 0 10px;
+		font-size: 28px;
+		background: url("../image/teacher/ttl_dot.png") left bottom repeat-x;
+		background-size: auto 6px;
+	}
+#freelesson .flow dl {
+
+}
+	#freelesson .flow dl dt {
+		line-height: 50px;
+		background: #f8df40;
+	}
+	#freelesson .flow #flow5 dt {
+		background: #ff8400;
+	}
+		#freelesson .flow dl dt span {
+			display: inline-block;
+		}
+#freelesson .flow #flow1 dt span {
+	width: 170px;
+}
+#freelesson .flow #flow2 dt span {
+	width: 340px;
+}
+#freelesson .flow #flow3 dt span {
+	width: 430px;
+}
+#freelesson .flow #flow4 dt span {
+	width: 520px;
+}
+#freelesson .flow #flow5 dt span {
+	width: 300px;
+}
+#freelesson .flow dl dd {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 30px 10px 60px;
+	text-align: left;
+}
+	#freelesson .flow dl dd > p {
+		line-height: 2;
+	}
+#freelesson .flow .contactBnr {
+	min-height: 170px;
+	margin-top: 20px;
+	padding: 20px 0;
+	border-radius: 6px;
+	background: #fef9e6;
+}
+#freelesson .flow .contactBnr .infoTxt01 {
+	margin-bottom: 20px;
+	padding: 5px 0;
+	text-align: center;
+	background: #ffffff;
+}
+	#freelesson .flow .contactBnr .infoTxt01 span {
+		display: inline-block;
+	}
+	#freelesson .flow .contactBnr ul {
+		position: relative;
+		padding: 0 20px;
+	}
+		#freelesson .flow .contactBnr ul li {
+			display: inline-block;
+		}
+		#freelesson .flow .contactBnr ul .mail {
+			position: absolute;
+			right: 20px;
+		}
+	#freelesson .flow .contactBnr ul + p {
+		margin-top: 30px;
+		padding-left: 80px;
+		display: inline-block;
+	}
+
+/*////////////////////////////////////////////////////////////
+	 スクール紹介
+/////////////////////////////////////////////////////////////*/
+/* .kv
+-------------------------------------------------- */
+#school .kv {
+	background: url("../image/school/kv_pc.png") no-repeat;
+	background-size:cover; 
+}
+	#school .kv h2 {
+		width: 310px;
+	}
+#school .kv + section {
+	padding-top: 60px;
+}
+#school .ttlBorder {
+	margin-bottom: 40px;
+}
+	#school #sec01 .ttlBorder img {
+		width: 130px;
+	}
+	#school #sec02 .ttlBorder img {
+		width: 168px;
+	}
+#school .ttlBorder + p {
+	margin-bottom: 40px;
+	text-align: center;
+	line-height: 2;
+}
+#school section section {
+	margin-top: 100px;
+	text-align: center;
+}
+#school h4 {
+	display: inline-block;
+	margin-bottom: 50px;
+	padding: 0 0 10px;
+	font-size: 28px;
+	background: url("../image/teacher/ttl_dot.png") left bottom repeat-x;
+	background-size: auto 6px;
+}
+#school .message {
+	background: #e6edf6;
+}
+#school .message .msgBox {
+	overflow: hidden;
+	max-width: 1020px;
+	margin: 0 auto;
+	padding: 20px 10px;
+}
+	#school .message .msgBox > p {
+		float: right;
+		width: 454px;
+	}
+	#school .message .msgBox > div {
+		float: left;
+		width: 520px;
+		padding: 20px 0 20px 15px;
+		text-align: left;
+		line-height: 2;
+	}
+		#school .message .msgBox > div p + p {
+			margin-top: 30px;
+		}
+#school .map {
+	width: 100%;
+	margin-bottom: 140px;
+}
+	#school .map > div {
+		position: relative;
+		width: 100%;
+		height: 360px;
+		margin-bottom: 35px;
+	}
+		#school .map > div iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100% !important;
+			height: 100% !important;
+		}
+#school .map > ul {
+	overflow: hidden;
+	max-width: 1000px;
+	padding: 0 10px;
+	text-align: left;
+}
+#school .map > ul li {
+	width: 50%;
+	float: left;
+}
+#school .map .infoMap01 {
+	margin: 0 auto 50px;
+}
+	#school .map .infoMap01 dl dt {
+		display: inline-block;
+		margin-bottom: 10px;
+		padding: 2px 30px;
+		font-weight: bold;
+		color: #ffffff;
+		border-radius: 4px;
+		background: #58dc46;
+	}
+#school .map .infoMap02 {
+	margin: 0 auto;
+}
+	#school .map .infoMap02 dl dt {
+		display: inline-block;
+		width: 32px;
+	}
+	#school .map .infoMap02 dl dd {
+		display: inline-block;
+	}
+
+/*////////////////////////////////////////////////////////////
+	 お問い合わせ
+/////////////////////////////////////////////////////////////*/
+/* .kv
+-------------------------------------------------- */
+#contact .kv {
+	background: url("../image/contact/kv_pc.png") no-repeat;
+	background-size:cover; 
+}
+	#contact .kv h2 {
+		width: 310px;
+	}
+#contact .telBox {
+	margin-bottom: 50px;
+	padding: 40px 10px;
+	background: url("../image/contact/tel_bg.png");
+}
+	#contact .telBox p {
+		width: 783px;
+		margin: 0 auto;
+	}
+#contact h3 {
+	text-align: center;
+}
+#contact h3 span {
+	display: inline-block;
+	width: 300px;
+	margin-bottom: 50px;
+	padding: 0 0 20px;
+	background: url("../image/teacher/ttl_dot.png") left bottom repeat-x;
+	background-size: auto 6px;
+}
+#contact h3 + p {
+	display: none;
+}
+#contact .formBox {
+	margin-bottom: 60px;
+	padding: 70px 40px 20px;
+	border: 1px solid #cfd5dd;
+	background: #f7f9fc;
+}
+	#contact .formBox dl + dl {
+		margin-top: 40px;
+	}
+	#contact .formBox dl + p {
+		margin-top: 20px;
+		line-height: 2;
+	}
+	#contact .formBox dl dt {
+		margin-bottom: 10px;
+		padding-left: 15px;
+		font-size: 18px;
+		font-weight: bold;
+		line-height: 1;
+		border-left: 4px solid #778cab;
+	}
+		#contact .formBox dl dt span {
+			display: inline-block;
+			margin-left: 5px;
+			padding: 3px;
+			font-size: 16px;
+			font-weight: normal;
+			color: #ffffff;
+			border-radius: 6px;
+			background: #e87063; 
+		}
+	#contact .formBox input[type="text"],
+	#contact .formBox input[type="email"],
+	#contact .formBox input[type="tel"] {
+		width: 100%;
+	    height: 50px;
+	    padding-left: 10px;
+	    border: 1px solid #cfd5dd;
+	    border-radius: 5px;
+	    background: #ffffff;
+	    -webkit-appearance:none;
+	    -moz-appearance: none;
+	    appearance: none;
+	}
+	#contact .formBox textarea {
+	    width: 100%;
+	    height: 220px;
+	    padding-left: 10px;
+	    border: 1px solid #cfd5dd;
+	    background: #ffffff;
+	    resize: none;
+	}
+/*////////////////////////////////////////////////////////////
+	 採用情報
+/////////////////////////////////////////////////////////////*/
+/* .kv
+-------------------------------------------------- */
+#recruit .kv {
+	background: url("../image/recruit/kv_pc.png") no-repeat;
+	background-size:cover; 
+}
+	#recruit .kv h2 {
+		width: 235px;
+	}
+#recruit .kv + dl {
+	max-width:1000px;
+	margin:0 auto 100px;
+	padding: 60px 10px 0;
+	text-align: center;
+}
+	#recruit .kv + dl dt {
+		margin-bottom: 30px;
+		font-size: 22px;
+		font-weight: bold;
+	}
+	#recruit .kv + dl dd {
+		line-height: 2;
+	}
+#recruit .ttlBorder {
+	margin-bottom: 40px;
+}
+	#recruit #sec01 .ttlBorder img {
+		width: 525px;
+	}
+#recruit .meritBox {
+	margin-bottom: 100px;
+	padding: 30px 10px;
+	background: #ffe9ca;
+}
+	#recruit .meritBox ul {
+		text-align: center;
+	}
+		#recruit .meritBox ul li {
+			display: inline-block;
+			width: 285px;
+		}
+		#recruit .meritBox ul li + li {
+			margin-left:60px;
+		}
+#recruit section section {
+	margin-bottom: 100px;
+	text-align: center;
+}
+#recruit h4 {
+	display: inline-block;
+	margin-bottom: 50px;
+	padding: 0 0 10px;
+	font-size: 28px;
+	background: url("../image/teacher/ttl_dot.png") left bottom repeat-x;
+	background-size: auto 6px;
+}
+#recruit .lessonBox ul {
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+	#recruit .lessonBox ul li {
+		float: left;
+		width: 280px;
+	}
+	#recruit .lessonBox ul li + li {
+		margin-left: 50px;
+	}
+#recruit .lessonBox ul + p {
+	line-height: 2;
+}
+#recruit .message {
+	background: #e6edf6;
+}
+#recruit .message .msgBox {
+	overflow: hidden;
+	max-width: 1020px;
+	margin: 0 auto;
+	padding: 20px 10px;
+}
+	#recruit .message .msgBox > p {
+		float: left;
+		width: 454px;
+	}
+	#recruit .message .msgBox > div {
+		float: right;
+		width: 520px;
+		padding: 20px 0 0 15px;
+		text-align: left;
+		line-height: 2;
+	}
+		#recruit .message .msgBox > div p + p {
+			margin-top: 30px;
+		}
+#recruit .recruitBox {
+	text-align: right;
+}
+#recruit .recruitBox > div {
+	display: inline-block;
+	width: 900px;
+}
+	#recruit .recruitBox dl {
+		display: table;
+		width: 100%;
+	}
+	#recruit .recruitBox dl + dl {
+		margin-top: 30px;
+	}
+		#recruit .recruitBox dl dt {
+			display: table-cell;
+			width: 20%;
+			padding: 5px 0;
+			font-weight: bold;
+			text-align: left;
+			vertical-align: middle;
+			border-right: 6px solid #778cab; 
+		}
+		#recruit .recruitBox dl dd {
+			display: table-cell;
+			padding: 5px 0 5px 25px;
+			text-align: left;
+			vertical-align: middle;
+		}
+		#recruit .recruitBox dl dd a {
+			color: #133970;
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

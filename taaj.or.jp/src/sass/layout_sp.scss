@@ -1,0 +1,1361 @@
+@charset "UTF-8";
+@import "./mixin";
+@import "./mod";
+/* CSS Document */
+
+/*===================================================
+	画面用CSS（PC/SMP）
+===================================================*/
+
+/*////////////////////////////////////////////////////////////
+	TOP
+///////////////////////////////////////////////////////////*/
+#top {
+  .kvContainer {
+    padding: 0 0 50px 20px;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 90%;
+      height: 90%;
+      z-index: -1;
+      background: #7fb841;
+    }
+    .kvPanel {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      .kvCnt {
+        width: calc(100% - 20px);
+        .topKv {
+          height: 300px;
+        }
+      }
+      .titleBox {
+        position: absolute;
+        left: 0;
+        bottom: -25px;
+        width: 100%;
+        max-width: 280px;
+        padding: 20px;
+        h1,
+        p {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .sec01 {
+    padding: 60px 0;
+    .newsContainer {
+      margin: 0 0 40px;
+      padding: 40px 20px;
+      .secBox {
+        .leftBox {
+          margin: 0 0 40px;
+          .secTtl {
+            margin: 0 0 30px;
+            h2 {
+              font-size: 24px;
+            }
+            p {
+              font-size: 14px;
+            }
+          }
+        }
+        .rightBox {
+          .newsList {
+            ul {
+              li {
+                + li {
+                  margin: 20px 0 0;
+                }
+                .infoBox {
+                  margin: 0 0 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .secPanel {
+      .logoBox {
+        margin: 0 0 20px;
+        .logo {
+          max-width: 220px;
+          margin: 0 auto;
+        }
+      }
+      .txtBox {
+        .btnMore {
+          margin: 25px auto 0;
+        }
+      }
+    }
+  }
+  .instaSection {
+    padding: 60px 0;
+    .secTtl {
+      margin: 0 0 30px;
+      h2 {
+        font-size: 24px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	about
+///////////////////////////////////////////////////////////*/
+#about {
+  .mainContainer {
+    padding: 40px 0 80px;
+  }
+  .pageLinkList {
+    margin: 0 0 60px;
+    ul {
+      max-width: 200px;
+      margin: 0 auto;
+      li {
+        + li {
+          margin: 15px 0 0;
+        }
+      }
+    }
+  }
+  .section {
+    + .section {
+      margin: 40px 0 0;
+    }
+  }
+  .secContainer {
+    padding: 30px 20px;
+  }
+  .sec01 {
+    .secBox {
+      .photoBox {
+        max-width: 280px;
+        margin: 0 auto 30px;
+        .name {
+          margin: 10px 0 0;
+        }
+      }
+      .txtBox {
+      }
+    }
+  }
+  .sec02 {
+    .txt {
+      + .txt {
+        margin: 20px 0 0;
+      }
+    }
+    .secBox {
+      margin: 20px 0;
+      .photoBox {
+        max-width: 280px;
+        margin: 0 auto 30px;
+        .name {
+          margin: 10px 0 0;
+        }
+      }
+      .txtBox {
+      }
+    }
+  }
+  .subSection {
+    + .subSection {
+      margin: 60px 0 0;
+    }
+    .subSecTtl {
+      margin: 0 0 20px;
+      h3 {
+        font-size: 18px;
+      }
+    }
+    .txtBox {
+      .txt {
+        + .txt {
+          margin: 20px 0 0;
+        }
+      }
+    }
+    .logoPanel {
+      .logo {
+        width: 200px;
+        margin: 20px auto 0;
+      }
+    }
+    .historyList {
+      ul {
+        li {
+          padding: 0 0 25px;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 0;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #7fb841;
+          }
+          &:not(:last-child):after {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 4px;
+            width: 1px;
+            height: 100%;
+            background: #7fb841;
+          }
+          dl {
+            padding: 0 0 0 30px;
+            dt {
+              margin: 0 0 5px;
+            }
+            dd {
+              padding: 0 0 0 3px;
+            }
+          }
+        }
+      }
+    }
+    .infoBox {
+      dl {
+        padding: 10px 0;
+        dt {
+          margin: 0 0 2px;
+        }
+        dd {
+        }
+      }
+    }
+    .btnTarget {
+      max-width: 280px;
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	conference
+///////////////////////////////////////////////////////////*/
+#conference {
+  .topContainer {
+    padding: 50px 0;
+    .pageLinkList {
+      ul {
+        max-width: 200px;
+        margin: 0 auto;
+        li {
+          + li {
+            margin: 15px 0 0;
+          }
+        }
+      }
+    }
+  }
+  .slidePanel {
+    .slideBox {
+      ul {
+        li {
+          width: calc(100% / 2);
+        }
+      }
+    }
+  }
+  .mainContainer {
+    padding: 0 0 100px;
+  }
+  .nextConferenceHeadLine {
+    padding: 50px 0;
+    .secBox {
+      max-width: 640px;
+      margin: 0 auto;
+      .rightBox {
+        ol {
+          max-width: 330px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+  .subSection {
+    + .subSection {
+      margin: 60px 0 0;
+    }
+    .subSecTtl {
+      margin: 0 0 30px;
+      h3 {
+        font-size: 18px;
+      }
+    }
+  }
+  .infoBox {
+    padding: 20px;
+    dl {
+      + dl {
+        margin: 15px 0 0;
+      }
+      dt {
+        margin: 0 0 5px;
+      }
+    }
+  }
+  .greetingPanel {
+    .pdfBox {
+      max-width: 260px;
+      margin: 0 auto;
+    }
+    .txtBox {
+      padding: 20px 0 0;
+      .name {
+        margin: 40px 0 0;
+      }
+    }
+  }
+  .programContainer {
+    .programPanel {
+      + .programPanel {
+        margin: 50px 0 0;
+      }
+    }
+  }
+  .programTable {
+    table {
+      width: 100%;
+      thead {
+        display: none;
+      }
+      tbody {
+        tr {
+          display: block;
+          width: 100%;
+          border: 1px solid #21535c;
+          + tr {
+            margin: 20px 0 0;
+          }
+          td {
+            display: block;
+            width: 100%;
+            dl {
+              dt {
+                padding: 10px;
+                color: #ffffff;
+                font-weight: bold;
+                text-align: center;
+                vertical-align: middle;
+                background: #7fb841;
+              }
+              dd {
+                padding: 10px 20px;
+                text-align: center;
+                line-height: 2;
+              }
+            }
+          }
+          .program {
+            dl {
+              dd {
+                text-align: left;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .accessBox {
+    padding: 20px;
+  }
+  .innerSection {
+    + .innerSection {
+      margin: 35px 0 0;
+    }
+    .innerSecTtl {
+      border-left: 2px solid #7fb841;
+    }
+  }
+  .feeTable {
+    table {
+      width: 100%;
+      thead {
+        display: none;
+      }
+      tbody {
+        tr {
+          display: block;
+          width: 100%;
+          border: 1px solid #21535c;
+          + tr {
+            margin: 20px 0 0;
+          }
+          td {
+            display: block;
+            width: 100%;
+            dl {
+              dt {
+                padding: 10px;
+                color: #ffffff;
+                font-weight: bold;
+                text-align: center;
+                vertical-align: middle;
+                background: #7fb841;
+              }
+              dd {
+                padding: 10px 20px;
+                text-align: center;
+                line-height: 2;
+              }
+            }
+          }
+          .date {
+            dl {
+              dd {
+                text-align: left;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .cautionBox {
+    padding: 20px;
+  }
+  .cancelTable {
+    table {
+      width: 100%;
+      thead {
+        display: none;
+      }
+      tbody {
+        tr {
+          display: block;
+          width: 100%;
+          border: 1px solid #21535c;
+          + tr {
+            margin: 20px 0 0;
+          }
+          td {
+            display: block;
+            width: 100%;
+            dl {
+              dt {
+                padding: 10px;
+                color: #ffffff;
+                font-weight: bold;
+                text-align: center;
+                vertical-align: middle;
+                background: #7fb841;
+              }
+              dd {
+                padding: 10px 20px;
+                line-height: 2;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .pastTable {
+    table {
+      width: 100%;
+      thead {
+        display: none;
+      }
+      tbody {
+        tr {
+          display: block;
+          width: 100%;
+          border: 1px solid #21535c;
+          + tr {
+            margin: 20px 0 0;
+          }
+          td {
+            display: block;
+            width: 100%;
+            dl {
+              dt {
+                padding: 10px;
+                color: #ffffff;
+                font-weight: bold;
+                text-align: center;
+                vertical-align: middle;
+                background: #7fb841;
+              }
+              dd {
+                padding: 10px 20px;
+                line-height: 2;
+              }
+            }
+          }
+          // .no {
+          //   dl {
+          //     dd {
+          //       text-align: center;
+          //     }
+          //   }
+          // }
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	learn
+///////////////////////////////////////////////////////////*/
+#learn {
+  .mainContainer {
+    padding: 0 0 100px;
+  }
+  .topHeadLine {
+    padding: 50px 0;
+    .secBox {
+      max-width: 640px;
+      margin: 0 auto;
+      .rightBox {
+        ol {
+          max-width: 330px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+  .subSection {
+    + .subSection {
+      margin: 60px 0 0;
+    }
+    .subSecTtl {
+      margin: 0 0 30px;
+      h3 {
+        font-size: 18px;
+      }
+    }
+  }
+  .feeContainer {
+    margin: 40px 0 0;
+  }
+  .innerSectionContainer {
+    padding: 40px 0 0;
+    .innerSection {
+      + .innerSection {
+        margin: 50px 0 0;
+      }
+      .innerSecTtl {
+        font-size: 16px;
+      }
+    }
+  }
+  .themeContainer {
+    .themePanel {
+      padding: 30px 20px;
+      + .themePanel {
+        margin: 60px 0 0;
+      }
+      dl {
+        + dl {
+          margin: 50px 0 0;
+        }
+        dt {
+          margin: 0 0 20px;
+          span {
+            font-size: 18px;
+          }
+        }
+      }
+      .introBox {
+        padding: 15px;
+        .introTtl {
+          margin: 0 0 10px;
+        }
+      }
+      .bottomBox {
+        margin: 60px 0 0;
+      }
+    }
+  }
+  .voicePanel {
+    padding: 20px;
+    + .voicePanel {
+      margin: 15px 0 0;
+    }
+    dl {
+      dt {
+        margin: 0 0 10px;
+      }
+      dd {
+        .comment {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	certification
+///////////////////////////////////////////////////////////*/
+#certification {
+  .topContainer {
+    padding: 50px 0;
+    .pageLinkList {
+      ul {
+        max-width: 200px;
+        margin: 0 auto;
+        li {
+          + li {
+            margin: 15px 0 0;
+          }
+        }
+      }
+    }
+  }
+  .sec01 {
+    padding: 60px 0;
+    .secBox {
+      margin: 40px 0;
+      border: 2px solid #7fb841;
+      .ttl {
+        top: -10px;
+        left: 20px;
+        h3 {
+          font-size: 16px;
+        }
+      }
+      .inner {
+      }
+    }
+  }
+  .sec02 {
+    padding: 60px 0;
+    .topTxt {
+      margin: 0 0 30px;
+      text-align: center;
+    }
+    .secContainer {
+      padding: 30px 20px;
+    }
+    .subSection {
+      + .subSection {
+        margin: 60px 0 0;
+      }
+      .subSecTtl {
+        margin: 0 0 20px;
+        h3 {
+          font-size: 18px;
+        }
+      }
+      .txtBox {
+        margin: 20px 0 0;
+        padding: 20px;
+      }
+    }
+  }
+  .sec03 {
+    padding: 60px 0;
+    .secPanel {
+      + .secPanel {
+        margin: 30px 0 0;
+      }
+      .pTtl {
+        padding: 10px;
+        font-size: 20px;
+        text-align: center;
+      }
+      .pBody {
+        padding: 15px;
+        dl {
+          dt {
+            padding: 0 25px 0 0;
+            font-size: 16px;
+          }
+          dd {
+            padding: 15px 0 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	join
+///////////////////////////////////////////////////////////*/
+#join {
+  .sec01 {
+    padding: 40px 0;
+    .topTxt {
+      margin: 0 0 20px;
+    }
+    .listPanel {
+      margin: 0 0 20px;
+      padding: 20px;
+    }
+    .txtBox {
+      margin: 0 0 20px;
+      text-align: center;
+      p + p {
+        margin: 30px 0 0;
+      }
+    }
+    .btnMore {
+      + p {
+        margin: 10px 0 0;
+      }
+    }
+  }
+  .sec02 {
+    padding: 40px 0 80px;
+    .linkListPanel {
+      .linkListBox {
+        ul {
+          li {
+            + li {
+              margin: 20px 0 0;
+            }
+            a {
+              padding: 20px;
+            }
+            dl {
+              dt {
+                margin: 0 0 20px;
+                padding: 0 0 10px;
+                font-size: 20px;
+                &:after {
+                  width: 20%;
+                  height: 1px;
+                }
+              }
+              dd {
+                p {
+                  min-width: 180px;
+                  padding: 7px 20px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	apply
+///////////////////////////////////////////////////////////*/
+#apply {
+  .sec01 {
+    padding: 40px 0;
+    .priceTable {
+      table {
+        th,
+        td {
+          font-size: 12px;
+          padding: 5px;
+        }
+      }
+    }
+  }
+  .sec02 {
+    padding: 40px 0;
+    .listPanel {
+      .listBox {
+        ul {
+          li {
+            padding: 20px;
+            + li {
+              margin: 20px 0 0;
+            }
+            dl {
+              dt {
+                margin: 0 0 20px;
+                padding: 0 0 10px;
+                font-size: 20px;
+                &:after {
+                  width: 20%;
+                  height: 1px;
+                }
+              }
+              dd {
+                .txt {
+                  font-size: 13px;
+                }
+                .arrow {
+                  width: 17px;
+                  margin: 10px auto 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .sec03 {
+    padding: 40px 0 80px;
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	annual
+///////////////////////////////////////////////////////////*/
+#annual {
+  .topSection {
+    padding: 40px 0;
+  }
+  .sec01 {
+    padding: 40px 0;
+    .feeTable {
+      table {
+        th,
+        td {
+          font-size: 13px;
+          padding: 10px;
+        }
+        th {
+          width: 150px;
+          span {
+            max-width: 120px;
+          }
+        }
+      }
+    }
+  }
+  .sec02 {
+    padding: 40px 0 80px;
+    .subSection {
+      + .subSection {
+        margin: 60px 0 0;
+      }
+      .subSecTtl {
+        margin: 0 0 20px;
+        h3 {
+          font-size: 18px;
+        }
+      }
+      .txtBox {
+        display: block;
+        max-width: 860px;
+        .btnMore {
+          max-width: 260px;
+          margin: 15px 0 0;
+        }
+      }
+      .banKInfoPanel {
+        margin: 40px 0 0;
+        > p {
+          margin: 0 0 15px;
+          font-weight: bold;
+        }
+        .infoListBox {
+          .bankInfo {
+            padding: 20px;
+            + .bankInfo {
+              margin: 20px 0 0;
+            }
+            .inner {
+              max-width: 350px;
+              margin: 0 auto;
+            }
+            dl {
+              + dl {
+                margin: 15px 0 0;
+              }
+              dt {
+                width: 90px;
+              }
+              dd {
+                width: calc(100% - 100px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	newsletter
+///////////////////////////////////////////////////////////*/
+#newsletter {
+  .sec01 {
+    padding: 40px 0 80px;
+  }
+  .formBox {
+    form {
+      > p {
+        display: block;
+        label {
+          width: 100%;
+          margin: 0 0 5px;
+        }
+        input {
+          width: 100%;
+        }
+      }
+      input[type="submit"] {
+        width: 100%;
+        min-width: auto;
+        padding: 12px 20px;
+        font-size: 14px;
+        &[name="unsubscribe"] {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	instructor
+///////////////////////////////////////////////////////////*/
+#instructor {
+  .topSection {
+    padding: 40px 0;
+    .secPanel {
+      padding: 20px;
+      + .secPanel {
+        margin: 25px 0 0;
+      }
+      .pTtl {
+        font-size: 18px;
+      }
+      .licenseTable {
+        dl {
+          dt {
+            padding: 20px;
+          }
+          dd {
+            padding: 20px;
+          }
+        }
+      }
+      .txtBox {
+        padding: 12px 10px;
+      }
+    }
+  }
+  .sec01 {
+    padding: 40px 0 80px;
+    .instructorTable {
+      table {
+        width: 100%;
+        thead {
+          display: none;
+        }
+        tbody {
+          tr {
+            display: block;
+            width: 100%;
+            border: 1px solid #21535c;
+            + tr {
+              margin: 20px 0 0;
+            }
+            td {
+              display: block;
+              width: 100%;
+              dl {
+                dt {
+                  padding: 10px;
+                  color: #ffffff;
+                  text-align: center;
+                  vertical-align: middle;
+                  background: #7fb841;
+                }
+                dd {
+                  padding: 10px;
+                  text-align: center;
+                  line-height: 2;
+                }
+              }
+            }
+            .introduction,
+            .url {
+              dl {
+                dd {
+                  text-align: left;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	contact
+///////////////////////////////////////////////////////////*/
+#contact {
+  .sec01 {
+    padding: 40px 0;
+  }
+  .sec02 {
+    padding: 40px 0 80px;
+    .telPanel {
+      padding: 20px;
+      .tel {
+        a {
+          em {
+            font-size: 28px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	news
+///////////////////////////////////////////////////////////*/
+#news {
+  .newsSection {
+    padding: 60px 0 120px;
+    .newsContainer {
+      .catePanel {
+        margin: 0 0 20px;
+        padding: 20px;
+        dl {
+          + dl {
+            margin: 20px 0 0;
+          }
+          dt {
+            margin: 0 0 15px;
+            padding: 0 0 5px;
+            font-size: 18px;
+          }
+          dd {
+            ul {
+              padding: 0;
+              li {
+                + li {
+                  margin: 10px 0 0;
+                }
+              }
+            }
+          }
+        }
+      }
+      .newsPanel {
+        padding: 20px;
+        .newsList {
+          ul {
+            li {
+              + li {
+                margin: 20px 0 0;
+              }
+              .infoBox {
+                margin: 0 0 10px;
+              }
+            }
+          }
+        }
+        .newsDetail {
+          .title {
+            font-size: 18px;
+          }
+          .infoBox {
+            margin: 0 0 20px;
+          }
+          .postContents {
+            line-height: 2.5;
+            img {
+              max-width: 100%;
+              width: auto;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+    .list__pagination {
+      margin: 40px 0 0;
+    }
+    .prevNextPanel {
+      margin: 40px 0 0;
+      padding: 0 0 5px;
+      > div {
+        a {
+          padding: 15px 25px;
+          span {
+            font-size: 13px;
+          }
+        }
+      }
+      .prevBox {
+        a {
+          background: url("../image/news/icon_arrow_prev.png") left 10px center
+            no-repeat;
+          background-size: 10px auto;
+        }
+      }
+      .nextBox {
+        a {
+          background: url("../image/news/icon_arrow_next.png") right 10px center
+            no-repeat;
+          background-size: 10px auto;
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	faq
+///////////////////////////////////////////////////////////*/
+#faq {
+  .topContainer {
+    padding: 50px 0;
+    .pageLinkList {
+      ul {
+        max-width: 200px;
+        margin: 0 auto;
+        li {
+          + li {
+            margin: 15px 0 0;
+          }
+        }
+      }
+    }
+  }
+  .sectionContainer {
+    padding: 0 0 80px;
+  }
+  .section {
+    + .section {
+      margin: 40px 0 0;
+    }
+    .subSecTtl {
+      margin: 0 0 20px;
+      h2 {
+        font-size: 18px;
+      }
+    }
+    .faqContainer {
+      padding: 20px;
+      dl {
+        dt {
+          padding: 0 30px 0 22px;
+          font-size: 16px;
+        }
+        dd {
+          padding: 15px;
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	legal
+///////////////////////////////////////////////////////////*/
+#legal {
+  .mainContainer {
+    padding: 40px 0 80px;
+  }
+  .infoPanel {
+    margin: 0 0 30px;
+    padding: 20px;
+    .infoBox {
+      dl {
+        padding: 10px 10px;
+        dt {
+          margin: 0 0 5px;
+        }
+      }
+    }
+  }
+  .taxPanel {
+    padding: 20px;
+    h2 {
+      margin: 0 0 10px;
+      padding: 0 10px 10px;
+      font-size: 16px;
+    }
+    .txt {
+      padding: 0 10px;
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	document
+///////////////////////////////////////////////////////////*/
+#document {
+  .topContainer {
+    padding: 50px 0;
+    .pageLinkList {
+      ul {
+        max-width: 200px;
+        margin: 0 auto;
+        li {
+          + li {
+            margin: 15px 0 0;
+          }
+        }
+      }
+    }
+  }
+  .section {
+    + .section {
+      margin: 40px 0 0;
+    }
+    .subSecTtl {
+      margin: 0 0 20px;
+      h3 {
+        font-size: 18px;
+      }
+    }
+    .bookListPanel01 {
+      margin: 0 0 60px;
+      .listBox {
+        ul {
+          max-width: 330px;
+          margin: 0 auto;
+          li {
+            + li {
+              margin: 40px 0 0;
+            }
+            .photo {
+              max-width: 180px;
+              margin: 0 auto 20px;
+            }
+            .txtBox {
+              dl {
+                dt {
+                  font-size: 16px;
+                }
+                dd {
+                  line-height: 2;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .bookListPanel02 {
+      dl {
+        + dl {
+          margin: 40px 0 0;
+        }
+        dt {
+          margin: 0 0 10px;
+          padding: 0 0 5px;
+          font-size: 16px;
+          border-bottom: 1px solid #414141;
+        }
+        dd {
+          line-height: 2.5;
+        }
+      }
+    }
+    .description {
+      .txt {
+        + .txt {
+          margin: 30px 0 0;
+        }
+      }
+    }
+    .captionPanel {
+      max-width: 600px;
+      margin: 40px 0 0;
+      padding: 20px;
+      .captionBox {
+        .photo {
+          max-width: 330px;
+          margin: 0 auto 20px;
+        }
+        .txtBox {
+          max-width: 330px;
+          margin: 0 auto;
+          dl {
+            dt {
+              margin: 0 0 15px;
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .sec01 {
+    padding: 50px 0;
+    .topContainer {
+      .secPanel {
+        padding: 30px 20px;
+        .secBox {
+          .photo {
+            max-width: 280px;
+            margin: 0 auto 20px;
+          }
+          .txtBox {
+            .ttl {
+              margin: 0 0 10px;
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .sec02 {
+    padding: 50px 0;
+  }
+  .sec03 {
+    padding: 50px 0;
+    .secContainer {
+      padding: 30px 20px;
+    }
+    .groupTable {
+      dl {
+        dt {
+          padding: 15px;
+        }
+        dd {
+          padding: 15px;
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	form
+///////////////////////////////////////////////////////////*/
+.contactContainer {
+  padding: 30px 20px;
+  .formBox {
+    dl {
+      dt {
+        justify-content: flex-start;
+        margin: 0 0 5px;
+        em {
+          margin: 0 0 0 10px;
+        }
+      }
+    }
+    .addressBox {
+      .postalBox {
+        .inputBox {
+          width: 100px;
+        }
+      }
+      .innerBox {
+        margin: 10px 0 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,405 @@
+@charset "UTF-8";
+@import "./mixin";
+@import "./mod";
+/* CSS Document */
+
+/*===================================================
+	画面用CSS（PC/SMP）
+===================================================*/
+
+/*////////////////////////////////////////////////////////////
+	TOP
+///////////////////////////////////////////////////////////*/
+#top {
+  .topMvContainer {
+    .mvPanel {
+      .mvBox {
+      }
+    }
+    .titlePanel01 {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      padding: 35px 0;
+      transform: translate(-50%, -50%);
+      .titleBox {
+        .title {
+          font-size: 28px;
+          white-space: nowrap;
+          br {
+            display: block;
+          }
+        }
+      }
+    }
+    .titlePanel02 {
+      bottom: 200px;
+      left: 25px;
+      .titleBox {
+        color: #ffffff;
+        .title01 {
+          margin: 0 0 5px;
+          font-size: 21px;
+        }
+        .title02 {
+          letter-spacing: 0.1em;
+        }
+      }
+    }
+    .sideFollow {
+      display: none;
+    }
+  }
+  #section {
+    &__about {
+      padding: 60px 25px;
+      background: url("../image/top/about_bg_sp.png") no-repeat;
+      background-size: cover;
+      .secPanel {
+        .txtBox {
+          margin: 0 0 40px;
+          .secTtl {
+            margin: 0 0 40px;
+            font-size: 30px;
+          }
+          .txt {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    &__message {
+      .secContainer {
+        padding: 60px 25px;
+        .secPanel {
+          max-width: 1300px;
+          margin: 0 auto;
+          .txtBox {
+            padding: 0 0 40px;
+            .secTtl {
+              margin: 0 0 40px;
+              .sub {
+                margin: 0 0 10px;
+                font-size: 14px;
+              }
+              .ttl {
+                font-size: 30px;
+              }
+            }
+            .txt {
+              font-size: 14px;
+              p {
+                + p {
+                  margin: 30px 0 0;
+                }
+              }
+              + .txt {
+                margin: 50px 0 0;
+              }
+            }
+          }
+          .photoBox {
+            .photo01 {
+              display: none;
+            }
+            .photo02 {
+              width: 100%;
+              max-width: 580px;
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+      .massagePhotoPc {
+        display: none;
+      }
+      .massagePhotoSp {
+        display: block;
+      }
+    }
+    &__features {
+      padding: 60px 0 60px 25px;
+      .secContainer {
+        padding: 0;
+        .secTtl {
+          margin: 0 0 30px;
+          .sub {
+            font-size: 52px;
+          }
+        }
+        .topBox {
+          margin: 0 0 30px;
+          padding: 0 25px 0 0;
+          .ttl {
+            margin: 0 0 15px;
+            font-size: 20px;
+          }
+          .txt {
+            font-size: 12px;
+          }
+        }
+        .flowSliderList {
+          margin: 0 0 0 -10px;
+          .slick-list {
+            padding-right: 25px !important;
+          }
+          .flowSliderBox {
+            margin: 0 10px;
+            padding: 20px;
+            .secBox {
+              .txtBox {
+                margin: 10px 0 0;
+                dl {
+                  dt {
+                    margin: 0 0 10px;
+                    padding: 0 0 10px;
+                    font-size: 14px;
+                  }
+                  dd {
+                    font-size: 12px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .progressbar {
+          width: calc(100% - 25px);
+          margin: 40px 0 0;
+        }
+      }
+    }
+    &__voices {
+      padding: 60px 25px;
+      .secContainer {
+        width: 100%;
+        .secTtl {
+          margin: 0 0 40px;
+          .sub {
+            font-size: 52px;
+          }
+        }
+      }
+      .secPanelList {
+        .secPanel {
+          padding: 40px 0;
+          .secBox {
+            .txtBox {
+              padding: 30px 0 0;
+              .nameBox {
+                margin: 0;
+              }
+              .txt {
+                display: none;
+              }
+              .more {
+                width: 178px;
+                margin: 30px auto 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    &__culture {
+      padding: 60px 25px;
+      .secContainer {
+        width: 100%;
+        .secTtl {
+          margin: 0 0 40px;
+          .sub {
+            font-size: 52px;
+          }
+          .slick-dots {
+            bottom: -40px;
+          }
+        }
+      }
+      .cultureSlideContainer {
+        .cultureSlidePanel {
+          padding: 20px 0;
+          border-top: 1px solid #ffffff;
+          border-bottom: 1px solid #ffffff;
+        }
+        .cultureSlideBox {
+          .txtBox {
+            padding: 20px 0 0;
+            dl {
+              min-height: 100px;
+              dt {
+                font-size: 14px;
+              }
+              dd {
+                font-size: 12px;
+              }
+            }
+            .buttonBox {
+              display: flex;
+              justify-content: center;
+              gap: 0 10px;
+              margin: 40px 0 0;
+              > * {
+                width: 40px;
+              }
+            }
+          }
+        }
+      }
+    }
+    &__guideline {
+      padding: 60px 25px;
+      .secContainer {
+        width: 100%;
+        .secTtl {
+          margin: 0 0 40px;
+          .sub {
+            font-size: 52px;
+          }
+        }
+      }
+      .infoBox {
+        font-size: 12px;
+        dl {
+          padding: 13px 0;
+          letter-spacing: 0;
+          dt {
+            width: 70px;
+            margin: 0;
+            span {
+              display: none;
+            }
+          }
+          dd {
+            width: calc(100% - 70px);
+          }
+        }
+      }
+    }
+    &__flow {
+      padding: 60px 25px 0;
+      .secContainer {
+        width: 100%;
+        .secTtl {
+          margin: 0 0 40px;
+          text-align: center;
+          .sub {
+            font-size: 52px;
+          }
+        }
+        .flowList {
+          ol {
+            li {
+              padding: 15px 25px;
+              font-size: 12px;
+              + li {
+                margin: 20px 0 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    &__profile {
+      padding: 70px 0 40px;
+      .secContainer {
+        width: 100%;
+        .secTtl {
+          margin: 0 0 40px;
+          text-align: center;
+          .sub {
+            font-size: 52px;
+          }
+        }
+        .secBox {
+          .txtBox {
+            padding: 40px 25px 0;
+            dl {
+              dt {
+                margin: 0 0 20px;
+                font-size: 18px;
+              }
+              dd {
+                .txt {
+                  font-size: 12px;
+                  + .txt {
+                    margin: 20px 0 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &__join {
+      padding: 40px 25px 70px;
+      .secContainer {
+        .secTtl {
+          margin: 0 0 5px;
+          .sub {
+            font-size: 40px;
+          }
+        }
+        .btnJoin {
+          width: 180px;
+          margin: 20px auto 0;
+          a {
+            .box {
+              .ttl {
+                font-size: 12px;
+              }
+              .arrow {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* --------------------------------------------------
+	modal
+-------------------------------------------------- */
+.itemModal {
+  max-height: calc(100vh - 140px);
+  padding: 50px 25px;
+}
+.modalBox {
+  max-height: 100%;
+  padding: 25px;
+}
+.modalBoxInner {
+  .leftCont {
+    .staffSlidePanel {
+      .slick-slider {
+        padding: 0 0 20px;
+      }
+      .slick-dots {
+        bottom: -20px;
+      }
+    }
+    .nameBox {
+      display: none;
+    }
+  }
+  .rightCnt {
+    padding: 30px 0 0;
+    .commentBox {
+      dl {
+        + dl {
+          padding: 30px 0 0;
+        }
+        dt {
+          font-size: 12px;
+        }
+        dd {
+        }
+      }
+    }
+  }
+}
+.modalClose {
+  width: 40px;
+}

@@ -1,0 +1,888 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+	画面用CSS（PC/SMP）
+===================================================*/
+/*////////////////////////////////////////////////////////////
+	TOP
+///////////////////////////////////////////////////////////*/
+#top .topKvContainer .topKv {
+  height: 400px;
+}
+#top .topKvContainer .kvTitleBox {
+  position: absolute;
+  right: 20px;
+  bottom: 40px;
+  text-align: right;
+}
+#top .topKvContainer .kvTitleBox .kvTitle01 {
+  font-size: 34px;
+}
+#top .topKvContainer .kvTitleBox .kvTitle02 {
+  font-size: 16px;
+}
+#top .postSection {
+  padding: 60px 0;
+}
+#top .postSection .secContainer .section + .section {
+  margin: 40px 0 0;
+}
+#top .postSection .secContainer .section .leftBox {
+  margin: 0 0 20px;
+}
+#top .postSection .secContainer .section .rightBox .postPanel {
+  padding: 15px 0;
+  border-top: 1px solid #767676;
+}
+#top .postSection .secContainer .section .rightBox .postPanel ul {
+  height: 200px;
+}
+#top .postSection .secContainer .section .rightBox .postPanel ul li + li {
+  margin: 15px 0 0;
+}
+#top .postSection .secContainer .section .rightBox .postPanel ul li a {
+  display: block;
+}
+#top .postSection .secContainer .section .rightBox .postPanel ul li span {
+  width: auto;
+}
+#top .postSection .secContainer .section .rightBox .postPanel ul li p {
+  width: 100%;
+}
+#top .sec01 {
+  padding: 60px 0;
+}
+#top .sec01::before {
+  width: 200px;
+  height: 200px;
+}
+#top .sec01:after {
+  width: 200px;
+  height: 200px;
+}
+#top .sec01 .secContainer01 {
+  margin: 0 0 60px;
+}
+#top .sec01 .secContainer01 .secBox .txtBox {
+  padding: 25px 0;
+}
+#top .sec01 .secContainer01 .secBox .txtBox .secTtl {
+  margin: 0 0 20px;
+}
+#top .sec01 .secContainer01 .secBox .txtBox .secTtl h2 {
+  font-size: 24px;
+}
+#top .sec01 .secContainer01 .secBox .txtBox .secTtl p {
+  font-size: 16px;
+}
+#top .sec01 .secContainer01 .secBox .txtBox .txt {
+  line-height: 2.5;
+}
+#top .sec01 .secContainer01 .secBox .txtBox .txt p + p {
+  margin: 20px 0 0;
+}
+#top .sec01 .secContainer02 h3 {
+  margin: 0 0 20px;
+  font-size: 20px;
+}
+#top .sec01 .secContainer02 .topTxt {
+  margin: 0 0 40px;
+}
+#top .sec01 .secContainer02 .listPanel {
+  max-width: 600px;
+  padding: 20px;
+}
+#top .sec01 .secContainer02 .listPanel .listBox ul li + li {
+  margin: 30px 0 0;
+}
+#top .sec01 .secContainer02 .listPanel .listBox ul li dl {
+  padding: 20px;
+}
+#top .sec01 .secContainer02 .listPanel .listBox ul li dl dt {
+  min-height: 0;
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+#top .sec01 .secContainer02 .listPanel .listBox ul li dl dd .txt br {
+  display: none;
+}
+#top .sec02 .section {
+  padding: 50px 0;
+}
+#top .sec02 .section .secPanel {
+  padding: 30px 20px;
+}
+#top .sec02 .section .secPanel .secBox {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+#top .sec02 .section .secPanel .secBox h2 {
+  max-width: 400px;
+  margin: 0 auto 20px;
+  padding: 0 0 10px;
+  font-size: 24px;
+}
+#top .sec02 .section .secPanel .secBox .btnMore {
+  margin: 40px 0 0;
+}
+#top .sec03 {
+  padding: 50px 0;
+}
+#top .sec03 .secTtl {
+  margin: 0 0 40px;
+}
+#top .sec03 .secTtl h2 {
+  font-size: 24px;
+}
+#top .sec03 .listBox {
+  max-width: 600px;
+  margin: 0 auto;
+}
+#top .sec03 .listBox ul li + li {
+  margin: 30px 0 0;
+}
+#top .sec03 .btnMore {
+  margin: 40px 0 0;
+}
+#top .instagramSection {
+  padding: 60px 0;
+}
+#top .instagramSection .section + .section {
+  margin: 60px 0 0;
+}
+#top .secAbout {
+  padding: 40px 0 60px;
+}
+#top .secAbout .listBox {
+  max-width: 600px;
+  margin: 0 auto;
+}
+#top .secAbout .listBox ul li + li {
+  margin: 30px 0 0;
+}
+
+/*////////////////////////////////////////////////////////////
+	reason
+///////////////////////////////////////////////////////////*/
+#reason .topSection {
+  padding: 60px 0;
+}
+#reason .topSection .secTtl {
+  margin: 0 0 20px;
+  font-size: 24px;
+}
+#reason .sec01 .seContainer01 {
+  margin: 0 0 60px;
+}
+#reason .sec01 .seContainer01 .secPanel + .secPanel {
+  margin: 50px 0 0;
+}
+#reason .sec01 .seContainer01 .secPanel .pHead {
+  padding: 10px 20px 10px 80px;
+}
+#reason .sec01 .seContainer01 .secPanel .pHead .point {
+  top: -10px;
+  left: 10px;
+  width: 55px;
+  height: 55px;
+}
+#reason .sec01 .seContainer01 .secPanel .pHead .point span {
+  font-size: 11px;
+  line-height: 1.2;
+}
+#reason .sec01 .seContainer01 .secPanel .pHead .point em {
+  font-size: 20px;
+}
+#reason .sec01 .seContainer01 .secPanel .pHead .ttl {
+  font-size: 18px;
+}
+#reason .sec01 .seContainer01 .secPanel .pBody {
+  padding: 20px;
+}
+#reason .sec01 .seContainer01 .secPanel .pBody .secBox .txtBox {
+  padding: 15px 0 0;
+}
+#reason .sec01 .seContainer02 {
+  padding: 0 0 60px;
+}
+#reason .sec01 .seContainer02::before {
+  height: calc(100% - 100px);
+}
+#reason .sec01 .seContainer02 .secPanel {
+  margin: 0 0 30px;
+}
+#reason .sec01 .seContainer02 .secPanel .pTtl {
+  max-width: 330px;
+  margin: 0 0 20px;
+  padding: 5px 20px;
+  font-size: 16px;
+}
+#reason .sec01 .seContainer02 .secPanel .listBox ul li + li {
+  margin: 30px 0 0;
+}
+#reason .sec01 .seContainer02 .arrow {
+  width: 60px;
+  margin: 0 auto 30px;
+}
+#reason .sec01 .seContainer02 .message {
+  font-size: 24px;
+}
+
+/*////////////////////////////////////////////////////////////
+	service
+///////////////////////////////////////////////////////////*/
+.serviceMain .topSection {
+  margin: 40px 0 0;
+  padding: 60px 0;
+}
+.serviceMain .topSection .secBox .txtBox {
+  padding: 20px 0 0;
+}
+.serviceMain .topSection .secBox .txtBox h2 {
+  margin: 0 0 15px;
+  font-size: 24px;
+}
+.serviceMain .secService {
+  padding: 120px 0;
+}
+.serviceMain .secService .listBox ul li + li {
+  margin: 40px 0 0;
+}
+.serviceMain .secService .listBox ul li .photoBox .ttl p {
+  font-size: 16px;
+}
+.serviceMain .secService .listBox ul li .txt {
+  margin: 10px 0 0;
+}
+.serviceMain .secReason {
+  padding: 60px 0;
+}
+.serviceMain .secReason .listPanel {
+  max-width: 600px;
+  padding: 20px;
+}
+.serviceMain .secReason .listPanel .listBox ul li + li {
+  margin: 30px 0 0;
+}
+.serviceMain .secReason .listPanel .listBox ul li dl {
+  padding: 20px;
+}
+.serviceMain .secReason .listPanel .listBox ul li dl dt {
+  min-height: 0;
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+.serviceMain .secReason .listPanel .listBox ul li dl dd .txt br {
+  display: none;
+}
+.serviceMain .secReason .listPanel .listBox ul li .num {
+  position: absolute;
+  top: 5px;
+  left: 20px;
+  font-size: 60px;
+}
+.serviceMain .secCase {
+  padding: 60px 0;
+}
+.serviceMain .secCase .section + .section {
+  margin: 50px 0 0;
+}
+.serviceMain .secCase .section .secTtl {
+  margin: 0 0 30px;
+  padding: 0 0 5px;
+  font-size: 20px;
+}
+.serviceMain .secCase .section .secTtl h3 {
+  padding: 0 0 0 15px;
+}
+.serviceMain .secCase .section .txtBox dl dt {
+  font-size: 18px;
+}
+.serviceMain .secCase .section .secBox + .secBox {
+  margin: 50px 0 0;
+}
+.serviceMain .secCase .section .secBox .photoBox .ttl {
+  position: absolute;
+  top: 20px;
+  left: -10px;
+  width: 100%;
+}
+.serviceMain .secCase .section .secBox .photoBox .ttl p {
+  min-width: 120px;
+  padding: 5px 20px;
+  font-size: 16px;
+}
+.serviceMain .secCase .section .secBox .txtBox {
+  padding: 20px 0 0;
+}
+.serviceMain .secCase .message {
+  margin: 50px 0 0;
+  font-size: 20px;
+}
+
+/*////////////////////////////////////////////////////////////
+	corp
+///////////////////////////////////////////////////////////*/
+/*////////////////////////////////////////////////////////////
+	school
+///////////////////////////////////////////////////////////*/
+/*////////////////////////////////////////////////////////////
+	personal
+///////////////////////////////////////////////////////////*/
+#personal .topSection {
+  margin: 20px 0 0;
+}
+#personal .topSection .secPanel {
+  padding: 50px 20px;
+}
+#personal .topSection .secBox .secTtl {
+  max-width: 650px;
+  margin: 0 auto 30px;
+  padding: 2px;
+  border: 4px solid #bab438;
+}
+#personal .topSection .secBox .secTtl .inner {
+  padding: 15px;
+  border: 2px solid #bab438;
+}
+#personal .topSection .secBox .secTtl h2 {
+  font-size: 18px;
+}
+#personal .topSection .photoBox01 {
+  display: flex;
+  justify-content: space-between;
+}
+#personal .topSection .photoBox01 .photo01 {
+  position: relative;
+  top: -40px;
+  width: 25%;
+}
+#personal .topSection .photoBox01 .photo02 {
+  width: 25%;
+}
+#personal .topSection .photoBox01 .photo03 {
+  width: 30%;
+}
+#personal .topSection .photoBox02 {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0 0;
+}
+#personal .topSection .photoBox02 .photo04 {
+  width: 30%;
+}
+#personal .topSection .photoBox02 .photo05 {
+  width: 25%;
+}
+#personal .topSection .photoBox02 .photo06 {
+  width: 25%;
+}
+#personal .sec01 {
+  padding: 60px 0;
+}
+#personal .sec01 .secBox + .secBox {
+  margin: 50px 0 0;
+}
+#personal .sec01 .secBox .txtBox {
+  padding: 20px 0 0;
+}
+#personal .sec01 .secBox .txtBox h3 {
+  font-size: 20px;
+}
+#personal .sec02 {
+  padding: 60px 0;
+}
+#personal .sec02 .listBox ul li + li {
+  margin: 30px 0 0;
+}
+#personal .sec02 .listBox ul li .txt {
+  margin: 10px 0 0;
+}
+#personal .sec02 .listBox .asiaTravelSlider {
+  margin: 0;
+  padding: 0 45px;
+}
+#personal .sec02 .listBox .asiaTravelSlider li {
+  padding: 0;
+}
+#personal .sec02 .listBox .asiaTravelSlider li + li {
+  margin: 0;
+}
+#personal .sec02 .listBox .asiaTravelSlider .slick-arrow {
+  width: 30px;
+  height: 30px;
+}
+#personal .sec02 .listBox .asiaTravelSlider .slick-prev {
+  left: 0;
+}
+#personal .sec02 .listBox .asiaTravelSlider .slick-next {
+  right: 0;
+}
+#personal .sec03 {
+  padding: 60px 0;
+}
+#personal .sec03 .listBox {
+  max-width: 600px;
+  margin: 0 auto;
+}
+#personal .sec03 .listBox ul li + li {
+  margin: 30px 0 0;
+}
+#personal .sec03 .btnMore {
+  margin: 40px 0 0;
+}
+#personal .sec04 {
+  padding: 60px 0;
+}
+#personal .sec04 .secBox + .secBox {
+  margin: 50px 0 0;
+}
+#personal .sec04 .secBox .txtBox {
+  padding: 20px 0 0;
+}
+#personal .sec04 .secBox .txtBox h3 {
+  font-size: 20px;
+}
+/*////////////////////////////////////////////////////////////
+	agency
+///////////////////////////////////////////////////////////*/
+#agency .topSection {
+  margin: 40px 0 0;
+  padding: 60px 0;
+}
+#agency .topSection .secBox .txtBox {
+  padding: 20px 0 0;
+}
+#agency .topSection .secBox .txtBox h2 {
+  margin: 0 0 15px;
+  font-size: 24px;
+}
+#agency .sec01 {
+  padding: 60px 0;
+}
+#agency .sec01 .secContainer .tabList {
+  margin: 0 0 30px;
+}
+#agency .sec01 .secContainer .tabList ul {
+  flex-wrap: wrap;
+  gap: 12px;
+}
+#agency .sec01 .secContainer .tabList ul li {
+  flex: 0 0 calc((100% - 12px) / 2);
+}
+#agency .sec01 .secContainer .tabList ul li a {
+  min-height: 36px;
+  font-size: 13px;
+}
+#agency .sec01 .secContainer .tabContent .secBoxPanel .secBox {
+  border-top: 1px solid #767676;
+}
+#agency .sec01 .secContainer .tabContent .secBoxPanel .secBox dl {
+  display: block;
+  padding: 10px 0;
+}
+#agency .sec01 .secContainer .tabContent .secBoxPanel .secBox dl dt {
+  padding: 0 0 5px;
+}
+#agency .sec01 .secContainer .tabContent .secBoxPanel .secBox dl dd {
+  width: 145px;
+  flex-shrink: 0;
+}
+
+/*////////////////////////////////////////////////////////////
+	flow
+///////////////////////////////////////////////////////////*/
+#flow .sec01 {
+  padding: 60px 0;
+}
+#flow .sec01 .linkList {
+  max-width: 330px;
+  margin: 0 auto 50px;
+}
+#flow .sec01 .linkList ul li + li {
+  margin: 10px 0 0;
+}
+#flow .sec01 .section + .section {
+  margin: 60px 0 0;
+}
+#flow .sec01 .section .secTtl {
+  margin: 0 0 20px;
+  padding: 0 0 5px;
+  font-size: 20px;
+}
+#flow .sec01 .section .secTtl h3 {
+  padding: 0 0 0 15px;
+}
+#flow .sec01 .section .secTtl h3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 10px;
+  height: 4px;
+  margin: auto 0;
+  background: #d61807;
+}
+#flow .sec01 .flowBox {
+  padding: 15px;
+}
+#flow .sec01 .flowBox + .flowBox {
+  margin: 15px 0 0;
+}
+#flow .sec01 .flowBox dl dt {
+  padding: 0 0 5px;
+  border-bottom: 1px solid #000000;
+}
+#flow .sec01 .flowBox dl dt span {
+  margin: 0 5px 0 0;
+  font-size: 18px;
+}
+#flow .sec01 .flowBox dl dt em {
+  font-size: 18px;
+}
+#flow .sec01 .flowBox dl dd {
+  padding: 10px 0 0;
+}
+
+/*////////////////////////////////////////////////////////////
+	faq
+///////////////////////////////////////////////////////////*/
+#faq .sec01 {
+  padding: 60px 0;
+}
+#faq .sec01 .linkList {
+  max-width: 330px;
+  margin: 0 auto 50px;
+}
+#faq .sec01 .linkList ul li + li {
+  margin: 10px 0 0;
+}
+#faq .sec01 .section + .section {
+  margin: 60px 0 0;
+}
+#faq .sec01 .section .secTtl {
+  margin: 0 0 20px;
+  padding: 0 0 5px;
+  font-size: 20px;
+}
+#faq .sec01 .section .secTtl h3 {
+  padding: 0 0 0 15px;
+}
+#faq .sec01 .section .secTtl h3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 10px;
+  height: 4px;
+  margin: auto 0;
+  background: #d61807;
+}
+#faq .sec01 .faqBox > dl > dt {
+  padding: 10px 30px 10px 20px;
+  background: url("../image/common/accord_plus.png") right 15px center no-repeat #e7780b;
+  background-size: 12px auto;
+}
+#faq .sec01 .faqBox > dl > dt.active {
+  background: url("../image/common/accord_minus.png") right 15px center no-repeat #e7780b;
+  background-size: 12px auto;
+}
+#faq .sec01 .faqBox > dl > dt span {
+  margin: 0 10px 0 0;
+  font-size: 18px;
+}
+#faq .sec01 .faqBox > dl > dt em {
+  font-size: 16px;
+}
+#faq .sec01 .faqBox > dl > dd {
+  padding: 15px 20px;
+}
+#faq .sec01 .itemList {
+  margin: 15px 0 0;
+}
+#faq .sec01 .itemList .itemBox + .itemBox {
+  margin: 10px 0 0;
+}
+
+/*////////////////////////////////////////////////////////////
+	company
+///////////////////////////////////////////////////////////*/
+#company .sec01 {
+  padding: 60px 0;
+}
+#company .sec01 .secBox .photoBox .nameBox .name {
+  display: inline-block;
+  width: 150px;
+}
+#company .sec01 .secBox .txtBox {
+  padding: 20px 0 0;
+}
+#company .sec01 .secBox .txtBox .txt {
+  line-height: 2.5;
+}
+#company .sec01 .secBox .txtBox .txt p + p {
+  margin: 20px 0 0;
+}
+#company .sec02 {
+  padding: 30px 0;
+}
+#company .sec02 .topBox dl dt {
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+#company .sec02 .slidePanel .slideBox ul li {
+  width: 50%;
+  margin: 0 2px;
+}
+#company .sec03 {
+  padding: 30px 0 0;
+}
+#company .sec03 .infoBox {
+  padding: 0 0 40px;
+}
+#company .sec03 .infoBox dl dt {
+  padding: 10px 0;
+}
+#company .sec03 .infoBox dl dd {
+  padding: 10px 0;
+}
+#company .sec03 .infoBox dl:first-child dt {
+  border-top: 1px solid #d61807;
+}
+#company .sec03 .infoBox dl:first-child dd {
+  border-top: none;
+}
+#company .sec04 {
+  padding: 60px 0;
+}
+#company .sec04 .historyContainer .historyBox {
+  padding: 0 0 30px;
+}
+#company .sec04 .historyContainer .historyBox::before {
+  content: "";
+  position: absolute;
+  left: 85px;
+  top: 7px;
+  width: 1px;
+  height: 100%;
+  background: #dac9c8;
+}
+#company .sec04 .historyContainer .historyBox .yearBox {
+  width: 70px;
+}
+#company .sec04 .historyContainer .historyBox .yearBox .year01 {
+  font-size: 16px;
+}
+#company .sec04 .historyContainer .historyBox .yearBox .year02 {
+  font-size: 13px;
+}
+#company .sec04 .historyContainer .historyBox .txtBox {
+  width: calc(100% - 90px);
+  padding: 0 0 0 10px;
+}
+#company .sec04 .historyContainer .historyBox .txtBox::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #000000;
+}
+#company .sec04 .historyContainer .historyBox .txtBox dl dt {
+  margin: 0 0 3px;
+  font-size: 16px;
+}
+#company .sec04 .historyContainer .historyBox .txtBox dl dd {
+  line-height: 2;
+}
+#company .sec04 aside {
+  padding: 20px 0;
+  font-size: 16px;
+}
+
+/*////////////////////////////////////////////////////////////
+	contact
+///////////////////////////////////////////////////////////*/
+#contact .topSection {
+  padding: 60px 0;
+}
+#contact .topSection .secTtl {
+  margin: 0 0 15px;
+  padding: 0 0 5px;
+  font-size: 20px;
+}
+#contact .topSection .txt {
+  margin: 0 0 15px;
+}
+#contact .topSection .faqBox {
+  padding: 30px 20px;
+}
+#contact .sec01 {
+  padding: 40px 0;
+}
+#contact .sec02 {
+  padding: 40px 0 80px;
+}
+#contact .sec02 .secBox .itemBox {
+  padding: 15px 20px;
+}
+#contact .sec02 .secBox .itemBox + .itemBox {
+  margin: 20px 0 0;
+}
+#contact .sec02 .secBox .itemBox dl dt {
+  font-size: 20px;
+}
+
+/*////////////////////////////////////////////////////////////
+	form
+///////////////////////////////////////////////////////////*/
+.contactContainer .formBox dl {
+  padding: 10px 0;
+}
+.contactContainer .formBox dl + dl {
+  margin: 10px 0 0;
+}
+.contactContainer .formBox dl dt {
+  justify-content: flex-start;
+  margin: 0 0 10px;
+}
+.contactContainer .formBox dl dt em {
+  margin: 0 0 0 10px;
+}
+.contactContainer .formBox .addressBox .postalBox .inputBox {
+  width: 100px;
+}
+.contactContainer .formBox .addressBox .innerBox {
+  margin: 10px 0 0;
+}
+.contactContainer .formBox .privacy {
+  margin: 30px 0 50px;
+}
+.contactContainer .formBox .privacy .agreeBox {
+  height: 300px;
+}
+
+/*////////////////////////////////////////////////////////////
+	blog
+///////////////////////////////////////////////////////////*/
+#blog .blogContainer {
+  padding: 60px 0;
+}
+#blog .catePanel {
+  margin: 0 0 50px;
+}
+#blog .catePanel ul {
+  flex-wrap: wrap;
+  gap: 12px;
+}
+#blog .catePanel ul li {
+  flex: 0 0 calc((100% - 12px) / 2);
+}
+#blog .catePanel ul li a {
+  min-height: 36px;
+  font-size: 13px;
+}
+#blog .listPanel .listBox {
+  max-width: 600px;
+  margin: 0 auto;
+}
+#blog .listPanel .listBox ul li + li {
+  margin: 30px 0 0;
+}
+#blog .list__pagination {
+  margin: 40px 0 0;
+}
+#blog .tourDetailContainer .titlePanel {
+  display: block;
+  margin: 0 0 25px;
+  padding: 5px 0;
+}
+#blog .tourDetailContainer .titlePanel .cate {
+  margin: 0 0 5px;
+}
+#blog .tourDetailContainer .titlePanel .cate p {
+  display: inline-block;
+  padding: 0 10px;
+  font-size: 14px;
+  background: #d61807;
+}
+#blog .tourDetailContainer .titlePanel .title {
+  padding: 0 20px;
+  font-size: 16px;
+}
+#blog .tourDetailContainer .secTtl {
+  font-size: 18px;
+}
+#blog .tourDetailContainer .subSection {
+  margin: 0 0 50px;
+}
+#blog .tourDetailContainer .subSection .listBox {
+  margin: 0 0 40px;
+}
+#blog .tourDetailContainer .subSection .listBox ul li + li {
+  margin: 30px 0 0;
+}
+#blog .tourDetailContainer .subSection .listBox ul li .photo {
+  padding: 0 0 66%;
+}
+#blog .tourDetailContainer .subSection .listBox ul li p {
+  margin: 5px 0 0;
+}
+#blog .tourDetailContainer .scheduleSection {
+  margin: 0 0 50px;
+}
+#blog .tourDetailContainer .scheduleSection .scheduleTable .headBox {
+  display: none;
+}
+#blog .tourDetailContainer .scheduleSection .scheduleTable .cntBody .scheduleBox {
+  line-height: 2;
+  border: 1px solid #000000;
+}
+#blog .tourDetailContainer .scheduleSection .scheduleTable .cntBody .scheduleBox + .scheduleBox {
+  margin: 20px 0 0;
+}
+#blog .tourDetailContainer .scheduleSection .scheduleTable .cntBody .scheduleBox .box + .box {
+  border-top: 1px solid #000000;
+}
+#blog .tourDetailContainer .scheduleSection .scheduleTable .cntBody .scheduleBox .box dl dt {
+  padding: 10px;
+  color: #ffffff;
+  text-align: center;
+  border-bottom: 1px solid #000000;
+  background: #e7780b;
+}
+#blog .tourDetailContainer .scheduleSection .scheduleTable .cntBody .scheduleBox .date dl dd {
+  padding: 10px 20px;
+  text-align: center;
+}
+#blog .tourDetailContainer .scheduleSection .scheduleTable .cntBody .scheduleBox .schedule dl dd {
+  padding: 10px 20px;
+}
+#blog .tourDetailContainer .scheduleSection .scheduleTable .cntBody .scheduleBox .meal dl dd ul li {
+  padding: 10px 20px;
+}
+#blog .tourDetailContainer .scheduleSection .scheduleTable .cntBody .scheduleBox .meal dl dd ul li + li {
+  border-top: 1px solid #000000;
+}
+#blog .tourDetailContainer .itemSection .priceBox {
+  padding: 15px;
+}
+#blog .tourDetailContainer .itemSection .priceBox em {
+  font-size: 18px;
+}
+#blog .tourDetailContainer .itemSection .priceBox span {
+  font-size: 14px;
+}
+#blog .tourDetailContainer .itemSection .priceBox + p {
+  margin: 3px 0 0;
+}
+#blog .tourDetailContainer .itemSection .pdfBox a {
+  padding: 15px;
+}
+#blog .tourDetailContainer .itemSection .pdfBox a span {
+  font-size: 18px;
+}

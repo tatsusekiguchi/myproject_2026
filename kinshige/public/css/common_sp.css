@@ -1,0 +1,265 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+	共通CSS（SMP）
+===================================================*/
+/* --------------------------------------------------
+	base
+-------------------------------------------------- */
+body {
+  min-width: 0;
+  font-size: 14px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/*改行*/
+.pcBreak {
+  display: none;
+}
+
+.spBreak {
+  display: block;
+}
+
+/*spのみ表示*/
+.pcHidden {
+  display: block;
+}
+
+.spHidden {
+  display: none;
+}
+
+#sideBtn {
+  display: none;
+}
+
+.topicPath {
+  display: none;
+}
+
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  padding: 20px;
+  z-index: 999;
+  background: #f4efe2;
+}
+.header .logo {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  width: 50px;
+  transition: 0.6s;
+}
+.header .logo a {
+  display: block;
+}
+.header .hamburger {
+  cursor: pointer;
+  display: block;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 24px;
+  height: 18px;
+  z-index: 10000;
+}
+.header .hamburger span {
+  background: #231815;
+  position: absolute;
+  left: 50%;
+  width: 24px;
+  height: 2px;
+  transform: translateX(-50%);
+  transition: 0.4s;
+}
+.header .hamburger span:nth-of-type(1) {
+  top: 0;
+}
+.header .hamburger span:nth-of-type(2) {
+  top: 8px;
+}
+.header .hamburger span:nth-of-type(3) {
+  bottom: 0;
+}
+.header .hamburger.is-open span {
+  background: #231815;
+}
+.header .hamburger.is-open span:nth-of-type(1) {
+  transform: translate(-50%, 8px) rotate(-45deg);
+}
+.header .hamburger.is-open span:nth-of-type(2) {
+  opacity: 0;
+}
+.header .hamburger.is-open span:nth-of-type(3) {
+  transform: translate(-50%, -8px) rotate(45deg);
+}
+
+.topHeader {
+  background: none;
+}
+.topHeader .logo {
+  opacity: 0;
+}
+.topHeader.fixed {
+  background: #f4efe2;
+}
+.topHeader.fixed .logo {
+  opacity: 1;
+}
+
+/* --------------------------------------------------
+	nav
+-------------------------------------------------- */
+.navBox {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 80px 20px 80px;
+  text-align: center;
+  z-index: 999;
+  background: #f4efe2;
+  transition: 0.6s;
+  overflow: auto;
+}
+.navBox.active {
+  top: 0;
+}
+.navBox .navList ul {
+  border-top: 1px solid #d9d9d9;
+}
+.navBox .navList ul li {
+  border-bottom: 1px solid #d9d9d9;
+}
+.navBox .navList ul li > p {
+  display: none;
+}
+.navBox .navList ul li a {
+  display: block;
+  padding: 20px 0;
+}
+.navBox .navList ul li ul {
+  border: none;
+}
+.navBox .navList ul li ul li:last-child {
+  border-bottom: none;
+}
+.navBox .navItem {
+  padding: 20px 0 0;
+}
+.navBox .navItem .telBox {
+  text-align: center;
+}
+.navBox .navItem .telBox > p {
+  margin: 0 0 3px;
+  font-size: 13px;
+}
+.navBox .navItem .telBox .tel a {
+  display: inline-block;
+  padding: 0 0 0 30px;
+  font-size: 26px;
+  font-weight: bold;
+  line-height: 1;
+  background: url("../image/common/header_tel.png") no-repeat;
+  background-size: 25px auto;
+}
+
+/* --------------------------------------------------
+	main
+-------------------------------------------------- */
+.main {
+  margin: 60px 0 0;
+}
+
+.pageKvContainer:before {
+  width: calc(100% - 100px);
+  height: 20px;
+}
+.pageKvContainer:after {
+  width: 100px;
+  height: 20px;
+}
+.pageKvContainer .pageKvPanel {
+  padding: 0 40px;
+  width: 60%;
+  max-width: 600px;
+  height: 250px;
+}
+.pageKvContainer .pageKvPanel .kvTtl {
+  position: absolute;
+  top: 0;
+  left: 40%;
+  padding: 20px 10px;
+  font-size: 20px;
+}
+
+.pageSecTtlBox {
+  margin: 0 0 40px;
+}
+.pageSecTtlBox .pageSecTtl {
+  padding: 4px;
+  border: 2px solid #fbf9f4;
+}
+.pageSecTtlBox .pageSecTtl h2 {
+  padding: 25px 10px;
+  font-size: 20px;
+}
+
+.mapBox {
+  padding: 0 0 70%;
+}
+
+/* --------------------------------------------------
+	footer
+-------------------------------------------------- */
+.footer .footContact {
+  padding: 50px 0;
+}
+.footer .footContact .secTtl {
+  margin: 0 0 25px;
+  font-size: 20px;
+}
+.footer .footContact .itemPanel {
+  max-width: 440px;
+}
+.footer .footContact .itemPanel .itemBox + .itemBox {
+  margin: 30px 0 0;
+}
+.footer .footContact .itemPanel .itemBox dl dt {
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+.footer .footContact .itemPanel .itemBox dl dd a {
+  padding: 10px;
+  font-size: 24px;
+}
+.footer .footContact .itemPanel .itemBox dl dd > p {
+  font-size: 13px;
+  margin: 10px 0 0;
+}
+.footer .footPanel {
+  padding: 50px 0 15px;
+}
+.footer .footPanel .logo {
+  width: 50px;
+  margin: 0 auto 20px;
+}
+.footer .footPanel .info dl dt {
+  width: 70px;
+}
+.footer .footPanel .copy {
+  margin: 40px 0 0;
+  text-align: center;
+}

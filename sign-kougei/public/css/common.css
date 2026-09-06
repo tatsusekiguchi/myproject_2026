@@ -1,0 +1,556 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+/* CSS Document */
+/*===================================================
+	共通CSS（PC/SMP）
+===================================================*/
+/*////////////////////////////////////////////////////////////
+	共通設定
+///////////////////////////////////////////////////////////*/
+/* --------------------------------------------------
+	base
+-------------------------------------------------- */
+* {
+  box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #000000;
+  font-size: 15px;
+  background: #ffffff;
+  transition: 2s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.5;
+}
+
+.txt {
+  line-height: 2;
+}
+
+/*リンク */
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* 画像幅 */
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* clearfix */
+.clearfix::after {
+  content: ".";
+  display: block;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.spBreak {
+  display: none;
+}
+
+@media (min-width: 1025px) {
+  a {
+    transition: 0.6s;
+  }
+
+  a:hover {
+    opacity: 0.6;
+  }
+}
+.fax a {
+  pointer-events: none;
+}
+
+@keyframes decoSwing {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(25deg);
+  }
+}
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+@media (min-width: 1025px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: #f2f2f2;
+  }
+  .header .headTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 50px 0 0;
+    color: #ffffff;
+    background: #202121;
+  }
+  .header .headTop a {
+    color: #ffffff;
+  }
+  .header .headTop .logoBox {
+    display: flex;
+    align-items: center;
+  }
+  .header .headTop .logoBox .logo {
+    position: relative;
+    top: 5px;
+    left: -5px;
+    width: 340px;
+  }
+  .header .headTop .logoBox .logo a {
+    display: block;
+    color: #ffffff;
+  }
+  .header .headTop .logoBox .headTtl {
+    font-size: 14px;
+  }
+  .header .headTop .headItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 40px;
+  }
+  .header .headTop .headItem .telBox {
+    text-align: center;
+  }
+  .header .headTop .headItem .telBox a {
+    display: inline-block;
+  }
+  .header .headTop .headItem .telBox .telNum {
+    padding: 0 0 0 20px;
+    font-size: 18px;
+    background: url(https://sit-4011322.sibloo.com/system_panel/uploads/images/header_tel.png) left center no-repeat;
+    background-size: 15px auto;
+  }
+  .header .headTop .headItem .telBox .telTime {
+    font-size: 12px;
+  }
+  .header .headTop .headItem .mailBox a {
+    display: block;
+    padding: 5px 15px;
+    font-size: 12px;
+    text-align: center;
+    border: 1px solid #ffffff;
+  }
+  .header .headTop .headItem .mailBox a p {
+    padding: 0 0 0 18px;
+    background: url(https://sit-4011322.sibloo.com/system_panel/uploads/images/header_mail.png) left center no-repeat;
+    background-size: 12px auto;
+  }
+
+  .sideNav {
+    position: fixed;
+    top: 30%;
+    right: 0;
+    z-index: 999;
+  }
+  .sideNav .ul .li + .li {
+    margin: 20px 0 0;
+  }
+  .sideNav .ul .li a {
+    display: block;
+    font-size: 16px;
+    color: #ffffff;
+  }
+  .sideNav .ul .li a > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    padding: 20px 0;
+    writing-mode: vertical-lr;
+  }
+  .sideNav .ul .case a {
+    background: #e50011;
+  }
+  .sideNav .ul .case a p {
+    padding: 25px 0 0;
+    background: url(https://sit-4011322.sibloo.com/system_panel/uploads/images/side_icon_case.png) center top no-repeat;
+    background-size: 20px auto;
+  }
+  .sideNav .ul .instagram a {
+    background: #9f9fa0;
+  }
+  .sideNav .ul .instagram a p {
+    padding: 25px 0 0;
+    background: url(https://sit-4011322.sibloo.com/system_panel/uploads/images/side_icon_instagram.png) center top no-repeat;
+    background-size: 20px auto;
+  }
+}
+/* --------------------------------------------------
+	nav
+-------------------------------------------------- */
+@media (min-width: 1025px) {
+  .navBox .navList .ul {
+    display: flex;
+    justify-content: center;
+  }
+  .navBox .navList .ul .li + .li {
+    margin: 0 0 0 1vw;
+  }
+  .navBox .navList .ul .li a {
+    display: inline-block;
+    padding: 10px;
+  }
+  .navBox .navItem {
+    display: none;
+  }
+}
+/* --------------------------------------------------
+	main
+-------------------------------------------------- */
+.main {
+  overflow: hidden;
+  margin: 102px 0 0;
+}
+
+.pageTitleContainer {
+  position: relative;
+  margin: 0 0 100px;
+  padding: 40px 20px 60px;
+  background: #ffd43d;
+}
+.pageTitleContainer::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -35px;
+  width: 100%;
+  height: 70px;
+  background: url(https://sit-4011322.sibloo.com/system_panel/uploads/images/page_title_bg.png) no-repeat;
+  background-size: cover;
+}
+.pageTitleContainer .pageTitleBox {
+  text-align: center;
+}
+.pageTitleContainer .pageTitleBox p {
+  font-family: "Jost";
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.pageSecTtlBox .sub {
+  font-size: 0;
+}
+.pageSecTtlBox .sub p {
+  display: inline;
+  font-family: "Jost";
+  font-weight: 700;
+  font-size: 40px;
+}
+.pageSecTtlBox .sub .yellow {
+  color: #ffd43d;
+}
+.pageSecTtlBox .pageSecTtl .em {
+  display: inline-block;
+  padding: 0 10px;
+  color: #ffffff;
+  background: #070707;
+}
+.pageSecTtlBox.center {
+  text-align: center;
+}
+
+.secWrap {
+  max-width: 1640px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.secWrap01 {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.secWrap02 {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.mapBox {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding: 0 0 45%;
+}
+.mapBox iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.btnMore {
+  max-width: 220px;
+}
+.btnMore a {
+  display: block;
+  padding: 10px;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 30px;
+  background: url(https://sit-4011322.sibloo.com/system_panel/uploads/images/btn_more_arrow.png) right 15px center no-repeat #e50011;
+  background-size: 15px auto;
+}
+@media (min-width: 1025px) {
+  .btnMore a:hover {
+    opacity: 1;
+    background: url(https://sit-4011322.sibloo.com/system_panel/uploads/images/btn_more_arrow_black.png) right 15px center no-repeat #202221;
+    background-size: 15px auto;
+  }
+}
+
+/* --------------------------------------------------
+	footer
+-------------------------------------------------- */
+.footer .footContact {
+  position: relative;
+  padding: 60px 0;
+  text-align: center;
+  background: #ffde40;
+}
+.footer .footContact::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 5%;
+  width: 600px;
+  height: 650px;
+  background: url(https://sit-4011322.sibloo.com/system_panel/uploads/images/footer_contact_map.png) no-repeat;
+  background-size: 100% auto;
+}
+.footer .footContact .secWrap01 {
+  position: relative;
+}
+.footer .footContact .ttlBox01 {
+  position: relative;
+  max-width: 330px;
+  margin: 0 auto 30px;
+  padding: 5px 10px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  background: #e50011;
+}
+.footer .footContact .ttlBox02 {
+  margin: 0 0 30px;
+}
+.footer .footContact .ttlBox02 h2 {
+  font-size: 34px;
+}
+.footer .footContact .topTxt {
+  margin: 0 0 30px;
+}
+.footer .footContact .contactPanel {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px;
+  background: #f4f3f2;
+}
+.footer .footContact .contactPanel .stepBox {
+  position: relative;
+  max-width: 860px;
+  margin: 0 auto 20px;
+}
+.footer .footContact .contactPanel .stepBox .step {
+  position: relative;
+  max-width: 250px;
+}
+@media (min-width: 1025px) {
+  .footer .footContact .contactPanel .stepBox {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 20px;
+  }
+  .footer .footContact .contactPanel .stepBox:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    margin: auto 0;
+    z-index: 0;
+    background: #e50011;
+  }
+}
+.footer .footContact .contactPanel .contactItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 40px;
+}
+.footer .footContact .contactPanel .contactItem .telBox {
+  text-align: center;
+}
+.footer .footContact .contactPanel .contactItem .telBox a {
+  display: inline-block;
+}
+.footer .footContact .contactPanel .contactItem .telBox .telNum {
+  padding: 0 0 0 25px;
+  font-size: 30px;
+  background: url(https://sit-4011322.sibloo.com/system_panel/uploads/images/footer_contact_tel.png) left center no-repeat;
+  background-size: 20px auto;
+}
+.footer .footContact .contactPanel .contactItem .telBox .telTime {
+  font-size: 12px;
+}
+.footer .footContact .contactPanel .contactItem .mailBox {
+  width: 220px;
+}
+.footer .footContact .contactPanel .contactItem .mailBox a {
+  display: block;
+  padding: 10px;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 30px;
+  background: url(https://sit-4011322.sibloo.com/system_panel/uploads/images/btn_more_arrow_black.png) right 15px center no-repeat #202221;
+  background-size: 15px auto;
+}
+.footer .footContact .contactPanel .contactItem .mailBox a p {
+  display: inline-block;
+  padding: 0 20px;
+  background: url(https://sit-4011322.sibloo.com/system_panel/uploads/images/footer_contact_mail.png) left center no-repeat;
+  background-size: 12px auto;
+}
+@media (min-width: 1025px) {
+  .footer .footContact .contactPanel .contactItem .mailBox a:hover {
+    opacity: 1;
+    background: url(https://sit-4011322.sibloo.com/system_panel/uploads/images/btn_more_arrow.png) right 15px center no-repeat #e50011;
+    background-size: 15px auto;
+  }
+}
+.footer .footPanel {
+  padding: 60px 0 20px;
+  background: #f2f2f2;
+}
+.footer .footPanel .logo {
+  max-width: 440px;
+  margin: 0 auto 40px;
+}
+.footer .footPanel .footNavBox {
+  display: flex;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+.footer .footPanel .footNavBox .footNav .ul .li + .li {
+  margin: 15px 0 0;
+}
+.footer .footPanel .footNavBox .footNav .ul .li a {
+  display: inline-block;
+}
+.footer .footPanel .footNavBox .footNav .ul .sub {
+  padding: 0 0 0 1em;
+}
+.footer .footPanel .footBottom {
+  padding: 20px 0 0;
+  border-top: 1px solid #232323;
+}
+.footer .footPanel .footBottom .snsPanel {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.footer .footPanel .footBottom .snsPanel .dl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 240px;
+  padding: 10px 20px;
+  background: #d8dedd;
+}
+.footer .footPanel .footBottom .snsPanel .dl .dd {
+  display: flex;
+  gap: 10px;
+}
+.footer .footPanel .footBottom .snsPanel .dl .dd .sns {
+  width: 22px;
+}
+.footer .footPanel .footBottom .snsPanel .dl .dd .sns a {
+  display: block;
+}
+.footer .footPanel .copy {
+  margin: 40px 0 0;
+  text-align: center;
+}
+
+/* --------------------------------------------------
+	fadeAnimation
+-------------------------------------------------- */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  /* 背景カラー */
+  z-index: 9999;
+  /* 一番手前に */
+  pointer-events: none;
+  /* 他の要素にアクセス可能にするためにポインターイベントは無効に */
+  opacity: 0;
+  /* 初期値では非表示 */
+  -webkit-transition: opacity 0.8s ease;
+  /* アニメーション時間は 0.8秒 */
+  -ms-transition: opacity 0.8s ease;
+  -moz-transition: opacity 0.8s ease;
+  transition: opacity 0.8s ease;
+}
+
+/*body要素に.fadeoutセレクタがある場合には、レイヤーが表示されるようにopacityを１に設定します。*/
+body.fadeout::after {
+  opacity: 1;
+}
+
+/*お好みで、.fadeoutセレクタ以下の他の要素にもアニメーション用のCSSを定義します*/
+/*DEMOではページ遷移時にarticle要素のスケールもアニメーションさせています*/
+body.fadeout article {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}

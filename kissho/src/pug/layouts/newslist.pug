@@ -1,0 +1,44 @@
+// ▽メイン▽
+main#news
+    .kv
+        h2 新着情報
+    #newslist.newsBox
+        .mainBox
+            .wrap
+                ul
+                    li
+                        .photo
+                            img(src="../image/news/news_img_01.png", alt="")
+                        .txt
+                            span お知らせ
+                            time(datetime="2019-10-11") 2019.10.11
+                            p.ttl
+                                a(href="") タイトル名が入ります。ここにはタイトル名がはいります。
+                    li
+                        .photo
+                            img(src="../image/news/news_img_01.png", alt="")
+                        .txt
+                            span お知らせ
+                            time(datetime="2019-10-11") 2019.10.11
+                            p.ttl
+                                a(href="") タイトル名が入ります。ここにはタイトル名がはいります。
+                <ol class="pagination" role="menubar" aria-label="Pagination"><li class="first"><a href="https://kissho-research.co.jp/wp/newslist/"><span>First</span></a></li><li class="previous"><a href="https://kissho-research.co.jp/wp/newslist/"><span>Previous</span></a></li><li><a href="https://kissho-research.co.jp/wp/newslist/" class="inactive">1</a></li><li class="current"><a>2</a></li><li><a href="https://kissho-research.co.jp/wp/newslist/page/3/" class="inactive">3</a></li><li class="next"><a href="https://kissho-research.co.jp/wp/newslist/page/3/"><span>Next</span></a></li><li class="last"><a href="https://kissho-research.co.jp/wp/newslist/page/3/"><span>Last</span></a></li></ol>
+
+        .sideBox
+            dl
+                dt カテゴリ
+                dd
+                    ul
+                        li
+                            a(href="") ＞ お知らせ　
+                        li
+                            a(href="") ＞ スタッフブログ
+                        li
+                            a(href="") ＞ その他
+    p
+        | 吉祥総合調査では名古屋を中心に、採用調査、人事調査、総務調査などの企業調査を行っております。
+        br
+        | 採用時の身辺調査や、社内・社外でのトラブルでお困りの際は当社にご相談ください。
+        br
+        | 目に見えない変化（サイン）を見える（クリア）な報告書に致します。
+// △メイン△

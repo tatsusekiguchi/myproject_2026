@@ -1,0 +1,924 @@
+@charset "UTF-8";
+@import "./mixin";
+@import "./mod";
+/* CSS Document */
+
+/*===================================================
+	画面用CSS（PC/SMP）
+===================================================*/
+
+/*////////////////////////////////////////////////////////////
+	TOP
+///////////////////////////////////////////////////////////*/
+.topMain {
+  margin: 60px 0 0;
+  .topKvContainer {
+    .topKvPanel {
+      position: relative;
+      h1 {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        width: 50%;
+        height: 20px;
+        margin: 0 auto;
+        text-align: center;
+        z-index: -1;
+      }
+      .topKv {
+        width: calc(100vw + 60px);
+        margin-inline: auto;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .kvInner {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 100%;
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      .kvTitle {
+        max-width: 600px;
+        padding: 0 0 100px;
+      }
+      .kvAnimal {
+        max-width: 160px;
+      }
+    }
+  }
+  .sec01 {
+    padding: 120px 0 40px;
+    .secContainer {
+      padding: 60px 0 250px;
+      background: url(https://ichigoya-daynight.co.jp/system_panel/uploads/images/top_sec01_bg.png)
+        right center no-repeat;
+      background-size: 75% auto;
+      .ttlPanel {
+        .title {
+          max-width: 340px;
+          margin: 0 0 50px;
+        }
+        .btnBox {
+          max-width: 260px;
+          margin: 0 auto;
+          .btnMoreBlue {
+            margin: 0 0 25px;
+          }
+        }
+      }
+      .secPanel {
+        .txtBox {
+          .balloon {
+            max-width: 120px;
+            margin: 0 0 15px;
+          }
+          .ttl {
+            margin: 0 0 30px;
+            font-size: 30px;
+            font-weight: 400;
+            color: #46a350;
+          }
+          .txt {
+            line-height: 2.2;
+          }
+        }
+      }
+    }
+    @media (min-width: 1025px) {
+      .secContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .ttlPanel {
+          width: 40%;
+          .btnBox {
+            .btnMoreBlue {
+              position: relative;
+              left: -60px;
+            }
+          }
+        }
+        .secPanel {
+          width: 55%;
+        }
+      }
+    }
+  }
+  .sec02 {
+    margin: 0 0 120px;
+    padding: 0 40px;
+    .secContainer {
+      padding: 120px 0;
+      background: url(https://ichigoya-daynight.co.jp/system_panel/uploads/images/top_sec02_bg.png)
+        center no-repeat;
+      background-size: cover;
+    }
+    .secTtlBox {
+      margin: 0 0 40px;
+      text-align: center;
+      .balloon {
+        max-width: 120px;
+        margin: 0 auto 15px;
+      }
+      .secTtl {
+        font-size: 30px;
+        font-weight: 400;
+      }
+    }
+    .listBox {
+      .ul {
+        .li {
+          a {
+            display: block;
+          }
+          .photo {
+            margin: 0 0 5px;
+          }
+          .ttlBox {
+            position: relative;
+            padding: 12px 0 0;
+          }
+          .icon {
+            position: absolute;
+            top: 8px;
+            left: calc(50% - 65px);
+            width: 35px;
+          }
+          .ttl {
+            margin: 0 0 2px;
+            text-align: center;
+            font-size: 18px;
+          }
+          .txt {
+            min-height: 108px;
+            padding: 18px 20px;
+            border-radius: 5px;
+            background: #fff;
+          }
+        }
+      }
+      @media (min-width: 1025px) {
+        .ul {
+          display: flex;
+          flex-wrap: wrap;
+          margin: -40px 0 0 -40px;
+          .li {
+            width: calc((100% / 3) - 40px);
+            margin: 40px 0 0 40px;
+          }
+        }
+      }
+    }
+  }
+  .sec03 {
+    margin: 0 0 120px;
+    .secContainer {
+      display: flex;
+      align-items: center;
+    }
+    .ttlPanel {
+      display: flex;
+      align-items: center;
+      width: 30%;
+      flex-shrink: 0;
+      .secTtlBox {
+        flex: initial;
+        .balloon {
+          max-width: 138px;
+          margin: 0 0 20px;
+        }
+        .secTtl {
+          font-size: 30px;
+          font-weight: 400;
+          white-space: nowrap;
+        }
+      }
+      .animal {
+        width: 90px;
+        margin: 0 15px 0 15px;
+        flex-shrink: 0;
+      }
+    }
+    .secPanel {
+      display: flex;
+      align-items: center;
+      width: 70%;
+      min-height: 525px;
+      padding: 80px 50px;
+      background: url(https://ichigoya-daynight.co.jp/system_panel/uploads/images/top_sec03_bg.png)
+        center no-repeat;
+      background-size: 100% 100%;
+      .webgene-blog {
+        width: 100%;
+      }
+      .webgene-header {
+        display: none;
+      }
+      .webgene-item {
+        border-bottom: 1px solid #b7dcec;
+        a {
+          display: block;
+          padding: 22px 20px 22px 65px;
+          background: url(https://ichigoya-daynight.co.jp/system_panel/uploads/images/blog_list_icon.png)
+            20px center / 27px auto no-repeat;
+        }
+      }
+    }
+  }
+  .sec04 {
+    padding: 0 0 120px;
+    .secTtlBox {
+      margin: 0 0 40px;
+      text-align: center;
+      .balloon {
+        max-width: 120px;
+        margin: 0 auto 15px;
+      }
+      .secTtl {
+        font-size: 30px;
+        font-weight: 400;
+      }
+    }
+    .secContainer {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      .leftBox,
+      .rightBox {
+        width: calc(50% - 30px);
+      }
+      .infoBox {
+        .dl {
+          display: flex;
+          gap: 4px;
+          min-height: 68px;
+          .dt,
+          .dd {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #333;
+          }
+          .dt {
+            width: 120px;
+            padding: 15px 0;
+            flex-shrink: 0;
+            border-color: #70bec3;
+            color: #70bec3;
+          }
+          .dd {
+            width: calc(100% - 124px);
+            padding: 15px 20px 15px 25px;
+            font-weight: 400;
+          }
+        }
+      }
+      .mapBox {
+        padding: 0 0 62%;
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	about
+///////////////////////////////////////////////////////////*/
+.aboutMain {
+  .pageKvContainer {
+    background: url(https://ichigoya-daynight.co.jp/system_panel/uploads/images/about_kv.png)
+      no-repeat;
+    background-size: cover;
+  }
+  .sec01 {
+    padding: 120px 0 140px;
+    background: url(https://ichigoya-daynight.co.jp/system_panel/uploads/images/about_sec01_bg.png)
+      right top 120px no-repeat;
+    background-size: 800px auto;
+    .secContainer {
+      display: flex;
+      align-items: center;
+      .leftPanel {
+        width: 40%;
+        .title {
+          max-width: 368px;
+        }
+      }
+      .rightPanel {
+        width: 60%;
+        .txt {
+          font-size: 14px;
+          line-height: 2.5;
+        }
+      }
+    }
+  }
+  .sec02 {
+    padding: 60px 0;
+    background: url(https://ichigoya-daynight.co.jp/system_panel/uploads/images/about_sec02_bg.png)
+      left bottom no-repeat;
+    background-size: 55% auto;
+    .title {
+      max-width: 641px;
+      margin: 0 0 30px;
+    }
+    .secContainer {
+      display: flex;
+      align-items: center;
+      gap: 70px;
+      .photoBox {
+        order: 2;
+        width: 400px;
+        flex-shrink: 0;
+        .name {
+          margin: 20px 0 0;
+          text-align: right;
+          font-weight: 400;
+          .span,
+          .em {
+            display: inline;
+          }
+          .span {
+            font-size: 14px;
+          }
+          .em {
+            margin: 0 0 0 8px;
+            font-size: 20px;
+          }
+        }
+      }
+      .txtBox {
+        order: 1;
+        width: calc(100% - 470px);
+        .txt {
+          font-size: 14px;
+          line-height: 2.5;
+        }
+      }
+    }
+  }
+  .sec03 {
+    padding: 60px 0;
+    .secContainer {
+      .secPanel {
+        &:not(:first-child) {
+          margin: 50px 0 0;
+        }
+        &:nth-child(odd) {
+          .secBox {
+            padding: 0 100px 0 0;
+            .photo {
+              order: 2;
+            }
+            .txtBox {
+              order: 1;
+            }
+          }
+        }
+        &:nth-child(even) {
+          .secBox {
+            padding: 0 0 0 100px;
+          }
+        }
+        .secBox {
+          display: flex;
+          gap: 50px;
+          .photo {
+            width: 455px;
+            flex-shrink: 0;
+          }
+          .txtBox {
+            width: calc(100% - 505px);
+            padding: 10px 0;
+            .ttl {
+              margin: 0 0 20px;
+              color: #46a350;
+              font-size: 26px;
+              font-weight: 400;
+            }
+            .txt {
+              line-height: 2.5;
+            }
+          }
+        }
+      }
+    }
+  }
+  .sec04 {
+    padding: 60px 0 120px;
+    .title {
+      max-width: 400px;
+      margin: 0 auto 30px;
+    }
+    .txt {
+      text-align: center;
+      line-height: 2.5;
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	house
+///////////////////////////////////////////////////////////*/
+.houseMain {
+  .pageKvContainer {
+    background: url(https://ichigoya-daynight.co.jp/system_panel/uploads/images/house_kv.png)
+      no-repeat;
+    background-size: cover;
+  }
+  .sec01 {
+    padding: 120px 40px;
+    .secContainer {
+      padding: 60px 20px;
+      border-radius: 4px;
+      background: #fbf6f2;
+      .linkList {
+        position: relative;
+        max-width: 900px;
+        margin: 0 auto;
+        .ul {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 12px 15px;
+          .li {
+            a {
+              display: flex;
+              position: relative;
+              align-items: center;
+              min-height: 86px;
+              padding: 12px 20px;
+              border: 3px solid #eee5df;
+              background: #fff;
+            }
+            .icon {
+              width: 39px;
+              margin: 0 12px 0 0;
+              flex-shrink: 0;
+            }
+            .info {
+              flex: 1;
+              .ttl {
+                font-size: 16px;
+              }
+              .address {
+                margin: 5px 0 0;
+                font-size: 12px;
+              }
+            }
+            .status {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              width: 150px;
+              min-height: 50px;
+              margin: 0 0 0 15px;
+              border-left: 2px solid #eee5df;
+              flex-shrink: 0;
+              .mark {
+                p {
+                  font-size: 60px;
+                  line-height: 1;
+                }
+              }
+              .txt {
+                margin: 2px 0 0;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 1;
+              }
+            }
+            .arrow {
+              position: absolute;
+              left: 0;
+              right: 0;
+              bottom: -13px;
+              width: 29px;
+              margin: 0 auto;
+              z-index: 1;
+            }
+          }
+        }
+        .animal {
+          position: absolute;
+          right: 30px;
+          bottom: -85px;
+          width: 109px;
+        }
+      }
+    }
+  }
+  .sec02 {
+    padding: 0 40px;
+    .secContainer {
+      padding: 60px 0;
+      border-radius: 4px;
+      + .secContainer {
+        margin: 20px 0 0;
+      }
+      &.blue {
+        background: #ebf2fb;
+      }
+      &.pink {
+        background: #fbebf1;
+      }
+      .introBox {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        .photo {
+          width: 50%;
+        }
+        .txtBox {
+          width: calc(50% - 50px);
+          .ttl {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 0 0 20px;
+            font-size: 22px;
+            .icon {
+              width: 35px;
+              flex-shrink: 0;
+            }
+          }
+          .infoBox {
+            .dl {
+              display: flex;
+              min-height: 55px;
+              border-bottom: 1px solid #c6dae9;
+              .dt,
+              .dd {
+                display: flex;
+                align-items: center;
+                padding: 10px 0;
+              }
+              .dt {
+                width: 140px;
+                flex-shrink: 0;
+              }
+              .dd {
+                flex: 1;
+              }
+            }
+          }
+        }
+      }
+      .recommendBox {
+        position: relative;
+        margin: 35px 0 40px;
+        padding: 28px 30px 20px;
+        border-radius: 5px;
+        background: #fff;
+        .balloon {
+          position: absolute;
+          top: -13px;
+          left: 20px;
+          width: 138px;
+        }
+        .txt {
+          line-height: 2;
+        }
+      }
+      .listBox {
+        .ul {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 15px;
+          .li {
+            img {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+  .sec03 {
+    padding: 120px 0;
+    .secContainer {
+      .section {
+        + .section {
+          margin: 70px 0 0;
+        }
+        .secTtl {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          margin: 0 0 25px;
+          h3 {
+            flex-shrink: 0;
+            font-size: 22px;
+          }
+          &::after {
+            content: "";
+            width: 100%;
+            height: 1px;
+            background: #46a350;
+          }
+        }
+        .feePanel {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          align-items: end;
+          gap: 20px;
+        }
+        .feeList {
+          .dl {
+            display: flex;
+            align-items: center;
+            min-height: 62px;
+            padding: 12px 20px;
+            border-bottom: 1px solid #9e9e9e;
+            font-size: 14px;
+            .dt {
+              flex: 1;
+            }
+            .dd {
+              margin: 0 0 0 20px;
+              text-align: right;
+              letter-spacing: 0.15em;
+              p + p {
+                margin: 8px 0 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	blog
+///////////////////////////////////////////////////////////*/
+.blogMain {
+  .pageKvContainer {
+    background: url(https://ichigoya-daynight.co.jp/system_panel/uploads/images/blog_kv.png)
+      no-repeat;
+    background-size: cover;
+  }
+  .blogSection {
+    padding: 60px 0 120px;
+  }
+  .catePanel {
+    padding: 40px 0 80px;
+    .webgene-blog {
+      .webgene-header {
+        display: none;
+      }
+      .webgene-item {
+        display: inline-block;
+        width: 220px;
+        margin: 0 10px 0 0;
+        a {
+          display: block;
+          padding: 10px;
+          font-size: 14px;
+          color: #ffffff;
+          text-align: center;
+          border-radius: 4px;
+          background: url(https://ichigoya-daynight.co.jp/system_panel/uploads/images/btn_more_arrow_white.png)
+            right 10px center no-repeat #3795dc;
+        }
+      }
+    }
+  }
+  .blogPanel {
+    &--list {
+      .webgene-blog {
+        .webgene-header {
+          display: none;
+        }
+        .webgene-item {
+          a {
+            display: block;
+            padding: 0 0 5px;
+            border-bottom: 1px solid #c6dae9;
+          }
+          .photo {
+            margin: 0 0 20px;
+            img {
+              border-radius: 4px;
+            }
+          }
+          .title {
+            min-height: 30px;
+            margin: 0 0 10px;
+            padding: 0 0 0 25px;
+            background: url(https://ichigoya-daynight.co.jp/system_panel/uploads/images/blog_list_icon.png)
+              left top 2px no-repeat;
+            background-size: 18px auto;
+          }
+          .more {
+            padding: 0 0 0 10px;
+            p {
+              display: block;
+              background: url(https://ichigoya-daynight.co.jp/system_panel/uploads/images/blog_more_arrow.png)
+                right 5px center no-repeat;
+              background-size: 10px auto;
+            }
+          }
+        }
+      }
+      @media (min-width: 1025px) {
+        .webgene-blog {
+          display: flex;
+          flex-wrap: wrap;
+          margin: -80px 0 0 -80px;
+          .webgene-item {
+            width: calc((100% / 3) - 80px);
+            margin: 80px 0 0 80px;
+            .photo {
+              position: relative;
+              height: 240px;
+              img {
+                @include cover-image;
+              }
+            }
+          }
+        }
+      }
+      .webgene-pagination {
+        overflow: hidden;
+        width: 100%;
+        margin: 100px auto 0;
+        font-size: 14px;
+        ul {
+          max-width: 700px;
+          margin: 0 auto;
+          text-align: center;
+          li {
+            display: inline-block;
+            margin: 0 2px;
+
+            a {
+              display: block;
+              width: 45px;
+              color: #ffffff;
+              line-height: 45px;
+              text-align: center;
+              border-radius: 4px;
+              background: #d6dfe5;
+            }
+          }
+          .prev {
+            margin: 0 2px 0 0;
+          }
+          .next {
+            position: relative;
+            margin: 0 0 0 2px;
+          }
+          .selected {
+            a {
+              background: #7dbabb;
+            }
+          }
+          @media (min-width: 1025px) {
+            .prev {
+              float: left;
+            }
+            .next {
+              float: right;
+            }
+          }
+        }
+      }
+    }
+    &--detail {
+      .webgene-blog {
+        padding: 0 0 40px;
+        .webgene-header {
+          display: none;
+        }
+        .info {
+          margin: 0 0 15px;
+          .cate {
+            display: inline-block;
+            min-width: 100px;
+            margin: 0 10px 0 0;
+            padding: 0 10px;
+            color: #ffffff;
+            text-align: center;
+            background: #171a1c;
+          }
+          .time {
+            display: inline-block;
+            vertical-align: middle;
+          }
+        }
+        .ttlBox {
+          margin: 0 0 30px;
+          padding: 0 0 10px;
+          font-size: 30px;
+          border-bottom: 1px solid #c6dae9;
+        }
+        img {
+          border-radius: 4px;
+        }
+        .slickSlide {
+          margin: 0 0 40px;
+        }
+        .slick-list {
+          margin: 0 0 10px;
+        }
+        .thumb-item {
+          max-width: 800px;
+          margin: 0 0 10px;
+          @media (min-width: 1025px) {
+            img {
+              display: block;
+              // width: auto;
+              max-height: 500px;
+              // margin: 0 auto;
+              object-fit: cover;
+            }
+          }
+        }
+        .slick-slide {
+        }
+        .slideNav {
+          .slider {
+            .li {
+              > div {
+                overflow: hidden;
+                position: relative;
+                padding: 0 0 65%;
+              }
+              img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+          }
+          .slick-slide {
+            margin: 0 5px;
+          }
+        }
+        .postBox {
+          .photo {
+            margin-bottom: 40px;
+            img {
+              width: auto;
+              max-width: 100%;
+            }
+          }
+          .postTxt {
+            line-height: 2;
+            p + p {
+              margin: 30px 0 0;
+            }
+            img {
+              max-width: 100%;
+              width: auto;
+              height: auto;
+            }
+          }
+          .pdfArea {
+            margin: 40px 0 0;
+            a {
+              color: #2151a3;
+            }
+          }
+        }
+        .videoBox {
+          margin: 40px 0 0;
+        }
+      }
+      .btnBackBox {
+        margin: 80px 0 0;
+        text-align: center;
+      }
+      .btnMoreBlue {
+        max-width: 240px;
+        margin: 0 auto;
+      }
+      .btnMoreGreen {
+        max-width: 200px;
+        margin: 60px auto 0;
+      }
+      .webgene-item-aroundPageLink {
+        display: inline-block;
+        a {
+          display: block;
+          width: 40px;
+          color: #ffffff;
+          line-height: 44px;
+          border-radius: 20px;
+          background: #d10b14;
+        }
+      }
+    }
+  }
+}

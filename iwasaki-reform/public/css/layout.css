@@ -1,0 +1,2007 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+	画面用CSS（PC/SMP）
+===================================================*/
+/*////////////////////////////////////////////////////////////
+	TOP
+///////////////////////////////////////////////////////////*/
+.topMain .topKvContainer {
+  position: relative;
+  height: 100vh;
+  color: #ffffff;
+}
+.topMain .topKvContainer .topKvPanel {
+  position: relative;
+  height: 100%;
+}
+.topMain .topKvContainer .topKvPanel .topKv {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.topMain .topKvContainer .topKvPanel .kvTitleBox {
+  position: absolute;
+  left: 60px;
+  bottom: 10%;
+}
+.topMain .topKvContainer .topKvPanel .kvTitleBox .kvTitle h1 {
+  margin: 0 0 20px;
+  font-size: clamp(40px, 3.5vw, 50px);
+  transform: translateX(-50px);
+  animation: kvSlideInRight 1.2s ease forwards;
+  animation-delay: 0.3s;
+}
+.topMain .topKvContainer .topKvPanel .kvTitleBox .kvTitle p {
+  line-height: 2;
+  transform: translateX(-50px);
+  animation: kvSlideInRight 1.2s ease forwards;
+  animation-delay: 0.8s;
+}
+@keyframes kvSlideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.topMain .topKvContainer .topKvPanel .bnrRecruit {
+  position: absolute;
+  right: 60px;
+  bottom: 10%;
+  width: 220px;
+}
+.topMain .topKvContainer .topKvPanel .bnrRecruit .btnRecruit {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 160px;
+  margin: 0 auto;
+}
+.topMain .topKvContainer .topKvPanel .bnrRecruit .btnRecruit a {
+  position: relative;
+  display: block;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 30px;
+  background: #7c4d22;
+  overflow: hidden;
+  z-index: 1;
+}
+.topMain .topKvContainer .topKvPanel .bnrRecruit .btnRecruit a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #4caf50;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s ease;
+  z-index: -1;
+  border-radius: 30px;
+}
+.topMain .topKvContainer .topKvPanel .bnrRecruit .btnRecruit a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  background: url(https://iwasaki-reform.com/system_panel/uploads/images/btn_more_arrow.png) center center no-repeat;
+  background-size: contain;
+  transform: translateY(-50%);
+}
+@media (min-width: 1025px) {
+  .topMain .topKvContainer .topKvPanel .bnrRecruit .btnRecruit a:hover {
+    opacity: 1;
+  }
+  .topMain .topKvContainer .topKvPanel .bnrRecruit .btnRecruit a:hover::before {
+    transform: scaleX(1);
+  }
+}
+.topMain .sec01 {
+  position: relative;
+  padding: 60px 0 180px;
+  background: #faf2e6;
+}
+.topMain .sec01 .secWrap01 {
+  position: relative;
+  z-index: 1;
+}
+.topMain .sec01 .txt {
+  text-align: center;
+}
+.topMain .sec01 .txt p + p {
+  margin: 40px 0 0;
+}
+.topMain .sec01 .btnMore {
+  margin: 60px auto 0;
+}
+.topMain .sec01 .photo {
+  opacity: 0;
+  -webkit-mask-image: linear-gradient(135deg, black 30%, rgba(0, 0, 0, 0.4) 45%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(135deg, black 30%, rgba(0, 0, 0, 0.4) 45%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-size: 250% 250%;
+  mask-size: 250% 250%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: 130% 130%;
+  mask-position: 130% 130%;
+  transition: opacity 1s ease, -webkit-mask-position 1s ease;
+  transition: opacity 1s ease, mask-position 1s ease;
+  transition: opacity 1s ease, mask-position 1s ease, -webkit-mask-position 1s ease;
+}
+.topMain .sec01 .photo.active {
+  opacity: 1 !important;
+  -webkit-mask-position: 0 0;
+  mask-position: 0 0;
+}
+.topMain .sec01 .photo01 {
+  position: absolute;
+  top: 10%;
+  left: 3%;
+  width: 20%;
+}
+.topMain .sec01 .photo02 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20%;
+}
+.topMain .sec01 .photo03 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 25%;
+}
+.topMain .sec01 .photo04 {
+  position: absolute;
+  right: 10%;
+  bottom: 5%;
+  width: 15%;
+}
+.topMain .sec02 {
+  padding: 80px 0 120px;
+  background: url(https://iwasaki-reform.com/system_panel/uploads/images/top_sec02_bg.png) no-repeat;
+  background-size: cover;
+}
+.topMain .sec02 .secWrap01 {
+  position: relative;
+}
+.topMain .sec02 .listPanel .webgene-blog .webgene-header {
+  display: none;
+}
+.topMain .sec02 .listPanel .webgene-blog .webgene-item {
+  background: #ffffff;
+}
+.topMain .sec02 .listPanel .webgene-blog .webgene-item a {
+  display: block;
+  padding: 10px 10px 30px;
+}
+.topMain .sec02 .listPanel .webgene-blog .webgene-item .txtBox {
+  margin: 15px 0 0;
+}
+.topMain .sec02 .listPanel .webgene-blog .webgene-item .txtBox .title {
+  margin: 0 0 15px;
+}
+.topMain .sec02 .listPanel .webgene-blog .webgene-item .txtBox .infoBox .cate {
+  display: inline-block;
+  min-width: 100px;
+  padding: 2px 10px;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 30px;
+  background: #efeeeb;
+}
+@media (min-width: 1025px) {
+  .topMain .sec02 .listPanel .webgene-blog {
+    display: flex;
+    margin: 0 0 0 -5%;
+  }
+  .topMain .sec02 .listPanel .webgene-blog .webgene-item {
+    width: 20%;
+    margin: 0 0 0 5%;
+  }
+  .topMain .sec02 .listPanel .webgene-blog .webgene-item .photo {
+    position: relative;
+    height: 260px;
+  }
+  .topMain .sec02 .listPanel .webgene-blog .webgene-item .photo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.topMain .sec02 .btnMore {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+}
+.topMain .sec03 {
+  padding: 80px 0 120px;
+}
+.topMain .sec03 .secBoxList {
+  margin: 0 0 150px;
+}
+.topMain .sec03 .secBoxList .secBox + .secBox {
+  margin: 100px 0 0;
+}
+.topMain .sec03 .secBoxList .secBox .photoBox .listBox {
+  display: flex;
+}
+.topMain .sec03 .secBoxList .secBox .photoBox .listBox .list {
+  width: 50%;
+}
+.topMain .sec03 .secBoxList .secBox .photoBox .listBox .list + .list {
+  position: relative;
+  top: -40px;
+  left: -20px;
+}
+.topMain .sec03 .secBoxList .secBox .txtBox .ttl {
+  position: relative;
+  margin: 0 0 20px;
+}
+.topMain .sec03 .secBoxList .secBox .txtBox .ttl::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: 1px;
+  margin: auto 0;
+  background: #21583d;
+}
+.topMain .sec03 .secBoxList .secBox .txtBox .ttl h3 {
+  position: relative;
+  display: inline-block;
+  padding: 0 15px 0 0;
+  font-size: 30px;
+  vertical-align: middle;
+  background: #ffffff;
+}
+.topMain .sec03 .secBoxList .secBox .txtBox .ttl p {
+  position: relative;
+  display: inline-block;
+  padding: 0 15px 0 0;
+  font-size: 14px;
+  vertical-align: middle;
+  background: #ffffff;
+}
+.topMain .sec03 .secBoxList .secBox .txtBox .txt {
+  margin: 0 0 80px;
+  line-height: 2.5;
+}
+@media (min-width: 1025px) {
+  .topMain .sec03 .secBoxList .secBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .topMain .sec03 .secBoxList .secBox .photoBox {
+    width: 45%;
+  }
+  .topMain .sec03 .secBoxList .secBox .txtBox {
+    width: 45%;
+  }
+  .topMain .sec03 .secBoxList .secBox:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+}
+.topMain .sec03 .linkPanel .linkItem a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  text-align: center;
+}
+.topMain .sec03 .linkPanel .linkItem .dl .dt {
+  font-size: 30px;
+  color: #ffffff;
+}
+.topMain .sec03 .linkPanel .linkItem .dl .dd p {
+  color: #ceb59e;
+}
+.topMain .sec03 .linkPanel .linkItem .dl .dd .arrow {
+  width: 40px;
+  margin: 10px auto 0;
+}
+.topMain .sec03 .linkPanel .linkItem01 a {
+  background: url(https://iwasaki-reform.com/system_panel/uploads/images/top_sec03_link_bg_01.png) center no-repeat;
+  background-size: cover;
+}
+.topMain .sec03 .linkPanel .linkItem02 a {
+  background: url(https://iwasaki-reform.com/system_panel/uploads/images/top_sec03_link_bg_02.png) center no-repeat;
+  background-size: cover;
+}
+@media (min-width: 1025px) {
+  .topMain .sec03 .linkPanel {
+    display: flex;
+    justify-content: space-between;
+  }
+  .topMain .sec03 .linkPanel .linkItem {
+    width: 49%;
+  }
+}
+.topMain .sec04 {
+  padding: 0 0 120px;
+}
+.topMain .sec04 .secWrap01 {
+  position: relative;
+}
+.topMain .sec04 .listPanel .webgene-blog .webgene-header {
+  display: none;
+}
+.topMain .sec04 .listPanel .webgene-blog .webgene-item {
+  border-bottom: 1px solid #b5b5b5;
+}
+.topMain .sec04 .listPanel .webgene-blog .webgene-item a {
+  display: block;
+  padding: 20px 40px 20px 0;
+  background: url(https://iwasaki-reform.com/system_panel/uploads/images/blog_list_arrow.png) right bottom 20px no-repeat;
+  background-size: 30px auto;
+}
+.topMain .sec04 .listPanel .webgene-blog .webgene-item .infoBox {
+  margin: 0 0 15px;
+}
+.topMain .sec04 .listPanel .webgene-blog .webgene-item .infoBox .cate {
+  display: inline-block;
+  min-width: 100px;
+  padding: 2px 10px;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 30px;
+  background: #efeeeb;
+}
+.topMain .sec04 .btnMore {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+}
+
+/*////////////////////////////////////////////////////////////
+	reason
+///////////////////////////////////////////////////////////*/
+.reasonMain .pageKvContainer {
+  background: url(https://iwasaki-reform.com/system_panel/uploads/images/reason_kv.png) center no-repeat;
+  background-size: cover;
+}
+.reasonMain .topSection {
+  padding: 80px 0 0;
+}
+.reasonMain .topSection .txt {
+  padding: 0 0 60px;
+  font-size: 20px;
+  text-align: center;
+}
+@media (min-width: 1025px) {
+  .reasonMain .topSection .photo {
+    height: 500px;
+    background: url(https://iwasaki-reform.com/system_panel/uploads/images/reason_top_img.png) center center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .reasonMain .topSection .photo img {
+    display: none;
+  }
+}
+.reasonMain .sec01 {
+  padding: 120px 0 40px;
+}
+.reasonMain .sec01 .topContainer {
+  padding: 0 0 100px;
+}
+.reasonMain .sec01 .topContainer .linkList .ul .li {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  cursor: pointer;
+  border-top: 1px solid #21583d;
+  border-bottom: 1px solid #21583d;
+}
+.reasonMain .sec01 .topContainer .linkList .ul .li .photo {
+  width: 150px;
+}
+.reasonMain .sec01 .topContainer .linkList .ul .li .txtBox {
+  width: calc(100% - 190px);
+  padding: 10px 0;
+  background: url(https://iwasaki-reform.com/system_panel/uploads/images/reason_sec01_top_list_arrow.png) right bottom no-repeat;
+  background-size: 60px auto;
+}
+.reasonMain .sec01 .topContainer .linkList .ul .li .txtBox .ttl {
+  font-size: 22px;
+}
+@media (min-width: 1025px) {
+  .reasonMain .sec01 .topContainer .linkList .ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .reasonMain .sec01 .topContainer .linkList .ul .li {
+    width: calc(50% - 10px);
+  }
+  .reasonMain .sec01 .topContainer .linkList .ul:nth-child(-n+3) .li {
+    border-top: none;
+  }
+}
+.reasonMain .sec01 .section {
+  padding: 100px 40px;
+}
+.reasonMain .sec01 .section .secWrap01 {
+  position: relative;
+}
+.reasonMain .sec01 .section .secTtlBox {
+  position: relative;
+  margin: 0 0 30px;
+  padding: 20px 0 0;
+}
+.reasonMain .sec01 .section .secTtlBox .point {
+  position: absolute;
+  top: -20px;
+  left: -40px;
+  width: 120px;
+  z-index: 1;
+}
+.reasonMain .sec01 .section .secTtlBox .secTtl {
+  position: relative;
+}
+.reasonMain .sec01 .section .secTtlBox .secTtl::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: 1px;
+  margin: auto 0;
+  background: #21583d;
+}
+.reasonMain .sec01 .section .secTtlBox .secTtl h3 {
+  position: relative;
+  display: inline-block;
+  padding: 0 15px 0 0;
+  font-size: 30px;
+  vertical-align: middle;
+  background: #ffffff;
+}
+.reasonMain .sec01 .section .secTtlBox .secTtl.secTtl01 {
+  max-width: 800px;
+}
+.reasonMain .sec01 .section .secTtlBox .secTtl.secTtl02 {
+  max-width: 600px;
+}
+.reasonMain .sec01 .section .secTtlBox .secTtl.secTtl03 {
+  max-width: 630px;
+}
+.reasonMain .sec01 .section .secTtlBox .secTtl.secTtl04 {
+  max-width: 700px;
+}
+.reasonMain .sec01 .section .topTxt {
+  margin: 0 0 50px;
+}
+.reasonMain .sec01 .section .topTxt p + p {
+  margin: 30px 0 0;
+}
+.reasonMain .sec01 .section .imageMap {
+  position: absolute;
+  top: -40px;
+  right: 100px;
+  width: 300px;
+}
+.reasonMain .sec01 .section .listBox .ul .li {
+  padding: 30px 20px;
+}
+.reasonMain .sec01 .section .listBox .ul .li .dl {
+  text-align: center;
+}
+.reasonMain .sec01 .section .listBox .ul .li .dl .dt {
+  display: inline-block;
+  margin: 0 0 20px;
+}
+.reasonMain .sec01 .section .listBox .ul .li .dl .dt.ttl01 {
+  width: 80px;
+}
+.reasonMain .sec01 .section .listBox .ul .li .dl .dt.ttl02 {
+  width: 100px;
+}
+.reasonMain .sec01 .section .listBox .ul .li .dl .dt.ttl03 {
+  width: 80px;
+}
+.reasonMain .sec01 .section .listBox .ul .li .dl .dd {
+  font-size: 24px;
+}
+@media (min-width: 1025px) {
+  .reasonMain .sec01 .section .listBox .ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  .reasonMain .sec01 .section .listBox .ul .li {
+    width: calc(33.3333333333% - 20px);
+  }
+  .reasonMain .sec01 .section .listBox .ul .li .dl .dd {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+  }
+}
+.reasonMain .sec01 .section:nth-child(odd) {
+  background: #fbf3e7;
+}
+.reasonMain .sec01 .section:nth-child(odd) .secTtlBox .secTtl h3 {
+  background: #fbf3e7;
+}
+.reasonMain .sec01 .section:nth-child(odd) .listBox .ul .li {
+  background: #ffffff;
+}
+.reasonMain .sec01 .section:nth-child(even) .listBox .ul .li {
+  border: 1px solid #eadac1;
+  background: #fbf4e9;
+}
+.reasonMain .slidePanel {
+  padding: 0 0 100px;
+}
+.reasonMain .slidePanel .slideBox .ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.reasonMain .slidePanel .slideBox .ul .li {
+  position: relative;
+  width: 20%;
+  margin: 0 4px;
+}
+
+/*////////////////////////////////////////////////////////////
+	service
+///////////////////////////////////////////////////////////*/
+.serviceMain .pageKvContainer {
+  background: url(https://iwasaki-reform.com/system_panel/uploads/images/service_kv.png) center no-repeat;
+  background-size: cover;
+}
+.serviceMain .topSection {
+  padding: 60px 0;
+  text-align: center;
+}
+.serviceMain .topSection .secTtl {
+  margin: 0 0 30px;
+  font-size: 24px;
+}
+.serviceMain .topSection .txt {
+  margin: 0 0 40px;
+}
+.serviceMain .topSection .txt p + p {
+  margin: 30px 0 0;
+}
+.serviceMain .topSection .btnItems .btnPaging {
+  width: 200px;
+  margin: 0 auto;
+}
+.serviceMain .topSection .btnItems .btnPaging p {
+  position: relative;
+  display: block;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 30px;
+  background: #7c4d22;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+}
+.serviceMain .topSection .btnItems .btnPaging p::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #4caf50;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s ease;
+  z-index: -1;
+  border-radius: 30px;
+}
+.serviceMain .topSection .btnItems .btnPaging p::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  background: url(https://iwasaki-reform.com/system_panel/uploads/images/btn_more_arrow.png) center center no-repeat;
+  background-size: contain;
+  transform: translateY(-50%);
+}
+@media (min-width: 1025px) {
+  .serviceMain .topSection .btnItems .btnPaging p:hover {
+    opacity: 1;
+  }
+  .serviceMain .topSection .btnItems .btnPaging p:hover::before {
+    transform: scaleX(1);
+  }
+}
+@media (min-width: 1025px) {
+  .serviceMain .topSection .btnItems {
+    display: flex;
+    justify-content: space-between;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+.serviceMain .section .secContainer + .secContainer {
+  margin: 120px 0 0;
+}
+.serviceMain .section .topBox .txtBox .secTtl {
+  position: relative;
+  width: 70%;
+  margin: 0 0 20px;
+}
+.serviceMain .section .topBox .txtBox .secTtl::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  margin: auto 0;
+  background: #21583d;
+}
+.serviceMain .section .topBox .txtBox .secTtl h3 {
+  position: relative;
+  display: inline-block;
+  padding: 0 15px 0 0;
+  font-size: 30px;
+  vertical-align: middle;
+  background: #ffffff;
+}
+.serviceMain .section .topBox .txtBox .ttl {
+  margin: 0 0 20px;
+  font-size: 24px;
+  color: #7c4d22;
+}
+.serviceMain .section .topBox .txtBox .txt {
+  line-height: 2.5;
+}
+@media (min-width: 1025px) {
+  .serviceMain .section .topBox {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+  .serviceMain .section .topBox .photo {
+    width: 45%;
+  }
+  .serviceMain .section .topBox .txtBox {
+    width: 50%;
+  }
+}
+.serviceMain .section .checkPanel {
+  margin: 60px 0 0;
+  padding: 30px;
+  border: 1px solid #eadac1;
+  background: #fbf4e9;
+}
+.serviceMain .section .checkPanel .ttl {
+  margin: 0 0 20px;
+  font-size: 22px;
+}
+.serviceMain .section .checkPanel .listBox .ul .li {
+  padding: 10px 20px;
+  background: #ffffff;
+}
+.serviceMain .section .checkPanel .listBox .ul .li p {
+  padding: 0 0 0 30px;
+  background: url(https://iwasaki-reform.com/system_panel/uploads/images/service_sec_list_check.png) left center no-repeat;
+  background-size: 20px auto;
+}
+@media (min-width: 1025px) {
+  .serviceMain .section .checkPanel .listBox .ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px 0;
+  }
+  .serviceMain .section .checkPanel .listBox .ul .li {
+    width: calc(50% - 20px);
+  }
+}
+.serviceMain .section .constructionPanel {
+  margin: 60px 0 0;
+}
+.serviceMain .section .constructionPanel .secTtl {
+  position: relative;
+  max-width: 320px;
+  margin: 0 0 30px;
+}
+.serviceMain .section .constructionPanel .secTtl::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  margin: auto 0;
+  background: #21583d;
+}
+.serviceMain .section .constructionPanel .secTtl h3 {
+  position: relative;
+  display: inline-block;
+  padding: 0 15px 0 0;
+  font-size: 24px;
+  vertical-align: middle;
+  background: #ffffff;
+}
+.serviceMain .section .constructionPanel .listBox .ul .li p {
+  margin: 10px 0 0;
+  text-align: center;
+}
+@media (min-width: 1025px) {
+  .serviceMain .section .constructionPanel .listBox .ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -30px 0 0 -40px;
+  }
+  .serviceMain .section .constructionPanel .listBox .ul .li {
+    width: calc(33.3333333333% - 40px);
+    margin: 30px 0 0 40px;
+  }
+}
+.serviceMain .sec01 {
+  padding: 60px 0;
+}
+.serviceMain .sec02 {
+  padding: 60px 0 120px;
+}
+
+/*////////////////////////////////////////////////////////////
+	recruit
+///////////////////////////////////////////////////////////*/
+.recruitMain .pageKvContainer {
+  background: url(https://iwasaki-reform.com/system_panel/uploads/images/recruit_kv.png) center no-repeat;
+  background-size: cover;
+}
+.recruitMain .topSection {
+  padding: 120px 0;
+}
+.recruitMain .topSection .secPanel .txtBox .txt {
+  max-width: 600px;
+}
+.recruitMain .topSection .secPanel .txtBox .txt p + p {
+  margin: 30px 0 0;
+}
+@media (min-width: 1025px) {
+  .recruitMain .topSection .secPanel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+  .recruitMain .topSection .secPanel .txtBox {
+    width: 50%;
+  }
+  .recruitMain .topSection .secPanel .photo {
+    width: 45%;
+  }
+}
+.recruitMain .sec01 {
+  padding: 60px 0 120px;
+}
+.recruitMain .sec01 .secBoxList .secBox + .secBox {
+  margin: 100px 0 0;
+}
+.recruitMain .sec01 .secBoxList .secBox .photoBox .listBox {
+  display: flex;
+}
+.recruitMain .sec01 .secBoxList .secBox .photoBox .listBox .list {
+  width: 50%;
+}
+.recruitMain .sec01 .secBoxList .secBox .photoBox .listBox .list + .list {
+  position: relative;
+  top: -40px;
+  left: -20px;
+}
+.recruitMain .sec01 .secBoxList .secBox .txtBox .ttl {
+  position: relative;
+  max-width: 400px;
+  margin: 0 0 20px;
+}
+.recruitMain .sec01 .secBoxList .secBox .txtBox .ttl::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 65%;
+  height: 1px;
+  margin: auto 0;
+  background: #21583d;
+}
+.recruitMain .sec01 .secBoxList .secBox .txtBox .ttl h3 {
+  position: relative;
+  display: inline-block;
+  font-size: 30px;
+  vertical-align: middle;
+  background: #ffffff;
+}
+.recruitMain .sec01 .secBoxList .secBox .txtBox .ttl p {
+  position: relative;
+  display: inline-block;
+  padding: 0 15px 0 0;
+  font-size: 18px;
+  vertical-align: middle;
+  background: #ffffff;
+}
+.recruitMain .sec01 .secBoxList .secBox .txtBox .txt {
+  margin: 0 0 80px;
+  line-height: 2.5;
+}
+@media (min-width: 1025px) {
+  .recruitMain .sec01 .secBoxList .secBox {
+    display: flex;
+    justify-content: space-between;
+  }
+  .recruitMain .sec01 .secBoxList .secBox .photoBox {
+    width: 45%;
+  }
+  .recruitMain .sec01 .secBoxList .secBox .txtBox {
+    width: 50%;
+  }
+  .recruitMain .sec01 .secBoxList .secBox:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+}
+.recruitMain .sec02 {
+  padding: 100px 0;
+  background: #fbf3e8;
+}
+.recruitMain .sec02 .listPanel {
+  position: relative;
+}
+.recruitMain .sec02 .listPanel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20%;
+  width: 2px;
+  height: 100%;
+  background: #8a795f;
+}
+.recruitMain .sec02 .listPanel .listBox {
+  position: relative;
+  padding: 20px 40px;
+  background: #ffffff;
+}
+.recruitMain .sec02 .listPanel .listBox + .listBox {
+  margin: 30px 0 0;
+}
+.recruitMain .sec02 .listPanel .listBox:nth-child(2) {
+  margin: 10px 0 0;
+}
+.recruitMain .sec02 .listPanel .listBox .dl {
+  display: flex;
+  line-height: 2;
+}
+.recruitMain .sec02 .listPanel .listBox .dl .dt {
+  width: 30%;
+}
+.recruitMain .sec02 .listPanel .listBox .dl .dd {
+  width: 70%;
+}
+.recruitMain .sec03 {
+  padding: 120px 0;
+  background: #eeedea;
+}
+.recruitMain .sec03 .listBox .ul .dl {
+  margin: 10px 0 0;
+}
+.recruitMain .sec03 .listBox .ul .dl .dt {
+  margin: 0 0 10px;
+  font-size: 24px;
+}
+.recruitMain .sec03 .listBox .ul .dl .dd {
+  line-height: 2;
+}
+@media (min-width: 1025px) {
+  .recruitMain .sec03 .listBox .ul {
+    display: flex;
+    gap: 0 20px;
+  }
+  .recruitMain .sec03 .listBox .ul .li {
+    width: calc(33.3333333333% - 20px);
+  }
+}
+.recruitMain .sec04 {
+  padding: 120px 0;
+}
+.recruitMain .sec04 .infoBox .dl {
+  line-height: 2;
+}
+.recruitMain .sec04 .infoBox .dl .dt {
+  padding: 15px 20px;
+  color: #7c4d22;
+  border-bottom: 1px solid #7c4d22;
+}
+.recruitMain .sec04 .infoBox .dl .dd {
+  padding: 15px 20px;
+  border-bottom: 1px solid #b5b5b5;
+}
+@media (min-width: 1025px) {
+  .recruitMain .sec04 .infoBox .dl {
+    display: flex;
+    justify-content: space-between;
+  }
+  .recruitMain .sec04 .infoBox .dl .dt {
+    width: 220px;
+  }
+  .recruitMain .sec04 .infoBox .dl .dd {
+    width: calc(100% - 225px);
+  }
+}
+.recruitMain .sec05 {
+  padding: 120px 0;
+  background: #fbf4e9;
+}
+.recruitMain .sec05 .topTxt {
+  margin: 0 0 40px;
+}
+
+/*////////////////////////////////////////////////////////////
+	company
+///////////////////////////////////////////////////////////*/
+.companyMain .pageKvContainer {
+  background: url(https://iwasaki-reform.com/system_panel/uploads/images/company_kv.png) center no-repeat;
+  background-size: cover;
+}
+.companyMain .topSection {
+  padding: 120px 0;
+}
+.companyMain .topSection .secPanel .txtBox .txt {
+  max-width: 600px;
+  font-size: 30px;
+}
+@media (min-width: 1025px) {
+  .companyMain .topSection .secPanel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+  .companyMain .topSection .secPanel .txtBox {
+    width: 50%;
+  }
+  .companyMain .topSection .secPanel .photo {
+    width: 45%;
+  }
+}
+.companyMain .sec01 {
+  padding: 100px 0;
+}
+.companyMain .sec01 .secBox .photoBox .name {
+  margin: 10px 0 0;
+  text-align: right;
+}
+.companyMain .sec01 .secBox .photoBox .name p {
+  display: inline-block;
+  font-size: 18px;
+}
+.companyMain .sec01 .secBox .photoBox .name .em {
+  margin: 0 0 0 10px;
+  font-size: 24px;
+}
+.companyMain .sec01 .secBox .txtBox .txt {
+  line-height: 2.5;
+}
+@media (min-width: 1025px) {
+  .companyMain .sec01 .secBox {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+  .companyMain .sec01 .secBox .photoBox {
+    width: 40%;
+  }
+  .companyMain .sec01 .secBox .txtBox {
+    width: 50%;
+  }
+}
+.companyMain .sec02 {
+  padding: 100px 0;
+  background: url(https://iwasaki-reform.com/system_panel/uploads/images/company_sec02_bg.png);
+}
+.companyMain .sec02 .listBox .ul .li {
+  border-bottom: 1px solid #b5b5b5;
+}
+.companyMain .sec02 .listBox .ul .dl {
+  padding: 15px 100px;
+  line-height: 2;
+}
+.companyMain .sec02 .listBox .ul .dl .dt {
+  color: #7c4d22;
+}
+@media (min-width: 1025px) {
+  .companyMain .sec02 .listBox .ul .dl {
+    display: flex;
+  }
+  .companyMain .sec02 .listBox .ul .dl .dt {
+    width: 140px;
+  }
+  .companyMain .sec02 .listBox .ul .dl .dd {
+    width: calc(100% - 140px);
+  }
+}
+.companyMain .sec03 {
+  padding: 100px 0;
+  background: #fbf3e8;
+}
+.companyMain .sec03 .secPanel {
+  padding: 40px 60px;
+  background: #ffffff;
+}
+.companyMain .sec03 .infoBox {
+  margin: 0 0 40px;
+}
+.companyMain .sec03 .infoBox .dl {
+  line-height: 2;
+}
+.companyMain .sec03 .infoBox .dl .dt {
+  padding: 15px 20px;
+  color: #7c4d22;
+  border-bottom: 1px solid #7c4d22;
+}
+.companyMain .sec03 .infoBox .dl .dd {
+  padding: 15px 20px;
+  border-bottom: 1px solid #b5b5b5;
+}
+.companyMain .sec03 .infoBox .dl .dd a {
+  display: inline-block;
+}
+@media (min-width: 1025px) {
+  .companyMain .sec03 .infoBox .dl {
+    display: flex;
+    justify-content: space-between;
+  }
+  .companyMain .sec03 .infoBox .dl .dt {
+    width: 220px;
+  }
+  .companyMain .sec03 .infoBox .dl .dd {
+    width: calc(100% - 225px);
+  }
+}
+.companyMain .sec04 {
+  padding: 100px 0;
+}
+.companyMain .sec04 .staffBox {
+  max-width: 550px;
+}
+.companyMain .sec04 .staffBox p {
+  margin: 10px 0 0;
+  font-size: 20px;
+  text-align: center;
+}
+.companyMain .sec04 .staffList {
+  margin: 40px 0 0;
+}
+@media (min-width: 1025px) {
+  .companyMain .sec04 .staffList .ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -40px 0 0 -20px;
+  }
+  .companyMain .sec04 .staffList .ul .li {
+    width: calc(50% - 20px);
+    margin: 40px 0 0 20px;
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	contact
+///////////////////////////////////////////////////////////*/
+.contactMain .pageKvContainer {
+  background: url(https://iwasaki-reform.com/system_panel/uploads/images/contact_kv.png) center no-repeat;
+  background-size: cover;
+}
+.contactMain .sec01 {
+  padding: 80px 0 120px;
+  background: url(https://iwasaki-reform.com/system_panel/uploads/images/contact_sec01_bg.png);
+}
+.contactMain .sec01 .topTxt {
+  margin: 0 0 40px;
+}
+.contactMain .sec02 {
+  padding: 80px 0 120px;
+}
+.contactMain .sec02 .telBox {
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #eadac1;
+  background: #fbf4e9;
+}
+.contactMain .sec02 .telBox .tel {
+  margin: 0 0 10px;
+}
+.contactMain .sec02 .telBox .tel a {
+  display: inline-block;
+}
+.contactMain .sec02 .telBox .tel a p {
+  display: inline-block;
+}
+.contactMain .sec02 .telBox .tel a .span {
+  font-size: 16px;
+}
+.contactMain .sec02 .telBox .tel a .em {
+  font-size: 30px;
+  line-height: 1.2;
+}
+.contactMain .sec02 .telBox > p {
+  font-size: 14px;
+}
+
+/*////////////////////////////////////////////////////////////
+	form
+///////////////////////////////////////////////////////////*/
+.formMain {
+  /* 入力項目
+  --------------------------------------*/
+  /*テキストボックス・メール・電話*/
+  /*テキストエリア*/
+}
+.formMain .contactForm input[type=text],
+.formMain .contactForm input[type=email],
+.formMain .contactForm input[type=tel] {
+  width: 100%;
+  height: 50px;
+  padding-left: 20px;
+  font-size: 16px;
+  border: 1px solid #eadac1;
+  background: #ffffff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.formMain .contactForm textarea {
+  width: 100%;
+  height: 200px;
+  padding: 20px;
+  font-size: 16px;
+  border: 1px solid #eadac1;
+  background: #ffffff;
+  resize: none;
+}
+.formMain .contactForm input[type=text]:focus,
+.formMain .contactForm input[type=email]:focus,
+.formMain .contactForm input[type=tel]:focus,
+.formMain .contactForm textarea:focus {
+  outline: 0;
+  border: 2px solid #90cefd;
+}
+.formMain .btnSubmitBox {
+  max-width: 220px;
+  margin: 40px auto 0;
+}
+.formMain .contactForm button[type=submit] {
+  overflow: hidden;
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 10px 10px;
+  font-family: "Zen Old Mincho", serif;
+  font-size: 15px;
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+  border: 1px solid #7c4d22;
+  background: url(https://iwasaki-reform.com/system_panel/uploads/images/btn_more_arrow.png) right 10px center no-repeat #7c4d22;
+  background-size: 25px auto;
+  transition: 0.6s;
+}
+.formMain .contactForm button[type=submit][disabled] {
+  opacity: 0.6;
+  cursor: default;
+  pointer-events: none;
+}
+.formMain .contactForm .form {
+  padding: 0 0 60px;
+}
+.formMain .contactForm .form .checkList .ul {
+  padding: 12px 0 0;
+}
+.formMain .contactForm .form .checkList .ul + .ul {
+  margin: 10px 0 0;
+}
+.formMain .contactForm .form .checkList .ul .li + .li {
+  margin: 10px 0 0;
+}
+.formMain .contactForm .form .checkList01 .ul .li {
+  display: inline-block;
+}
+.formMain .contactForm .form .checkList01 .ul .li + .li {
+  margin: 0 0 0 10px;
+}
+.formMain .contactForm .form .checkList01 .checkItem {
+  display: inline-block;
+  padding: 0 5px 0 0;
+}
+.formMain .contactForm .form .checkList01 .checkItem + input {
+  display: inline-block;
+  width: 150px;
+}
+.formMain .contactForm .form .checkList01 .otherTxt {
+  display: inline-block;
+}
+.formMain .contactForm .form .checkItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.formMain .contactForm .form .checkItem + .checkItem {
+  margin-top: 10px;
+}
+.formMain .contactForm .form .checkItem input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+}
+.formMain .contactForm .form .checkItem label {
+  display: inline-block;
+  padding-left: 30px;
+  position: relative;
+  cursor: pointer;
+}
+.formMain .contactForm .form .checkItem label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  transform: translateY(-50%);
+  border: 1px solid #eadac1;
+  background: #ffffff;
+}
+.formMain .contactForm .form .checkItem input[type=checkbox]:checked + label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  width: 7px;
+  height: 14px;
+  transform: translateY(-50%) rotate(40deg);
+  border-bottom: 3px solid #21583d;
+  border-right: 3px solid #21583d;
+}
+.formMain .contactForm .form .checkItem.agreeCheck {
+  justify-content: center;
+}
+.formMain .contactForm .form .radioList01 .list {
+  display: inline-block;
+  margin: 0 20px 0 0;
+}
+.formMain .contactForm .form .radioList01 .otherTxt {
+  display: inline-block;
+}
+.formMain .contactForm .form .radioBox {
+  padding: 10px 0;
+}
+.formMain .contactForm .form .radioBox .radio {
+  position: relative;
+  display: inline-block;
+}
+.formMain .contactForm .form .radioBox input[type=radio] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+}
+.formMain .contactForm .form .radioBox label {
+  position: relative;
+  padding: 5px 0 5px 35px;
+}
+.formMain .contactForm .form .radioBox label:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 25px;
+  height: 25px;
+  margin: auto 0;
+  border-radius: 50%;
+  border: 1px solid #eadac1;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+.formMain .contactForm .form .radioBox input[type=radio]:checked + label:before {
+  border: 8px solid #21583d;
+}
+.formMain .contactForm .form .postalBox {
+  margin: 0 0 5px;
+}
+.formMain .contactForm .form .postalBox input {
+  width: 90px;
+}
+.formMain .contactForm .form .postalBox input + .span {
+  display: inline-block;
+  margin: 0 5px;
+}
+.formMain .contactForm .form .postalBox .postalTxt {
+  display: inline-block;
+  margin: 0 5px;
+}
+.formMain .contactForm .form .postalBox + input + input {
+  margin: 5px 0;
+}
+.formMain .contactForm .form .selectBox {
+  display: inline-block;
+  width: 200px;
+}
+.formMain .contactForm .form .selectBox select {
+  display: block;
+  width: 100%;
+  padding: 11px 20px;
+  font-size: 16px;
+  color: #000000;
+  line-height: 1.5em;
+  border-radius: 0;
+  border: 1px solid #deebe4;
+  border-radius: 15px;
+  background: #f7f7f7;
+  background-size: 10px auto;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.formMain .contactForm .form .selectBox + .span {
+  display: inline-block;
+  margin: 0 5px;
+}
+.formMain .contactForm .formBox + .formBox {
+  margin-top: 60px;
+}
+.formMain .contactForm .formBox > .dl {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+.formMain .contactForm .formBox > .dl.line > .dt {
+  vertical-align: top;
+}
+.formMain .contactForm .formBox > .dl > .dt {
+  overflow: hidden;
+  width: 280px;
+  margin: 0 2px 0 0;
+  padding: 20px 10px;
+  border-bottom: 1px solid #7c4d22;
+}
+.formMain .contactForm .formBox > .dl > .dt .span {
+  display: inline-block;
+  min-width: 165px;
+  margin-right: 10px;
+  padding: 0 0 0 5px;
+  color: #7c4d22;
+  vertical-align: middle;
+}
+.formMain .contactForm .formBox > .dl > .dt .em {
+  display: inline-block;
+  padding: 0 8px;
+  font-size: 14px;
+  color: #ffffff;
+  vertical-align: middle;
+  border-radius: 20px;
+  background: #7c4d22;
+}
+.formMain .contactForm .formBox > .dl > .dt .small {
+  font-size: 12px;
+}
+.formMain .contactForm .formBox > .dl > .dt .aside {
+  margin-top: 10px;
+}
+.formMain .contactForm .formBox > .dl > .dt .aside p {
+  font-size: 14px;
+  padding-left: 1em;
+  text-indent: -1em;
+}
+@media (min-width: 1025px) {
+  .formMain .contactForm .formBox > .dl > .dt .span {
+    float: left;
+  }
+  .formMain .contactForm .formBox > .dl > .dt .em {
+    float: right;
+  }
+}
+.formMain .contactForm .formBox > .dl > .dd {
+  position: relative;
+  width: calc(100% - 282px);
+  padding: 10px 20px;
+  border-bottom: 1px solid #b5b5b5;
+}
+.formMain .contactForm .formBox .datePanel {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+}
+.formMain .contactForm .formBox .datePanel + .datePanel {
+  margin: 10px 0 0;
+}
+.formMain .contactForm .formBox .datePanel > * {
+  display: flex;
+  align-items: center;
+}
+.formMain .contactForm .formBox .datePanel input {
+  width: 70px;
+  border-radius: 15px;
+}
+.formMain .contactForm .formBox .datePanel .selectBox {
+  width: 70px;
+}
+.formMain .contactForm .formBox .datePanel .dateTtl {
+  margin: 0 10px 0 0;
+}
+.formMain .contactForm .formBox .datePanel .dateTxt {
+  margin: 0 5px;
+}
+.formMain .contactForm .formBox .addressBox .dl,
+.formMain .contactForm .formBox .dateBox .dl {
+  display: table;
+  width: 100%;
+}
+.formMain .contactForm .formBox .addressBox .dl + .dl,
+.formMain .contactForm .formBox .dateBox .dl + .dl {
+  margin-top: 10px;
+}
+.formMain .contactForm .formBox .addressBox .dl .dt,
+.formMain .contactForm .formBox .dateBox .dl .dt {
+  display: table-cell;
+  width: 60px;
+  vertical-align: middle;
+}
+.formMain .contactForm .formBox .addressBox .dl .dd,
+.formMain .contactForm .formBox .dateBox .dl .dd {
+  display: table-cell;
+  vertical-align: middle;
+}
+.formMain .contactForm .formBox .ageInput input {
+  display: inline-block;
+  width: 120px;
+  margin: 0 5px 0 0;
+}
+.formMain .contactForm .formBox .ageInput > p {
+  display: inline-block;
+}
+.formMain .contactForm .formBox .meetingBox {
+  margin: 0 0 20px;
+}
+.formMain .contactForm .formBox .meetingBox .radioList {
+  display: inline-block;
+}
+.formMain .contactForm .formBox .meetingBox .radioList .list {
+  display: inline-block;
+  margin: 0 20px 0 0;
+}
+.formMain .contactForm .formBox .dateBox + .dateBox {
+  margin: 10px 0 0;
+}
+.formMain .contactForm .formBox .dateBox + .txt {
+  margin: 10px 0 0;
+}
+.formMain .contactForm .formBox .dateBox input[type=text] {
+  width: 90px;
+}
+.formMain .contactForm .formBox .dateBox .em {
+  display: inline-block;
+}
+.formMain .contactForm .formBox .dateBox .span {
+  display: inline-block;
+  margin: 0 5px;
+  vertical-align: middle;
+}
+.formMain .contactForm .formBox .dateBox .radioList {
+  display: inline-block;
+  margin: 0 0 0 40px;
+}
+.formMain .contactForm .formBox .dateBox .radioList .list {
+  display: inline-block;
+  margin: 0 20px 0 0;
+}
+.formMain .contactForm .formBox .caution {
+  margin-top: 10px;
+  color: #d20000;
+  line-height: 2;
+}
+.formMain .contactForm .formBox .telBox {
+  padding: 10px 10px 40px;
+  font-size: 0;
+  font-weight: 400;
+  text-align: left;
+  line-height: 2;
+}
+.formMain .contactForm .formBox .telBox > * {
+  display: inline-block;
+  font-size: 14px;
+}
+.formMain .contactForm .formBox .telTxt {
+  padding: 10px 10px 0;
+}
+.formMain .contactForm .formBox .privacy {
+  padding: 10px;
+}
+.formMain .contactForm .formBox .privacy > p {
+  margin: 0 0 20px;
+  text-align: left;
+}
+.formMain .contactForm .formBox .privacy .agreeBox {
+  overflow: scroll;
+  height: 500px;
+  padding: 20px;
+  text-align: left;
+  border: 1px solid #eadac1;
+  background: #eee4d4;
+}
+.formMain .contactForm .formBox .privacy .agreeBox .box + .box {
+  margin: 30px 0 0;
+}
+.formMain .contactForm .formBox .privacy .agreeBox .box .link a {
+  display: inline-block;
+}
+.formMain .contactForm .formBox .privacy .agreeBox p {
+  line-height: 2;
+}
+.formMain .contactForm .formBox .privacy .agreeBox .tel p,
+.formMain .contactForm .formBox .privacy .agreeBox .tel a {
+  display: inline-block;
+}
+.formMain .contactForm .formBox .privacy + .checkItem {
+  margin: 40px 0;
+  text-align: center;
+}
+.formMain .contactForm .fileUploadBox .ttl {
+  margin: 0 0 10px;
+  line-height: 2;
+}
+.formMain .contactForm .fileUploadBox .fileArea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.formMain .contactForm .fileUploadBox .fileArea + .fileArea {
+  margin: 10px 0 0;
+}
+.formMain .contactForm .fileUploadBox .fileArea .inputFile {
+  position: relative;
+  width: 28%;
+  font-size: 16px;
+  color: #b4d2be;
+  text-align: center;
+  border: 1px solid #41ab6d;
+  background: #ffffff;
+}
+.formMain .contactForm .fileUploadBox .fileArea .inputFile input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.formMain .contactForm .fileUploadBox .fileArea .inputFile p {
+  padding: 12px 10px;
+}
+.formMain .contactForm .fileUploadBox .fileArea > p,
+.formMain .contactForm .fileUploadBox .fileArea .fileTxt {
+  width: 70%;
+}
+.formMain .contactForm .fileUploadBox .fileArea .fileTxt p {
+  display: inline-block;
+}
+.formMain .contactForm .fileUploadBox .fileArea .fileTxt .fileName {
+  margin: 0 10px 0 0;
+}
+.formMain .contactForm .fileUploadBox .fileArea .fileTxt .attention {
+  font-size: 13px;
+  color: #54765f;
+}
+.formMain .contactForm .fileUploadBox .txt {
+  line-height: 2;
+}
+.formMain .contactForm .aside {
+  margin: 10px 0 0;
+}
+.formMain .contactForm .fileUploadTitleBox {
+  margin: 60px 0 30px;
+}
+.formMain .contactForm .fileUploadTitleBox .fileUploadTitle {
+  position: relative;
+  max-width: 440px;
+  margin: 0 0 20px;
+}
+.formMain .contactForm .fileUploadTitleBox .fileUploadTitle:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  margin: auto;
+  background: #000000;
+}
+.formMain .contactForm .fileUploadTitleBox .fileUploadTitle p {
+  position: relative;
+  display: inline-block;
+  padding: 0 20px 0 0;
+  font-size: 30px;
+  font-weight: bold;
+  background: #ffffff;
+}
+
+/*////////////////////////////////////////////////////////////
+	complete
+///////////////////////////////////////////////////////////*/
+.complete {
+  padding: 60px 0 100px;
+}
+.complete .txt {
+  margin: 0 0 40px;
+  text-align: center;
+  line-height: 3;
+}
+.complete .btnMore {
+  margin: 0 auto;
+}
+
+/*////////////////////////////////////////////////////////////
+	blog
+///////////////////////////////////////////////////////////*/
+.blogSection {
+  padding: 80px 0 150px;
+}
+.blogSection .catePanel {
+  margin: 0 0 60px;
+}
+.blogSection .catePanel .webgene-blog .webgene-header {
+  display: none;
+}
+.blogSection .catePanel .webgene-blog .webgene-item {
+  width: 200px;
+}
+.blogSection .catePanel .webgene-blog .webgene-item a {
+  position: relative;
+  display: block;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 30px;
+  background: #7c4d22;
+  overflow: hidden;
+  z-index: 1;
+}
+.blogSection .catePanel .webgene-blog .webgene-item a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #4caf50;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s ease;
+  z-index: -1;
+  border-radius: 30px;
+}
+.blogSection .catePanel .webgene-blog .webgene-item a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  background: url(https://iwasaki-reform.com/system_panel/uploads/images/btn_more_arrow.png) center center no-repeat;
+  background-size: contain;
+  transform: translateY(-50%);
+}
+@media (min-width: 1025px) {
+  .blogSection .catePanel .webgene-blog .webgene-item a:hover {
+    opacity: 1;
+  }
+  .blogSection .catePanel .webgene-blog .webgene-item a:hover::before {
+    transform: scaleX(1);
+  }
+}
+@media (min-width: 1025px) {
+  .blogSection .catePanel .webgene-blog {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+}
+.blogSection .webgene-pagination {
+  overflow: hidden;
+  width: 100%;
+  margin: 100px auto 0;
+  font-size: 14px;
+}
+.blogSection .webgene-pagination ul {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+.blogSection .webgene-pagination ul li {
+  display: inline-block;
+  margin: 0 2px;
+}
+.blogSection .webgene-pagination ul li a {
+  display: block;
+  width: 45px;
+  color: #ffffff;
+  line-height: 45px;
+  text-align: center;
+  background: #d2c3ae;
+}
+.blogSection .webgene-pagination ul .prev {
+  margin: 0 2px 0 0;
+}
+.blogSection .webgene-pagination ul .next {
+  position: relative;
+  margin: 0 0 0 2px;
+}
+.blogSection .webgene-pagination ul .selected a {
+  background: #7c4d22;
+}
+@media (min-width: 1025px) {
+  .blogSection .webgene-pagination ul .prev {
+    float: left;
+  }
+  .blogSection .webgene-pagination ul .next {
+    float: right;
+  }
+}
+.blogSection .blogPanel--detail .webgene-blog .webgene-header {
+  display: none;
+}
+.blogSection .blogPanel--detail .webgene-blog .info {
+  margin: 0 0 15px;
+}
+.blogSection .blogPanel--detail .webgene-blog .info .cate {
+  display: inline-block;
+  min-width: 100px;
+  padding: 2px 10px;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 30px;
+  background: #efeeeb;
+}
+.blogSection .blogPanel--detail .webgene-blog .info .time {
+  display: inline-block;
+  margin: 0 10px 0 0;
+}
+.blogSection .blogPanel--detail .webgene-blog .ttlBox {
+  margin: 0 0 30px;
+  font-size: 30px;
+}
+.blogSection .blogPanel--detail .webgene-blog .slickSlide {
+  margin: 0 0 40px;
+}
+.blogSection .blogPanel--detail .webgene-blog .slick-list {
+  margin: 0 0 10px;
+}
+.blogSection .blogPanel--detail .webgene-blog .thumb-item {
+  max-width: 800px;
+  margin: 0 0 10px;
+}
+@media (min-width: 1025px) {
+  .blogSection .blogPanel--detail .webgene-blog .thumb-item img {
+    display: block;
+    max-height: 500px;
+    object-fit: cover;
+  }
+}
+.blogSection .blogPanel--detail .webgene-blog .slideNav .slider .li > div {
+  overflow: hidden;
+  position: relative;
+  padding: 0 0 65%;
+}
+.blogSection .blogPanel--detail .webgene-blog .slideNav .slider .li img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.blogSection .blogPanel--detail .webgene-blog .slideNav .slick-slide {
+  margin: 0 5px;
+}
+.blogSection .blogPanel--detail .webgene-blog .postBox .photo {
+  margin-bottom: 40px;
+}
+.blogSection .blogPanel--detail .webgene-blog .postBox .photo img {
+  width: auto;
+  max-width: 100%;
+}
+.blogSection .blogPanel--detail .webgene-blog .postBox .postTxt {
+  line-height: 2;
+}
+.blogSection .blogPanel--detail .webgene-blog .postBox .postTxt p + p {
+  margin: 30px 0 0;
+}
+.blogSection .blogPanel--detail .webgene-blog .postBox .postTxt img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+.blogSection .blogPanel--detail .webgene-blog .postBox .postVideo {
+  margin: 40px 0 0;
+}
+.blogSection .blogPanel--detail .webgene-blog .postBox .pdfArea {
+  margin: 40px 0 0;
+}
+.blogSection .blogPanel--detail .webgene-blog .postBox .pdfArea a {
+  color: #2151a3;
+}
+.blogSection .blogPanel--detail .btnMore {
+  margin: 60px auto 0;
+}
+
+.blogMain .pageKvContainer {
+  background: url(https://iwasaki-reform.com/system_panel/uploads/images/blog_kv.png) center no-repeat;
+  background-size: cover;
+}
+.blogMain .blogPanel--list .webgene-blog .webgene-header {
+  display: none;
+}
+.blogMain .blogPanel--list .webgene-blog .webgene-item {
+  border-bottom: 1px solid #b5b5b5;
+}
+.blogMain .blogPanel--list .webgene-blog .webgene-item a {
+  display: block;
+  padding: 20px 30px;
+  background: url(https://iwasaki-reform.com/system_panel/uploads/images/blog_list_arrow.png) right bottom 20px no-repeat;
+  background-size: 30px auto;
+}
+.blogMain .blogPanel--list .webgene-blog .webgene-item .photo {
+  position: relative;
+}
+.blogMain .blogPanel--list .webgene-blog .webgene-item .txtBox {
+  padding: 0 20px 0 0;
+  background: url(https://iwasaki-reform.com/system_panel/uploads/images/blog_list_arrow.png) right bottom 20px no-repeat;
+}
+.blogMain .blogPanel--list .webgene-blog .webgene-item .txtBox .infoBox {
+  margin: 0 0 5px;
+}
+.blogMain .blogPanel--list .webgene-blog .webgene-item .txtBox .infoBox .cate {
+  display: inline-block;
+  min-width: 100px;
+  padding: 2px 10px;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 30px;
+  background: #efeeeb;
+}
+.blogMain .blogPanel--list .webgene-blog .webgene-item .txtBox .infoBox .time {
+  display: inline-block;
+  margin: 0 0 0 10px;
+}
+.blogMain .blogPanel--list .webgene-blog .webgene-item .txtBox .title {
+  margin: 0 0 10px;
+  font-size: 24px;
+}
+@media (min-width: 1025px) {
+  .blogMain .blogPanel--list .webgene-blog .webgene-item a {
+    display: flex;
+    justify-content: space-between;
+  }
+  .blogMain .blogPanel--list .webgene-blog .webgene-item .photo {
+    width: 250px;
+    height: 150px;
+  }
+  .blogMain .blogPanel--list .webgene-blog .webgene-item .photo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .blogMain .blogPanel--list .webgene-blog .webgene-item .txtBox {
+    width: calc(100% - 300px);
+  }
+  .blogMain .blogPanel--list .webgene-blog .webgene-item .txtBox .txt {
+    max-width: 500px;
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	case
+///////////////////////////////////////////////////////////*/
+.caseMain .pageKvContainer {
+  background: url(https://iwasaki-reform.com/system_panel/uploads/images/case_kv.png) center no-repeat;
+  background-size: cover;
+}
+.caseMain .casePanel--list .webgene-blog .webgene-header {
+  display: none;
+}
+.caseMain .casePanel--list .webgene-blog .webgene-item a {
+  display: block;
+}
+.caseMain .casePanel--list .webgene-blog .webgene-item .photo {
+  position: relative;
+}
+.caseMain .casePanel--list .webgene-blog .webgene-item .txtBox {
+  padding: 10px 0 0;
+}
+.caseMain .casePanel--list .webgene-blog .webgene-item .txtBox .infoBox {
+  margin: 0 0 5px;
+}
+.caseMain .casePanel--list .webgene-blog .webgene-item .txtBox .infoBox .cate {
+  display: inline-block;
+  min-width: 100px;
+  padding: 2px 10px;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 30px;
+  background: #efeeeb;
+}
+@media (min-width: 1025px) {
+  .caseMain .casePanel--list .webgene-blog {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -40px 0 0 -20px;
+  }
+  .caseMain .casePanel--list .webgene-blog .webgene-item {
+    width: calc(33.3333333333% - 20px);
+    margin: 40px 0 0 20px;
+  }
+  .caseMain .casePanel--list .webgene-blog .webgene-item .photo {
+    height: 250px;
+  }
+  .caseMain .casePanel--list .webgene-blog .webgene-item .photo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	temp
+///////////////////////////////////////////////////////////*/
+.tempMain .pageKvContainer {
+  background: url(https://iwasaki-reform.com/system_panel/uploads/images/temp_kv.png) center no-repeat;
+  background-size: cover;
+}

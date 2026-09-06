@@ -1,0 +1,204 @@
+@charset "UTF-8";
+@import "./mixin";
+@import "./mod";
+/* CSS Document */
+
+/*===================================================
+	共通CSS（SMP）
+===================================================*/
+
+/* --------------------------------------------------
+	base
+-------------------------------------------------- */
+body {
+  min-width: 0;
+  font-size: $SPfontSize;
+}
+a:hover {
+  text-decoration: none;
+}
+/*改行*/
+.pcBreak {
+  display: none;
+}
+.spBreak {
+  display: block;
+}
+/*spのみ表示*/
+.pcHidden {
+  display: block;
+}
+.spHidden {
+  display: none;
+}
+#sideBtn {
+  display: none;
+}
+.topicPath {
+  display: none;
+}
+
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+header {
+  .headBox {
+    padding: 0;
+  }
+  #menuBtn {
+    top: 20px;
+  }
+}
+/* --------------------------------------------------
+	main
+-------------------------------------------------- */
+main {
+  margin: 68px 0 0;
+}
+.pageKvPanel {
+  .kvTitle {
+    padding: 30px 20px 15px;
+    h1 {
+      font-size: 24px;
+    }
+  }
+}
+.pageSecTtlBox {
+  margin: 0 0 30px;
+  .sub {
+    margin: 0 0 5px;
+    padding: 0 0 0 15px;
+    font-size: 12px;
+    &::before {
+      width: 10px;
+      height: 10px;
+    }
+  }
+  .pageSecTtl {
+    font-size: 20px;
+  }
+}
+.pageSecTtlBox02 {
+  margin: 0 0 30px;
+  .sub {
+    margin: 0 0 5px;
+    padding: 0 0 0 15px;
+    font-size: 12px;
+    &::before {
+      width: 10px;
+      height: 10px;
+    }
+  }
+  .pageSecTtl {
+    font-size: 18px;
+  }
+}
+.pageSecSubTtlBox {
+  margin: 0 0 30px;
+  .pageSecSubTtl {
+    max-width: 450px;
+    > * {
+      padding: 0 30px 7px;
+      font-size: 18px;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -20px;
+        width: 14px;
+        height: 40px;
+        background: url("../image/common/page_sec_sub_ttl_slash.png") no-repeat;
+        background-size: 100% auto;
+      }
+    }
+  }
+}
+.mapBox {
+  padding: 0 0 70%;
+}
+
+/* --------------------------------------------------
+	footer
+-------------------------------------------------- */
+.footer {
+  .footContact {
+    padding: 40px 0;
+    .pageSecTtlBox {
+      margin: 0 0 15px;
+    }
+    .topTxt {
+      margin: 0 0 40px;
+    }
+    .contactItems {
+      .itemBox {
+        padding: 0 20px 20px;
+        border-top: 1px solid #8c8781;
+        border-bottom: 1px solid #8c8781;
+        + .itemBox {
+          margin: 60px 0 0;
+        }
+        dl {
+          dt {
+            position: relative;
+            top: -15px;
+            padding: 0 20px;
+            background: #534e47;
+            span {
+              font-size: 18px;
+            }
+            .mail {
+              padding: 0 20px;
+              background: url("../image/common/footer_contact_mail.png") left
+                center no-repeat;
+              background-size: 15px auto;
+            }
+          }
+          dd {
+            padding: 10px 0 0;
+            .tel {
+              a {
+                font-size: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .footPanel {
+    padding: 60px 0 15px;
+    .pagetop {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 40px;
+      cursor: pointer;
+    }
+    .logoBox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      margin: 0 0 25px;
+      .logo {
+        width: 200px;
+      }
+      .insta {
+        width: 35px;
+      }
+    }
+    .txt {
+      margin: 0 0 30px;
+      font-size: 15px;
+    }
+    .info {
+      font-size: 15px;
+      .tel {
+        margin: 0 0 15px;
+      }
+    }
+    .copy {
+      margin: 50px 0 0;
+    }
+  }
+}
