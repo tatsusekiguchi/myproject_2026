@@ -1,3 +1,5 @@
+//- CSS・JS更新時はこのバージョンを更新
+- var asset_version = '20260908-1'
 meta(charset='UTF-8')
 meta(http-equiv='X-UA-Compatible', content='IE=edge')
 meta(name='viewport', content='width=device-width,initial-scale=1.0,minimum-scale=1.0')
@@ -13,30 +15,30 @@ script.
   })(window,document,'script','dataLayer','GTM-5ZPSQ4WM');
 // End Google Tag Manager
 // css
-link(rel='stylesheet', href=(root_path || '') + 'css/reset.css')
+link(rel='stylesheet', href=(root_path || '') + 'css/reset.css' + '?v=' + asset_version)
 <link rel="stylesheet" href="https://use.typekit.net/shz4wfo.css">
-link(rel='stylesheet', href=(root_path || '') + 'css/slick.css')
-link(rel='stylesheet', href=(root_path || '') + 'css/slick-theme.css')
+link(rel='stylesheet', href=(root_path || '') + 'css/slick.css' + '?v=' + asset_version)
+link(rel='stylesheet', href=(root_path || '') + 'css/slick-theme.css' + '?v=' + asset_version)
 link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css')
-link(rel='stylesheet', href=(root_path || '') + 'css/animate.css')
-link(rel='stylesheet', href=(root_path || '') + 'css/common.css')
-link(rel='stylesheet', href=(root_path || '') + 'css/layout.css')
-link(rel='stylesheet', media='screen and (max-width: 1024px)', type='text/css', href=(root_path || '') + 'css/common_sp.css')
-link(rel='stylesheet', media='screen and (max-width: 1024px)', type='text/css', href=(root_path || '') + 'css/layout_sp.css')
-link(rel='stylesheet', href=(root_path || '') + 'css/attach.css')
+link(rel='stylesheet', href=(root_path || '') + 'css/animate.css' + '?v=' + asset_version)
+link(rel='stylesheet', href=(root_path || '') + 'css/common.css' + '?v=' + asset_version)
+link(rel='stylesheet', href=(root_path || '') + 'css/layout.css' + '?v=' + asset_version)
+link(rel='stylesheet', media='screen and (max-width: 1024px)', type='text/css', href=(root_path || '') + 'css/common_sp.css' + '?v=' + asset_version)
+link(rel='stylesheet', media='screen and (max-width: 1024px)', type='text/css', href=(root_path || '') + 'css/layout_sp.css' + '?v=' + asset_version)
+link(rel='stylesheet', href=(root_path || '') + 'css/attach.css' + '?v=' + asset_version)
 // js
-script(src=(root_path || '') + 'js/jquery-1.11.3.min.js')
+script(src=(root_path || '') + 'js/jquery-1.11.3.min.js' + '?v=' + asset_version)
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
 script(src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollToPlugin.min.js")
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
-script(src=(root_path || '') + 'js/slick.min.js')
+script(src=(root_path || '') + 'js/slick.min.js' + '?v=' + asset_version)
 script(src='https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js')
-script(src=(root_path || '') + 'js/infiniteslide.js')
-script(src=(root_path || '') + 'js/common.js')
-script(src=(root_path || '') + 'js/scrollAnimation.js')
+script(src=(root_path || '') + 'js/infiniteslide.js' + '?v=' + asset_version)
+script(src=(root_path || '') + 'js/common.js' + '?v=' + asset_version)
+script(src=(root_path || '') + 'js/scrollAnimation.js' + '?v=' + asset_version)
 //- layout_js が定義されている場合に挿入
 if layout_js
   each js_path in layout_js
-    script(src=(root_path || '') + js_path)
+    script(src=(root_path || '') + js_path + (js_path.indexOf('?') === -1 ? '?' : '&') + 'v=' + asset_version)
 // title
 title #{title}

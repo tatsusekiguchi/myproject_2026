@@ -1,0 +1,923 @@
+@charset "UTF-8";
+/*===================================================
+  画面用CSS（SMP）
+===================================================*/
+/*////////////////////////////////////////////////////////////
+  TOP
+///////////////////////////////////////////////////////////*/
+.topMain .topKvContainer {
+  min-height: 0;
+  margin: 0 0 70px;
+  padding: 58vw 0 0;
+}
+.topMain .topKvContainer .topKvImage {
+  inset: 0 0 auto 8%;
+  height: 70vw;
+  max-height: 620px;
+  border-radius: 30px 0 0 30px;
+}
+.topMain .topKvContainer .topKvImage img {
+  object-position: 62% center;
+}
+.topMain .topKvContainer .topKvContent {
+  margin: 0 20px;
+  padding: 26px 20px 0;
+  border-radius: 24px 24px 0 0;
+  background: #fff;
+}
+.topMain .topKvContainer .topKvContent h1 {
+  font-size: clamp(27px, 5.7vw, 48px);
+  line-height: 1.5;
+  letter-spacing: 0.025em;
+}
+.topMain .topKvContainer .topKvText {
+  margin: 22px 0 0;
+  font-size: 14px;
+  line-height: 2;
+}
+.topMain .topKvContainer .topKvButtons {
+  gap: 10px;
+  margin: 26px 0 0;
+}
+.topMain .topKvContainer .kvButton {
+  flex: 1;
+  min-width: 0;
+  min-height: 50px;
+}
+.topMain .topKvContainer .kvButton a {
+  min-height: 50px;
+  padding: 12px 8px;
+  font-size: 14px;
+}
+.topMain .topKvContainer .topKvSide {
+  display: none;
+}
+.topMain .sectionNews {
+  padding: 0 20px 70px;
+}
+.topMain .sectionNews .secContainer {
+  display: block;
+}
+.topMain .sectionNews .newsList {
+  max-height: 360px;
+  overflow-y: auto;
+  margin: 26px 0 0;
+  padding: 8px 18px;
+  border-radius: 22px;
+}
+.topMain .sectionNews .newsItem {
+  display: block;
+  padding: 18px 0;
+}
+.topMain .sectionNews .newsItem .newsItemDate time {
+  display: block;
+  font-size: 13px;
+}
+.topMain .sectionNews .newsItem .newsItemBody h3 {
+  margin: 8px 0 0;
+  font-size: 15px;
+}
+.topMain .sectionNews .newsItem .newsItemBody p {
+  margin: 8px 0 0;
+  font-size: 13px;
+  line-height: 1.7;
+}
+.topMain .sectionConcept {
+  padding: 70px 20px 120px;
+}
+.topMain .sectionConcept::before {
+  height: 100%;
+}
+.topMain .sectionConcept .conceptText {
+  margin: 28px auto 0;
+  font-size: 13px;
+  line-height: 2;
+}
+.topMain .sectionConcept .conceptText p + p {
+  margin: 14px 0 0;
+}
+.topMain .sectionConcept .btnMore {
+  margin: 28px auto 0;
+}
+.topMain .sectionReason {
+  padding: 0 20px 70px;
+}
+.topMain .sectionReason .secContainer {
+  padding: 36px 20px;
+  border-radius: 24px;
+  text-align: center;
+}
+.topMain .sectionReason .reasonList {
+  display: block;
+  margin: 32px 0 0;
+  text-align: left;
+}
+.topMain .sectionReason .reasonItem {
+  padding: 0 0 28px;
+  margin: 0 0 28px;
+  border-right: 0;
+  border-bottom: 1px solid #e5e6ea;
+}
+.topMain .sectionReason .reasonItem:last-child {
+  padding: 0;
+  margin: 0 0 0;
+  border-bottom: 0;
+}
+.topMain .sectionReason .reasonItem .reasonText h3 {
+  margin: 12px 0 0;
+  font-size: 18px;
+}
+.topMain .sectionReason .reasonItem .reasonText p {
+  margin: 12px 0 0;
+  font-size: 13px;
+  line-height: 1.9;
+}
+.topMain .sectionReason .btnMore {
+  margin: 28px auto 0;
+}
+.topMain .sectionService {
+  padding: 70px 20px;
+}
+.topMain .sectionService .secContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  align-items: stretch;
+}
+.topMain .sectionService .serviceText {
+  margin: 24px 0 0;
+  font-size: 13px;
+  line-height: 2;
+}
+.topMain .sectionService .serviceText p + p {
+  margin: 12px 0 0;
+}
+.topMain .sectionService .serviceContent .btnMore {
+  margin: 28px 0 0;
+}
+.topMain .sectionService .serviceImage {
+  border-radius: 24px 0 0 24px;
+}
+.topMain .sectionVoice {
+  padding: 70px 20px;
+}
+.topMain .sectionVoice .secContainer {
+  padding: 36px 20px;
+  border-radius: 24px;
+  text-align: center;
+}
+.topMain .sectionVoice .sectionLead {
+  margin: 20px 0 0;
+  font-size: 13px;
+}
+.topMain .sectionVoice .voiceList {
+  display: block;
+  margin: 30px 0 0;
+  text-align: left;
+}
+.topMain .sectionVoice .voiceItem {
+  padding: 18px 0;
+  border-right: 0;
+  border-bottom: 1px solid #e5e6ea;
+}
+.topMain .sectionVoice .voiceItem:last-child {
+  border-bottom: 0;
+}
+.topMain .sectionVoice .voiceItem dt {
+  font-weight: bold;
+}
+.topMain .sectionVoice .voiceItem dd {
+  margin: 10px 0 0;
+  font-size: 13px;
+}
+.topMain .sectionVoice .btnMore {
+  margin: 28px auto 0;
+}
+.topMain .sectionAbout {
+  padding: 70px 20px;
+}
+.topMain .sectionAbout .aboutList {
+  display: block;
+  margin: 28px 0 0;
+}
+.topMain .sectionAbout .aboutItem {
+  display: block;
+  margin: 16px 0 0;
+  padding: 24px 20px;
+  border-radius: 20px;
+}
+.topMain .sectionBlog {
+  padding: 70px 20px;
+}
+.topMain .sectionBlog .blogList {
+  margin: 28px auto 0;
+}
+.topMain .sectionBlog .blogItem {
+  display: block;
+  padding: 16px 0;
+}
+.topMain .sectionBlog .blogItem .blogItemDate time {
+  display: block;
+  font-size: 13px;
+}
+.topMain .sectionBlog .blogItem .blogItemText h3 {
+  margin: 8px 0 0;
+  font-size: 15px;
+}
+.topMain .sectionBlog .btnMore {
+  margin: 28px auto 0;
+}
+
+@media (max-width: 374px) {
+  .topMain .topKvContainer .topKvContent {
+    margin: 0 12px;
+    padding: 26px 12px 0;
+  }
+  .topMain .topKvContainer .topKvContent h1 {
+    font-size: 25px;
+  }
+  .topMain .topKvContainer .kvButton {
+    font-size: 13px;
+  }
+}
+/*////////////////////////////////////////////////////////////
+  philosophy
+///////////////////////////////////////////////////////////*/
+.philosophyMain .topSecContainer {
+  padding: 60px 0 0;
+  background-position: center bottom;
+}
+.philosophyMain .topSecContainer .sectionConcept {
+  padding: 0 0 80px;
+}
+.philosophyMain .topSecContainer .sectionConcept .secContainer {
+  display: block;
+}
+.philosophyMain .topSecContainer .sectionConcept .conceptContent {
+  margin: 0;
+}
+.philosophyMain .topSecContainer .sectionConcept .conceptText {
+  margin: 24px 0 0;
+  font-size: 13px;
+  line-height: 2;
+}
+.philosophyMain .topSecContainer .sectionConcept .conceptText p + p {
+  margin: 20px 0 0;
+}
+.philosophyMain .topSecContainer .sectionConcept .conceptImage {
+  margin: 32px -20px 0 8%;
+  border-radius: 24px 0 0 24px;
+}
+.philosophyMain .topSecContainer .sectionStory {
+  margin: 0 0 60px;
+  padding: 0;
+}
+.philosophyMain .topSecContainer .sectionStory .pageSecTtl {
+  margin: 0 0 32px;
+}
+.philosophyMain .topSecContainer .sectionStory .secContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.philosophyMain .topSecContainer .sectionStory .photoBox {
+  order: 2;
+}
+.philosophyMain .topSecContainer .sectionStory .photoBox .photo {
+  border-radius: 24px;
+}
+.philosophyMain .topSecContainer .sectionStory .photoBox .name {
+  margin: 12px 0 0;
+  font-size: 13px;
+  text-align: right;
+}
+.philosophyMain .topSecContainer .sectionStory .txtBox {
+  font-size: 13px;
+  line-height: 1.9;
+}
+.philosophyMain .topSecContainer .sectionStory .txtBox p + p {
+  margin: 20px 0 0;
+}
+.philosophyMain .sectionValues {
+  margin: 0;
+  padding: 50px 20px 60px;
+  border-radius: 8px;
+}
+.philosophyMain .sectionValues .valuesList {
+  margin: 32px 0 0;
+}
+.philosophyMain .sectionValues .valuesItem {
+  margin: 0 0 24px;
+  border-radius: 6px;
+}
+.philosophyMain .sectionValues .valuesItem .valuesItemHead {
+  gap: 12px;
+  padding: 10px 16px;
+}
+.philosophyMain .sectionValues .valuesItem .valuesItemHead span {
+  font-size: 16px;
+}
+.philosophyMain .sectionValues .valuesItem .valuesItemHead h3 {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.philosophyMain .sectionValues .valuesItem .valuesItemBody {
+  padding: 20px 16px 24px;
+  font-size: 13px;
+  line-height: 1.9;
+}
+.philosophyMain .sectionValues .valuesItem .valuesItemBody p + p {
+  margin: 8px 0 0;
+}
+.philosophyMain .extraSection {
+  padding: 60px 0;
+}
+.philosophyMain .extraSection h2 {
+  margin: 0 0 30px;
+  font-size: 20px;
+}
+.philosophyMain .extraSection .txt p + p {
+  margin: 20px 0 0;
+}
+.philosophyMain .bottomSection {
+  padding: 40px 0;
+}
+.philosophyMain .bottomSection .btnArea {
+  margin: 20px 0 0;
+}
+
+/*////////////////////////////////////////////////////////////
+  service
+///////////////////////////////////////////////////////////*/
+.serviceMain .servicePageBody {
+  padding: 50px 0 0;
+}
+.serviceMain .sectionMenu {
+  padding: 32px 16px 45px;
+  border-radius: 10px;
+}
+.serviceMain .sectionMenu .sectionHeading h2 {
+  font-size: 21px;
+}
+.serviceMain .sectionMenu .sectionLead {
+  margin: 18px 0 0;
+  font-size: 13px;
+  line-height: 1.9;
+}
+.serviceMain .sectionMenu .menuList {
+  margin: 32px 0 0;
+}
+.serviceMain .sectionMenu .menuItem {
+  padding: 0 0 22px;
+}
+.serviceMain .sectionMenu .menuItem + .menuItem {
+  margin: 22px 0 0;
+}
+.serviceMain .sectionMenu .menuItem .menuItemTitle h3 {
+  font-size: 16px;
+}
+.serviceMain .sectionMenu .menuItem .menuItemText {
+  margin: 10px 0 0;
+  font-size: 13px;
+  line-height: 1.8;
+}
+.serviceMain .sectionMenu .menuItem .menuNote {
+  margin: 10px 0 0;
+  padding: 8px 12px;
+}
+.serviceMain .sectionCourse,
+.serviceMain .sectionStrategy {
+  margin: 0 -20px;
+  padding: 55px 20px 60px;
+}
+.serviceMain .sectionCourse {
+  margin-bottom: 55px;
+  border-radius: 0;
+}
+.serviceMain .sectionCourse .secContainer {
+  padding: 0;
+}
+.serviceMain .sectionCourse .courseList {
+  display: block;
+  margin: 30px 0 0;
+  padding: 0 20px;
+}
+.serviceMain .sectionCourse .courseList .courseItem {
+  display: block;
+  min-height: 0;
+  margin: 0 0 16px;
+  padding: 24px 18px 28px;
+  border-radius: 18px;
+}
+.serviceMain .sectionCourse .courseList .courseItem .courseItemHead {
+  width: 88px;
+  height: 88px;
+}
+.serviceMain .sectionCourse .courseList .courseItem .courseItemHead span {
+  font-size: 12px;
+}
+.serviceMain .sectionCourse .courseList .courseItem .courseItemHead strong {
+  margin: 4px 0 0;
+  font-size: 15px;
+}
+.serviceMain .sectionCourse .courseList .courseItem .courseItemText h3 {
+  margin: 15px 0 15px;
+  font-size: 20px;
+  line-height: 1.55;
+}
+.serviceMain .sectionCourse .courseList .courseItem .courseItemText p {
+  font-size: 13px;
+  line-height: 1.9;
+}
+.serviceMain .sectionCourse .courseList .courseItem.courseItemWide {
+  padding: 28px 18px;
+}
+.serviceMain .sectionCourse .courseList .courseItem.courseItemWide .courseItemHead {
+  margin: 0 auto;
+}
+.serviceMain .sectionCourse .courseList .courseItem.courseItemWide .courseItemText {
+  display: block;
+}
+.serviceMain .sectionCourse .courseList .courseItem.courseItemWide .courseItemText h3 {
+  margin: 18px 0 0;
+  font-size: 20px;
+  text-align: center;
+}
+.serviceMain .sectionCourse .courseList .courseItem.courseItemWide .courseItemText p {
+  margin: 18px 0 0;
+}
+.serviceMain .sectionStrategy .strategyList {
+  margin: 30px auto 0;
+  padding: 0 20px;
+}
+.serviceMain .sectionStrategy .strategyItem .strategyHead {
+  gap: 10px;
+  padding: 9px 14px;
+}
+.serviceMain .sectionStrategy .strategyItem .strategyHead span {
+  font-size: 16px;
+}
+.serviceMain .sectionStrategy .strategyItem .strategyHead h3 {
+  font-size: 16px;
+}
+.serviceMain .sectionStrategy .strategyItem .strategyBody {
+  padding: 12px 14px;
+  font-size: 13px;
+}
+.serviceMain .sectionStrategy .strategyNote {
+  margin: 22px 0 0;
+}
+.serviceMain .sectionTuition .secContainer,
+.serviceMain .sectionConsult .secContainer {
+  padding: 30px 20px;
+}
+.serviceMain .sectionTuition .pageSecTtl,
+.serviceMain .sectionConsult .pageSecTtl {
+  margin: 0 0 20px;
+}
+.serviceMain .sectionTuition .tuitionText,
+.serviceMain .sectionTuition .consultText,
+.serviceMain .sectionConsult .tuitionText,
+.serviceMain .sectionConsult .consultText {
+  font-size: 13px;
+  line-height: 1.9;
+}
+.serviceMain .sectionConsult {
+  margin-bottom: 50px;
+}
+.serviceMain .bottomSection {
+  padding: 40px 0;
+}
+.serviceMain .bottomSection .btnArea {
+  flex-direction: column;
+  margin: 20px auto 0;
+}
+
+/*////////////////////////////////////////////////////////////
+  class
+///////////////////////////////////////////////////////////*/
+.classMain .sectionTop {
+  padding: 50px 0;
+}
+.classMain .sectionTop h2 {
+  margin: 0 0 15px;
+  font-size: 20px;
+}
+.classMain .sectionLecturer .secContainer {
+  padding: 30px 20px;
+}
+.classMain .sectionLecturer .secContainer .secBox01 .courseTable table {
+  display: block;
+  border-radius: 18px;
+}
+.classMain .sectionLecturer .secContainer .secBox01 .courseTable table thead {
+  display: none;
+}
+.classMain .sectionLecturer .secContainer .secBox01 .courseTable table tbody {
+  display: block;
+  overflow: hidden;
+  border-radius: 18px;
+}
+.classMain .sectionLecturer .secContainer .secBox01 .courseTable table tbody + tbody {
+  margin: 20px 0 0;
+}
+.classMain .sectionLecturer .secContainer .secBox01 .courseTable table tbody tr {
+  display: block;
+}
+.classMain .sectionLecturer .secContainer .secBox01 .courseTable table tbody tr th,
+.classMain .sectionLecturer .secContainer .secBox01 .courseTable table tbody tr td {
+  display: block;
+  width: 100%;
+  border-right: 0;
+}
+.classMain .sectionLecturer .secContainer .secBox01 .courseTable table tbody tr th {
+  padding: 10px 20px;
+}
+.classMain .sectionLecturer .secContainer .secBox01 .courseTable table tbody tr td {
+  padding: 0;
+}
+.classMain .sectionLecturer .secContainer .secBox01 .courseTable table tbody tr td:last-child {
+  background: #dde7f5;
+}
+.classMain .sectionLecturer .secContainer .secBox01 .courseTable table tbody tr dl {
+  margin: 0;
+}
+.classMain .sectionLecturer .secContainer .secBox01 .courseTable table tbody tr dt {
+  display: block;
+  padding: 10px 20px;
+  font-weight: bold;
+  color: #fff;
+  background: #6297e3;
+}
+.classMain .sectionLecturer .secContainer .secBox01 .courseTable table tbody tr dd {
+  margin: 0;
+  padding: 10px 20px;
+}
+.classMain .sectionLecturer .secContainer .secBox02 .headBox {
+  margin: 0 0 15px;
+}
+.classMain .sectionLecturer .secContainer .secBox02 .listBox ul li {
+  padding: 15px;
+}
+.classMain .sectionLecturer .secContainer .secBox02 .listBox ul li + li {
+  margin: 10px 0 0;
+}
+.classMain .sectionWeek {
+  margin: 60px 0;
+}
+.classMain .sectionWeek .calendarTable table {
+  display: block;
+  border-radius: 18px;
+}
+.classMain .sectionWeek .calendarTable table thead {
+  display: none;
+}
+.classMain .sectionWeek .calendarTable table tbody {
+  display: block;
+  width: 100%;
+}
+.classMain .sectionWeek .calendarTable table tbody tr {
+  display: block;
+  width: 100%;
+}
+.classMain .sectionWeek .calendarTable table tbody tr td {
+  display: block;
+  width: 100%;
+  min-height: 0;
+  padding: 0;
+  text-align: left;
+  border-bottom: 1px solid #d5dce5;
+}
+.classMain .sectionWeek .calendarTable table tbody tr td::before {
+  content: attr(data-day);
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  color: #ffffff;
+  font-weight: bold;
+  background: #6297e3;
+}
+.classMain .sectionWeek .calendarTable table tbody tr td:last-child {
+  border-bottom: 0;
+}
+.classMain .sectionWeek .calendarTable table tbody tr td p {
+  padding: 15px;
+}
+.classMain .sectionWeek .calendarTable aside {
+  margin: 14px 0 0;
+}
+.classMain .sectionExtra {
+  padding: 0 0 60px;
+}
+.classMain .sectionExtra h2 {
+  margin: 0 0 20px;
+  font-size: 20px;
+}
+.classMain .bottomSection {
+  padding: 40px 0;
+}
+.classMain .bottomSection .btnArea {
+  flex-direction: column;
+  margin: 20px auto 0;
+}
+
+/*////////////////////////////////////////////////////////////
+  voice
+///////////////////////////////////////////////////////////*/
+.voiceMain .sectionVoice .secContainer,
+.voiceMain .sectionAchievements .secContainer {
+  padding: 30px 20px;
+}
+.voiceMain .sectionVoice .secContainer .pageSecTtl,
+.voiceMain .sectionAchievements .secContainer .pageSecTtl {
+  margin: 0 0 30px;
+}
+.voiceMain .sectionVoice {
+  padding: 50px 0 60px;
+}
+.voiceMain .sectionVoice .listBox ul li {
+  padding: 10px 15px;
+}
+.voiceMain .sectionVoice .listBox ul li + li {
+  margin: 20px 0 0;
+}
+.voiceMain .sectionAchievements {
+  padding: 60px 0;
+}
+.voiceMain .sectionAchievements .list {
+  margin: 0 0 45px;
+}
+.voiceMain .sectionAchievements .list ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.voiceMain .sectionAchievements .list ul li {
+  flex: 1;
+  min-width: 0;
+  padding: 8px 12px;
+  text-align: center;
+}
+.voiceMain .sectionAchievements .secPanel .secBox + .secBox {
+  margin: 45px 0 0;
+}
+.voiceMain .sectionAchievements .secPanel .secBox h3 {
+  padding: 2px 0 2px 10px;
+  font-size: 20px;
+  border-left-width: 4px;
+}
+.voiceMain .sectionAchievements .achievementList {
+  margin: 18px 0 0;
+}
+.voiceMain .sectionAchievements .achievementList ul li {
+  display: block;
+  padding: 10px 0;
+}
+.voiceMain .sectionAchievements .achievementList ul li .achievementItem {
+  display: block;
+  padding: 0;
+}
+.voiceMain .sectionAchievements .achievementList ul li .achievementItem span + span {
+  margin: 0 0 0 12px;
+}
+
+/*////////////////////////////////////////////////////////////
+  faq
+///////////////////////////////////////////////////////////*/
+.faqMain .sectionFaq {
+  padding: 40px 0 60px;
+}
+.faqMain .sectionFaq .linkList {
+  margin: 0 auto 24px;
+}
+.faqMain .sectionFaq .linkList ul {
+  gap: 8px;
+}
+.faqMain .sectionFaq .linkList ul li {
+  padding: 5px 16px;
+  font-size: 12px;
+}
+.faqMain .sectionFaq .faqPanel {
+  padding: 32px 20px;
+  border-radius: 16px;
+}
+.faqMain .sectionFaq .faqPanel .faqCategory + .faqCategory {
+  margin: 48px 0 0;
+}
+.faqMain .sectionFaq .faqPanel .faqCategory h2 {
+  padding: 0 0 14px;
+}
+.faqMain .sectionFaq .faqPanel .accord dt {
+  gap: 12px;
+  padding: 16px 30px 16px 5px;
+}
+.faqMain .sectionFaq .faqPanel .accord dt .txtBox p {
+  font-size: 13px;
+}
+.faqMain .sectionFaq .faqPanel .accord dd {
+  gap: 12px;
+  padding: 14px 16px 14px 5px;
+}
+.faqMain .sectionFaq .faqPanel .accord dd .txtBox p {
+  font-size: 13px;
+  line-height: 1.7;
+}
+.faqMain .sectionFaq .faqPanel .qBox {
+  flex: 0 0 26px;
+  width: 26px;
+  height: 26px;
+}
+.faqMain .sectionFaq .faqPanel .qBox p {
+  font-size: 12px;
+}
+
+/*////////////////////////////////////////////////////////////
+  lecturer
+///////////////////////////////////////////////////////////*/
+.lecturerMain .sectionLecturer {
+  padding: 60px 0;
+}
+.lecturerMain .sectionLecturer .lecturerList {
+  gap: 48px;
+}
+.lecturerMain .sectionLecturer .lecturerItem .lecturerHead {
+  margin: 0 0 20px;
+  padding: 14px 0;
+}
+.lecturerMain .sectionLecturer .lecturerItem .lecturerHead .role {
+  font-size: 13px;
+}
+.lecturerMain .sectionLecturer .lecturerItem .lecturerHead .name {
+  font-size: 18px;
+}
+.lecturerMain .sectionLecturer .lecturerItem .lecturerPhoto {
+  margin: 0 0 24px;
+  border-radius: 12px;
+}
+.lecturerMain .sectionLecturer .lecturerItem .lecturerBlock + .lecturerBlock {
+  margin: 24px 0 0;
+}
+.lecturerMain .sectionLecturer .lecturerItem .lecturerBlock .lecturerLabel {
+  min-width: 120px;
+  margin: 0 0 10px;
+  padding: 3px 16px;
+}
+.lecturerMain .sectionLecturer .lecturerItem .lecturerBlock p {
+  line-height: 1.9;
+}
+
+/*////////////////////////////////////////////////////////////
+  access
+///////////////////////////////////////////////////////////*/
+.accessMain .sectionAccess {
+  padding: 40px 0 60px;
+}
+.accessMain .sectionAccess .accessPanel {
+  padding: 32px 20px;
+  border-radius: 16px;
+}
+.accessMain .sectionAccess h2 {
+  padding: 0 0 14px;
+}
+.accessMain .sectionAccess .accessOverview .specTable .specRow {
+  display: block;
+  padding: 14px 16px;
+}
+.accessMain .sectionAccess .accessOverview .specTable .specRow dt {
+  margin: 0 0 6px;
+}
+.accessMain .sectionAccess .accessGallery {
+  margin: 36px 0 0;
+}
+.accessMain .sectionAccess .accessGallery ul {
+  gap: 20px 3%;
+}
+.accessMain .sectionAccess .accessGallery ul li {
+  flex: 0 0 48.5%;
+}
+.accessMain .sectionAccess .accessGallery ul li figure img {
+  border-radius: 10px;
+}
+.accessMain .sectionAccess .accessGallery ul li figure figcaption {
+  margin: 8px 0 0;
+}
+.accessMain .sectionAccess .accessMapArea {
+  margin: 48px 0 0;
+}
+.accessMain .sectionAccess .accessMapArea .accessMapContainer {
+  display: block;
+}
+.accessMain .sectionAccess .accessMapArea .mapBox {
+  margin: 0 0 28px;
+}
+.accessMain .sectionAccess .accessMapArea .accessSteps h3 {
+  margin: 0 0 18px;
+  font-size: 16px;
+}
+.accessMain .sectionAccess .accessMapArea .accessSteps ol li .stepNum {
+  flex: 0 0 28px;
+  width: 28px;
+  height: 28px;
+  font-size: 12px;
+}
+.accessMain .sectionAccess .accessMapArea .accessSteps ol li p {
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/*////////////////////////////////////////////////////////////
+   bloglist
+///////////////////////////////////////////////////////////*/
+.bloglistMain .sectionBlog {
+  padding: 30px 0 60px;
+}
+.bloglistMain .sectionBlog .blogCategoryList {
+  margin: 0 0 24px;
+}
+.bloglistMain .sectionBlog .blogList .newsItem {
+  gap: 20px;
+  padding: 16px 0;
+}
+.bloglistMain .sectionBlog .blogList .newsItem .newsItemDate {
+  flex: 0 0 60px;
+}
+.bloglistMain .sectionBlog .blogList .newsItem .newsItemBody h2 {
+  font-size: 15px;
+}
+
+/*////////////////////////////////////////////////////////////
+  blog
+///////////////////////////////////////////////////////////*/
+.blogMain .sectionBlog {
+  padding: 30px 0 60px;
+}
+.blogMain .sectionBlog .blogCategoryList {
+  margin: 0 0 24px;
+}
+.blogMain .sectionBlog .blogDetail .blogDetailHead {
+  padding: 0 0 15px;
+}
+.blogMain .sectionBlog .blogDetail .blogDetailHead h2 {
+  margin: 8px 0 0;
+}
+.blogMain .sectionBlog .blogDetail .blogDetailThumb {
+  margin: 24px 0 0;
+}
+.blogMain .sectionBlog .blogDetail .blogDetailBody {
+  margin: 24px 0 0;
+}
+.blogMain .sectionBlog .btnMore {
+  margin: 40px auto 0;
+}
+.blogMain .sectionBlog .btnBack {
+  margin: 20px auto 0;
+}
+
+/*////////////////////////////////////////////////////////////
+  contact
+///////////////////////////////////////////////////////////*/
+.contactMain .contactPageBody {
+  padding: 60px 0 80px;
+}
+.contactMain .sectionContact + .sectionContact {
+  margin: 60px 0 0;
+}
+.contactMain .sectionContact .secContainer {
+  padding: 30px 20px;
+}
+.contactMain .sectionContact .formBox dl {
+  display: block;
+  padding: 14px 16px;
+}
+.contactMain .sectionContact .formBox dl dt {
+  margin: 0 0 10px;
+}
+.contactMain .sectionContact .formBox .schoolBox {
+  flex-wrap: wrap;
+}
+.contactMain .sectionContact .formBox .schoolBox .inputBox {
+  flex: 1 1 100%;
+}
+.contactMain .sectionContact .formBox .schoolBox .gradeBox {
+  flex: 0 0 90px;
+}
+
+.privacyMain .sectionPrivacy {
+  padding: 30px 0 70px;
+}
+.privacyMain .privacyIntro {
+  margin: 0 0 30px;
+}
+.privacyMain .privacyItem + .privacyItem {
+  margin: 34px 0 0;
+}
+.privacyMain .privacyItem h2 {
+  font-size: 16px;
+}
+.privacyMain .privacyItem .specTable .specRow {
+  display: block;
+  padding: 14px 16px;
+}
+.privacyMain .privacyItem .specTable .specRow dt {
+  margin: 0 0 6px;
+}

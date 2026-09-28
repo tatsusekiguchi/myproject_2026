@@ -1,0 +1,15 @@
+- title = 'ブログ | 愛知講師会｜名古屋市千種区・本山の個別指導塾（大学受験・医学部専門）'
+- description = '愛知講師会が発信する、受験や学習に役立つ情報をまとめたブログです。お知らせ・スタッフブログ・その他のカテゴリから、知りたい情報をご覧いただけます。'
+- keywords = '受験ブログ, 大学受験 コラム, 勉強法, 愛知講師会 お知らせ'
+- root_path = '../'
+- page_name = 'blog'
+
+doctype html
+include /site.pug
+html(lang='ja')
+    head
+        include /common/head.pug
+    body.page
+        include /common/header.pug
+        include ../../layouts/blog.pug
+        include /common/footer.pug

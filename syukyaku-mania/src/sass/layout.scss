@@ -46,6 +46,17 @@
       animation-delay: 0.8s;
     }
     .titleBlue {
+      .titleBlueSp {
+        display: none;
+      }
+      @media (max-width: 1024px) {
+        .titleBluePc {
+          display: none;
+        }
+        .titleBlueSp {
+          display: inline;
+        }
+      }
       position: absolute;
       left: 65px;
       bottom: 80px;

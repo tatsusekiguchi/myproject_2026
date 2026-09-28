@@ -1,0 +1,105 @@
+{
+    "key": "group_aichi_koushikai_top_news",
+    "title": "TOPニュース",
+    "fields": [
+        {
+            "key": "field_aichi_koushikai_top_news",
+            "label": "TOPニュース",
+            "name": "top_news",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "TOPページのお知らせを登録します。上から順に表示されます。",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 6,
+            "collapsed": "field_aichi_koushikai_top_news_title",
+            "button_label": "ニュースを追加",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_aichi_koushikai_top_news_date",
+                    "label": "投稿日",
+                    "name": "top_news_date",
+                    "aria-label": "",
+                    "type": "date_picker",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "Y年n月j日",
+                    "return_format": "Y-m-d",
+                    "first_day": 1
+                },
+                {
+                    "key": "field_aichi_koushikai_top_news_title",
+                    "label": "タイトル",
+                    "name": "top_news_title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "67",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_aichi_koushikai_top_news_body",
+                    "label": "本文",
+                    "name": "top_news_body",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": 4,
+                    "placeholder": "",
+                    "new_lines": "br"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "front_page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "TOPページ専用のお知らせ入力欄",
+    "show_in_rest": 0,
+    "modified": 1770000000
+}

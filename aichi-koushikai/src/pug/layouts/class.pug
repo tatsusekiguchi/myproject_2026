@@ -1,0 +1,157 @@
+main#class.classMain
+    .pageKvContainer
+        .pageKvPanel
+            .pageKvTitle
+                p CLASS
+                h1 クラス紹介
+            .topicPath
+                ol
+                    li
+                        a(href=(root_path || '') + './') HOME
+                    li クラス紹介
+    .classPageBody
+        section.sectionTop
+            .secWrap
+                h2 一人ひとりに向き合うための、少人数制
+                .txt
+                    p 愛知講師会では、先生1人につき生徒2人までの少人数制を基本とし、<br>一人ひとりの理解度や目標に合わせた丁寧な指導を行っています。<br>医学部志望など、より専門的・継続的なサポートが必要な場合には、<br>篠崎自身が指導に加わり、受験戦略まで含めてきめ細かくサポートします。<br>なお、学年による料金の違いは設けていません。
+        section.sectionLecturer
+            .secWrap
+                .secContainer
+                    .containerWrap
+                        .pageSecTtl
+                            h2 ベースとなる個別指導
+                        .topTxt.txt
+                            p まずベースとなるのが「個別指導」です。<br>目標や学習状況に合わせて、3つの頻度からお選びいただけます。
+                        .secBox01
+                            .courseTable
+                                table
+                                    thead
+                                        tr
+                                            th &nbsp;
+                                            th 月1回コース
+                                            th 月2回コース
+                                            th 医学部・難関大コース
+                                    tbody
+                                        tr
+                                            th 頻度
+                                            td
+                                                dl
+                                                    dt 月1回コース
+                                                    dd 月1回
+                                            td
+                                                dl
+                                                    dt 月2回コース
+                                                    dd 月2回
+                                            td
+                                                dl
+                                                    dt 医学部・難関大コース
+                                                    dd ご相談のうえ設定
+                                    tbody
+                                        tr
+                                            th 指導人数
+                                            td
+                                                dl
+                                                    dt 月1回コース
+                                                    dd 講師1名：生徒2名
+                                            td
+                                                dl
+                                                    dt 月2回コース
+                                                    dd 講師1名：生徒2名
+                                            td
+                                                dl
+                                                    dt 医学部・難関大コース
+                                                    dd 篠崎1名：生徒3名まで
+                                    tbody
+                                        tr
+                                            th 時間
+                                            td
+                                                dl
+                                                    dt 月1回コース
+                                                    dd 1回2時間
+                                            td
+                                                dl
+                                                    dt 月2回コース
+                                                    dd 1回2時間
+                                            td
+                                                dl
+                                                    dt 医学部・難関大コース
+                                                    dd 1回2時間
+                                    tbody
+                                        tr
+                                            th こんな方に
+                                            td
+                                                dl
+                                                    dt 月1回コース
+                                                    dd まずは自分のペースで始めたい方
+                                            td
+                                                dl
+                                                    dt 月2回コース
+                                                    dd 定期的に学習の進み具合を確認したい方
+                                            td
+                                                dl
+                                                    dt 医学部・難関大コース
+                                                    dd 医学部・難関大学を目指し、篠崎による継続的な指導を希望する方
+                            aside
+                                p ※コース・料金については、学習内容やご希望に応じてご相談いただけます。
+                        .secBox02
+                            .headBox
+                                dl
+                                    dt 必要に応じて組み合わせるオプション
+                                    dd 個別指導に、以下のオプションを組み合わせることも可能です。
+                            .listBox
+                                ul
+                                    li
+                                        dl
+                                            dt ＋特訓講座
+                                            dd 演習量を増やしたい方向け。個別指導で学んだことを、実際に「解ける」力へ変えていきます。
+                                    li
+                                        dl
+                                            dt ＋小論文指導
+                                            dd 推薦入試を検討している方向け。1対1で、志望理由書の作成から答案添削まで対応します。
+    section.sectionWeek
+        .secWrap01
+            .pageSecTtl
+                h2 1週間の例
+            .calendarTable
+                table
+                    thead
+                        tr
+                            th 月
+                            th 火
+                            th 水
+                            th 木
+                            th 金
+                            th 土
+                            th 日
+                    tbody
+                        tr
+                            td(data-day='月')
+                                p −
+                            td.isActive(data-day='火')
+                                p 個別指導<br>(数学)<br>17:00〜19:00
+                            td(data-day='水')
+                                p −
+                            td.isActive(data-day='木')
+                                p 特訓講座<br>(演習)<br>18:00〜20:00
+                            td(data-day='金')
+                                p −
+                            td.isActive(data-day='土')
+                                p 個別指導<br>(英語)<br>14:00〜16:00
+                            td(data-day='日')
+                                p −
+                aside
+                    p ※コース・料金については、学習内容やご希望に応じてご相談いただけます。
+    section.sectionExtra
+        .secWrap
+            h2 どの形が合っているか、一緒に考えます。
+            p 志望校や現在の学習状況、ご家庭のご希望をお聞きしたうえで、最適な形をご提案します。<br>まずは月1回コースからスタートし、学習状況に合わせて変更することも可能です。
+    .bottomSection
+        .secWrap
+            .txt
+                p まずは学習相談・体験授業から
+            .btnArea
+                .btnConsult
+                    a(href=(root_path || '') + 'contact/#consultation-form') 学習相談をする
+                .btnContact
+                    a(href=(root_path || '') + 'contact/') お問い合わせはこちら

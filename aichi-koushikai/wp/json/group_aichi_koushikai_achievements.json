@@ -1,0 +1,131 @@
+{
+    "key": "group_aichi_koushikai_achievements",
+    "title": "実績・保護者の声ページ内合格実績",
+    "fields": [
+        {
+            "key": "field_aichi_koushikai_achievement_national",
+            "label": "国立大学",
+            "name": "achievement_national",
+            "type": "repeater",
+            "layout": "block",
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_aichi_koushikai_achievement_national_university",
+            "button_label": "国立大学の実績を追加",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_aichi_koushikai_achievement_national_university",
+                    "label": "大学名",
+                    "name": "achievement_university",
+                    "type": "text",
+                    "required": 1
+                },
+                {
+                    "key": "field_aichi_koushikai_achievement_national_faculty",
+                    "label": "学部名",
+                    "name": "achievement_faculty",
+                    "type": "text",
+                    "required": 1
+                },
+                {
+                    "key": "field_aichi_koushikai_achievement_national_count",
+                    "label": "合格者数",
+                    "name": "achievement_count",
+                    "type": "text",
+                    "required": 1,
+                    "placeholder": "例：1名"
+                }
+            ]
+        },
+        {
+            "key": "field_aichi_koushikai_achievement_public",
+            "label": "公立大学",
+            "name": "achievement_public",
+            "type": "repeater",
+            "layout": "block",
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_aichi_koushikai_achievement_public_university",
+            "button_label": "公立大学の実績を追加",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_aichi_koushikai_achievement_public_university",
+                    "label": "大学名",
+                    "name": "achievement_university",
+                    "type": "text",
+                    "required": 1
+                },
+                {
+                    "key": "field_aichi_koushikai_achievement_public_faculty",
+                    "label": "学部名",
+                    "name": "achievement_faculty",
+                    "type": "text",
+                    "required": 1
+                },
+                {
+                    "key": "field_aichi_koushikai_achievement_public_count",
+                    "label": "合格者数",
+                    "name": "achievement_count",
+                    "type": "text",
+                    "required": 1,
+                    "placeholder": "例：1名"
+                }
+            ]
+        },
+        {
+            "key": "field_aichi_koushikai_achievement_private",
+            "label": "私立大学",
+            "name": "achievement_private",
+            "type": "repeater",
+            "layout": "block",
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_aichi_koushikai_achievement_private_university",
+            "button_label": "私立大学の実績を追加",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_aichi_koushikai_achievement_private_university",
+                    "label": "大学名",
+                    "name": "achievement_university",
+                    "type": "text",
+                    "required": 1
+                },
+                {
+                    "key": "field_aichi_koushikai_achievement_private_faculty",
+                    "label": "学部名",
+                    "name": "achievement_faculty",
+                    "type": "text",
+                    "required": 1
+                },
+                {
+                    "key": "field_aichi_koushikai_achievement_private_count",
+                    "label": "合格者数",
+                    "name": "achievement_count",
+                    "type": "text",
+                    "required": 1,
+                    "placeholder": "例：1名"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page/voice.php"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true,
+    "show_in_rest": 0,
+    "modified": 1770000000
+}

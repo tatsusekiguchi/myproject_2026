@@ -1,0 +1,30 @@
+// ▽header▽
+header.header
+    .headerInner
+        a.headerLogo(href=(root_path || './'), aria-label='愛知講師会 トップページ')
+            img(src=(root_path || '') + 'image/common/header_logo.png', alt='愛知講師会', width='218', height='55')
+        button.hamburger(type='button', aria-controls='globalNav', aria-expanded='false', aria-label='メニューを開く')
+            span
+            span
+            span
+        nav.navBox#globalNav(aria-label='メインナビゲーション')
+            .navList
+                ul
+                    li
+                        a(href=(root_path || '') + 'philosophy/') 愛知講師会の想い
+                    li
+                        a(href=(root_path || '') + 'service/') サービス紹介
+                    li
+                        a(href=(root_path || '') + 'class/') クラス紹介
+                    li
+                        a(href=(root_path || '') + 'lecturer/') 講師紹介
+                    li
+                        a(href=(root_path || '') + 'access/') 教室案内
+                    li
+                        a(href=(root_path || '') + 'bloglist/') ブログ
+                    li
+                        a(href=(root_path || '') + 'faq/') よくある質問
+                    li
+                        .headerContact
+                            a(href=(root_path || '') + 'contact/') お問い合わせ
+// △header△

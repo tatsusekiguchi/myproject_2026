@@ -1,0 +1,75 @@
+{
+    "key": "group_aichi_koushikai_voice",
+    "title": "実績・保護者の声",
+    "fields": [
+        {
+            "key": "field_aichi_koushikai_voice_items",
+            "label": "生徒・保護者の声",
+            "name": "voice_items",
+            "type": "repeater",
+            "layout": "block",
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_aichi_koushikai_voice_name",
+            "button_label": "声を追加",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_aichi_koushikai_voice_category",
+                    "label": "カテゴリ",
+                    "name": "voice_category",
+                    "type": "select",
+                    "required": 1,
+                    "choices": {
+                        "student": "生徒の声",
+                        "parent": "保護者の声"
+                    },
+                    "default_value": "student",
+                    "return_format": "value",
+                    "ui": 1
+                },
+                {
+                    "key": "field_aichi_koushikai_voice_image",
+                    "label": "画像",
+                    "name": "voice_image",
+                    "type": "image",
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all"
+                },
+                {
+                    "key": "field_aichi_koushikai_voice_name",
+                    "label": "回答者名",
+                    "name": "voice_name",
+                    "type": "text",
+                    "required": 1
+                },
+                {
+                    "key": "field_aichi_koushikai_voice_comment",
+                    "label": "感想",
+                    "name": "voice_comment",
+                    "type": "textarea",
+                    "rows": 6,
+                    "new_lines": "br"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page/voice.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true,
+    "show_in_rest": 0,
+    "modified": 1770000000
+}

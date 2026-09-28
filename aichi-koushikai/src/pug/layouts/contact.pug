@@ -1,0 +1,131 @@
+main#contact.contactMain
+	.pageKvContainer
+		.pageKvPanel
+			.pageKvTitle
+				p CONTACT
+				h1 お問い合わせ
+			.topicPath
+				ol
+					li
+						a(href=(root_path || '') + './') HOME
+					li お問い合わせ
+	.contactPageBody
+		section.sectionContact#contact-form
+			.secWrap
+				.secContainer
+					.containerWrap
+						.pageSecTtl
+							p CONTACT
+							h2 お問い合わせ
+						.topTxt.txt
+							p 担当者より連絡いたします。3日以内に連絡いたします。
+						.formBox
+							form
+								dl
+									dt お問い合わせ種別
+									dd
+										.checkList
+											label.checkItem
+												input(type="checkbox", name="your-subject[]", value="入学について")
+												span 入学について
+											label.checkItem
+												input(type="checkbox", name="your-subject[]", value="塾について")
+												span 塾について
+								dl
+									dt
+										span お名前
+										em 必須
+									dd
+										.inputBox
+											input(type="text", name="your-name", placeholder="例：山田 太郎")
+								dl
+									dt
+										span 電話番号
+										em 必須
+									dd
+										.inputBox
+											input(type="tel", name="your-tel", placeholder="例：000-0000-0000")
+								dl
+									dt
+										span メールアドレス
+										em 必須
+									dd
+										.inputBox
+											input(type="email", name="your-email", placeholder="例：info@example.com")
+								dl
+									dt
+										span 学校名・学年
+										em 必須
+									dd
+										.schoolBox
+											.inputBox
+												input(type="text", name="your-school")
+											.inputBox.gradeBox
+												input(type="text", name="your-grade")
+											span 年
+								dl.multi
+									dt お問い合わせ内容
+									dd
+										.inputBox
+											textarea(name="your-message", placeholder="お問い合わせ内容をご記入ください。")
+								.privacyLink
+									p
+										| 個人情報の取り扱いについては
+										a(href=(root_path || '') + 'privacy-policy/', target="_blank") こちら
+								.privacyCheck
+									label.checkItem
+										input(type="checkbox", name="agree")
+										span 個人情報の取り扱いについて同意する
+								.btnSubmit
+									input(type="submit", value="送信する", disabled)
+		section.sectionContact#consultation-form
+			.secWrap
+				.secContainer
+					.containerWrap
+						.pageSecTtl
+							p CONSULTATION
+							h2 学習相談
+						.topTxt.txt
+							p 担当者より連絡いたします。3日以内に連絡いたします。
+						.formBox
+							form
+								dl
+									dt
+										span お名前
+										em 必須
+									dd
+										.inputBox
+											input(type="text", name="your-name", placeholder="例：山田 太郎")
+								dl
+									dt
+										span メールアドレス
+										em 必須
+									dd
+										.inputBox
+											input(type="email", name="your-email", placeholder="例：info@example.com")
+								dl
+									dt 学校名・学年
+									dd
+										.schoolBox
+											.inputBox
+												input(type="text", name="your-school")
+											.inputBox.gradeBox
+												input(type="text", name="your-grade")
+											span 年
+								dl.multi
+									dt
+										span ご相談内容
+										em 必須
+									dd
+										.inputBox
+											textarea(name="your-message", placeholder="ご相談内容をご記入ください。")
+								.privacyLink
+									p
+										| 個人情報の取り扱いについては
+										a(href=(root_path || '') + 'privacy-policy/', target="_blank") こちら
+								.privacyCheck
+									label.checkItem
+										input(type="checkbox", name="agree")
+										span 個人情報の取り扱いについて同意する
+								.btnSubmit
+									input(type="submit", value="送信する", disabled)

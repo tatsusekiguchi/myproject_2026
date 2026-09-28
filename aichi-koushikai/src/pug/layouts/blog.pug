@@ -1,0 +1,40 @@
+main#blog.blogMain
+	.pageKvContainer
+		.pageKvPanel
+			.pageKvTitle
+				p BLOG
+				h1 ブログ
+			.topicPath
+				ol
+					li
+						a(href=(root_path || '') + './') HOME
+					li
+						a(href=(root_path || '') + 'bloglist/') ブログ
+					li 記事タイトルが入ります
+	section.sectionBlog
+		.secWrap01
+			.blogCategoryList
+				ul
+					li
+						a(href=(root_path || '') + 'bloglist/') お知らせ
+					li
+						a(href=(root_path || '') + 'bloglist/') スタッフブログ
+					li
+						a(href=(root_path || '') + 'bloglist/') その他
+			.blogDetail
+				.blogDetailHead
+					time(datetime='2026-08-31') 2026.08.31
+					h2 記事タイトルが入ります。記事タイトルが入ります。
+				.blogDetailThumb
+					img(src=(root_path || '') + 'image/blog/blog_thumb_01.png', alt='', width='1240', height='560', loading='lazy')
+				.blogDetailBody
+					p
+						| 日頃よりご愛顧いただき、誠にありがとうございます。
+					p
+						| このたび、愛知講師会に関するお知らせをご案内いたします。本文はダミーテキストです。実際の記事作成時に、この自由入力欄へ本文を入れていただく想定です。画像や見出し、リストなども挿入可能な自由入力エリアとしてご利用いただけます。
+					p
+						| 今後とも変わらぬご愛顧を賜りますようお願い申し上げます。
+			.btnMore
+				a(href=(root_path || '') + 'contact/') お問い合わせはこちら
+			.btnBack
+				a(href=(root_path || '') + 'bloglist/') 一覧に戻る

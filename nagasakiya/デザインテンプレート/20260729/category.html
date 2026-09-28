@@ -64,12 +64,10 @@
             <div class="catePanel">
               <h2>カテゴリー</h2>
               <ul class="side-category-list">
-                <{section name=i loop=$category_menu.list}>
-                <{if $category_menu.list[i].code == "hs" ||
-                $category_menu.list[i].code == "jhs"}>
-                <{section name=j
-                loop=$category_menu.list[i].child_category.list}>
-                <{if
+                <{section name=i loop=$category_menu.list}> <{if
+                $category_menu.list[i].code == "hs" ||
+                $category_menu.list[i].code == "jhs"}> <{section name=j
+                loop=$category_menu.list[i].child_category.list}> <{if
                 $category_menu.list[i].child_category.list[j].child_category.has_item}>
                 <li
                   class="side-category-item"
@@ -82,7 +80,7 @@
                     <{section name=k
                     loop=$category_menu.list[i].child_category.list[j].child_category.list}>
                     <li
-                      class="<{if $category_menu.list[i].child_category.list[j].child_category.list[k].name == 'メンズ'}>mens<{elseif $category_menu.list[i].child_category.list[j].child_category.list[k].name == 'レディース'}>ladies<{else}>other-item<{/if}>"
+                      class="<{if $category_menu.list[i].child_category.list[j].child_category.list[k].name == '男子'}>mens<{elseif $category_menu.list[i].child_category.list[j].child_category.list[k].name == '女子'}>ladies<{else}>other-item<{/if}>"
                     >
                       <a
                         href="<{$category_menu.list[i].child_category.list[j].child_category.list[k].url}>"
@@ -98,13 +96,12 @@
                   class="side-category-item"
                   data-category-code="<{$category_menu.list[i].child_category.list[j].code}>"
                 >
-                  <a href="<{$category_menu.list[i].child_category.list[j].url}>"
+                  <a
+                    href="<{$category_menu.list[i].child_category.list[j].url}>"
                     ><{$category_menu.list[i].child_category.list[j].name}></a
                   >
                 </li>
-                <{/if}>
-                <{/section}>
-                <{else}>
+                <{/if}> <{/section}> <{else}>
                 <li
                   class="side-category-item"
                   data-category-code="<{$category_menu.list[i].code}>"
@@ -113,8 +110,7 @@
                     ><{$category_menu.list[i].name}></a
                   >
                 </li>
-                <{/if}>
-                <{/section}> <{if $bulk_menu.has_item}> <{section name=i
+                <{/if}> <{/section}> <{if $bulk_menu.has_item}> <{section name=i
                 loop=$bulk_menu.list}>
                 <div class="side-category-item">
                   <a href="<{$bulk_menu.list[i].url}>"

@@ -1,0 +1,139 @@
+{
+    "key": "group_aichi_koushikai_faq",
+    "title": "よくあるご質問",
+    "fields": [
+        {
+            "key": "field_aichi_koushikai_faq_category01",
+            "label": "愛知講師会の個別指導について",
+            "name": "faq_category01",
+            "type": "repeater",
+            "layout": "block",
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_aichi_koushikai_faq_category01_question",
+            "button_label": "質問を追加",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_aichi_koushikai_faq_category01_question",
+                    "label": "質問",
+                    "name": "faq_question",
+                    "type": "text",
+                    "required": 1
+                },
+                {
+                    "key": "field_aichi_koushikai_faq_category01_answer",
+                    "label": "回答",
+                    "name": "faq_answer",
+                    "type": "textarea",
+                    "rows": 6,
+                    "new_lines": "br"
+                }
+            ]
+        },
+        {
+            "key": "field_aichi_koushikai_faq_category02",
+            "label": "授業料・入会金について",
+            "name": "faq_category02",
+            "type": "repeater",
+            "layout": "block",
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_aichi_koushikai_faq_category02_question",
+            "button_label": "質問を追加",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_aichi_koushikai_faq_category02_question",
+                    "label": "質問",
+                    "name": "faq_question",
+                    "type": "text",
+                    "required": 1
+                },
+                {
+                    "key": "field_aichi_koushikai_faq_category02_answer",
+                    "label": "回答",
+                    "name": "faq_answer",
+                    "type": "textarea",
+                    "rows": 6,
+                    "new_lines": "br"
+                }
+            ]
+        },
+        {
+            "key": "field_aichi_koushikai_faq_category03",
+            "label": "時間割・授業回数について",
+            "name": "faq_category03",
+            "type": "repeater",
+            "layout": "block",
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_aichi_koushikai_faq_category03_question",
+            "button_label": "質問を追加",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_aichi_koushikai_faq_category03_question",
+                    "label": "質問",
+                    "name": "faq_question",
+                    "type": "text",
+                    "required": 1
+                },
+                {
+                    "key": "field_aichi_koushikai_faq_category03_answer",
+                    "label": "回答",
+                    "name": "faq_answer",
+                    "type": "textarea",
+                    "rows": 6,
+                    "new_lines": "br"
+                }
+            ]
+        },
+        {
+            "key": "field_aichi_koushikai_faq_category04",
+            "label": "その他",
+            "name": "faq_category04",
+            "type": "repeater",
+            "layout": "block",
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_aichi_koushikai_faq_category04_question",
+            "button_label": "質問を追加",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_aichi_koushikai_faq_category04_question",
+                    "label": "質問",
+                    "name": "faq_question",
+                    "type": "text",
+                    "required": 1
+                },
+                {
+                    "key": "field_aichi_koushikai_faq_category04_answer",
+                    "label": "回答",
+                    "name": "faq_answer",
+                    "type": "textarea",
+                    "rows": 6,
+                    "new_lines": "br"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page/faq.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true,
+    "show_in_rest": 0,
+    "modified": 1770000000
+}

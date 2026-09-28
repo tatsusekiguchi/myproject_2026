@@ -1,0 +1,8 @@
+root = true
+
+[*.pug]
+indent_style = tab
+
+[*.scss]
+indent_style = space
+indent_size = 2

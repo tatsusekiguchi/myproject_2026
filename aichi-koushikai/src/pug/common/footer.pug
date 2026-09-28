@@ -1,0 +1,46 @@
+// ▽footer▽
+footer.footer
+    if page_name === 'top'
+        .footerContact
+            .footerContactText
+                p 「今の塾で、このままでいいのか不安」「志望校に向けて、何から始めればいいかわからない」
+                p 「子どもの勉強について相談したい」そんな段階でも構いません。
+                p 愛知講師会では、入会を前提としない学習相談も受け付けています。
+            .footerContactList
+                .footerContactItem
+                    .footerContactItemText
+                        h2 学習相談
+                        p 通塾を前提としない、学習に関するご相談はこちら。
+                    .btnMore
+                        a(href=(root_path || '') + 'contact/#consultation-form')
+                            span 学習相談をする
+                .footerContactItem
+                    .footerContactItemText
+                        h2 入会・体験授業について
+                        p 入会や体験授業に関するお問い合わせはこちら。
+                    .btnMore
+                        a(href=(root_path || '') + 'contact/#contact-form')
+                            span お問い合わせをする
+            .footerNotice
+                p 平日16:00～22:00　※授業中など、お電話に出られない場合がございます。　※お問い合わせには3日以内を目安にご連絡いたします。
+    .footerMain
+        .footerLogo
+            img(src=(root_path || '') + 'image/common/header_logo.png', alt='愛知講師会', width='218', height='55')
+        .footerSns
+            ul
+                li
+                    a(href='#', aria-label='YouTube') YouTube
+                li
+                    a(href='#', aria-label='Instagram') Instagram
+        .footerDescription
+            p 愛知講師会は、本山を拠点に小規模で一人ひとりに寄り添う形で運営しております。
+            p 営業・勧誘等の防止のため、教室所在地はWebサイト上では公開しておりません。
+            p ご訪問や所在地の確認をご希望の方は、お問い合わせください。
+        .footerButtons
+            .footerBtn.footerBtnConsult
+                a(href=(root_path || '') + 'contact/#consultation-form') 学習相談をする
+            .footerBtn.footerBtnContact
+                a(href=(root_path || '') + 'contact/#contact-form') お問い合わせ
+        .footerCopyright
+            small &copy; 2026 愛知講師会.
+// △footer△

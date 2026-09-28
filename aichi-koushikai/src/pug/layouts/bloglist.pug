@@ -1,0 +1,55 @@
+main#bloglist.bloglistMain
+	.pageKvContainer
+		.pageKvPanel
+			.pageKvTitle
+				p BLOG
+				h1 ブログ
+			.topicPath
+				ol
+					li
+						a(href=(root_path || '') + './') HOME
+					li ブログ
+	section.sectionBlog
+		.secWrap01
+			.blogCategoryList
+				ul
+					li
+						a(href=(root_path || '') + 'bloglist/') お知らせ
+					li
+						a(href=(root_path || '') + 'bloglist/') スタッフブログ
+					li
+						a(href=(root_path || '') + 'bloglist/') その他
+			.blogList
+				a.newsItem(href=(root_path || '') + 'blog/')
+					.newsItemDate
+						time(datetime='2026-08-03') 8月3日
+					.newsItemBody
+						h2 【お知らせ見出しが入ります】
+				a.newsItem(href=(root_path || '') + 'blog/')
+					.newsItemDate
+						time(datetime='2026-07-01') 7月1日
+					.newsItemBody
+						h2 【お知らせ見出しが入ります】
+				a.newsItem(href=(root_path || '') + 'blog/')
+					.newsItemDate
+						time(datetime='2026-06-15') 6月15日
+					.newsItemBody
+						h2 【お知らせ見出しが入ります】
+			.blogPagination
+				ul.pagination
+					li.previous
+						a(href='') «
+					li
+						a(href='') 1
+					li
+						a(href='') 2
+					li.current
+						span 3
+					li
+						a(href='') 4
+					li
+						a(href='') 5
+					li
+						a(href='') 6
+					li.next
+						a(href='') »

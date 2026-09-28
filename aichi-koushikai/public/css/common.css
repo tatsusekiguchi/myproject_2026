@@ -1,0 +1,512 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap");
+/* CSS Document */
+/*===================================================
+  共通CSS（PC/SMP）
+===================================================*/
+/*////////////////////////////////////////////////////////////
+  共通設定
+///////////////////////////////////////////////////////////*/
+/* --------------------------------------------------
+  base
+-------------------------------------------------- */
+* {
+  box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #1f1f1f;
+  background: #ffffff;
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.5;
+}
+
+.txt {
+  line-height: 2;
+}
+
+/*リンク */
+a {
+  color: #1f1f1f;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* 画像幅 */
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* clearfix */
+.clearfix::after {
+  content: ".";
+  display: block;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.spBreak {
+  display: none;
+}
+
+@media (min-width: 1025px) {
+  a {
+    transition: 0.6s;
+  }
+
+  a:hover {
+    opacity: 0.6;
+  }
+}
+.fax a {
+  pointer-events: none;
+}
+
+/* --------------------------------------------------
+  header
+-------------------------------------------------- */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: #fff;
+}
+.header .headerInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: clamp(88px, 5.75vw, 115px);
+  padding: 20px 4.7% 14px 3.8%;
+}
+.header .headerLogo {
+  display: block;
+  flex-shrink: 0;
+  width: clamp(180px, 14.7vw, 220px);
+}
+.header .headerLogo img {
+  display: block;
+}
+.header .navList ul {
+  display: flex;
+  align-items: center;
+  gap: clamp(14px, 2.2vw, 44px);
+}
+.header .navList a {
+  display: block;
+  font-size: clamp(12px, 0.9vw, 18px);
+  font-weight: bold;
+  white-space: nowrap;
+}
+.header .navList .headerContact a {
+  padding: 7px 34px;
+  border: 1px solid #6297e3;
+  border-radius: 50px;
+  color: #fff;
+  background: #6297e3;
+}
+.header .hamburger {
+  display: none;
+}
+.header a:focus-visible,
+.header button:focus-visible {
+  outline: 2px solid #6297e3;
+  outline-offset: 5px;
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .header .headerInner {
+    padding: 20px 3% 14px;
+    gap: 16px;
+  }
+  .header .navList ul {
+    gap: 12px;
+  }
+  .header .navList .headerContact a {
+    padding: 7px 18px;
+  }
+}
+/* --------------------------------------------------
+  nav
+-------------------------------------------------- */
+/* --------------------------------------------------
+  main
+-------------------------------------------------- */
+main {
+  overflow: hidden;
+  padding: clamp(91px, 5.75vw, 115px) 0 0;
+}
+
+.pageKvContainer {
+  padding: 60px 5% 20px;
+  border-bottom: 1px solid #e1e1e1;
+}
+.pageKvContainer .pageKvPanel {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.pageKvContainer .pageKvTitle {
+  margin: 0 0 20px;
+  font-weight: bold;
+}
+.pageKvContainer .pageKvTitle p {
+  display: inline-block;
+  font-size: clamp(42px, 4.2vw, 60px);
+  line-height: 1;
+  background: linear-gradient(90deg, #bdd1ee 0%, #e0e1e1 50%, #ede7dc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.pageKvContainer .pageKvTitle h1 {
+  margin: 8px 0 0;
+  font-size: 24px;
+  color: #323537;
+  line-height: 1.5;
+}
+.pageKvContainer .topicPath ol {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #9d9d9d;
+}
+.pageKvContainer .topicPath ol li:not(:last-child)::after {
+  content: "/";
+  margin-left: 12px;
+  color: #9d9d9d;
+}
+.pageKvContainer .topicPath ol a {
+  display: inline-block;
+  text-decoration: underline;
+}
+
+.secWrap {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.secWrap01 {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.secWrap02 {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.mapBox {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding: 0 0 40%;
+}
+.mapBox iframe,
+.mapBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+}
+
+.pageSecTtl p {
+  margin: 0 0 10px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #6297e3;
+}
+.pageSecTtl h2 {
+  font-size: clamp(26px, 2.2vw, 30px);
+  font-weight: bold;
+  color: #21223d;
+  line-height: 1.65;
+}
+
+.btnMore {
+  max-width: 260px;
+  text-align: center;
+}
+.btnMore a {
+  position: relative;
+  display: block;
+  padding: 10px 20px;
+  font-weight: bold;
+  border: 1px solid #6398e5;
+  border-radius: 50px;
+  color: #fff;
+  background: #6398e5;
+}
+.btnMore a span {
+  display: block;
+  text-align: center;
+}
+.btnMore a::after {
+  content: "→";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  font-size: 1.2em;
+  line-height: 1;
+  transform: translateY(-50%);
+}
+
+.btnBack {
+  max-width: 220px;
+  margin: 0 auto;
+  text-align: center;
+}
+.btnBack a {
+  position: relative;
+  display: block;
+  padding: 10px 20px;
+  font-weight: bold;
+  color: #1f1f1f;
+  border: 1px solid #1f1f1f;
+  border-radius: 50px;
+  background: #fff;
+}
+.btnBack a::after {
+  content: "→";
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  font-size: 1.2em;
+  line-height: 1;
+  transform: translateY(-50%);
+}
+
+.blogCategoryList ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.blogCategoryList ul li a {
+  display: inline-block;
+  padding: 7px 24px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #1f1f1f;
+  border: 1px solid #1f1f1f;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+.blogCategoryList ul li a:hover {
+  background: #ecf1f4;
+}
+
+.blogPagination {
+  margin: 60px 0 0;
+}
+.blogPagination .pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.blogPagination .pagination li a,
+.blogPagination .pagination li span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  font-weight: bold;
+  border-radius: 50%;
+}
+.blogPagination .pagination li a {
+  color: #1f1f1f;
+  transition: 0.3s;
+}
+.blogPagination .pagination li a:hover {
+  background: #ecf1f4;
+}
+.blogPagination .pagination li.current span {
+  color: #fff;
+  background: #6398e5;
+}
+
+/* --------------------------------------------------
+  footer
+-------------------------------------------------- */
+.footer .footerContact {
+  padding: 80px 7.8% 70px;
+  color: #fff;
+  background: #21223d;
+  text-align: center;
+}
+.footer .footerContact .footerContactText p {
+  margin: 0;
+  line-height: 2;
+}
+.footer .footerContact .footerContactList {
+  display: flex;
+  gap: 3vw;
+  max-width: 1100px;
+  margin: 60px auto 38px;
+}
+.footer .footerContact .footerContactItem {
+  flex: 1;
+  padding: 20px 30px;
+  border-radius: 32px;
+  color: #1f1f1f;
+  background: url("../image/common/footer_contact_item_bg_01.png") center/cover no-repeat;
+}
+.footer .footerContact .footerContactItem .footerContactItemText h2 {
+  font-size: 26px;
+  font-weight: bold;
+}
+.footer .footerContact .footerContactItem .footerContactItemText p {
+  margin: 12px 0 0;
+}
+.footer .footerContact .footerContactItem:last-child {
+  background-image: url("../image/common/footer_contact_item_bg_02.png");
+}
+.footer .footerContact .footerContactItem:last-child .btnMore a {
+  background: #877553;
+}
+.footer .footerContact .footerContactItem .btnMore {
+  margin: 24px auto 0;
+}
+.footer .footerContact .footerContactItem .btnMore a {
+  padding: 10px 32px;
+  border: 0;
+  color: #fff;
+  background: #6297e3;
+}
+.footer .footerContact .footerContactItem .btnMore a::after {
+  display: none;
+}
+.footer .footerContact .footerNotice {
+  font-size: 14px;
+}
+.footer .footerMain {
+  position: relative;
+  min-height: 500px;
+  padding: 110px 7.8% 40px;
+  color: #fff;
+  background: url("../image/common/footer_cnt_bg.png") center/cover no-repeat;
+  text-align: center;
+}
+.footer .footerMain .footerLogo img {
+  width: 218px;
+}
+.footer .footerMain .footerSns {
+  margin: 50px 0 0;
+}
+.footer .footerMain .footerSns ul {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+}
+.footer .footerMain .footerSns ul li a {
+  display: block;
+  width: 44px;
+  height: 44px;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: center/contain no-repeat;
+}
+.footer .footerMain .footerSns ul li:first-child a {
+  background-image: url("../image/common/footer_youtube.png");
+}
+.footer .footerMain .footerSns ul li:last-child a {
+  background-image: url("../image/common/footer_instagram.png");
+}
+.footer .footerMain .footerDescription {
+  width: 60%;
+  margin: 44px auto 0;
+  line-height: 2;
+}
+.footer .footerMain .footerButtons {
+  position: absolute;
+  right: 3.5%;
+  bottom: 65px;
+  width: 220px;
+}
+.footer .footerMain .footerButtons .footerBtn {
+  font-weight: bold;
+  text-align: left;
+}
+.footer .footerMain .footerButtons .footerBtn a {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 13px 25px;
+  border-radius: 50px;
+}
+.footer .footerMain .footerButtons .footerBtn a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 10px;
+  bottom: 0;
+  width: 18px;
+  height: 18px;
+  margin: auto 0;
+  background: center/contain no-repeat;
+}
+.footer .footerMain .footerButtons .footerBtn + .footerBtn {
+  margin: 14px 0 0;
+}
+.footer .footerMain .footerButtons .footerBtnConsult a {
+  color: #fff;
+  background: #21223d;
+}
+.footer .footerMain .footerButtons .footerBtnConsult a::after {
+  background-image: url("../image/common/footer_btn_arrow_white.png");
+}
+.footer .footerMain .footerButtons .footerBtnContact a {
+  border: 1px solid #21223d;
+  color: #21223d;
+  background: #fff;
+}
+.footer .footerMain .footerButtons .footerBtnContact a::after {
+  background-image: url("../image/common/footer_btn_arrow_blue.png");
+}
+.footer .footerMain .footerCopyright {
+  position: absolute;
+  bottom: 40px;
+  left: 7.8%;
+  font-size: 14px;
+}

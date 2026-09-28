@@ -59,6 +59,17 @@
   bottom: 80px;
   z-index: 2;
 }
+#top .topKvContainer .titleBlue .titleBlueSp {
+  display: none;
+}
+@media (max-width: 1024px) {
+  #top .topKvContainer .titleBlue .titleBluePc {
+    display: none;
+  }
+  #top .topKvContainer .titleBlue .titleBlueSp {
+    display: inline;
+  }
+}
 #top .topKvContainer .titleBlue h1 {
   font-size: 60px;
   font-weight: 700;

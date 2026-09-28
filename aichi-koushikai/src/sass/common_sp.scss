@@ -1,0 +1,282 @@
+@charset "UTF-8";
+@import "./mixin";
+@import "./mod";
+/* CSS Document */
+
+/*===================================================
+  共通CSS（SMP）
+===================================================*/
+
+/* --------------------------------------------------
+  base
+-------------------------------------------------- */
+body {
+  min-width: 0;
+  font-size: $SPfontSize;
+}
+a:hover {
+  text-decoration: none;
+}
+/*改行*/
+.pcBreak {
+  display: none;
+}
+.spBreak {
+  display: block;
+}
+/*spのみ表示*/
+.pcHidden {
+  display: block;
+}
+.spHidden {
+  display: none;
+}
+#sideBtn {
+  display: none;
+}
+.topicPath {
+  display: none;
+}
+/* --------------------------------------------------
+  header
+-------------------------------------------------- */
+.header {
+  .headerInner {
+    min-height: 80px;
+    padding: 15px 20px;
+  }
+  .headerLogo {
+    width: 140px;
+  }
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: #f0f5fa;
+    cursor: pointer;
+    span {
+      width: 20px;
+      height: 2px;
+      background: #23233f;
+      transition:
+        transform 0.2s,
+        opacity 0.2s;
+    }
+    &.is-open {
+      span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+      span:nth-child(2) {
+        opacity: 0;
+      }
+      span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+    }
+  }
+  .navBox {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: calc(100dvh - 80px);
+    overflow-y: auto;
+    padding: 12px 24px 28px;
+    background: #fff;
+    box-shadow: 0 12px 16px rgba(35, 35, 63, 0.08);
+    &.active {
+      display: block;
+    }
+  }
+  .navList {
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+    a {
+      padding: 14px 0;
+      font-size: 15px;
+      border-bottom: 1px solid #edf0f4;
+    }
+    .headerContact {
+      margin: 18px 0 0;
+      text-align: center;
+      border: 0;
+      a {
+        padding: 14px;
+      }
+    }
+  }
+}
+
+/* --------------------------------------------------
+  nav
+-------------------------------------------------- */
+
+/* --------------------------------------------------
+  main
+-------------------------------------------------- */
+main {
+  padding: 80px 0 0;
+}
+.pageKvContainer {
+  padding: 40px 20px 16px;
+  border-bottom: 1px solid #e1e1e1;
+  .pageKvTitle {
+    margin: 0 0 16px;
+    p {
+      font-size: 30px;
+      line-height: 1;
+    }
+    h1 {
+      margin: 6px 0 0;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+  }
+  .topicPath {
+    ol {
+      gap: 8px;
+      font-size: 12px;
+      li {
+        &:not(:last-child)::after {
+          content: "/";
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+}
+.mapBox {
+  padding: 0 0 70%;
+}
+.pageSecTtl {
+  p {
+    margin: 0 0 5px;
+    font-size: 13px;
+  }
+  h2 {
+    font-size: 20px;
+    line-height: 1.55;
+  }
+}
+.btnMore {
+  a {
+    padding: 11px 18px;
+    font-size: 13px;
+  }
+}
+.btnBack {
+  a {
+    padding: 11px 18px;
+    font-size: 13px;
+  }
+}
+.blogCategoryList {
+  ul {
+    gap: 8px;
+    li {
+      a {
+        padding: 5px 16px;
+        font-size: 12px;
+      }
+    }
+  }
+}
+.blogPagination {
+  margin: 40px 0 0;
+  .pagination {
+    gap: 6px;
+    li {
+      a,
+      span {
+        width: 36px;
+        height: 36px;
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+/* --------------------------------------------------
+  footer
+-------------------------------------------------- */
+.footer {
+  .footerContact {
+    padding: 55px 20px 45px;
+    .footerContactText {
+      p {
+        font-size: 13px;
+        line-height: 1.9;
+      }
+    }
+    .footerContactList {
+      display: block;
+      margin: 32px 0;
+    }
+    .footerContactItem {
+      padding: 24px 16px;
+      border-radius: 24px;
+      .footerContactItemText {
+        h2 {
+          font-size: 21px;
+        }
+        p {
+          margin: 10px 0 0;
+          font-size: 13px;
+        }
+      }
+      & + .footerContactItem {
+        margin: 16px 0 0;
+      }
+    }
+    .footerNotice {
+      font-size: 11px;
+      line-height: 1.8;
+    }
+  }
+  .footerMain {
+    min-height: 600px;
+    padding: 70px 20px 110px;
+    .footerLogo {
+      img {
+        width: 190px;
+      }
+    }
+    .footerSns {
+      margin: 30px 0 0;
+    }
+    .footerDescription {
+      width: 100%;
+      margin: 32px 0 0;
+      font-size: 12px;
+      line-height: 1.9;
+    }
+    .footerButtons {
+      position: static;
+      width: 100%;
+      max-width: 200px;
+      margin: 34px auto 0;
+      .footerBtn + .footerBtn {
+        margin: 12px 0 0;
+      }
+    }
+    .footerCopyright {
+      right: 20px;
+      bottom: 28px;
+      left: 20px;
+      font-size: 12px;
+      text-align: left;
+    }
+  }
+}
