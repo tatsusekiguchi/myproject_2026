@@ -1,0 +1,15 @@
+- title = 'ブログ｜加西市のぶどう農園 BEKKO（神戸ぶどう農園）｜直売・全国発送'
+- description = 'BEKKO(神戸ぶどう農園)のブログです。ぶどうの栽培・収穫の様子や、加西・加古川周辺のおすすめグルメ・観光情報など、BEKKOの日常をお届けします。'
+- keywords = 'ブログ, ぶどう農園 日常, 加西市 グルメ, 加古川市 観光, ぶどう 栽培記録'
+- root_path = '../'
+- page_name = 'bloglist'
+doctype html
+//- サイトの設定の読み込み
+include /site.pug
+html(lang='ja')
+	head
+		include /common/head.pug
+	body.page
+		include /common/header.pug
+		include ../../layouts/bloglist.pug
+		include /common/footer.pug

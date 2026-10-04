@@ -1756,12 +1756,12 @@
 .contactMain .sectionContact .formBox .btnSubmit::after {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 20px;
   right: 10px;
+  bottom: 0;
   width: 18px;
   height: 18px;
   background: url("../image/common/footer_btn_arrow_white.png") no-repeat center/contain;
-  transform: translateY(-50%);
   pointer-events: none;
 }
 .contactMain .sectionContact .formBox .btnSubmit input[type=submit] {

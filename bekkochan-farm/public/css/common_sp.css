@@ -1,0 +1,248 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+	共通CSS（SMP）
+===================================================*/
+/* --------------------------------------------------
+	base
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  body {
+    min-width: 0;
+    padding: 60px 0 0;
+    font-size: 14px;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  /*改行*/
+  .pcBreak {
+    display: none;
+  }
+
+  .spBreak {
+    display: block;
+  }
+
+  /*spのみ表示*/
+  .pcHidden {
+    display: block;
+  }
+
+  .spHidden {
+    display: none;
+  }
+
+  #sideBtn {
+    display: none;
+  }
+
+  .topicPath {
+    display: none;
+  }
+}
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .header .headerContainer {
+    height: 60px;
+    padding: 0 15px;
+  }
+  .header .headerContainer .headerLogo a {
+    width: 100px;
+  }
+  .header .headerContainer .headerTel {
+    margin: 0 12px 0 0;
+  }
+  .header .headerContainer .headerTel .headerTelText {
+    font-size: 11px;
+  }
+  .header .headerContainer .headerTel .headerTelNum {
+    font-size: 18px;
+  }
+  .header .headerContainer .headerSns {
+    display: none;
+  }
+  .header .headerContainer .hamburger {
+    position: relative;
+    display: block;
+    flex: 0 0 auto;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+  .header .headerContainer .hamburger .span {
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: 26px;
+    height: 3px;
+    margin: 0 auto;
+    background: #ffffff;
+    transition: 0.3s;
+  }
+  .header .headerContainer .hamburger .span:nth-child(1) {
+    top: 11px;
+  }
+  .header .headerContainer .hamburger .span:nth-child(2) {
+    top: 18.5px;
+  }
+  .header .headerContainer .hamburger .span:nth-child(3) {
+    top: 26px;
+  }
+  .header .headerContainer .hamburger.is-open .span:nth-child(1) {
+    top: 18.5px;
+    transform: rotate(45deg);
+  }
+  .header .headerContainer .hamburger.is-open .span:nth-child(2) {
+    opacity: 0;
+  }
+  .header .headerContainer .hamburger.is-open .span:nth-child(3) {
+    top: 18.5px;
+    transform: rotate(-45deg);
+  }
+  .header .navBox {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    overflow-y: auto;
+    background: #ebdfeb;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.4s;
+  }
+  .header .navBox.active {
+    visibility: visible;
+    opacity: 1;
+  }
+  .header .navBox .navBoxInner {
+    padding: 20px 20px 40px;
+  }
+  .header .navBox .navBoxInner .navList ul li {
+    border-bottom: 1px solid #e1cfdf;
+  }
+  .header .navBox .navBoxInner .navList ul li a {
+    display: block;
+    padding: 18px 10px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #323537;
+  }
+  .header .navBox .navBoxInner .navBoxSns {
+    margin: 30px 0 0;
+  }
+  .header .navBox .navBoxInner .navBoxSns .snsList {
+    justify-content: center;
+  }
+}
+/* --------------------------------------------------
+	nav
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .gNav {
+    display: none;
+  }
+}
+/* --------------------------------------------------
+	main
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .pageKv {
+    height: 120px;
+  }
+  .pageKv .pageKvContainer h1 {
+    font-size: 26px;
+  }
+
+  .mapBox {
+    padding: 0 0 70%;
+  }
+}
+/* --------------------------------------------------
+	footer
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .footer .footerOrder {
+    padding: 40px 15px 50px;
+  }
+  .footer .footerOrder .pageTop {
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+  }
+  .footer .footerOrder .footerOrderContainer .footerOrderImage {
+    position: static;
+    width: 56px;
+    margin: 0 auto 10px;
+  }
+  .footer .footerOrder .footerOrderContainer .footerOrderContent .footerOrderTitle .footerOrderLead {
+    padding: 0;
+  }
+  .footer .footerOrder .footerOrderContainer .footerOrderContent .footerOrderTitle .footerOrderLead .footerOrderLeadImage {
+    width: 60px;
+  }
+  .footer .footerOrder .footerOrderContainer .footerOrderContent .footerOrderTitle .footerOrderLead .footerOrderLeadText {
+    margin: 0 0 4px -18px;
+    font-size: 14px;
+  }
+  .footer .footerOrder .footerOrderContainer .footerOrderContent .footerOrderTitle h2 {
+    margin: 14px 0 0;
+    font-size: 26px;
+  }
+  .footer .footerOrder .footerOrderContainer .footerOrderContent .footerOrderButtons {
+    flex-direction: column;
+    gap: 15px;
+    margin: 30px 0 0;
+  }
+  .footer .footerOrder .footerOrderContainer .footerOrderContent .footerOrderButtons .footerBtnLine a,
+.footer .footerOrder .footerOrderContainer .footerOrderContent .footerOrderButtons .footerBtnMail a {
+    height: 88px;
+  }
+  .footer .footerOrder .footerOrderContainer .footerOrderContent .footerOrderButtons .footerBtnLine a .footerBtnTitle,
+.footer .footerOrder .footerOrderContainer .footerOrderContent .footerOrderButtons .footerBtnMail a .footerBtnTitle {
+    font-size: 28px;
+  }
+  .footer .footerOrder .footerOrderContainer .footerOrderContent .footerOrderButtons .footerBtnLine a .footerBtnText,
+.footer .footerOrder .footerOrderContainer .footerOrderContent .footerOrderButtons .footerBtnMail a .footerBtnText {
+    font-size: 14px;
+  }
+  .footer .footerMain {
+    padding: 50px 15px 30px;
+  }
+  .footer .footerMain .footerNav {
+    display: none;
+  }
+  .footer .footerMain .footerLogo {
+    margin: 0;
+    font-size: 40px;
+  }
+  .footer .footerMain .footerInfo {
+    margin: 14px 0 0;
+    font-size: 14px;
+    line-height: 28px;
+  }
+  .footer .footerMain .footerInfo .footerContact {
+    margin: 14px 0 0;
+  }
+  .footer .footerMain .footerSns {
+    margin: 36px 0 0;
+  }
+  .footer .footerCopyright {
+    padding: 14px 15px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+}

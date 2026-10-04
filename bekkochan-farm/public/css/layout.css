@@ -1,0 +1,162 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+	画面用CSS（PC/SMP）
+===================================================*/
+/*////////////////////////////////////////////////////////////
+	TOP
+///////////////////////////////////////////////////////////*/
+.topMain .topKv {
+  height: min(718px, 37.395833vw);
+  font-family: YuGothic, "游ゴシック", "Noto Sans JP", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-weight: bold;
+  background: url("https://sit-10272780.sibloo.com/system_panel/uploads/images/top_kv_01.jpg") center/cover no-repeat;
+}
+.topMain .topKv .topKvContainer {
+  position: relative;
+  max-width: min(1354px, 70.520833vw);
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 min(20px, 1.041667vw);
+}
+.topMain .topKv .topKvContainer .topKvCopy {
+  position: absolute;
+  top: min(120px, 6.25vw);
+  right: min(58px, 3.020833vw);
+  width: min(200px, 10.416667vw);
+}
+.topMain .topKv .topKvContainer .topKvCopy h1 {
+  font-size: min(70px, 3.645833vw);
+  line-height: min(100px, 5.208333vw);
+  color: #ffffff;
+  white-space: nowrap;
+  font-feature-settings: "vpal";
+  writing-mode: vertical-rl;
+}
+.topMain .topKv .topKvContainer .topKvCatch {
+  position: absolute;
+  top: min(215px, 11.197917vw);
+  right: min(277px, 14.427083vw);
+  display: flex;
+  flex-direction: row-reverse;
+  gap: min(1px, 0.052083vw);
+  align-items: flex-start;
+  width: min(109px, 5.677083vw);
+}
+.topMain .topKv .topKvContainer .topKvCatch .txtBox p {
+  height: min(318px, 16.5625vw);
+  padding: min(14px, 0.729167vw) 0;
+  font-size: min(32px, 1.666667vw);
+  line-height: min(54px, 2.8125vw);
+  color: #ffffff;
+  white-space: nowrap;
+  background: #323537;
+  font-feature-settings: "vpal";
+  writing-mode: vertical-rl;
+}
+.topMain .topKv .topKvContainer .topKvCatch .txtBox:last-child p {
+  height: min(253px, 13.177083vw);
+}
+.topMain .topKv .topKvContainer .topKvLead {
+  position: absolute;
+  right: 0;
+  bottom: min(60px, 3.125vw);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: min(466px, 24.270833vw);
+  height: min(84px, 4.375vw);
+  padding: min(12px, 0.625vw) min(21px, 1.09375vw);
+  color: #ffffff;
+  background: #5b5294;
+}
+.topMain .topKv .topKvContainer .topKvLead p {
+  flex: 0 0 auto;
+  font-size: min(25px, 1.302083vw);
+  line-height: min(34px, 1.770833vw);
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+  font-feature-settings: "palt";
+}
+.topMain .topKv .topKvContainer .topKvLead p + p {
+  font-size: min(18px, 0.9375vw);
+  line-height: min(26px, 1.354167vw);
+}
+.topMain .concept {
+  min-height: 1170px;
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  background: #ac8abd url("https://sit-10272780.sibloo.com/system_panel/uploads/images/top_concept_bg.jpg") center top/cover no-repeat;
+}
+.topMain .concept .conceptContainer {
+  padding: 580px 0 86px;
+}
+.topMain .concept .conceptContainer .conceptTitle {
+  position: relative;
+  max-width: 740px;
+  margin: 0 auto;
+}
+.topMain .concept .conceptContainer .conceptTitle .conceptImage {
+  position: absolute;
+  top: -67px;
+  left: 5px;
+  width: 100px;
+}
+.topMain .concept .conceptContainer .conceptTitle .conceptImage img {
+  display: block;
+}
+.topMain .concept .conceptContainer .conceptTitle .secTtl {
+  position: relative;
+}
+.topMain .concept .conceptContainer .conceptTitle .secTtl p {
+  font-size: 21px;
+  line-height: 32px;
+}
+.topMain .concept .conceptContainer .conceptTitle .secTtl h2 {
+  margin: 12px 0 0;
+  font-size: 70px;
+  line-height: 100px;
+  font-feature-settings: "palt";
+}
+.topMain .concept .conceptContainer .txtBox {
+  margin: 78px 0 0;
+}
+.topMain .concept .conceptContainer .txtBox p {
+  font-size: 18px;
+  line-height: 36px;
+}
+.topMain .concept .conceptContainer .btn {
+  margin: 40px 0 0;
+}
+.topMain .concept .conceptContainer .btn a {
+  display: inline-block;
+  max-width: 100%;
+  min-height: 68px;
+  padding: 20px 38px;
+  font-size: 18px;
+  line-height: 28px;
+  color: #ffffff;
+  border-radius: 34px;
+  background: #ac8abd;
+  transition: background-color 0.3s;
+}
+.topMain .concept .conceptContainer .btn a:hover {
+  background: #5b5294;
+}
+.topMain .concept .conceptContainer .btn a:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 4px;
+}
+
+/*////////////////////////////////////////////////////////////
+	BEKKOについて
+///////////////////////////////////////////////////////////*/
+.aboutMain .pageKv {
+  background: url("https://sit-10272780.sibloo.com/system_panel/uploads/images/about_kv_01.jpg") center/cover no-repeat;
+}
+
+/*////////////////////////////////////////////////////////////
+	temp
+///////////////////////////////////////////////////////////*/

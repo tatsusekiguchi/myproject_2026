@@ -52,8 +52,6 @@
 					<div class="blogDetailThumb">
 						<?php if ( has_post_thumbnail() ) : ?>
 							<?php the_post_thumbnail( 'full', array( 'loading' => 'lazy' ) ); ?>
-						<?php else : ?>
-							<img src="<?php echo esc_url( aichi_koushikai_asset_url( 'image/blog/blog_thumb_01.png' ) ); ?>" alt="" width="1240" height="560" loading="lazy">
 						<?php endif; ?>
 					</div>
 					<div class="blogDetailBody">

@@ -1,0 +1,104 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+	画面用CSS（PC/SMP）
+===================================================*/
+/*////////////////////////////////////////////////////////////
+	TOP
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .topMain .topKv {
+    height: 460px;
+  }
+  .topMain .topKv .topKvContainer {
+    max-width: none;
+    padding: 0 20px;
+  }
+  .topMain .topKv .topKvContainer .topKvCopy {
+    top: 30px;
+    right: 15px;
+    width: 96px;
+  }
+  .topMain .topKv .topKvContainer .topKvCopy h1 {
+    font-size: 34px;
+    line-height: 48px;
+  }
+  .topMain .topKv .topKvContainer .topKvCatch {
+    top: 60px;
+    right: 125px;
+    gap: 1px;
+    width: 65px;
+  }
+  .topMain .topKv .topKvContainer .topKvCatch .txtBox p {
+    height: auto;
+    padding: 10px 0;
+    font-size: 18px;
+    line-height: 32px;
+  }
+  .topMain .topKv .topKvContainer .topKvCatch .txtBox:last-child p {
+    height: auto;
+  }
+  .topMain .topKv .topKvContainer .topKvLead {
+    right: 15px;
+    bottom: 20px;
+    left: 15px;
+    width: auto;
+    height: auto;
+    padding: 10px 14px;
+  }
+  .topMain .topKv .topKvContainer .topKvLead p {
+    font-size: clamp(12px, 3.5vw, 15px);
+    line-height: 22px;
+  }
+  .topMain .topKv .topKvContainer .topKvLead p + p {
+    font-size: 11px;
+    line-height: 18px;
+  }
+  .topMain .concept {
+    min-height: 900px;
+  }
+  .topMain .concept .conceptContainer {
+    padding: 330px 0 60px;
+  }
+  .topMain .concept .conceptContainer .conceptTitle {
+    max-width: 600px;
+  }
+  .topMain .concept .conceptContainer .conceptTitle .conceptImage {
+    top: -145px;
+    left: 0;
+    width: 60px;
+  }
+  .topMain .concept .conceptContainer .conceptTitle .secTtl p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .topMain .concept .conceptContainer .conceptTitle .secTtl h2 {
+    margin: 10px 0 0;
+    font-size: clamp(26px, 5.5vw, 48px);
+    line-height: 1.5;
+  }
+  .topMain .concept .conceptContainer .txtBox {
+    max-width: 600px;
+    margin: 36px auto 0;
+  }
+  .topMain .concept .conceptContainer .txtBox p {
+    font-size: 14px;
+    line-height: 28px;
+  }
+  .topMain .concept .conceptContainer .txtBox p + p {
+    margin: 12px 0 0;
+  }
+  .topMain .concept .conceptContainer .btn {
+    margin: 30px 0 0;
+  }
+  .topMain .concept .conceptContainer .btn a {
+    min-height: 56px;
+    padding: 16px 26px;
+    font-size: 14px;
+    line-height: 24px;
+    border-radius: 28px;
+  }
+}
+/*////////////////////////////////////////////////////////////
+	temp
+///////////////////////////////////////////////////////////*/

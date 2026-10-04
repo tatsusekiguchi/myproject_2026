@@ -1,0 +1,520 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap");
+@import "./mixin";
+@import "./mod";
+/* CSS Document */
+/*===================================================
+	共通CSS（PC/SMP）
+===================================================*/
+
+/*////////////////////////////////////////////////////////////
+	共通設定
+///////////////////////////////////////////////////////////*/
+
+/* --------------------------------------------------
+	base
+-------------------------------------------------- */
+* {
+  box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+}
+body {
+  position: relative;
+  overflow-x: hidden;
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3",
+    "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+  //font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+  line-height: 1.5;
+  color: $mainColor;
+  font-size: $PCfontSize;
+  background: $bgBaseColor;
+  transition: 2s;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: $lhBase;
+}
+.txt {
+  line-height: $lhTxt;
+}
+
+/*リンク */
+a {
+  color: $mainColor;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+
+/* 画像幅 */
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* clearfix */
+.clearfix::after {
+  content: ".";
+  display: block;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  visibility: hidden;
+}
+.spBreak {
+  display: none;
+}
+@media (min-width: 1025px) {
+  a {
+    transition: 0.6s;
+  }
+  a:hover {
+    opacity: 0.6;
+  }
+}
+.fax {
+  a {
+    pointer-events: none;
+  }
+}
+
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+.header {
+  position: relative;
+  z-index: 1000;
+  font-family: $baseFont;
+  font-weight: 700;
+  background: $redColor;
+  .headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1686px;
+    height: 90px;
+    margin: 0 auto;
+    padding: 0 20px;
+    .headerLogo {
+      flex: 1 1 0;
+      a {
+        display: block;
+        width: 190px;
+      }
+    }
+    .headerTel {
+      flex: 0 0 auto;
+      color: #ffffff;
+      text-align: center;
+      .headerTelText {
+        font-size: 21px;
+        line-height: 1.2;
+        color: $navBgColor;
+      }
+      .headerTelNum {
+        font-size: 30px;
+        line-height: 1.2;
+        a {
+          display: inline-block;
+          color: #ffffff;
+        }
+      }
+    }
+    .headerSns {
+      flex: 1 1 0;
+      .snsList {
+        justify-content: flex-end;
+      }
+    }
+    .hamburger {
+      display: none;
+    }
+  }
+  .navBox {
+    display: none;
+  }
+}
+
+/* --------------------------------------------------
+	sns
+-------------------------------------------------- */
+.snsList {
+  display: flex;
+  gap: 6px;
+  .snsItem {
+    width: 33px;
+    a {
+      display: block;
+    }
+  }
+}
+
+/* --------------------------------------------------
+	nav
+-------------------------------------------------- */
+.gNav {
+  height: 94px;
+  font-family: $baseFont;
+  .gNavInner {
+    width: 100%;
+    height: 94px;
+    background: $navBgColor;
+    &.fixed {
+      position: fixed;
+      z-index: 900;
+      top: 0;
+      left: 0;
+    }
+  }
+  .navList {
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    ul {
+      display: flex;
+      height: 100%;
+      li {
+        flex: 1 1 0;
+        border-left: 3px solid $navLineColor;
+        &:last-child {
+          border-right: 3px solid $navLineColor;
+        }
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+          font-size: 18px;
+          font-weight: 700;
+          color: $navTextColor;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+/* --------------------------------------------------
+	main
+-------------------------------------------------- */
+.main {
+  overflow: hidden;
+}
+
+/* 下層ページ共通キービジュアル（背景画像は各ページのSCSSで指定） */
+.pageKv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 236px;
+  background: $navBgColor;
+  .pageKvContainer {
+    padding: 0 20px;
+    text-align: center;
+    h1 {
+      font-family: $baseFont;
+      font-size: 50px;
+      font-weight: 700;
+      line-height: 1.3;
+      color: #ffffff;
+    }
+  }
+}
+
+/* パンくず */
+.topicPath {
+  font-family: $baseFont;
+  font-weight: 700;
+  border-bottom: 1px solid $navLineColor;
+  .topicPathContainer {
+    max-width: 1218px;
+    margin: 0 auto;
+    padding: 0 20px;
+    ul {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      line-height: 40px;
+      color: $navTextColor;
+      li {
+        text-decoration: underline;
+        a {
+          display: inline-block;
+          color: $crumbColor;
+          text-decoration: none;
+        }
+        & + li::before {
+          content: ">";
+          display: inline-block;
+          margin: 0 18px;
+          font-weight: 400;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+.secWrap {
+  max-width: 1640px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.secWrap01 {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.secWrap02 {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.mapBox {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding: 0 0 45%;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+/* --------------------------------------------------
+	footer
+-------------------------------------------------- */
+.footer {
+  font-family: $baseFont;
+  font-weight: 700;
+  .footerOrder {
+    position: relative;
+    padding: 65px 20px 95px;
+    background: $orderBgColor;
+    .pageTop {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      width: 50px;
+      height: 50px;
+      a {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: $purpleColor;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          width: 12px;
+          height: 12px;
+          margin: auto;
+          border-top: 3px solid #ffffff;
+          border-left: 3px solid #ffffff;
+          transform: rotate(45deg);
+        }
+      }
+    }
+    .footerOrderContainer {
+      position: relative;
+      max-width: 829px;
+      margin: 0 auto;
+      .footerOrderImage {
+        position: absolute;
+        top: 38px;
+        left: -91px;
+        width: 119px;
+      }
+      .footerOrderContent {
+        .footerOrderTitle {
+          text-align: center;
+          .footerOrderLead {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 0 58px 0 0;
+            .footerOrderLeadImage {
+              width: 87px;
+            }
+            .footerOrderLeadText {
+              margin: 0 0 7px -26px;
+              font-size: 21px;
+              line-height: 1;
+              color: $grayColor;
+            }
+          }
+          h2 {
+            margin: 22px 0 0;
+            font-size: 55px;
+            line-height: 1.3;
+            color: $orderTtlColor;
+          }
+        }
+        .footerOrderButtons {
+          display: flex;
+          gap: 25px;
+          margin: 51px 0 0;
+          .footerBtnLine,
+          .footerBtnMail {
+            flex: 1 1 0;
+            a {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              height: 103px;
+              color: #ffffff;
+              text-align: center;
+              border-radius: 5px;
+              .footerBtnTitle {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 16px;
+                font-size: 35px;
+                line-height: 1.1;
+              }
+              .footerBtnText {
+                margin: 6px 0 0;
+                font-size: 18px;
+                line-height: 1.5;
+              }
+            }
+          }
+          .footerBtnLine {
+            a {
+              background: $greenColor;
+              .footerBtnTitle {
+                .footerBtnTitleImage {
+                  width: 31px;
+                }
+              }
+            }
+          }
+          .footerBtnMail {
+            a {
+              background: $purpleColor;
+              .footerBtnTitle {
+                .footerBtnTitleImage {
+                  width: 27px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .footerMain {
+    padding: 96px 20px 40px;
+    color: $orderBgColor;
+    text-align: center;
+    background: $footerBgColor;
+    .footerNav {
+      ul {
+        display: flex;
+        justify-content: center;
+        gap: 124px;
+        li {
+          a {
+            display: inline-block;
+            font-size: 18px;
+            line-height: 1.5;
+            color: #ffffff;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .footerLogo {
+      margin: 69px 0 0;
+      font-size: 55px;
+      line-height: 1;
+      a {
+        display: inline-block;
+        color: #ffffff;
+      }
+    }
+    .footerInfo {
+      margin: 16px 0 0;
+      font-size: 18px;
+      line-height: 38px;
+      .footerContact {
+        margin: 20px 0 0;
+        .footerTel {
+          a {
+            display: inline-block;
+            color: $orderBgColor;
+          }
+        }
+      }
+    }
+    .footerSns {
+      margin: 60px 0 0;
+      .snsList {
+        justify-content: center;
+      }
+    }
+  }
+  .footerCopyright {
+    padding: 20px 20px;
+    font-size: 16px;
+    line-height: 28px;
+    color: $footerCopyColor;
+    text-align: center;
+    border-top: 2px solid $footerLineColor;
+    background: $footerBgColor;
+  }
+}
+
+/* --------------------------------------------------
+	fadeAnimation
+-------------------------------------------------- */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff; /* 背景カラー */
+  z-index: 9999; /* 一番手前に */
+  pointer-events: none; /* 他の要素にアクセス可能にするためにポインターイベントは無効に */
+  opacity: 0; /* 初期値では非表示 */
+  -webkit-transition: opacity 0.8s ease; /* アニメーション時間は 0.8秒 */
+  -ms-transition: opacity 0.8s ease;
+  -moz-transition: opacity 0.8s ease;
+  transition: opacity 0.8s ease;
+}
+
+/*body要素に.fadeoutセレクタがある場合には、レイヤーが表示されるようにopacityを１に設定します。*/
+body.fadeout::after {
+  opacity: 1;
+}
+
+/*お好みで、.fadeoutセレクタ以下の他の要素にもアニメーション用のCSSを定義します*/
+/*DEMOではページ遷移時にarticle要素のスケールもアニメーションさせています*/
+body.fadeout article {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}

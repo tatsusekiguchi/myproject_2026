@@ -1,0 +1,269 @@
+@charset "UTF-8";
+@import "./mixin";
+@import "./mod";
+/* CSS Document */
+
+/*===================================================
+	共通CSS（SMP）
+===================================================*/
+
+/* --------------------------------------------------
+	base
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  body {
+    min-width: 0;
+    padding: 60px 0 0;
+    font-size: $SPfontSize;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  /*改行*/
+  .pcBreak {
+    display: none;
+  }
+  .spBreak {
+    display: block;
+  }
+  /*spのみ表示*/
+  .pcHidden {
+    display: block;
+  }
+  .spHidden {
+    display: none;
+  }
+  #sideBtn {
+    display: none;
+  }
+  .topicPath {
+    display: none;
+  }
+}
+/* --------------------------------------------------
+	header
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    .headerContainer {
+      height: 60px;
+      padding: 0 15px;
+      .headerLogo {
+        a {
+          width: 100px;
+        }
+      }
+      .headerTel {
+        margin: 0 12px 0 0;
+        .headerTelText {
+          font-size: 11px;
+        }
+        .headerTelNum {
+          font-size: 18px;
+        }
+      }
+      .headerSns {
+        display: none;
+      }
+      .hamburger {
+        position: relative;
+        display: block;
+        flex: 0 0 auto;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        .span {
+          position: absolute;
+          right: 0;
+          left: 0;
+          width: 26px;
+          height: 3px;
+          margin: 0 auto;
+          background: #ffffff;
+          transition: 0.3s;
+          &:nth-child(1) {
+            top: 11px;
+          }
+          &:nth-child(2) {
+            top: 18.5px;
+          }
+          &:nth-child(3) {
+            top: 26px;
+          }
+        }
+        &.is-open {
+          .span {
+            &:nth-child(1) {
+              top: 18.5px;
+              transform: rotate(45deg);
+            }
+            &:nth-child(2) {
+              opacity: 0;
+            }
+            &:nth-child(3) {
+              top: 18.5px;
+              transform: rotate(-45deg);
+            }
+          }
+        }
+      }
+    }
+    .navBox {
+      position: fixed;
+      top: 60px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      overflow-y: auto;
+      background: $navBgColor;
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.4s;
+      &.active {
+        visibility: visible;
+        opacity: 1;
+      }
+      .navBoxInner {
+        padding: 20px 20px 40px;
+        .navList {
+          ul {
+            li {
+              border-bottom: 1px solid $navLineColor;
+              a {
+                display: block;
+                padding: 18px 10px;
+                font-size: 16px;
+                font-weight: 700;
+                color: $navTextColor;
+              }
+            }
+          }
+        }
+        .navBoxSns {
+          margin: 30px 0 0;
+          .snsList {
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* --------------------------------------------------
+	nav
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .gNav {
+    display: none;
+  }
+}
+
+/* --------------------------------------------------
+	main
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .main {
+  }
+  .pageKv {
+    height: 120px;
+    .pageKvContainer {
+      h1 {
+        font-size: 26px;
+      }
+    }
+  }
+  .mapBox {
+    padding: 0 0 70%;
+  }
+}
+
+/* --------------------------------------------------
+	footer
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+  .footer {
+    .footerOrder {
+      padding: 40px 15px 50px;
+      .pageTop {
+        top: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+      }
+      .footerOrderContainer {
+        .footerOrderImage {
+          position: static;
+          width: 56px;
+          margin: 0 auto 10px;
+        }
+        .footerOrderContent {
+          .footerOrderTitle {
+            .footerOrderLead {
+              padding: 0;
+              .footerOrderLeadImage {
+                width: 60px;
+              }
+              .footerOrderLeadText {
+                margin: 0 0 4px -18px;
+                font-size: 14px;
+              }
+            }
+            h2 {
+              margin: 14px 0 0;
+              font-size: 26px;
+            }
+          }
+          .footerOrderButtons {
+            flex-direction: column;
+            gap: 15px;
+            margin: 30px 0 0;
+            .footerBtnLine,
+            .footerBtnMail {
+              a {
+                height: 88px;
+                .footerBtnTitle {
+                  font-size: 28px;
+                }
+                .footerBtnText {
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .footerMain {
+      padding: 50px 15px 30px;
+      .footerNav {
+        display: none;
+      }
+      .footerLogo {
+        margin: 0;
+        font-size: 40px;
+      }
+      .footerInfo {
+        margin: 14px 0 0;
+        font-size: 14px;
+        line-height: 28px;
+        .footerContact {
+          margin: 14px 0 0;
+        }
+      }
+      .footerSns {
+        margin: 36px 0 0;
+      }
+    }
+    .footerCopyright {
+      padding: 14px 15px;
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+}

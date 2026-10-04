@@ -1,0 +1,121 @@
+@charset "UTF-8";
+@import "./mixin";
+@import "./mod";
+/* CSS Document */
+
+/*===================================================
+	画面用CSS（PC/SMP）
+===================================================*/
+
+/*////////////////////////////////////////////////////////////
+	TOP
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .topMain {
+    .topKv {
+      height: 460px;
+      .topKvContainer {
+        max-width: none;
+        padding: 0 20px;
+        .topKvCopy {
+          top: 30px;
+          right: 15px;
+          width: 96px;
+          h1 {
+            font-size: 34px;
+            line-height: 48px;
+          }
+        }
+        .topKvCatch {
+          top: 60px;
+          right: 125px;
+          gap: 1px;
+          width: 65px;
+          .txtBox {
+            p {
+              height: auto;
+              padding: 10px 0;
+              font-size: 18px;
+              line-height: 32px;
+            }
+            &:last-child {
+              p {
+                height: auto;
+              }
+            }
+          }
+        }
+        .topKvLead {
+          right: 15px;
+          bottom: 20px;
+          left: 15px;
+          width: auto;
+          height: auto;
+          padding: 10px 14px;
+          p {
+            font-size: clamp(12px, 3.5vw, 15px);
+            line-height: 22px;
+          }
+          p + p {
+            font-size: 11px;
+            line-height: 18px;
+          }
+        }
+      }
+    }
+    .concept {
+      min-height: 900px;
+      .conceptContainer {
+        padding: 330px 0 60px;
+        .conceptTitle {
+          max-width: 600px;
+          .conceptImage {
+            top: -145px;
+            left: 0;
+            width: 60px;
+          }
+          .secTtl {
+            p {
+              font-size: 16px;
+              line-height: 26px;
+            }
+            h2 {
+              margin: 10px 0 0;
+              font-size: clamp(26px, 5.5vw, 48px);
+              line-height: 1.5;
+            }
+          }
+        }
+        .txtBox {
+          max-width: 600px;
+          margin: 36px auto 0;
+          p {
+            font-size: 14px;
+            line-height: 28px;
+          }
+          p + p {
+            margin: 12px 0 0;
+          }
+        }
+        .btn {
+          margin: 30px 0 0;
+          a {
+            min-height: 56px;
+            padding: 16px 26px;
+            font-size: 14px;
+            line-height: 24px;
+            border-radius: 28px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+	temp
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .tempMain {
+  }
+}
