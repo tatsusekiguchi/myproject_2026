@@ -1,0 +1,14 @@
+- title = 'ブログ詳細｜BEKKO（神戸ぶどう農園）'
+- description = '兵庫県加西市のぶどう農園BEKKOのブログ記事です。農園のお知らせや日々の様子をお届けします。'
+- keywords = 'BEKKO, ブログ, 加西市, ぶどう農園'
+- root_path = '../'
+- page_name = 'blog'
+doctype html
+include /site.pug
+html(lang='ja')
+	head
+		include /common/head.pug
+	body.page
+		include /common/header.pug
+		include ../../layouts/blog.pug
+		include /common/footer.pug

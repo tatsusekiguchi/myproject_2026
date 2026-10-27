@@ -467,10 +467,6 @@
 .serviceMain .sectionStrategy .strategyNote {
   margin: 22px 0 0;
 }
-.serviceMain .sectionTuition .secContainer,
-.serviceMain .sectionConsult .secContainer {
-  padding: 30px 20px;
-}
 .serviceMain .sectionTuition .pageSecTtl,
 .serviceMain .sectionConsult .pageSecTtl {
   margin: 0 0 20px;
@@ -482,8 +478,21 @@
   font-size: 13px;
   line-height: 1.9;
 }
+@media (max-width: 1024px) {
+  .serviceMain .sectionTuition .secContainer {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .serviceMain .sectionTuition .secContainer .tuitionPanel {
+    padding: 30px 20px;
+    border-radius: 18px;
+  }
+}
 .serviceMain .sectionConsult {
   margin-bottom: 50px;
+}
+.serviceMain .sectionConsult .secContainer {
+  padding: 30px 20px;
 }
 .serviceMain .bottomSection {
   padding: 40px 0;
@@ -770,7 +779,20 @@
   access
 ///////////////////////////////////////////////////////////*/
 .accessMain .sectionAccess {
-  padding: 40px 0 60px;
+  padding: 24px 0 60px;
+}
+@media (max-width: 1024px) {
+  .accessMain .sectionAccess .slidePanel {
+    margin: 0 0 24px;
+  }
+  .accessMain .sectionAccess .slidePanel .slideBox ul li {
+    width: 72vw;
+    min-width: 0;
+    margin: 0 10px 0 0;
+  }
+  .accessMain .sectionAccess .slidePanel .slideBox ul li img {
+    border-radius: 14px;
+  }
 }
 .accessMain .sectionAccess .accessPanel {
   padding: 32px 20px;

@@ -22,6 +22,17 @@ get_header();
 			</div>
 		</div>
 		<section class="sectionAccess">
+			<div class="slidePanel">
+				<div class="slideBox">
+					<ul>
+						<li><img src="<?php echo esc_url( aichi_koushikai_asset_url( 'image/access/access_slide_01.png' ) ); ?>" alt="教室の様子" width="382" height="302"></li>
+						<li><img src="<?php echo esc_url( aichi_koushikai_asset_url( 'image/access/access_slide_02.png' ) ); ?>" alt="教室の様子" width="382" height="302"></li>
+						<li><img src="<?php echo esc_url( aichi_koushikai_asset_url( 'image/access/access_slide_03.png' ) ); ?>" alt="教室の様子" width="382" height="302"></li>
+						<li><img src="<?php echo esc_url( aichi_koushikai_asset_url( 'image/access/access_slide_04.png' ) ); ?>" alt="教室の様子" width="382" height="302"></li>
+						<li><img src="<?php echo esc_url( aichi_koushikai_asset_url( 'image/access/access_slide_05.png' ) ); ?>" alt="教室の様子" width="382" height="302"></li>
+					</ul>
+				</div>
+			</div>
 			<div class="secWrap">
 				<div class="accessPanel">
 					<div class="accessOverview">

@@ -1,0 +1,328 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+  画面用CSS（PC/SMP）
+===================================================*/
+/*////////////////////////////////////////////////////////////
+  TOP
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .topMain .topKv .secWrap01 .topKvContainer {
+    padding: 64px 0 72px;
+  }
+  .topMain .topKv .secWrap01 .topKvContainer .topKvLogo {
+    width: 200px;
+  }
+  .topMain .topKv .secWrap01 .topKvContainer .topKvTitle {
+    margin: 40px 0 0;
+  }
+  .topMain .topKv .secWrap01 .topKvContainer .topKvTitle h1 {
+    font-size: clamp(22px, 4.2vw, 36px);
+    letter-spacing: 0;
+  }
+  .topMain .topKv .secWrap01 .topKvContainer .topKvText {
+    margin: 16px 0 0;
+  }
+  .topMain .topKv .secWrap01 .topKvContainer .topKvText p {
+    font-size: 14px;
+    line-height: 1.9;
+  }
+  .topMain .newsSection .secWrap01 .newsContainer {
+    flex-direction: column;
+    gap: 24px;
+    align-items: stretch;
+    padding: 32px 0;
+  }
+  .topMain .newsSection .secWrap01 .newsContainer .secTtl {
+    flex-basis: auto;
+  }
+  .topMain .newsSection .secWrap01 .newsContainer .newsList .newsItem {
+    flex-direction: column;
+    gap: 0;
+    align-items: stretch;
+    font-size: 14px;
+  }
+  .topMain .newsSection .secWrap01 .newsContainer .newsList .newsItem .newsDate {
+    flex-basis: auto;
+  }
+  .topMain .aboutSection .secWrap01 .aboutContainer {
+    padding: 80px 0 0;
+  }
+  .topMain .aboutSection .secWrap01 .aboutContainer .txtBox {
+    font-size: 14px;
+    line-height: 2;
+  }
+  .topMain .productsSection .secWrap01 .productsContainer {
+    padding: 80px 0 0;
+  }
+  .topMain .productsSection .secWrap01 .productsContainer .productsList {
+    gap: 28px;
+    margin: 40px 0 0;
+  }
+  .topMain .productsSection .secWrap01 .productsContainer .productsList .productItem {
+    width: calc((100% - 28px) / 2);
+  }
+  .topMain .productsSection .secWrap01 .productsContainer .productsList .productItem .productContent {
+    padding: 16px 20px 24px;
+  }
+  .topMain .productsSection .secWrap01 .productsContainer .productsList .productItem .productContent .productText p {
+    font-size: 14px;
+  }
+  .topMain .productsSection .secWrap01 .productsContainer .productsList .productItem .productContent .productText h3 {
+    margin: 6px 0 0;
+    font-size: 20px;
+  }
+  .topMain .productsSection .secWrap01 .productsContainer .productsList .productItem .productContent .btnMore {
+    margin: 20px 0 0;
+  }
+  .topMain .faqSection .secWrap01 .faqContainer {
+    padding: 88px 0 0;
+  }
+  .topMain .faqSection .secWrap01 .faqContainer .faqList {
+    margin: 40px 0 0;
+  }
+  .topMain .faqSection .secWrap01 .faqContainer .faqList .faqItem .dt {
+    padding: 22px 32px 22px 38px;
+    font-size: 14px;
+  }
+  .topMain .faqSection .secWrap01 .faqContainer .faqList .faqItem .dt .faqMark {
+    left: 4px;
+    width: 22px;
+    font-size: 24px;
+  }
+  .topMain .faqSection .secWrap01 .faqContainer .faqList .faqItem .dt::after {
+    right: 8px;
+    width: 10px;
+    height: 10px;
+  }
+  .topMain .faqSection .secWrap01 .faqContainer .faqList .faqItem .dd .faqAnswer {
+    gap: 12px;
+    padding: 0 4px 24px;
+  }
+  .topMain .faqSection .secWrap01 .faqContainer .faqList .faqItem .dd .faqAnswer .faqMark {
+    flex-basis: 22px;
+    font-size: 24px;
+  }
+  .topMain .faqSection .secWrap01 .faqContainer .faqList .faqItem .dd .faqAnswer .faqText {
+    font-size: 14px;
+    line-height: 2;
+  }
+  .topMain .instaSection .secWrap01 .instaContainer {
+    padding: 88px 0 120px;
+  }
+  .topMain .instaSection .secWrap01 .instaContainer .instaPanel {
+    max-width: 700px;
+    margin: 40px auto 0;
+  }
+  .topMain .instaSection .secWrap01 .instaContainer .instaPanel .instaList .webgene-blog .webgene-item {
+    width: calc((100% - 2px) / 2);
+  }
+  .topMain .instaSection .secWrap01 .instaContainer .btnMore {
+    margin: 32px 0 0;
+  }
+}
+@media (max-width: 600px) {
+  .topMain .productsSection .secWrap01 .productsContainer .productsList .productItem {
+    width: 100%;
+  }
+}
+/*////////////////////////////////////////////////////////////
+  下層の基本セクション
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .tempMain .sec01 .secWrap01 .secContainer {
+    flex-direction: column;
+    gap: 28px;
+    align-items: stretch;
+    padding: 40px 0;
+  }
+  .tempMain .sec01 .secWrap01 .secContainer .imgBox {
+    flex-basis: auto;
+  }
+}
+/*////////////////////////////////////////////////////////////
+  製品ページ共通（02〜05）
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .productsMain .productKv .secWrap01 .productKvContainer {
+    flex-direction: column;
+    gap: 40px;
+    align-items: stretch;
+    padding: 56px 0 64px;
+  }
+  .productsMain .productKv .secWrap01 .productKvContainer .productKvTitle {
+    flex-basis: auto;
+  }
+  .productsMain .productKv .secWrap01 .productKvContainer .productKvTitle .ttl h1 {
+    font-size: clamp(48px, 8vw, 68px);
+  }
+  .productsMain .productKv .secWrap01 .productKvContainer .productKvContent .productTypeList .productTypeItem .ttl h2 {
+    font-size: 18px;
+  }
+  .productsMain .productShowcase {
+    margin: 0 0 56px;
+  }
+  .productsMain .productShowcase .showcaseSlider .showcaseSlide {
+    width: 46%;
+  }
+  .productsMain .productNav .secWrap01 .productNavContainer .productNavTitle h2 {
+    font-size: 22px;
+  }
+  .productsMain .productNav .secWrap01 .productNavContainer .linkList ul {
+    gap: 10px;
+  }
+  .productsMain .productNav .secWrap01 .productNavContainer .linkList ul li {
+    width: calc((100% - 10px) / 2);
+  }
+  .productsMain .productNav .secWrap01 .productNavContainer .linkList ul li a {
+    height: 100%;
+    padding: 10px 28px 10px 12px;
+  }
+  .productsMain .productsSection.odiamSection {
+    margin: 64px 0 0;
+    padding: 64px 0 80px;
+  }
+  .productsMain .productsSection.odiamSection .secWrap01 .productsContainer .odiamAbout {
+    margin: 40px 0 0;
+    padding: 28px 20px;
+  }
+  .productsMain .productsSection.odiamSection .secWrap01 .productsContainer .odiamAbout .ttl h3 {
+    font-size: 22px;
+  }
+  .productsMain .productsSection .secWrap01 .productsContainer .productBlock {
+    padding: 56px 0 0;
+  }
+  .productsMain .productsSection .secWrap01 .productsContainer .productBlock .productTitle h2,
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productTitle h3 {
+    font-size: 18px;
+  }
+  .productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer {
+    flex-direction: column;
+    gap: 28px;
+    align-items: stretch;
+    margin: 28px 0 0;
+  }
+  .productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage {
+    flex-basis: auto;
+  }
+  .productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage .productGallery {
+    max-width: 522px;
+    margin: 0 auto;
+  }
+  .productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage .productGallery .galleryView .galleryPrev {
+    left: -16px;
+  }
+  .productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage .productGallery .galleryView .galleryNext {
+    right: -16px;
+  }
+  .productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage .productGallery .galleryThumbs .thumbItem a .imgBox {
+    height: 72px;
+  }
+  .productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage .productPlaceholder {
+    width: 100%;
+    max-width: 522px;
+    margin: 0 auto;
+  }
+  .productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage .imgBox {
+    max-width: 522px;
+    margin: 0 auto;
+  }
+  .productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productContent .productLead h3,
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productContent .productLead h4 {
+    font-size: 22px;
+  }
+  .productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productContent .productSpec {
+    padding: 12px;
+  }
+  .productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productContent .productSpec .specRow {
+    gap: 8px;
+  }
+  .productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productContent .productSpec .specRow .specLabel {
+    flex-basis: 72px;
+  }
+  .productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productContent .productButtons {
+    gap: 12px;
+    margin: 24px 0 0;
+  }
+  .productsMain .uvSection {
+    padding: 64px 0 0;
+  }
+  .productsMain .uvSection .secWrap01 .uvPanel {
+    padding: 28px 20px;
+  }
+  .productsMain .uvSection .secWrap01 .uvPanel .uvTitle h2 {
+    font-size: 32px;
+  }
+  .productsMain .uvSection .secWrap01 .uvPanel .uvTitle p {
+    font-size: 20px;
+  }
+  .productsMain .uvSection .secWrap01 .uvPanel .uvContainer {
+    flex-direction: column;
+    gap: 28px;
+    align-items: stretch;
+    margin: 28px 0 0;
+  }
+  .productsMain .uvSection .secWrap01 .uvPanel .uvContainer .uvImage {
+    flex-basis: auto;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+  .productsMain .productSecTitle h2 {
+    font-size: 20px;
+  }
+  .productsMain .productFaq .secWrap01 .productFaqContainer {
+    padding: 64px 0 0;
+  }
+  .productsMain .productFaq .secWrap01 .productFaqContainer .faqList {
+    margin: 32px 0 0;
+  }
+  .productsMain .productFaq .secWrap01 .productFaqContainer .faqList .faqItem .dt {
+    gap: 12px;
+    padding: 20px 32px 20px 0;
+  }
+  .productsMain .productFaq .secWrap01 .productFaqContainer .faqList .faqItem .dt .faqMark {
+    flex-basis: 22px;
+    font-size: 24px;
+  }
+  .productsMain .productFaq .secWrap01 .productFaqContainer .faqList .faqItem .dt::after {
+    right: 8px;
+    width: 10px;
+    height: 10px;
+  }
+  .productsMain .productFaq .secWrap01 .productFaqContainer .faqList .faqItem .dd .faqAnswer {
+    gap: 12px;
+    padding: 0 0 20px;
+  }
+  .productsMain .productFaq .secWrap01 .productFaqContainer .faqList .faqItem .dd .faqAnswer .faqMark {
+    flex-basis: 22px;
+    font-size: 24px;
+  }
+  .productsMain .janSection .secWrap01 .janContainer {
+    padding: 80px 0 100px;
+  }
+  .productsMain .janSection .secWrap01 .janContainer .janTable {
+    margin: 32px 0 0;
+  }
+  .productsMain .janSection .secWrap01 .janContainer .janTable .table .thead .tr .th {
+    padding: 12px 20px;
+  }
+  .productsMain .janSection .secWrap01 .janContainer .janTable .table .janBrand {
+    padding: 12px 20px;
+  }
+  .productsMain .janSection .secWrap01 .janContainer .janTable .table .tbody .janGroup {
+    padding: 12px 20px;
+  }
+  .productsMain .janSection .secWrap01 .janContainer .janTable .table .tbody .tr .td {
+    padding: 12px 20px;
+  }
+}
+@media (max-width: 480px) {
+  .productsMain .productNav .secWrap01 .productNavContainer .linkList ul li {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .productsMain .productShowcase .showcaseSlider .showcaseSlide {
+    width: 84%;
+  }
+}

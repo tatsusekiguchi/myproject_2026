@@ -1,5 +1,109 @@
 // ▽メイン▽
 .bloglistMain.main
-	//- KV実装時は、KVの直後へ移動する
+	.pageKv
+		.pageKvContainer
+			h1 ブログ
 	include /common/nav.pug
+	- var page_label = 'ブログ'
+	include /common/topicPath.pug
+	.blogSection
+		.secWrap
+			.postContainer
+				include /common/blogCategories.pug
+				.blogPanel.blogPanel--list
+					section.webgene-blog
+						.webgene-header
+							h2 ブログ一覧
+						//- 記事リンク・画像・日付・タイトルはCMSが差し替える。
+						.webgene-item
+							a(href="blog")
+								.photo
+									img(src="https://sit-10272780.sibloo.com/system_panel/uploads/images/blog_list_img_01.png", alt="", loading="lazy", width="479", height="263")
+								.time
+									p 2026.○○.○○
+								.title
+									p 記事タイトルが入ります記事タイトルが入ります。
+						.webgene-item
+							a(href="blog")
+								.photo
+									img(src="https://sit-10272780.sibloo.com/system_panel/uploads/images/blog_placeholder.png", alt="", loading="lazy", width="479", height="263")
+								.time
+									p 2026.○○.○○
+								.title
+									p 記事タイトルが入ります記事タイトルが入ります。
+						.webgene-item
+							a(href="blog")
+								.photo
+									img(src="https://sit-10272780.sibloo.com/system_panel/uploads/images/blog_placeholder.png", alt="", loading="lazy", width="479", height="263")
+								.time
+									p 2026.○○.○○
+								.title
+									p 記事タイトルが入ります記事タイトルが入ります。
+						.webgene-item
+							a(href="blog")
+								.photo
+									img(src="https://sit-10272780.sibloo.com/system_panel/uploads/images/blog_placeholder.png", alt="", loading="lazy", width="479", height="263")
+								.time
+									p 2026.○○.○○
+								.title
+									p 記事タイトルが入ります記事タイトルが入ります。
+						.webgene-item
+							a(href="blog")
+								.photo
+									img(src="https://sit-10272780.sibloo.com/system_panel/uploads/images/blog_placeholder.png", alt="", loading="lazy", width="479", height="263")
+								.time
+									p 2026.○○.○○
+								.title
+									p 記事タイトルが入ります記事タイトルが入ります。
+						.webgene-item
+							a(href="blog")
+								.photo
+									img(src="https://sit-10272780.sibloo.com/system_panel/uploads/images/blog_placeholder.png", alt="", loading="lazy", width="479", height="263")
+								.time
+									p 2026.○○.○○
+								.title
+									p 記事タイトルが入ります記事タイトルが入ります。
+						.webgene-item
+							a(href="blog")
+								.photo
+									img(src="https://sit-10272780.sibloo.com/system_panel/uploads/images/blog_placeholder.png", alt="", loading="lazy", width="479", height="263")
+								.time
+									p 2026.○○.○○
+								.title
+									p 記事タイトルが入ります記事タイトルが入ります。
+						.webgene-item
+							a(href="blog")
+								.photo
+									img(src="https://sit-10272780.sibloo.com/system_panel/uploads/images/blog_placeholder.png", alt="", loading="lazy", width="479", height="263")
+								.time
+									p 2026.○○.○○
+								.title
+									p 記事タイトルが入ります記事タイトルが入ります。
+						.webgene-item
+							a(href="blog")
+								.photo
+									img(src="https://sit-10272780.sibloo.com/system_panel/uploads/images/blog_placeholder.png", alt="", loading="lazy", width="479", height="263")
+								.time
+									p 2026.○○.○○
+								.title
+									p 記事タイトルが入ります記事タイトルが入ります。
+						.webgene-pagination
+							//- CMSがページ番号・選択状態・リンク先を差し替える。
+							ul
+								li.prev
+									a(href="") &lt;
+								li.number
+									a(href="") 1
+								li.number
+									a(href="") 2
+								li.number.selected
+									a(href="") 3
+								li.number
+									a(href="") 4
+								li.number
+									a(href="") 5
+								li.number
+									a(href="") 6
+								li.next
+									a(href="") &gt;
 // △メイン△

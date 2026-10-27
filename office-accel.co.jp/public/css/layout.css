@@ -1,0 +1,856 @@
+@charset "UTF-8";
+/* CSS Document */
+/*===================================================
+  画面用CSS（PC/SMP）
+===================================================*/
+/*////////////////////////////////////////////////////////////
+  TOP
+///////////////////////////////////////////////////////////*/
+.topMain .topKv {
+  background: radial-gradient(ellipse at center, transparent 15%, #000000 75%), linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.7)), url("../image/top/top_kv_bg.jpg") center/cover no-repeat;
+}
+.topMain .topKv .secWrap01 .topKvContainer {
+  padding: 72px 0 84px;
+  text-align: center;
+}
+.topMain .topKv .secWrap01 .topKvContainer .topKvLogo {
+  width: 280px;
+  margin: 0 auto;
+}
+.topMain .topKv .secWrap01 .topKvContainer .topKvTitle {
+  margin: 24px 0 0;
+}
+.topMain .topKv .secWrap01 .topKvContainer .topKvTitle h1 {
+  font-size: 42px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+.topMain .topKv .secWrap01 .topKvContainer .topKvText {
+  margin: 10px 0 0;
+}
+.topMain .topKv .secWrap01 .topKvContainer .topKvText p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #cacaca;
+  letter-spacing: 0.06em;
+}
+.topMain .newsSection {
+  background: linear-gradient(90deg, #000000, #0b0b0b 50%, #000000);
+}
+.topMain .newsSection .secWrap01 .newsContainer {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+  padding: 26px 60px;
+}
+.topMain .newsSection .secWrap01 .newsContainer .secTtl {
+  flex: 0 0 126px;
+}
+.topMain .newsSection .secWrap01 .newsContainer .newsList {
+  flex: 1;
+  min-width: 0;
+}
+.topMain .newsSection .secWrap01 .newsContainer .newsList .newsItem {
+  display: flex;
+  gap: 48px;
+  align-items: baseline;
+  font-size: inherit;
+  line-height: 2;
+}
+.topMain .newsSection .secWrap01 .newsContainer .newsList .newsItem + .newsItem {
+  margin: 10px 0 0;
+}
+.topMain .newsSection .secWrap01 .newsContainer .newsList .newsItem .newsDate {
+  flex: 0 0 96px;
+  color: #888888;
+}
+.topMain .newsSection .secWrap01 .newsContainer .newsList .newsItem .newsText {
+  flex: 1;
+  min-width: 0;
+}
+.topMain .newsSection .secWrap01 .newsContainer .newsList .newsItem .newsText p {
+  overflow-wrap: anywhere;
+}
+.topMain .aboutSection .secWrap01 .aboutContainer {
+  padding: 148px 0 0;
+  text-align: center;
+}
+.topMain .aboutSection .secWrap01 .aboutContainer .txtBox {
+  margin: 28px 0 0;
+  font-size: inherit;
+  line-height: 1.8;
+}
+.topMain .productsSection .secWrap01 .productsContainer {
+  padding: 148px 0 0;
+}
+.topMain .productsSection .secWrap01 .productsContainer .txtBox {
+  margin: 28px 0 0;
+  text-align: center;
+}
+.topMain .productsSection .secWrap01 .productsContainer .productsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 54px 68px;
+  margin: 68px 0 0;
+}
+.topMain .productsSection .secWrap01 .productsContainer .productsList .productItem {
+  width: calc((100% - 68px) / 2);
+  border: 1px solid #262626;
+}
+.topMain .productsSection .secWrap01 .productsContainer .productsList .productItem .productImage a {
+  display: block;
+}
+.topMain .productsSection .secWrap01 .productsContainer .productsList .productItem .productImage a .imgBox img {
+  aspect-ratio: 568/403;
+  object-fit: cover;
+}
+.topMain .productsSection .secWrap01 .productsContainer .productsList .productItem .productContent {
+  padding: 16px 34px 24px;
+}
+.topMain .productsSection .secWrap01 .productsContainer .productsList .productItem .productContent .productText p {
+  font-size: inherit;
+  color: #c30e23;
+}
+.topMain .productsSection .secWrap01 .productsContainer .productsList .productItem .productContent .productText h3 {
+  margin: 2px 0 0;
+  font-size: 26px;
+  font-weight: normal;
+  line-height: 1.5;
+}
+.topMain .productsSection .secWrap01 .productsContainer .productsList .productItem .productContent .btnMore {
+  margin: 16px 0 0;
+}
+.topMain .faqSection .secWrap01 .faqContainer {
+  padding: 168px 0 0;
+}
+.topMain .faqSection .secWrap01 .faqContainer .txtBox {
+  margin: 28px 0 0;
+  text-align: center;
+}
+.topMain .faqSection .secWrap01 .faqContainer .faqList {
+  margin: 64px 0 0;
+}
+.topMain .faqSection .secWrap01 .faqContainer .faqList .faqItem {
+  border-bottom: 1px solid #262626;
+}
+.topMain .faqSection .secWrap01 .faqContainer .faqList .faqItem .dt {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 22px 52px 22px 64px;
+  font-size: inherit;
+  line-height: 1.8;
+  color: #eeeeee;
+  text-align: left;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.topMain .faqSection .secWrap01 .faqContainer .faqList .faqItem .dt .faqMark {
+  position: absolute;
+  top: 22px;
+  left: 20px;
+  width: 24px;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1;
+  color: #c30e23;
+}
+.topMain .faqSection .secWrap01 .faqContainer .faqList .faqItem .dt::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 24px;
+  bottom: 6px;
+  width: 12px;
+  height: 12px;
+  margin: auto 0;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  transform: rotate(45deg);
+}
+.topMain .faqSection .secWrap01 .faqContainer .faqList .faqItem .dt.is-open::after {
+  bottom: -6px;
+  transform: rotate(225deg);
+}
+.topMain .faqSection .secWrap01 .faqContainer .faqList .faqItem .dd {
+  display: none;
+}
+.topMain .faqSection .secWrap01 .faqContainer .faqList .faqItem .dd .faqAnswer {
+  display: flex;
+  gap: 20px;
+  align-items: baseline;
+  padding: 0 20px 28px;
+}
+.topMain .faqSection .secWrap01 .faqContainer .faqList .faqItem .dd .faqAnswer .faqMark {
+  flex: 0 0 24px;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1;
+}
+.topMain .faqSection .secWrap01 .faqContainer .faqList .faqItem .dd .faqAnswer .faqText {
+  flex: 1;
+  min-width: 0;
+  font-size: inherit;
+  line-height: 1.8;
+}
+.topMain .instaSection .secWrap01 .instaContainer {
+  padding: 180px 0 240px;
+}
+.topMain .instaSection .secWrap01 .instaContainer .txtBox {
+  margin: 28px 0 0;
+  text-align: center;
+}
+.topMain .instaSection .secWrap01 .instaContainer .instaPanel {
+  max-width: 1060px;
+  margin: 68px auto 0;
+}
+.topMain .instaSection .secWrap01 .instaContainer .instaPanel .instaList .webgene-blog {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+}
+.topMain .instaSection .secWrap01 .instaContainer .instaPanel .instaList .webgene-blog .webgene-item {
+  width: calc((100% - 6px) / 4);
+}
+.topMain .instaSection .secWrap01 .instaContainer .instaPanel .instaList .webgene-blog .webgene-item a {
+  display: block;
+}
+.topMain .instaSection .secWrap01 .instaContainer .instaPanel .instaList .webgene-blog .webgene-item a:focus-visible {
+  outline-offset: -3px;
+}
+.topMain .instaSection .secWrap01 .instaContainer .instaPanel .instaList .webgene-blog .webgene-item a .photo {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  padding: 0 0 131.226766%;
+  background: #101010;
+}
+.topMain .instaSection .secWrap01 .instaContainer .instaPanel .instaList .webgene-blog .webgene-item a .photo img,
+.topMain .instaSection .secWrap01 .instaContainer .instaPanel .instaList .webgene-blog .webgene-item a .photo video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.topMain .instaSection .secWrap01 .instaContainer .btnMore {
+  margin: 56px 0 0;
+  text-align: center;
+}
+.topMain .instaSection .secWrap01 .instaContainer .btnMore a {
+  width: 203px;
+  padding: 6px 32px;
+}
+
+/*////////////////////////////////////////////////////////////
+  下層の基本セクション
+///////////////////////////////////////////////////////////*/
+.tempMain .sec01 .secWrap01 .secContainer {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  padding: 64px 0;
+}
+.tempMain .sec01 .secWrap01 .secContainer .secContent {
+  flex: 1;
+  min-width: 0;
+}
+.tempMain .sec01 .secWrap01 .secContainer .secContent .txtBox {
+  margin: 24px 0 0;
+}
+.tempMain .sec01 .secWrap01 .secContainer .secContent .btnMore {
+  margin: 28px 0 0;
+}
+.tempMain .sec01 .secWrap01 .secContainer .imgBox {
+  flex: 0 0 42%;
+}
+
+/*////////////////////////////////////////////////////////////
+  製品ページ共通（02〜05）
+///////////////////////////////////////////////////////////*/
+.productsMain .productKv .secWrap01 .productKvContainer {
+  display: flex;
+  gap: 100px;
+  align-items: center;
+  padding: 100px 0 110px;
+}
+.productsMain .productKv .secWrap01 .productKvContainer .productKvTitle {
+  flex: 0 0 440px;
+}
+.productsMain .productKv .secWrap01 .productKvContainer .productKvTitle .ttl h1 {
+  font-size: 76px;
+  font-weight: normal;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+}
+.productsMain .productKv .secWrap01 .productKvContainer .productKvTitle .productKvLabel {
+  display: inline-block;
+  margin: 28px 0 0;
+  padding: 6px 18px;
+  background: #c30e23;
+}
+.productsMain .productKv .secWrap01 .productKvContainer .productKvContent {
+  flex: 1;
+  min-width: 0;
+}
+.productsMain .productKv .secWrap01 .productKvContainer .productKvContent .productTypeList {
+  margin: 24px 0 0;
+}
+.productsMain .productKv .secWrap01 .productKvContainer .productKvContent .productTypeList .productTypeItem {
+  margin: 16px 0 0;
+}
+.productsMain .productKv .secWrap01 .productKvContainer .productKvContent .productTypeList .productTypeItem .ttl h2 {
+  font-size: 20px;
+}
+.productsMain .productKv .secWrap01 .productKvContainer .productKvContent .productTypeList .productTypeItem .txtBox {
+  color: #aaaaaa;
+}
+.productsMain .productKv .secWrap01 .productKvContainer .productKvContent .btnGuide {
+  margin: 24px 0 0;
+}
+.productsMain .productKv .secWrap01 .productKvContainer .productKvContent .btnGuide a {
+  position: relative;
+  display: inline-block;
+  padding: 8px 16px 8px 46px;
+  border: 1px solid #555555;
+}
+.productsMain .productKv .secWrap01 .productKvContainer .productKvContent .btnGuide a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 12px;
+  width: 24px;
+  height: 24px;
+  margin: auto 0;
+  background: url("https://sit-9586431.sibloo.com/system_panel/uploads/images/coating_pdf_icon.png") center/contain no-repeat;
+}
+.productsMain .productShowcase {
+  overflow: hidden;
+  margin: 0 0 90px;
+}
+.productsMain .productShowcase .showcaseSlider {
+  display: flex;
+}
+.productsMain .productShowcase .showcaseSlider .showcaseSlide {
+  flex: 0 0 auto;
+  width: 29%;
+  padding: 0 6px;
+}
+.productsMain .productShowcase .showcaseSlider .showcaseSlide .showcasePanel {
+  aspect-ratio: 483/354;
+  background: #262626;
+}
+.productsMain .productShowcase .showcaseSlider .showcaseSlide .showcasePanel .imgBox img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 483/354;
+  object-fit: cover;
+}
+.productsMain .productNav .secWrap01 .productNavContainer {
+  padding: 0 0 32px;
+  border-bottom: 1px solid #262626;
+}
+.productsMain .productNav .secWrap01 .productNavContainer .productNavTitle p {
+  color: #c30e23;
+}
+.productsMain .productNav .secWrap01 .productNavContainer .productNavTitle h2 {
+  font-size: 24px;
+}
+.productsMain .productNav .secWrap01 .productNavContainer .linkList {
+  margin: 24px 0 0;
+}
+.productsMain .productNav .secWrap01 .productNavContainer .linkList ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.productsMain .productNav .secWrap01 .productNavContainer .linkList ul li a {
+  position: relative;
+  display: block;
+  padding: 8px 32px 8px 16px;
+  border: 1px solid #262626;
+}
+.productsMain .productNav .secWrap01 .productNavContainer .linkList ul li a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 14px;
+  bottom: 0;
+  width: 12px;
+  height: 9px;
+  margin: auto 0;
+  background: url("https://sit-9586431.sibloo.com/system_panel/uploads/images/btn_more_arrow_down.png") center/contain no-repeat;
+}
+.productsMain .productNav .secWrap01 .productNavContainer .linkList ul li.brandNav a {
+  color: #222222;
+  border-color: #ffffff;
+  background: #ffffff;
+}
+.productsMain .productsSection.odiamSection {
+  margin: 100px 0 0;
+  padding: 100px 0 140px;
+  color: #222222;
+  background: #f7f7f7;
+}
+.productsMain .productsSection.odiamSection .secWrap01 .productsContainer .odiamHeader {
+  text-align: center;
+}
+.productsMain .productsSection.odiamSection .secWrap01 .productsContainer .odiamHeader .imgBox {
+  width: 329px;
+  max-width: 70%;
+  margin: 0 auto;
+}
+.productsMain .productsSection.odiamSection .secWrap01 .productsContainer .odiamHeader .imgBox img {
+  display: block;
+}
+.productsMain .productsSection.odiamSection .secWrap01 .productsContainer .odiamHeader .ttl {
+  margin: 20px 0 0;
+}
+.productsMain .productsSection.odiamSection .secWrap01 .productsContainer .odiamHeader .ttl h2 {
+  font-size: inherit;
+  font-weight: normal;
+  line-height: inherit;
+}
+.productsMain .productsSection.odiamSection .secWrap01 .productsContainer .odiamHeader::after {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 4px;
+  margin: 20px auto 0;
+  background: #c30e23;
+}
+.productsMain .productsSection.odiamSection .secWrap01 .productsContainer .odiamAbout {
+  margin: 64px 0 0;
+  padding: 40px 60px;
+  text-align: center;
+  border: 1px solid #9c9c9c;
+}
+.productsMain .productsSection.odiamSection .secWrap01 .productsContainer .odiamAbout .ttl h3 {
+  font-size: 24px;
+}
+.productsMain .productsSection.odiamSection .secWrap01 .productsContainer .odiamAbout .txtBox {
+  margin: 20px 0 0;
+}
+.productsMain .productsSection.odiamSection .secWrap01 .productsContainer .productBlock .productContainer .productContent .productSpec {
+  background: #e8e8e8;
+}
+.productsMain .productsSection.odiamSection .secWrap01 .productsContainer .productBlock .productContainer .productContent .productButtons .btnJan a {
+  color: #ffffff;
+  border-color: #000000;
+  background: #000000;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock {
+  padding: 90px 0 0;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productTitle {
+  padding: 0 0 14px;
+  border-bottom: 3px solid #c30e23;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productTitle h2,
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productTitle h3 {
+  font-size: 28px;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin: 40px 0 0;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage {
+  flex: 0 0 43.5%;
+  min-width: 0;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage .imgBox img {
+  display: block;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage .productPlaceholder {
+  aspect-ratio: 522/363;
+  background: #b5b5b5;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage .productGallery {
+  --gallery-ratio: 522 / 670;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage .productGallery .galleryView {
+  position: relative;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage .productGallery .galleryView .galleryMain {
+  background: #ffffff;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage .productGallery .galleryView .galleryMain .gallerySlide .imgBox {
+  aspect-ratio: var(--gallery-ratio);
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage .productGallery .galleryView .galleryMain .gallerySlide .imgBox img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage .productGallery .galleryView .galleryMain:not(.slick-initialized) .gallerySlide + .gallerySlide {
+  display: none;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage .productGallery .galleryView .galleryPrev,
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage .productGallery .galleryView .galleryNext {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  width: 24px;
+  height: 48px;
+  margin: auto 0;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage .productGallery .galleryView .galleryPrev a,
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage .productGallery .galleryView .galleryNext a {
+  display: block;
+  height: 100%;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage .productGallery .galleryView .galleryPrev a .arrow,
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage .productGallery .galleryView .galleryNext a .arrow {
+  position: relative;
+  height: 100%;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage .productGallery .galleryView .galleryPrev a .arrow::before,
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage .productGallery .galleryView .galleryNext a .arrow::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  margin: auto;
+  border-top: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage .productGallery .galleryView .galleryPrev {
+  left: -26px;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage .productGallery .galleryView .galleryPrev a .arrow::before {
+  transform: rotate(-135deg);
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage .productGallery .galleryView .galleryNext {
+  right: -26px;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage .productGallery .galleryView .galleryNext a .arrow::before {
+  transform: rotate(45deg);
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage .productGallery .galleryThumbs {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 8px 0 0;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage .productGallery .galleryThumbs .thumbItem {
+  width: 14.2857142857%;
+  min-width: 0;
+  padding: 0 1px;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage .productGallery .galleryThumbs .thumbItem a {
+  display: block;
+  border: 2px solid #3f3f3f;
+  background: #ffffff;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage .productGallery .galleryThumbs .thumbItem a .imgBox {
+  height: 86px;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage .productGallery .galleryThumbs .thumbItem a .imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage .productGallery .galleryThumbs .thumbItem.is-selected a {
+  border-color: #c30e23;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage .productGallery.is-square {
+  --gallery-ratio: 522 / 534;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage .productGallery.is-medium {
+  --gallery-ratio: 522 / 604;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage .productGallery.is-short {
+  --gallery-ratio: 522 / 444;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage .productFeatures {
+  margin: 16px 0 0;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage .productFeatures .ttl {
+  color: #9c9c9c;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage .productFeatures .featureList {
+  margin: 6px 0 0;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage .productFeatures .featureList ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productImage .productFeatures .featureList ul li {
+  padding: 2px 10px;
+  border: 1px solid #a7091b;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productContent {
+  flex: 1;
+  min-width: 0;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productContent .productLead h3,
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productContent .productLead h4 {
+  font-size: 28px;
+  line-height: 1.6;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productContent .txtBox {
+  margin: 20px 0 0;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productContent .productSpec {
+  margin: 20px 0 0;
+  padding: 14px 16px;
+  background: #262626;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productContent .productSpec .specRow {
+  display: flex;
+  gap: 12px;
+  padding: 3px 0;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productContent .productSpec .specRow .specLabel {
+  flex: 0 0 82px;
+  color: #c30e23;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productContent .productSpec .specRow .specText {
+  flex: 1;
+  min-width: 0;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productContent .productNote {
+  margin: 20px 0 0;
+  color: #bbbbbb;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productContent .productNote p {
+  position: relative;
+  padding: 0 0 0 1.3em;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productContent .productNote p::before {
+  content: "※";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productContent .productButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 32px 0 0;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productContent .productButtons .btnJan a {
+  position: relative;
+  display: block;
+  padding: 7px 30px 7px 16px;
+  border: 1px solid #555555;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productContent .productButtons .btnJan a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 14px;
+  bottom: 0;
+  width: 12px;
+  height: 9px;
+  margin: auto 0;
+  background: url("https://sit-9586431.sibloo.com/system_panel/uploads/images/btn_more_arrow_down.png") center/contain no-repeat;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productContent .productButtons .btnPdf a {
+  position: relative;
+  display: block;
+  padding: 8px 16px 8px 46px;
+  color: #ffffff;
+  background: #c30e23;
+}
+.productsMain .productsSection .secWrap01 .productsContainer .productBlock .productContainer .productContent .productButtons .btnPdf a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 12px;
+  width: 24px;
+  height: 24px;
+  margin: auto 0;
+  background: url("https://sit-9586431.sibloo.com/system_panel/uploads/images/coating_pdf_icon.png") center/contain no-repeat;
+}
+.productsMain .uvSection {
+  padding: 100px 0 0;
+}
+.productsMain .uvSection .secWrap01 .uvPanel {
+  padding: 48px 60px;
+  border: 2px solid #c30e23;
+  border-radius: 8px;
+}
+.productsMain .uvSection .secWrap01 .uvPanel .uvTitle {
+  text-align: center;
+}
+.productsMain .uvSection .secWrap01 .uvPanel .uvTitle h2 {
+  font-size: 48px;
+  font-weight: normal;
+  color: #c30e23;
+}
+.productsMain .uvSection .secWrap01 .uvPanel .uvTitle p {
+  font-size: 26px;
+}
+.productsMain .uvSection .secWrap01 .uvPanel .uvContainer {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+  margin: 40px 0 0;
+}
+.productsMain .uvSection .secWrap01 .uvPanel .uvContainer .uvText {
+  flex: 1;
+  min-width: 0;
+}
+.productsMain .uvSection .secWrap01 .uvPanel .uvContainer .uvText p + p {
+  margin: 10px 0 0;
+}
+.productsMain .uvSection .secWrap01 .uvPanel .uvContainer .uvImage {
+  flex: 0 0 300px;
+  color: #9c9c9c;
+}
+.productsMain .uvSection .secWrap01 .uvPanel .uvContainer .uvImage .imgBox {
+  margin: 14px 0 0;
+}
+.productsMain .uvSection .secWrap01 .uvPanel .uvContainer .uvImage .uvCaption {
+  margin: 12px 0 0;
+  font-size: 24px;
+  color: #c30e23;
+  text-align: center;
+}
+.productsMain .productSecTitle {
+  text-align: center;
+}
+.productsMain .productSecTitle p {
+  color: #c30e23;
+}
+.productsMain .productSecTitle h2 {
+  margin: 6px 0 0;
+  font-size: 28px;
+}
+.productsMain .productSecTitle::after {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 4px;
+  margin: 20px auto 0;
+  background: #c30e23;
+}
+.productsMain .productFaq .secWrap01 .productFaqContainer {
+  padding: 100px 0 0;
+}
+.productsMain .productFaq .secWrap01 .productFaqContainer .faqList {
+  margin: 48px 0 0;
+}
+.productsMain .productFaq .secWrap01 .productFaqContainer .faqList .faqItem {
+  border-bottom: 1px solid #262626;
+}
+.productsMain .productFaq .secWrap01 .productFaqContainer .faqList .faqItem .dt {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  align-items: baseline;
+  padding: 22px 52px 22px 20px;
+  cursor: pointer;
+}
+.productsMain .productFaq .secWrap01 .productFaqContainer .faqList .faqItem .dt .faqMark {
+  flex: 0 0 24px;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1;
+  color: #c30e23;
+}
+.productsMain .productFaq .secWrap01 .productFaqContainer .faqList .faqItem .dt .faqText {
+  flex: 1;
+  min-width: 0;
+}
+.productsMain .productFaq .secWrap01 .productFaqContainer .faqList .faqItem .dt::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 24px;
+  bottom: 6px;
+  width: 12px;
+  height: 12px;
+  margin: auto 0;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  transform: rotate(45deg);
+}
+.productsMain .productFaq .secWrap01 .productFaqContainer .faqList .faqItem .dt.is-open::after {
+  bottom: -6px;
+  transform: rotate(225deg);
+}
+.productsMain .productFaq .secWrap01 .productFaqContainer .faqList .faqItem .dd {
+  display: none;
+}
+.productsMain .productFaq .secWrap01 .productFaqContainer .faqList .faqItem .dd .faqAnswer {
+  display: flex;
+  gap: 20px;
+  align-items: baseline;
+  padding: 0 20px 24px;
+}
+.productsMain .productFaq .secWrap01 .productFaqContainer .faqList .faqItem .dd .faqAnswer .faqMark {
+  flex: 0 0 24px;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1;
+}
+.productsMain .productFaq .secWrap01 .productFaqContainer .faqList .faqItem .dd .faqAnswer .faqText {
+  flex: 1;
+  min-width: 0;
+  color: #9c9c9c;
+}
+.productsMain .janSection .secWrap01 .janContainer {
+  padding: 130px 0 180px;
+}
+.productsMain .janSection .secWrap01 .janContainer .janTable {
+  overflow-x: auto;
+  margin: 48px 0 0;
+}
+.productsMain .janSection .secWrap01 .janContainer .janTable .table {
+  width: 100%;
+  min-width: 600px;
+}
+.productsMain .janSection .secWrap01 .janContainer .janTable .table .thead {
+  position: relative;
+  z-index: 2;
+}
+.productsMain .janSection .secWrap01 .janContainer .janTable .table .thead .tr {
+  display: flex;
+  background: #c30e23;
+}
+.productsMain .janSection .secWrap01 .janContainer .janTable .table .thead .tr .th {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 40px;
+}
+.productsMain .janSection .secWrap01 .janContainer .janTable .table .janBrand {
+  padding: 12px 40px;
+  color: #222222;
+  background: #f7f7f7;
+}
+.productsMain .janSection .secWrap01 .janContainer .janTable .table .tbody .janGroup {
+  padding: 12px 40px;
+  background: #3f3f3f;
+}
+.productsMain .janSection .secWrap01 .janContainer .janTable .table .tbody .tr {
+  display: flex;
+  background: #131313;
+}
+.productsMain .janSection .secWrap01 .janContainer .janTable .table .tbody .tr .td {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 40px;
+}
+.productsMain .janSection .secWrap01 .janContainer .janTable .table .tbody .tr:nth-child(odd) {
+  background: #1b1b1b;
+}
+.productsMain .janSection .secWrap01 .janContainer .janTable .table .tbody .tr.is-discontinued {
+  color: #3f3f3f;
+}
+.productsMain .janSection .secWrap01 .janContainer .janTable .table .tbody .tr.is-discontinued .td .janNote {
+  color: #c30e23;
+}

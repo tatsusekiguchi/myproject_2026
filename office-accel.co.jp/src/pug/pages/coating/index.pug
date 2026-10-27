@@ -1,0 +1,16 @@
+- var root_path = '../'
+include /site.pug
+- var title = 'コーティング用品（ウレタンコートMJ、LR、SH、どぶ漬） | office ACCEL'
+- var description = 'ジグ・ルアーの補修、カスタムに最適な釣具用コーティング剤。ウレタンコートLR＋、ウレタンコートMJ＋、ウレタンコートSH、スーパーウレタンコートX、セルロースセメントDX'
+- var keywords = ''
+- var page_name = 'coating'
+- var layout_js = ['js/products.js']
+- var cmsMode = false
+doctype html
+html(lang=site_lang)
+	head
+		include /common/head.pug
+	body#pageStart.page
+		include /common/header.pug
+		include /layouts/coating.pug
+		include /common/footer.pug

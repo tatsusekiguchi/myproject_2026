@@ -1,0 +1,40 @@
+// ▽footer▽
+.footer
+	.footerMain
+		.pageTop
+			a(href='#pageStart')
+				.imgBox
+					img(src=site_image_path + 'pagetop.png', alt='ページの先頭へ戻る')
+		.secWrap01
+			.footerContainer
+				.footerLogo
+					a(href=site_routes.home)
+						.imgBox
+							img(src=site_image_path + 'logo_accel.png', alt='ACCEL')
+				.footerNav
+					include /common/navList.pug
+					.footerSns
+						a(href=site_instagram_url, target="_blank", rel="noopener")
+							.imgBox
+								img(src=site_image_path + 'icon_instagram.png', alt='')
+				.footerTitle
+					h2 株式会社オフィスアクセル
+				.footerText
+					.footerAddress
+						p 大阪府大阪市城東区永田3丁目4-17-103
+					.footerContactText
+						p 商品に関するお問い合わせは、お近くの販売店までお願いいたします。
+					.footerMailText
+						.footerMailLead
+							p 販売店でお答えできない内容については、
+						.footerMailLink
+							a(href='mailto:info-oa@office-accel.co.jp')
+								.linkText
+									p info-oa@office-accel.co.jp
+						.footerMailTail
+							p へお問い合わせください。
+					.footerNote
+						p （お電話でのお問い合わせはご遠慮ください）
+	.footerCopyright
+		p &copy;2026 株式会社オフィスアクセル.
+// △footer△

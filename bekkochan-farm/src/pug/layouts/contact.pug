@@ -1,5 +1,133 @@
 // ▽メイン▽
-.contactMain.main
-	//- KV実装時は、KVの直後へ移動する
+.contactMain.main.formMain
+	.pageKv
+		.pageKvContainer
+			h1 お問い合わせ
 	include /common/nav.pug
+	- var page_label = 'お問い合わせ'
+	include /common/topicPath.pug
+	.orderInfo
+		.secWrap01
+			.orderInfoContainer
+				.secTtl
+					h2 ご注文について
+				.txtBox
+					p ご注文はLINEまたはメールフォームで承っております。#[br]※フォームでのお問い合わせ・ご注文内容の送信のみでは、#[br]ご注文確定とはなりません。内容確認後、改めてご連絡いたします。
+					p お支払い方法につきましては、内容確認の際にご案内いたします。#[br]送料はお客様のご負担となります。#[br]お住まいの地域によって料金が変動いたしますので、あらかじめご了承ください。
+					p 直売所でのお受け取りをご希望の場合は、前日15時までにご連絡ください。#[br]ご注文が集中する時期は、ご案内までにお時間をいただく場合がございます。あらかじめご了承ください。
+					p お急ぎの場合はお電話でお問い合わせください。作業中などで出られなかった場合は、折り返しご連絡いたします。#[br]お問い合わせいただく内容およびお客様の個人情報は、当農園の個人情報保護方針に則り管理いたします。
+	.contactGuide
+		.secWrap01
+			.contactGuideContainer
+				.setPanel
+					.imgBox
+						img(src="https://sit-10272780.sibloo.com/system_panel/uploads/images/contact_set_01.png", alt="旬のぶどうの食べ比べセット", loading="lazy", width="363", height="244")
+					.setContent
+						.secTtl
+							h2 人気の食べ比べセット
+						.txtBox
+							p 2房・3房・5房など、量に応じてお選びいただけます。
+							p その時期に一番美味しい旬のぶどうを詰め合わせた、BEKKOで人気のセットです。
+							p ひとつの品種だけでなく、それぞれの個性を食べ比べてお楽しみください。
+				.linePanel
+					.secTtl
+						h2 LINEでカンタンお問い合わせ
+					.lineContainer
+						.lineContent
+							.txtBox
+								p ご注文の際は、以下をコピーしてお送りください
+							.orderTemplate
+								p お名前
+								p 品種
+								p 個数
+								p 発送希望日
+								p 送り先
+						.lineQr
+							a(href="#" target="_blank", rel="noopener")
+								img(src="https://sit-10272780.sibloo.com/system_panel/uploads/images/contact_line_qr_dummy.png", alt="LINEのQRコード仮画像", loading="lazy", width="188", height="188")
+	.mailSection
+		.secWrap
+			.mailContainer
+				.secTtl
+					h2 メールでのお問い合わせ
+				.contactForm
+					form(data-formtype="1" method="post" action="contactComplete" name="form").form
+						.formBox
+							.formRow
+								.dt
+									.fieldLabel
+										label(for="name") お名前
+									.required
+										p 必須
+								.dd
+									input(type="text", id="name", name="お名前", placeholder="例）山田　花子", data-displaynameattr="お名前", class="name validateRequired", required, autocomplete="name")
+							.formRow
+								.dt
+									.fieldLabel
+										label(for="kana") ふりがな
+									.required
+										p 必須
+								.dd
+									input(type="text", id="kana", name="ふりがな", placeholder="例）やまだ　はなこ", data-displaynameattr="ふりがな", class="kana validateHiragana1", required, autocomplete="off")
+							.formRow
+								.dt
+									.fieldLabel
+										label(for="email") メールアドレス
+									.required
+										p 必須
+								.dd
+									input(type="email", id="email", name="メールアドレス", placeholder="例）info@example.com", data-displaynameattr="メールアドレス", class="validateEmail", required, autocomplete="email")
+							.formRow
+								.dt
+									.fieldLabel
+										label(for="emailConfirm") メールアドレス（確認）
+									.required
+										p 必須
+								.dd
+									input(type="email", id="emailConfirm", name="メールアドレス（確認）", placeholder="確認のため、もう一度ご入力ください", data-displaynameattr="メールアドレス（確認）", class="validateConfirmEmail", required, autocomplete="off")
+							.formRow
+								.dt
+									.fieldLabel
+										label(for="message") お問い合わせ内容
+									.required
+										p 必須
+								.dd
+									textarea(id="message", name="お問い合わせ内容", placeholder="お問い合わせ内容をご記入ください。", data-displaynameattr="お問い合わせ内容", class="validateRequired", required, rows="2")
+						.orderFields
+							.orderTitle
+								h3 ご注文の場合は、以下もあわせてご記入ください
+							.formBox
+								.formRow
+									.dt
+										.fieldLabel
+											label(for="variety") 品種
+									.dd
+										input(type="text", id="variety", name="品種", placeholder="例）シャインマスカット", data-displaynameattr="品種", class="orderField", autocomplete="off")
+								.formRow
+									.dt
+										.fieldLabel
+											label(for="quantity") 個数
+									.dd
+										input(type="text", id="quantity", name="個数", placeholder="例）2房", data-displaynameattr="個数", class="orderField", autocomplete="off")
+								.formRow
+									.dt
+										.fieldLabel
+											label(for="shippingDate") 発送希望日
+									.dd
+										input(type="text", id="shippingDate", name="発送希望日", placeholder="例）9月20日頃", data-displaynameattr="発送希望日", class="orderField", autocomplete="off")
+								.formRow
+									.dt
+										.fieldLabel
+											label(for="destination") 送り先
+									.dd
+										input(type="text", id="destination", name="送り先", placeholder="例）ご自宅／贈答先のご住所", data-displaynameattr="送り先", class="orderField", autocomplete="street-address")
+						.privacy
+							.agreeBox
+								include /common/privacyPolicy.pug
+						.checkItem.agreeCheck
+							input.validateRequired(type="checkbox", id="privacy", name="個人情報の取り扱いへの同意", value="同意する", required)
+							label(for="privacy") 個人情報の取り扱いについて同意する
+						.btnSubmitBox
+							.btnSubmit
+								button(type="submit", disabled) 送信する
 // △メイン△

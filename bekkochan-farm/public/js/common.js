@@ -1,28 +1,5 @@
 /* Javascript */
 
-window.onpageshow = function (event) {
-  if (event.persisted) {
-    window.location.reload();
-  }
-};
-
-$(function () {
-  // ハッシュリンク(#)と別ウィンドウでページを開く場合はスルー
-  $(
-    'a:not([href^="#"]):not([target]):not([href^="tel:"]):not([href^="mailto:"]):not(.disabled)'
-  ).on("click", function (e) {
-    e.preventDefault(); // ナビゲートをキャンセル
-    url = $(this).attr("href"); // 遷移先のURLを取得
-    if (url !== "") {
-      $("body").addClass("fadeout"); // bodyに class="fadeout"を挿入
-      setTimeout(function () {
-        window.location = url; // 0.8秒後に取得したURLに遷移
-      }, 800);
-    }
-    return false;
-  });
-});
-
 /* 切り替え幅 */
 var replaceWidth = 1025;
 
@@ -141,7 +118,7 @@ function changeImg(target) {
 function dispObj() {
   $(".header .hamburger").click(function () {
     $(this).toggleClass("is-open");
-    $(".header .navBox").toggleClass("active");
+    $(".header .navBox").toggleClass("is-open");
     return false;
   });
 }
@@ -171,7 +148,7 @@ function setTelLink() {
 //======================================================================================================
 function setAccord() {
   $(".accord .dt").click(function () {
-    $(this).toggleClass("active");
+    $(this).toggleClass("is-open");
 
     $(this).next(".dd").slideToggle();
   });
@@ -195,9 +172,9 @@ function pageScroll() {
         {
           scrollTop: pos,
         },
-        1000
+        1000,
       );
-    }
+    },
   );
 }
 

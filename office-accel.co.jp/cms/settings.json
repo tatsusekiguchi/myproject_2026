@@ -1,0 +1,9 @@
+{
+  "instagram": {
+    "label": "Instagram",
+    "template": "instagram",
+    "rows": 8,
+    "paging": false,
+    "note": "対応するInstagramデータソースをCMSで設定。canonicalタグの認識を実機確認"
+  }
+}

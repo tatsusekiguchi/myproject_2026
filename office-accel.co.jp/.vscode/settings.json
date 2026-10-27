@@ -1,0 +1,15 @@
+{
+  "nuxt.isNuxtApp": false,
+  "[jade]": {
+    "editor.insertSpaces": false,
+    "editor.tabSize": 4
+  },
+  "[pug]": {
+    "editor.insertSpaces": false,
+    "editor.tabSize": 4
+  },
+  "[scss]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
+  }
+}

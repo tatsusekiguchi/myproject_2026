@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "blocks": [
+    {
+      "key": "category",
+      "label": "カテゴリ",
+      "source": "src/pug/common/blogCategories.pug",
+      "html": "<div class=\"webgene-blog\">\n  <div class=\"webgene-header\">\n    <h2>カテゴリ</h2>\n  </div>\n  <div class=\"webgene-item\">\n    <a href=\"{{listPath}}?wg[{{listBlockId}}_cate]=%groupName1%\">%groupName2%</a>\n  </div>\n</div>",
+      "settings": {
+        "table": "blog",
+        "template": "category",
+        "rows": 100,
+        "sort": "category_sort",
+        "order": "昇順",
+        "paging": false,
+        "grouping": "blog_category_cd, category_name, category_sort"
+      }
+    },
+    {
+      "key": "detail",
+      "label": "ブログ詳細",
+      "source": "src/pug/layouts/blog.pug",
+      "html": "<div class=\"webgene-blog\">\n  <div class=\"webgene-header\">\n    <h2>ブログ詳細</h2>\n  </div>\n  <div class=\"webgene-item\">\n    <div class=\"ttlBox\">\n      <h2>%itemTitle%</h2>\n    </div>\n    <div class=\"blogInfo\">\n      <div class=\"time\">\n        <p>%itemDate.format(Y-m-d)%</p>\n      </div>\n    </div>\n    <div class=\"webgene-item-content postBox\">\n      <div class=\"photo\">%itemImageL(0)%</div>\n      <div class=\"postTxt\">%itemContent%</div>\n    </div>\n    <div class=\"btnBackBox\">\n      <div class=\"btnContact\"><a href=\"{{contactPath}}\">お問い合わせはこちら</a></div>\n      <div class=\"btnMore\"><a href=\"{{listPath}}\">一覧に戻る</a></div>\n    </div>\n  </div>\n</div>",
+      "settings": {
+        "template": "detail",
+        "note": "詳細用コンポーネントとして登録。記事リンクのパスと詳細ページを対応させる。"
+      }
+    },
+    {
+      "key": "list",
+      "label": "ブログ一覧",
+      "source": "src/pug/layouts/bloglist.pug",
+      "html": "<div class=\"webgene-blog\">\n  <div class=\"webgene-header\">\n    <h2>ブログ一覧</h2>\n  </div>\n  <div class=\"webgene-item\">\n    <a href=\"%itemLink.to({{detailPath}})%\">\n      <div class=\"photo\">%itemImageL(0)%</div>\n      <div class=\"time\">\n        <p>%itemDate.format(Y-m-d)%</p>\n      </div>\n      <div class=\"title\">\n        <p>%itemTitle%</p>\n      </div>\n    </a>\n  </div>\n  <div class=\"webgene-pagination\"></div>\n</div>",
+      "settings": {
+        "table": "blog",
+        "template": "list",
+        "rows": 10,
+        "sort": "date",
+        "order": "降順",
+        "paging": true,
+        "pageNumbers": 5
+      }
+    },
+    {
+      "key": "top",
+      "label": "TOPブログ",
+      "source": "src/pug/layouts/index.pug",
+      "html": "<div class=\"webgene-blog\">\n  <div class=\"webgene-header\">\n    <h3>ブログ一覧</h3>\n  </div>\n  <div class=\"webgene-item\">\n    <a href=\"%itemLink.to({{detailPath}})%\">\n      <div class=\"photo\">%itemImageL(0)%</div>\n      <div class=\"time\">\n        <p>%itemDate.format(Y-m-d)%</p>\n      </div>\n      <div class=\"title\">\n        <p>%itemTitle%</p>\n      </div>\n    </a>\n  </div>\n</div>",
+      "settings": {
+        "table": "blog",
+        "template": "top",
+        "rows": 3,
+        "sort": "date",
+        "order": "降順",
+        "paging": false
+      }
+    },
+    {
+      "key": "instagram",
+      "label": "Instagram",
+      "source": "src/pug/layouts/index.pug",
+      "html": "<div class=\"webgene-blog\">\n  <div class=\"webgene-item\">\n    <a href=\"%item.canonical%\" target=\"_blank\" rel=\"noopener\">\n      <div class=\"photo\">%itemImageL(0)%</div>\n    </a>\n  </div>\n</div>",
+      "settings": {
+        "template": "instagram",
+        "note": "資料のdata-block例。Instagram連携に対応するデータソースをCMS側で設定。blogテーブルとは決めつけない。"
+      }
+    }
+  ]
+}

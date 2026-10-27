@@ -1,0 +1,19 @@
+// ▽header▽
+.header
+	.headerContainer
+		.headerLogo
+			a(href=site_routes.home)
+				.imgBox
+					img(src=site_image_path + 'logo_accel.png', alt='ACCEL')
+		.hamburger
+			.hamburgerLine
+			.hamburgerLine
+			.hamburgerLine
+	.navBox
+		.navBoxInner
+			include /common/navList.pug
+			.headerSns
+				a(href=site_instagram_url, target="_blank", rel="noopener")
+					.imgBox
+						img(src=site_image_path + 'icon_instagram.png', alt='')
+// △header△

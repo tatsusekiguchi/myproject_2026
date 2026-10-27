@@ -1,0 +1,11 @@
+/* CMS編集画面での非表示を避けるため、メニュー開閉だけを直接管理する。 */
+@media (max-width: 1024px) {
+  .header .navBox {
+    visibility: hidden;
+    opacity: 0;
+  }
+  .header .navBox.is-open {
+    visibility: visible;
+    opacity: 1;
+  }
+}

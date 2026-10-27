@@ -7,17 +7,25 @@ get_header();
 
 $voice_default_image = aichi_koushikai_asset_url( 'image/voice/voice_img_01.png' );
 $achievement_groups = array(
-	'national' => array(
-		'label' => '国立大学',
-		'field' => 'achievement_national',
+	'juniorHigh' => array(
+		'label' => '中学受験',
+		'field' => 'achievement_junior_high',
 	),
-	'public' => array(
-		'label' => '公立大学',
-		'field' => 'achievement_public',
+	'national' => array(
+		'label' => '国公立大',
+		'field' => 'achievement_national',
 	),
 	'private' => array(
 		'label' => '私立大学',
 		'field' => 'achievement_private',
+	),
+	'nationalMedical' => array(
+		'label' => '国公立大学医学部',
+		'field' => 'achievement_national_medical',
+	),
+	'privateMedical' => array(
+		'label' => '私立大学医学部',
+		'field' => 'achievement_private_medical',
 	),
 );
 ?>

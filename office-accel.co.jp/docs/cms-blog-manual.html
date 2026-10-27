@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CMSブログ機能 独自CMSテンプレート 実装・移行マニュアル</title><style>*{box-sizing:border-box}body{margin:0;background:#f4f5f8;color:#233044;font:16px/1.8 -apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif}a{color:#3f4ea0;display:inline-block} .manualWrap{max-width:1060px;margin:auto;padding:48px 24px 80px}.manualIntro{padding:32px;background:#233044;color:white;border-radius:16px}.manualIntro p{color:#e1e6f0}.manualSection{margin:28px 0;padding:28px;background:white;border:1px solid #dce1ea;border-radius:12px}h1{font-size:30px;line-height:1.45;margin:0}h2{font-size:23px;margin:0 0 18px}h3{font-size:19px}code{font-family:ui-monospace,Menlo,monospace;font-size:.9em}pre{overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;padding:18px;background:#eef1f6;border-radius:8px;line-height:1.65}table{border-collapse:collapse;width:100%;margin:16px 0}td,th{padding:10px;border:1px solid #dce1ea;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#eef1f6}.manualFields{display:flex;flex-wrap:wrap;gap:16px}.manualField{flex:1 1 280px}label{display:block;font-weight:bold}input,select,textarea{width:100%;padding:12px;border:1px solid #acb6c8;border-radius:6px;font:inherit;color:inherit;background:white}textarea{min-height:300px;font-family:ui-monospace,Menlo,monospace;font-size:13px}button{padding:11px 20px;border:0;border-radius:6px;background:#3f4ea0;color:white;font:inherit;cursor:pointer}button:disabled{opacity:.45;cursor:default}.manualActions{display:flex;flex-wrap:wrap;gap:12px;margin:20px 0}.manualNote{padding:16px;border-left:4px solid #ad751e;background:#fff6e6}.manualStatus{min-height:30px}.manualTabs{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}details{margin:16px 0;border:1px solid #dce1ea;padding:16px;border-radius:8px}summary{cursor:pointer;font-weight:bold}.manualReference{overflow-wrap:anywhere}.manualReference pre code{white-space:pre-wrap}.manualFooter{font-size:13px;color:#53627a}@media(max-width:1024px){.manualWrap{padding:24px 16px 48px}.manualSection,.manualIntro{padding:20px}h1{font-size:24px}table{font-size:13px}td,th{padding:8px}}</style></head><body><div class="manualWrap">
+<div class="manualIntro"><h1>CMSブログ機能<br>独自CMSテンプレート 実装・移行マニュアル</h1><p>独自タグ、コンポーネント設定、テンプレートのdata-block生成を1つの資料に。提供された3つのHTMLをもとに、オフラインで参照できます。CMS断片は共通Pugから生成します。</p></div>
+<div class="manualSection"><h2>1. CMSブログの構成</h2><p>CMSは、登録された記事をデザインコンポーネントの独自タグに差し込みます。記事データ、表示件数・並び順などのブロック設定、表示用HTMLをそれぞれ管理します。制作時のダミー記事はCMS登録用HTMLでは1件の繰り返し元に置き換えます。</p><table><thead><tr><th>要素</th><th>役割</th></tr></thead><tbody><tr><td><code>webgene-blog</code></td><td>CMSコンポーネント全体の囲み</td></tr><tr><td><code>webgene-header</code></td><td>繰り返さない見出し</td></tr><tr><td><code>webgene-item</code></td><td>記事1件の繰り返し元。表示件数はCMS設定で指定</td></tr><tr><td><code>webgene-item-content</code></td><td>本案件の詳細本文の囲み。既存のpostBoxと併用</td></tr><tr><td><code>webgene-pagination</code></td><td>CMSで生成する一覧のページ送り。ダミーのliは登録しない</td></tr></tbody></table><p class="manualNote">資料のコーディング例はsection.webgene-blogとarticle.webgene-itemを使用し、sectionの囲みを必須と説明しています。一方、提供data-blockはsectionとdiv.webgene-itemです。本案件の構造タグ方針はdivです。生成時はdivをデフォルトとし、CMS側の要件確認後にsectionを選べます。クラスだけで認識されるか、divのitemが繰り返されるかはCMS実機で確認してください。</p></div>
+<div class="manualSection"><h2>2. 使用する独自タグ</h2><table><thead><tr><th>独自タグ</th><th>内容・使い方</th></tr></thead><tbody>
+<tr><td><code>%itemTitle%</code></td><td>記事タイトル</td></tr><tr><td><code>%itemContent%</code></td><td>記事本文</td></tr><tr><td><code>%itemCategory%</code></td><td>カテゴリ名</td></tr><tr><td><code>%itemDate.format(Y-m-d)%</code></td><td>記事の日付。例：2026-10-05。PHP date形式</td></tr><tr><td><code>%itemRecordDate.format(Y-m-d H:i:s)%</code><br><code>%itemUpdateDate.format(Y-m-d H:i:s)%</code></td><td>登録日時・更新日時</td></tr><tr><td><code>%itemImageL(0)%</code></td><td>先頭画像の大サイズ。画像タグを直接差し込む位置に使用</td></tr><tr><td><code>%itemImageSrc%</code></td><td>画像URL。画像タグを返す独自タグとは区別する</td></tr><tr><td><code>%itemLink.to(blog)%</code></td><td>記事詳細ページへのリンク。blogは詳細ページのパス</td></tr><tr><td><code>%item.pdf%</code></td><td>PDFのリンク先。現行PugにPDF欄がないため標準生成には含めない</td></tr><tr><td><code>%groupName1%</code> / <code>%groupName2%</code></td><td>カテゴリ設定のグルーピング順に対応。カテゴリ番号／カテゴリ名</td></tr></tbody></table><h3>画像サイズと番号</h3><p>資料ではS＝横幅600px、M＝800px、L＝1000px、指定なし＝オリジナル。規定幅未満の画像は拡大されます。番号は0が1枚目、1が2枚目です。トピックスの番号は0〜9、事例集は0〜14と記載されています。</p><p class="manualNote">元資料の「2枚目の画像を大きいサイズ」の例は、コードがM(1)になっています。サイズの凡例に合わせるならL(1)です。ブログの番号付きタグは提供data-blockのL(0)を採用しています。Instagramの%item.canonical%はdata-blockだけに登場するため、対応データソースでの置換確認が必要です。</p><h3>トピックス・事例集の追加タグ</h3><p><code>%item.comment.nl2br%</code> は説明文、<code>%item.movie.html_entity_decode%</code> はYouTube、<code>%itemImage2M(0)%</code> は事例集のみの追加画像です。ブログと同じ項目がすべて使えるとは限りません。</p></div>
+<div class="manualSection"><h2>3. 管理画面の設定</h2><p>以下は資料の例と本案件の表示数を合わせた登録参考値です。設定JSONはCMSの自動インポート形式ではありません。</p><table><thead><tr><th>用途</th><th>設定参考値</th></tr></thead><tbody><tr><td>ブログ一覧</td><td>テーブルblog／行数10（資料例）／date・降順／ページング有／ページ番号5</td></tr><tr><td>TOPブログ</td><td>テーブルblog／行数3（本案件）／date・降順／ページング無。資料例の行数は5</td></tr><tr><td>カテゴリ</td><td>テーブルblog／行数100／category_sort・昇順／ページング無／グルーピング：blog_category_cd, category_name, category_sort</td></tr><tr><td>記事詳細</td><td>詳細用デザインコンポーネントを登録し、詳細ページへ配置。記事リンク先を対応させる</td></tr><tr><td>Instagram</td><td>CMS側でInstagram用データソースとアカウント連携を設定。取得処理をフロントに追加しない</td></tr></tbody></table><h3>カテゴリリンクとブロックID</h3><pre><code>/bloglist?wg[wgc-実際の一覧ID_cate]=%groupName1%</code></pre><p>リンクにはブログ一覧データブロックのIDを使います。カテゴリ自身のIDではありません。提供ファイルの固定IDはサンプルとして扱い、移行先のIDに置き換えます。カテゴリ抽出には対象のブログ一覧ブロックが必要です。</p><h3>抽出・並び替え</h3><p>カテゴリ抽出はblog_category_cdなどを完全一致で指定します。title・contentなどは完全一致または部分一致。複数のソート条件は例として<code>date desc, sort</code>があり、その場合は別の「順番」設定が無視されると資料に記載されています。資料の<code>cd desc</code>と「登録が古い順」という説明には差があるため、移行先で実際の並びを確認してください。</p><h3>アーカイブ・件数・詳細の前後リンク</h3><p>月別アーカイブはグルーピングdate、拡張YM（日本語はYM-JA）。リンクは<code>/bloglist?wg[wgc-一覧ID_ym]=date|%groupName1%</code>です。標準の5ブロックには含めません。</p><p>件数表示：<code>%pageItems%</code>、<code>%totalItems%</code>、<code>%pageFirstItem%</code>、<code>%pageLastItem%</code>、<code>%page%</code>、<code>%totalPages%</code>。詳細の前後リンクは<code>%prevPageLink.to("前の記事へ","前の記事はありません")%</code>と<code>%nextPageLink.to("次の記事へ","次の記事はありません")%</code>。並び順はCMSのソート設定に従います。</p></div>
+<div class="manualSection"><h2>4. 共通Pugからdata-blockを生成</h2><p>本テンプレートではsrc/pug/common/cmsBlocks.pugを制作ページとCMS断片で共用します。構造変更はこのmixinへ反映し、独立したHTMLテンプレートを二重管理しません。</p><ol><li>CMSでブログ一覧ブロックを作り実IDを取得する。</li><li>cms/migration.example.jsonをmigration.jsonへ複製する。</li><li>listBlockId、listPath、detailPath、contactPath、containerTagを設定する。</li><li>ユーザーがプロジェクトのルートでnpx gulp cmsを実行する。</li><li>cms/generatedの5断片を個別に登録し、設定参考JSONをもとに管理画面の表示設定を行う。</li></ol><pre><code>npx gulp cms</code></pre><p>出力はcategory.html・detail.html・list.html・top.html・instagram.html、まとめたdata-block.html、cms-settings.json。設定JSONはCMSのインポート形式ではありません。</p></div><div class="manualSection"><h2>5. 移行後の確認</h2><p>実IDとカテゴリ抽出、記事リンク、画像・日付・タイトル・本文、ページ送り・並び・0件、Instagramデータソース、PC/SPを確認します。資料のタグ構造の差もCMS実機で確認してください。記事移送・CMS自動登録は生成処理に含みません。</p><p>通常のPug/Sass生成、data-block生成、画面確認はユーザーが手動実行します。README.md、CMS-BLOG.md、cms/README.mdを参照してください。</p></div><div class="manualSection"><h2>6. 提供資料の本文・コード</h2><p>以下は保存HTMLから本文を抽出した参照資料です。提供資料を仕様資料として扱い、外部スクリプト・ナビゲーション・広告は取り込んでいません。外部画像は読み込まず、図版の位置を注記しています。例の設定値やタグ構成と、本案件の採用方針を区別してください。</p><details><summary>ブログ（CMS）の作り方（独自タグ編）.html</summary><div class="manualReference">
+                    <p></p>
+
+                    <h3>
+                      コンポネント用デザインで使用できる独自タグ
+                    </h3>
+
+                    <p></p>
+
+                    <h4>
+                      ブログ、新着情報で使用できる独自タグ一覧
+                    </h4>
+
+
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <strong>タグ</strong>
+                            </td>
+                            <td>
+                              <strong>内容</strong>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>%itemCategory%</td>
+                            <td>カテゴリ名</td>
+                          </tr>
+                          <tr>
+                            <td>%itemDate.format(Y-m-d)%</td>
+                            <td>
+                              記事に登録した日付
+                              <code>※1</code>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>%itemRecordDate.format(Y-m-d H:i:s)%</td>
+                            <td>
+                              登録日時
+                              <code>※1</code>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>%itemUpdateDate.format(Y-m-d H:i:s)%</td>
+                            <td>
+                              更新日時
+                              <code>※1</code>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>%itemTitle%</td>
+                            <td>記事のタイトル</td>
+                          </tr>
+                          <tr>
+                            <td>%itemContent%</td>
+                            <td>内容</td>
+                          </tr>
+                          <tr>
+                            <td>%item.pdf%</td>
+                            <td>PDFファイル</td>
+                          </tr>
+                          <tr>
+                            <td>%itemImageL%</td>
+                            <td>画像大サイズ</td>
+                          </tr>
+                          <tr>
+                            <td>%itemImageM%</td>
+                            <td>画像中サイズ</td>
+                          </tr>
+                          <tr>
+                            <td>%itemImageS%</td>
+                            <td>画像小サイズ</td>
+                          </tr>
+                          <tr>
+                            <td>%itemImage%</td>
+                            <td>画像オリジナルサイズ</td>
+                          </tr>
+                          <tr>
+                            <td>%itemImageSrc%</td>
+                            <td>画像のURL</td>
+                          </tr>
+                          <tr>
+                            <td>%itemLink.to(詳細ページのパス)%</td>
+                            <td>
+                              記事詳細へのリンク
+                              <code>※2</code>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+
+                    <p>
+                      <code>※1</code>
+                      :
+                      フォーマット機能付き。PHPのdate関数と同様のフォーマットルール。
+                      <br>
+                      <code>※2</code>
+                      :https://example/blogdetailという詳細ページへリンクしたい場合
+                      <br>
+                      <code>%itemLink.to(blogdetail)%</code>
+                    </p>
+
+                    <p></p>
+
+                    <h4>
+                      トピックス、事例集で使用できる独自タグ一覧
+                    </h4>
+
+
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <strong>タグ</strong>
+                            </td>
+                            <td>
+                              <strong>内容</strong>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>%itemCategory%</td>
+                            <td>カテゴリ名</td>
+                          </tr>
+                          <tr>
+                            <td>%itemDate.format(Y-m-d)%</td>
+                            <td>
+                              記事に登録した日付
+                              <code>※1</code>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>%itemRecordDate.format(Y-m-d H:i:s)%</td>
+                            <td>
+                              登録日時
+                              <code>※1</code>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>%itemUpdateDate.format(Y-m-d H:i:s)%</td>
+                            <td>
+                              更新日時
+                              <code>※1</code>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>%itemTitle%</td>
+                            <td>記事のタイトル</td>
+                          </tr>
+                          <tr>
+                            <td>%itemContent%</td>
+                            <td>内容</td>
+                          </tr>
+                          <tr>
+                            <td>%item.comment.nl2br%</td>
+                            <td>説明文</td>
+                          </tr>
+                          <tr>
+                            <td>%item.pdf%</td>
+                            <td>PDFファイル</td>
+                          </tr>
+                          <tr>
+                            <td>%item.movie.html_entity_decode%</td>
+                            <td>You Tube</td>
+                          </tr>
+                          <tr>
+                            <td>%itemImageM(0)%</td>
+                            <td>
+                              画像
+                              <code>※2</code>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>%itemImage2M(0)%</td>
+                            <td>
+                              画像
+                              <code>※2</code>
+                              <br>
+                              ※事例集のみ使用可能
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>%itemImageSrc%</td>
+                            <td>画像のURL</td>
+                          </tr>
+                          <tr>
+                            <td>%itemLink.to(詳細ページのパス)%</td>
+                            <td>
+                              記事詳細へのリンク
+                              <code>※3</code>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+
+                    <p>
+                      <code>※1</code>
+                      :
+                      フォーマット機能付き。PHPのdate関数と同様のフォーマットルール。
+                    </p>
+
+                    <p>
+                      <code>※2:</code>
+                       独自タグの記述方法により、呼び出す画像サイズ、何枚目の画像を表示するかを設定できます。
+                      <br>
+                      <br>
+                      <strong>
+                        【設定できる値
+                        <strong>（トピックス）</strong>
+                        】
+                        <br>
+                      </strong>
+                      <code>%itemImage{S or M or L or なし}{(0 ～ 9)}%</code>
+                      <br>
+                      <br>
+                      <strong>
+                        【設定できる値
+                        <strong>
+                          （
+                          <strong>事例集</strong>
+                          ）
+                        </strong>
+                        】
+                        <br>
+                      </strong>
+                      <code>%itemImage{S or M or L or なし}{(0 ～ 14)}%</code>
+                      <br>
+                      <code>%itemImage2{S or M or L or なし}{(0 ～ 14)}%</code>
+                      <br>
+                      <br>
+                      <strong>
+                        【例：記事に登録されている2枚目の画像を大きいサイズで呼び出したい場合】
+                        <br>
+                      </strong>
+                      <code>%itemImageM(1)%</code>
+                    </p>
+
+                    <p>
+                      <strong>
+                        【例：記事に登録されている1枚目の画像をオリジナルサイズで呼び出したい場合】
+                        <br>
+                      </strong>
+                      <code> %itemImage(0)%</code>
+                    </p>
+
+                    <p>
+                      <strong>【画像サイズの凡例】</strong>
+                    </p>
+
+                    <ul>
+                      <li>
+                        S・・・横幅600px（横幅未満の画像は既定の横幅まで拡大されます
+                        ）
+                      </li>
+                      <li>
+                        M・・・横幅800px（横幅未満の画像は既定の横幅まで拡大されます
+                        ）
+                      </li>
+                      <li>
+                        L・・・横幅1000px（横幅未満の画像は既定の横幅まで拡大されます
+                        ）
+                      </li>
+                      <li>なし・・・オリジナルサイズ</li>
+                    </ul>
+
+                    <p>
+                      <strong>【何枚目の画像を呼び出すか】</strong>
+                    </p>
+
+                    <ul>
+                      <li>0・・・1枚目</li>
+                      <li>1・・・2枚目</li>
+                      <li>2・・・3枚目</li>
+                      <li>3・・・4枚目</li>
+                      <li>4・・・5枚目</li>
+                      <li>5・・・6枚目</li>
+                      <li>6・・・7枚目</li>
+                      <li>7・・・8枚目</li>
+                      <li>8・・・9枚目</li>
+                      <li>9・・・10枚目</li>
+                      <li>10・・・11枚目</li>
+                      <li>11・・・12枚目</li>
+                      <li>12・・・13枚目</li>
+                      <li>13・・・14枚目</li>
+                      <li>14・・・15枚目</li>
+                    </ul>
+
+                    <p>
+                      <code>※3</code>
+                      :https://example/blogdetailという詳細ページへリンクしたい場合
+                      <br>
+                      <code>%itemLink.to(blogdetail)%</code>
+                    </p>
+                  </div></details><details><summary>ブログ（CMS）の作り方、コーディング例.html</summary><div class="manualReference">
+                    <h3>
+                      データブロック設定のコーディング例
+                    </h3>
+
+                    <p>
+                      この記事では実際にデータブロック設定一覧に登録するコーディングの例を掲載しております。
+                      <br>
+                      ブログ、新着情報、トピックスで使用できる独自タグの種類や、コンポネントの設定が異なる場合がありますのでご注意ください。
+                      <br>
+                      下記記事をご覧いただいていることを前提に紹介しておりますので、まだご覧になられていない場合は一度ご確認ください。
+                    </p>
+
+                    <p>
+                      <a href="https://designer-manual.sibloo.com/710/">ブログ作成の流</a>
+                      <a href="https://designer-manual.sibloo.com/710/">れ</a>
+                    </p>
+
+                    <p>
+                      <a href="https://designer-manual.sibloo.com/581/">ブログの作り方（記事編）</a>
+                    </p>
+
+                    <p>
+                      <a href="https://designer-manual.sibloo.com/586/">ブログの作り方（独自タグ編）</a>
+                    </p>
+
+                    <p>
+                      <a href="https://designer-manual.sibloo.com/1456/">記事管理（記事登録）について</a>
+                    </p>
+
+                    <h4>
+                      記事一覧のコーディング例（ブログ、新着情報）
+                    </h4>
+
+                    <pre>
+                                        <code>&lt;section class=&quot;webgene-blog&quot;&gt;
+                                            &lt;header class=&quot;webgene-header&quot;&gt;
+                                                &lt;h1&gt;%title%&lt;/h1&gt;
+                                            &lt;/header&gt;
+
+                                            &lt;article class=&quot;webgene-item&quot;&gt;
+                                                &lt;div&gt;
+                                                    &lt;span class=&quot;blogItemCategory&quot;&gt;%itemCategory%&lt;/span&gt;
+                                                    &lt;a href=&quot;%itemLink.to(blogdetail)%&quot;&gt;
+                                                        &lt;span class=&quot;blogItemTitle&quot;&gt;%itemTitle%&lt;/span&gt;
+                                                    &lt;/a&gt;
+                                                    &lt;div class=&quot;webgene-item-info&quot;&gt;
+                                                        &lt;p&gt;%itemRecordDate.format(Y-m-d H:i:s)%投稿&lt;/p&gt;
+                                                    &lt;/div&gt;
+                                                &lt;/div&gt;
+                                                &lt;div class=&quot;webgene-item-content&quot;&gt;
+                                                    %itemImageS%
+                                                &lt;/div&gt;
+                                            &lt;/article&gt;
+
+                                            &lt;div class=&quot;webgene-pagination&quot;&gt;
+                                            &lt;/div&gt;
+                                        &lt;/section&gt;</code>
+                                    </pre>
+
+                    <h4>
+                      記事一覧のコーディング例（トピックス、事例集）
+                    </h4>
+
+                    <pre>
+                                        <code>&lt;section class=&quot;webgene-blog&quot;&gt;
+
+                                            &lt;article class=&quot;webgene-item&quot;&gt;
+                                                &lt;div class=&quot;container mt-3&quot;&gt;
+                                                    &lt;div class=&quot;row&quot;&gt;
+                                                        &lt;div class=&quot;col-4&quot;&gt;
+                                                            %itemImageS(0)%
+                                                        &lt;/div&gt;
+                                                        &lt;div class=&quot;col-8&quot;&gt;
+                                                            &lt;div class=&quot;d-flex&quot;&gt;
+                                                                &lt;p&gt;%itemDate.format(Y-m-d)%&lt;/p&gt;
+                                                                &lt;p&gt;%itemCategory%&lt;/p&gt;
+                                                            &lt;/div&gt;
+                                                            &lt;h2&gt;&lt;a href=&quot;%itemLink.to(詳細ページのパス)%&quot;&gt;%itemTitle%&lt;/a&gt;&lt;/h2&gt;
+                                                        &lt;/div&gt;
+                                                    &lt;/div&gt;
+                                                &lt;/div&gt;
+                                            &lt;/article&gt;
+
+                                            &lt;div class=&quot;webgene-pagination&quot;&gt;&lt;/div&gt;
+                                        &lt;/section&gt;</code>
+                                    </pre>
+
+                    <h5>解説</h5>
+
+                    <p>
+                      登録した記事を読み込むために
+                      <br>
+                      <code>
+                        &lt;section class=&quot;webgene-blog&quot;&gt; &lt;/section&gt;
+                      </code>
+                      で括る必要があります。
+                      <br>
+                      <code>&lt;article class=&quot;webgene-item&quot;&gt; &lt;/article&gt;
+                      </code>
+                      で括られた箇所が、コンポネントで設定した【
+                      1ページ当たりの行数 】の回数分繰り返し処理されます。
+                      <br>
+                      <code>%%</code>
+                      で括られている箇所は独自タグです。独自タグの一覧は
+                      <a href="https://designer-manual.sibloo.com/586/">ブログの作り方（独自タグ編）</a>
+                      をご参照ください。
+                      <br>
+                    </p>
+
+                    <p></p>
+
+                    <h4>
+                      記事一覧の記事データブロックのコンポーネント設定例
+                      （共通）
+                    </h4>
+
+
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>項目</th>
+                            <th>設定例</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>テーブル</td>
+                            <td>
+                              blog（ブログの場合）
+                              <br>
+                              news（新着情報の場合）
+                              <br>
+                              topics（トピックスの場合）
+                              <br>
+                              cases（事例集の場合）
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>1ページ当たりの行数</td>
+                            <td>10</td>
+                          </tr>
+                          <tr>
+                            <td>ソート項目</td>
+                            <td>
+                              date(日付順)
+                              <br>
+                              sort(記事管理の並び順)
+                              <br>
+                              cd(記事の登録順)
+                              <br>
+                              title(記事のタイトル順)
+                              <br>
+                              <br>
+                              複数条件での並び替えも可能です。
+                              <br>
+                              複数条件で並び替えた場合は下記の「順番」の項目は
+                              <br>
+                              無視されることに注意してください。
+                              <br>
+                              <br>
+                              設定例）
+                              <br>
+                              date desc, sort
+                              <br>
+                              (日付の降順で並び替えた後、
+                              その中で記事管理の並び順で並び替え)
+                              <br>
+                              date desc, cd desc
+                              <br>
+                              (日付の降順で並び替えた後、その中で記事の登録が古い順で並び替え
+                              )
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>順番</td>
+                            <td>降順</td>
+                          </tr>
+                          <tr>
+                            <td>テンプレート</td>
+                            <td>bloglist(自分で決めたテンプレート名)</td>
+                          </tr>
+                          <tr>
+                            <td>ページング</td>
+                            <td>有</td>
+                          </tr>
+                          <tr>
+                            <td>ページ番号の数</td>
+                            <td>5</td>
+                          </tr>
+                          <tr>
+                            <td>グルーピング</td>
+                            <td>(なし)</td>
+                          </tr>
+                          <tr>
+                            <td>グルーピング拡張</td>
+                            <td>(なし)</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+
+                    <div></div>
+
+                    <p>
+                      下記を設定することで特定のカテゴリや、特定の文字が入った記事のみを表示することが可能です。
+                    </p>
+
+
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td>抽出項目</td>
+                            <td>
+                              blog_category_cd（ブログの場合）
+                              <br>
+                              news_category_cd（新着情報の場合）
+                              <br>
+                              topics_category_cd（トピックスの場合）
+                              <br>
+                              cases_category_cd（事例集の場合）
+                              <br>
+                              title（タイトル）
+                              <br>
+                              content（内容）
+                              <br>
+                              comment（説明文）
+                              <br>
+                              movie（YouTube[iframe]）
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>抽出形式</td>
+                            <td>
+                              完全一致
+                              <br>
+                              部分一致
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>抽出値</td>
+                            <td>任意の値</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+
+                    <h5>
+                      設定例①：任意のタイトルで抽出したい
+                    </h5>
+
+                    <p>
+                      抽出項目：title
+                      <br>
+                      抽出形式：部分一致
+                      <br>
+                      抽出値：【お知らせ】
+                      <br>
+                      結果：タイトルに【お知らせ】が入っている記事が一覧に表示されます。
+                    </p>
+
+                    <h5>
+                      設定例②：任意のカテゴリの記事のみを表示したい
+                    </h5>
+
+                    <p>
+                      抽出項目：topics_category_cd
+                      <br>
+                      抽出形式：完全一致
+                      <br>
+                      抽出値：2
+                      <br>
+                      結果：記事投稿画面のトピックスカテゴリに登録されているカテゴリの「番号」が「2」の記事が一覧に表示されます。（「番号については」下記の画像を参照ください）
+                      <br>
+                      ※○○○_category_cdの抽出形式は完全一致のみです。
+                    </p>
+
+
+                      <p>［図版は元資料を参照してください］</p>
+
+
+                    <h4>
+                      記事詳細のコーディング例（ブログ、新着情報）
+                    </h4>
+
+                    <p>
+                      デザインコンポネントの名称は仮に「blogdetail」にします。
+                    </p>
+
+                    <pre>
+                                        <code>&lt;section class=&quot;webgene-blog&quot;&gt;
+                                            &lt;article class=&quot;webgene-item&quot;&gt;
+                                                &lt;div class=&quot;container&quot;&gt;
+                                                    &lt;h1&gt;%title%&lt;/h1&gt;
+                                                    &lt;p&gt;%itemCategory%&lt;/p&gt;
+                                                    &lt;p&gt;%itemDate.format(Y-m-d)%&lt;/p&gt;
+                                                    &lt;div&gt;%itemImage%&lt;/div&gt;
+                                                    &lt;div&gt;%itemContent%&lt;/div&gt;
+                                                    &lt;a class=&quot;pdfLink&quot; href=&quot;%item.pdf%&quot; target=&quot;_blank&quot; noopener=&quot;noopener&quot;&gt;PDFを開く&lt;/a&gt;
+                                                    &lt;div&gt;
+                                                        &lt;p class=&quot;webgene-item-aroundPageLink webgene-item-prevPageLink&quot;&gt;%prevPageLink.to(&quot;前の記事へ&quot;,&quot;前の記事はありません&quot;)%&lt;/p&gt;
+                                                        &lt;p class=&quot;webgene-item-aroundPageLink webgene-item-nextPageLink&quot;&gt;%nextPageLink.to(&quot;次の記事へ&quot;,&quot;次の記事はありません&quot;)%&lt;/p&gt;
+                                                    &lt;/div&gt;
+                                                &lt;/div&gt;
+                                            &lt;/article&gt;
+                                        &lt;/section&gt;</code>
+                                    </pre>
+
+                    <h4>
+                      記事詳細のコーディング例（トピックス）
+                    </h4>
+
+                    <pre>
+                                        <code>&lt;section class=&quot;webgene-blog&quot;&gt;
+                                            &lt;article class=&quot;webgene-item&quot;&gt;
+                                                &lt;div class=&quot;container&quot;&gt;
+                                                    &lt;h1&gt;%itemTitle%&lt;/h1&gt;
+                                                    &lt;p&gt;%itemCategory%&lt;/p&gt;
+                                                    &lt;p&gt;%itemDate.format(Y-m-d)%&lt;/p&gt;
+                                                    &lt;div&gt;%itemImage%&lt;/div&gt;
+                                                    &lt;div class=&quot;row&quot;&gt;
+                                                        &lt;div class=&quot;col-2&quot;&gt;%itemImage(0)%&lt;/div&gt;
+                                                        &lt;div class=&quot;col-2&quot;&gt;%itemImage(1)%&lt;/div&gt;
+                                                        &lt;div class=&quot;col-2&quot;&gt;%itemImage(2)%&lt;/div&gt;
+                                                        &lt;div class=&quot;col-2&quot;&gt;%itemImage(3)%&lt;/div&gt;
+                                                        &lt;div class=&quot;col-2&quot;&gt;%itemImage(4)%&lt;/div&gt;
+                                                        &lt;div class=&quot;col-2&quot;&gt;%itemImage(5)%&lt;/div&gt;
+                                                        &lt;div class=&quot;col-2&quot;&gt;%itemImage(6)%&lt;/div&gt;
+                                                        &lt;div class=&quot;col-2&quot;&gt;%itemImage(7)%&lt;/div&gt;
+                                                        &lt;div class=&quot;col-2&quot;&gt;%itemImage(8)%&lt;/div&gt;
+                                                        &lt;div class=&quot;col-2&quot;&gt;%itemImage(9)%&lt;/div&gt;
+                                                    &lt;/div&gt;
+                                                    &lt;div&gt;%itemContent%&lt;/div&gt;
+                                                    &lt;div&gt;%item.comment.nl2br%&lt;/div&gt;
+                                                    &lt;div&gt;%item.movie.html_entity_decode%&lt;/div&gt;
+                                                    &lt;a class=&quot;pdfLink&quot; href=&quot;%item.pdf%&quot; target=&quot;_blank&quot; noopener=&quot;noopener&quot;&gt;PDFを開く&lt;/a&gt;
+                                                    &lt;div&gt;
+                                                        &lt;p class=&quot;webgene-item-aroundPageLink webgene-item-prevPageLink&quot;&gt;%prevPageLink.to(&quot;前の記事へ&quot;,&quot;前の記事はありません&quot;)%&lt;/p&gt;
+                                                        &lt;p class=&quot;webgene-item-aroundPageLink webgene-item-nextPageLink&quot;&gt;%nextPageLink.to(&quot;次の記事へ&quot;,&quot;次の記事はありません&quot;)%&lt;/p&gt;
+                                                    &lt;/div&gt;
+                                                &lt;/div&gt;
+                                            &lt;/article&gt;
+                                        &lt;/section&gt;</code>
+                                    </pre>
+
+                    <h4>
+                      記事詳細のコーディング例（事例集）
+                    </h4>
+
+                    <pre>
+                                        <code>&lt;section class=&quot;webgene-blog&quot;&gt;
+                                            &lt;article class=&quot;webgene-item&quot;&gt;
+                                                &lt;div class=&quot;container&quot;&gt;
+                                                    &lt;h1&gt;%itemTitle%&lt;/h1&gt;
+                                                    &lt;p&gt;%itemCategory%&lt;/p&gt;
+                                                    &lt;p&gt;%itemDate.format(Y-m-d)%&lt;/p&gt;
+                                                    &lt;div&gt;%itemImage%&lt;/div&gt;
+                                                    &lt;div class=&quot;row&quot;&gt;
+                                                        &lt;div class=&quot;col-2&quot;&gt;%itemImage(0)%&lt;/div&gt;
+                                                        &lt;div class=&quot;col-2&quot;&gt;%itemImage(1)%&lt;/div&gt;
+                                                        &lt;div class=&quot;col-2&quot;&gt;%itemImage(2)%&lt;/div&gt;
+                                                        &lt;div class=&quot;col-2&quot;&gt;%itemImage(3)%&lt;/div&gt;
+                                                        &lt;div class=&quot;col-2&quot;&gt;%itemImage(4)%&lt;/div&gt;
+                                                        &lt;div class=&quot;col-2&quot;&gt;%itemImage(5)%&lt;/div&gt;
+                                                        &lt;div class=&quot;col-2&quot;&gt;%itemImage(6)%&lt;/div&gt;
+                                                        &lt;div class=&quot;col-2&quot;&gt;%itemImage(7)%&lt;/div&gt;
+                                                        &lt;div class=&quot;col-2&quot;&gt;%itemImage(8)%&lt;/div&gt;
+                                                        &lt;div class=&quot;col-2&quot;&gt;%itemImage(9)%&lt;/div&gt;
+                                                        &lt;div class=&quot;col-2&quot;&gt;%itemImage(10)%&lt;/div&gt;
+                                                        &lt;div class=&quot;col-2&quot;&gt;%itemImage(11)%&lt;/div&gt;
+                                                        &lt;div class=&quot;col-2&quot;&gt;%itemImage(12)%&lt;/div&gt;
+                                                        &lt;div class=&quot;col-2&quot;&gt;%itemImage(13)%&lt;/div&gt;
+                                                        &lt;div class=&quot;col-2&quot;&gt;%itemImage(14)%&lt;/div&gt;
+                                                        &lt;div class=&quot;col-2&quot;&gt;%itemImage2(0)%&lt;/div&gt;
+                                                        &lt;div class=&quot;col-2&quot;&gt;%itemImage2(1)%&lt;/div&gt;
+                                                        &lt;div class=&quot;col-2&quot;&gt;%itemImage2(2)%&lt;/div&gt;
+                                                        &lt;div class=&quot;col-2&quot;&gt;%itemImage2(3)%&lt;/div&gt;
+                                                        &lt;div class=&quot;col-2&quot;&gt;%itemImage2(4)%&lt;/div&gt;
+                                                        &lt;div class=&quot;col-2&quot;&gt;%itemImage2(5)%&lt;/div&gt;
+                                                        &lt;div class=&quot;col-2&quot;&gt;%itemImage2(6)%&lt;/div&gt;
+                                                        &lt;div class=&quot;col-2&quot;&gt;%itemImage2(7)%&lt;/div&gt;
+                                                        &lt;div class=&quot;col-2&quot;&gt;%itemImage2(8)%&lt;/div&gt;
+                                                        &lt;div class=&quot;col-2&quot;&gt;%itemImage2(9)%&lt;/div&gt;
+                                                        &lt;div class=&quot;col-2&quot;&gt;%itemImage2(10)%&lt;/div&gt;
+                                                        &lt;div class=&quot;col-2&quot;&gt;%itemImage2(11)%&lt;/div&gt;
+                                                        &lt;div class=&quot;col-2&quot;&gt;%itemImage2(12)%&lt;/div&gt;
+                                                        &lt;div class=&quot;col-2&quot;&gt;%itemImage2(13)%&lt;/div&gt;
+                                                        &lt;div class=&quot;col-2&quot;&gt;%itemImage2(14)%&lt;/div&gt;
+                                                    &lt;/div&gt;
+                                                    &lt;div&gt;%itemContent%&lt;/div&gt;
+                                                    &lt;div&gt;%item.comment.nl2br%&lt;/div&gt;
+                                                    &lt;div&gt;%item.movie.html_entity_decode%&lt;/div&gt;
+                                                    &lt;a class=&quot;pdfLink&quot; href=&quot;%item.pdf%&quot; target=&quot;_blank&quot; noopener=&quot;noopener&quot;&gt;PDFを開く&lt;/a&gt;
+                                                    &lt;div&gt;
+                                                        &lt;p class=&quot;webgene-item-aroundPageLink webgene-item-prevPageLink&quot;&gt;%prevPageLink.to(&quot;前の記事へ&quot;,&quot;前の記事はありません&quot;)%&lt;/p&gt;
+                                                        &lt;p class=&quot;webgene-item-aroundPageLink webgene-item-nextPageLink&quot;&gt;%nextPageLink.to(&quot;次の記事へ&quot;,&quot;次の記事はありません&quot;)%&lt;/p&gt;
+                                                    &lt;/div&gt;
+                                                &lt;/div&gt;
+                                            &lt;/article&gt;
+                                        &lt;/section&gt;</code>
+                                    </pre>
+
+                    <h5>
+                      詳細ページのページャーについて
+                    </h5>
+
+                    <p>
+                      <code>&lt;span class=&quot;webgene-item-aroundPageLink webgene-item-prevPageLink&quot;&gt;%prevPageLink.to(&quot;前の記事へ&quot;,&quot;前の記事はありません&quot;)%&lt;/span&gt;    &lt;span class=&quot;webgene-item-aroundPageLink webgene-item-nextPageLink&quot;&gt;%nextPageLink.to(&quot;次の記事へ&quot;,&quot;次の記事はありません&quot;)%&lt;/span&gt;</code>
+                    </p>
+
+                    <p>
+                      上記のソースarticleタグの内側に入れることで詳細ページにページャ―を表示することができます。
+                      <br>
+                      次のページ及び前のページの判定は一覧ページの「ソート項目」「順番」が反映されます。
+                      <br>
+                      例えば、ソート項目が「date」、順番が「降順」の場合に「次の記事へ」をクリックすると、今表示されている記事の日付より古い日付の記事が表示されます。
+                    </p>
+
+                    <h5>解説</h5>
+
+                    <p>
+                      トピックスはブログ、新着情報と比べ使用できる独自タグの種類が増えています。
+                      <br>
+                      独自タグの説明については
+                      <a href="https://designer-manual.sibloo.com/586/">ブログの作り方（独自タグ編）</a>
+                      をご参照ください。
+                      <br>
+                    </p>
+
+                    <h5>
+                      トピックス、事例集で画像を横並びにするcss例
+                    </h5>
+
+                    <p>
+                      HTMLは上記の詳細ページコーディング例の場合を想定しています。
+                    </p>
+
+                    <pre>
+                                        <code>.imgWrap {
+                                            display: flex;
+                                            flex-wrap: wrap;
+                                        }
+
+                                        .imgWrap .imgBx {
+                                            margin: 1%;
+                                            padding: 0 0 15%;
+                                            width: 18%;
+                                            border: 1px solid #acacac;
+                                            position: relative;
+                                        }
+
+                                        .imgWrap .imgBx img {
+                                            margin: auto;
+                                            max-width: 100%;
+                                            max-height: 100%;
+                                            width: auto;
+                                            height: auto;
+                                            position: absolute;
+                                            top: 0;
+                                            right: 0;
+                                            bottom: 0;
+                                            left: 0;
+                                        }</code>
+                                    </pre>
+
+                    <h5>
+                      トピックス、事例集で画像が登録されていない場合にimgタグの親要素を削除するjs例
+                    </h5>
+
+                    <p>
+                      上記の詳細ページコーディング例では、画像が登録されていない箇所は空のdivが残ってしまいますが、その空のdivを削除するjsです。
+                      <br>
+                      HTMLは上記の詳細ページコーディング例の場合を想定しています。
+                    </p>
+
+                    <pre>
+                                        <code>// 子要素にimgがないdivを削除
+                                        $(&quot;.imgBx&quot;).each( function() {
+                                            if( !($(this).has(&#x27;img&#x27;)).length ){
+                                                this.remove();
+                                            }
+                                        });</code>
+                                    </pre>
+
+                    <h4>
+                      記事データブロックのコンポーネント設定例
+                    </h4>
+
+                    <p>
+                      記事詳細ブロックのコンポーネントは作成したテンプレート（各自で登録したデザインコンポネント）を選びます。
+                    </p>
+
+                    <p></p>
+
+                    <h4>
+                      <br>
+                      アーカイブのコーディング例（共通）
+                    </h4>
+
+                    <p>
+                      デザインコンポネント の名称は仮に「archive」にします。
+                    </p>
+
+                    <pre>
+                                        <code>&lt;section class=&quot;webgene-blog&quot;&gt;
+                                            &lt;article class=&quot;webgene-item&quot;&gt;
+                                                &lt;a href=&quot;/一覧ページのパス?wg[wgc-■■■_ym]=date|%groupName1%&quot;&gt;%groupName1%&lt;/a&gt;
+                                            &lt;/article&gt;
+                                        &lt;/section&gt;</code>
+                                    </pre>
+
+                    <h5>解説</h5>
+
+                    <p>
+                      <code>wgc-■■■_ym</code>
+                      の箇所は記事データブロックのIDと紐づける必要があります。
+                      <br>
+                      そのため、アーカイブを表示する場合はブログ一覧を必ず表示しなければなりません。
+                    </p>
+
+
+
+                    <h4>
+                      アーカイブでのコンポーネント設定例（共通）
+                    </h4>
+
+
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>項目</th>
+                            <th>設定例</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>テーブル</td>
+                            <td>
+                              blog（ブログの場合）
+                              <br>
+                              news（新着情報の場合）
+                              <br>
+                              topics（トピックスの場合）
+                              <br>
+                              cases（事例集の場合）
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <strong>
+                                <code>1ページ当たりの行数</code>
+                              </strong>
+                            </td>
+                            <td>
+                              <strong>
+                                <code>1000</code>
+                              </strong>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <strong>
+                                <code>ソート項目</code>
+                              </strong>
+                            </td>
+                            <td>
+                              <strong>
+                                <code>1</code>
+                              </strong>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>順番</td>
+                            <td>降順</td>
+                          </tr>
+                          <tr>
+                            <td>テンプレート</td>
+                            <td>archive(自分で決めたテンプレート名)</td>
+                          </tr>
+                          <tr>
+                            <td>ページング</td>
+                            <td>無</td>
+                          </tr>
+                          <tr>
+                            <td>グルーピング</td>
+                            <td>date</td>
+                          </tr>
+                          <tr>
+                            <td>グルーピング拡張</td>
+                            <td>YM</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+
+                    <p>
+                      グルーピング拡張「YM」は「YM-JA」にすることで日本語での月表示が可能です。
+                    </p>
+
+                    <h4>
+                      <br>
+                      カテゴリのコーディング例 （共通）
+                    </h4>
+
+                    <p>
+                      デザインコンポネント の名称は仮に「 categorylist
+                      」にします。
+                    </p>
+
+                    <pre>
+                                        <code>&lt;section class=&quot;webgene-blog&quot;&gt;
+                                            &lt;article class=&quot;webgene-item&quot;&gt;
+                                                &lt;a href=&quot;/一覧ページのパス?wg[wgc-■■■_cate]=%groupName1%&quot;&gt;%groupName2%&lt;/a&gt;
+                                            &lt;/article&gt;
+                                        &lt;/section&gt;</code>
+                                    </pre>
+
+                    <h4>
+                      カテゴリリストでのコンポーネント設定例（共通）
+                    </h4>
+
+
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>項目</th>
+                            <th>設定例</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>テーブル</td>
+                            <td>
+                              blog（ブログの場合）
+                              <br>
+                              news（新着情報の場合）
+                              <br>
+                              topics（トピックスの場合）
+                              <br>
+                              cases（事例集の場合）
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <strong>
+                                <code>1ページ当たりの行数</code>
+                              </strong>
+                            </td>
+                            <td>
+                              <strong>
+                                <code>100</code>
+                              </strong>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <strong>
+                                <code>ソート項目</code>
+                              </strong>
+                            </td>
+                            <td>
+                              <strong>
+                                <code>category_sort</code>
+                              </strong>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>順番</td>
+                            <td>昇順</td>
+                          </tr>
+                          <tr>
+                            <td>テンプレート</td>
+                            <td>categorylist(自分で決めたテンプレート名)</td>
+                          </tr>
+                          <tr>
+                            <td>ページング</td>
+                            <td>無</td>
+                          </tr>
+                          <tr>
+                            <td>グルーピング</td>
+                            <td>
+                              blog_category_cd, category_name,
+                              category_sort（ブログの場合）
+                              <br>
+                              news_category_cd, category_name,
+                              category_sort（新着情報の場合）
+                              <br>
+                              topics_category_cd, category_name,
+                              category_sort（トピックスの場合）
+                              <br>
+                              cases_category_cd, category_name,
+                              category_sort（事例集の場合）
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>グルーピング拡張</td>
+                            <td>(なし)</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+
+                    <p></p>
+
+                    <h4>
+                      <br>
+                      トップページなどの記事一覧コーディング例（共通）
+                    </h4>
+
+                    <p>
+                      デザインコンポネント の名称は仮に「blogall」にします。
+                    </p>
+
+                    <pre>
+                                        <code>&lt;section class=&quot;webgene-blog&quot;&gt;
+                                            &lt;article class=&quot;webgene-item&quot;&gt;
+                                                &lt;div class=&quot;row&quot;&gt;
+                                                    &lt;div class=&quot;col-6&quot;&gt;
+                                                        &lt;p&gt;%itemDate.format(Y.m.d)%&lt;/p&gt;
+                                                    &lt;/div&gt;
+                                                    &lt;div class=&quot;col-6&quot;&gt;
+                                                        &lt;p&gt;%itemCategory%&lt;/p&gt;
+                                                    &lt;/div&gt;
+                                                    &lt;div class=&quot;col-12&quot;&gt;
+                                                        &lt;a href=&quot;%itemLink.to(詳細ページのパス)%&quot;&gt;
+                                                            &lt;p&gt;%itemTitle%&lt;/p&gt;
+                                                        &lt;/a&gt;
+                                                    &lt;/div&gt;
+                                                &lt;/div&gt;
+                                            &lt;/article&gt;
+                                        &lt;/section&gt;</code>
+                                    </pre>
+
+                    <h4>
+                      トップページなどの記事一覧
+                      でのコンポーネント設定例（共通）
+                    </h4>
+
+
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <strong>項目</strong>
+                            </td>
+                            <td>
+                              <strong>設定例</strong>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>テーブル</td>
+                            <td>
+                              blog（ブログの場合）
+                              <br>
+                              news（新着情報の場合）
+                              <br>
+                              topics（トピックスの場合）
+                              <br>
+                              cases（事例集の場合）
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>1ページ当たりの行数</td>
+                            <td>5</td>
+                          </tr>
+                          <tr>
+                            <td>ソート項目</td>
+                            <td>date</td>
+                          </tr>
+                          <tr>
+                            <td>順番</td>
+                            <td>降順</td>
+                          </tr>
+                          <tr>
+                            <td>テンプレート</td>
+                            <td>blogall (自分で決めたテンプレート名)</td>
+                          </tr>
+                          <tr>
+                            <td>ページング</td>
+                            <td>無</td>
+                          </tr>
+                          <tr>
+                            <td>ページ番号の数</td>
+                            <td>0</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+
+                    <p></p>
+
+                    <h4>ページ件数と登録件数の表示</h4>
+
+                    <p>
+                      記事一覧ページの
+                      <code>&lt;section&gt;</code>
+                      タグ内に下記のHTMLを追加することで
+                      <br>
+                      表示中ページの件数、全件数、表示中最初のレコード、全件の何番目、表示中最後のレコード、全件の何番
+                      <br>
+                      目、表示中のページ番号、全ページ数を表示することができます。
+                    </p>
+
+                    <pre>
+                                        <code>&lt;div class=&quot;webgene-legend&quot;&gt;
+                                            &lt;p&gt;検索結果：%pageItems%件 / %totalItems%件 - 表示中：%pageFirstItem% ~ %pageLastItem% - ページ： &lt;span style=&quot;color:red;font-size:20px;&quot;&gt;%page%&lt;/span&gt;/%totalPages%&lt;/p&gt;
+                                        &lt;/div&gt;</code>
+                                    </pre>
+
+                    <p>■表示結果</p>
+
+                    <pre>
+                                        <code>検索結果：2件 / 5件 - 表示中：1 ~ 2 - ページ： 1/3</code>
+                                    </pre>
+
+
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <strong>独自タグ</strong>
+                            </td>
+                            <td>
+                              <strong>解説</strong>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>%pageItems%</td>
+                            <td>表示中ページの件数</td>
+                          </tr>
+                          <tr>
+                            <td>%totalItems%</td>
+                            <td>全件数</td>
+                          </tr>
+                          <tr>
+                            <td>%pageFirstItem%</td>
+                            <td>表示中最初のレコード、全件の何番目</td>
+                          </tr>
+                          <tr>
+                            <td>%pageLastItem%</td>
+                            <td>表示中最後のレコード、全件の何番目</td>
+                          </tr>
+                          <tr>
+                            <td>%page%</td>
+                            <td>表示中のページ番号</td>
+                          </tr>
+                          <tr>
+                            <td>%totalPages%</td>
+                            <td>全ページ数</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                  </div></details><details><summary>data-block.html（提供された原文）</summary><pre><code>&lt;section class=&quot;webgene-blog&quot;&gt;
+  &lt;div class=&quot;webgene-header&quot;&gt;
+    &lt;h2&gt;カテゴリ&lt;/h2&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;webgene-item&quot;&gt;
+    &lt;a href=&quot;/bloglist?wg[wgc-1791180941033_cate]=%groupName1%&quot;&gt;%groupName2%&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;webgene-blog&quot;&gt;
+  &lt;div class=&quot;webgene-header&quot;&gt;
+    &lt;h2&gt;ブログ詳細&lt;/h2&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;webgene-item&quot;&gt;
+    &lt;div class=&quot;ttlBox&quot;&gt;
+      &lt;h2&gt;%itemTitle%&lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;blogInfo&quot;&gt;
+      &lt;div class=&quot;time&quot;&gt;
+        &lt;p&gt;%itemDate.format(Y-m-d)%&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;webgene-item-content postBox&quot;&gt;
+      &lt;div class=&quot;photo&quot;&gt;%itemImageL(0)%&lt;/div&gt;
+      &lt;div class=&quot;postTxt&quot;&gt;%itemContent%&lt;/div&gt;
+      &lt;div class=&quot;pdfArea&quot;&gt;
+        &lt;a class=&quot;pdfLink&quot; href=&quot;%item.pdf%&quot; target=&quot;_blank&quot; noopener=&quot;noopener&quot;
+          &gt;PDFを開く&lt;/a
+        &gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;btnBackBox&quot;&gt;
+      &lt;div class=&quot;btnContact&quot;&gt;&lt;a href=&quot;contact&quot;&gt;お問い合わせはこちら&lt;/a&gt;&lt;/div&gt;
+      &lt;div class=&quot;btnMore&quot;&gt;&lt;a href=&quot;bloglist&quot;&gt;一覧に戻る&lt;/a&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;webgene-blog&quot;&gt;
+  &lt;div class=&quot;webgene-header&quot;&gt;
+    &lt;h2&gt;ブログ一覧&lt;/h2&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;webgene-item&quot;&gt;
+    &lt;a href=&quot;%itemLink.to(blog)%&quot;&gt;
+      &lt;div class=&quot;photo&quot;&gt;%itemImageL(0)%&lt;/div&gt;
+      &lt;div class=&quot;time&quot;&gt;
+        &lt;p&gt;%itemDate.format(Y-m-d)%&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;title&quot;&gt;
+        &lt;p&gt;%itemTitle%&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;webgene-pagination&quot;&gt;&lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;webgene-blog&quot;&gt;
+  &lt;div class=&quot;webgene-header&quot;&gt;
+    &lt;h3&gt;ブログ一覧&lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;webgene-item&quot;&gt;
+    &lt;a href=&quot;%itemLink.to(blog)%&quot;&gt;
+      &lt;div class=&quot;photo&quot;&gt;%itemImageL(0)%&lt;/div&gt;
+      &lt;div class=&quot;time&quot;&gt;
+        &lt;p&gt;%itemDate.format(Y-m-d)%&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;title&quot;&gt;
+        &lt;p&gt;%itemTitle%&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class=&quot;webgene-blog&quot;&gt;
+  &lt;div class=&quot;webgene-item&quot;&gt;
+    &lt;a href=&quot;%item.canonical%&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+      &lt;div class=&quot;photo&quot;&gt;%itemImageL(0)%&lt;/div&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+</code></pre></details></div>
+<div class="manualFooter"><p>出典：提供ファイル「ブログ（CMS）の作り方（独自タグ編）.html」「ブログ（CMS）の作り方、コーディング例.html」「data-block.html」。元ページ：<a href="https://designer-manual.sibloo.com/586/">独自タグ編</a>／<a href="https://designer-manual.sibloo.com/588/">コーディング例</a>。作成日：2026-10-05。CMS実機の動作は未確認です。</p></div></div></body></html>

@@ -119,13 +119,7 @@
     display: block;
     overflow-y: auto;
     background: #ebdfeb;
-    visibility: hidden;
-    opacity: 0;
     transition: 0.4s;
-  }
-  .header .navBox.active {
-    visibility: visible;
-    opacity: 1;
   }
   .header .navBox .navBoxInner {
     padding: 20px 20px 40px;
@@ -177,12 +171,6 @@
   .footer .footerOrder {
     padding: 40px 15px 50px;
   }
-  .footer .footerOrder .pageTop {
-    top: 15px;
-    right: 15px;
-    width: 40px;
-    height: 40px;
-  }
   .footer .footerOrder .footerOrderContainer .footerOrderImage {
     position: static;
     width: 56px;
@@ -221,6 +209,12 @@
   }
   .footer .footerMain {
     padding: 50px 15px 30px;
+  }
+  .footer .footerMain .pageTop {
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
   }
   .footer .footerMain .footerNav {
     display: none;

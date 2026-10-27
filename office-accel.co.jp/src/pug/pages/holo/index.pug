@@ -1,0 +1,17 @@
+- var root_path = '../'
+include /site.pug
+- var title = 'ストレッチホロシール（グロー、ラメ、カスタム） | office ACCEL'
+- var description = 'ジグ・ルアーの補修、カスタムに最適なストレッチホロシール。'
+- var keywords = ''
+- var page_name = 'holo'
+- var layout_js = ['js/products.js']
+- var cmsMode = false
+- site_use_slick = true
+doctype html
+html(lang=site_lang)
+	head
+		include /common/head.pug
+	body#pageStart.page
+		include /common/header.pug
+		include /layouts/holo.pug
+		include /common/footer.pug

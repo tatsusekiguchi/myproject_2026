@@ -1,0 +1,433 @@
+@charset "UTF-8";
+@import "./mixin";
+@import "./mod";
+/* CSS Document */
+/*===================================================
+  共通CSS（PC/SMP）
+===================================================*/
+
+/*////////////////////////////////////////////////////////////
+  共通設定
+///////////////////////////////////////////////////////////*/
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+}
+html {
+  scroll-padding-top: 112px;
+}
+body {
+  font-family: $baseFont;
+  font-size: $PCfontSize;
+  line-height: $lhTxt;
+  color: $mainColor;
+  background: $bgBaseColor;
+}
+.main {
+  background: $bgBaseColor;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  line-height: $lhBase;
+}
+a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid $accentColor;
+  outline-offset: 3px;
+}
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+.siteClearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.spBreak,
+.pcHidden {
+  display: none;
+}
+.pcBreak,
+.spHidden {
+  display: block;
+}
+@media (min-width: 1025px) {
+  a {
+    transition: opacity 0.3s;
+  }
+  a:hover {
+    opacity: 0.7;
+  }
+}
+
+/* --------------------------------------------------
+  header
+-------------------------------------------------- */
+.header {
+  position: sticky;
+  z-index: 100;
+  top: -136px;
+  background: $bgBaseColor;
+  .headerContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1040px;
+    height: 136px;
+    margin: 0 auto;
+    padding: 0 20px;
+    .headerLogo {
+      width: 242px;
+      a {
+        display: block;
+      }
+    }
+    .hamburger {
+      position: relative;
+      display: none;
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+      .hamburgerLine {
+        position: absolute;
+        right: 10px;
+        left: 10px;
+        height: 2px;
+        background: $mainColor;
+        transition:
+          transform 0.3s,
+          opacity 0.3s;
+        &:nth-child(1) {
+          top: 14px;
+        }
+        &:nth-child(2) {
+          top: 21px;
+        }
+        &:nth-child(3) {
+          top: 28px;
+        }
+      }
+      &.is-open {
+        .hamburgerLine {
+          &:nth-child(1) {
+            top: 21px;
+            transform: rotate(45deg);
+          }
+          &:nth-child(2) {
+            opacity: 0;
+          }
+          &:nth-child(3) {
+            top: 21px;
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
+  .navBox {
+    display: block;
+    padding: 0 20px 24px;
+    .navBoxInner {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      max-width: 1000px;
+      min-height: 88px;
+      margin: 0 auto;
+      padding: 14px 24px;
+      border-top: 1px solid $lineColor;
+      border-bottom: 1px solid $lineColor;
+      .navList {
+        flex: 1;
+        min-width: 0;
+        ul {
+          display: flex;
+          gap: 24px;
+          align-items: center;
+          justify-content: space-between;
+          li {
+            flex: 1;
+            min-width: 0;
+            a {
+              display: block;
+              .navText {
+                text-align: center;
+                p {
+                  font-size: inherit;
+                  font-weight: bold;
+                  line-height: 1.6;
+                  color: $mainColor;
+                }
+                p + p {
+                  margin: 5px 0 0;
+                  font-size: 14px;
+                  font-weight: normal;
+                  color: $accentColor;
+                }
+              }
+            }
+          }
+        }
+      }
+      .headerSns {
+        flex: 0 0 20px;
+        a {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+/* --------------------------------------------------
+  main・共通部品
+-------------------------------------------------- */
+.secWrap {
+  max-width: 1640px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.secWrap01 {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.secWrap02 {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.secTtl {
+  text-align: center;
+  h2 {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  h3 {
+    font-size: 22px;
+  }
+  &::after {
+    content: "";
+    display: block;
+    width: 46px;
+    height: 4px;
+    margin: 15px auto 0;
+    background: $accentColor;
+  }
+}
+.txtBox {
+  line-height: $lhTxt;
+}
+.btnMore {
+  a {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+    min-width: 164px;
+    padding: 7px 32px;
+    font-size: inherit;
+    line-height: 25px;
+    color: #ffffff;
+    text-align: center;
+    background: $accentColor;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 16px;
+      bottom: 0;
+      width: 9px;
+      height: 12px;
+      margin: auto 0;
+      background: url("https://sit-9586431.sibloo.com/system_panel/uploads/images/btn_more_arrow.png")
+        center / contain no-repeat;
+    }
+  }
+}
+.pageKv {
+  background: $panelColor;
+  .secWrap01 {
+    .pageKvContainer {
+      padding: 56px 0;
+      .pageKvTitle {
+        h1 {
+          font-size: 36px;
+        }
+      }
+    }
+  }
+}
+.topicPath {
+  .secWrap01 {
+    .topicPathContainer {
+      padding: 16px 0;
+      .ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        .li {
+          a {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+.mapBox {
+  position: relative;
+  overflow: hidden;
+  padding: 0 0 45%;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* --------------------------------------------------
+  footer
+-------------------------------------------------- */
+.footer {
+  .footerMain {
+    position: relative;
+    padding: 100px 0 0;
+    .pageTop {
+      position: absolute;
+      top: 100px;
+      right: 30px;
+      width: 50px;
+      a {
+        display: block;
+        cursor: pointer;
+      }
+    }
+    .secWrap01 {
+      .footerContainer {
+        text-align: center;
+        .footerLogo {
+          width: 242px;
+          margin: 0 auto;
+          a {
+            display: block;
+          }
+        }
+        .footerNav {
+          display: flex;
+          gap: 28px;
+          align-items: center;
+          max-width: 1000px;
+          min-height: 88px;
+          margin: 36px auto 0;
+          padding: 14px 24px;
+          border-top: 1px solid $lineColor;
+          border-bottom: 1px solid $lineColor;
+          .navList {
+            flex: 1;
+            min-width: 0;
+            ul {
+              display: flex;
+              gap: 24px;
+              align-items: center;
+              justify-content: space-between;
+              li {
+                flex: 1;
+                min-width: 0;
+                a {
+                  display: block;
+                  .navText {
+                    text-align: center;
+                    p {
+                      font-size: inherit;
+                      font-weight: bold;
+                      line-height: 1.6;
+                    }
+                    p + p {
+                      margin: 5px 0 0;
+                      font-size: 14px;
+                      font-weight: normal;
+                      color: $accentColor;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .footerSns {
+            flex: 0 0 20px;
+            a {
+              display: block;
+            }
+          }
+        }
+        .footerTitle {
+          margin: 86px 0 0;
+          h2 {
+            font-size: inherit;
+          }
+        }
+        .footerText {
+          margin: 24px 0 0;
+          font-size: inherit;
+          line-height: 1.9;
+          color: #999999;
+          .footerMailText {
+            .footerMailLead,
+            .footerMailLink,
+            .footerMailTail {
+              display: inline-block;
+            }
+            .footerMailLink {
+              a {
+                text-decoration: underline;
+                overflow-wrap: anywhere;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .footerCopyright {
+    padding: 96px 20px 44px;
+    text-align: center;
+    p {
+      font-size: inherit;
+      color: #777777;
+    }
+  }
+}

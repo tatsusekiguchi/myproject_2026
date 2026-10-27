@@ -59,6 +59,17 @@ $(document).ready(function () {
   //スクロール位置に応じてナビ固定
   //setHeaderFixed();
 
+  //教室案内の写真を右から左へ連続スライド
+  if ($(".accessMain .slidePanel").length > 0) {
+    $(".accessMain .slideBox ul").infiniteslide({
+      speed: 35,
+      direction: "left",
+      pauseonhover: false,
+      responsive: true,
+      clone: 2,
+    });
+  }
+
   //文章を指定の文字数でカット
   if ($(".blogListBox").length > 0) {
     var count = 55;

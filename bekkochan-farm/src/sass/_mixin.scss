@@ -12,7 +12,7 @@ $navTextColor: #323537;
 $orderBgColor: #ece9d9;
 $orderTtlColor: #5b5294;
 $grayColor: #585858;
-$footerBgColor: #493733;
+$footerBgColor: #483733;
 $footerLineColor: #5a4844;
 $footerCopyColor: #998885;
 $crumbColor: #d3becd;
@@ -22,10 +22,12 @@ $imgPath: "../images";
 
 //font
 // https://fonts.google.com/?query=Morisawa+Inc.
-$baseFont: "Noto Sans JP", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3",
-  "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "Helvetica Neue", "Helvetica",
-  "Arial", sans-serif;
-$serif: "Noto Serif JP", "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3",
+$baseFont:
+  "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic",
+  "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo",
+  "verdana", sans-serif;
+$serif:
+  "Noto Serif JP", "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3",
   "Hiragino Mincho ProN", "游明朝", YuMincho, "HG明朝E", "ＭＳ Ｐ明朝",
   "ＭＳ 明朝", serif;
 

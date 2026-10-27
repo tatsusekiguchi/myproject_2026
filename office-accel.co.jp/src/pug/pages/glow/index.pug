@@ -1,0 +1,17 @@
+- var root_path = '../'
+include /site.pug
+- var title = 'グロー・紫外線発光シリーズ（グローシール、バイトマーカー、グローフレーク） | office ACCEL'
+- var description = '釣果に差が出るグロー（夜光）、紫外線発光（ケイムラ）シリーズ。'
+- var keywords = ''
+- var page_name = 'glow'
+- var layout_js = ['js/products.js']
+- var cmsMode = false
+- site_use_infiniteslide = true
+doctype html
+html(lang=site_lang)
+	head
+		include /common/head.pug
+	body#pageStart.page
+		include /common/header.pug
+		include /layouts/glow.pug
+		include /common/footer.pug

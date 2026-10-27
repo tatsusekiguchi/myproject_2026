@@ -25,12 +25,11 @@ body {
 body {
   position: relative;
   overflow-x: hidden;
-  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
   line-height: 1.5;
   color: #101211;
   font-size: 16px;
   background: #ffffff;
-  transition: 2s;
 }
 
 h1,
@@ -64,7 +63,7 @@ img {
 }
 
 /* clearfix */
-.clearfix::after {
+.siteClearfix::after {
   content: ".";
   display: block;
   height: 0;
@@ -96,7 +95,7 @@ img {
 .header {
   position: relative;
   z-index: 1000;
-  font-family: "Noto Sans JP", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
   font-weight: 700;
   background: #ab2023;
 }
@@ -166,7 +165,7 @@ img {
 -------------------------------------------------- */
 .gNav {
   height: 94px;
-  font-family: "Noto Sans JP", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
 }
 .gNav .gNavInner {
   width: 100%;
@@ -190,10 +189,10 @@ img {
 }
 .gNav .navList ul li {
   flex: 1 1 0;
-  border-left: 3px solid #e1cfdf;
+  border-left: 2px solid #e1cfdf;
 }
 .gNav .navList ul li:last-child {
-  border-right: 3px solid #e1cfdf;
+  border-right: 2px solid #e1cfdf;
 }
 .gNav .navList ul li a {
   display: flex;
@@ -226,7 +225,7 @@ img {
   text-align: center;
 }
 .pageKv .pageKvContainer h1 {
-  font-family: "Noto Sans JP", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
   font-size: 50px;
   font-weight: 700;
   line-height: 1.3;
@@ -235,7 +234,7 @@ img {
 
 /* パンくず */
 .topicPath {
-  font-family: "Noto Sans JP", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
   font-weight: 700;
   border-bottom: 1px solid #e1cfdf;
 }
@@ -244,22 +243,22 @@ img {
   margin: 0 auto;
   padding: 0 20px;
 }
-.topicPath .topicPathContainer ul {
+.topicPath .topicPathContainer .ul {
   display: flex;
   align-items: center;
   font-size: 14px;
   line-height: 40px;
   color: #323537;
 }
-.topicPath .topicPathContainer ul li {
+.topicPath .topicPathContainer .ul .li {
   text-decoration: underline;
 }
-.topicPath .topicPathContainer ul li a {
+.topicPath .topicPathContainer .ul .li a {
   display: inline-block;
   color: #d3becd;
   text-decoration: none;
 }
-.topicPath .topicPathContainer ul li + li::before {
+.topicPath .topicPathContainer .ul .li + .li::before {
   content: ">";
   display: inline-block;
   margin: 0 18px;
@@ -304,42 +303,13 @@ img {
 	footer
 -------------------------------------------------- */
 .footer {
-  font-family: "Noto Sans JP", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
   font-weight: 700;
 }
 .footer .footerOrder {
   position: relative;
   padding: 65px 20px 95px;
   background: #ece9d9;
-}
-.footer .footerOrder .pageTop {
-  position: absolute;
-  top: 20px;
-  right: 40px;
-  width: 50px;
-  height: 50px;
-}
-.footer .footerOrder .pageTop a {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: #ac8abd;
-}
-.footer .footerOrder .pageTop a::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 12px;
-  height: 12px;
-  margin: auto;
-  border-top: 3px solid #ffffff;
-  border-left: 3px solid #ffffff;
-  transform: rotate(45deg);
 }
 .footer .footerOrder .footerOrderContainer {
   position: relative;
@@ -424,10 +394,40 @@ img {
   width: 27px;
 }
 .footer .footerMain {
+  position: relative;
   padding: 96px 20px 40px;
   color: #ece9d9;
   text-align: center;
-  background: #493733;
+  background: #483733;
+}
+.footer .footerMain .pageTop {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  width: 50px;
+  height: 50px;
+}
+.footer .footerMain .pageTop a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #ac8abd;
+}
+.footer .footerMain .pageTop a::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  margin: auto;
+  border-top: 3px solid #ffffff;
+  border-left: 3px solid #ffffff;
+  transform: rotate(45deg);
 }
 .footer .footerMain .footerNav ul {
   display: flex;
@@ -475,42 +475,5 @@ img {
   color: #998885;
   text-align: center;
   border-top: 2px solid #5a4844;
-  background: #493733;
-}
-
-/* --------------------------------------------------
-	fadeAnimation
--------------------------------------------------- */
-body::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #ffffff;
-  /* 背景カラー */
-  z-index: 9999;
-  /* 一番手前に */
-  pointer-events: none;
-  /* 他の要素にアクセス可能にするためにポインターイベントは無効に */
-  opacity: 0;
-  /* 初期値では非表示 */
-  -webkit-transition: opacity 0.8s ease;
-  /* アニメーション時間は 0.8秒 */
-  -ms-transition: opacity 0.8s ease;
-  -moz-transition: opacity 0.8s ease;
-  transition: opacity 0.8s ease;
-}
-
-/*body要素に.fadeoutセレクタがある場合には、レイヤーが表示されるようにopacityを１に設定します。*/
-body.fadeout::after {
-  opacity: 1;
-}
-
-/*お好みで、.fadeoutセレクタ以下の他の要素にもアニメーション用のCSSを定義します*/
-/*DEMOではページ遷移時にarticle要素のスケールもアニメーションさせています*/
-body.fadeout article {
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
+  background: #483733;
 }

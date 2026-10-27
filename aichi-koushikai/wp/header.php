@@ -24,9 +24,10 @@
 			<div class="navList">
 				<ul>
 					<li><a href="<?php echo esc_url( aichi_koushikai_page_url( 'philosophy' ) ); ?>">愛知講師会の想い</a></li>
-					<li><a href="<?php echo esc_url( aichi_koushikai_page_url( 'service' ) ); ?>">サービス紹介</a></li>
+					<li><a href="<?php echo esc_url( aichi_koushikai_page_url( 'service' ) ); ?>">サービス/料金紹介</a></li>
 					<li><a href="<?php echo esc_url( aichi_koushikai_page_url( 'class' ) ); ?>">クラス紹介</a></li>
 					<li><a href="<?php echo esc_url( aichi_koushikai_page_url( 'lecturer' ) ); ?>">講師紹介</a></li>
+					<li><a href="<?php echo esc_url( aichi_koushikai_page_url( 'voice' ) ); ?>">生徒・保護者の声と実績</a></li>
 					<li><a href="<?php echo esc_url( aichi_koushikai_page_url( 'access' ) ); ?>">教室案内</a></li>
 					<li><a href="<?php echo esc_url( aichi_koushikai_page_url( 'bloglist' ) ); ?>">ブログ</a></li>
 					<li><a href="<?php echo esc_url( aichi_koushikai_page_url( 'faq' ) ); ?>">よくある質問</a></li>

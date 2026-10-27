@@ -1,0 +1,488 @@
+@charset "UTF-8";
+@import "./mixin";
+@import "./mod";
+/* CSS Document */
+/*===================================================
+  画面用CSS（PC/SMP）
+===================================================*/
+
+/*////////////////////////////////////////////////////////////
+  TOP
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .topMain {
+    .topKv {
+      .secWrap01 {
+        .topKvContainer {
+          padding: 64px 0 72px;
+          .topKvLogo {
+            width: 200px;
+          }
+          .topKvTitle {
+            margin: 40px 0 0;
+            h1 {
+              font-size: clamp(22px, 4.2vw, 36px);
+              letter-spacing: 0;
+            }
+          }
+          .topKvText {
+            margin: 16px 0 0;
+            p {
+              font-size: $SPfontSize;
+              line-height: 1.9;
+            }
+          }
+        }
+      }
+    }
+    .newsSection {
+      .secWrap01 {
+        .newsContainer {
+          flex-direction: column;
+          gap: 24px;
+          align-items: stretch;
+          padding: 32px 0;
+          .secTtl {
+            flex-basis: auto;
+          }
+          .newsList {
+            .newsItem {
+              flex-direction: column;
+              gap: 0;
+              align-items: stretch;
+              font-size: $SPfontSize;
+              .newsDate {
+                flex-basis: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+    .aboutSection {
+      .secWrap01 {
+        .aboutContainer {
+          padding: 80px 0 0;
+          .txtBox {
+            font-size: $SPfontSize;
+            line-height: 2;
+          }
+        }
+      }
+    }
+    .productsSection {
+      .secWrap01 {
+        .productsContainer {
+          padding: 80px 0 0;
+          .productsList {
+            gap: 28px;
+            margin: 40px 0 0;
+            .productItem {
+              width: calc((100% - 28px) / 2);
+              .productContent {
+                padding: 16px 20px 24px;
+                .productText {
+                  p {
+                    font-size: $SPfontSize;
+                  }
+                  h3 {
+                    margin: 6px 0 0;
+                    font-size: 20px;
+                  }
+                }
+                .btnMore {
+                  margin: 20px 0 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .faqSection {
+      .secWrap01 {
+        .faqContainer {
+          padding: 88px 0 0;
+          .faqList {
+            margin: 40px 0 0;
+            .faqItem {
+              .dt {
+                padding: 22px 32px 22px 38px;
+                font-size: $SPfontSize;
+                .faqMark {
+                  left: 4px;
+                  width: 22px;
+                  font-size: 24px;
+                }
+                &::after {
+                  right: 8px;
+                  width: 10px;
+                  height: 10px;
+                }
+              }
+              .dd {
+                .faqAnswer {
+                  gap: 12px;
+                  padding: 0 4px 24px;
+                  .faqMark {
+                    flex-basis: 22px;
+                    font-size: 24px;
+                  }
+                  .faqText {
+                    font-size: $SPfontSize;
+                    line-height: 2;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .instaSection {
+      .secWrap01 {
+        .instaContainer {
+          padding: 88px 0 120px;
+          .instaPanel {
+            max-width: 700px;
+            margin: 40px auto 0;
+            .instaList {
+              .webgene-blog {
+                .webgene-item {
+                  width: calc((100% - 2px) / 2);
+                }
+              }
+            }
+          }
+          .btnMore {
+            margin: 32px 0 0;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  .topMain {
+    .productsSection {
+      .secWrap01 {
+        .productsContainer {
+          .productsList {
+            .productItem {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+  下層の基本セクション
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .tempMain {
+    .sec01 {
+      .secWrap01 {
+        .secContainer {
+          flex-direction: column;
+          gap: 28px;
+          align-items: stretch;
+          padding: 40px 0;
+          .imgBox {
+            flex-basis: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*////////////////////////////////////////////////////////////
+  製品ページ共通（02〜05）
+///////////////////////////////////////////////////////////*/
+@media (max-width: 1024px) {
+  .productsMain {
+    .productKv {
+      .secWrap01 {
+        .productKvContainer {
+          flex-direction: column;
+          gap: 40px;
+          align-items: stretch;
+          padding: 56px 0 64px;
+          .productKvTitle {
+            flex-basis: auto;
+            .ttl {
+              h1 {
+                font-size: clamp(48px, 8vw, 68px);
+              }
+            }
+          }
+          .productKvContent {
+            .productTypeList {
+              .productTypeItem {
+                .ttl {
+                  h2 {
+                    font-size: 18px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .productShowcase {
+      margin: 0 0 56px;
+      .showcaseSlider {
+        .showcaseSlide {
+          width: 46%;
+        }
+      }
+    }
+    .productNav {
+      .secWrap01 {
+        .productNavContainer {
+          .productNavTitle {
+            h2 {
+              font-size: 22px;
+            }
+          }
+          .linkList {
+            ul {
+              gap: 10px;
+              li {
+                width: calc((100% - 10px) / 2);
+                a {
+                  height: 100%;
+                  padding: 10px 28px 10px 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .productsSection {
+      &.odiamSection {
+        margin: 64px 0 0;
+        padding: 64px 0 80px;
+        .secWrap01 {
+          .productsContainer {
+            .odiamAbout {
+              margin: 40px 0 0;
+              padding: 28px 20px;
+              .ttl {
+                h3 {
+                  font-size: 22px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .secWrap01 {
+        .productsContainer {
+          .productBlock {
+            padding: 56px 0 0;
+            .productTitle {
+              h2,
+              h3 {
+                font-size: 18px;
+              }
+            }
+            .productContainer {
+              flex-direction: column;
+              gap: 28px;
+              align-items: stretch;
+              margin: 28px 0 0;
+              .productImage {
+                flex-basis: auto;
+                .productGallery {
+                  max-width: 522px;
+                  margin: 0 auto;
+                  .galleryView {
+                    .galleryPrev {
+                      left: -16px;
+                    }
+                    .galleryNext {
+                      right: -16px;
+                    }
+                  }
+                  .galleryThumbs {
+                    .thumbItem {
+                      a {
+                        .imgBox {
+                          height: 72px;
+                        }
+                      }
+                    }
+                  }
+                }
+                .productPlaceholder {
+                  width: 100%;
+                  max-width: 522px;
+                  margin: 0 auto;
+                }
+                .imgBox {
+                  max-width: 522px;
+                  margin: 0 auto;
+                }
+              }
+              .productContent {
+                .productLead {
+                  h3,
+                  h4 {
+                    font-size: 22px;
+                  }
+                }
+                .productSpec {
+                  padding: 12px;
+                  .specRow {
+                    gap: 8px;
+                    .specLabel {
+                      flex-basis: 72px;
+                    }
+                  }
+                }
+                .productButtons {
+                  gap: 12px;
+                  margin: 24px 0 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .uvSection {
+      padding: 64px 0 0;
+      .secWrap01 {
+        .uvPanel {
+          padding: 28px 20px;
+          .uvTitle {
+            h2 {
+              font-size: 32px;
+            }
+            p {
+              font-size: 20px;
+            }
+          }
+          .uvContainer {
+            flex-direction: column;
+            gap: 28px;
+            align-items: stretch;
+            margin: 28px 0 0;
+            .uvImage {
+              flex-basis: auto;
+              max-width: 360px;
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+    }
+    .productSecTitle {
+      h2 {
+        font-size: 20px;
+      }
+    }
+    .productFaq {
+      .secWrap01 {
+        .productFaqContainer {
+          padding: 64px 0 0;
+          .faqList {
+            margin: 32px 0 0;
+            .faqItem {
+              .dt {
+                gap: 12px;
+                padding: 20px 32px 20px 0;
+                .faqMark {
+                  flex-basis: 22px;
+                  font-size: 24px;
+                }
+                &::after {
+                  right: 8px;
+                  width: 10px;
+                  height: 10px;
+                }
+              }
+              .dd {
+                .faqAnswer {
+                  gap: 12px;
+                  padding: 0 0 20px;
+                  .faqMark {
+                    flex-basis: 22px;
+                    font-size: 24px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .janSection {
+      .secWrap01 {
+        .janContainer {
+          padding: 80px 0 100px;
+          .janTable {
+            margin: 32px 0 0;
+            .table {
+              .thead {
+                .tr {
+                  .th {
+                    padding: 12px 20px;
+                  }
+                }
+              }
+              .janBrand {
+                padding: 12px 20px;
+              }
+              .tbody {
+                .janGroup {
+                  padding: 12px 20px;
+                }
+                .tr {
+                  .td {
+                    padding: 12px 20px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 480px) {
+  .productsMain {
+    .productNav {
+      .secWrap01 {
+        .productNavContainer {
+          .linkList {
+            ul {
+              li {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .productsMain {
+    .productShowcase {
+      .showcaseSlider {
+        .showcaseSlide {
+          width: 84%;
+        }
+      }
+    }
+  }
+}

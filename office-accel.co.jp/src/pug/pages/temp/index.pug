@@ -1,0 +1,19 @@
+- var root_path = '../'
+include /site.pug
+- var title = '下層ページ｜' + site_title
+- var description = site_description
+- var keywords = site_keywords
+- var page_name = 'temp'
+- var layout_js = []
+- var cmsMode = false
+include /common/pageKv.pug
+include /common/topicPath.pug
+include /common/cmsBlocks.pug
+doctype html
+html(lang=site_lang)
+	head
+		include /common/head.pug
+	body#pageStart(class=page_name === 'top' ? 'topPage' : 'page')
+		include /common/header.pug
+		include /layouts/temp.pug
+		include /common/footer.pug

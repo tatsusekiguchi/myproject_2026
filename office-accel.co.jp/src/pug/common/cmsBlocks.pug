@@ -1,0 +1,14 @@
+//- TOPとCMS用Instagram断片は、このmixinを共用する。
+//- webgene-blogはInstagram連携に必要なCMS所定クラス。
+mixin cmsInstagram()
+	- var cmsRootTag = cmsMode ? migration.containerTag : 'div'
+	#{cmsRootTag}.webgene-blog
+		- var instagramEntries = cmsMode ? [0] : [1, 2, 3, 4, 5, 6, 7, 8]
+		each entry in instagramEntries
+			.webgene-item
+				a(href=cmsMode ? '%item.canonical%' : site_instagram_url, target="_blank", rel="noopener")
+					.photo
+						if cmsMode
+							| %itemImageL(0)%
+						else
+							img(src=site_image_path + 'top_insta_post_' + ('0' + entry).slice(-2) + '.jpg', alt='')

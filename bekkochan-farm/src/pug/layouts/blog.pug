@@ -1,0 +1,42 @@
+// ▽メイン▽
+.blogMain.main
+	.pageKv
+		.pageKvContainer
+			h1 ブログ
+	include /common/nav.pug
+	.topicPath
+		.topicPathContainer
+			.ul
+				.li
+					a(href="/") HOME
+				.li
+					a(href="bloglist") ブログ
+				.li 記事タイトルが入ります
+	.blogSection
+		.secWrap
+			.postContainer
+				include /common/blogCategories.pug
+				.blogPanel.blogPanel--detail
+					section.webgene-blog
+						.webgene-header
+							h2 ブログ詳細
+						.webgene-item
+							.ttlBox
+								h2 記事タイトルが入ります。記事タイトルが入ります。
+							.blogInfo
+								.time
+									p 2026.○○.○○
+							//- CMSの記事自由入力欄。本文・画像等はこの要素内へ差し込む。
+							.webgene-item-content.postBox
+								.photo
+									img(src="https://sit-10272780.sibloo.com/system_panel/uploads/images/blog_img_01.png", alt="BEKKOの看板を掲げる農園代表", loading="lazy", width="1102", height="603")
+								.postTxt
+									p 日頃よりご愛顧いただき、誠にありがとうございます。
+									p このたび、BEKKOに関するお知らせをご案内いたします。本文はダミーテキストです。実際の記事作成時に、この自由入力欄へ本文を入れていただく想定です。画像や見出し、リストなども挿入可能な自由入力エリアとしてご利用いただけます。
+									p 今後とも変わらぬご愛顧を賜りますようお願い申し上げます。
+							.btnBackBox
+								.btnContact
+									a(href="contact") お問い合わせはこちら
+								.btnMore
+									a(href="bloglist") 一覧に戻る
+// △メイン△

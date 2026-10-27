@@ -1,8 +1,6 @@
 // ▽footer▽
 .footer
 	.footerOrder
-		.pageTop
-			a(href='#', aria-label='ページの先頭へ')
 		.footerOrderContainer
 			.footerOrderImage
 				img(src="https://sit-10272780.sibloo.com/system_panel/uploads/images/footer_girl.png", alt='')
@@ -22,25 +20,27 @@
 								.footerBtnTitleText LINE
 							.footerBtnText 友だち追加後トークを開始する
 					.footerBtnMail
-						a(href='contact')
+						a(href="contact?mailSection")
 							.footerBtnTitle
 								.footerBtnTitleImage
 									img(src="https://sit-10272780.sibloo.com/system_panel/uploads/images/footer_btn_mail.png", alt='')
 								.footerBtnTitleText メール
 							.footerBtnText メールフォームからも受付中
 	.footerMain
+		.pageTop
+			a(href='#')
 		.footerNav
 			ul
 				li
-					a(href='/') HOME
+					a(href="/") HOME
 				li
-					a(href='about') BEKKOについて
+					a(href="about") BEKKOについて
 				li
-					a(href='bloglist') ブログ
+					a(href="bloglist") ブログ
 				li
-					a(href='contact') お問い合わせ
+					a(href="contact") お問い合わせ
 		.footerLogo
-			a(href='/') BEKKO
+			a(href="/") BEKKO
 		.footerInfo
 			.footerAddress 〒675-2111　兵庫県加西市桑原田528-1
 			.footerContact

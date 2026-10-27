@@ -1,5 +1,26 @@
 // ▽メイン▽
 .contactCompleteMain.main
-	//- KV実装時は、KVの直後へ移動する
+	.pageKv
+		.pageKvContainer
+			h1 お問い合わせ
 	include /common/nav.pug
+	.topicPath
+		.topicPathContainer
+			.ul
+				.li
+					a(href="/") HOME
+				.li
+					a(href="contact") お問い合わせ
+				.li お問い合わせ完了
+	.completeSection
+		.secWrap01
+			.completeContainer
+				.secTtl
+					h2 お問い合わせありがとうございました。
+				.txtBox
+					p お問い合わせ内容を受け付けました。#[br]内容を確認のうえ、担当者よりご連絡いたします。
+					p ご注文の場合も、この時点ではご注文確定とはなりません。#[br]内容確認後、改めてご連絡いたします。
+					p 今しばらくお待ちくださいますよう、よろしくお願い申し上げます。
+				.btnMore
+					a(href="/") トップへ戻る
 // △メイン△

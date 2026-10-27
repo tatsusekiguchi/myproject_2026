@@ -121,13 +121,7 @@
       display: block;
       overflow-y: auto;
       background: $navBgColor;
-      visibility: hidden;
-      opacity: 0;
       transition: 0.4s;
-      &.active {
-        visibility: visible;
-        opacity: 1;
-      }
       .navBoxInner {
         padding: 20px 20px 40px;
         .navList {
@@ -190,12 +184,6 @@
   .footer {
     .footerOrder {
       padding: 40px 15px 50px;
-      .pageTop {
-        top: 15px;
-        right: 15px;
-        width: 40px;
-        height: 40px;
-      }
       .footerOrderContainer {
         .footerOrderImage {
           position: static;
@@ -241,6 +229,12 @@
     }
     .footerMain {
       padding: 50px 15px 30px;
+      .pageTop {
+        top: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+      }
       .footerNav {
         display: none;
       }

@@ -8,7 +8,7 @@
 ///////////////////////////////////////////////////////////*/
 .topMain .topKv {
   height: min(718px, 37.395833vw);
-  font-family: YuGothic, "游ゴシック", "Noto Sans JP", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: YuGothic, "游ゴシック", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
   font-weight: bold;
   background: url("https://sit-10272780.sibloo.com/system_panel/uploads/images/top_kv_01.jpg") center/cover no-repeat;
 }
@@ -21,7 +21,7 @@
 }
 .topMain .topKv .topKvContainer .topKvCopy {
   position: absolute;
-  top: min(120px, 6.25vw);
+  top: min(120px, 5vw);
   right: min(58px, 3.020833vw);
   width: min(200px, 10.416667vw);
 }
@@ -35,16 +35,22 @@
 }
 .topMain .topKv .topKvContainer .topKvCatch {
   position: absolute;
-  top: min(215px, 11.197917vw);
+  top: min(215px, 8vw);
   right: min(277px, 14.427083vw);
   display: flex;
   flex-direction: row-reverse;
-  gap: min(1px, 0.052083vw);
+  gap: 5px;
   align-items: flex-start;
   width: min(109px, 5.677083vw);
 }
+.topMain .topKv .topKvContainer .topKvCatch .txtBox {
+  flex: 0 0 min(54px, 2.8125vw);
+  width: min(54px, 2.8125vw);
+}
 .topMain .topKv .topKvContainer .topKvCatch .txtBox p {
-  height: min(318px, 16.5625vw);
+  width: 100%;
+  height: max-content;
+  min-height: min(318px, 16.5625vw);
   padding: min(14px, 0.729167vw) 0;
   font-size: min(32px, 1.666667vw);
   line-height: min(54px, 2.8125vw);
@@ -55,7 +61,7 @@
   writing-mode: vertical-rl;
 }
 .topMain .topKv .topKvContainer .topKvCatch .txtBox:last-child p {
-  height: min(253px, 13.177083vw);
+  min-height: min(253px, 13.177083vw);
 }
 .topMain .topKv .topKvContainer .topKvLead {
   position: absolute;
@@ -63,28 +69,28 @@
   bottom: min(60px, 3.125vw);
   display: flex;
   flex-direction: column;
+  gap: min(4px, 0.208333vw);
   align-items: flex-start;
-  width: min(466px, 24.270833vw);
-  height: min(84px, 4.375vw);
-  padding: min(12px, 0.625vw) min(21px, 1.09375vw);
+  width: min(486px, 25.3125vw);
+  padding: min(16px, 0.833333vw) min(24px, 1.25vw);
   color: #ffffff;
   background: #5b5294;
 }
 .topMain .topKv .topKvContainer .topKvLead p {
   flex: 0 0 auto;
-  font-size: min(25px, 1.302083vw);
-  line-height: min(34px, 1.770833vw);
-  letter-spacing: -0.03em;
+  font-size: min(24px, 1.25vw);
+  line-height: min(36px, 1.875vw);
+  letter-spacing: 0;
   white-space: nowrap;
   font-feature-settings: "palt";
 }
 .topMain .topKv .topKvContainer .topKvLead p + p {
   font-size: min(18px, 0.9375vw);
-  line-height: min(26px, 1.354167vw);
+  line-height: min(28px, 1.458333vw);
 }
 .topMain .concept {
   min-height: 1170px;
-  font-family: "Noto Sans JP", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
   font-weight: 700;
   color: #ffffff;
   text-align: center;
@@ -127,10 +133,10 @@
   font-size: 18px;
   line-height: 36px;
 }
-.topMain .concept .conceptContainer .btn {
+.topMain .concept .conceptContainer .btnMore {
   margin: 40px 0 0;
 }
-.topMain .concept .conceptContainer .btn a {
+.topMain .concept .conceptContainer .btnMore a {
   display: inline-block;
   max-width: 100%;
   min-height: 68px;
@@ -142,21 +148,1561 @@
   background: #ac8abd;
   transition: background-color 0.3s;
 }
-.topMain .concept .conceptContainer .btn a:hover {
+.topMain .concept .conceptContainer .btnMore a:hover {
   background: #5b5294;
 }
-.topMain .concept .conceptContainer .btn a:focus-visible {
+.topMain .concept .conceptContainer .btnMore a:focus-visible {
   outline: 2px solid #ffffff;
   outline-offset: 4px;
+}
+.topMain .grapes {
+  overflow: hidden;
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+  color: #323537;
+  background: #ebdfeb url("https://sit-10272780.sibloo.com/system_panel/uploads/images/top_grapes_bg.png") center top/100% auto no-repeat;
+}
+.topMain .grapes .grapesContainer {
+  position: relative;
+  padding: 112px 0 132px;
+}
+.topMain .grapes .grapesContainer .grapesTitle {
+  text-align: center;
+}
+.topMain .grapes .grapesContainer .grapesTitle .titleLabel {
+  display: flex;
+  gap: 0;
+  align-items: flex-end;
+  justify-content: center;
+}
+.topMain .grapes .grapesContainer .grapesTitle .titleLabel .imgBox {
+  width: 87px;
+}
+.topMain .grapes .grapesContainer .grapesTitle .titleLabel .imgBox img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.topMain .grapes .grapesContainer .grapesTitle .titleLabel .txtBox {
+  margin-left: -24px;
+  padding: 0 0 5px;
+}
+.topMain .grapes .grapesContainer .grapesTitle .titleLabel .txtBox p {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+}
+.topMain .grapes .grapesContainer .grapesTitle .secTtl {
+  margin: 16px 0 0;
+}
+.topMain .grapes .grapesContainer .grapesTitle .secTtl h2 {
+  font-size: clamp(36px, 3.645833vw, 70px);
+  font-weight: 700;
+  line-height: 1.4;
+  color: #5b5294;
+}
+.topMain .grapes .grapesContainer .grapesLead {
+  margin: 52px 0 0;
+  text-align: center;
+}
+.topMain .grapes .grapesContainer .grapesLead p {
+  font-size: clamp(14px, 0.9375vw, 18px);
+  font-weight: 700;
+  line-height: 2;
+}
+.topMain .grapes .grapesContainer .grapesList {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 38px;
+  margin: 84px 0 0;
+}
+.topMain .grapes .grapesContainer .grapesList .grapesItem {
+  width: calc((100% - 114px) / 4);
+  min-height: 554px;
+  padding: 24px 24px 40px;
+  border: 1px solid #323537;
+  border-radius: 4px;
+  background: #ffffff;
+}
+.topMain .grapes .grapesContainer .grapesList .grapesItem .imgBox img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.topMain .grapes .grapesContainer .grapesList .grapesItem .grapesInfo {
+  margin: 20px 0 0;
+}
+.topMain .grapes .grapesContainer .grapesList .grapesItem .grapesInfo .ttl h3 {
+  font-size: clamp(16px, 1.354167vw, 26px);
+  font-weight: 700;
+  line-height: 1.5;
+  color: #5b5294;
+  font-feature-settings: "palt";
+}
+.topMain .grapes .grapesContainer .grapesList .grapesItem .grapesInfo .harvest {
+  margin: 10px 0 0;
+}
+.topMain .grapes .grapesContainer .grapesList .grapesItem .grapesInfo .harvest p {
+  font-size: clamp(12px, 0.833333vw, 16px);
+  line-height: 1.8;
+}
+.topMain .grapes .grapesContainer .grapesList .grapesItem .txtBox {
+  margin: 52px 0 0;
+}
+.topMain .grapes .grapesContainer .grapesList .grapesItem .txtBox p {
+  font-size: clamp(14px, 0.9375vw, 18px);
+  font-weight: 700;
+  line-height: 2;
+}
+.topMain .grapes .grapesContainer .grapesImage {
+  position: absolute;
+  right: -16px;
+  bottom: 110px;
+  width: min(581px, 33vw);
+  pointer-events: none;
+}
+.topMain .grapes .grapesContainer .grapesImage img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.topMain .grapes .grapesContainer .grapesNote {
+  position: relative;
+  z-index: 1;
+  max-width: min(1100px, 70% - 30px);
+  margin: 38px 0 0;
+}
+.topMain .grapes .grapesContainer .grapesNote p {
+  font-size: 16px;
+  line-height: 2;
+}
+.topMain .schedule {
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+  color: #323537;
+  background: #ebdfeb;
+}
+.topMain .schedule .scheduleContainer {
+  padding: 112px 0 116px;
+}
+.topMain .schedule .scheduleContainer .scheduleTitle {
+  text-align: center;
+}
+.topMain .schedule .scheduleContainer .scheduleTitle .titleLabel {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.topMain .schedule .scheduleContainer .scheduleTitle .titleLabel .imgBox {
+  width: 87px;
+}
+.topMain .schedule .scheduleContainer .scheduleTitle .titleLabel .imgBox img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.topMain .schedule .scheduleContainer .scheduleTitle .titleLabel .txtBox {
+  margin-left: -24px;
+  padding: 0 0 5px;
+}
+.topMain .schedule .scheduleContainer .scheduleTitle .titleLabel .txtBox p {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+}
+.topMain .schedule .scheduleContainer .scheduleTitle .secTtl {
+  margin: 16px 0 0;
+}
+.topMain .schedule .scheduleContainer .scheduleTitle .secTtl h2 {
+  font-size: clamp(32px, 3.645833vw, 70px);
+  font-weight: 700;
+  line-height: 1.4;
+  color: #5b5294;
+  font-feature-settings: "palt";
+}
+.topMain .schedule .scheduleContainer .scheduleLead {
+  margin: 52px 0 0;
+  text-align: center;
+}
+.topMain .schedule .scheduleContainer .scheduleLead p {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 2;
+}
+.topMain .schedule .scheduleContainer .scheduleLead p + p {
+  font-size: 16px;
+}
+.topMain .schedule .scheduleContainer .scheduleGuide {
+  display: none;
+}
+.topMain .schedule .scheduleContainer .scheduleScroll {
+  overflow-x: auto;
+  margin: 24px 0 0;
+}
+.topMain .schedule .scheduleContainer .scheduleScroll:focus-visible {
+  outline: 2px solid #5b5294;
+  outline-offset: 4px;
+}
+.topMain .schedule .scheduleContainer .scheduleScroll .scheduleTable {
+  min-width: 1000px;
+  border: 1px solid #e1cfdf;
+  background: #ffffff;
+}
+.topMain .schedule .scheduleContainer .scheduleScroll .scheduleTable .scheduleHead {
+  display: flex;
+  min-height: 60px;
+  color: #ffffff;
+  background: #ac8abd;
+}
+.topMain .schedule .scheduleContainer .scheduleScroll .scheduleTable .scheduleHead .scheduleName {
+  flex: 0 0 20%;
+}
+.topMain .schedule .scheduleContainer .scheduleScroll .scheduleTable .scheduleHead .scheduleMonths {
+  display: flex;
+  flex: 1;
+}
+.topMain .schedule .scheduleContainer .scheduleScroll .scheduleTable .scheduleHead .scheduleMonths .month {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16.6666666667%;
+  padding: 14px 8px;
+}
+.topMain .schedule .scheduleContainer .scheduleScroll .scheduleTable .scheduleHead .scheduleMonths .month p {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  white-space: nowrap;
+}
+.topMain .schedule .scheduleContainer .scheduleScroll .scheduleTable .scheduleRow {
+  display: flex;
+  min-height: 57px;
+  border-bottom: 1px dotted #e1cfdf;
+}
+.topMain .schedule .scheduleContainer .scheduleScroll .scheduleTable .scheduleRow:last-child {
+  border-bottom: 0;
+}
+.topMain .schedule .scheduleContainer .scheduleScroll .scheduleTable .scheduleRow .scheduleName {
+  display: flex;
+  flex: 0 0 20%;
+  align-items: center;
+  padding: 10px clamp(20px, 3.125vw, 60px);
+  border-right: 1px dotted #e1cfdf;
+}
+.topMain .schedule .scheduleContainer .scheduleScroll .scheduleTable .scheduleRow .scheduleName p {
+  font-size: clamp(14px, 0.9375vw, 18px);
+  font-weight: 700;
+  line-height: 1.6;
+}
+.topMain .schedule .scheduleContainer .scheduleScroll .scheduleTable .scheduleRow .scheduleTimeline {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 0 4px;
+  background: repeating-linear-gradient(to right, transparent 0, transparent calc(16.6666666667% - 1px), #e1cfdf calc(16.6666666667% - 1px), #e1cfdf 16.6666666667%);
+}
+.topMain .schedule .scheduleContainer .scheduleScroll .scheduleTable .scheduleRow .scheduleTimeline .schedulePeriod {
+  width: calc(var(--length) * 100% / 6);
+  margin: 0 0 0 calc(var(--start) * 100% / 6);
+}
+.topMain .schedule .scheduleContainer .scheduleScroll .scheduleTable .scheduleRow .scheduleTimeline .schedulePeriod .periodBar {
+  height: 18px;
+  border-radius: 9px;
+  background: #5b5294;
+}
+.topMain .schedule .scheduleContainer .scheduleScroll .scheduleTable .scheduleRow .scheduleTimeline .schedulePeriod .txtBox {
+  padding: 3px 8px 0;
+}
+.topMain .schedule .scheduleContainer .scheduleScroll .scheduleTable .scheduleRow .scheduleTimeline .schedulePeriod .txtBox p {
+  font-size: 14px;
+  line-height: 20px;
+  white-space: nowrap;
+}
+.topMain .schedule .scheduleContainer .scheduleScroll .scheduleTable .scheduleRow .scheduleTimeline .schedulePeriod.red .periodBar {
+  background: #eb1024;
+}
+.topMain .schedule .scheduleContainer .scheduleScroll .scheduleTable .scheduleRow .scheduleTimeline .schedulePeriod.green .periodBar {
+  background: #acbd57;
+}
+.topMain .schedule .scheduleContainer .scheduleNote {
+  margin: 20px 0 0;
+  text-align: center;
+}
+.topMain .schedule .scheduleContainer .scheduleNote p {
+  font-size: 14px;
+  line-height: 2;
+}
+.topMain .blogSection {
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+  color: #323537;
+  background: #ffffff;
+}
+.topMain .blogSection .blogContainer {
+  padding: 108px 0 0;
+}
+.topMain .blogSection .blogContainer .blogTitle .titleLabel {
+  display: flex;
+  align-items: flex-end;
+}
+.topMain .blogSection .blogContainer .blogTitle .titleLabel .imgBox {
+  width: 87px;
+}
+.topMain .blogSection .blogContainer .blogTitle .titleLabel .imgBox img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.topMain .blogSection .blogContainer .blogTitle .titleLabel .txtBox {
+  margin-left: -24px;
+  padding: 0 0 5px;
+}
+.topMain .blogSection .blogContainer .blogTitle .titleLabel .txtBox p {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+}
+.topMain .blogSection .blogContainer .blogTitle .secTtl {
+  margin: 16px 0 0;
+}
+.topMain .blogSection .blogContainer .blogTitle .secTtl h2 {
+  font-size: clamp(36px, 3.645833vw, 70px);
+  font-weight: 700;
+  line-height: 1.4;
+  color: #acbd57;
+  font-feature-settings: "palt";
+}
+.topMain .blogSection .blogContainer .blogLead {
+  margin: 52px 0 0;
+}
+.topMain .blogSection .blogContainer .blogLead p {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 2;
+}
+.topMain .blogSection .blogContainer .blogList {
+  margin: 40px 0 0;
+}
+.topMain .blogSection .blogContainer .blogList .webgene-blog {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 44px;
+}
+.topMain .blogSection .blogContainer .blogList .webgene-blog .webgene-header {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+.topMain .blogSection .blogContainer .blogList .webgene-blog .webgene-item {
+  width: calc((100% - 88px) / 3);
+}
+.topMain .blogSection .blogContainer .blogList .webgene-blog .webgene-item a {
+  display: block;
+  height: 100%;
+  padding: 18px;
+  background: #f5f8e8;
+  transition: opacity 0.3s;
+}
+.topMain .blogSection .blogContainer .blogList .webgene-blog .webgene-item a:hover {
+  opacity: 0.8;
+}
+.topMain .blogSection .blogContainer .blogList .webgene-blog .webgene-item a:focus-visible {
+  outline: 2px solid #acbd57;
+  outline-offset: 4px;
+}
+.topMain .blogSection .blogContainer .blogList .webgene-blog .webgene-item a .photo {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  padding: 0 0 54.906054%;
+  background: #ffffff;
+}
+.topMain .blogSection .blogContainer .blogList .webgene-blog .webgene-item a .photo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.topMain .blogSection .blogContainer .blogList .webgene-blog .webgene-item a .time {
+  margin: 18px 0 0;
+}
+.topMain .blogSection .blogContainer .blogList .webgene-blog .webgene-item a .time p {
+  font-size: 14px;
+  line-height: 24px;
+}
+.topMain .blogSection .blogContainer .blogList .webgene-blog .webgene-item a .title {
+  margin: 6px 0 0;
+}
+.topMain .blogSection .blogContainer .blogList .webgene-blog .webgene-item a .title p {
+  font-size: 18px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+.topMain .blogSection .blogContainer .btnMore {
+  margin: 72px 0 0;
+  text-align: center;
+}
+.topMain .blogSection .blogContainer .btnMore a {
+  display: inline-block;
+  width: 302px;
+  max-width: 100%;
+  min-height: 68px;
+  padding: 20px 30px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #ffffff;
+  border-radius: 34px;
+  background: #acbd57;
+  transition: background-color 0.3s;
+}
+.topMain .blogSection .blogContainer .btnMore a:hover {
+  background: #5b5294;
+}
+.topMain .blogSection .blogContainer .btnMore a:focus-visible {
+  outline: 2px solid #acbd57;
+  outline-offset: 4px;
+}
+.topMain .instaSection {
+  overflow: hidden;
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+  color: #323537;
+  background: #ffffff;
+}
+.topMain .instaSection .instaContainer {
+  position: relative;
+  padding: 140px 0 150px;
+}
+.topMain .instaSection .instaContainer .instaTitle {
+  text-align: center;
+}
+.topMain .instaSection .instaContainer .instaTitle .titleLabel {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.topMain .instaSection .instaContainer .instaTitle .titleLabel .imgBox {
+  width: 87px;
+}
+.topMain .instaSection .instaContainer .instaTitle .titleLabel .imgBox img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.topMain .instaSection .instaContainer .instaTitle .titleLabel .txtBox {
+  margin-left: -24px;
+  padding: 0 0 5px;
+}
+.topMain .instaSection .instaContainer .instaTitle .titleLabel .txtBox p {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+}
+.topMain .instaSection .instaContainer .instaTitle .secTtl {
+  margin: 16px 0 0;
+}
+.topMain .instaSection .instaContainer .instaTitle .secTtl h2 {
+  font-size: clamp(36px, 3.645833vw, 70px);
+  font-weight: 700;
+  line-height: 1.4;
+  color: #5b5294;
+}
+.topMain .instaSection .instaContainer .instaLead {
+  position: relative;
+  z-index: 1;
+  margin: 52px 0 0;
+  text-align: center;
+}
+.topMain .instaSection .instaContainer .instaLead p {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 2;
+}
+.topMain .instaSection .instaContainer .instaImage {
+  position: absolute;
+  top: 297px;
+  left: -3.75vw;
+  width: min(447px, 23.28125vw);
+  pointer-events: none;
+}
+.topMain .instaSection .instaContainer .instaImage img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.topMain .instaSection .instaContainer .instaPanel {
+  position: relative;
+  z-index: 1;
+  max-width: 947px;
+  margin: 52px auto 0;
+}
+.topMain .instaSection .instaContainer .instaPanel .instaList .webgene-blog {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+}
+.topMain .instaSection .instaContainer .instaPanel .instaList .webgene-blog .webgene-item {
+  width: calc((100% - 4px) / 3);
+}
+.topMain .instaSection .instaContainer .instaPanel .instaList .webgene-blog .webgene-item a {
+  display: block;
+  transition: opacity 0.3s;
+}
+.topMain .instaSection .instaContainer .instaPanel .instaList .webgene-blog .webgene-item a:hover {
+  opacity: 0.8;
+}
+.topMain .instaSection .instaContainer .instaPanel .instaList .webgene-blog .webgene-item a:focus-visible {
+  outline: 2px solid #5b5294;
+  outline-offset: -3px;
+}
+.topMain .instaSection .instaContainer .instaPanel .instaList .webgene-blog .webgene-item a .photo {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  padding: 0 0 133.333333%;
+  background: #ebdfeb;
+}
+.topMain .instaSection .instaContainer .instaPanel .instaList .webgene-blog .webgene-item a .photo img,
+.topMain .instaSection .instaContainer .instaPanel .instaList .webgene-blog .webgene-item a .photo video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /*////////////////////////////////////////////////////////////
 	BEKKOについて
 ///////////////////////////////////////////////////////////*/
+.aboutMain {
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+  color: #323537;
+}
 .aboutMain .pageKv {
   background: url("https://sit-10272780.sibloo.com/system_panel/uploads/images/about_kv_01.jpg") center/cover no-repeat;
 }
+.aboutMain .message .messageContainer {
+  padding: 50px 0 166px;
+}
+.aboutMain .message .messageContainer .messageTitle {
+  text-align: center;
+}
+.aboutMain .message .messageContainer .messageTitle .messageGirl {
+  width: 70px;
+  margin: 0 auto;
+}
+.aboutMain .message .messageContainer .messageTitle .messageGirl img {
+  display: block;
+}
+.aboutMain .message .messageContainer .messageTitle .titleLabel {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin: -21px 0 0;
+}
+.aboutMain .message .messageContainer .messageTitle .titleLabel .imgBox {
+  width: 87px;
+}
+.aboutMain .message .messageContainer .messageTitle .titleLabel .imgBox img {
+  display: block;
+}
+.aboutMain .message .messageContainer .messageTitle .titleLabel .txtBox {
+  margin-left: -24px;
+  padding: 0 0 5px;
+}
+.aboutMain .message .messageContainer .messageTitle .titleLabel .txtBox p {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 26px;
+}
+.aboutMain .message .messageContainer .messageTitle .secTtl {
+  margin: 4px 0 0;
+}
+.aboutMain .message .messageContainer .messageTitle .secTtl h2 {
+  font-size: clamp(40px, 3.645833vw, 70px);
+  font-weight: bold;
+  line-height: 1.2;
+  color: #5b5294;
+}
+.aboutMain .message .messageContainer .secContainer {
+  display: flex;
+  gap: 4%;
+  align-items: flex-start;
+  margin: 54px 0 0;
+}
+.aboutMain .message .messageContainer .secContainer .messageImage {
+  flex: 0 0 47%;
+}
+.aboutMain .message .messageContainer .secContainer .messageImage img {
+  display: block;
+}
+.aboutMain .message .messageContainer .secContainer .messageContent {
+  flex: 1;
+  min-width: 0;
+  padding: 18px 0 0;
+}
+.aboutMain .message .messageContainer .secContainer .messageContent .secTtl h3 {
+  font-size: clamp(28px, 2.1875vw, 42px);
+  font-weight: bold;
+}
+.aboutMain .message .messageContainer .secContainer .messageContent .txtBox {
+  margin: 52px 0 0;
+}
+.aboutMain .message .messageContainer .secContainer .messageContent .txtBox p {
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 2;
+}
+.aboutMain .message .messageContainer .secContainer .messageContent .txtBox p + p {
+  margin: 24px 0 0;
+}
+.aboutMain .history {
+  background: #ece9d9 url("https://sit-10272780.sibloo.com/system_panel/uploads/images/about_history_bg.png") center/cover no-repeat;
+}
+.aboutMain .history .historyContainer {
+  display: flex;
+  gap: 3%;
+  align-items: center;
+  padding: 96px 0;
+}
+.aboutMain .history .historyContainer .historyContent {
+  flex: 1;
+  min-width: 0;
+}
+.aboutMain .history .historyContainer .historyContent .secTtl h2 {
+  font-size: clamp(28px, 2.1875vw, 42px);
+  font-weight: bold;
+  line-height: 1.5;
+}
+.aboutMain .history .historyContainer .historyContent .txtBox {
+  margin: 52px 0 0;
+}
+.aboutMain .history .historyContainer .historyContent .txtBox p {
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 2;
+}
+.aboutMain .history .historyContainer .historyContent .txtBox p + p {
+  margin: 24px 0 0;
+}
+.aboutMain .history .historyContainer .historyImage {
+  flex: 0 0 30.5%;
+}
+.aboutMain .history .historyContainer .historyImage img {
+  display: block;
+}
+.aboutMain .features {
+  background: #ebdfeb url("https://sit-10272780.sibloo.com/system_panel/uploads/images/about_features_bg.png") center/cover no-repeat;
+}
+.aboutMain .features .featuresContainer {
+  padding: 108px 0;
+}
+.aboutMain .features .featuresContainer .secTtl h2 {
+  font-size: clamp(28px, 2.1875vw, 42px);
+  font-weight: bold;
+  line-height: 1.5;
+}
+.aboutMain .features .featuresContainer .secContainer {
+  display: flex;
+  gap: 5%;
+  align-items: center;
+  margin: 84px 0 0;
+}
+.aboutMain .features .featuresContainer .secContainer .featuresImage {
+  flex: 0 0 54%;
+}
+.aboutMain .features .featuresContainer .secContainer .featuresImage .imgBox {
+  width: 92.7%;
+  margin: 0 0 0 auto;
+}
+.aboutMain .features .featuresContainer .secContainer .featuresImage .imgBox img {
+  display: block;
+}
+.aboutMain .features .featuresContainer .secContainer .featuresImage .subImage {
+  position: relative;
+  width: 68.1%;
+  margin: -11.2% 0 0;
+}
+.aboutMain .features .featuresContainer .secContainer .featuresImage .subImage img {
+  display: block;
+}
+.aboutMain .features .featuresContainer .secContainer .featuresContent {
+  flex: 1;
+  min-width: 0;
+}
+.aboutMain .features .featuresContainer .secContainer .featuresContent .secTtl h3 {
+  font-size: clamp(28px, 2.1875vw, 42px);
+  font-weight: bold;
+}
+.aboutMain .features .featuresContainer .secContainer .featuresContent .txtBox {
+  margin: 52px 0 0;
+}
+.aboutMain .features .featuresContainer .secContainer .featuresContent .txtBox p {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 2;
+}
+.aboutMain .features .featuresContainer .secContainer .featuresContent .txtBox p + p {
+  margin: 24px 0 0;
+}
+.aboutMain .features .featuresContainer .featuresList {
+  display: flex;
+  gap: 24px;
+  margin: 84px 0 0;
+}
+.aboutMain .features .featuresContainer .featuresList .featuresItem {
+  width: calc((100% - 48px) / 3);
+  padding: 36px;
+  border: 1px solid #323537;
+  border-radius: 4px;
+  background: #ffffff;
+}
+.aboutMain .features .featuresContainer .featuresList .featuresItem .number p {
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 1;
+  color: #acbd57;
+}
+.aboutMain .features .featuresContainer .featuresList .featuresItem .ttl {
+  margin: 24px 0 0;
+}
+.aboutMain .features .featuresContainer .featuresList .featuresItem .ttl h3 {
+  font-size: clamp(18px, 1.25vw, 24px);
+  font-weight: bold;
+  line-height: 1.6;
+  color: #5b5294;
+  font-feature-settings: "palt";
+}
+.aboutMain .features .featuresContainer .featuresList .featuresItem .txtBox {
+  margin: 32px 0 0;
+}
+.aboutMain .features .featuresContainer .featuresList .featuresItem .txtBox p {
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 2;
+}
+.aboutMain .mission .missionContainer {
+  padding: 140px 0;
+  text-align: center;
+}
+.aboutMain .mission .missionContainer .secTtl h2 {
+  font-size: clamp(36px, 3.645833vw, 70px);
+  font-weight: bold;
+  line-height: 1.4;
+  color: #acbd57;
+}
+.aboutMain .mission .missionContainer .missionLead {
+  margin: 52px 0 0;
+}
+.aboutMain .mission .missionContainer .missionLead p {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 2;
+}
+.aboutMain .mission .missionContainer .txtBox {
+  margin: 36px 0 0;
+}
+.aboutMain .mission .missionContainer .txtBox p {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 2;
+}
+.aboutMain .overview {
+  background: #ebdfeb;
+}
+.aboutMain .overview .overviewContainer {
+  padding: 96px 0 108px;
+}
+.aboutMain .overview .overviewContainer .secTtl h2 {
+  font-size: clamp(28px, 2.1875vw, 42px);
+  font-weight: bold;
+  line-height: 1.5;
+}
+.aboutMain .overview .overviewContainer .overviewList {
+  margin: 48px 0 0;
+  background: #ffffff;
+}
+.aboutMain .overview .overviewContainer .overviewList .overviewItem {
+  display: flex;
+  min-height: 57px;
+  border-bottom: 1px dotted #e1cfdf;
+}
+.aboutMain .overview .overviewContainer .overviewList .overviewItem:last-child {
+  border-bottom: 0;
+}
+.aboutMain .overview .overviewContainer .overviewList .overviewItem .ttl {
+  flex: 0 0 18%;
+  padding: 16px 24px 16px clamp(24px, 3.75vw, 72px);
+}
+.aboutMain .overview .overviewContainer .overviewList .overviewItem .ttl p {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+.aboutMain .overview .overviewContainer .overviewList .overviewItem .txtBox {
+  flex: 1;
+  min-width: 0;
+  padding: 16px 24px;
+}
+.aboutMain .overview .overviewContainer .overviewList .overviewItem .txtBox p,
+.aboutMain .overview .overviewContainer .overviewList .overviewItem .txtBox a {
+  font-size: 18px;
+  line-height: 1.5;
+}
+.aboutMain .overview .overviewContainer .overviewList .overviewItem .txtBox a {
+  display: inline-block;
+}
+.aboutMain .access .accessContainer {
+  display: flex;
+  gap: 4%;
+  align-items: flex-start;
+  padding: 128px 0 140px;
+}
+.aboutMain .access .accessContainer .accessContent {
+  flex: 1;
+  min-width: 0;
+  padding: 24px 0 0;
+}
+.aboutMain .access .accessContainer .accessContent .secTtl h2 {
+  font-size: clamp(28px, 2.1875vw, 42px);
+  font-weight: bold;
+  line-height: 1.5;
+}
+.aboutMain .access .accessContainer .accessContent .txtBox {
+  margin: 52px 0 0;
+}
+.aboutMain .access .accessContainer .accessContent .txtBox p {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 2;
+}
+.aboutMain .access .accessContainer .accessMap {
+  flex: 0 0 57.4%;
+}
+.aboutMain .access .accessContainer .accessMap iframe {
+  display: block;
+  width: 100%;
+  height: 404px;
+}
 
 /*////////////////////////////////////////////////////////////
-	temp
+  ブログ一覧・詳細
 ///////////////////////////////////////////////////////////*/
+.bloglistMain,
+.blogMain {
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+  color: #323537;
+}
+.bloglistMain .pageKv,
+.blogMain .pageKv {
+  background: url("https://sit-10272780.sibloo.com/system_panel/uploads/images/blog_kv_01.png") center/cover no-repeat;
+}
+.bloglistMain .blogSection .postContainer,
+.blogMain .blogSection .postContainer {
+  padding: 80px 0 140px;
+}
+.bloglistMain .blogSection .postContainer .catePanel .categoryBox .webgene-blog,
+.blogMain .blogSection .postContainer .catePanel .categoryBox .webgene-blog {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.bloglistMain .blogSection .postContainer .catePanel .categoryBox .webgene-blog .webgene-header,
+.blogMain .blogSection .postContainer .catePanel .categoryBox .webgene-blog .webgene-header {
+  display: none;
+}
+.bloglistMain .blogSection .postContainer .catePanel .categoryBox .webgene-blog .webgene-item a,
+.blogMain .blogSection .postContainer .catePanel .categoryBox .webgene-blog .webgene-item a {
+  position: relative;
+  display: block;
+  min-height: 68px;
+  padding: 20px 58px 20px 44px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 28px;
+  border: 1px solid #323537;
+  border-radius: 34px;
+  background: #ffffff;
+  transition: color 0.3s, border-color 0.3s;
+}
+.bloglistMain .blogSection .postContainer .catePanel .categoryBox .webgene-blog .webgene-item a::after,
+.blogMain .blogSection .postContainer .catePanel .categoryBox .webgene-blog .webgene-item a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 24px;
+  bottom: 0;
+  width: 19px;
+  height: 16px;
+  margin: auto 0;
+  background: url("https://sit-10272780.sibloo.com/system_panel/uploads/images/blog_cate_arrow.png") center/contain no-repeat;
+}
+.bloglistMain .blogSection .postContainer .catePanel .categoryBox .webgene-blog .webgene-item a:hover,
+.blogMain .blogSection .postContainer .catePanel .categoryBox .webgene-blog .webgene-item a:hover {
+  color: #5b5294;
+  border-color: #5b5294;
+}
+.bloglistMain .blogSection .postContainer .catePanel .categoryBox .webgene-blog .webgene-item a:focus-visible,
+.blogMain .blogSection .postContainer .catePanel .categoryBox .webgene-blog .webgene-item a:focus-visible {
+  outline: 2px solid #5b5294;
+  outline-offset: 4px;
+}
+.bloglistMain .blogSection .postContainer .catePanel .categoryBox .webgene-blog .webgene-item.selected a,
+.blogMain .blogSection .postContainer .catePanel .categoryBox .webgene-blog .webgene-item.selected a {
+  color: #5b5294;
+  border-color: #5b5294;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--list,
+.blogMain .blogSection .postContainer .blogPanel--list {
+  margin: 68px 0 0;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--list .webgene-blog,
+.blogMain .blogSection .postContainer .blogPanel--list .webgene-blog {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 44px;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--list .webgene-blog .webgene-header,
+.blogMain .blogSection .postContainer .blogPanel--list .webgene-blog .webgene-header {
+  display: none;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--list .webgene-blog .webgene-item,
+.blogMain .blogSection .postContainer .blogPanel--list .webgene-blog .webgene-item {
+  width: calc((100% - 88px) / 3);
+}
+.bloglistMain .blogSection .postContainer .blogPanel--list .webgene-blog .webgene-item a,
+.blogMain .blogSection .postContainer .blogPanel--list .webgene-blog .webgene-item a {
+  display: block;
+  min-height: 403px;
+  height: 100%;
+  padding: 18px 18px 36px;
+  border-radius: 4px;
+  background: #f5f8e8;
+  transition: opacity 0.3s;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--list .webgene-blog .webgene-item a:hover,
+.blogMain .blogSection .postContainer .blogPanel--list .webgene-blog .webgene-item a:hover {
+  opacity: 0.8;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--list .webgene-blog .webgene-item a:focus-visible,
+.blogMain .blogSection .postContainer .blogPanel--list .webgene-blog .webgene-item a:focus-visible {
+  outline: 2px solid #5b5294;
+  outline-offset: 4px;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--list .webgene-blog .webgene-item a .photo,
+.blogMain .blogSection .postContainer .blogPanel--list .webgene-blog .webgene-item a .photo {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  padding: 0 0 54.906054%;
+  background: #ffffff;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--list .webgene-blog .webgene-item a .photo img,
+.blogMain .blogSection .postContainer .blogPanel--list .webgene-blog .webgene-item a .photo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--list .webgene-blog .webgene-item a .time,
+.blogMain .blogSection .postContainer .blogPanel--list .webgene-blog .webgene-item a .time {
+  margin: 18px 14px 0;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--list .webgene-blog .webgene-item a .time p,
+.blogMain .blogSection .postContainer .blogPanel--list .webgene-blog .webgene-item a .time p {
+  font-size: 14px;
+  line-height: 24px;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--list .webgene-blog .webgene-item a .title,
+.blogMain .blogSection .postContainer .blogPanel--list .webgene-blog .webgene-item a .title {
+  margin: 6px 14px 0;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--list .webgene-blog .webgene-item a .title p,
+.blogMain .blogSection .postContainer .blogPanel--list .webgene-blog .webgene-item a .title p {
+  font-size: 18px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--list .webgene-blog .webgene-pagination,
+.blogMain .blogSection .postContainer .blogPanel--list .webgene-blog .webgene-pagination {
+  width: 100%;
+  margin: 28px 0 0;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--list .webgene-blog .webgene-pagination ul,
+.blogMain .blogSection .postContainer .blogPanel--list .webgene-blog .webgene-pagination ul {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--list .webgene-blog .webgene-pagination ul li a,
+.blogMain .blogSection .postContainer .blogPanel--list .webgene-blog .webgene-pagination ul li a {
+  display: block;
+  width: 48px;
+  font-size: 18px;
+  line-height: 48px;
+  text-align: center;
+  border-radius: 3px;
+  background: #f5f8e8;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--list .webgene-blog .webgene-pagination ul li a:focus-visible,
+.blogMain .blogSection .postContainer .blogPanel--list .webgene-blog .webgene-pagination ul li a:focus-visible {
+  outline: 2px solid #5b5294;
+  outline-offset: 3px;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--list .webgene-blog .webgene-pagination ul li.selected a,
+.blogMain .blogSection .postContainer .blogPanel--list .webgene-blog .webgene-pagination ul li.selected a {
+  color: #ffffff;
+  background: #5b5294;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--list .webgene-blog .webgene-pagination ul li.prev,
+.blogMain .blogSection .postContainer .blogPanel--list .webgene-blog .webgene-pagination ul li.prev {
+  margin-right: 44px;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--list .webgene-blog .webgene-pagination ul li.next,
+.blogMain .blogSection .postContainer .blogPanel--list .webgene-blog .webgene-pagination ul li.next {
+  margin-left: 44px;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--detail,
+.blogMain .blogSection .postContainer .blogPanel--detail {
+  max-width: 1102px;
+  margin: 84px auto 0;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-header,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-header {
+  display: none;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .ttlBox,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .ttlBox {
+  text-align: center;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .ttlBox h2,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .ttlBox h2 {
+  font-size: clamp(28px, 2.1875vw, 42px);
+  font-weight: bold;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .blogInfo,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .blogInfo {
+  margin: 12px 0 0;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .blogInfo .time,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .blogInfo .time {
+  text-align: center;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .blogInfo .time p,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .blogInfo .time p {
+  font-size: 14px;
+  line-height: 26px;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox {
+  margin: 26px 0 0;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 2;
+  overflow-wrap: anywhere;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox img,
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox video,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox img,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox video {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox iframe,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox iframe {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox a,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox a {
+  display: inline-block;
+  color: #5b5294;
+  text-decoration: underline;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox h1,
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox h2,
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox h3,
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox h4,
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox h5,
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox h6,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox h1,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox h2,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox h3,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox h4,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox h5,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox h6 {
+  margin: 32px 0 16px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox h1,
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox h2,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox h1,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox h2 {
+  font-size: 30px;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox h3,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox h3 {
+  font-size: 24px;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox h4,
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox h5,
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox h6,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox h4,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox h5,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox h6 {
+  font-size: 20px;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox ul,
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox ol,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox ul,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox ol {
+  margin: 24px 0;
+  padding: 0 0 0 1.5em;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox ul,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox ul {
+  list-style: disc;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox ol,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox ol {
+  list-style: decimal;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox blockquote,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox blockquote {
+  margin: 24px 0;
+  padding: 16px 24px;
+  border-left: 4px solid #acbd57;
+  background: #f5f8e8;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox table,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox table {
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
+  margin: 24px 0;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox table th,
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox table td,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox table th,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox table td {
+  padding: 12px 16px;
+  border: 1px solid #e1cfdf;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox p + p,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox p + p {
+  margin: 28px 0 0;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox .photo img,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox .photo img {
+  display: block;
+  width: 100%;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox .postTxt,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .postBox .postTxt {
+  margin: 36px 0 0;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .btnBackBox,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .btnBackBox {
+  margin: 76px 0 0;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .btnBackBox .btnContact,
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .btnBackBox .btnMore,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .btnBackBox .btnContact,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .btnBackBox .btnMore {
+  max-width: 302px;
+  margin: 0 auto;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .btnBackBox .btnContact a,
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .btnBackBox .btnMore a,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .btnBackBox .btnContact a,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .btnBackBox .btnMore a {
+  display: block;
+  min-height: 68px;
+  padding: 20px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 28px;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 34px;
+  transition: background-color 0.3s;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .btnBackBox .btnContact a:hover,
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .btnBackBox .btnMore a:hover,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .btnBackBox .btnContact a:hover,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .btnBackBox .btnMore a:hover {
+  background: #5b5294;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .btnBackBox .btnContact a:focus-visible,
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .btnBackBox .btnMore a:focus-visible,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .btnBackBox .btnContact a:focus-visible,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .btnBackBox .btnMore a:focus-visible {
+  outline: 2px solid #5b5294;
+  outline-offset: 4px;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .btnBackBox .btnContact a,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .btnBackBox .btnContact a {
+  background: #ac8abd;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .btnBackBox .btnMore,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .btnBackBox .btnMore {
+  margin-top: 28px;
+}
+.bloglistMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .btnBackBox .btnMore a,
+.blogMain .blogSection .postContainer .blogPanel--detail .webgene-blog .webgene-item .btnBackBox .btnMore a {
+  background: #acbd57;
+}
+
+/*////////////////////////////////////////////////////////////
+  お問い合わせ・お問い合わせ完了
+///////////////////////////////////////////////////////////*/
+.contactMain,
+.contactCompleteMain {
+  font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+  color: #323537;
+}
+.contactMain .pageKv,
+.contactCompleteMain .pageKv {
+  background: url("https://sit-10272780.sibloo.com/system_panel/uploads/images/contact_kv_01.png") center/cover no-repeat;
+}
+
+.contactMain .orderInfo {
+  background: #ebdfeb url("https://sit-10272780.sibloo.com/system_panel/uploads/images/contact_order_bg.png") center/cover no-repeat;
+}
+.contactMain .orderInfo .orderInfoContainer {
+  padding: 96px 0 112px;
+  text-align: center;
+}
+.contactMain .orderInfo .orderInfoContainer .secTtl h2 {
+  font-size: 42px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+.contactMain .orderInfo .orderInfoContainer .txtBox {
+  margin: 50px 0 0;
+}
+.contactMain .orderInfo .orderInfoContainer .txtBox p {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 2;
+}
+.contactMain .orderInfo .orderInfoContainer .txtBox p + p {
+  margin: 36px 0 0;
+}
+.contactMain .contactGuide .contactGuideContainer {
+  padding: 84px 0 0;
+}
+.contactMain .contactGuide .contactGuideContainer .setPanel {
+  display: flex;
+  gap: 36px;
+  align-items: center;
+  padding: 24px;
+  border: 1px solid #e1cfdf;
+  border-radius: 4px;
+  background: #ffffff;
+}
+.contactMain .contactGuide .contactGuideContainer .setPanel .imgBox {
+  flex: 0 0 31.5%;
+}
+.contactMain .contactGuide .contactGuideContainer .setPanel .imgBox img {
+  display: block;
+}
+.contactMain .contactGuide .contactGuideContainer .setPanel .setContent {
+  flex: 1;
+  min-width: 0;
+}
+.contactMain .contactGuide .contactGuideContainer .setPanel .setContent .secTtl h2 {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #5b5294;
+}
+.contactMain .contactGuide .contactGuideContainer .setPanel .setContent .txtBox {
+  margin: 28px 0 0;
+}
+.contactMain .contactGuide .contactGuideContainer .setPanel .setContent .txtBox p {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 2;
+}
+.contactMain .contactGuide .contactGuideContainer .linePanel {
+  margin: 80px 0 0;
+  padding: 56px 104px 64px;
+  background: #f5f8e8;
+}
+.contactMain .contactGuide .contactGuideContainer .linePanel .secTtl {
+  text-align: center;
+}
+.contactMain .contactGuide .contactGuideContainer .linePanel .secTtl h2 {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #5b5294;
+}
+.contactMain .contactGuide .contactGuideContainer .linePanel .lineContainer {
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+  margin: 40px 0 0;
+}
+.contactMain .contactGuide .contactGuideContainer .linePanel .lineContainer .lineContent {
+  flex: 0 1 464px;
+  min-width: 0;
+}
+.contactMain .contactGuide .contactGuideContainer .linePanel .lineContainer .lineContent .txtBox p {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.8;
+}
+.contactMain .contactGuide .contactGuideContainer .linePanel .lineContainer .lineContent .orderTemplate {
+  margin: 12px 0 0;
+  padding: 24px 32px;
+  border: 1px solid #323537;
+  border-radius: 4px;
+  background: #ffffff;
+}
+.contactMain .contactGuide .contactGuideContainer .linePanel .lineContainer .lineContent .orderTemplate p {
+  font-size: 16px;
+  line-height: 28px;
+}
+.contactMain .contactGuide .contactGuideContainer .linePanel .lineContainer .lineQr {
+  flex: 0 0 188px;
+  height: 188px;
+  margin: 40px 0 0;
+}
+.contactMain .contactGuide .contactGuideContainer .linePanel .lineContainer .lineQr a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.contactMain .contactGuide .contactGuideContainer .linePanel .lineContainer .lineQr a img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.contactMain .mailSection .mailContainer {
+  padding: 168px 0 140px;
+}
+.contactMain .mailSection .mailContainer .secTtl h2 {
+  font-size: 42px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+.contactMain .mailSection .mailContainer .contactForm {
+  margin: 56px 0 0;
+}
+.contactMain .mailSection .mailContainer .contactForm .form .formBox .formRow {
+  display: flex;
+  min-height: 70px;
+  border-bottom: 1px dotted #e1cfdf;
+}
+.contactMain .mailSection .mailContainer .contactForm .form .formBox .formRow:first-child {
+  border-top: 1px dotted #e1cfdf;
+}
+.contactMain .mailSection .mailContainer .contactForm .form .formBox .formRow .dt {
+  display: flex;
+  flex: 0 0 35%;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  padding: 16px 24px 16px 48px;
+}
+.contactMain .mailSection .mailContainer .contactForm .form .formBox .formRow .dt .fieldLabel label {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+.contactMain .mailSection .mailContainer .contactForm .form .formBox .formRow .dt .required p {
+  padding: 2px 7px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #ffffff;
+  border-radius: 12px;
+  background: #acbd57;
+}
+.contactMain .mailSection .mailContainer .contactForm .form .formBox .formRow .dd {
+  flex: 1;
+  min-width: 0;
+  padding: 4px 28px 4px 0;
+}
+.contactMain .mailSection .mailContainer .contactForm .form .formBox .formRow .dd input,
+.contactMain .mailSection .mailContainer .contactForm .form .formBox .formRow .dd textarea {
+  display: block;
+  width: 100%;
+  min-height: 62px;
+  padding: 16px 28px;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 30px;
+  color: #323537;
+  border: 1px solid #dce1cd;
+  border-radius: 0;
+  background: #f5f8e8;
+  appearance: none;
+}
+.contactMain .mailSection .mailContainer .contactForm .form .formBox .formRow .dd input::placeholder,
+.contactMain .mailSection .mailContainer .contactForm .form .formBox .formRow .dd textarea::placeholder {
+  color: #92978a;
+}
+.contactMain .mailSection .mailContainer .contactForm .form .formBox .formRow .dd input:focus,
+.contactMain .mailSection .mailContainer .contactForm .form .formBox .formRow .dd textarea:focus {
+  outline: 2px solid #5b5294;
+  outline-offset: -2px;
+}
+.contactMain .mailSection .mailContainer .contactForm .form .formBox .formRow .dd textarea {
+  height: 64px;
+  resize: vertical;
+}
+.contactMain .mailSection .mailContainer .contactForm .form .orderFields {
+  margin: 72px 0 0;
+}
+.contactMain .mailSection .mailContainer .contactForm .form .orderFields .orderTitle {
+  padding: 0 48px;
+}
+.contactMain .mailSection .mailContainer .contactForm .form .orderFields .orderTitle h3 {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+.contactMain .mailSection .mailContainer .contactForm .form .orderFields .formBox {
+  margin: 24px 0 0;
+}
+.contactMain .mailSection .mailContainer .contactForm .form .privacy {
+  margin: 56px 28px 0;
+}
+.contactMain .mailSection .mailContainer .contactForm .form .privacy .agreeBox {
+  overflow-y: auto;
+  height: 412px;
+  padding: 24px;
+  border: 1px solid #dce1cd;
+  background: #f2f2ed;
+}
+.contactMain .mailSection .mailContainer .contactForm .form .privacy .agreeBox:focus-visible {
+  outline: 2px solid #5b5294;
+  outline-offset: 3px;
+}
+.contactMain .mailSection .mailContainer .contactForm .form .privacy .agreeBox .box {
+  margin: 0 0 24px;
+}
+.contactMain .mailSection .mailContainer .contactForm .form .privacy .agreeBox .box:last-child {
+  margin: 0;
+}
+.contactMain .mailSection .mailContainer .contactForm .form .privacy .agreeBox .box .txtBox p,
+.contactMain .mailSection .mailContainer .contactForm .form .privacy .agreeBox .box .txtBox a {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 2;
+  overflow-wrap: anywhere;
+}
+.contactMain .mailSection .mailContainer .contactForm .form .privacy .agreeBox .box .txtBox a {
+  display: block;
+  color: #5b5294;
+  text-decoration: underline;
+}
+.contactMain .mailSection .mailContainer .contactForm .form .agreeCheck {
+  margin: 44px 0 0;
+  text-align: center;
+}
+.contactMain .mailSection .mailContainer .contactForm .form .agreeCheck input {
+  width: 20px;
+  height: 20px;
+  margin: 0 10px 0 0;
+  vertical-align: middle;
+  accent-color: #acbd57;
+}
+.contactMain .mailSection .mailContainer .contactForm .form .agreeCheck label {
+  font-size: 18px;
+  line-height: 28px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.contactMain .mailSection .mailContainer .contactForm .form .btnSubmitBox {
+  max-width: 302px;
+  margin: 76px auto 0;
+}
+.contactMain .mailSection .mailContainer .contactForm .form .btnSubmitBox .btnSubmit button {
+  display: block;
+  width: 100%;
+  min-height: 68px;
+  padding: 20px 24px;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 28px;
+  color: #ffffff;
+  border: 0;
+  border-radius: 34px;
+  background: #ac8abd;
+  transition: background-color 0.3s, opacity 0.3s;
+  cursor: pointer;
+}
+.contactMain .mailSection .mailContainer .contactForm .form .btnSubmitBox .btnSubmit button:hover {
+  background: #5b5294;
+}
+.contactMain .mailSection .mailContainer .contactForm .form .btnSubmitBox .btnSubmit button:focus-visible {
+  outline: 2px solid #5b5294;
+  outline-offset: 4px;
+}
+.contactMain .mailSection .mailContainer .contactForm .form .btnSubmitBox .btnSubmit button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.contactCompleteMain .completeSection .completeContainer {
+  padding: 140px 0 160px;
+  text-align: center;
+}
+.contactCompleteMain .completeSection .completeContainer .secTtl h2 {
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1.6;
+  color: #5b5294;
+}
+.contactCompleteMain .completeSection .completeContainer .txtBox {
+  margin: 40px 0 0;
+}
+.contactCompleteMain .completeSection .completeContainer .txtBox p {
+  font-size: 18px;
+  line-height: 2;
+}
+.contactCompleteMain .completeSection .completeContainer .txtBox p + p {
+  margin: 24px 0 0;
+}
+.contactCompleteMain .completeSection .completeContainer .btnMore {
+  max-width: 302px;
+  margin: 48px auto 0;
+}
+.contactCompleteMain .completeSection .completeContainer .btnMore a {
+  display: block;
+  min-height: 68px;
+  padding: 20px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 28px;
+  color: #ffffff;
+  border-radius: 34px;
+  background: #acbd57;
+}
+.contactCompleteMain .completeSection .completeContainer .btnMore a:hover {
+  background: #5b5294;
+}
+.contactCompleteMain .completeSection .completeContainer .btnMore a:focus-visible {
+  outline: 2px solid #5b5294;
+  outline-offset: 4px;
+}

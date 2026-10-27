@@ -1,0 +1,31 @@
+meta(charset='UTF-8')
+meta(name='viewport', content='width=device-width,initial-scale=1.0')
+meta(name='format-detection', content='telephone=no')
+meta(name='description', content=description || site_description)
+if keywords || site_keywords
+	meta(name='keywords', content=keywords || site_keywords)
+link(rel='stylesheet', href=(root_path || '') + 'css/reset.css')
+if site_use_slick
+	link(rel='stylesheet', href=(root_path || '') + 'css/slick.css')
+	link(rel='stylesheet', href=(root_path || '') + 'css/slick-theme.css')
+if site_use_scroll_animation
+	link(rel='stylesheet', href=(root_path || '') + 'css/animate.css')
+link(rel='stylesheet', href=(root_path || '') + 'css/common.css')
+link(rel='stylesheet', href=(root_path || '') + 'css/layout.css')
+//- headのmedia属性へ依存しない。SPの範囲はSCSS内で制限する。
+link(rel='stylesheet', href=(root_path || '') + 'css/common_sp.css')
+link(rel='stylesheet', href=(root_path || '') + 'css/layout_sp.css')
+//- 編集画面でnavBoxを見える状態にするため、開閉の非表示指定はattach.cssに置く。
+link(rel='stylesheet', href=(root_path || '') + 'css/attach.css')
+each js_path in site_global_js
+	script(src=(root_path || '') + js_path)
+if site_use_slick
+	script(src=(root_path || '') + 'js/slick.min.js')
+if site_use_infiniteslide
+	script(src=(root_path || '') + 'js/infiniteslide.js')
+if site_use_scroll_animation
+	script(src=(root_path || '') + 'js/scrollAnimation.js')
+if layout_js
+	each js_path in layout_js
+		script(src=(root_path || '') + js_path)
+title #{title || site_title}

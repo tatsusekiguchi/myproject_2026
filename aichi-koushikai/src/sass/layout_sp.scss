@@ -508,9 +508,6 @@
   }
   .sectionTuition,
   .sectionConsult {
-    .secContainer {
-      padding: 30px 20px;
-    }
     .pageSecTtl {
       margin: 0 0 20px;
     }
@@ -520,8 +517,23 @@
       line-height: 1.9;
     }
   }
+  @media (max-width: 1024px) {
+    .sectionTuition {
+      .secContainer {
+        flex-direction: column;
+        gap: 24px;
+        .tuitionPanel {
+          padding: 30px 20px;
+          border-radius: 18px;
+        }
+      }
+    }
+  }
   .sectionConsult {
     margin-bottom: 50px;
+    .secContainer {
+      padding: 30px 20px;
+    }
   }
   .bottomSection {
     padding: 40px 0;
@@ -855,7 +867,24 @@
 ///////////////////////////////////////////////////////////*/
 .accessMain {
   .sectionAccess {
-    padding: 40px 0 60px;
+    padding: 24px 0 60px;
+    @media (max-width: 1024px) {
+      .slidePanel {
+        margin: 0 0 24px;
+        .slideBox {
+          ul {
+            li {
+              width: 72vw;
+              min-width: 0;
+              margin: 0 10px 0 0;
+              img {
+                border-radius: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
     .accessPanel {
       padding: 32px 20px;
       border-radius: 16px;

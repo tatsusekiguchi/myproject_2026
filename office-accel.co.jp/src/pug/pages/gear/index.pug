@@ -1,0 +1,16 @@
+- var root_path = '../'
+include /site.pug
+- var title = 'その他（PEライン締める液、ブラックライト、アルミの魚袋） | office ACCEL'
+- var description = '助かる釣行便利アイテム。'
+- var keywords = ''
+- var page_name = 'gear'
+- var layout_js = ['js/products.js']
+- var cmsMode = false
+doctype html
+html(lang=site_lang)
+	head
+		include /common/head.pug
+	body#pageStart.page
+		include /common/header.pug
+		include /layouts/gear.pug
+		include /common/footer.pug

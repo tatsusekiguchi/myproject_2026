@@ -636,38 +636,42 @@
   text-align: center;
 }
 .serviceMain .sectionCourse {
-  margin: 0 7.8vw 90px 0;
-  padding: 90px 0 100px;
-  border-radius: 0 36px 36px 0;
+  margin: 0 0 90px;
+  padding: 60px 0 118px;
 }
 .serviceMain .sectionCourse .secContainer {
-  max-width: 1340px;
+  max-width: 1310px;
   margin: 0 auto;
   padding: 0 40px;
+}
+.serviceMain .sectionCourse .pageSecTtl h2 {
+  color: #1f1f1f;
 }
 .serviceMain .sectionCourse .courseList {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  margin: 56px 0 0;
+  margin: 50px 0 0;
   text-align: center;
 }
 .serviceMain .sectionCourse .courseList .courseItem {
   display: flex;
   flex: 1 1 calc(50% - 15px);
   flex-direction: column;
-  min-height: 580px;
-  padding: 24px 48px 42px;
+  min-height: 0;
+  padding: 22px 50px 32px;
+  border: 1px solid #fff;
   border-radius: 30px;
-  background: #fff;
+  background: #f1f5f7;
+  box-shadow: 0 8px 26px rgba(35, 35, 63, 0.03);
 }
 .serviceMain .sectionCourse .courseList .courseItem .courseItemHead {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 104px;
-  height: 104px;
+  width: 100px;
+  height: 100px;
   margin: 0 auto;
   border: 1px solid #1f1f1f;
   border-radius: 50%;
@@ -688,38 +692,41 @@
   flex: 1;
 }
 .serviceMain .sectionCourse .courseList .courseItem .courseItemText h3 {
-  margin: 20px 0 15px;
-  font-size: 24px;
+  margin: 18px 0 26px;
+  font-size: 26px;
   font-weight: bold;
   line-height: 1.55;
+  color: #21223d;
 }
 .serviceMain .sectionCourse .courseList .courseItem .courseItemText p {
-  line-height: 2;
+  font-size: 18px;
+  line-height: 2.1;
   text-align: left;
 }
 .serviceMain .sectionCourse .courseList .courseItem.courseItemWide {
   flex-basis: 100%;
   min-height: 260px;
   flex-direction: row;
-  align-items: center;
-  padding: 46px 52px;
+  align-items: flex-start;
+  padding: 72px 50px 60px;
   text-align: left;
-  background: #f1f5f7;
+  background: #fff;
 }
 .serviceMain .sectionCourse .courseList .courseItem.courseItemWide .courseItemHead {
-  flex: 0 0 104px;
-  margin: 0 35px 0 0;
+  flex: 0 0 100px;
+  margin: 0 52px 0 0;
 }
 .serviceMain .sectionCourse .courseList .courseItem.courseItemWide .courseItemText {
   display: flex;
   flex: 1;
   gap: 48px;
-  align-items: center;
+  align-items: flex-start;
+  min-width: 0;
 }
 .serviceMain .sectionCourse .courseList .courseItem.courseItemWide .courseItemText h3 {
-  flex: 0 0 44%;
+  flex: 0 0 37%;
   margin: 0;
-  font-size: 24px;
+  font-size: 26px;
 }
 .serviceMain .sectionCourse .courseList .courseItem.courseItemWide .courseItemText p {
   flex: 1;
@@ -730,17 +737,33 @@
   margin: 0 0 90px 6.5vw;
   padding: 75px 6.5vw 90px;
   border-radius: 16px 0 0 16px;
-  background: #ecf1f4;
+  background: #ffffff;
+}
+@media (min-width: 1025px) {
+  .serviceMain .sectionStrategy {
+    margin: 0 0 90px;
+    padding: 75px 20px 90px;
+    border-radius: 0;
+  }
 }
 .serviceMain .sectionStrategy .strategyList {
   max-width: 900px;
   margin: 45px auto 0;
   text-align: left;
 }
+@media (min-width: 1025px) {
+  .serviceMain .sectionStrategy .strategyList {
+    display: flex;
+    gap: 54px;
+    max-width: 1400px;
+    margin-top: 60px;
+  }
+}
 .serviceMain .sectionStrategy .strategyItem {
   overflow: hidden;
   border-radius: 20px;
   background: #fff;
+  box-shadow: 0 4px 20px rgba(35, 65, 85, 0.08);
 }
 .serviceMain .sectionStrategy .strategyItem + .strategyItem {
   margin: 14px 0 0;
@@ -749,8 +772,10 @@
   display: flex;
   gap: 16px;
   align-items: center;
+  justify-content: center;
   padding: 10px 20px;
   color: #fff;
+  text-align: center;
   background: #6297e3;
 }
 .serviceMain .sectionStrategy .strategyItem .strategyHead span {
@@ -766,21 +791,65 @@
   padding: 14px 20px;
   color: #60656d;
 }
+@media (min-width: 1025px) {
+  .serviceMain .sectionStrategy .strategyItem {
+    position: relative;
+    overflow: visible;
+    flex: 1;
+    min-width: 0;
+    min-height: 340px;
+    border-radius: 30px;
+  }
+  .serviceMain .sectionStrategy .strategyItem + .strategyItem {
+    margin: 0;
+  }
+  .serviceMain .sectionStrategy .strategyItem:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -51px;
+    bottom: 0;
+    width: 48px;
+    height: 64px;
+    margin: auto 0;
+    background: url("../image/service/strategy_arrow.png") center/contain no-repeat;
+  }
+  .serviceMain .sectionStrategy .strategyItem .strategyHead {
+    display: block;
+    padding: 14px 12px 18px;
+    border-radius: 30px 30px 0 0;
+  }
+  .serviceMain .sectionStrategy .strategyItem .strategyHead span {
+    display: block;
+    margin: 0 0 4px;
+    font-size: 24px;
+    line-height: 1.2;
+  }
+  .serviceMain .sectionStrategy .strategyItem .strategyHead h3 {
+    align-content: center;
+    min-height: 3.3em;
+    font-size: clamp(16px, 1.53vw, 22px);
+    line-height: 1.65;
+  }
+  .serviceMain .sectionStrategy .strategyItem .strategyBody {
+    padding: 30px 16px 24px;
+    font-size: 16px;
+    line-height: 2.35;
+    color: #1f1f1f;
+  }
+  .serviceMain .sectionStrategy .strategyItem .strategyBody p {
+    line-height: inherit;
+  }
+}
 .serviceMain .sectionStrategy .strategyNote {
   margin: 30px 0 0;
+  padding: 0 20px;
   font-weight: bold;
 }
 .serviceMain .sectionTuition,
 .serviceMain .sectionConsult {
   padding: 55px 0;
   text-align: center;
-}
-.serviceMain .sectionTuition .secContainer,
-.serviceMain .sectionConsult .secContainer {
-  padding: 50px 20px;
-  border-radius: 14px;
-  background: #fff;
-  box-shadow: 0 8px 26px rgba(35, 35, 63, 0.05);
 }
 .serviceMain .sectionTuition .pageSecTtl,
 .serviceMain .sectionConsult .pageSecTtl {
@@ -813,8 +882,26 @@
 .serviceMain .sectionTuition {
   background: #f3f9fd;
 }
+.serviceMain .sectionTuition .secContainer {
+  display: flex;
+  gap: 60px;
+}
+.serviceMain .sectionTuition .secContainer .tuitionPanel {
+  flex: 1;
+  min-width: 0;
+  padding: 50px 30px;
+  border-radius: 30px;
+  background: #fff;
+  box-shadow: 0 8px 26px rgba(35, 35, 63, 0.05);
+}
 .serviceMain .sectionConsult {
   margin-bottom: 90px;
+}
+.serviceMain .sectionConsult .secContainer {
+  padding: 50px 20px;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 8px 26px rgba(35, 35, 63, 0.05);
 }
 .serviceMain .sectionConsult .consultText p {
   line-height: 1.8;
@@ -908,6 +995,12 @@
 .classMain .sectionLecturer .secContainer .secBox01 {
   margin: 0 0 50px;
 }
+.classMain .sectionLecturer .secContainer .secBox01 .courseTable {
+  overflow: hidden;
+  border: 1px solid #d5dce5;
+  border-top: 0;
+  border-radius: 30px;
+}
 .classMain .sectionLecturer .secContainer .secBox01 .courseTable table {
   width: 100%;
   table-layout: fixed;
@@ -928,8 +1021,11 @@
   width: 140px;
 }
 .classMain .sectionLecturer .secContainer .secBox01 .courseTable table thead tr th:last-child {
-  color: #ffc0c0;
   border-right: 0;
+}
+.classMain .sectionLecturer .secContainer .secBox01 .courseTable table thead tr th:nth-child(3) {
+  color: #ffc0c0;
+  border-right: 1px solid rgba(255, 255, 255, 0.7);
 }
 .classMain .sectionLecturer .secContainer .secBox01 .courseTable table tbody tr th,
 .classMain .sectionLecturer .secContainer .secBox01 .courseTable table tbody tr td {
@@ -946,10 +1042,14 @@
 }
 .classMain .sectionLecturer .secContainer .secBox01 .courseTable table tbody tr td {
   width: 27.33%;
+  vertical-align: top;
   background: #fff;
 }
 .classMain .sectionLecturer .secContainer .secBox01 .courseTable table tbody tr td:last-child {
   border-right: 0;
+}
+.classMain .sectionLecturer .secContainer .secBox01 .courseTable table tbody tr td:nth-child(3) {
+  border-right: 1px solid #d5dce5;
   background: #dde7f5;
 }
 .classMain .sectionLecturer .secContainer .secBox01 .courseTable table tbody tr dl {
@@ -1192,6 +1292,7 @@
 }
 .voiceMain .sectionAchievements .list ul {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
 }
 .voiceMain .sectionAchievements .list ul li {
@@ -1418,8 +1519,29 @@
   access
 ///////////////////////////////////////////////////////////*/
 .accessMain .sectionAccess {
-  padding: 60px 0 120px;
+  padding: 32px 0 120px;
   background: url("../image/access/main_bg_01.png") center top/100% auto no-repeat;
+}
+.accessMain .sectionAccess .slidePanel {
+  overflow: hidden;
+  margin: 0 0 28px;
+}
+.accessMain .sectionAccess .slidePanel .slideBox ul {
+  display: flex;
+}
+.accessMain .sectionAccess .slidePanel .slideBox ul li {
+  flex: none;
+  width: 22.4vw;
+  min-width: 240px;
+  margin: 0 12px 0 0;
+}
+.accessMain .sectionAccess .slidePanel .slideBox ul li img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 382/302;
+  object-fit: cover;
+  border-radius: 20px;
 }
 .accessMain .sectionAccess .accessPanel {
   padding: 60px 6vw;

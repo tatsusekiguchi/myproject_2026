@@ -1,0 +1,26 @@
+{
+  "name": "temp-cms",
+  "version": "1.0.0",
+  "description": "独自CMS案件向け Pug/Sass/Gulp/jQuery 共通テンプレート",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp build",
+    "dev": "gulp",
+    "check": "python3 scripts/check_template.py",
+    "cms": "gulp cms"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.9",
+    "gulp": "^4.0.2",
+    "gulp-beautify": "^3.0.0",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.49.9"
+  },
+  "dependencies": {
+    "gulp-dart-sass": "^1.0.2"
+  }
+}
